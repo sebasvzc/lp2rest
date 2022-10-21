@@ -506,7 +506,7 @@
     <None Include="Resources\asistencia.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\usuarioIcono.png" />
+    <None Include="Resources\imgUsuarioIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\98017.png" />
@@ -539,7 +539,7 @@
     <None Include="Resources\933310.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1236928.png" />
+    <None Include="Resources\imgVentasIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1263922.png" />

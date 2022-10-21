@@ -148,8 +148,8 @@
   <data name="Icon-Small-16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Small-16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1236928" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1236928.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgVentasIcon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgVentasIcon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="retroceder_salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\retroceder_salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +163,8 @@
   <data name="pngegg (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuarioIcono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuarioIcono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgUsuarioIcon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgUsuarioIcon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="file-info_40446" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file-info_40446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

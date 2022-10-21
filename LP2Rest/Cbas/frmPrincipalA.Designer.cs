@@ -122,7 +122,6 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::LP2Rest.Properties.Resources._98017;
-            this.pictureBox8.InitialImage = global::LP2Rest.Properties.Resources._1236928;
             this.pictureBox8.Location = new System.Drawing.Point(14, 491);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(42, 40);
@@ -150,8 +149,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::LP2Rest.Properties.Resources.usuarioIcono;
-            this.pictureBox7.InitialImage = global::LP2Rest.Properties.Resources._1236928;
+            this.pictureBox7.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_medium;
             this.pictureBox7.Location = new System.Drawing.Point(14, 67);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(42, 42);
@@ -162,7 +160,6 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::LP2Rest.Properties.Resources._933310;
-            this.pictureBox6.InitialImage = global::LP2Rest.Properties.Resources._1236928;
             this.pictureBox6.Location = new System.Drawing.Point(14, 430);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(42, 42);
@@ -173,7 +170,6 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::LP2Rest.Properties.Resources._1760560;
-            this.pictureBox4.InitialImage = global::LP2Rest.Properties.Resources._1236928;
             this.pictureBox4.Location = new System.Drawing.Point(14, 309);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(42, 42);
@@ -194,8 +190,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox3.InitialImage = global::LP2Rest.Properties.Resources._1236928;
+            this.pictureBox3.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_medium;
             this.pictureBox3.Location = new System.Drawing.Point(14, 248);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 42);
@@ -206,7 +201,6 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LP2Rest.Properties.Resources._115801;
-            this.pictureBox2.InitialImage = global::LP2Rest.Properties.Resources._1236928;
             this.pictureBox2.Location = new System.Drawing.Point(14, 184);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 42);
@@ -217,7 +211,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LP2Rest.Properties.Resources._107831;
-            this.pictureBox1.InitialImage = global::LP2Rest.Properties.Resources._1236928;
             this.pictureBox1.Location = new System.Drawing.Point(14, 130);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 34);
@@ -346,7 +339,7 @@
             this.btnVentas.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnVentas.FlatAppearance.BorderSize = 0;
             this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Image = global::LP2Rest.Properties.Resources._1236928;
+            this.btnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_medium;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVentas.Location = new System.Drawing.Point(287, 68);
             this.btnVentas.Name = "btnVentas";
@@ -426,7 +419,7 @@
             this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnUsuario.FlatAppearance.BorderSize = 0;
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.Image = global::LP2Rest.Properties.Resources.usuarioIcono;
+            this.btnUsuario.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_medium;
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnUsuario.Location = new System.Drawing.Point(105, 68);
             this.btnUsuario.Name = "btnUsuario";
