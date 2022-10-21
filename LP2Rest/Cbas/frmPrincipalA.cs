@@ -132,5 +132,6 @@ namespace LP2Rest
         {
             pbAsistencia_Click( sender,  e);
         }
+
     }
 }
