@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,7 +53,7 @@ namespace LP2Rest
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos");
+                MessageBox.Show("Usuario o contraseña incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             /*
@@ -64,14 +65,54 @@ namespace LP2Rest
             */
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
+            Close();
+        }
 
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "USUARIO")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUARIO";
+                txtUsuario.ForeColor = Color.FromArgb(100, 100, 100);
+            }
+        }
+
+        private void txtContrasena_Enter(object sender, EventArgs e)
+        {
+            if(txtContrasena.Text == "CONTRASEÑA")
+            {
+                txtContrasena.Text = "";
+                txtContrasena.ForeColor = Color.Black;
+                txtContrasena.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtContrasena_Leave(object sender, EventArgs e)
+        {
+            if (txtContrasena.Text == "")
+            {
+                txtContrasena.Text = "CONTRASEÑA";
+                txtContrasena.ForeColor = Color.FromArgb(100, 100, 100);
+                txtContrasena.UseSystemPasswordChar = false;
+            }
         }
     }
 }
