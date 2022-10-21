@@ -114,7 +114,7 @@
             // 
             // btnAsistencia
             // 
-            this.btnAsistencia.Image = global::LP2Rest.Properties.Resources.asistencia;
+            this.btnAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_medium;
             this.btnAsistencia.Location = new System.Drawing.Point(747, 41);
             this.btnAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAsistencia.Name = "btnAsistencia";

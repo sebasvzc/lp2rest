@@ -503,7 +503,7 @@
     <None Include="Resources\retroceder_salir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\asistencia.png" />
+    <None Include="Resources\imgAsistenciaIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgUsuarioIcon_medium.png" />
@@ -575,13 +575,10 @@
     <None Include="Resources\Icon-Small-20x20.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\kisspng-computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon-5ab07851d21f64.1935471015215145778607.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\new-file_40454.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Pink_Modern_Monzana_Online_Shop_Logo_500_500_px_1.png" />
+    <None Include="Resources\imgRestauranteLogo_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Screenshot 2022-09-28 112459.png" />

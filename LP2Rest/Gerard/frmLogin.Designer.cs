@@ -205,7 +205,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.Pink_Modern_Monzana_Online_Shop_Logo_500_500_px_1;
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_medium;
             this.pictureBox1.Location = new System.Drawing.Point(29, 63);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
