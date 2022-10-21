@@ -196,5 +196,18 @@ namespace LP2Rest
             {
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void side_btnPlatos_Click(object sender, EventArgs e)
+        {
+            frmListarPlatos formListarPlatos = new frmListarPlatos();
+            if (formListarPlatos.ShowDialog() == DialogResult.OK)
+            {
+            }
+        }
     }
 }
