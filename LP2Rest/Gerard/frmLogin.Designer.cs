@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btIngresar = new System.Windows.Forms.Button();
             this.lbOlvideContrasena = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelSuperior = new System.Windows.Forms.Panel();
             this.txtIniciarSesion = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.linea = new System.Windows.Forms.PictureBox();
@@ -43,8 +43,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelIzquierdo.SuspendLayout();
+            this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,16 +81,17 @@
             this.lbOlvideContrasena.Text = "¿Olvidaste tu contraseña?";
             this.lbOlvideContrasena.Click += new System.EventHandler(this.lbOlvideContrasena_Click);
             // 
-            // panel1
+            // panelIzquierdo
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(65, 617);
-            this.panel1.TabIndex = 15;
+            this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panelIzquierdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelIzquierdo.Controls.Add(this.panel3);
+            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdo.Name = "panelIzquierdo";
+            this.panelIzquierdo.Size = new System.Drawing.Size(65, 617);
+            this.panelIzquierdo.TabIndex = 15;
+            this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
             // panel3
             // 
@@ -101,23 +102,24 @@
             this.panel3.Size = new System.Drawing.Size(8, 617);
             this.panel3.TabIndex = 0;
             // 
-            // panel2
+            // panelSuperior
             // 
-            this.panel2.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel2.Controls.Add(this.txtIniciarSesion);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.linea);
-            this.panel2.Controls.Add(this.btnCerrar);
-            this.panel2.Controls.Add(this.txtContrasena);
-            this.panel2.Controls.Add(this.txtUsuario);
-            this.panel2.Controls.Add(this.btIngresar);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lbOlvideContrasena);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(65, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(358, 617);
-            this.panel2.TabIndex = 16;
+            this.panelSuperior.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelSuperior.Controls.Add(this.txtIniciarSesion);
+            this.panelSuperior.Controls.Add(this.pictureBox2);
+            this.panelSuperior.Controls.Add(this.linea);
+            this.panelSuperior.Controls.Add(this.btnCerrar);
+            this.panelSuperior.Controls.Add(this.txtContrasena);
+            this.panelSuperior.Controls.Add(this.txtUsuario);
+            this.panelSuperior.Controls.Add(this.btIngresar);
+            this.panelSuperior.Controls.Add(this.pictureBox1);
+            this.panelSuperior.Controls.Add(this.lbOlvideContrasena);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSuperior.Location = new System.Drawing.Point(65, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(358, 617);
+            this.panelSuperior.TabIndex = 16;
+            this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
             // txtIniciarSesion
             // 
@@ -160,9 +162,9 @@
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(330, 13);
+            this.btnCerrar.Location = new System.Drawing.Point(329, 15);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(16, 16);
+            this.btnCerrar.Size = new System.Drawing.Size(18, 18);
             this.btnCerrar.TabIndex = 18;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -173,9 +175,9 @@
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
             this.txtContrasena.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtContrasena.Location = new System.Drawing.Point(29, 403);
+            this.txtContrasena.Location = new System.Drawing.Point(37, 403);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(286, 22);
+            this.txtContrasena.Size = new System.Drawing.Size(284, 22);
             this.txtContrasena.TabIndex = 17;
             this.txtContrasena.Text = "Contraseña";
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
@@ -187,7 +189,7 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtUsuario.Location = new System.Drawing.Point(31, 361);
+            this.txtUsuario.Location = new System.Drawing.Point(37, 361);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(284, 22);
             this.txtUsuario.TabIndex = 16;
@@ -220,16 +222,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 617);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelSuperior);
+            this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log in";
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelIzquierdo.ResumeLayout(false);
+            this.panelSuperior.ResumeLayout(false);
+            this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -241,8 +243,8 @@
         private System.Windows.Forms.Button btIngresar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbOlvideContrasena;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelIzquierdo;
+        private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.PictureBox linea;
