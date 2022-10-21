@@ -73,7 +73,7 @@
             this.lbOlvideContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbOlvideContrasena.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOlvideContrasena.ForeColor = System.Drawing.Color.Sienna;
-            this.lbOlvideContrasena.Location = new System.Drawing.Point(102, 553);
+            this.lbOlvideContrasena.Location = new System.Drawing.Point(98, 553);
             this.lbOlvideContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbOlvideContrasena.Name = "lbOlvideContrasena";
             this.lbOlvideContrasena.Size = new System.Drawing.Size(154, 15);
@@ -126,9 +126,9 @@
             this.txtIniciarSesion.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIniciarSesion.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.txtIniciarSesion.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtIniciarSesion.Location = new System.Drawing.Point(31, 294);
+            this.txtIniciarSesion.Location = new System.Drawing.Point(29, 294);
             this.txtIniciarSesion.Name = "txtIniciarSesion";
-            this.txtIniciarSesion.Size = new System.Drawing.Size(299, 33);
+            this.txtIniciarSesion.Size = new System.Drawing.Size(301, 33);
             this.txtIniciarSesion.TabIndex = 21;
             this.txtIniciarSesion.Text = "Iniciar Sesión";
             this.txtIniciarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -137,7 +137,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Peru;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Location = new System.Drawing.Point(31, 430);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 430);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(284, 2);
             this.pictureBox2.TabIndex = 20;
@@ -147,7 +147,7 @@
             // 
             this.linea.BackColor = System.Drawing.Color.Peru;
             this.linea.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linea.Location = new System.Drawing.Point(31, 388);
+            this.linea.Location = new System.Drawing.Point(37, 388);
             this.linea.Name = "linea";
             this.linea.Size = new System.Drawing.Size(284, 2);
             this.linea.TabIndex = 19;
@@ -198,11 +198,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.Pink_Modern_Monzana_Online_Shop_Logo_500_500_px_1;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 63);
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big_strongerColor;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 60);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(301, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(301, 191);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;

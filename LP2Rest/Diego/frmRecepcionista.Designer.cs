@@ -148,7 +148,7 @@
             // 
             // imgUsuarios
             // 
-            this.imgUsuarios.Image = global::LP2Rest.Properties.Resources.usuarioIcono;
+            this.imgUsuarios.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_medium;
             this.imgUsuarios.Location = new System.Drawing.Point(189, 246);
             this.imgUsuarios.Name = "imgUsuarios";
             this.imgUsuarios.Size = new System.Drawing.Size(103, 108);
