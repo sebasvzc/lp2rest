@@ -142,7 +142,7 @@
             // 
             // imgCompras
             // 
-            this.imgCompras.Image = global::LP2Rest.Properties.Resources._1760560;
+            this.imgCompras.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
             this.imgCompras.Location = new System.Drawing.Point(581, 211);
             this.imgCompras.Margin = new System.Windows.Forms.Padding(4);
             this.imgCompras.Name = "imgCompras";

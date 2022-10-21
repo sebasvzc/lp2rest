@@ -121,7 +121,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::LP2Rest.Properties.Resources._98017;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(14, 491);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(42, 40);
@@ -159,7 +159,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::LP2Rest.Properties.Resources._933310;
+            this.pictureBox6.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_medium;
             this.pictureBox6.Location = new System.Drawing.Point(14, 430);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(42, 42);
@@ -169,7 +169,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::LP2Rest.Properties.Resources._1760560;
+            this.pictureBox4.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
             this.pictureBox4.Location = new System.Drawing.Point(14, 309);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(42, 42);
@@ -180,7 +180,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::LP2Rest.Properties.Resources.imgEventos_Medium;
+            this.pictureBox5.Image = global::LP2Rest.Properties.Resources.imgEventosIcon_medium;
             this.pictureBox5.Location = new System.Drawing.Point(14, 373);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(42, 39);
@@ -200,7 +200,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::LP2Rest.Properties.Resources._115801;
+            this.pictureBox2.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_medium;
             this.pictureBox2.Location = new System.Drawing.Point(14, 184);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 42);
@@ -210,7 +210,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LP2Rest.Properties.Resources._107831;
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_medium;
             this.pictureBox1.Location = new System.Drawing.Point(14, 130);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 34);
@@ -237,7 +237,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(217, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(778, 100);
+            this.panel2.Size = new System.Drawing.Size(931, 100);
             this.panel2.TabIndex = 21;
             // 
             // pictureBox9
@@ -278,7 +278,7 @@
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.panel3.Location = new System.Drawing.Point(217, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(778, 559);
+            this.panel3.Size = new System.Drawing.Size(931, 559);
             this.panel3.TabIndex = 22;
             // 
             // button3
@@ -299,7 +299,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(778, 2);
+            this.panel5.Size = new System.Drawing.Size(931, 2);
             this.panel5.TabIndex = 25;
             // 
             // btnReportes
@@ -307,7 +307,7 @@
             this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Image = global::LP2Rest.Properties.Resources._1760560;
+            this.btnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnReportes.Location = new System.Drawing.Point(650, 68);
             this.btnReportes.Name = "btnReportes";
@@ -323,7 +323,7 @@
             this.btnReclamos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnReclamos.FlatAppearance.BorderSize = 0;
             this.btnReclamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReclamos.Image = global::LP2Rest.Properties.Resources._115801;
+            this.btnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_medium;
             this.btnReclamos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnReclamos.Location = new System.Drawing.Point(469, 286);
             this.btnReclamos.Name = "btnReclamos";
@@ -355,7 +355,7 @@
             this.btnInsumos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnInsumos.FlatAppearance.BorderSize = 0;
             this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsumos.Image = global::LP2Rest.Properties.Resources._933310;
+            this.btnInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_medium;
             this.btnInsumos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnInsumos.Location = new System.Drawing.Point(105, 286);
             this.btnInsumos.Name = "btnInsumos";
@@ -371,7 +371,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::LP2Rest.Properties.Resources._98017;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(650, 286);
             this.button1.Name = "button1";
@@ -387,7 +387,7 @@
             this.btnEventos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnEventos.FlatAppearance.BorderSize = 0;
             this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.Image = global::LP2Rest.Properties.Resources.imgEventos_Medium;
+            this.btnEventos.Image = global::LP2Rest.Properties.Resources.imgEventosIcon_medium;
             this.btnEventos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEventos.Location = new System.Drawing.Point(469, 68);
             this.btnEventos.Name = "btnEventos";
@@ -403,7 +403,7 @@
             this.btnCompra.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnCompra.FlatAppearance.BorderSize = 0;
             this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompra.Image = global::LP2Rest.Properties.Resources._107831;
+            this.btnCompra.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_medium;
             this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCompra.Location = new System.Drawing.Point(287, 286);
             this.btnCompra.Name = "btnCompra";
@@ -434,7 +434,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 659);
+            this.ClientSize = new System.Drawing.Size(1148, 659);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

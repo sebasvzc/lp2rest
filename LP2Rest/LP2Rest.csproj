@@ -509,13 +509,13 @@
     <None Include="Resources\imgUsuarioIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\98017.png" />
+    <None Include="Resources\imgPlatosIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\107831.png" />
+    <None Include="Resources\imgComprasIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\115801.png" />
+    <None Include="Resources\imgReclamosIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\126794.png" />
@@ -536,7 +536,7 @@
     <None Include="Resources\392024.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\933310.png" />
+    <None Include="Resources\imgInsumosIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgVentasIcon_medium.png" />
@@ -545,10 +545,10 @@
     <None Include="Resources\1263922.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1760560.png" />
+    <None Include="Resources\imgReportesIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\imgEventos_Medium.png" />
+    <None Include="Resources\imgEventosIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete-file_40456.png" />

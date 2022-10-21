@@ -150,7 +150,7 @@
             // 
             // imgPlatos
             // 
-            this.imgPlatos.Image = global::LP2Rest.Properties.Resources._98017;
+            this.imgPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_medium;
             this.imgPlatos.Location = new System.Drawing.Point(781, 219);
             this.imgPlatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgPlatos.Name = "imgPlatos";
@@ -162,7 +162,7 @@
             // 
             // imgCompras
             // 
-            this.imgCompras.Image = global::LP2Rest.Properties.Resources._1760560;
+            this.imgCompras.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
             this.imgCompras.Location = new System.Drawing.Point(476, 219);
             this.imgCompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgCompras.Name = "imgCompras";
