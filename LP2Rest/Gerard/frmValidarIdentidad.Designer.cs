@@ -29,85 +29,156 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmValidarIdentidad));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linea = new System.Windows.Forms.PictureBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // lblInstrucciones
             // 
             this.lblInstrucciones.AutoSize = true;
-            this.lblInstrucciones.Location = new System.Drawing.Point(12, 132);
+            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblInstrucciones.Location = new System.Drawing.Point(3, 20);
             this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(297, 13);
+            this.lblInstrucciones.Size = new System.Drawing.Size(485, 21);
             this.lblInstrucciones.TabIndex = 5;
             this.lblInstrucciones.Text = "Digite el código de verificación enviado a su correo asosiado:";
             this.lblInstrucciones.Click += new System.EventHandler(this.lblInstrucciones_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(315, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 6;
-            // 
             // btnVerificar
             // 
-            this.btnVerificar.Location = new System.Drawing.Point(364, 200);
+            this.btnVerificar.BackColor = System.Drawing.Color.Sienna;
+            this.btnVerificar.FlatAppearance.BorderSize = 0;
+            this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnVerificar.ForeColor = System.Drawing.Color.White;
+            this.btnVerificar.Location = new System.Drawing.Point(396, 84);
             this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(75, 23);
+            this.btnVerificar.Size = new System.Drawing.Size(90, 34);
             this.btnVerificar.TabIndex = 7;
             this.btnVerificar.Text = "Verificar";
-            this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.UseVisualStyleBackColor = false;
             this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(15, 200);
+            this.btnCancelar.BackColor = System.Drawing.Color.Sienna;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(301, 84);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(89, 34);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel2.Controls.Add(this.linea);
+            this.panel2.Controls.Add(this.txtDNI);
+            this.panel2.Controls.Add(this.btnVerificar);
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.lblInstrucciones);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(129, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(498, 137);
+            this.panel2.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(129, 137);
+            this.panel1.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 137);
+            this.panel3.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // linea
+            // 
+            this.linea.BackColor = System.Drawing.Color.Peru;
+            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
+            this.linea.Location = new System.Drawing.Point(7, 71);
+            this.linea.Name = "linea";
+            this.linea.Size = new System.Drawing.Size(195, 2);
+            this.linea.TabIndex = 23;
+            this.linea.TabStop = false;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
+            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtDNI.Location = new System.Drawing.Point(7, 44);
+            this.txtDNI.MaxLength = 8;
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(195, 22);
+            this.txtDNI.TabIndex = 22;
             // 
             // frmValidarIdentidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 244);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnVerificar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblInstrucciones);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(627, 137);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frmValidarIdentidad";
             this.Text = "ValidarIdentidad";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblInstrucciones;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox linea;
+        private System.Windows.Forms.TextBox txtDNI;
     }
 }

@@ -79,7 +79,7 @@ namespace LP2Rest
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "USUARIO")
+            if (txtUsuario.Text == "Usuario")
             {
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.Black;
@@ -90,14 +90,14 @@ namespace LP2Rest
         {
             if (txtUsuario.Text == "")
             {
-                txtUsuario.Text = "USUARIO";
+                txtUsuario.Text = "Usuario";
                 txtUsuario.ForeColor = Color.FromArgb(100, 100, 100);
             }
         }
 
         private void txtContrasena_Enter(object sender, EventArgs e)
         {
-            if(txtContrasena.Text == "CONTRASEÑA")
+            if(txtContrasena.Text == "Contraseña")
             {
                 txtContrasena.Text = "";
                 txtContrasena.ForeColor = Color.Black;
@@ -109,7 +109,7 @@ namespace LP2Rest
         {
             if (txtContrasena.Text == "")
             {
-                txtContrasena.Text = "CONTRASEÑA";
+                txtContrasena.Text = "Contraseña";
                 txtContrasena.ForeColor = Color.FromArgb(100, 100, 100);
                 txtContrasena.UseSystemPasswordChar = false;
             }

@@ -51,7 +51,7 @@ namespace LP2Rest
             
         }
 
-        private void txtDNI_Validating(object sender, CancelEventArgs e)
+        private void txtDNI_Validating_1(object sender, CancelEventArgs e)
         {
             if (txtDNI.Text.Trim() == "")
                 epDNI.SetError(txtDNI, "Debe ingresar un DNI");
