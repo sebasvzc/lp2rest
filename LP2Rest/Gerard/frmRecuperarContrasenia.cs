@@ -40,5 +40,25 @@ namespace LP2Rest
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult=DialogResult.Cancel;
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtDNI_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDNI.Text.Trim() == "")
+                epDNI.SetError(txtDNI, "Debe ingresar un DNI");
+            else if (txtDNI.Text.Trim().Length != 8)
+                epDNI.SetError(txtDNI, "El DNI debe tener 8 dígitos");
+            else
+                epDNI.SetError(txtDNI, "");
+        }
     }
 }
