@@ -47,6 +47,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pbAsistencia = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnReclamos = new System.Windows.Forms.Button();
@@ -79,9 +80,9 @@
             this.Titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Titulo.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
             this.Titulo.ForeColor = System.Drawing.Color.Peru;
-            this.Titulo.Location = new System.Drawing.Point(3, 17);
+            this.Titulo.Location = new System.Drawing.Point(6, 17);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(349, 66);
+            this.Titulo.Size = new System.Drawing.Size(268, 66);
             this.Titulo.TabIndex = 17;
             this.Titulo.Text = "INICIO";
             this.Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,14 +116,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(63, 659);
+            this.panel1.Size = new System.Drawing.Size(217, 659);
             this.panel1.TabIndex = 20;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::LP2Rest.Properties.Resources._98017;
             this.pictureBox8.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox8.Location = new System.Drawing.Point(14, 513);
+            this.pictureBox8.Location = new System.Drawing.Point(14, 491);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(42, 40);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +142,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Location = new System.Drawing.Point(8, 602);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 57);
+            this.button2.Size = new System.Drawing.Size(209, 57);
             this.button2.TabIndex = 32;
             this.button2.Text = "Cerrar\r\nSesión";
             this.button2.UseVisualStyleBackColor = false;
@@ -149,9 +150,9 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::LP2Rest.Properties.Resources._16363;
+            this.pictureBox7.Image = global::LP2Rest.Properties.Resources.usuarioIcono;
             this.pictureBox7.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox7.Location = new System.Drawing.Point(14, 58);
+            this.pictureBox7.Location = new System.Drawing.Point(14, 67);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(42, 42);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +163,7 @@
             // 
             this.pictureBox6.Image = global::LP2Rest.Properties.Resources._933310;
             this.pictureBox6.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox6.Location = new System.Drawing.Point(14, 420);
+            this.pictureBox6.Location = new System.Drawing.Point(14, 430);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(42, 42);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +174,7 @@
             // 
             this.pictureBox4.Image = global::LP2Rest.Properties.Resources._1760560;
             this.pictureBox4.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox4.Location = new System.Drawing.Point(14, 298);
+            this.pictureBox4.Location = new System.Drawing.Point(14, 309);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(42, 42);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,9 +183,9 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::LP2Rest.Properties.Resources._4296283;
-            this.pictureBox5.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox5.Location = new System.Drawing.Point(14, 361);
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::LP2Rest.Properties.Resources.imgEventos_Medium;
+            this.pictureBox5.Location = new System.Drawing.Point(14, 373);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(42, 39);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +196,7 @@
             // 
             this.pictureBox3.Image = global::LP2Rest.Properties.Resources._1236928;
             this.pictureBox3.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 235);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 248);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -206,7 +207,7 @@
             // 
             this.pictureBox2.Image = global::LP2Rest.Properties.Resources._115801;
             this.pictureBox2.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 171);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 184);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +218,7 @@
             // 
             this.pictureBox1.Image = global::LP2Rest.Properties.Resources._107831;
             this.pictureBox1.InitialImage = global::LP2Rest.Properties.Resources._1236928;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 119);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 130);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,17 +242,17 @@
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.pbAsistencia);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(63, 0);
+            this.panel2.Location = new System.Drawing.Point(217, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 100);
+            this.panel2.Size = new System.Drawing.Size(778, 100);
             this.panel2.TabIndex = 21;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::LP2Rest.Properties.Resources.Pink_Modern_Monzana_Online_Shop_Logo_500_500_px_1;
-            this.pictureBox9.Location = new System.Drawing.Point(840, 9);
+            this.pictureBox9.Location = new System.Drawing.Point(849, 15);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(86, 85);
+            this.pictureBox9.Size = new System.Drawing.Size(69, 74);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
@@ -270,6 +271,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.btnReportes);
             this.panel3.Controls.Add(this.btnReclamos);
@@ -281,10 +283,22 @@
             this.panel3.Controls.Add(this.btnUsuario);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.panel3.Location = new System.Drawing.Point(63, 100);
+            this.panel3.Location = new System.Drawing.Point(217, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(932, 559);
+            this.panel3.Size = new System.Drawing.Size(778, 559);
             this.panel3.TabIndex = 22;
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(58, -33);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(234, 160);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "button3";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -292,7 +306,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(932, 2);
+            this.panel5.Size = new System.Drawing.Size(778, 2);
             this.panel5.TabIndex = 25;
             // 
             // btnReportes
@@ -380,7 +394,7 @@
             this.btnEventos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnEventos.FlatAppearance.BorderSize = 0;
             this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.Image = global::LP2Rest.Properties.Resources._4296283;
+            this.btnEventos.Image = global::LP2Rest.Properties.Resources.imgEventos_Medium;
             this.btnEventos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEventos.Location = new System.Drawing.Point(469, 68);
             this.btnEventos.Name = "btnEventos";
@@ -412,7 +426,7 @@
             this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnUsuario.FlatAppearance.BorderSize = 0;
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.Image = global::LP2Rest.Properties.Resources._16363;
+            this.btnUsuario.Image = global::LP2Rest.Properties.Resources.usuarioIcono;
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnUsuario.Location = new System.Drawing.Point(105, 68);
             this.btnUsuario.Name = "btnUsuario";
@@ -480,5 +494,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -113,9 +113,9 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _16363 {
+        internal static System.Drawing.Bitmap usuarioIcono {
             get {
-                object obj = ResourceManager.GetObject("16363", resourceCulture);
+                object obj = ResourceManager.GetObject("usuarioIcono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4296283 {
+        internal static System.Drawing.Bitmap imgEventos_Medium {
             get {
-                object obj = ResourceManager.GetObject("4296283", resourceCulture);
+                object obj = ResourceManager.GetObject("imgEventos_Medium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

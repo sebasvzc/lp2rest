@@ -506,7 +506,7 @@
     <None Include="Resources\asistencia.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\16363.png" />
+    <None Include="Resources\usuarioIcono.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\98017.png" />
@@ -548,7 +548,7 @@
     <None Include="Resources\1760560.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\4296283.png" />
+    <None Include="Resources\imgEventos_Medium.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete-file_40456.png" />
