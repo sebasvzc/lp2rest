@@ -143,6 +143,16 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _429524_200 {
+            get {
+                object obj = ResourceManager.GetObject("429524-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_file_40456 {
             get {
                 object obj = ResourceManager.GetObject("delete-file_40456", resourceCulture);
@@ -233,9 +243,29 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgAsistenciaIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgAsistenciaIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgComprasIcon_medium {
             get {
                 object obj = ResourceManager.GetObject("imgComprasIcon_medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgComprasIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgComprasIcon_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +283,29 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgEventosIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgEventosIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgInsumosIcon_medium {
             get {
                 object obj = ResourceManager.GetObject("imgInsumosIcon_medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgInsumosIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgInsumosIcon_small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +323,16 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgPlatosIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgPlatosIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgReclamosIcon_medium {
             get {
                 object obj = ResourceManager.GetObject("imgReclamosIcon_medium", resourceCulture);
@@ -283,9 +343,39 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgReclamosIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgReclamosIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgReportesIcon_medium {
             get {
                 object obj = ResourceManager.GetObject("imgReportesIcon_medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgReportesIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgReportesIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgRestauranteLogo_big_strongerColor {
+            get {
+                object obj = ResourceManager.GetObject("imgRestauranteLogo_big_strongerColor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +403,40 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgUsuarioIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgUsuarioIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgVentasIcon_medium {
             get {
                 object obj = ResourceManager.GetObject("imgVentasIcon_medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgVentasIcon_small {
+            get {
+                object obj = ResourceManager.GetObject("imgVentasIcon_small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon-5ab07851d21f" +
+                        "64.1935471015215145778607", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
