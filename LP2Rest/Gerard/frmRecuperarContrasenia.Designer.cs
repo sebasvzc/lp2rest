@@ -84,11 +84,11 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtDNI.BackColor = System.Drawing.Color.White;
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
             this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDNI.Location = new System.Drawing.Point(21, 50);
+            this.txtDNI.Location = new System.Drawing.Point(21, 57);
             this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(191, 22);

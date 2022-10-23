@@ -590,10 +590,12 @@
     <None Include="Resources\pngegg %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Untitled design %281%29.png" />
     <None Include="Resources\pngegg.png" />
     <None Include="Resources\2636428.png" />
     <None Include="Resources\26364281.png" />
     <None Include="Resources\429524-200.png" />
+    <None Include="Resources\asd.png" />
     <Content Include="Resources\cancelar.png" />
     <Content Include="Resources\eliminar.png" />
     <None Include="Resources\Image1.bmp" />
