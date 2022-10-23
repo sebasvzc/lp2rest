@@ -29,21 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperacionContraseña));
             this.lblIngresaDNI = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.linea = new System.Windows.Forms.PictureBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linea = new System.Windows.Forms.PictureBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
             this.epDNI = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epDNI)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +70,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 143);
             this.panel2.TabIndex = 17;
+            // 
+            // linea
+            // 
+            this.linea.BackColor = System.Drawing.Color.Peru;
+            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
+            this.linea.Location = new System.Drawing.Point(21, 81);
+            this.linea.Name = "linea";
+            this.linea.Size = new System.Drawing.Size(191, 2);
+            this.linea.TabIndex = 21;
+            this.linea.TabStop = false;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
+            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtDNI.Location = new System.Drawing.Point(21, 54);
+            this.txtDNI.MaxLength = 8;
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(164, 22);
+            this.txtDNI.TabIndex = 20;
+            this.txtDNI.Validating += new System.ComponentModel.CancelEventHandler(this.txtDNI_Validating_1);
             // 
             // btnBuscar
             // 
@@ -110,7 +132,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -131,7 +153,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_medium;
             this.pictureBox1.Location = new System.Drawing.Point(14, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 106);
@@ -139,29 +161,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // linea
-            // 
-            this.linea.BackColor = System.Drawing.Color.Peru;
-            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linea.Location = new System.Drawing.Point(21, 81);
-            this.linea.Name = "linea";
-            this.linea.Size = new System.Drawing.Size(191, 2);
-            this.linea.TabIndex = 21;
-            this.linea.TabStop = false;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
-            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDNI.Location = new System.Drawing.Point(21, 54);
-            this.txtDNI.MaxLength = 8;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(164, 22);
-            this.txtDNI.TabIndex = 20;
-            this.txtDNI.Validating += new System.ComponentModel.CancelEventHandler(this.txtDNI_Validating_1);
             // 
             // epDNI
             // 
@@ -181,9 +180,9 @@
             this.Text = "Recuperacion de contraseña";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epDNI)).EndInit();
             this.ResumeLayout(false);
 
