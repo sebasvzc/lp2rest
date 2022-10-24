@@ -149,7 +149,17 @@ namespace LP2Rest.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgCerrarIcon_Medium {
+            get {
+                object obj = ResourceManager.GetObject("imgCerrarIcon_Medium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -383,6 +393,16 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgRestauranteLogo_big75__strongerColor {
+            get {
+                object obj = ResourceManager.GetObject("imgRestauranteLogo_big75%_strongerColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgRestauranteLogo_medium {
             get {
                 object obj = ResourceManager.GetObject("imgRestauranteLogo_medium", resourceCulture);
@@ -517,6 +537,16 @@ namespace LP2Rest.Properties {
         internal static System.Drawing.Bitmap trash_40429 {
             get {
                 object obj = ResourceManager.GetObject("trash_40429", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_design__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled design (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

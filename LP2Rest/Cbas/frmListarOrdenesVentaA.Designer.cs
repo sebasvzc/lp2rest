@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarOrdenesVentaA));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -217,7 +216,7 @@
             // 
             // Anular
             // 
-            this.Anular.Image = ((System.Drawing.Image)(resources.GetObject("Anular.Image")));
+            this.Anular.Image = global::LP2Rest.Properties.Resources._391127;
             this.Anular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Anular.Name = "Anular";
             this.Anular.Size = new System.Drawing.Size(62, 22);
@@ -318,7 +317,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 464);
+            this.ClientSize = new System.Drawing.Size(1004, 529);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);

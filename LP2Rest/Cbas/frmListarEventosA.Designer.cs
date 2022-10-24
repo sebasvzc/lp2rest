@@ -74,7 +74,7 @@
             this.btnEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(299, 452);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(253, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(222, 25);
             this.toolStrip1.TabIndex = 11;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -352,7 +352,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 489);
+            this.ClientSize = new System.Drawing.Size(1004, 529);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);

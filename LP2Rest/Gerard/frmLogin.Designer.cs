@@ -36,13 +36,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.txtIniciarSesion = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.linea = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.panelIzquierdo.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,7 +58,7 @@
             this.btIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btIngresar.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.btIngresar.ForeColor = System.Drawing.Color.White;
-            this.btIngresar.Location = new System.Drawing.Point(29, 475);
+            this.btIngresar.Location = new System.Drawing.Point(28, 475);
             this.btIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btIngresar.Name = "btIngresar";
             this.btIngresar.Size = new System.Drawing.Size(301, 43);
@@ -73,7 +73,7 @@
             this.lbOlvideContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbOlvideContrasena.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Underline);
             this.lbOlvideContrasena.ForeColor = System.Drawing.Color.Sienna;
-            this.lbOlvideContrasena.Location = new System.Drawing.Point(87, 544);
+            this.lbOlvideContrasena.Location = new System.Drawing.Point(86, 544);
             this.lbOlvideContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbOlvideContrasena.Name = "lbOlvideContrasena";
             this.lbOlvideContrasena.Size = new System.Drawing.Size(173, 15);
@@ -104,7 +104,7 @@
             // 
             // panelSuperior
             // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.panelSuperior.Controls.Add(this.txtIniciarSesion);
             this.panelSuperior.Controls.Add(this.pictureBox2);
             this.panelSuperior.Controls.Add(this.linea);
@@ -123,59 +123,25 @@
             // 
             // txtIniciarSesion
             // 
-            this.txtIniciarSesion.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.txtIniciarSesion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIniciarSesion.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIniciarSesion.Font = new System.Drawing.Font("MS UI Gothic", 28F, System.Drawing.FontStyle.Bold);
-            this.txtIniciarSesion.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtIniciarSesion.Location = new System.Drawing.Point(29, 279);
+            this.txtIniciarSesion.ForeColor = System.Drawing.Color.Sienna;
+            this.txtIniciarSesion.Location = new System.Drawing.Point(28, 279);
             this.txtIniciarSesion.Name = "txtIniciarSesion";
             this.txtIniciarSesion.Size = new System.Drawing.Size(301, 38);
             this.txtIniciarSesion.TabIndex = 21;
             this.txtIniciarSesion.Text = "Iniciar Sesión";
             this.txtIniciarSesion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Peru;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 430);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(284, 2);
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            // 
-            // linea
-            // 
-            this.linea.BackColor = System.Drawing.Color.Peru;
-            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linea.Location = new System.Drawing.Point(37, 388);
-            this.linea.Name = "linea";
-            this.linea.Size = new System.Drawing.Size(284, 2);
-            this.linea.TabIndex = 19;
-            this.linea.TabStop = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(329, 15);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(18, 18);
-            this.btnCerrar.TabIndex = 18;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // txtContrasena
             // 
-            this.txtContrasena.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.txtContrasena.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtContrasena.Location = new System.Drawing.Point(37, 403);
+            this.txtContrasena.ForeColor = System.Drawing.Color.Black;
+            this.txtContrasena.Location = new System.Drawing.Point(36, 405);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(284, 23);
             this.txtContrasena.TabIndex = 17;
@@ -185,11 +151,11 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.txtUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtUsuario.Location = new System.Drawing.Point(37, 361);
+            this.txtUsuario.ForeColor = System.Drawing.Color.Black;
+            this.txtUsuario.Location = new System.Drawing.Point(36, 364);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(284, 23);
             this.txtUsuario.TabIndex = 16;
@@ -198,17 +164,6 @@
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big_strongerColor;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 47);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(301, 191);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
             // printForm1
             // 
             this.printForm1.DocumentName = "document";
@@ -216,6 +171,51 @@
             this.printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter;
             this.printForm1.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("printForm1.PrinterSettings")));
             this.printForm1.PrintFileName = null;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Peru;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Location = new System.Drawing.Point(36, 430);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(284, 2);
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // linea
+            // 
+            this.linea.BackColor = System.Drawing.Color.Peru;
+            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
+            this.linea.Location = new System.Drawing.Point(36, 388);
+            this.linea.Name = "linea";
+            this.linea.Size = new System.Drawing.Size(284, 2);
+            this.linea.TabIndex = 19;
+            this.linea.TabStop = false;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(318, 16);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.TabIndex = 18;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big_strongerColor;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 47);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(301, 191);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 

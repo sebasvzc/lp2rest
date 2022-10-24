@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarPlatos));
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -80,7 +79,7 @@
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(835, 220);
+            this.dgvEmpleados.Size = new System.Drawing.Size(761, 220);
             this.dgvEmpleados.TabIndex = 131;
             // 
             // comboBox1
@@ -89,7 +88,7 @@
             this.comboBox1.Location = new System.Drawing.Point(481, 80);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 24);
+            this.comboBox1.Size = new System.Drawing.Size(165, 21);
             this.comboBox1.TabIndex = 130;
             // 
             // label9
@@ -98,7 +97,7 @@
             this.label9.Location = new System.Drawing.Point(55, 121);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 16);
+            this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 129;
             this.label9.Text = "Nombre:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,7 +109,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(24, 23);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(156, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(128, 16);
             this.lblTitulo.TabIndex = 128;
             this.lblTitulo.Text = "Listado de Platos";
             // 
@@ -120,7 +119,7 @@
             this.txtDNINombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNINombre.Name = "txtDNINombre";
             this.txtDNINombre.ReadOnly = true;
-            this.txtDNINombre.Size = new System.Drawing.Size(165, 22);
+            this.txtDNINombre.Size = new System.Drawing.Size(165, 20);
             this.txtDNINombre.TabIndex = 118;
             // 
             // lblDNINombre
@@ -129,7 +128,7 @@
             this.lblDNINombre.Location = new System.Drawing.Point(25, 83);
             this.lblDNINombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDNINombre.Name = "lblDNINombre";
-            this.lblDNINombre.Size = new System.Drawing.Size(89, 16);
+            this.lblDNINombre.Size = new System.Drawing.Size(75, 13);
             this.lblDNINombre.TabIndex = 117;
             this.lblDNINombre.Text = "ID Item Venta:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,7 +145,7 @@
             this.Anular});
             this.toolStrip1.Location = new System.Drawing.Point(254, 430);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(388, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(331, 27);
             this.toolStrip1.TabIndex = 133;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -155,7 +154,7 @@
             this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(76, 24);
+            this.btnNuevo.Size = new System.Drawing.Size(66, 24);
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -164,7 +163,7 @@
             this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(97, 24);
+            this.btnModificar.Size = new System.Drawing.Size(82, 24);
             this.btnModificar.Text = "&Modificar";
             // 
             // btnEliminar
@@ -172,15 +171,15 @@
             this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(87, 24);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
             this.btnEliminar.Text = "&Eliminar";
             // 
             // Anular
             // 
-            this.Anular.Image = ((System.Drawing.Image)(resources.GetObject("Anular.Image")));
+            this.Anular.Image = global::LP2Rest.Properties.Resources._391127;
             this.Anular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Anular.Name = "Anular";
-            this.Anular.Size = new System.Drawing.Size(76, 24);
+            this.Anular.Size = new System.Drawing.Size(66, 24);
             this.Anular.Text = "&Anular";
             // 
             // textBox1
@@ -189,7 +188,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
+            this.textBox1.Size = new System.Drawing.Size(165, 20);
             this.textBox1.TabIndex = 134;
             // 
             // label1
@@ -198,7 +197,7 @@
             this.label1.Location = new System.Drawing.Point(372, 83);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 135;
             this.label1.Text = "Disponible:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -246,9 +245,9 @@
             // 
             // frmListarPlatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 466);
+            this.ClientSize = new System.Drawing.Size(1004, 529);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip1);
