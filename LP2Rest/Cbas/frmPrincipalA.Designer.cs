@@ -78,7 +78,7 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(256, 836);
+            this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
             this.panelIzquierdo.TabIndex = 20;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -88,7 +88,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 779);
+            this.panel4.Size = new System.Drawing.Size(8, 819);
             this.panel4.TabIndex = 17;
             // 
             // sdbtnPlatos
@@ -98,7 +98,7 @@
             this.sdbtnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_small;
             this.sdbtnPlatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 147);
+            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 142);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnPlatos.Size = new System.Drawing.Size(294, 59);
@@ -115,7 +115,7 @@
             this.sdbtnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_small;
             this.sdbtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReportes.Location = new System.Drawing.Point(0, 226);
+            this.sdbtnReportes.Location = new System.Drawing.Point(0, 229);
             this.sdbtnReportes.Name = "sdbtnReportes";
             this.sdbtnReportes.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReportes.Size = new System.Drawing.Size(294, 59);
@@ -142,7 +142,7 @@
             this.sdbtnUsuarios.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnUsuarios.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_small;
             this.sdbtnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnUsuarios.Location = new System.Drawing.Point(0, 303);
+            this.sdbtnUsuarios.Location = new System.Drawing.Point(0, 312);
             this.sdbtnUsuarios.Name = "sdbtnUsuarios";
             this.sdbtnUsuarios.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnUsuarios.Size = new System.Drawing.Size(294, 59);
@@ -159,7 +159,7 @@
             this.sdbtnEventos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnEventos.Image = global::LP2Rest.Properties.Resources.imgEventosIcon_small;
             this.sdbtnEventos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnEventos.Location = new System.Drawing.Point(0, 599);
+            this.sdbtnEventos.Location = new System.Drawing.Point(0, 638);
             this.sdbtnEventos.Name = "sdbtnEventos";
             this.sdbtnEventos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnEventos.Size = new System.Drawing.Size(294, 59);
@@ -176,7 +176,7 @@
             this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
             this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 373);
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 392);
             this.sdbtnReclamos.Name = "sdbtnReclamos";
             this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReclamos.Size = new System.Drawing.Size(294, 59);
@@ -193,7 +193,7 @@
             this.sdbtnCompras.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_small;
             this.sdbtnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnCompras.Location = new System.Drawing.Point(0, 450);
+            this.sdbtnCompras.Location = new System.Drawing.Point(0, 475);
             this.sdbtnCompras.Name = "sdbtnCompras";
             this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnCompras.Size = new System.Drawing.Size(294, 59);
@@ -210,7 +210,7 @@
             this.sdbtnInsumos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_small;
             this.sdbtnInsumos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnInsumos.Location = new System.Drawing.Point(0, 526);
+            this.sdbtnInsumos.Location = new System.Drawing.Point(0, 557);
             this.sdbtnInsumos.Name = "sdbtnInsumos";
             this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnInsumos.Size = new System.Drawing.Size(294, 59);
@@ -227,7 +227,7 @@
             this.sdbtnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
             this.sdbtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnVentas.Location = new System.Drawing.Point(0, 678);
+            this.sdbtnVentas.Location = new System.Drawing.Point(0, 722);
             this.sdbtnVentas.Name = "sdbtnVentas";
             this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnVentas.Size = new System.Drawing.Size(294, 59);
@@ -249,7 +249,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 779);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 819);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(256, 57);
@@ -334,7 +334,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1100, 736);
+            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
             this.panelContenedor.TabIndex = 22;
             // 
             // panel5
@@ -486,7 +486,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 836);
+            this.ClientSize = new System.Drawing.Size(1356, 876);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);

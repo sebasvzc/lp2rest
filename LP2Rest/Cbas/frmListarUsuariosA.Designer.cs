@@ -71,7 +71,7 @@
             // lblDNINombre
             // 
             this.lblDNINombre.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblDNINombre.Location = new System.Drawing.Point(361, 95);
+            this.lblDNINombre.Location = new System.Drawing.Point(361, 83);
             this.lblDNINombre.Name = "lblDNINombre";
             this.lblDNINombre.Size = new System.Drawing.Size(402, 23);
             this.lblDNINombre.TabIndex = 0;
@@ -81,7 +81,7 @@
             // txtDNINombre
             // 
             this.txtDNINombre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNINombre.Location = new System.Drawing.Point(365, 122);
+            this.txtDNINombre.Location = new System.Drawing.Point(365, 110);
             this.txtDNINombre.Name = "txtDNINombre";
             this.txtDNINombre.Size = new System.Drawing.Size(402, 32);
             this.txtDNINombre.TabIndex = 1;
@@ -89,7 +89,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(819, 32);
+            this.btnBuscar.Location = new System.Drawing.Point(819, 21);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(219, 41);
             this.btnBuscar.TabIndex = 2;
@@ -124,7 +124,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvEmpleados.Location = new System.Drawing.Point(42, 376);
+            this.dgvEmpleados.Location = new System.Drawing.Point(42, 343);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -136,7 +136,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(1023, 284);
+            this.dgvEmpleados.Size = new System.Drawing.Size(1023, 375);
             this.dgvEmpleados.TabIndex = 4;
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
             this.dgvEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmpleados_CellFormatting);
@@ -184,7 +184,7 @@
             this.btnNuevo,
             this.btnModificar,
             this.btnEliminar});
-            this.toolStrip1.Location = new System.Drawing.Point(383, 678);
+            this.toolStrip1.Location = new System.Drawing.Point(383, 732);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(328, 30);
             this.toolStrip1.TabIndex = 5;
@@ -221,7 +221,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(365, 175);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(365, 155);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(402, 33);
             this.lblFechaNacimiento.TabIndex = 37;
@@ -231,7 +231,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(365, 235);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(365, 213);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(402, 32);
             this.dtpFechaNacimiento.TabIndex = 36;
@@ -239,7 +239,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(365, 209);
+            this.label1.Location = new System.Drawing.Point(365, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(402, 23);
             this.label1.TabIndex = 38;
@@ -249,7 +249,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(365, 308);
+            this.dateTimePicker1.Location = new System.Drawing.Point(365, 283);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(402, 32);
             this.dateTimePicker1.TabIndex = 39;
@@ -257,7 +257,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label2.Location = new System.Drawing.Point(365, 281);
+            this.label2.Location = new System.Drawing.Point(365, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(402, 23);
             this.label2.TabIndex = 40;
@@ -267,7 +267,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label3.Location = new System.Drawing.Point(62, 209);
+            this.label3.Location = new System.Drawing.Point(62, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 23);
             this.label3.TabIndex = 41;
@@ -278,7 +278,7 @@
             // 
             this.cboArea.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cboArea.FormattingEnabled = true;
-            this.cboArea.Location = new System.Drawing.Point(62, 235);
+            this.cboArea.Location = new System.Drawing.Point(62, 213);
             this.cboArea.Name = "cboArea";
             this.cboArea.Size = new System.Drawing.Size(246, 33);
             this.cboArea.TabIndex = 42;
@@ -286,7 +286,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.label4.Location = new System.Drawing.Point(819, 175);
+            this.label4.Location = new System.Drawing.Point(819, 155);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(219, 33);
             this.label4.TabIndex = 43;
@@ -296,7 +296,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(819, 235);
+            this.textBox1.Location = new System.Drawing.Point(819, 213);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 32);
             this.textBox1.TabIndex = 44;
@@ -304,7 +304,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label5.Location = new System.Drawing.Point(819, 281);
+            this.label5.Location = new System.Drawing.Point(819, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(219, 23);
             this.label5.TabIndex = 46;
@@ -314,7 +314,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label6.Location = new System.Drawing.Point(819, 209);
+            this.label6.Location = new System.Drawing.Point(819, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(219, 23);
             this.label6.TabIndex = 45;
@@ -325,7 +325,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(819, 308);
+            this.textBox2.Location = new System.Drawing.Point(819, 283);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(219, 32);
             this.textBox2.TabIndex = 47;
@@ -333,7 +333,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(819, 122);
+            this.textBox3.Location = new System.Drawing.Point(819, 110);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(219, 32);
             this.textBox3.TabIndex = 48;
@@ -341,7 +341,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label7.Location = new System.Drawing.Point(819, 95);
+            this.label7.Location = new System.Drawing.Point(819, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(219, 23);
             this.label7.TabIndex = 49;
@@ -351,7 +351,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox4.Location = new System.Drawing.Point(62, 121);
+            this.textBox4.Location = new System.Drawing.Point(62, 109);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(246, 32);
             this.textBox4.TabIndex = 51;
@@ -359,7 +359,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label8.Location = new System.Drawing.Point(62, 95);
+            this.label8.Location = new System.Drawing.Point(62, 83);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(246, 23);
             this.label8.TabIndex = 50;
@@ -369,7 +369,7 @@
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(60, 30);
+            this.lblTitulo.Location = new System.Drawing.Point(60, 18);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(290, 41);
             this.lblTitulo.TabIndex = 52;
@@ -381,7 +381,7 @@
             this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(62, 307);
+            this.comboBox1.Location = new System.Drawing.Point(62, 282);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(246, 33);
             this.comboBox1.TabIndex = 54;
@@ -389,7 +389,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label9.Location = new System.Drawing.Point(62, 281);
+            this.label9.Location = new System.Drawing.Point(62, 256);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(246, 23);
             this.label9.TabIndex = 53;
@@ -399,7 +399,7 @@
             // lblTrabajo
             // 
             this.lblTrabajo.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.lblTrabajo.Location = new System.Drawing.Point(62, 175);
+            this.lblTrabajo.Location = new System.Drawing.Point(62, 155);
             this.lblTrabajo.Name = "lblTrabajo";
             this.lblTrabajo.Size = new System.Drawing.Size(246, 33);
             this.lblTrabajo.TabIndex = 55;
@@ -408,7 +408,7 @@
             // 
             // frmListarUsuariosA
             // 
-            this.ClientSize = new System.Drawing.Size(1101, 731);
+            this.ClientSize = new System.Drawing.Size(1101, 774);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblTitulo);
