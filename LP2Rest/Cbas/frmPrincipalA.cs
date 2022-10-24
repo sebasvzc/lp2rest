@@ -141,68 +141,12 @@ namespace LP2Rest
             pbAsistencia_Click( sender,  e);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarUsuariosA());
         }
 
-        private void btnCompra_Click(object sender, EventArgs e)
-        {
-            frmListarOrdenesCompra formListarOrdenesCompra = new frmListarOrdenesCompra();
-            if (formListarOrdenesCompra.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmListarEventosA formListEventosA = new frmListarEventosA();
-            if (formListEventosA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            frmListarPlatos formListarPlatos = new frmListarPlatos();
-            if (formListarPlatos.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            frmListarInsumosA formListInsumosA = new frmListarInsumosA();
-            if (formListInsumosA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            frmListarOrdenesVentaA formListVentasA = new frmListarOrdenesVentaA();
-            if (formListVentasA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmListarReclamosA formListReclamosA = new frmListarReclamosA();
-            if (formListReclamosA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            frmListarReportesA formListReportesA = new frmListarReportesA();
-            if (formListReportesA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
         }

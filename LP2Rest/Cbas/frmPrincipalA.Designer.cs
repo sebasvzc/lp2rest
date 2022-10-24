@@ -34,14 +34,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.sdbtnPlatos = new System.Windows.Forms.Button();
             this.sdbtnReportes = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.sdbtnUsuarios = new System.Windows.Forms.Button();
             this.sdbtnEventos = new System.Windows.Forms.Button();
             this.sdbtnReclamos = new System.Windows.Forms.Button();
             this.sdbtnCompras = new System.Windows.Forms.Button();
             this.sdbtnInsumos = new System.Windows.Forms.Button();
             this.sdbtnVentas = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
@@ -83,14 +83,14 @@
             this.panelIzquierdo.Controls.Add(this.panel4);
             this.panelIzquierdo.Controls.Add(this.sdbtnPlatos);
             this.panelIzquierdo.Controls.Add(this.sdbtnReportes);
-            this.panelIzquierdo.Controls.Add(this.pictureBox9);
+            this.panelIzquierdo.Controls.Add(this.pbLogo);
             this.panelIzquierdo.Controls.Add(this.sdbtnUsuarios);
             this.panelIzquierdo.Controls.Add(this.sdbtnEventos);
             this.panelIzquierdo.Controls.Add(this.sdbtnReclamos);
             this.panelIzquierdo.Controls.Add(this.sdbtnCompras);
             this.panelIzquierdo.Controls.Add(this.sdbtnInsumos);
             this.panelIzquierdo.Controls.Add(this.sdbtnVentas);
-            this.panelIzquierdo.Controls.Add(this.button2);
+            this.panelIzquierdo.Controls.Add(this.btnCerrarSesion);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
@@ -141,15 +141,15 @@
             this.sdbtnReportes.UseVisualStyleBackColor = true;
             this.sdbtnReportes.Click += new System.EventHandler(this.sdbtnReportes_Click);
             // 
-            // pictureBox9
+            // pbLogo
             // 
-            this.pictureBox9.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_medium;
-            this.pictureBox9.Location = new System.Drawing.Point(49, 11);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(86, 86);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
+            this.pbLogo.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_medium;
+            this.pbLogo.Location = new System.Drawing.Point(49, 11);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(86, 86);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 8;
+            this.pbLogo.TabStop = false;
             // 
             // sdbtnUsuarios
             // 
@@ -253,28 +253,28 @@
             this.sdbtnVentas.UseVisualStyleBackColor = true;
             this.sdbtnVentas.Click += new System.EventHandler(this.sdbtnVentas_Click);
             // 
-            // button2
+            // btnCerrarSesion
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = global::LP2Rest.Properties.Resources._429524_200;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 611);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(191, 57);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "  Cerrar\r\n  Sesión";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Black;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 611);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(191, 57);
+            this.btnCerrarSesion.TabIndex = 32;
+            this.btnCerrarSesion.Text = "  Cerrar\r\n  Sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // panelSuperior
             // 
@@ -366,7 +366,7 @@
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.button5_Click);
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnReclamos
             // 
@@ -383,7 +383,7 @@
             this.btnReclamos.Text = "Reclamos";
             this.btnReclamos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReclamos.UseVisualStyleBackColor = true;
-            this.btnReclamos.Click += new System.EventHandler(this.button4_Click);
+            this.btnReclamos.Click += new System.EventHandler(this.btnReclamos_Click);
             // 
             // btnVentas
             // 
@@ -400,7 +400,7 @@
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.button3_Click);
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnInsumos
             // 
@@ -417,7 +417,7 @@
             this.btnInsumos.Text = "Insumos";
             this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInsumos.UseVisualStyleBackColor = true;
-            this.btnInsumos.Click += new System.EventHandler(this.button2_Click);
+            this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
             // 
             // btnPlatos
             // 
@@ -434,7 +434,7 @@
             this.btnPlatos.Text = "Platos";
             this.btnPlatos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPlatos.UseVisualStyleBackColor = true;
-            this.btnPlatos.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnPlatos.Click += new System.EventHandler(this.btnPlatos_Click);
             // 
             // btnEventos
             // 
@@ -451,7 +451,7 @@
             this.btnEventos.Text = "Eventos";
             this.btnEventos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEventos.UseVisualStyleBackColor = true;
-            this.btnEventos.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
             // 
             // btnCompras
             // 
@@ -468,7 +468,7 @@
             this.btnCompras.Text = " Compras";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCompras.UseVisualStyleBackColor = true;
-            this.btnCompras.Click += new System.EventHandler(this.btnCompra_Click);
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnUsuarios
             // 
@@ -485,7 +485,7 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.button1_Click);
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // frmPrincipalA
             // 
@@ -499,7 +499,7 @@
             this.Name = "frmPrincipalA";
             this.Text = "Administración";
             this.panelIzquierdo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -507,7 +507,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button Titulo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelIzquierdo;
@@ -523,7 +523,7 @@
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button sdbtnVentas;
         private System.Windows.Forms.Button sdbtnPlatos;
         private System.Windows.Forms.Button sdbtnReclamos;
