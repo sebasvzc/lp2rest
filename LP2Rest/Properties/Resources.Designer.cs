@@ -149,17 +149,17 @@ namespace LP2Rest.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap asd {
+        internal static System.Drawing.Bitmap imgCerrarIcon_Medium {
             get {
-                object obj = ResourceManager.GetObject("asd", resourceCulture);
+                object obj = ResourceManager.GetObject("imgCerrarIcon_Medium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -386,6 +386,16 @@ namespace LP2Rest.Properties {
         internal static System.Drawing.Bitmap imgRestauranteLogo_big_strongerColor {
             get {
                 object obj = ResourceManager.GetObject("imgRestauranteLogo_big_strongerColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgRestauranteLogo_big75__strongerColor {
+            get {
+                object obj = ResourceManager.GetObject("imgRestauranteLogo_big75%_strongerColor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

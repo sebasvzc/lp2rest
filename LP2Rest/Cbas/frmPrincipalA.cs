@@ -14,6 +14,8 @@ namespace LP2Rest
 {
     public partial class frmPrincipalA : Form
     {
+        private static Form formularioActivo = null;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -141,10 +143,7 @@ namespace LP2Rest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmListarUsuariosA formListUsuariosA = new frmListarUsuariosA();
-            if (formListUsuariosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarUsuariosA());
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
@@ -274,10 +273,7 @@ namespace LP2Rest
 
         private void sdbtnPlatos_Click(object sender, EventArgs e)
         {
-            frmListarPlatos formListarPlatos = new frmListarPlatos();
-            if (formListarPlatos.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarPlatos());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -295,6 +291,31 @@ namespace LP2Rest
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        public void abrirFormulario(Form formularioMostrar)
+        {
+            if (formularioActivo != null)
+                formularioActivo.Close();
+            btnUsuarios.Hide();
+            btnCompras.Hide();
+            btnEventos.Hide();
+            btnVentas.Hide();
+            btnInsumos.Hide();
+            btnReclamos.Hide();
+            btnPlatos.Hide();
+            btnReportes.Hide();
+            formularioActivo = formularioMostrar;
+            formularioMostrar.TopLevel = false;
+            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
+            formularioMostrar.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioMostrar);
+            formularioMostrar.Show();
+        }
+
+        private void btnMarcarAsistencia_Click(object sender, EventArgs e)
+        {
+            btnMarcarAsistencia.Hide();
         }
     }
 }

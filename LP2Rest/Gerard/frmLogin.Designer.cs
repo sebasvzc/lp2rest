@@ -58,7 +58,7 @@
             this.btIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btIngresar.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.btIngresar.ForeColor = System.Drawing.Color.White;
-            this.btIngresar.Location = new System.Drawing.Point(29, 475);
+            this.btIngresar.Location = new System.Drawing.Point(28, 475);
             this.btIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btIngresar.Name = "btIngresar";
             this.btIngresar.Size = new System.Drawing.Size(301, 43);
@@ -73,7 +73,7 @@
             this.lbOlvideContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbOlvideContrasena.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Underline);
             this.lbOlvideContrasena.ForeColor = System.Drawing.Color.Sienna;
-            this.lbOlvideContrasena.Location = new System.Drawing.Point(87, 544);
+            this.lbOlvideContrasena.Location = new System.Drawing.Point(86, 544);
             this.lbOlvideContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbOlvideContrasena.Name = "lbOlvideContrasena";
             this.lbOlvideContrasena.Size = new System.Drawing.Size(173, 15);
@@ -128,7 +128,7 @@
             this.txtIniciarSesion.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIniciarSesion.Font = new System.Drawing.Font("MS UI Gothic", 28F, System.Drawing.FontStyle.Bold);
             this.txtIniciarSesion.ForeColor = System.Drawing.Color.Sienna;
-            this.txtIniciarSesion.Location = new System.Drawing.Point(29, 279);
+            this.txtIniciarSesion.Location = new System.Drawing.Point(28, 279);
             this.txtIniciarSesion.Name = "txtIniciarSesion";
             this.txtIniciarSesion.Size = new System.Drawing.Size(301, 38);
             this.txtIniciarSesion.TabIndex = 21;
@@ -140,8 +140,8 @@
             this.txtContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.txtContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
-            this.txtContrasena.Location = new System.Drawing.Point(37, 405);
+            this.txtContrasena.ForeColor = System.Drawing.Color.Black;
+            this.txtContrasena.Location = new System.Drawing.Point(36, 405);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(284, 23);
             this.txtContrasena.TabIndex = 17;
@@ -154,8 +154,8 @@
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.txtUsuario.Location = new System.Drawing.Point(37, 364);
+            this.txtUsuario.ForeColor = System.Drawing.Color.Black;
+            this.txtUsuario.Location = new System.Drawing.Point(36, 364);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(284, 23);
             this.txtUsuario.TabIndex = 16;
@@ -176,7 +176,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Peru;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 430);
+            this.pictureBox2.Location = new System.Drawing.Point(36, 430);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(284, 2);
             this.pictureBox2.TabIndex = 20;
@@ -186,7 +186,7 @@
             // 
             this.linea.BackColor = System.Drawing.Color.Peru;
             this.linea.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linea.Location = new System.Drawing.Point(37, 388);
+            this.linea.Location = new System.Drawing.Point(36, 388);
             this.linea.Name = "linea";
             this.linea.Size = new System.Drawing.Size(284, 2);
             this.linea.TabIndex = 19;
@@ -195,7 +195,7 @@
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.asd;
+            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -209,7 +209,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big_strongerColor;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 47);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(301, 191);

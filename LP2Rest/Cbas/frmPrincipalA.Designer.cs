@@ -33,17 +33,17 @@
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnReclamos = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnInsumos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPlatos = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
-            this.btnCompra = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.sdbtnPlatos = new System.Windows.Forms.Button();
             this.sdbtnReportes = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             this.panelSuperior.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +110,7 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
-            this.panelSuperior.Controls.Add(this.button3);
+            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Controls.Add(this.Titulo);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,24 +120,24 @@
             this.panelSuperior.TabIndex = 21;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
-            // panel3
+            // panelContenedor
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.btnReportes);
-            this.panel3.Controls.Add(this.btnReclamos);
-            this.panel3.Controls.Add(this.btnVentas);
-            this.panel3.Controls.Add(this.btnInsumos);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.btnEventos);
-            this.panel3.Controls.Add(this.btnCompra);
-            this.panel3.Controls.Add(this.btnUsuarios);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.panel3.Location = new System.Drawing.Point(191, 100);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1020, 568);
-            this.panel3.TabIndex = 22;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
+            this.panelContenedor.Controls.Add(this.panel5);
+            this.panelContenedor.Controls.Add(this.btnReportes);
+            this.panelContenedor.Controls.Add(this.btnReclamos);
+            this.panelContenedor.Controls.Add(this.btnVentas);
+            this.panelContenedor.Controls.Add(this.btnInsumos);
+            this.panelContenedor.Controls.Add(this.btnPlatos);
+            this.panelContenedor.Controls.Add(this.btnEventos);
+            this.panelContenedor.Controls.Add(this.btnCompras);
+            this.panelContenedor.Controls.Add(this.btnUsuarios);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.panelContenedor.Location = new System.Drawing.Point(191, 100);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1020, 568);
+            this.panelContenedor.TabIndex = 22;
             // 
             // panel5
             // 
@@ -216,22 +216,22 @@
             this.btnInsumos.UseVisualStyleBackColor = true;
             this.btnInsumos.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnPlatos
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.button1.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_medium;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(703, 295);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 184);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Platos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnPlatos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnPlatos.FlatAppearance.BorderSize = 0;
+            this.btnPlatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_medium;
+            this.btnPlatos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPlatos.Location = new System.Drawing.Point(703, 295);
+            this.btnPlatos.Name = "btnPlatos";
+            this.btnPlatos.Size = new System.Drawing.Size(150, 184);
+            this.btnPlatos.TabIndex = 20;
+            this.btnPlatos.Text = "Platos";
+            this.btnPlatos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPlatos.UseVisualStyleBackColor = true;
+            this.btnPlatos.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // btnEventos
             // 
@@ -250,22 +250,22 @@
             this.btnEventos.UseVisualStyleBackColor = true;
             this.btnEventos.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btnCompra
+            // btnCompras
             // 
-            this.btnCompra.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnCompra.FlatAppearance.BorderSize = 0;
-            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompra.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.btnCompra.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_medium;
-            this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCompra.Location = new System.Drawing.Point(326, 295);
-            this.btnCompra.Name = "btnCompra";
-            this.btnCompra.Size = new System.Drawing.Size(150, 184);
-            this.btnCompra.TabIndex = 18;
-            this.btnCompra.Text = " Compras";
-            this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCompra.UseVisualStyleBackColor = true;
-            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
+            this.btnCompras.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_medium;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCompras.Location = new System.Drawing.Point(326, 295);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(150, 184);
+            this.btnCompras.TabIndex = 18;
+            this.btnCompras.Text = " Compras";
+            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // btnUsuarios
             // 
@@ -284,33 +284,34 @@
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // btnMarcarAsistencia
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.button3.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.button3.Location = new System.Drawing.Point(409, 18);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(201, 65);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "  Marcar\r\n  Asistencia";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(409, 18);
+            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
+            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarAsistencia.TabIndex = 26;
+            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
+            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
+            this.btnMarcarAsistencia.Click += new System.EventHandler(this.btnMarcarAsistencia_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.asd;
+            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(983, 13);
+            this.btnCerrar.Location = new System.Drawing.Point(981, 15);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 26;
@@ -490,7 +491,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 668);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -498,7 +499,7 @@
             this.Text = "Administración";
             this.panelIzquierdo.ResumeLayout(false);
             this.panelSuperior.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
@@ -510,12 +511,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelIzquierdo;
         private System.Windows.Forms.Panel panelSuperior;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnCompra;
+        private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnEventos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPlatos;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnReclamos;
         private System.Windows.Forms.Button btnVentas;
@@ -531,6 +532,6 @@
         private System.Windows.Forms.Button sdbtnEventos;
         private System.Windows.Forms.Button sdbtnReportes;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnMarcarAsistencia;
     }
 }

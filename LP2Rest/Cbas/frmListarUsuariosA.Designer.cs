@@ -67,9 +67,10 @@
             // lblDNINombre
             // 
             this.lblDNINombre.AutoSize = true;
+            this.lblDNINombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblDNINombre.Location = new System.Drawing.Point(107, 50);
             this.lblDNINombre.Name = "lblDNINombre";
-            this.lblDNINombre.Size = new System.Drawing.Size(52, 13);
+            this.lblDNINombre.Size = new System.Drawing.Size(61, 15);
             this.lblDNINombre.TabIndex = 0;
             this.lblDNINombre.Text = "Nombres:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -157,7 +158,7 @@
             this.btnEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(278, 437);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(253, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(222, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "tsMenu";
             // 

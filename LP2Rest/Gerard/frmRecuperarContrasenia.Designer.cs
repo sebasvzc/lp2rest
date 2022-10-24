@@ -59,16 +59,16 @@
             // 
             // panelDerecho
             // 
-            this.panelDerecho.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.panelDerecho.Controls.Add(this.linea);
             this.panelDerecho.Controls.Add(this.txtDNI);
             this.panelDerecho.Controls.Add(this.btnBuscar);
             this.panelDerecho.Controls.Add(this.btnCancelar);
             this.panelDerecho.Controls.Add(this.lblIngresaDNI);
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDerecho.Location = new System.Drawing.Point(129, 0);
+            this.panelDerecho.Location = new System.Drawing.Point(144, 0);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(233, 143);
+            this.panelDerecho.Size = new System.Drawing.Size(237, 143);
             this.panelDerecho.TabIndex = 17;
             this.panelDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDerecho_MouseDown);
             // 
@@ -84,7 +84,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.BackColor = System.Drawing.Color.White;
+            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
             this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -139,7 +139,7 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(129, 143);
+            this.panelIzquierdo.Size = new System.Drawing.Size(144, 143);
             this.panelIzquierdo.TabIndex = 16;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -155,10 +155,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_medium;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 18);
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big75__strongerColor;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(106, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 143);
+            this.ClientSize = new System.Drawing.Size(381, 143);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
