@@ -321,7 +321,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.Window;
             this.panelContenedor.Controls.Add(this.panel5);
             this.panelContenedor.Controls.Add(this.btnReportes);
             this.panelContenedor.Controls.Add(this.btnReclamos);
