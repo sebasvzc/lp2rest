@@ -21,84 +21,45 @@ namespace LP2Rest
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
         public frmPrincipalA()
         {
             InitializeComponent();
         }
 
-        private void btnUusarios_Click(object sender, EventArgs e)
-        {
-            frmListarUsuariosA formListUsuariosA = new frmListarUsuariosA();
-            if (formListUsuariosA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            frmListarOrdenesCompra formListarOrdenesCompra = new frmListarOrdenesCompra();
-            if (formListarOrdenesCompra.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarOrdenesCompra());
         }
 
         private void btnEventos_Click(object sender, EventArgs e)
         {
-            frmListarEventosA formListEventosA = new frmListarEventosA();
-            if (formListEventosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarEventosA());
         }
 
         private void btnPlatos_Click(object sender, EventArgs e)
         {
-            frmListarPlatos formListarPlatos = new frmListarPlatos();
-            if (formListarPlatos.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarPlatos());
         }
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            frmListarInsumosA formListInsumosA = new frmListarInsumosA();
-            if (formListInsumosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarInsumosA());
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            frmListarOrdenesVentaA formListVentasA = new frmListarOrdenesVentaA();
-            if (formListVentasA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarOrdenesVentaA());
         }
 
         private void btnReclamos_Click(object sender, EventArgs e)
         {
-            frmListarReclamosA formListReclamosA = new frmListarReclamosA();
-            if (formListReclamosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarReclamosA());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            //Falta implementar
-            frmListarReportesA formListReportesA = new frmListarReportesA();
-            if (formListReportesA.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void pbAsistencia_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Se registró la asistencia");
-        }
-
-        private void lblAsistencia_Click(object sender, EventArgs e)
-        {
-            pbAsistencia_Click( sender,  e);
+            abrirFormulario(new frmListarReportesA());
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -106,78 +67,60 @@ namespace LP2Rest
             abrirFormulario(new frmListarUsuariosA());
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void side_btnPlatos_Click(object sender, EventArgs e)
-        {
-            frmListarPlatos formListarPlatos = new frmListarPlatos();
-            if (formListarPlatos.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
         private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
-            frmListarUsuariosA formListUsuariosA = new frmListarUsuariosA();
-            if (formListUsuariosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarUsuariosA());
         }
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
-            frmListarOrdenesVentaA formListVentasA = new frmListarOrdenesVentaA();
-            if (formListVentasA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarOrdenesVentaA());
         }
 
         private void sdbtnEventos_Click(object sender, EventArgs e)
         {
-            frmListarEventosA formListEventosA = new frmListarEventosA();
-            if (formListEventosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarEventosA());
         }
 
         private void sdbtnReportes_Click(object sender, EventArgs e)
         {
-            frmListarReportesA formListReportesA = new frmListarReportesA();
-            if (formListReportesA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarReportesA());
         }
 
         private void sdbtnInsumos_Click(object sender, EventArgs e)
         {
-            frmListarInsumosA formListInsumosA = new frmListarInsumosA();
-            if (formListInsumosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarInsumosA());
         }
 
         private void sdbtnCompras_Click(object sender, EventArgs e)
         {
-            frmListarOrdenesCompra formListarOrdenesCompra = new frmListarOrdenesCompra();
-            if (formListarOrdenesCompra.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarOrdenesCompra());
         }
 
         private void sdbtnReclamos_Click(object sender, EventArgs e)
         {
-            frmListarReclamosA formListReclamosA = new frmListarReclamosA();
-            if (formListReclamosA.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmListarReclamosA());
         }
 
         private void sdbtnPlatos_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarPlatos());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMarcarAsistencia_Click(object sender, EventArgs e)
+        {
+            pbAsistencia_Click(sender, e);
+            btnMarcarAsistencia.Hide();
+        }
+
+        private void pbAsistencia_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se registró la asistencia");
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -215,11 +158,6 @@ namespace LP2Rest
             formularioMostrar.Dock = DockStyle.Fill;
             panelContenedor.Controls.Add(formularioMostrar);
             formularioMostrar.Show();
-        }
-
-        private void btnMarcarAsistencia_Click(object sender, EventArgs e)
-        {
-            btnMarcarAsistencia.Hide();
         }
     }
 }

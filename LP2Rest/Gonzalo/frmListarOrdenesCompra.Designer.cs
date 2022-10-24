@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarOrdenesCompra));
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +60,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(709, 18);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(532, 15);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(106, 23);
             this.btnBuscar.TabIndex = 115;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -79,13 +77,12 @@
             this.Teléfono,
             this.email,
             this.Area});
-            this.dgvEmpleados.Location = new System.Drawing.Point(33, 187);
-            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEmpleados.Location = new System.Drawing.Point(25, 152);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(835, 222);
+            this.dgvEmpleados.Size = new System.Drawing.Size(626, 180);
             this.dgvEmpleados.TabIndex = 114;
             // 
             // NombreCompleto
@@ -123,19 +120,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 137);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(80, 111);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 24);
+            this.comboBox1.Size = new System.Drawing.Size(125, 21);
             this.comboBox1.TabIndex = 113;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 140);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(35, 114);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 16);
+            this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 112;
             this.label9.Text = "Activo:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -144,28 +139,25 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(29, 22);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(22, 18);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(178, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(146, 16);
             this.lblTitulo.TabIndex = 111;
             this.lblTitulo.Text = "Listado de Compras";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(718, 138);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(538, 112);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 22);
+            this.textBox2.Size = new System.Drawing.Size(107, 20);
             this.textBox2.TabIndex = 110;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(659, 143);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(494, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 16);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 109;
             this.label5.Text = "Hasta:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -173,48 +165,43 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(655, 108);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(491, 88);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 108;
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(718, 104);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(538, 84);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 22);
+            this.textBox1.Size = new System.Drawing.Size(107, 20);
             this.textBox1.TabIndex = 107;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(310, 144);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(232, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 106;
             this.label2.Text = "Hasta:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(367, 139);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(275, 113);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
             this.dateTimePicker1.TabIndex = 105;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(306, 106);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(230, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 104;
             this.label1.Text = "Desde:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,37 +209,33 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(419, 73);
-            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(314, 59);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(115, 16);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(91, 13);
             this.lblFechaNacimiento.TabIndex = 103;
             this.lblFechaNacimiento.Text = "Fecha de Compra";
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(367, 102);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(275, 83);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(260, 22);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(196, 20);
             this.dtpFechaNacimiento.TabIndex = 102;
             // 
             // txtDNINombre
             // 
-            this.txtDNINombre.Location = new System.Drawing.Point(106, 102);
-            this.txtDNINombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDNINombre.Location = new System.Drawing.Point(80, 83);
             this.txtDNINombre.Name = "txtDNINombre";
             this.txtDNINombre.ReadOnly = true;
-            this.txtDNINombre.Size = new System.Drawing.Size(165, 22);
+            this.txtDNINombre.Size = new System.Drawing.Size(125, 20);
             this.txtDNINombre.TabIndex = 101;
             // 
             // lblDNINombre
             // 
             this.lblDNINombre.AutoSize = true;
-            this.lblDNINombre.Location = new System.Drawing.Point(29, 107);
-            this.lblDNINombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDNINombre.Location = new System.Drawing.Point(22, 87);
             this.lblDNINombre.Name = "lblDNINombre";
-            this.lblDNINombre.Size = new System.Drawing.Size(74, 16);
+            this.lblDNINombre.Size = new System.Drawing.Size(60, 13);
             this.lblDNINombre.TabIndex = 100;
             this.lblDNINombre.Text = "ID Compra:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -267,9 +250,9 @@
             this.btnModificar,
             this.btnEliminar,
             this.Anular});
-            this.toolStrip1.Location = new System.Drawing.Point(268, 423);
+            this.toolStrip1.Location = new System.Drawing.Point(201, 344);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(388, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(331, 27);
             this.toolStrip1.TabIndex = 116;
             this.toolStrip1.Text = "tsMenu";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -279,7 +262,7 @@
             this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(76, 24);
+            this.btnNuevo.Size = new System.Drawing.Size(66, 24);
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -288,7 +271,7 @@
             this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(97, 24);
+            this.btnModificar.Size = new System.Drawing.Size(82, 24);
             this.btnModificar.Text = "&Modificar";
             // 
             // btnEliminar
@@ -296,22 +279,22 @@
             this.btnEliminar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(87, 24);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
             this.btnEliminar.Text = "&Eliminar";
             // 
             // Anular
             // 
-            this.Anular.Image = ((System.Drawing.Image)(resources.GetObject("Anular.Image")));
+            this.Anular.Image = global::LP2Rest.Properties.Resources._391127;
             this.Anular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Anular.Name = "Anular";
-            this.Anular.Size = new System.Drawing.Size(76, 24);
+            this.Anular.Size = new System.Drawing.Size(66, 24);
             this.Anular.Text = "&Anular";
             // 
             // frmListarOrdenesCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 459);
+            this.ClientSize = new System.Drawing.Size(1004, 529);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvEmpleados);
@@ -329,6 +312,7 @@
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.txtDNINombre);
             this.Controls.Add(this.lblDNINombre);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListarOrdenesCompra";
             this.Text = "frmListarOrdenesCompra";
             this.Load += new System.EventHandler(this.frmListarOrdenesCompra_Load);
