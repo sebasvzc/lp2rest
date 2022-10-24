@@ -26,22 +26,12 @@ namespace LP2Rest
             InitializeComponent();
         }
 
-        private void imgClientes_Click(object sender, EventArgs e)
-        {
-            btnUusarios_Click(sender, e);
-        }
-
         private void btnUusarios_Click(object sender, EventArgs e)
         {
             frmListarUsuariosA formListUsuariosA = new frmListarUsuariosA();
             if (formListUsuariosA.ShowDialog() == DialogResult.OK)
             {
             }
-        }
-
-        private void imgCompras_Click(object sender, EventArgs e)
-        {
-            btnCompras_Click(sender, e);
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -52,22 +42,12 @@ namespace LP2Rest
             }
         }
 
-        private void imgEspec_Click(object sender, EventArgs e)
-        {
-            btnEventos_Click(sender, e);
-        }
-
         private void btnEventos_Click(object sender, EventArgs e)
         {
             frmListarEventosA formListEventosA = new frmListarEventosA();
             if (formListEventosA.ShowDialog() == DialogResult.OK)
             {
             }
-        }
-
-        private void imgPlatos_Click(object sender, EventArgs e)
-        {
-            btnPlatos_Click(sender, e);
         }
 
         private void btnPlatos_Click(object sender, EventArgs e)
@@ -78,22 +58,12 @@ namespace LP2Rest
             }
         }
 
-        private void imgInsumos_Click(object sender, EventArgs e)
-        {
-            btnInsumos_Click(sender, e);
-        }
-
         private void btnInsumos_Click(object sender, EventArgs e)
         {
             frmListarInsumosA formListInsumosA = new frmListarInsumosA();
             if (formListInsumosA.ShowDialog() == DialogResult.OK)
             {
             }
-        }
-
-        private void imgVentas_Click(object sender, EventArgs e)
-        {
-            btnVentas_Click(sender, e);
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
@@ -104,22 +74,12 @@ namespace LP2Rest
             }
         }
 
-        private void imgReclamos_Click(object sender, EventArgs e)
-        {
-            btnReclamos_Click(sender, e);
-        }
-
         private void btnReclamos_Click(object sender, EventArgs e)
         {
             frmListarReclamosA formListReclamosA = new frmListarReclamosA();
             if (formListReclamosA.ShowDialog() == DialogResult.OK)
             {
             }
-        }
-
-        private void imgReportes_Click(object sender, EventArgs e)
-        {
-            btnReportes_Click(sender, e);
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
