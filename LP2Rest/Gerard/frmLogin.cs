@@ -97,7 +97,7 @@ namespace LP2Rest
             if (txtUsuario.Text == "")
             {
                 txtUsuario.Text = "Usuario";
-                txtUsuario.ForeColor = Color.FromArgb(100, 100, 100);
+                txtUsuario.ForeColor = Color.FromArgb(80, 80, 100);
             }
         }
 
@@ -116,7 +116,7 @@ namespace LP2Rest
             if (txtContrasena.Text == "")
             {
                 txtContrasena.Text = "Contraseña";
-                txtContrasena.ForeColor = Color.FromArgb(100, 100, 100);
+                txtContrasena.ForeColor = Color.FromArgb(80, 80, 80);
                 txtContrasena.UseSystemPasswordChar = false;
             }
         }
