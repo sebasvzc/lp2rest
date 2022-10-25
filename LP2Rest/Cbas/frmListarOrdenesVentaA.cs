@@ -22,5 +22,6 @@ namespace LP2Rest
             frmGestionOrdenesVentaA formGestionOrdenesVentaA = new frmGestionOrdenesVentaA();
             formGestionOrdenesVentaA.ShowDialog();
         }
+         
     }
 }

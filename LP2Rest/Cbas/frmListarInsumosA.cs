@@ -21,6 +21,6 @@ namespace LP2Rest
         {
             frmGestionInsumosA frm = new frmGestionInsumosA();
             frm.ShowDialog();
-        }
+        } 
     }
 }
