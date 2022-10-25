@@ -84,11 +84,11 @@
     <Compile Include="Marcelo\frmBusquedaReceta.Designer.cs">
       <DependentUpon>frmBusquedaReceta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gerard\frmCajero.cs">
+    <Compile Include="Gerard\frmPrincipalCajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gerard\frmCajero.Designer.cs">
-      <DependentUpon>frmCajero.cs</DependentUpon>
+    <Compile Include="Gerard\frmPrincipalCajero.Designer.cs">
+      <DependentUpon>frmPrincipalCajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Diego\frmCrearActualizacionStock.cs">
       <SubType>Form</SubType>
@@ -192,11 +192,11 @@
     <Compile Include="Marcelo\frmInicioChef.Designer.cs">
       <DependentUpon>frmInicioChef.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gerard\frmListaOrdenVenta.cs">
+    <Compile Include="Gerard\frmListaOrdenVentaMesero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gerard\frmListaOrdenVenta.Designer.cs">
-      <DependentUpon>frmListaOrdenVenta.cs</DependentUpon>
+    <Compile Include="Gerard\frmListaOrdenVentaMesero.Designer.cs">
+      <DependentUpon>frmListaOrdenVentaMesero.cs</DependentUpon>
     </Compile>
     <Compile Include="Cbas\frmListarEventosA.cs">
       <SubType>Form</SubType>
@@ -258,11 +258,11 @@
     <Compile Include="Gerard\frmMesas.Designer.cs">
       <DependentUpon>frmMesas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gerard\frmMesero.cs">
+    <Compile Include="Gerard\frmPrincipalMesero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gerard\frmMesero.Designer.cs">
-      <DependentUpon>frmMesero.cs</DependentUpon>
+    <Compile Include="Gerard\frmPrincipalMesero.Designer.cs">
+      <DependentUpon>frmPrincipalMesero.cs</DependentUpon>
     </Compile>
     <Compile Include="Marcelo\frmNuevaReceta.cs">
       <SubType>Form</SubType>
@@ -350,8 +350,8 @@
     <EmbeddedResource Include="Marcelo\frmBusquedaReceta.resx">
       <DependentUpon>frmBusquedaReceta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gerard\frmCajero.resx">
-      <DependentUpon>frmCajero.cs</DependentUpon>
+    <EmbeddedResource Include="Gerard\frmPrincipalCajero.resx">
+      <DependentUpon>frmPrincipalCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diego\frmCrearActualizacionStock.resx">
       <DependentUpon>frmCrearActualizacionStock.cs</DependentUpon>
@@ -404,8 +404,8 @@
     <EmbeddedResource Include="Marcelo\frmInicioChef.resx">
       <DependentUpon>frmInicioChef.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gerard\frmListaOrdenVenta.resx">
-      <DependentUpon>frmListaOrdenVenta.cs</DependentUpon>
+    <EmbeddedResource Include="Gerard\frmListaOrdenVentaMesero.resx">
+      <DependentUpon>frmListaOrdenVentaMesero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cbas\frmListarEventosA.resx">
       <DependentUpon>frmListarEventosA.cs</DependentUpon>
@@ -441,8 +441,8 @@
     <EmbeddedResource Include="Gerard\frmMesas.resx">
       <DependentUpon>frmMesas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gerard\frmMesero.resx">
-      <DependentUpon>frmMesero.cs</DependentUpon>
+    <EmbeddedResource Include="Gerard\frmPrincipalMesero.resx">
+      <DependentUpon>frmPrincipalMesero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmNuevaReceta.resx">
       <DependentUpon>frmNuevaReceta.cs</DependentUpon>
@@ -617,6 +617,8 @@
     <None Include="Resources\imgAsistenciaIcon_small.png" />
     <None Include="Resources\imgRestauranteLogo_big_strongerColor.png" />
     <None Include="Resources\imgRestauranteLogo_big75%25_strongerColor.png" />
+    <None Include="Resources\imgMesas150x150.png" />
+    <None Include="Resources\imgMesas42x42.png" />
     <Content Include="Resources\lista agregar.png" />
     <Content Include="Resources\lista remover.png" />
     <Content Include="Resources\mirar archivo.png" />

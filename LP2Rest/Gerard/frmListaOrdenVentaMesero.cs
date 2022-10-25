@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2Rest
 {
-    public partial class frmListaOrdenVenta : Form
+    public partial class frmListaOrdenVentaMesero : Form
     {
-        public frmListaOrdenVenta()
+        public frmListaOrdenVentaMesero()
         {
             InitializeComponent();
         }
