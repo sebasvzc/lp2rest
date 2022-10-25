@@ -354,7 +354,7 @@
             this.btnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportes.Location = new System.Drawing.Point(807, 131);
+            this.btnReportes.Location = new System.Drawing.Point(815, 132);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(166, 206);
             this.btnReportes.TabIndex = 24;
@@ -371,7 +371,7 @@
             this.btnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_medium;
             this.btnReclamos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReclamos.Location = new System.Drawing.Point(572, 378);
+            this.btnReclamos.Location = new System.Drawing.Point(580, 403);
             this.btnReclamos.Name = "btnReclamos";
             this.btnReclamos.Size = new System.Drawing.Size(166, 206);
             this.btnReclamos.TabIndex = 23;
@@ -388,7 +388,7 @@
             this.btnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_medium;
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVentas.Location = new System.Drawing.Point(344, 131);
+            this.btnVentas.Location = new System.Drawing.Point(352, 132);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(166, 206);
             this.btnVentas.TabIndex = 22;
@@ -405,7 +405,7 @@
             this.btnInsumos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_medium;
             this.btnInsumos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnInsumos.Location = new System.Drawing.Point(112, 378);
+            this.btnInsumos.Location = new System.Drawing.Point(120, 403);
             this.btnInsumos.Name = "btnInsumos";
             this.btnInsumos.Size = new System.Drawing.Size(166, 206);
             this.btnInsumos.TabIndex = 21;
@@ -422,7 +422,7 @@
             this.btnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_medium;
             this.btnPlatos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPlatos.Location = new System.Drawing.Point(808, 378);
+            this.btnPlatos.Location = new System.Drawing.Point(816, 403);
             this.btnPlatos.Name = "btnPlatos";
             this.btnPlatos.Size = new System.Drawing.Size(166, 206);
             this.btnPlatos.TabIndex = 20;
@@ -439,7 +439,7 @@
             this.btnEventos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnEventos.Image = global::LP2Rest.Properties.Resources.imgEventosIcon_medium;
             this.btnEventos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEventos.Location = new System.Drawing.Point(571, 131);
+            this.btnEventos.Location = new System.Drawing.Point(579, 132);
             this.btnEventos.Name = "btnEventos";
             this.btnEventos.Size = new System.Drawing.Size(166, 206);
             this.btnEventos.TabIndex = 19;
@@ -456,7 +456,7 @@
             this.btnCompras.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_medium;
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCompras.Location = new System.Drawing.Point(344, 378);
+            this.btnCompras.Location = new System.Drawing.Point(352, 403);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(166, 206);
             this.btnCompras.TabIndex = 18;
@@ -473,7 +473,7 @@
             this.btnUsuarios.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.btnUsuarios.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_medium;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUsuarios.Location = new System.Drawing.Point(111, 131);
+            this.btnUsuarios.Location = new System.Drawing.Point(119, 132);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(166, 206);
             this.btnUsuarios.TabIndex = 17;
