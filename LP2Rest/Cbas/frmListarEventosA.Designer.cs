@@ -143,7 +143,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmpleados.Location = new System.Drawing.Point(56, 362);
+            this.dgvEmpleados.Location = new System.Drawing.Point(56, 365);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -203,7 +203,7 @@
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(75, 11);
+            this.lblTitulo.Location = new System.Drawing.Point(75, 21);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(300, 45);
             this.lblTitulo.TabIndex = 72;
@@ -213,7 +213,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label7.Location = new System.Drawing.Point(788, 151);
+            this.label7.Location = new System.Drawing.Point(788, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(204, 34);
             this.label7.TabIndex = 69;
@@ -223,7 +223,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(788, 225);
+            this.textBox3.Location = new System.Drawing.Point(788, 233);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(204, 32);
             this.textBox3.TabIndex = 68;
@@ -231,7 +231,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(77, 300);
+            this.textBox2.Location = new System.Drawing.Point(77, 308);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(233, 32);
             this.textBox2.TabIndex = 67;
@@ -239,7 +239,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label5.Location = new System.Drawing.Point(77, 261);
+            this.label5.Location = new System.Drawing.Point(77, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(233, 34);
             this.label5.TabIndex = 66;
@@ -249,7 +249,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label6.Location = new System.Drawing.Point(77, 186);
+            this.label6.Location = new System.Drawing.Point(77, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 34);
             this.label6.TabIndex = 65;
@@ -259,7 +259,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(77, 225);
+            this.textBox1.Location = new System.Drawing.Point(77, 233);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(233, 32);
             this.textBox1.TabIndex = 64;
@@ -267,7 +267,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label4.Location = new System.Drawing.Point(77, 151);
+            this.label4.Location = new System.Drawing.Point(77, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(233, 34);
             this.label4.TabIndex = 63;
@@ -278,7 +278,7 @@
             // 
             this.cboArea.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cboArea.FormattingEnabled = true;
-            this.cboArea.Location = new System.Drawing.Point(788, 106);
+            this.cboArea.Location = new System.Drawing.Point(788, 116);
             this.cboArea.Name = "cboArea";
             this.cboArea.Size = new System.Drawing.Size(204, 33);
             this.cboArea.TabIndex = 62;
@@ -286,7 +286,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label3.Location = new System.Drawing.Point(788, 69);
+            this.label3.Location = new System.Drawing.Point(788, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(204, 34);
             this.label3.TabIndex = 61;
@@ -296,7 +296,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(357, 151);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(357, 161);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(377, 34);
             this.lblFechaNacimiento.TabIndex = 57;
@@ -306,7 +306,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(357, 225);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(357, 233);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(377, 32);
             this.dtpFechaNacimiento.TabIndex = 56;
@@ -314,7 +314,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(788, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(788, 23);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(204, 44);
             this.btnBuscar.TabIndex = 55;
@@ -324,7 +324,7 @@
             // txtDNINombre
             // 
             this.txtDNINombre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNINombre.Location = new System.Drawing.Point(77, 106);
+            this.txtDNINombre.Location = new System.Drawing.Point(77, 116);
             this.txtDNINombre.Name = "txtDNINombre";
             this.txtDNINombre.Size = new System.Drawing.Size(657, 32);
             this.txtDNINombre.TabIndex = 54;
@@ -332,7 +332,7 @@
             // lblDNINombre
             // 
             this.lblDNINombre.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblDNINombre.Location = new System.Drawing.Point(77, 69);
+            this.lblDNINombre.Location = new System.Drawing.Point(77, 79);
             this.lblDNINombre.Name = "lblDNINombre";
             this.lblDNINombre.Size = new System.Drawing.Size(657, 34);
             this.lblDNINombre.TabIndex = 53;
@@ -342,7 +342,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(357, 186);
+            this.label1.Location = new System.Drawing.Point(357, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(377, 34);
             this.label1.TabIndex = 58;
@@ -352,7 +352,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label2.Location = new System.Drawing.Point(357, 261);
+            this.label2.Location = new System.Drawing.Point(357, 269);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(377, 34);
             this.label2.TabIndex = 74;
@@ -362,7 +362,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(357, 300);
+            this.dateTimePicker1.Location = new System.Drawing.Point(357, 308);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(377, 32);
             this.dateTimePicker1.TabIndex = 73;
@@ -370,7 +370,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label8.Location = new System.Drawing.Point(788, 261);
+            this.label8.Location = new System.Drawing.Point(788, 269);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(204, 34);
             this.label8.TabIndex = 76;
@@ -380,7 +380,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label9.Location = new System.Drawing.Point(788, 186);
+            this.label9.Location = new System.Drawing.Point(788, 194);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(204, 34);
             this.label9.TabIndex = 75;
@@ -390,7 +390,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox4.Location = new System.Drawing.Point(788, 300);
+            this.textBox4.Location = new System.Drawing.Point(788, 308);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(204, 32);
             this.textBox4.TabIndex = 77;
