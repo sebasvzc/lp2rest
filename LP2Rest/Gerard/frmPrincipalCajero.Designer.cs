@@ -37,12 +37,13 @@
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnMesas = new System.Windows.Forms.Button();
+            this.btnMarcarSalida = new System.Windows.Forms.Button();
+            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -140,9 +141,10 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.btnMarcarSalida);
+            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.label1);
-            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(256, 0);
@@ -173,23 +175,6 @@
             this.label1.Size = new System.Drawing.Size(196, 60);
             this.label1.TabIndex = 26;
             this.label1.Text = "INICIO";
-            // 
-            // btnMarcarAsistencia
-            // 
-            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(449, 18);
-            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
-            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
-            this.btnMarcarAsistencia.TabIndex = 26;
-            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
-            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
             // 
             // btnCerrar
             // 
@@ -262,6 +247,43 @@
             this.btnMesas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMesas.UseVisualStyleBackColor = true;
             // 
+            // btnMarcarSalida
+            // 
+            this.btnMarcarSalida.Enabled = false;
+            this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarSalida.FlatAppearance.BorderSize = 0;
+            this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarSalida.Location = new System.Drawing.Point(253, 18);
+            this.btnMarcarSalida.Name = "btnMarcarSalida";
+            this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarSalida.TabIndex = 47;
+            this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
+            this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarSalida.UseVisualStyleBackColor = true;
+            this.btnMarcarSalida.Click += new System.EventHandler(this.btnMarcarSalida_Click);
+            // 
+            // btnMarcarAsistencia
+            // 
+            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(460, 18);
+            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
+            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarAsistencia.TabIndex = 46;
+            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
+            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
+            this.btnMarcarAsistencia.Click += new System.EventHandler(this.btnMarcarAsistencia_Click);
+            // 
             // frmPrincipalCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,12 +315,13 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnMarcarAsistencia;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button sdbtnMesas;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnMarcarSalida;
+        private System.Windows.Forms.Button btnMarcarAsistencia;
     }
 }

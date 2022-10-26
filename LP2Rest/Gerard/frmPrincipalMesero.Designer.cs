@@ -45,6 +45,7 @@
             this.btnMesas = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnMarcarSalida = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -162,6 +163,7 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.btnMarcarSalida);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.lbltitulo);
             this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
@@ -212,6 +214,7 @@
             this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
+            this.btnMarcarAsistencia.Click += new System.EventHandler(this.btnMarcarAsistencia_Click);
             // 
             // btnCerrar
             // 
@@ -301,6 +304,25 @@
             this.panel5.Size = new System.Drawing.Size(1100, 4);
             this.panel5.TabIndex = 25;
             // 
+            // btnMarcarSalida
+            // 
+            this.btnMarcarSalida.Enabled = false;
+            this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarSalida.FlatAppearance.BorderSize = 0;
+            this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarSalida.Location = new System.Drawing.Point(242, 18);
+            this.btnMarcarSalida.Name = "btnMarcarSalida";
+            this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarSalida.TabIndex = 28;
+            this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
+            this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarSalida.UseVisualStyleBackColor = true;
+            this.btnMarcarSalida.Click += new System.EventHandler(this.btnMarcarSalida_Click);
+            // 
             // frmPrincipalMesero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,5 +362,6 @@
         private System.Windows.Forms.Button btnMesas;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnMarcarSalida;
     }
 }
