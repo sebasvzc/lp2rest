@@ -30,23 +30,23 @@
         {
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.sdbtnMesas = new System.Windows.Forms.Button();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnMesas = new System.Windows.Forms.Button();
-            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.sdbtnReportes = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panelSuperior = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
+            this.btnMesas = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelIzquierdo
@@ -62,6 +62,7 @@
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
             this.panelIzquierdo.TabIndex = 50;
+            this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
             // panel4
             // 
@@ -71,52 +72,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(8, 819);
             this.panel4.TabIndex = 17;
-            // 
-            // panelSuperior
-            // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
-            this.panelSuperior.Controls.Add(this.lblID);
-            this.panelSuperior.Controls.Add(this.label1);
-            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
-            this.panelSuperior.Controls.Add(this.btnCerrar);
-            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(256, 0);
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
-            this.panelSuperior.TabIndex = 51;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(23, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 60);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "INICIO";
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.Window;
-            this.panelContenedor.Controls.Add(this.panel5);
-            this.panelContenedor.Controls.Add(this.btnReportes);
-            this.panelContenedor.Controls.Add(this.btnMesas);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(256, 100);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
-            this.panelContenedor.TabIndex = 52;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1100, 4);
-            this.panel5.TabIndex = 25;
             // 
             // sdbtnMesas
             // 
@@ -133,72 +88,6 @@
             this.sdbtnMesas.Text = "  Mesas";
             this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sdbtnMesas.UseVisualStyleBackColor = true;
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportes.Location = new System.Drawing.Point(665, 132);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(166, 206);
-            this.btnReportes.TabIndex = 24;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReportes.UseVisualStyleBackColor = true;
-            // 
-            // btnMesas
-            // 
-            this.btnMesas.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMesas.FlatAppearance.BorderSize = 0;
-            this.btnMesas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnMesas.ForeColor = System.Drawing.Color.Black;
-            this.btnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas150x150;
-            this.btnMesas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMesas.Location = new System.Drawing.Point(253, 132);
-            this.btnMesas.Name = "btnMesas";
-            this.btnMesas.Size = new System.Drawing.Size(174, 193);
-            this.btnMesas.TabIndex = 43;
-            this.btnMesas.Text = "Mesas";
-            this.btnMesas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMesas.UseVisualStyleBackColor = true;
-            // 
-            // btnMarcarAsistencia
-            // 
-            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(449, 18);
-            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
-            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
-            this.btnMarcarAsistencia.TabIndex = 26;
-            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
-            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(1058, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrar.TabIndex = 26;
-            this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // sdbtnReportes
             // 
@@ -248,6 +137,20 @@
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.lblID);
+            this.panelSuperior.Controls.Add(this.label1);
+            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
+            this.panelSuperior.Controls.Add(this.btnCerrar);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(256, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
+            this.panelSuperior.TabIndex = 51;
+            this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -259,7 +162,107 @@
             this.lblID.TabIndex = 45;
             this.lblID.Text = "Cajero #x";
             // 
-            // frmCajero
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(23, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 60);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "INICIO";
+            // 
+            // btnMarcarAsistencia
+            // 
+            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(449, 18);
+            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
+            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarAsistencia.TabIndex = 26;
+            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
+            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(1058, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.TabIndex = 26;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.Window;
+            this.panelContenedor.Controls.Add(this.panel5);
+            this.panelContenedor.Controls.Add(this.btnReportes);
+            this.panelContenedor.Controls.Add(this.btnMesas);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(256, 100);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
+            this.panelContenedor.TabIndex = 52;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1100, 4);
+            this.panel5.TabIndex = 25;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.btnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReportes.Location = new System.Drawing.Point(665, 132);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(166, 206);
+            this.btnReportes.TabIndex = 24;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            // 
+            // btnMesas
+            // 
+            this.btnMesas.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMesas.FlatAppearance.BorderSize = 0;
+            this.btnMesas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.btnMesas.ForeColor = System.Drawing.Color.Black;
+            this.btnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas150x150;
+            this.btnMesas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMesas.Location = new System.Drawing.Point(253, 132);
+            this.btnMesas.Name = "btnMesas";
+            this.btnMesas.Size = new System.Drawing.Size(174, 193);
+            this.btnMesas.TabIndex = 43;
+            this.btnMesas.Text = "Mesas";
+            this.btnMesas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMesas.UseVisualStyleBackColor = true;
+            // 
+            // frmPrincipalCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -268,14 +271,15 @@
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "frmCajero";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmPrincipalCajero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCajero";
             this.panelIzquierdo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

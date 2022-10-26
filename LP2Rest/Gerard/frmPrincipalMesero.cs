@@ -94,5 +94,22 @@ namespace LP2Rest
             btnVentas.Hide();
             abrirFormulario(new frmMesas());
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void panelIzquierdo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
     }
 }
