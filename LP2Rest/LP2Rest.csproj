@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gonzalo\Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marcelo\frmAgregarInsumoReceta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Gonzalo\Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
       <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
     </EmbeddedResource>
