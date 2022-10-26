@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbPedido = new System.Windows.Forms.GroupBox();
@@ -49,11 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -68,6 +60,15 @@
             this.lblDNINombre = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.gbPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,41 +84,17 @@
             this.btnGuardar,
             this.btnEliminar,
             this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(376, 429);
+            this.toolStrip1.Location = new System.Drawing.Point(385, 439);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(276, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(276, 31);
             this.toolStrip1.TabIndex = 134;
             this.toolStrip1.Text = "tsMenu";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(86, 24);
-            this.btnGuardar.Text = "&Guardar";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(87, 24);
-            this.btnEliminar.Text = "&Eliminar";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 24);
-            this.btnCancelar.Text = "&Cancelar";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(434, 10);
+            this.lblTitulo.Location = new System.Drawing.Point(461, 10);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(200, 20);
@@ -288,60 +265,16 @@
             this.NombreInsumo,
             this.Cantidad,
             this.Unidad,
-            this.Costo});
+            this.Costo,
+            this.Subtotal});
             this.dataGridView1.Location = new System.Drawing.Point(16, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 216);
+            this.dataGridView1.Size = new System.Drawing.Size(822, 216);
             this.dataGridView1.TabIndex = 61;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // SKU
-            // 
-            this.SKU.FillWeight = 80F;
-            this.SKU.HeaderText = "SKU";
-            this.SKU.MinimumWidth = 6;
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            this.SKU.Width = 80;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.FillWeight = 110F;
-            this.NombreInsumo.HeaderText = "Nombre";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 110;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 85F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 85;
-            // 
-            // Unidad
-            // 
-            this.Unidad.FillWeight = 85F;
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.MinimumWidth = 6;
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
-            this.Unidad.Width = 85;
-            // 
-            // Costo
-            // 
-            this.Costo.FillWeight = 105F;
-            this.Costo.HeaderText = "Costo Unitario";
-            this.Costo.MinimumWidth = 6;
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            this.Costo.Width = 105;
             // 
             // groupBox1
             // 
@@ -363,7 +296,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(758, 361);
+            this.groupBox1.Size = new System.Drawing.Size(859, 361);
             this.groupBox1.TabIndex = 137;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Insumos:";
@@ -452,19 +385,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(480, 329);
+            this.label5.Location = new System.Drawing.Point(563, 338);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 17);
+            this.label5.Size = new System.Drawing.Size(133, 17);
             this.label5.TabIndex = 65;
-            this.label5.Text = "Costo Total:";
+            this.label5.Text = "Costo Total (S/.):";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(579, 324);
+            this.txtTotal.Location = new System.Drawing.Point(710, 335);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
@@ -500,14 +433,88 @@
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Location = new System.Drawing.Point(13, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1095, 41);
+            this.panel1.Size = new System.Drawing.Size(1196, 41);
             this.panel1.TabIndex = 141;
+            // 
+            // SKU
+            // 
+            this.SKU.FillWeight = 75F;
+            this.SKU.HeaderText = "SKU";
+            this.SKU.MinimumWidth = 6;
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            this.SKU.Width = 75;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.HeaderText = "Nombre";
+            this.NombreInsumo.MinimumWidth = 6;
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 70F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Unidad
+            // 
+            this.Unidad.FillWeight = 85F;
+            this.Unidad.HeaderText = "Unidad";
+            this.Unidad.MinimumWidth = 6;
+            this.Unidad.Name = "Unidad";
+            this.Unidad.ReadOnly = true;
+            this.Unidad.Width = 85;
+            // 
+            // Costo
+            // 
+            this.Costo.FillWeight = 105F;
+            this.Costo.HeaderText = "Costo Unitario";
+            this.Costo.MinimumWidth = 6;
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            this.Costo.Width = 105;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(86, 28);
+            this.btnGuardar.Text = "&Guardar";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(87, 28);
+            this.btnEliminar.Text = "&Eliminar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 28);
+            this.btnCancelar.Text = "&Cancelar";
             // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 465);
+            this.ClientSize = new System.Drawing.Size(1238, 475);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
@@ -565,11 +572,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnBuscarInsumo;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
     }
 }

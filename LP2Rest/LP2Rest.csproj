@@ -48,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gonzalo\frmBuscarSoloPlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmBuscarSoloPlatos.Designer.cs">
+      <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarCombos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarCombos.Designer.cs">
+      <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarEliminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarEliminado.Designer.cs">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marcelo\frmAgregarInsumoReceta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +350,15 @@
     <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Gonzalo\frmBuscarSoloPlatos.resx">
+      <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmGestionarCombos.resx">
+      <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
       <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
     </EmbeddedResource>

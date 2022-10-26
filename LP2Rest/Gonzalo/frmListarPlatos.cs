@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.Gonzalo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,23 @@ namespace LP2Rest
         {
             frmGestionarPlatos formGestionarPlatos = new frmGestionarPlatos();
             formGestionarPlatos.ShowDialog();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmGestionarCombos formGestionarCombos = new frmGestionarCombos();
+            formGestionarCombos.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmValidarEliminado formValidarEliminado = new frmValidarEliminado();
+            formValidarEliminado.ShowDialog();
         }
     }
 }
