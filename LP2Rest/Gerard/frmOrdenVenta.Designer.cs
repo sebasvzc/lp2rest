@@ -481,7 +481,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 527);
+            this.ClientSize = new System.Drawing.Size(1101, 774);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvDetalleOrdenVenta);

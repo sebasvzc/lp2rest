@@ -308,9 +308,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(831, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(769, 19);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(219, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(244, 41);
             this.btnBuscar.TabIndex = 57;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;

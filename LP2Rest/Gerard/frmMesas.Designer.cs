@@ -70,9 +70,9 @@
             this.pnlMesas.Controls.Add(this.btnMesa3);
             this.pnlMesas.Controls.Add(this.btnMesa2);
             this.pnlMesas.Controls.Add(this.btnMesa1);
-            this.pnlMesas.Location = new System.Drawing.Point(50, 95);
+            this.pnlMesas.Location = new System.Drawing.Point(78, 142);
             this.pnlMesas.Name = "pnlMesas";
-            this.pnlMesas.Size = new System.Drawing.Size(509, 472);
+            this.pnlMesas.Size = new System.Drawing.Size(557, 490);
             this.pnlMesas.TabIndex = 13;
             // 
             // btnMesa12
@@ -80,7 +80,7 @@
             this.btnMesa12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa12.Location = new System.Drawing.Point(360, 364);
             this.btnMesa12.Name = "btnMesa12";
-            this.btnMesa12.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa12.Size = new System.Drawing.Size(159, 96);
             this.btnMesa12.TabIndex = 23;
             this.btnMesa12.Text = "Mesa12";
             this.btnMesa12.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@
             this.btnMesa11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa11.Location = new System.Drawing.Point(191, 364);
             this.btnMesa11.Name = "btnMesa11";
-            this.btnMesa11.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa11.Size = new System.Drawing.Size(159, 96);
             this.btnMesa11.TabIndex = 22;
             this.btnMesa11.Text = "Mesa11";
             this.btnMesa11.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@
             this.btnMesa10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa10.Location = new System.Drawing.Point(20, 364);
             this.btnMesa10.Name = "btnMesa10";
-            this.btnMesa10.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa10.Size = new System.Drawing.Size(159, 96);
             this.btnMesa10.TabIndex = 21;
             this.btnMesa10.Text = "Mesa10";
             this.btnMesa10.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             this.btnMesa9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa9.Location = new System.Drawing.Point(360, 255);
             this.btnMesa9.Name = "btnMesa9";
-            this.btnMesa9.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa9.Size = new System.Drawing.Size(159, 96);
             this.btnMesa9.TabIndex = 20;
             this.btnMesa9.Text = "Mesa9";
             this.btnMesa9.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@
             this.btnMesa8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa8.Location = new System.Drawing.Point(191, 255);
             this.btnMesa8.Name = "btnMesa8";
-            this.btnMesa8.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa8.Size = new System.Drawing.Size(159, 96);
             this.btnMesa8.TabIndex = 19;
             this.btnMesa8.Text = "Mesa8";
             this.btnMesa8.UseVisualStyleBackColor = false;
@@ -135,7 +135,7 @@
             this.btnMesa7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa7.Location = new System.Drawing.Point(20, 255);
             this.btnMesa7.Name = "btnMesa7";
-            this.btnMesa7.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa7.Size = new System.Drawing.Size(159, 96);
             this.btnMesa7.TabIndex = 18;
             this.btnMesa7.Text = "Mesa7";
             this.btnMesa7.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@
             this.btnMesa6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa6.Location = new System.Drawing.Point(360, 145);
             this.btnMesa6.Name = "btnMesa6";
-            this.btnMesa6.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa6.Size = new System.Drawing.Size(159, 96);
             this.btnMesa6.TabIndex = 17;
             this.btnMesa6.Text = "Mesa6";
             this.btnMesa6.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
             this.btnMesa5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa5.Location = new System.Drawing.Point(191, 145);
             this.btnMesa5.Name = "btnMesa5";
-            this.btnMesa5.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa5.Size = new System.Drawing.Size(159, 96);
             this.btnMesa5.TabIndex = 16;
             this.btnMesa5.Text = "Mesa5";
             this.btnMesa5.UseVisualStyleBackColor = false;
@@ -168,7 +168,7 @@
             this.btnMesa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa4.Location = new System.Drawing.Point(20, 145);
             this.btnMesa4.Name = "btnMesa4";
-            this.btnMesa4.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa4.Size = new System.Drawing.Size(159, 96);
             this.btnMesa4.TabIndex = 15;
             this.btnMesa4.Text = "Mesa4";
             this.btnMesa4.UseVisualStyleBackColor = false;
@@ -179,7 +179,7 @@
             this.btnMesa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa3.Location = new System.Drawing.Point(360, 30);
             this.btnMesa3.Name = "btnMesa3";
-            this.btnMesa3.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa3.Size = new System.Drawing.Size(159, 96);
             this.btnMesa3.TabIndex = 14;
             this.btnMesa3.Text = "Mesa3";
             this.btnMesa3.UseVisualStyleBackColor = false;
@@ -190,7 +190,7 @@
             this.btnMesa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa2.Location = new System.Drawing.Point(191, 30);
             this.btnMesa2.Name = "btnMesa2";
-            this.btnMesa2.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa2.Size = new System.Drawing.Size(159, 96);
             this.btnMesa2.TabIndex = 13;
             this.btnMesa2.Text = "Mesa2";
             this.btnMesa2.UseVisualStyleBackColor = false;
@@ -201,7 +201,7 @@
             this.btnMesa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnMesa1.Location = new System.Drawing.Point(20, 30);
             this.btnMesa1.Name = "btnMesa1";
-            this.btnMesa1.Size = new System.Drawing.Size(129, 79);
+            this.btnMesa1.Size = new System.Drawing.Size(159, 96);
             this.btnMesa1.TabIndex = 12;
             this.btnMesa1.Text = "Mesa1";
             this.btnMesa1.UseVisualStyleBackColor = false;
@@ -271,7 +271,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(178, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(603, 683);
+            this.panel2.Size = new System.Drawing.Size(923, 774);
             this.panel2.TabIndex = 25;
             // 
             // panel1
@@ -288,7 +288,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 683);
+            this.panel1.Size = new System.Drawing.Size(178, 774);
             this.panel1.TabIndex = 24;
             // 
             // panel3
@@ -297,14 +297,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(13, 683);
+            this.panel3.Size = new System.Drawing.Size(13, 774);
             this.panel3.TabIndex = 0;
             // 
             // frmMesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 683);
+            this.ClientSize = new System.Drawing.Size(1101, 774);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmMesas";
