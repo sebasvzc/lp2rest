@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2Rest
 {
-    public partial class frmCajero : Form
+    public partial class frmPrincipalCajero : Form
     {
-        public frmCajero()
+        public frmPrincipalCajero()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace LP2Rest
 
         private void imgCompras_Click(object sender, EventArgs e)
         {
-            frmListaOrdenVenta formListaOrdenVenta = new frmListaOrdenVenta();
+            frmListaOrdenVentaMesero formListaOrdenVenta = new frmListaOrdenVentaMesero();
             formListaOrdenVenta.ShowDialog();
         }
 
