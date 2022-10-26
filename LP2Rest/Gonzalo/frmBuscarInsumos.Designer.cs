@@ -43,7 +43,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(709, 65);
+            this.button1.Location = new System.Drawing.Point(707, 67);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 28);
@@ -103,13 +103,14 @@
             this.btnBuscar.TabIndex = 100;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtDNINombre
             // 
             this.txtDNINombre.Location = new System.Drawing.Point(177, 71);
             this.txtDNINombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNINombre.Name = "txtDNINombre";
-            this.txtDNINombre.Size = new System.Drawing.Size(203, 22);
+            this.txtDNINombre.Size = new System.Drawing.Size(345, 22);
             this.txtDNINombre.TabIndex = 99;
             // 
             // lblDNINombre

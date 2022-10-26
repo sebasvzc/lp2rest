@@ -36,5 +36,26 @@ namespace LP2Rest
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDNINombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarInsumo_Click(object sender, EventArgs e)
+        {
+            frmBuscarInsumos formBuscarInsumos = new frmBuscarInsumos();
+            formBuscarInsumos.ShowDialog();
+        }
     }
 }
