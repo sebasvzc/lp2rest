@@ -9,7 +9,9 @@ Integrantes:
 - Gonzalo Sebastian Quispe Ordoñez
 - Diego Orlando Damian Zelada
 
+
 Flujo de trabajo:
+
 
 Creas tu branch (Con un nombre descriptivo)
 La publicas inmeditamente
