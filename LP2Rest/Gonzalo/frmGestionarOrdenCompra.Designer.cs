@@ -42,11 +42,10 @@
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.lblCodProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.gbPedido = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaOrdenVenta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.txtIDCompra = new System.Windows.Forms.TextBox();
             this.gbLineasVenta.SuspendLayout();
             this.gbPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -113,7 +113,7 @@
             this.gbLineasVenta.Controls.Add(this.lblPrecioUnitario);
             this.gbLineasVenta.Controls.Add(this.txtNombreProducto);
             this.gbLineasVenta.Controls.Add(this.label6);
-            this.gbLineasVenta.Controls.Add(this.btnBuscarProducto);
+            this.gbLineasVenta.Controls.Add(this.btnBuscarInsumo);
             this.gbLineasVenta.Controls.Add(this.lblCodProducto);
             this.gbLineasVenta.Controls.Add(this.txtCodigoProducto);
             this.gbLineasVenta.Location = new System.Drawing.Point(31, 165);
@@ -187,7 +187,7 @@
             // 
             this.txtPrecioUnitario.Enabled = false;
             this.txtPrecioUnitario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(153, 95);
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(153, 97);
             this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioUnitario.Name = "txtPrecioUnitario";
             this.txtPrecioUnitario.Size = new System.Drawing.Size(118, 23);
@@ -196,7 +196,7 @@
             // lblPrecioUnitario
             // 
             this.lblPrecioUnitario.AutoSize = true;
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(31, 98);
+            this.lblPrecioUnitario.Location = new System.Drawing.Point(31, 100);
             this.lblPrecioUnitario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecioUnitario.Name = "lblPrecioUnitario";
             this.lblPrecioUnitario.Size = new System.Drawing.Size(98, 16);
@@ -224,16 +224,16 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Nombre del Insumo:";
             // 
-            // btnBuscarProducto
+            // btnBuscarInsumo
             // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(301, 26);
-            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(43, 28);
-            this.btnBuscarProducto.TabIndex = 3;
-            this.btnBuscarProducto.Text = "...";
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(301, 26);
+            this.btnBuscarInsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(43, 28);
+            this.btnBuscarInsumo.TabIndex = 3;
+            this.btnBuscarInsumo.Text = "...";
+            this.btnBuscarInsumo.UseVisualStyleBackColor = true;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // lblCodProducto
             // 
@@ -258,7 +258,7 @@
             // 
             // gbPedido
             // 
-            this.gbPedido.Controls.Add(this.textBox2);
+            this.gbPedido.Controls.Add(this.txtIDCompra);
             this.gbPedido.Controls.Add(this.label3);
             this.gbPedido.Controls.Add(this.dtpFechaOrdenVenta);
             this.gbPedido.Controls.Add(this.label2);
@@ -271,14 +271,6 @@
             this.gbPedido.TabIndex = 60;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Datos de la Orden de Venta";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(153, 31);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 22);
-            this.textBox2.TabIndex = 10;
             // 
             // label3
             // 
@@ -415,6 +407,15 @@
             this.btnCancelar.Size = new System.Drawing.Size(90, 24);
             this.btnCancelar.Text = "&Cancelar";
             // 
+            // txtIDCompra
+            // 
+            this.txtIDCompra.Location = new System.Drawing.Point(153, 31);
+            this.txtIDCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDCompra.Name = "txtIDCompra";
+            this.txtIDCompra.ReadOnly = true;
+            this.txtIDCompra.Size = new System.Drawing.Size(148, 22);
+            this.txtIDCompra.TabIndex = 55;
+            // 
             // frmGestionarOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -456,11 +457,10 @@
         private System.Windows.Forms.Label lblPrecioUnitario;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.Label lblCodProducto;
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.GroupBox gbPedido;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaOrdenVenta;
         private System.Windows.Forms.Label label2;
@@ -475,5 +475,6 @@
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.TextBox txtIDCompra;
     }
 }
