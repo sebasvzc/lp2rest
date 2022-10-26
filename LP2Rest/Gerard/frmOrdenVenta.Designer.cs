@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,12 +41,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.lblCodProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
@@ -61,15 +61,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
@@ -91,33 +90,33 @@
             // 
             this.dgvDetalleOrdenVenta.AllowUserToAddRows = false;
             this.dgvDetalleOrdenVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDetalleOrdenVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleOrdenVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreProducto,
             this.Cantidad,
             this.PrecioUnitario,
             this.Subtotal});
-            this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(46, 558);
+            this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(46, 497);
             this.dgvDetalleOrdenVenta.Name = "dgvDetalleOrdenVenta";
             this.dgvDetalleOrdenVenta.ReadOnly = true;
             this.dgvDetalleOrdenVenta.RowHeadersWidth = 51;
             this.dgvDetalleOrdenVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalleOrdenVenta.Size = new System.Drawing.Size(1043, 106);
+            this.dgvDetalleOrdenVenta.Size = new System.Drawing.Size(1043, 163);
             this.dgvDetalleOrdenVenta.TabIndex = 62;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(892, 720);
+            this.label5.Location = new System.Drawing.Point(796, 676);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 61;
@@ -127,10 +126,10 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtTotal.Location = new System.Drawing.Point(1005, 711);
+            this.txtTotal.Location = new System.Drawing.Point(894, 667);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(78, 32);
+            this.txtTotal.Size = new System.Drawing.Size(132, 32);
             this.txtTotal.TabIndex = 60;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -150,7 +149,7 @@
             this.gbLineasVenta.Controls.Add(this.lblCodProducto);
             this.gbLineasVenta.Controls.Add(this.txtCodigoProducto);
             this.gbLineasVenta.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbLineasVenta.Location = new System.Drawing.Point(46, 341);
+            this.gbLineasVenta.Location = new System.Drawing.Point(46, 318);
             this.gbLineasVenta.Name = "gbLineasVenta";
             this.gbLineasVenta.Size = new System.Drawing.Size(1043, 173);
             this.gbLineasVenta.TabIndex = 59;
@@ -203,6 +202,15 @@
             this.txtCantidad.Size = new System.Drawing.Size(49, 32);
             this.txtCantidad.TabIndex = 9;
             // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Location = new System.Drawing.Point(347, 36);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(49, 32);
+            this.btnBuscarProducto.TabIndex = 3;
+            this.btnBuscarProducto.Text = "...";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -253,15 +261,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre del Plato:";
             // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(347, 36);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(49, 32);
-            this.btnBuscarProducto.TabIndex = 3;
-            this.btnBuscarProducto.Text = "...";
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            // 
             // lblCodProducto
             // 
             this.lblCodProducto.AutoSize = true;
@@ -290,7 +289,7 @@
             this.gbCliente.Controls.Add(this.txtDNICliente);
             this.gbCliente.Controls.Add(this.lblDNICliente);
             this.gbCliente.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbCliente.Location = new System.Drawing.Point(46, 173);
+            this.gbCliente.Location = new System.Drawing.Point(46, 162);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(1043, 150);
             this.gbCliente.TabIndex = 58;
@@ -356,7 +355,7 @@
             this.gbPedido.Controls.Add(this.label1);
             this.gbPedido.Controls.Add(this.txtIDOrdenVenta);
             this.gbPedido.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbPedido.Location = new System.Drawing.Point(46, 83);
+            this.gbPedido.Location = new System.Drawing.Point(46, 72);
             this.gbPedido.Name = "gbPedido";
             this.gbPedido.Size = new System.Drawing.Size(1043, 84);
             this.gbPedido.TabIndex = 57;
@@ -417,60 +416,13 @@
             this.txtIDOrdenVenta.Size = new System.Drawing.Size(124, 32);
             this.txtIDOrdenVenta.TabIndex = 0;
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(46, 22);
-            this.btnGuardar.Text = "&Añadir";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(54, 22);
-            this.btnEliminar.Text = "&Eliminar";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGuardar,
-            this.btnEliminar,
-            this.btnCancelar,
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(477, 729);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(222, 25);
-            this.toolStrip1.TabIndex = 63;
-            this.toolStrip1.Text = "tsMenu";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(57, 22);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(52, 22);
-            this.toolStripButton1.Text = "Aceptar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // NombreProducto
             // 
             this.NombreProducto.HeaderText = "Nombre";
             this.NombreProducto.MinimumWidth = 6;
             this.NombreProducto.Name = "NombreProducto";
             this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 480;
+            this.NombreProducto.Width = 490;
             // 
             // Cantidad
             // 
@@ -481,8 +433,8 @@
             // 
             // PrecioUnitario
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle8;
             this.PrecioUnitario.HeaderText = "Precio Unit";
             this.PrecioUnitario.MinimumWidth = 6;
             this.PrecioUnitario.Name = "PrecioUnitario";
@@ -491,21 +443,62 @@
             // 
             // Subtotal
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle9;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 6;
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
             this.Subtotal.Width = 200;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevo,
+            this.btnModificar,
+            this.btnEliminar});
+            this.toolStrip1.Location = new System.Drawing.Point(439, 726);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(328, 30);
+            this.toolStrip1.TabIndex = 65;
+            this.toolStrip1.Text = "tsMenu";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(92, 27);
+            this.btnNuevo.Text = "&Nuevo";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(118, 27);
+            this.btnModificar.Text = "&Modificar";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(106, 27);
+            this.btnEliminar.Text = "&Eliminar";
+            // 
             // frmOrdenVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvDetalleOrdenVenta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTotal);
@@ -561,14 +554,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDOrdenVenta;
-        private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnNuevo;
+        private System.Windows.Forms.ToolStripButton btnModificar;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
     }
 }
