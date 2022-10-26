@@ -52,9 +52,9 @@
             this.lblIngresaDNI.Font = new System.Drawing.Font("MS UI Gothic", 17F);
             this.lblIngresaDNI.Location = new System.Drawing.Point(17, 20);
             this.lblIngresaDNI.Name = "lblIngresaDNI";
-            this.lblIngresaDNI.Size = new System.Drawing.Size(160, 23);
+            this.lblIngresaDNI.Size = new System.Drawing.Size(305, 23);
             this.lblIngresaDNI.TabIndex = 0;
-            this.lblIngresaDNI.Text = "Ingrese su DNI:";
+            this.lblIngresaDNI.Text = "Ingrese su correo electrónico:";
             this.lblIngresaDNI.Click += new System.EventHandler(this.lblCorreo_Click);
             // 
             // panelDerecho
@@ -68,7 +68,7 @@
             this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDerecho.Location = new System.Drawing.Point(144, 0);
             this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(237, 143);
+            this.panelDerecho.Size = new System.Drawing.Size(432, 143);
             this.panelDerecho.TabIndex = 17;
             this.panelDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDerecho_MouseDown);
             // 
@@ -78,7 +78,7 @@
             this.linea.Cursor = System.Windows.Forms.Cursors.Default;
             this.linea.Location = new System.Drawing.Point(21, 77);
             this.linea.Name = "linea";
-            this.linea.Size = new System.Drawing.Size(191, 2);
+            this.linea.Size = new System.Drawing.Size(383, 2);
             this.linea.TabIndex = 21;
             this.linea.TabStop = false;
             // 
@@ -91,7 +91,7 @@
             this.txtDNI.Location = new System.Drawing.Point(21, 57);
             this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(191, 22);
+            this.txtDNI.Size = new System.Drawing.Size(383, 22);
             this.txtDNI.TabIndex = 20;
             this.txtDNI.Validating += new System.ComponentModel.CancelEventHandler(this.txtDNI_Validating_1);
             // 
@@ -104,7 +104,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(126, 93);
+            this.btnBuscar.Location = new System.Drawing.Point(211, 96);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(86, 28);
@@ -122,7 +122,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(21, 93);
+            this.btnCancelar.Location = new System.Drawing.Point(106, 96);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 28);
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 143);
+            this.ClientSize = new System.Drawing.Size(576, 143);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
