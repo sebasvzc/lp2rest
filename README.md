@@ -13,10 +13,10 @@ Integrantes:
 Flujo de trabajo:
 
 
-Creas tu branch (Con un nombre descriptivo)
+- Creas tu branch (Con un nombre descriptivo)
 
-La publicas inmeditamente
+- La publicas inmeditamente
 
-Modificas tu branch
+- Modificas tu branch
 
-Haces el merge y eliminas tu branch
+- Haces el merge y eliminas tu branch
