@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevaSolicitudCompraInsumo));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.lblInsumo = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lblInsumo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.OrdenDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,6 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAgregarSolicitud = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
@@ -85,6 +84,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informacion Insumo";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(118, 26);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(91, 20);
+            this.textBox2.TabIndex = 117;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(451, 30);
@@ -105,6 +111,15 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(91, 20);
             this.textBox11.TabIndex = 115;
+            // 
+            // lblInsumo
+            // 
+            this.lblInsumo.AutoSize = true;
+            this.lblInsumo.Location = new System.Drawing.Point(60, 29);
+            this.lblInsumo.Name = "lblInsumo";
+            this.lblInsumo.Size = new System.Drawing.Size(44, 13);
+            this.lblInsumo.TabIndex = 24;
+            this.lblInsumo.Text = "Insumo:";
             // 
             // label10
             // 
@@ -223,15 +238,6 @@
             this.textBox4.Size = new System.Drawing.Size(69, 20);
             this.textBox4.TabIndex = 105;
             // 
-            // lblInsumo
-            // 
-            this.lblInsumo.AutoSize = true;
-            this.lblInsumo.Location = new System.Drawing.Point(60, 29);
-            this.lblInsumo.Name = "lblInsumo";
-            this.lblInsumo.Size = new System.Drawing.Size(44, 13);
-            this.lblInsumo.TabIndex = 24;
-            this.lblInsumo.Text = "Insumo:";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvEmpleados);
@@ -311,13 +317,6 @@
             this.lblTitulo.TabIndex = 91;
             this.lblTitulo.Text = "Gestión de Insumos";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(118, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(91, 20);
-            this.textBox2.TabIndex = 117;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -332,7 +331,7 @@
             // 
             // tsbAgregarSolicitud
             // 
-            this.tsbAgregarSolicitud.Image = ((System.Drawing.Image)(resources.GetObject("tsbAgregarSolicitud.Image")));
+            this.tsbAgregarSolicitud.Image = global::LP2Rest.Properties.Resources._392024;
             this.tsbAgregarSolicitud.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAgregarSolicitud.Name = "tsbAgregarSolicitud";
             this.tsbAgregarSolicitud.Size = new System.Drawing.Size(118, 22);
@@ -340,7 +339,7 @@
             // 
             // tsbCancelar
             // 
-            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
+            this.tsbCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
             this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCancelar.Name = "tsbCancelar";
             this.tsbCancelar.Size = new System.Drawing.Size(73, 22);

@@ -474,6 +474,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmSolicitudesCompras.resx">
       <DependentUpon>frmSolicitudesCompras.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

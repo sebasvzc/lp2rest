@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaInsumos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -50,11 +49,11 @@
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadDeMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lblVolver = new System.Windows.Forms.Label();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbSolicitud = new System.Windows.Forms.ToolStripButton();
+            this.lblVolver = new System.Windows.Forms.Label();
             this.pbVolver = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -259,6 +258,42 @@
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked_1);
             // 
+            // tsbModificar
+            // 
+            this.tsbModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
+            this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbModificar.Name = "tsbModificar";
+            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
+            this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
+            // 
+            // tsbEliminar
+            // 
+            this.tsbEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
+            this.tsbEliminar.Text = "Eliminar";
+            // 
+            // tsbNuevo
+            // 
+            this.tsbNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
+            // 
+            // tsbSolicitud
+            // 
+            this.tsbSolicitud.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_small;
+            this.tsbSolicitud.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSolicitud.Name = "tsbSolicitud";
+            this.tsbSolicitud.Size = new System.Drawing.Size(73, 22);
+            this.tsbSolicitud.Text = "Solicitud";
+            this.tsbSolicitud.ToolTipText = "Solicitud";
+            this.tsbSolicitud.Click += new System.EventHandler(this.tsbSolicitud_Click);
+            // 
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
@@ -270,45 +305,9 @@
             this.lblVolver.Text = "Volver";
             this.lblVolver.Click += new System.EventHandler(this.lblVolver_Click);
             // 
-            // tsbModificar
-            // 
-            this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
-            this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
-            this.tsbModificar.Text = "Modificar";
-            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
-            // 
-            // tsbEliminar
-            // 
-            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
-            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
-            this.tsbEliminar.Text = "Eliminar";
-            // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tsbNuevo.Text = "Nuevo";
-            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
-            // 
-            // tsbSolicitud
-            // 
-            this.tsbSolicitud.Image = ((System.Drawing.Image)(resources.GetObject("tsbSolicitud.Image")));
-            this.tsbSolicitud.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSolicitud.Name = "tsbSolicitud";
-            this.tsbSolicitud.Size = new System.Drawing.Size(73, 22);
-            this.tsbSolicitud.Text = "Solicitud";
-            this.tsbSolicitud.ToolTipText = "Solicitud";
-            this.tsbSolicitud.Click += new System.EventHandler(this.tsbSolicitud_Click);
-            // 
             // pbVolver
             // 
-            this.pbVolver.Image = ((System.Drawing.Image)(resources.GetObject("pbVolver.Image")));
+            this.pbVolver.Image = global::LP2Rest.Properties.Resources.retroceder_salir;
             this.pbVolver.Location = new System.Drawing.Point(37, 32);
             this.pbVolver.Name = "pbVolver";
             this.pbVolver.Size = new System.Drawing.Size(26, 20);

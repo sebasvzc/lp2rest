@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBusquedaReceta));
             this.txtItem = new System.Windows.Forms.TextBox();
             this.lblIten = new System.Windows.Forms.Label();
             this.lblInsumo = new System.Windows.Forms.Label();
@@ -38,15 +37,15 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTipoProducto = new System.Windows.Forms.Label();
             this.lblVolver = new System.Windows.Forms.Label();
             this.pbVolver = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
             this.tsbVer = new System.Windows.Forms.ToolStripButton();
             this.tsbAgregar = new System.Windows.Forms.ToolStripButton();
-            this.lblTipoProducto = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbVolver)).BeginInit();
@@ -139,6 +138,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(108, 81);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 101;
+            // 
+            // lblTipoProducto
+            // 
+            this.lblTipoProducto.AutoSize = true;
+            this.lblTipoProducto.Location = new System.Drawing.Point(6, 86);
+            this.lblTipoProducto.Name = "lblTipoProducto";
+            this.lblTipoProducto.Size = new System.Drawing.Size(92, 13);
+            this.lblTipoProducto.TabIndex = 100;
+            this.lblTipoProducto.Text = "Tipo de Producto:";
+            // 
             // lblVolver
             // 
             this.lblVolver.AutoSize = true;
@@ -152,7 +168,7 @@
             // 
             // pbVolver
             // 
-            this.pbVolver.Image = ((System.Drawing.Image)(resources.GetObject("pbVolver.Image")));
+            this.pbVolver.Image = global::LP2Rest.Properties.Resources.retroceder_salir;
             this.pbVolver.Location = new System.Drawing.Point(33, 12);
             this.pbVolver.Name = "pbVolver";
             this.pbVolver.Size = new System.Drawing.Size(26, 20);
@@ -170,14 +186,14 @@
             this.tsbAgregar});
             this.toolStrip1.Location = new System.Drawing.Point(258, 391);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(183, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(214, 25);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // tsbBorrar
             // 
-            this.tsbBorrar.Image = ((System.Drawing.Image)(resources.GetObject("tsbBorrar.Image")));
+            this.tsbBorrar.Image = global::LP2Rest.Properties.Resources.trash_40429;
             this.tsbBorrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBorrar.Name = "tsbBorrar";
             this.tsbBorrar.Size = new System.Drawing.Size(59, 22);
@@ -186,7 +202,7 @@
             // 
             // tsbVer
             // 
-            this.tsbVer.Image = ((System.Drawing.Image)(resources.GetObject("tsbVer.Image")));
+            this.tsbVer.Image = global::LP2Rest.Properties.Resources.file_info_40446;
             this.tsbVer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbVer.Name = "tsbVer";
             this.tsbVer.Size = new System.Drawing.Size(43, 22);
@@ -196,22 +212,13 @@
             // 
             // tsbAgregar
             // 
-            this.tsbAgregar.Image = ((System.Drawing.Image)(resources.GetObject("tsbAgregar.Image")));
+            this.tsbAgregar.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.tsbAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAgregar.Name = "tsbAgregar";
             this.tsbAgregar.Size = new System.Drawing.Size(69, 22);
             this.tsbAgregar.Text = "Agregar";
             this.tsbAgregar.ToolTipText = "Agregar";
             this.tsbAgregar.Click += new System.EventHandler(this.tsbAgregar_Click);
-            // 
-            // lblTipoProducto
-            // 
-            this.lblTipoProducto.AutoSize = true;
-            this.lblTipoProducto.Location = new System.Drawing.Point(6, 86);
-            this.lblTipoProducto.Name = "lblTipoProducto";
-            this.lblTipoProducto.Size = new System.Drawing.Size(92, 13);
-            this.lblTipoProducto.TabIndex = 100;
-            this.lblTipoProducto.Text = "Tipo de Producto:";
             // 
             // lblTitulo
             // 
@@ -222,14 +229,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(207, 16);
             this.lblTitulo.TabIndex = 83;
             this.lblTitulo.Text = "Gestión de Recetas de Items";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 81);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 101;
             // 
             // frmBusquedaReceta
             // 

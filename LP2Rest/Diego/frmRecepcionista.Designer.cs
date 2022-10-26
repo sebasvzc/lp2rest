@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecepcionista));
             this.lblTitulo = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnMesas = new System.Windows.Forms.Button();
@@ -104,7 +103,7 @@
             // 
             // pbAsistencia
             // 
-            this.pbAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("pbAsistencia.Image")));
+            this.pbAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_medium;
             this.pbAsistencia.Location = new System.Drawing.Point(474, 86);
             this.pbAsistencia.Name = "pbAsistencia";
             this.pbAsistencia.Size = new System.Drawing.Size(84, 76);
