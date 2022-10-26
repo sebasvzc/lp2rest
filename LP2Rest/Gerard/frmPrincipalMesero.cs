@@ -111,5 +111,21 @@ namespace LP2Rest
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
+
+        private void btnMarcarAsistencia_Click(object sender, EventArgs e)
+        {
+            btnMarcarAsistencia.Enabled = false;
+            MessageBox.Show("Se registró la asistencia");
+            btnMarcarSalida.Enabled = true;
+        }
+
+        private void btnMarcarSalida_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("¿Desea marcar su salida?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                btnMarcarSalida.Enabled = false;
+                btnMarcarAsistencia.Enabled = true;
+            }
+        }
     }
 }
