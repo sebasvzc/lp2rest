@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeleccionarInsumo = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.sku = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.txtDNINombre = new System.Windows.Forms.TextBox();
             this.lblDNINombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSeleccionarInsumo
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(773, 67);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 28);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSeleccionarInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionarInsumo.Location = new System.Drawing.Point(773, 67);
+            this.btnSeleccionarInsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionarInsumo.Name = "btnSeleccionarInsumo";
+            this.btnSeleccionarInsumo.Size = new System.Drawing.Size(141, 28);
+            this.btnSeleccionarInsumo.TabIndex = 102;
+            this.btnSeleccionarInsumo.Text = "Seleccionar";
+            this.btnSeleccionarInsumo.UseVisualStyleBackColor = true;
             // 
             // dgvEmpleados
             // 
@@ -93,17 +93,17 @@
             this.PrecioCompra.ReadOnly = true;
             this.PrecioCompra.Width = 240;
             // 
-            // btnBuscar
+            // btnBuscarInsumo
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(624, 67);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 28);
-            this.btnBuscar.TabIndex = 100;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscarInsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(624, 67);
+            this.btnBuscarInsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(141, 28);
+            this.btnBuscarInsumo.TabIndex = 100;
+            this.btnBuscarInsumo.Text = "Buscar";
+            this.btnBuscarInsumo.UseVisualStyleBackColor = true;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtDNINombre
             // 
@@ -140,9 +140,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSeleccionarInsumo);
             this.Controls.Add(this.dgvEmpleados);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnBuscarInsumo);
             this.Controls.Add(this.txtDNINombre);
             this.Controls.Add(this.lblDNINombre);
             this.Controls.Add(this.lblTitulo);
@@ -156,12 +156,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSeleccionarInsumo;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn sku;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.TextBox txtDNINombre;
         private System.Windows.Forms.Label lblDNINombre;
         private System.Windows.Forms.Label lblTitulo;

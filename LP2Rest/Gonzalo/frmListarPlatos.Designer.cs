@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBuscarPlatoCombo = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,16 +61,16 @@
             this.gbPedido.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnBuscar
+            // btnBuscarPlatoCombo
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(794, 78);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(188, 34);
-            this.btnBuscar.TabIndex = 132;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscarPlatoCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(794, 78);
+            this.btnBuscarPlatoCombo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnBuscarPlatoCombo.Name = "btnBuscarPlatoCombo";
+            this.btnBuscarPlatoCombo.Size = new System.Drawing.Size(188, 34);
+            this.btnBuscarPlatoCombo.TabIndex = 132;
+            this.btnBuscarPlatoCombo.Text = "Buscar";
+            this.btnBuscarPlatoCombo.UseVisualStyleBackColor = true;
             // 
             // dgvEmpleados
             // 
@@ -154,7 +154,7 @@
             this.btnEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(294, 591);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(537, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(498, 27);
             this.toolStrip1.TabIndex = 133;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -230,7 +230,7 @@
             this.gbPedido.Controls.Add(this.label4);
             this.gbPedido.Controls.Add(this.txtDNINombre);
             this.gbPedido.Controls.Add(this.label1);
-            this.gbPedido.Controls.Add(this.btnBuscar);
+            this.gbPedido.Controls.Add(this.btnBuscarPlatoCombo);
             this.gbPedido.Controls.Add(this.label3);
             this.gbPedido.Controls.Add(this.label9);
             this.gbPedido.Controls.Add(this.comboBox1);
@@ -373,7 +373,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBuscarPlatoCombo;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ToolStrip toolStrip1;

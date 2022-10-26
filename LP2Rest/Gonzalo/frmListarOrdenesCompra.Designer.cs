@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBuscarCompras = new System.Windows.Forms.Button();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,16 +53,16 @@
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnBuscar
+            // btnBuscarCompras
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(709, 18);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 28);
-            this.btnBuscar.TabIndex = 115;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscarCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarCompras.Location = new System.Drawing.Point(709, 18);
+            this.btnBuscarCompras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCompras.Name = "btnBuscarCompras";
+            this.btnBuscarCompras.Size = new System.Drawing.Size(141, 28);
+            this.btnBuscarCompras.TabIndex = 115;
+            this.btnBuscarCompras.Text = "Buscar";
+            this.btnBuscarCompras.UseVisualStyleBackColor = true;
             // 
             // dgvEmpleados
             // 
@@ -75,7 +75,7 @@
             this.email,
             this.Area});
             this.dgvEmpleados.Location = new System.Drawing.Point(33, 187);
-            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersWidth = 51;
@@ -119,7 +119,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(107, 137);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(165, 24);
             this.comboBox1.TabIndex = 113;
@@ -160,7 +160,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(500, 140);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(260, 22);
             this.dateTimePicker1.TabIndex = 105;
@@ -189,7 +189,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(500, 103);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(260, 22);
             this.dtpFechaNacimiento.TabIndex = 102;
@@ -197,7 +197,7 @@
             // txtDNINombre
             // 
             this.txtDNINombre.Location = new System.Drawing.Point(107, 102);
-            this.txtDNINombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNINombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNINombre.Name = "txtDNINombre";
             this.txtDNINombre.ReadOnly = true;
             this.txtDNINombre.Size = new System.Drawing.Size(165, 22);
@@ -226,7 +226,7 @@
             this.Anular});
             this.toolStrip1.Location = new System.Drawing.Point(268, 423);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(349, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(349, 31);
             this.toolStrip1.TabIndex = 116;
             this.toolStrip1.Text = "tsMenu";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -236,7 +236,7 @@
             this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(76, 24);
+            this.btnNuevo.Size = new System.Drawing.Size(76, 28);
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -245,7 +245,7 @@
             this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(97, 24);
+            this.btnModificar.Size = new System.Drawing.Size(97, 28);
             this.btnModificar.Text = "&Modificar";
             // 
             // btnEliminar
@@ -253,7 +253,7 @@
             this.btnEliminar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(87, 24);
+            this.btnEliminar.Size = new System.Drawing.Size(87, 28);
             this.btnEliminar.Text = "&Eliminar";
             // 
             // Anular
@@ -261,7 +261,7 @@
             this.Anular.Image = global::LP2Rest.Properties.Resources._391127;
             this.Anular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Anular.Name = "Anular";
-            this.Anular.Size = new System.Drawing.Size(76, 24);
+            this.Anular.Size = new System.Drawing.Size(76, 28);
             this.Anular.Text = "&Anular";
             // 
             // frmListarOrdenesCompra
@@ -270,7 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 459);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnBuscarCompras);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
@@ -295,7 +295,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBuscarCompras;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
