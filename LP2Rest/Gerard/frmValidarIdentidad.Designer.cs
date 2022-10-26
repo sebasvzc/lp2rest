@@ -28,31 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmValidarIdentidad));
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linea = new System.Windows.Forms.PictureBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInstrucciones
             // 
-            this.lblInstrucciones.AutoSize = true;
-            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblInstrucciones.Location = new System.Drawing.Point(3, 20);
+            this.lblInstrucciones.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblInstrucciones.Location = new System.Drawing.Point(18, 21);
             this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(485, 21);
+            this.lblInstrucciones.Size = new System.Drawing.Size(444, 49);
             this.lblInstrucciones.TabIndex = 5;
-            this.lblInstrucciones.Text = "Digite el código de verificación enviado a su correo asosiado:";
+            this.lblInstrucciones.Text = "Digite el código de verificación enviado a su correo asociado:";
             this.lblInstrucciones.Click += new System.EventHandler(this.lblInstrucciones_Click);
             // 
             // btnVerificar
@@ -62,7 +60,7 @@
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVerificar.ForeColor = System.Drawing.Color.White;
-            this.btnVerificar.Location = new System.Drawing.Point(396, 84);
+            this.btnVerificar.Location = new System.Drawing.Point(359, 81);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(90, 34);
             this.btnVerificar.TabIndex = 7;
@@ -77,7 +75,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(301, 84);
+            this.btnCancelar.Location = new System.Drawing.Point(264, 81);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 34);
             this.btnCancelar.TabIndex = 8;
@@ -87,7 +85,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.panel2.Controls.Add(this.linea);
             this.panel2.Controls.Add(this.txtDNI);
             this.panel2.Controls.Add(this.btnVerificar);
@@ -96,12 +94,35 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(129, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(498, 137);
+            this.panel2.Size = new System.Drawing.Size(474, 137);
             this.panel2.TabIndex = 19;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // linea
+            // 
+            this.linea.BackColor = System.Drawing.Color.Peru;
+            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
+            this.linea.Location = new System.Drawing.Point(23, 112);
+            this.linea.Name = "linea";
+            this.linea.Size = new System.Drawing.Size(223, 2);
+            this.linea.TabIndex = 23;
+            this.linea.TabStop = false;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
+            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
+            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtDNI.Location = new System.Drawing.Point(23, 86);
+            this.txtDNI.MaxLength = 8;
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(223, 22);
+            this.txtDNI.TabIndex = 22;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -109,6 +130,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(129, 137);
             this.panel1.TabIndex = 18;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big75__strongerColor;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -119,53 +152,21 @@
             this.panel3.Size = new System.Drawing.Size(8, 137);
             this.panel3.TabIndex = 4;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(14, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // linea
-            // 
-            this.linea.BackColor = System.Drawing.Color.Peru;
-            this.linea.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linea.Location = new System.Drawing.Point(7, 71);
-            this.linea.Name = "linea";
-            this.linea.Size = new System.Drawing.Size(195, 2);
-            this.linea.TabIndex = 23;
-            this.linea.TabStop = false;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
-            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDNI.Location = new System.Drawing.Point(7, 44);
-            this.txtDNI.MaxLength = 8;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(195, 22);
-            this.txtDNI.TabIndex = 22;
-            // 
             // frmValidarIdentidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 137);
+            this.ClientSize = new System.Drawing.Size(603, 137);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmValidarIdentidad";
             this.Text = "ValidarIdentidad";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             this.ResumeLayout(false);
 
         }
