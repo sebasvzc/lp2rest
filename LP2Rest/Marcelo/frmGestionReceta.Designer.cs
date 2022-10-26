@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionReceta));
             this.lblTitulo1 = new System.Windows.Forms.Label();
             this.lblTitulo2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -37,15 +36,15 @@
             this.UnidadDeMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblVolver = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbAgregarInsumo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminarInsumo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminarReceta = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.lblDescripcionItem = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblTipoItem = new System.Windows.Forms.Label();
             this.lblTipoItemItem = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.tsbAgregarInsumo = new System.Windows.Forms.ToolStripButton();
-            this.tsbEliminarInsumo = new System.Windows.Forms.ToolStripButton();
-            this.tsbEliminarReceta = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.pbVolver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -130,6 +129,39 @@
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // tsbAgregarInsumo
+            // 
+            this.tsbAgregarInsumo.Image = global::LP2Rest.Properties.Resources._392024;
+            this.tsbAgregarInsumo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAgregarInsumo.Name = "tsbAgregarInsumo";
+            this.tsbAgregarInsumo.Size = new System.Drawing.Size(112, 22);
+            this.tsbAgregarInsumo.Text = "Agregar Insumo";
+            this.tsbAgregarInsumo.Click += new System.EventHandler(this.tsbAgregarInsumo_Click);
+            // 
+            // tsbEliminarInsumo
+            // 
+            this.tsbEliminarInsumo.Image = global::LP2Rest.Properties.Resources._391892;
+            this.tsbEliminarInsumo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminarInsumo.Name = "tsbEliminarInsumo";
+            this.tsbEliminarInsumo.Size = new System.Drawing.Size(113, 22);
+            this.tsbEliminarInsumo.Text = "Eliminar Insumo";
+            // 
+            // tsbEliminarReceta
+            // 
+            this.tsbEliminarReceta.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.tsbEliminarReceta.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminarReceta.Name = "tsbEliminarReceta";
+            this.tsbEliminarReceta.Size = new System.Drawing.Size(108, 22);
+            this.tsbEliminarReceta.Text = "Eliminar Receta";
+            // 
+            // tsbGuardar
+            // 
+            this.tsbGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            // 
             // lblDescripcionItem
             // 
             this.lblDescripcionItem.AutoSize = true;
@@ -179,42 +211,9 @@
             this.lblTitulo.Text = "Gestión de Receta de Item";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // tsbAgregarInsumo
-            // 
-            this.tsbAgregarInsumo.Image = ((System.Drawing.Image)(resources.GetObject("tsbAgregarInsumo.Image")));
-            this.tsbAgregarInsumo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAgregarInsumo.Name = "tsbAgregarInsumo";
-            this.tsbAgregarInsumo.Size = new System.Drawing.Size(112, 22);
-            this.tsbAgregarInsumo.Text = "Agregar Insumo";
-            this.tsbAgregarInsumo.Click += new System.EventHandler(this.tsbAgregarInsumo_Click);
-            // 
-            // tsbEliminarInsumo
-            // 
-            this.tsbEliminarInsumo.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminarInsumo.Image")));
-            this.tsbEliminarInsumo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminarInsumo.Name = "tsbEliminarInsumo";
-            this.tsbEliminarInsumo.Size = new System.Drawing.Size(113, 22);
-            this.tsbEliminarInsumo.Text = "Eliminar Insumo";
-            // 
-            // tsbEliminarReceta
-            // 
-            this.tsbEliminarReceta.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminarReceta.Image")));
-            this.tsbEliminarReceta.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminarReceta.Name = "tsbEliminarReceta";
-            this.tsbEliminarReceta.Size = new System.Drawing.Size(108, 22);
-            this.tsbEliminarReceta.Text = "Eliminar Receta";
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardar.Text = "Guardar";
-            // 
             // pbVolver
             // 
-            this.pbVolver.Image = ((System.Drawing.Image)(resources.GetObject("pbVolver.Image")));
+            this.pbVolver.Image = global::LP2Rest.Properties.Resources.retroceder_salir;
             this.pbVolver.Location = new System.Drawing.Point(114, 72);
             this.pbVolver.Name = "pbVolver";
             this.pbVolver.Size = new System.Drawing.Size(26, 20);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioChef));
             this.label1 = new System.Windows.Forms.Label();
             this.lblInsumos = new System.Windows.Forms.Label();
             this.lblSolicitudCompras = new System.Windows.Forms.Label();
@@ -82,7 +81,7 @@
             // 
             // pbSolicitudCompras
             // 
-            this.pbSolicitudCompras.Image = ((System.Drawing.Image)(resources.GetObject("pbSolicitudCompras.Image")));
+            this.pbSolicitudCompras.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
             this.pbSolicitudCompras.Location = new System.Drawing.Point(548, 195);
             this.pbSolicitudCompras.Name = "pbSolicitudCompras";
             this.pbSolicitudCompras.Size = new System.Drawing.Size(117, 97);
@@ -93,7 +92,7 @@
             // 
             // pbInsumos
             // 
-            this.pbInsumos.Image = ((System.Drawing.Image)(resources.GetObject("pbInsumos.Image")));
+            this.pbInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_medium;
             this.pbInsumos.Location = new System.Drawing.Point(315, 195);
             this.pbInsumos.Name = "pbInsumos";
             this.pbInsumos.Size = new System.Drawing.Size(117, 97);
@@ -104,7 +103,7 @@
             // 
             // pbPlatos
             // 
-            this.pbPlatos.Image = ((System.Drawing.Image)(resources.GetObject("pbPlatos.Image")));
+            this.pbPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_medium;
             this.pbPlatos.Location = new System.Drawing.Point(112, 195);
             this.pbPlatos.Name = "pbPlatos";
             this.pbPlatos.Size = new System.Drawing.Size(117, 97);
@@ -115,7 +114,7 @@
             // 
             // pbAsistencia
             // 
-            this.pbAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("pbAsistencia.Image")));
+            this.pbAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_medium;
             this.pbAsistencia.Location = new System.Drawing.Point(482, 42);
             this.pbAsistencia.Name = "pbAsistencia";
             this.pbAsistencia.Size = new System.Drawing.Size(84, 76);
@@ -137,7 +136,7 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big_strongerColor;
             this.pbLogo.Location = new System.Drawing.Point(112, 26);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(115, 110);
@@ -147,7 +146,7 @@
             // 
             // pbVolver
             // 
-            this.pbVolver.Image = ((System.Drawing.Image)(resources.GetObject("pbVolver.Image")));
+            this.pbVolver.Image = global::LP2Rest.Properties.Resources.retroceder_salir;
             this.pbVolver.Location = new System.Drawing.Point(659, 52);
             this.pbVolver.Name = "pbVolver";
             this.pbVolver.Size = new System.Drawing.Size(100, 84);

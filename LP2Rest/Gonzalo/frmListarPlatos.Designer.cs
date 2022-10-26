@@ -63,6 +63,7 @@
             // 
             // btnBuscarPlatoCombo
             // 
+
             this.btnBuscarPlatoCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(794, 78);
             this.btnBuscarPlatoCombo.Margin = new System.Windows.Forms.Padding(5);
@@ -71,6 +72,7 @@
             this.btnBuscarPlatoCombo.TabIndex = 132;
             this.btnBuscarPlatoCombo.Text = "Buscar";
             this.btnBuscarPlatoCombo.UseVisualStyleBackColor = true;
+            
             // 
             // dgvItemsVenta
             // 
@@ -82,6 +84,7 @@
             this.Teléfono,
             this.Categoría,
             this.email,
+
             this.Stock});
             this.dgvItemsVenta.Location = new System.Drawing.Point(37, 261);
             this.dgvItemsVenta.Margin = new System.Windows.Forms.Padding(5);
@@ -101,6 +104,7 @@
             this.cboDisponible.Size = new System.Drawing.Size(270, 24);
             this.cboDisponible.TabIndex = 130;
             this.cboDisponible.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+
             // 
             // toolStrip1
             // 
@@ -111,15 +115,18 @@
             this.btnNuevoCombo,
             this.btnNuevoPlato,
             this.btnModificar,
+
             this.btnEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(294, 591);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(498, 27);
+
             this.toolStrip1.TabIndex = 133;
             this.toolStrip1.Text = "tsMenu";
             // 
             // btnNuevoCombo
             // 
+
             this.btnNuevoCombo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.btnNuevoCombo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevoCombo.Name = "btnNuevoCombo";
@@ -135,32 +142,38 @@
             this.btnNuevoPlato.Size = new System.Drawing.Size(114, 24);
             this.btnNuevoPlato.Text = "&Nuevo Plato";
             this.btnNuevoPlato.Click += new System.EventHandler(this.btnNuevo_Click);
+
             // 
             // btnModificar
             // 
             this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
+
             this.btnModificar.Size = new System.Drawing.Size(155, 24);
             this.btnModificar.Text = "&Detalle/Modificar ";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+
             // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(87, 24);
+            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+
             this.label1.Location = new System.Drawing.Point(19, 115);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 135;
             this.label1.Text = "Disponible:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -350,7 +363,7 @@
             // 
             // frmListarPlatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.panel1);
@@ -358,6 +371,7 @@
             this.Controls.Add(this.dgvItemsVenta);
             this.Controls.Add(this.gbPedido);
             this.Margin = new System.Windows.Forms.Padding(4);
+
             this.Name = "frmListarPlatos";
             this.Text = "frmListarPlatos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemsVenta)).EndInit();

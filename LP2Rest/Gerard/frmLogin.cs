@@ -34,7 +34,7 @@ namespace LP2Rest
         {
             if (txtUsuario.Text == "Mesero")
             {
-                frmMesero formMesero = new frmMesero();
+                frmPrincipalMesero formMesero = new frmPrincipalMesero();
                 formMesero.ShowDialog();
             }
             else if (txtUsuario.Text == "Administrador")
@@ -44,7 +44,7 @@ namespace LP2Rest
             }
             else if(txtUsuario.Text == "Cajero")
             {
-                frmCajero formCajero = new frmCajero();
+                frmPrincipalCajero formCajero = new frmPrincipalCajero();
                 formCajero.ShowDialog();
             }
             else if (txtUsuario.Text == "Chef")
@@ -132,5 +132,7 @@ namespace LP2Rest
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
+
+    
     }
 }

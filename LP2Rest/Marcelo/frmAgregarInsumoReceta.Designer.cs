@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarInsumoReceta));
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -52,16 +51,16 @@
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDNINombre = new System.Windows.Forms.TextBox();
-            this.lblDNINombre = new System.Windows.Forms.Label();
             this.Nmbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtDNINombre = new System.Windows.Forms.TextBox();
+            this.lblDNINombre = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1.SuspendLayout();
@@ -290,10 +289,27 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(278, 486);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(203, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(172, 25);
             this.toolStrip1.TabIndex = 96;
             this.toolStrip1.Text = "tsMenu";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(87, 22);
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(73, 22);
+            this.btnCancelar.Text = "Cancelar";
             // 
             // dgvEmpleados
             // 
@@ -312,6 +328,34 @@
             this.dgvEmpleados.Size = new System.Drawing.Size(562, 223);
             this.dgvEmpleados.TabIndex = 95;
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
+            // 
+            // Nmbre
+            // 
+            this.Nmbre.HeaderText = "Nombre";
+            this.Nmbre.Name = "Nmbre";
+            this.Nmbre.ReadOnly = true;
+            this.Nmbre.Width = 80;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 233;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 120;
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.HeaderText = "Unidad de Medida";
+            this.UnidadMedida.Name = "UnidadMedida";
+            this.UnidadMedida.ReadOnly = true;
+            this.UnidadMedida.Width = 90;
             // 
             // btnBuscar
             // 
@@ -342,51 +386,6 @@
             this.lblDNINombre.Text = "Nombre:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblDNINombre.Click += new System.EventHandler(this.lblDNINombre_Click);
-            // 
-            // Nmbre
-            // 
-            this.Nmbre.HeaderText = "Nombre";
-            this.Nmbre.Name = "Nmbre";
-            this.Nmbre.ReadOnly = true;
-            this.Nmbre.Width = 80;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 233;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 120;
-            // 
-            // UnidadMedida
-            // 
-            this.UnidadMedida.HeaderText = "Unidad de Medida";
-            this.UnidadMedida.Name = "UnidadMedida";
-            this.UnidadMedida.ReadOnly = true;
-            this.UnidadMedida.Width = 90;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
-            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(87, 22);
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 22);
-            this.btnCancelar.Text = "Cancelar";
             // 
             // groupBox1
             // 

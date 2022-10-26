@@ -62,153 +62,175 @@ namespace LP2Rest
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSueldo
             // 
-            this.lblSueldo.AutoSize = true;
-            this.lblSueldo.Location = new System.Drawing.Point(309, 61);
+            this.lblSueldo.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblSueldo.Location = new System.Drawing.Point(369, 91);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(43, 13);
+            this.lblSueldo.Size = new System.Drawing.Size(247, 30);
             this.lblSueldo.TabIndex = 41;
             this.lblSueldo.Text = "Sueldo:";
+            this.lblSueldo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtSueldo
             // 
-            this.txtSueldo.Location = new System.Drawing.Point(358, 58);
+            this.txtSueldo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSueldo.Location = new System.Drawing.Point(622, 89);
             this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(184, 20);
+            this.txtSueldo.Size = new System.Drawing.Size(207, 32);
             this.txtSueldo.TabIndex = 40;
             // 
             // lblCargo
             // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(65, 106);
+            this.lblCargo.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblCargo.Location = new System.Drawing.Point(31, 170);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(35, 13);
+            this.lblCargo.Size = new System.Drawing.Size(183, 32);
             this.lblCargo.TabIndex = 39;
             this.lblCargo.Text = "Email:";
+            this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(106, 103);
+            this.txtCargo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtCargo.Location = new System.Drawing.Point(220, 170);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(229, 20);
+            this.txtCargo.Size = new System.Drawing.Size(331, 32);
             this.txtCargo.TabIndex = 38;
             // 
             // lblArea
             // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(27, 59);
+            this.lblArea.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblArea.Location = new System.Drawing.Point(30, 89);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(38, 13);
+            this.lblArea.Size = new System.Drawing.Size(111, 32);
             this.lblArea.TabIndex = 37;
             this.lblArea.Text = "Cargo:";
+            this.lblArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cboArea
             // 
+            this.cboArea.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cboArea.FormattingEnabled = true;
-            this.cboArea.Location = new System.Drawing.Point(71, 56);
+            this.cboArea.Location = new System.Drawing.Point(147, 88);
             this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(135, 21);
+            this.cboArea.Size = new System.Drawing.Size(198, 33);
             this.cboArea.TabIndex = 36;
             // 
             // lblFechaNacimiento
             // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(235, 34);
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(369, 39);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(118, 13);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(247, 32);
             this.lblFechaNacimiento.TabIndex = 35;
             this.lblFechaNacimiento.Text = "Fecha de Contratación:";
+            this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(359, 30);
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(622, 44);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(183, 20);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(330, 32);
             this.dtpFechaNacimiento.TabIndex = 34;
             // 
             // lblApellidoPaterno
             // 
-            this.lblApellidoPaterno.AutoSize = true;
-            this.lblApellidoPaterno.Location = new System.Drawing.Point(13, 79);
+            this.lblApellidoPaterno.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblApellidoPaterno.Location = new System.Drawing.Point(31, 130);
             this.lblApellidoPaterno.Name = "lblApellidoPaterno";
-            this.lblApellidoPaterno.Size = new System.Drawing.Size(87, 13);
+            this.lblApellidoPaterno.Size = new System.Drawing.Size(183, 31);
             this.lblApellidoPaterno.TabIndex = 30;
             this.lblApellidoPaterno.Text = "Apellido Paterno:";
+            this.lblApellidoPaterno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtApellidoPaterno
             // 
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(106, 76);
+            this.txtApellidoPaterno.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(220, 127);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
-            this.txtApellidoPaterno.Size = new System.Drawing.Size(229, 20);
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(331, 32);
             this.txtApellidoPaterno.TabIndex = 29;
             // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(53, 53);
+            this.lblNombre.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblNombre.Location = new System.Drawing.Point(31, 85);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(183, 32);
             this.lblNombre.TabIndex = 28;
             this.lblNombre.Text = "Nombre:";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(106, 50);
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNombre.Location = new System.Drawing.Point(220, 85);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(229, 20);
+            this.txtNombre.Size = new System.Drawing.Size(331, 32);
             this.txtNombre.TabIndex = 27;
             // 
             // lblID
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(44, 30);
+            this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblID.Location = new System.Drawing.Point(30, 44);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(21, 13);
+            this.lblID.Size = new System.Drawing.Size(111, 32);
             this.lblID.TabIndex = 26;
             this.lblID.Text = "ID:";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(71, 27);
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtID.Location = new System.Drawing.Point(147, 44);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(135, 20);
+            this.txtID.Size = new System.Drawing.Size(198, 32);
             this.txtID.TabIndex = 25;
             // 
             // lblDNI
             // 
-            this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(71, 27);
+            this.lblDNI.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblDNI.Location = new System.Drawing.Point(31, 43);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(29, 13);
+            this.lblDNI.Size = new System.Drawing.Size(183, 32);
             this.lblDNI.TabIndex = 24;
             this.lblDNI.Text = "DNI:";
+            this.lblDNI.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(106, 24);
+            this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDNI.Location = new System.Drawing.Point(220, 43);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(150, 20);
+            this.txtDNI.Size = new System.Drawing.Size(208, 32);
             this.txtDNI.TabIndex = 23;
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
             this.btnEliminar,
             this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(203, 373);
+            this.toolStrip1.Location = new System.Drawing.Point(387, 660);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(255, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(341, 30);
             this.toolStrip1.TabIndex = 22;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -217,7 +239,7 @@ namespace LP2Rest
             this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(69, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(107, 27);
             this.btnGuardar.Text = "&Guardar";
             // 
             // btnEliminar
@@ -225,7 +247,7 @@ namespace LP2Rest
             this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(106, 27);
             this.btnEliminar.Text = "&Eliminar";
             // 
             // btnCancelar
@@ -233,66 +255,73 @@ namespace LP2Rest
             this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 22);
+            this.btnCancelar.Size = new System.Drawing.Size(116, 27);
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(244, 23);
+            this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
+            this.lblTitulo.Location = new System.Drawing.Point(21, 19);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(148, 16);
+            this.lblTitulo.Size = new System.Drawing.Size(673, 60);
             this.lblTitulo.TabIndex = 21;
-            this.lblTitulo.Text = "Gestión de Usuarios";
+            this.lblTitulo.Text = "GESTIÓN DE USUARIOS";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 139);
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.button1.Location = new System.Drawing.Point(73, 210);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 23);
+            this.button1.Size = new System.Drawing.Size(222, 35);
             this.button1.TabIndex = 43;
             this.button1.Text = "Seleccionar Imagen";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 134);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label1.Location = new System.Drawing.Point(31, 212);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(183, 32);
             this.label1.TabIndex = 45;
             this.label1.Text = "Dirección:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 131);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBox1.Location = new System.Drawing.Point(220, 212);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 20);
+            this.textBox1.Size = new System.Drawing.Size(331, 32);
             this.textBox1.TabIndex = 44;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 162);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label2.Location = new System.Drawing.Point(31, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(183, 32);
             this.label2.TabIndex = 47;
             this.label2.Text = "Teléfono:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 159);
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBox2.Location = new System.Drawing.Point(220, 252);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
+            this.textBox2.Size = new System.Drawing.Size(208, 32);
             this.textBox2.TabIndex = 46;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(34, 165);
+            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.button2.Location = new System.Drawing.Point(73, 253);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
+            this.button2.Size = new System.Drawing.Size(181, 35);
             this.button2.TabIndex = 48;
             this.button2.Text = "Adjuntar CV";
             this.button2.UseVisualStyleBackColor = true;
@@ -301,9 +330,9 @@ namespace LP2Rest
             // 
             this.button3.BackgroundImage = global::LP2Rest.Properties.Resources.file_info_40446;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(128, 165);
+            this.button3.Location = new System.Drawing.Point(260, 253);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 23);
+            this.button3.Size = new System.Drawing.Size(35, 35);
             this.button3.TabIndex = 49;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -311,9 +340,9 @@ namespace LP2Rest
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::LP2Rest.Properties.Resources.Screenshot_2022_09_28_112459;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(73, 36);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 112);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
@@ -332,9 +361,10 @@ namespace LP2Rest
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.txtCargo);
             this.groupBox1.Controls.Add(this.lblCargo);
-            this.groupBox1.Location = new System.Drawing.Point(236, 62);
+            this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(492, 148);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(362, 196);
+            this.groupBox1.Size = new System.Drawing.Size(584, 309);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
@@ -349,9 +379,10 @@ namespace LP2Rest
             this.groupBox2.Controls.Add(this.lblArea);
             this.groupBox2.Controls.Add(this.txtSueldo);
             this.groupBox2.Controls.Add(this.lblSueldo);
-            this.groupBox2.Location = new System.Drawing.Point(30, 264);
+            this.groupBox2.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(91, 483);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(568, 95);
+            this.groupBox2.Size = new System.Drawing.Size(985, 145);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Laborales";
@@ -362,24 +393,75 @@ namespace LP2Rest
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.pictureBox1);
-            this.groupBox3.Location = new System.Drawing.Point(30, 62);
+            this.groupBox3.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Location = new System.Drawing.Point(91, 148);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(189, 196);
+            this.groupBox3.Size = new System.Drawing.Size(376, 309);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Perfil";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 722);
+            this.panel3.TabIndex = 53;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel4.Controls.Add(this.btnCerrar);
+            this.panel4.Controls.Add(this.lblTitulo);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(8, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1156, 100);
+            this.panel4.TabIndex = 56;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(1119, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.TabIndex = 27;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(8, 100);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1156, 5);
+            this.panel5.TabIndex = 57;
             // 
             // frmGestionUsuariosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 415);
+            this.ClientSize = new System.Drawing.Size(1164, 722);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionUsuariosA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -389,6 +471,8 @@ namespace LP2Rest
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +512,9 @@ namespace LP2Rest
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Button btnCerrar;
     }
 }

@@ -321,7 +321,6 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.Window;
             this.panelContenedor.Controls.Add(this.panel5);
             this.panelContenedor.Controls.Add(this.btnReportes);
             this.panelContenedor.Controls.Add(this.btnReclamos);
@@ -490,9 +489,9 @@
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipalA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración";
             this.panelIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

@@ -6,4 +6,5 @@ Integrantes:
 - Gerard Roger Rodriguez Torres
 - Omar Alejandro Vargas Zamolla
 - Ivan Marcelo Galvan Guio
+- Gonzalo Sebastian Quispe Ordoñez
 - Diego Orlando Damian Zelada
