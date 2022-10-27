@@ -33,9 +33,17 @@ namespace LP2Rest
             frmCrearReservas.ShowDialog();
         }
 
-        private void frmGestionReservas_Load(object sender, EventArgs e)
-        {
+    
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmCrearReservas frmCrearReservas = new frmCrearReservas();
+            frmCrearReservas.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
