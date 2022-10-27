@@ -38,6 +38,13 @@ namespace LP2Rest
         {
             this.Close();
         }
+
+        private void label3_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
     }
 
 }

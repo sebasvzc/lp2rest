@@ -52,6 +52,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -177,9 +178,11 @@
             this.label3.Size = new System.Drawing.Size(648, 60);
             this.label3.TabIndex = 21;
             this.label3.Text = "GESTIÓN DE EVENTOS";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.cboArea);
             this.groupBox1.Controls.Add(this.txtDNI);
             this.groupBox1.Controls.Add(this.lblDNI);
@@ -314,6 +317,16 @@
             this.lblCargo.Text = "Hora Inicio:";
             this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(430, 254);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 84;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // frmGestionEventosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,5 +376,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

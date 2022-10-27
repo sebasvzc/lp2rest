@@ -228,7 +228,7 @@ namespace LP2Rest
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(453, 659);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(266, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(235, 30);
             this.toolStrip1.TabIndex = 22;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -259,6 +259,7 @@ namespace LP2Rest
             this.lblTitulo.Size = new System.Drawing.Size(673, 60);
             this.lblTitulo.TabIndex = 21;
             this.lblTitulo.Text = "GESTIÓN DE USUARIOS";
+            this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
             // 
             // button1
             // 

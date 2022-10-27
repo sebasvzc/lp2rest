@@ -47,14 +47,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnReclamos = new System.Windows.Forms.Button();
-            this.btnVentas = new System.Windows.Forms.Button();
-            this.btnInsumos = new System.Windows.Forms.Button();
-            this.btnPlatos = new System.Windows.Forms.Button();
-            this.btnEventos = new System.Windows.Forms.Button();
-            this.btnCompras = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -284,6 +277,7 @@
             this.lbltitulo.Size = new System.Drawing.Size(196, 60);
             this.lbltitulo.TabIndex = 26;
             this.lbltitulo.Text = "INICIO";
+            this.lbltitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbltitulo_MouseDown);
             // 
             // btnMarcarAsistencia
             // 
@@ -321,15 +315,8 @@
             // 
             // panelContenedor
             // 
+            this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.panel5);
-            this.panelContenedor.Controls.Add(this.btnReportes);
-            this.panelContenedor.Controls.Add(this.btnReclamos);
-            this.panelContenedor.Controls.Add(this.btnVentas);
-            this.panelContenedor.Controls.Add(this.btnInsumos);
-            this.panelContenedor.Controls.Add(this.btnPlatos);
-            this.panelContenedor.Controls.Add(this.btnEventos);
-            this.panelContenedor.Controls.Add(this.btnCompras);
-            this.panelContenedor.Controls.Add(this.btnUsuarios);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
@@ -345,141 +332,17 @@
             this.panel5.Size = new System.Drawing.Size(1100, 4);
             this.panel5.TabIndex = 25;
             // 
-            // btnReportes
+            // label1
             // 
-            this.btnReportes.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_medium;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReportes.Location = new System.Drawing.Point(815, 132);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(166, 206);
-            this.btnReportes.TabIndex = 24;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
-            // 
-            // btnReclamos
-            // 
-            this.btnReclamos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnReclamos.FlatAppearance.BorderSize = 0;
-            this.btnReclamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_medium;
-            this.btnReclamos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReclamos.Location = new System.Drawing.Point(580, 403);
-            this.btnReclamos.Name = "btnReclamos";
-            this.btnReclamos.Size = new System.Drawing.Size(166, 206);
-            this.btnReclamos.TabIndex = 23;
-            this.btnReclamos.Text = "Reclamos";
-            this.btnReclamos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReclamos.UseVisualStyleBackColor = true;
-            this.btnReclamos.Click += new System.EventHandler(this.btnReclamos_Click);
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnVentas.FlatAppearance.BorderSize = 0;
-            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_medium;
-            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVentas.Location = new System.Drawing.Point(352, 132);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(166, 206);
-            this.btnVentas.TabIndex = 22;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
-            // btnInsumos
-            // 
-            this.btnInsumos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnInsumos.FlatAppearance.BorderSize = 0;
-            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsumos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_medium;
-            this.btnInsumos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnInsumos.Location = new System.Drawing.Point(120, 403);
-            this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(166, 206);
-            this.btnInsumos.TabIndex = 21;
-            this.btnInsumos.Text = "Insumos";
-            this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInsumos.UseVisualStyleBackColor = true;
-            this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
-            // 
-            // btnPlatos
-            // 
-            this.btnPlatos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnPlatos.FlatAppearance.BorderSize = 0;
-            this.btnPlatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_medium;
-            this.btnPlatos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPlatos.Location = new System.Drawing.Point(816, 403);
-            this.btnPlatos.Name = "btnPlatos";
-            this.btnPlatos.Size = new System.Drawing.Size(166, 206);
-            this.btnPlatos.TabIndex = 20;
-            this.btnPlatos.Text = "Platos";
-            this.btnPlatos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPlatos.UseVisualStyleBackColor = true;
-            this.btnPlatos.Click += new System.EventHandler(this.btnPlatos_Click);
-            // 
-            // btnEventos
-            // 
-            this.btnEventos.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnEventos.FlatAppearance.BorderSize = 0;
-            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnEventos.Image = global::LP2Rest.Properties.Resources.imgEventosIcon_medium;
-            this.btnEventos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEventos.Location = new System.Drawing.Point(579, 132);
-            this.btnEventos.Name = "btnEventos";
-            this.btnEventos.Size = new System.Drawing.Size(166, 206);
-            this.btnEventos.TabIndex = 19;
-            this.btnEventos.Text = "Eventos";
-            this.btnEventos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEventos.UseVisualStyleBackColor = true;
-            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
-            // 
-            // btnCompras
-            // 
-            this.btnCompras.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnCompras.FlatAppearance.BorderSize = 0;
-            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompras.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_medium;
-            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCompras.Location = new System.Drawing.Point(352, 403);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(166, 206);
-            this.btnCompras.TabIndex = 18;
-            this.btnCompras.Text = " Compras";
-            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCompras.UseVisualStyleBackColor = true;
-            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.btnUsuarios.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_medium;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUsuarios.Location = new System.Drawing.Point(119, 132);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(166, 206);
-            this.btnUsuarios.TabIndex = 17;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(174, 257);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(756, 247);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "insertar mensaje de bienvenida";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPrincipalA
             // 
@@ -510,14 +373,6 @@
         private System.Windows.Forms.Panel panelSuperior;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnCompras;
-        private System.Windows.Forms.Button btnEventos;
-        private System.Windows.Forms.Button btnPlatos;
-        private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnReclamos;
-        private System.Windows.Forms.Button btnVentas;
-        private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button sdbtnVentas;
@@ -530,5 +385,6 @@
         private System.Windows.Forms.Button sdbtnReportes;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnMarcarAsistencia;
+        private System.Windows.Forms.Label label1;
     }
 }
