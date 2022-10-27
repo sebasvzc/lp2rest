@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.Gonzalo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,7 +85,7 @@ namespace LP2Rest
             btnMesas.Hide();
             btnPlatos.Hide();
             btnVentas.Hide();
-            abrirFormulario(new frmListarPlatos());
+            abrirFormulario(new frmListarPlatosMesero());
         }
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
@@ -110,6 +111,14 @@ namespace LP2Rest
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void btnPlatos_Click(object sender, EventArgs e)
+        {
+            btnMesas.Hide();
+            btnPlatos.Hide();
+            btnVentas.Hide();
+            abrirFormulario(new frmListarPlatosMesero());
         }
     }
 }
