@@ -403,6 +403,16 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgReservaSmall42x42 {
+            get {
+                object obj = ResourceManager.GetObject("imgReservaSmall42x42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgRestauranteLogo_big_strongerColor {
             get {
                 object obj = ResourceManager.GetObject("imgRestauranteLogo_big_strongerColor", resourceCulture);
