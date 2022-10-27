@@ -13,6 +13,7 @@ namespace LP2Rest
 {
     public partial class frmPrincipalCajero : Form
     {
+        private static Form formularioActivo = null;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -81,6 +82,29 @@ namespace LP2Rest
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void abrirFormulario(Form formularioMostrar)
+        {
+            if (formularioActivo != null)
+                formularioActivo.Close();
+            label2.Hide();
+            formularioActivo = formularioMostrar;
+            formularioMostrar.TopLevel = false;
+            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
+            formularioMostrar.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioMostrar);
+            formularioMostrar.Show();
+        }
+
+        private void sdbtnMesas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmMesas());
+        }
+
+        private void sdbtnReclamos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmListarReclamosA());
         }
     }
 }
