@@ -144,20 +144,20 @@ namespace LP2Rest
         {
             if (formularioActivo != null)
                 formularioActivo.Close();
-            btnUsuarios.Hide();
-            btnCompras.Hide();
-            btnEventos.Hide();
-            btnVentas.Hide();
-            btnInsumos.Hide();
-            btnReclamos.Hide();
-            btnPlatos.Hide();
-            btnReportes.Hide();
+            label1.Hide();
             formularioActivo = formularioMostrar;
             formularioMostrar.TopLevel = false;
             formularioMostrar.FormBorderStyle = FormBorderStyle.None;
             formularioMostrar.Dock = DockStyle.Fill;
             panelContenedor.Controls.Add(formularioMostrar);
             formularioMostrar.Show();
+        }
+
+        private void lbltitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
     }
 }
