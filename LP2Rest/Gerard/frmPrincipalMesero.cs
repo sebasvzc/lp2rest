@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.Gonzalo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,7 +80,12 @@ namespace LP2Rest
 
         private void sdbtnPlatos_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmListarPlatos());
+
+            btnMesas.Hide();
+            btnPlatos.Hide();
+            btnVentas.Hide();
+            abrirFormulario(new frmListarPlatosMesero());
+
         }
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
@@ -104,30 +110,14 @@ namespace LP2Rest
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
 
-        private void btnMarcarAsistencia_Click(object sender, EventArgs e)
-        {
-            btnMarcarAsistencia.Enabled = false;
-            MessageBox.Show("Se registró la asistencia");
-            btnMarcarSalida.Enabled = true;
-        }
 
-        private void btnMarcarSalida_Click(object sender, EventArgs e)
+        private void btnPlatos_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("¿Desea marcar su salida?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-            {
-                btnMarcarSalida.Enabled = false;
-                btnMarcarAsistencia.Enabled = true;
-            }
-        }
+            btnMesas.Hide();
+            btnPlatos.Hide();
+            btnVentas.Hide();
+            abrirFormulario(new frmListarPlatosMesero());
 
-        private void sdbtnReclamos_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new frmListarReclamosA());
-        }
-
-        private void sdbtnUsuarios_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new frmBusquedaClientes());
         }
     }
 }
