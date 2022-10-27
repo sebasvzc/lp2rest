@@ -60,6 +60,12 @@
     <Compile Include="Gonzalo\frmGestionarCombos.Designer.cs">
       <DependentUpon>frmGestionarCombos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gonzalo\frmListarPlatosMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmListarPlatosMesero.Designer.cs">
+      <DependentUpon>frmListarPlatosMesero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gonzalo\frmValidarEliminado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmGestionarCombos.resx">
       <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmListarPlatosMesero.resx">
+      <DependentUpon>frmListarPlatosMesero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
       <DependentUpon>frmValidarEliminado.cs</DependentUpon>
