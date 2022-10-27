@@ -26,6 +26,11 @@ namespace LP2Rest
         {
 
         }
-         
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmCrearCliente frm = new frmCrearCliente();
+            frm.ShowDialog();
+        }
     }
 }
