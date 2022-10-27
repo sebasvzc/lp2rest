@@ -36,6 +36,7 @@
             this.sdbtnVentas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.btnMarcarSalida = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.btnMesas = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnMarcarSalida = new System.Windows.Forms.Button();
+            this.sdbtnReclamos = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panelIzquierdo.Controls.Add(this.panel4);
+            this.panelIzquierdo.Controls.Add(this.sdbtnReclamos);
             this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnPlatos);
             this.panelIzquierdo.Controls.Add(this.pbLogo);
@@ -84,10 +86,10 @@
             this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
             this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnMesas.Location = new System.Drawing.Point(3, 227);
+            this.sdbtnMesas.Location = new System.Drawing.Point(0, 227);
             this.sdbtnMesas.Name = "sdbtnMesas";
             this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnMesas.Size = new System.Drawing.Size(257, 59);
+            this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
             this.sdbtnMesas.TabIndex = 50;
             this.sdbtnMesas.Text = "  Mesas";
             this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,7 +106,7 @@
             this.sdbtnPlatos.Location = new System.Drawing.Point(0, 142);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnPlatos.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnPlatos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnPlatos.TabIndex = 33;
             this.sdbtnPlatos.Text = "  Platos";
             this.sdbtnPlatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -131,7 +133,7 @@
             this.sdbtnVentas.Location = new System.Drawing.Point(0, 305);
             this.sdbtnVentas.Name = "sdbtnVentas";
             this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnVentas.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnVentas.Size = new System.Drawing.Size(256, 59);
             this.sdbtnVentas.TabIndex = 26;
             this.sdbtnVentas.Text = "  Ventas";
             this.sdbtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -174,6 +176,25 @@
             this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
             this.panelSuperior.TabIndex = 40;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
+            // btnMarcarSalida
+            // 
+            this.btnMarcarSalida.Enabled = false;
+            this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarSalida.FlatAppearance.BorderSize = 0;
+            this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarSalida.Location = new System.Drawing.Point(242, 18);
+            this.btnMarcarSalida.Name = "btnMarcarSalida";
+            this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarSalida.TabIndex = 28;
+            this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
+            this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarSalida.UseVisualStyleBackColor = true;
+            this.btnMarcarSalida.Click += new System.EventHandler(this.btnMarcarSalida_Click);
             // 
             // lblID
             // 
@@ -304,24 +325,22 @@
             this.panel5.Size = new System.Drawing.Size(1100, 4);
             this.panel5.TabIndex = 25;
             // 
-            // btnMarcarSalida
+            // sdbtnReclamos
             // 
-            this.btnMarcarSalida.Enabled = false;
-            this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnMarcarSalida.FlatAppearance.BorderSize = 0;
-            this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarSalida.Location = new System.Drawing.Point(242, 18);
-            this.btnMarcarSalida.Name = "btnMarcarSalida";
-            this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarSalida.Size = new System.Drawing.Size(201, 65);
-            this.btnMarcarSalida.TabIndex = 28;
-            this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
-            this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarcarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMarcarSalida.UseVisualStyleBackColor = true;
-            this.btnMarcarSalida.Click += new System.EventHandler(this.btnMarcarSalida_Click);
+            this.sdbtnReclamos.FlatAppearance.BorderSize = 0;
+            this.sdbtnReclamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
+            this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 386);
+            this.sdbtnReclamos.Name = "sdbtnReclamos";
+            this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnReclamos.Size = new System.Drawing.Size(256, 59);
+            this.sdbtnReclamos.TabIndex = 51;
+            this.sdbtnReclamos.Text = "  Reclamos";
+            this.sdbtnReclamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sdbtnReclamos.UseVisualStyleBackColor = true;
+            this.sdbtnReclamos.Click += new System.EventHandler(this.sdbtnReclamos_Click);
             // 
             // frmPrincipalMesero
             // 
@@ -363,5 +382,6 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnMarcarSalida;
+        private System.Windows.Forms.Button sdbtnReclamos;
     }
 }
