@@ -173,7 +173,7 @@
             this.btnModificar,
             this.btnEliminar,
             this.Anular});
-            this.toolStrip1.Location = new System.Drawing.Point(336, 719);
+            this.toolStrip1.Location = new System.Drawing.Point(336, 718);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(421, 30);
             this.toolStrip1.TabIndex = 59;

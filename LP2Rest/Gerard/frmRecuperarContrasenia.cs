@@ -54,7 +54,12 @@ namespace LP2Rest
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
-            
+            frmValidarIdentidad formValidarIdentidad = new frmValidarIdentidad();
+            if (formValidarIdentidad.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+           
         }
 
         private void txtDNI_Validating_1(object sender, CancelEventArgs e)

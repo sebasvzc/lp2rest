@@ -181,6 +181,7 @@
             this.txtContrasena.TabIndex = 17;
             this.txtContrasena.Text = "Contraseña";
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             this.txtContrasena.Leave += new System.EventHandler(this.txtContrasena_Leave);
             // 
             // txtUsuario

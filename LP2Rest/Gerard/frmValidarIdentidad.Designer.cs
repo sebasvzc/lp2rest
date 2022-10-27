@@ -46,9 +46,9 @@
             // lblInstrucciones
             // 
             this.lblInstrucciones.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblInstrucciones.Location = new System.Drawing.Point(18, 21);
+            this.lblInstrucciones.Location = new System.Drawing.Point(21, 21);
             this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(444, 49);
+            this.lblInstrucciones.Size = new System.Drawing.Size(445, 49);
             this.lblInstrucciones.TabIndex = 5;
             this.lblInstrucciones.Text = "Digite el código de verificación enviado a su correo asociado:";
             this.lblInstrucciones.Click += new System.EventHandler(this.lblInstrucciones_Click);
@@ -60,7 +60,7 @@
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnVerificar.ForeColor = System.Drawing.Color.White;
-            this.btnVerificar.Location = new System.Drawing.Point(359, 81);
+            this.btnVerificar.Location = new System.Drawing.Point(370, 81);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(90, 34);
             this.btnVerificar.TabIndex = 7;
@@ -75,7 +75,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(264, 81);
+            this.btnCancelar.Location = new System.Drawing.Point(275, 81);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 34);
             this.btnCancelar.TabIndex = 8;
@@ -92,9 +92,9 @@
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.lblInstrucciones);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(129, 0);
+            this.panel2.Location = new System.Drawing.Point(137, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(474, 137);
+            this.panel2.Size = new System.Drawing.Size(486, 137);
             this.panel2.TabIndex = 19;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -114,7 +114,7 @@
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
             this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDNI.Location = new System.Drawing.Point(23, 86);
+            this.txtDNI.Location = new System.Drawing.Point(34, 86);
             this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(223, 22);
@@ -128,7 +128,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(129, 137);
+            this.panel1.Size = new System.Drawing.Size(137, 137);
             this.panel1.TabIndex = 18;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -136,7 +136,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_big75__strongerColor;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 137);
+            this.ClientSize = new System.Drawing.Size(623, 137);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

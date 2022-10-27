@@ -31,6 +31,7 @@ namespace LP2Rest
         {
             if(formularioActivo != null)
               formularioActivo.Close();
+            label1.Hide();
             formularioActivo = formularioMostrar;
             formularioMostrar.TopLevel = false;
             formularioMostrar.FormBorderStyle = FormBorderStyle.None;
@@ -74,25 +75,21 @@ namespace LP2Rest
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
-            btnMesas.Hide();
-            btnPlatos.Hide();
-            btnVentas.Hide();
             abrirFormulario(new frmListaOrdenVentaMesero());
         }
 
         private void sdbtnPlatos_Click(object sender, EventArgs e)
         {
+
             btnMesas.Hide();
             btnPlatos.Hide();
             btnVentas.Hide();
             abrirFormulario(new frmListarPlatosMesero());
+
         }
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
         {
-            btnMesas.Hide();
-            btnPlatos.Hide();
-            btnVentas.Hide();
             abrirFormulario(new frmMesas());
         }
 
@@ -113,12 +110,14 @@ namespace LP2Rest
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
 
+
         private void btnPlatos_Click(object sender, EventArgs e)
         {
             btnMesas.Hide();
             btnPlatos.Hide();
             btnVentas.Hide();
             abrirFormulario(new frmListarPlatosMesero());
+
         }
     }
 }

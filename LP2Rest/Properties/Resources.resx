@@ -145,9 +145,6 @@
   <data name="kisspng-computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon-5ab07851d21f64.1935471015215145778607" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon-5ab07851d21f64.1935471015215145778607.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LogoCrema" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoCrema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon-Small-10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Small-10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,6 +190,9 @@
   <data name="imgRestauranteLogo_big_strongerColor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgRestauranteLogo_big_strongerColor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgReportesIcon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgReportesIcon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="file-info_40446" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file-info_40446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,8 +220,11 @@
   <data name="126794" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\126794.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgReportesIcon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgReportesIcon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoCrema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoCrema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgMesas42x42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgMesas42x42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgAsistenciaIcon_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgAsistenciaIcon_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +235,8 @@
   <data name="2636428" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\26364281.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="391892" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\391892.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MostrarOcultarContraseniaOJOajustada (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MostrarOcultarContraseniaOJOajustada (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit-validated_40458" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-validated_40458.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,6 +259,12 @@
   <data name="169130" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\169130.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MostrarOcultarContraseniaOJOajustada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MostrarOcultarContraseniaOJOajustada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgAsistenciaIcon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgAsistenciaIcon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1263922" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1263922.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,10 +274,10 @@
   <data name="391127" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\391127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgAsistenciaIcon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgAsistenciaIcon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="391892" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\391892.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgMesas42x42" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgMesas42x42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgReservaSmall42x42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgReservaSmall42x42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

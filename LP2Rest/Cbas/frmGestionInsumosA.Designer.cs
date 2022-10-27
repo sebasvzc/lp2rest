@@ -40,8 +40,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -59,11 +57,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDNI
@@ -144,11 +147,10 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
-            this.btnEliminar,
-            this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(222, 412);
+            this.btnEliminar});
+            this.toolStrip1.Location = new System.Drawing.Point(253, 458);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(255, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(151, 25);
             this.toolStrip1.TabIndex = 54;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -167,25 +169,6 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(70, 22);
             this.btnEliminar.Text = "&Eliminar";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 22);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(271, 11);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(143, 16);
-            this.lblTitulo.TabIndex = 53;
-            this.lblTitulo.Text = "Gestión de Insumos";
             // 
             // richTextBox1
             // 
@@ -292,7 +275,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.dgvEmpleados);
-            this.groupBox1.Location = new System.Drawing.Point(15, 219);
+            this.groupBox1.Location = new System.Drawing.Point(24, 268);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(639, 185);
             this.groupBox1.TabIndex = 79;
@@ -329,7 +312,7 @@
             this.groupBox2.Controls.Add(this.lblCargo);
             this.groupBox2.Controls.Add(this.txtCargo);
             this.groupBox2.Controls.Add(this.lblApellidoPaterno);
-            this.groupBox2.Location = new System.Drawing.Point(15, 126);
+            this.groupBox2.Location = new System.Drawing.Point(24, 175);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(639, 87);
             this.groupBox2.TabIndex = 80;
@@ -344,23 +327,64 @@
             this.groupBox3.Controls.Add(this.txtNombre);
             this.groupBox3.Controls.Add(this.lblNombre);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(15, 34);
+            this.groupBox3.Location = new System.Drawing.Point(24, 83);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(638, 87);
             this.groupBox3.TabIndex = 81;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del insumo";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(8, 60);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(669, 5);
+            this.panel5.TabIndex = 96;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(8, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(669, 60);
+            this.panel4.TabIndex = 95;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(21, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 23);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "GESTIÓN DE INSUMOS";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 490);
+            this.panel3.TabIndex = 97;
+            // 
             // frmGestionInsumosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 450);
+            this.ClientSize = new System.Drawing.Size(677, 490);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.lblTitulo);
             this.Name = "frmGestionInsumosA";
             this.Text = "frmGestionInsumosA";
             this.toolStrip1.ResumeLayout(false);
@@ -371,6 +395,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,8 +415,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -408,5 +432,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
     }
 }

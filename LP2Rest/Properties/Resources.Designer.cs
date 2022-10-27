@@ -403,6 +403,16 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgReservaSmall42x42 {
+            get {
+                object obj = ResourceManager.GetObject("imgReservaSmall42x42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgRestauranteLogo_big_strongerColor {
             get {
                 object obj = ResourceManager.GetObject("imgRestauranteLogo_big_strongerColor", resourceCulture);
@@ -497,6 +507,26 @@ namespace LP2Rest.Properties {
         internal static System.Drawing.Bitmap LogoCrema1 {
             get {
                 object obj = ResourceManager.GetObject("LogoCrema1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MostrarOcultarContraseniaOJOajustada {
+            get {
+                object obj = ResourceManager.GetObject("MostrarOcultarContraseniaOJOajustada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MostrarOcultarContraseniaOJOajustada__1_ {
+            get {
+                object obj = ResourceManager.GetObject("MostrarOcultarContraseniaOJOajustada (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gerard\frmNuevaContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmNuevaContrasenia.Designer.cs">
+      <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gonzalo\frmBuscarSoloPlatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,11 +324,11 @@
     <Compile Include="Cbas\frmPrincipalA.Designer.cs">
       <DependentUpon>frmPrincipalA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diego\frmRecepcionista.cs">
+    <Compile Include="Diego\frmPrincipalRecepcionista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diego\frmRecepcionista.Designer.cs">
-      <DependentUpon>frmRecepcionista.cs</DependentUpon>
+    <Compile Include="Diego\frmPrincipalRecepcionista.Designer.cs">
+      <DependentUpon>frmPrincipalRecepcionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Gerard\frmRecuperarContrasenia.cs">
       <SubType>Form</SubType>
@@ -356,6 +362,9 @@
     <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Gerard\frmNuevaContrasenia.resx">
+      <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmBuscarSoloPlatos.resx">
       <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
     </EmbeddedResource>
@@ -496,8 +505,8 @@
       <DependentUpon>frmPrincipalA.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diego\frmRecepcionista.resx">
-      <DependentUpon>frmRecepcionista.cs</DependentUpon>
+    <EmbeddedResource Include="Diego\frmPrincipalRecepcionista.resx">
+      <DependentUpon>frmPrincipalRecepcionista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerard\frmRecuperarContrasenia.resx">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
@@ -656,10 +665,13 @@
     <None Include="Resources\imgRestauranteLogo_big75%25_strongerColor.png" />
     <None Include="Resources\imgMesas150x150.png" />
     <None Include="Resources\imgMesas42x42.png" />
+    <None Include="Resources\imgReservaSmall42x42.png" />
     <Content Include="Resources\lista agregar.png" />
     <Content Include="Resources\lista remover.png" />
     <Content Include="Resources\mirar archivo.png" />
     <Content Include="Resources\modificar.png" />
+    <None Include="Resources\MostrarOcultarContraseniaOJOajustada.png" />
+    <None Include="Resources\MostrarOcultarContraseniaOJOajustada %281%29.png" />
     <Content Include="Resources\nuevo archivo%281%29.png" />
     <None Include="Resources\nuevo archivo.png" />
   </ItemGroup>
