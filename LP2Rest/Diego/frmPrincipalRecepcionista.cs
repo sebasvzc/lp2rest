@@ -31,7 +31,7 @@ namespace LP2Rest
         {
             if (formularioActivo != null)
                 formularioActivo.Close();
-            
+            label1.Hide();
             formularioActivo = formularioMostrar;
             formularioMostrar.TopLevel = false;
             formularioMostrar.FormBorderStyle = FormBorderStyle.None;
@@ -113,6 +113,11 @@ namespace LP2Rest
         private void sdbtnReservas_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmGestionReservas());
+        }
+
+        private void sdbtnMesas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmMesas());
         }
     }
 }

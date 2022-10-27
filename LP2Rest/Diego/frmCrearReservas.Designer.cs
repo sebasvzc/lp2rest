@@ -48,6 +48,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.gbCliente.SuspendLayout();
             this.gbPedido.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -137,7 +138,7 @@
             // 
             this.comboBoxHoraReserva.FormattingEnabled = true;
             this.comboBoxHoraReserva.Location = new System.Drawing.Point(262, 135);
-            this.comboBoxHoraReserva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxHoraReserva.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxHoraReserva.Name = "comboBoxHoraReserva";
             this.comboBoxHoraReserva.Size = new System.Drawing.Size(168, 31);
             this.comboBoxHoraReserva.TabIndex = 7;
@@ -225,9 +226,9 @@
             this.panel4.Controls.Add(this.btnCerrar);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(8, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1026, 100);
+            this.panel4.Size = new System.Drawing.Size(1018, 100);
             this.panel4.TabIndex = 86;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -273,6 +274,15 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "CREAR RESERVA";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 575);
+            this.panel3.TabIndex = 94;
+            // 
             // frmCrearReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,8 +292,9 @@
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.gbPedido);
             this.Controls.Add(this.gbCliente);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCrearReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearReservas";
@@ -322,5 +333,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
     }
 }

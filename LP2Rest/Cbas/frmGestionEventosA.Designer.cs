@@ -40,6 +40,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -52,7 +53,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -119,9 +120,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 100);
+            this.panel5.Location = new System.Drawing.Point(8, 100);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(841, 5);
+            this.panel5.Size = new System.Drawing.Size(833, 5);
             this.panel5.TabIndex = 86;
             // 
             // panel4
@@ -131,9 +132,9 @@
             this.panel4.Controls.Add(this.btnCerrar);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(8, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(841, 100);
+            this.panel4.Size = new System.Drawing.Size(833, 100);
             this.panel4.TabIndex = 85;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -205,6 +206,16 @@
             this.groupBox1.TabIndex = 87;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Del Evento";
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(430, 254);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 84;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // txtDNI
             // 
@@ -317,15 +328,14 @@
             this.lblCargo.Text = "Hora Inicio:";
             this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button3
+            // panel3
             // 
-            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(430, 254);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 84;
-            this.button3.UseVisualStyleBackColor = true;
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 605);
+            this.panel3.TabIndex = 94;
             // 
             // frmGestionEventosA
             // 
@@ -336,6 +346,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionEventosA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -377,5 +388,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel3;
     }
 }

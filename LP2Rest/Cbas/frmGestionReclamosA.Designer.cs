@@ -65,6 +65,7 @@
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -134,9 +135,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 100);
+            this.panel5.Location = new System.Drawing.Point(8, 100);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1286, 5);
+            this.panel5.Size = new System.Drawing.Size(1278, 5);
             this.panel5.TabIndex = 88;
             // 
             // panel4
@@ -145,9 +146,9 @@
             this.panel4.Controls.Add(this.btnCerrar);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(8, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1286, 100);
+            this.panel4.Size = new System.Drawing.Size(1278, 100);
             this.panel4.TabIndex = 87;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -456,6 +457,15 @@
             this.label9.Text = "Nombre del Administrador:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 755);
+            this.panel3.TabIndex = 93;
+            // 
             // frmGestionReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +478,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionReclamosA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -527,5 +538,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel panel3;
     }
 }
