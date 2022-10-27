@@ -48,7 +48,6 @@ namespace LP2Rest
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -226,11 +225,10 @@ namespace LP2Rest
             this.toolStrip1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
-            this.btnEliminar,
             this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(387, 660);
+            this.toolStrip1.Location = new System.Drawing.Point(453, 659);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(341, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(266, 30);
             this.toolStrip1.TabIndex = 22;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -241,14 +239,6 @@ namespace LP2Rest
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(107, 27);
             this.btnGuardar.Text = "&Guardar";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(106, 27);
-            this.btnEliminar.Text = "&Eliminar";
             // 
             // btnCancelar
             // 
@@ -498,7 +488,6 @@ namespace LP2Rest
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
