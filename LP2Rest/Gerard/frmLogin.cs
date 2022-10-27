@@ -137,7 +137,7 @@ namespace LP2Rest
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                btIngresar_Click(null, null);
+                btIngresar_Click(sender, e);
             }
         }
     }
