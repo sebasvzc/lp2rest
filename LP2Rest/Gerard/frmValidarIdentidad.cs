@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.Gerard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,8 +36,10 @@ namespace LP2Rest
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            this.DialogResult= DialogResult.OK;
-
+            if (new frmNuevaContrasenia().ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

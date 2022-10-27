@@ -504,6 +504,26 @@ namespace LP2Rest.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MostrarOcultarContraseniaOJOajustada {
+            get {
+                object obj = ResourceManager.GetObject("MostrarOcultarContraseniaOJOajustada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MostrarOcultarContraseniaOJOajustada__1_ {
+            get {
+                object obj = ResourceManager.GetObject("MostrarOcultarContraseniaOJOajustada (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_file_40454 {
             get {
                 object obj = ResourceManager.GetObject("new-file_40454", resourceCulture);
