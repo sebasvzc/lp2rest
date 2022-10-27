@@ -27,9 +27,10 @@ namespace LP2Rest
 
         }
 
-        private void frmBusquedaClientes_Load(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            frmCrearCliente frm = new frmCrearCliente();
+            frm.ShowDialog();
         }
     }
 }

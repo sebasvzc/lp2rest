@@ -30,9 +30,7 @@ namespace LP2Rest
         {
             if(formularioActivo != null)
               formularioActivo.Close();
-            btnMesas.Hide();
-            btnPlatos.Hide();
-            btnVentas.Hide();
+            label1.Hide();
             formularioActivo = formularioMostrar;
             formularioMostrar.TopLevel = false;
             formularioMostrar.FormBorderStyle = FormBorderStyle.None;
@@ -127,9 +125,9 @@ namespace LP2Rest
             abrirFormulario(new frmListarReclamosA());
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
-
+            abrirFormulario(new frmBusquedaClientes());
         }
     }
 }
