@@ -22,7 +22,7 @@ namespace LP2Rest
         public frmLogin()
         {
             InitializeComponent();
-        } 
+        }
 
         private void lbOlvideContrasena_Click(object sender, EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace LP2Rest
                 frmPrincipalA formPrincipalA = new frmPrincipalA();
                 formPrincipalA.ShowDialog();
             }
-            else if(txtUsuario.Text == "Cajero")
+            else if (txtUsuario.Text == "Cajero")
             {
                 frmPrincipalCajero formCajero = new frmPrincipalCajero();
                 formCajero.ShowDialog();
@@ -54,14 +54,14 @@ namespace LP2Rest
             }
             else if (txtUsuario.Text == "Recepcionista")
             {
-                frmRecepcionista formRecepcionista = new frmRecepcionista();
+                frmPrincipalRecepcionista formRecepcionista = new frmPrincipalRecepcionista();
                 formRecepcionista.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
             /*
             else
             {
@@ -103,7 +103,7 @@ namespace LP2Rest
 
         private void txtContrasena_Enter(object sender, EventArgs e)
         {
-            if(txtContrasena.Text == "Contraseña")
+            if (txtContrasena.Text == "Contraseña")
             {
                 txtContrasena.Text = "";
                 txtContrasena.ForeColor = Color.Black;
@@ -133,6 +133,12 @@ namespace LP2Rest
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
 
-    
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btIngresar_Click(null, null);
+            }
+        }
     }
 }

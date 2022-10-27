@@ -318,11 +318,11 @@
     <Compile Include="Cbas\frmPrincipalA.Designer.cs">
       <DependentUpon>frmPrincipalA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diego\frmRecepcionista.cs">
+    <Compile Include="Diego\frmPrincipalRecepcionista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diego\frmRecepcionista.Designer.cs">
-      <DependentUpon>frmRecepcionista.cs</DependentUpon>
+    <Compile Include="Diego\frmPrincipalRecepcionista.Designer.cs">
+      <DependentUpon>frmPrincipalRecepcionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Gerard\frmRecuperarContrasenia.cs">
       <SubType>Form</SubType>
@@ -496,8 +496,8 @@
       <DependentUpon>frmPrincipalA.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diego\frmRecepcionista.resx">
-      <DependentUpon>frmRecepcionista.cs</DependentUpon>
+    <EmbeddedResource Include="Diego\frmPrincipalRecepcionista.resx">
+      <DependentUpon>frmPrincipalRecepcionista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerard\frmRecuperarContrasenia.resx">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
@@ -656,6 +656,7 @@
     <None Include="Resources\imgRestauranteLogo_big75%25_strongerColor.png" />
     <None Include="Resources\imgMesas150x150.png" />
     <None Include="Resources\imgMesas42x42.png" />
+    <None Include="Resources\imgReservaSmall42x42.png" />
     <Content Include="Resources\lista agregar.png" />
     <Content Include="Resources\lista remover.png" />
     <Content Include="Resources\mirar archivo.png" />

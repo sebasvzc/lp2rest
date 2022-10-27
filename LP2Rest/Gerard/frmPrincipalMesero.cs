@@ -126,5 +126,10 @@ namespace LP2Rest
         {
             abrirFormulario(new frmListarReclamosA());
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

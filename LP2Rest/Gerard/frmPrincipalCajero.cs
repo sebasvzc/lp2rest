@@ -77,5 +77,10 @@ namespace LP2Rest
                 btnMarcarAsistencia.Enabled = true;
             }
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
