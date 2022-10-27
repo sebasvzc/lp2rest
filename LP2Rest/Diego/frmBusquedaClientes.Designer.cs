@@ -51,9 +51,9 @@
             // btnBuscarCliente
             // 
             this.btnBuscarCliente.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscarCliente.Location = new System.Drawing.Point(530, 38);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(709, 41);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(201, 68);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(219, 41);
             this.btnBuscarCliente.TabIndex = 8;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             this.NombreCompleto,
             this.Telefono,
             this.Email});
-            this.dgvClientes.Location = new System.Drawing.Point(113, 548);
+            this.dgvClientes.Location = new System.Drawing.Point(90, 274);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 62;
@@ -113,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label1.Location = new System.Drawing.Point(51, 190);
+            this.label1.Location = new System.Drawing.Point(86, 119);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 23);
@@ -124,26 +124,26 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label2.Location = new System.Drawing.Point(517, 234);
+            this.label2.Location = new System.Drawing.Point(561, 165);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 23);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Cliente:";
+            this.label2.Text = "Nombre:";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(168, 229);
+            this.textBox1.Location = new System.Drawing.Point(203, 160);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 32);
+            this.textBox1.Size = new System.Drawing.Size(288, 32);
             this.textBox1.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label3.Location = new System.Drawing.Point(97, 276);
+            this.label3.Location = new System.Drawing.Point(132, 207);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 23);
@@ -153,7 +153,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(168, 270);
+            this.textBox2.Location = new System.Drawing.Point(203, 201);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(288, 32);
             this.textBox2.TabIndex = 12;
@@ -161,7 +161,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtID.Location = new System.Drawing.Point(168, 187);
+            this.txtID.Location = new System.Drawing.Point(203, 116);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(199, 32);
@@ -171,7 +171,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label4.Location = new System.Drawing.Point(493, 273);
+            this.label4.Location = new System.Drawing.Point(543, 204);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 23);
@@ -181,24 +181,24 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(617, 270);
+            this.textBox3.Location = new System.Drawing.Point(661, 201);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(265, 32);
+            this.textBox3.Size = new System.Drawing.Size(267, 32);
             this.textBox3.TabIndex = 38;
             // 
             // txtDNI
             // 
             this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNI.Location = new System.Drawing.Point(617, 229);
+            this.txtDNI.Location = new System.Drawing.Point(661, 160);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(265, 32);
+            this.txtDNI.Size = new System.Drawing.Size(267, 32);
             this.txtDNI.TabIndex = 40;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label5.Location = new System.Drawing.Point(112, 234);
+            this.label5.Location = new System.Drawing.Point(147, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 23);
@@ -209,7 +209,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(22, 8);
+            this.lblTitulo.Location = new System.Drawing.Point(86, 41);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(238, 31);
             this.lblTitulo.TabIndex = 42;
