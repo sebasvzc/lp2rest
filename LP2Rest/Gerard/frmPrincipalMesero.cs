@@ -126,5 +126,10 @@ namespace LP2Rest
         {
             abrirFormulario(new frmListarReclamosA());
         }
+
+        private void sdbtnUsuarios_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmBusquedaClientes());
+        }
     }
 }

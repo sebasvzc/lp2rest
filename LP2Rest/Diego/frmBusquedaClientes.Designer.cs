@@ -50,9 +50,10 @@
             // 
             // btnBuscarCliente
             // 
+            this.btnBuscarCliente.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Bold);
             this.btnBuscarCliente.Location = new System.Drawing.Point(530, 38);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(201, 68);
             this.btnBuscarCliente.TabIndex = 8;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
@@ -68,7 +69,7 @@
             this.NombreCompleto,
             this.Telefono,
             this.Email});
-            this.dgvClientes.Location = new System.Drawing.Point(25, 120);
+            this.dgvClientes.Location = new System.Drawing.Point(113, 548);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 62;
@@ -111,96 +112,106 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 38);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.label1.Location = new System.Drawing.Point(51, 190);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(112, 23);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID Cliente:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(330, 62);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.label2.Location = new System.Drawing.Point(517, 234);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(84, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "Cliente:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 62);
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBox1.Location = new System.Drawing.Point(168, 229);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
+            this.textBox1.Size = new System.Drawing.Size(199, 32);
             this.textBox1.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 85);
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.label3.Location = new System.Drawing.Point(97, 276);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(66, 23);
             this.label3.TabIndex = 13;
             this.label3.Text = "Email:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 85);
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBox2.Location = new System.Drawing.Point(168, 270);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 20);
+            this.textBox2.Size = new System.Drawing.Size(288, 32);
             this.textBox2.TabIndex = 12;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(91, 34);
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtID.Location = new System.Drawing.Point(168, 187);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(56, 20);
+            this.txtID.Size = new System.Drawing.Size(199, 32);
             this.txtID.TabIndex = 37;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 87);
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.label4.Location = new System.Drawing.Point(493, 273);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(108, 23);
             this.label4.TabIndex = 39;
             this.label4.Text = "Direccion:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(376, 85);
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.textBox3.Location = new System.Drawing.Point(617, 270);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
+            this.textBox3.Size = new System.Drawing.Size(265, 32);
             this.textBox3.TabIndex = 38;
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(376, 62);
+            this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDNI.Location = new System.Drawing.Point(617, 229);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(150, 20);
+            this.txtDNI.Size = new System.Drawing.Size(265, 32);
             this.txtDNI.TabIndex = 40;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 62);
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.label5.Location = new System.Drawing.Point(112, 234);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.Size = new System.Drawing.Size(51, 23);
             this.label5.TabIndex = 41;
             this.label5.Text = "DNI:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Location = new System.Drawing.Point(22, 8);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(115, 16);
+            this.lblTitulo.Size = new System.Drawing.Size(238, 31);
             this.lblTitulo.TabIndex = 42;
             this.lblTitulo.Text = "Buscar Clientes";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -209,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 321);
+            this.ClientSize = new System.Drawing.Size(1101, 774);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDNI);
@@ -223,10 +234,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.dgvClientes);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmBusquedaClientes";
             this.Text = "frmBusquedaClientes";
-            this.Load += new System.EventHandler(this.frmBusquedaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

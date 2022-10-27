@@ -47,6 +47,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.sdbtnReclamos = new System.Windows.Forms.Button();
+            this.sdbtnUsuarios = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panelIzquierdo.Controls.Add(this.panel4);
+            this.panelIzquierdo.Controls.Add(this.sdbtnUsuarios);
             this.panelIzquierdo.Controls.Add(this.sdbtnReclamos);
             this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnPlatos);
@@ -332,7 +334,7 @@
             this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
             this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 386);
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 384);
             this.sdbtnReclamos.Name = "sdbtnReclamos";
             this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReclamos.Size = new System.Drawing.Size(256, 59);
@@ -341,6 +343,23 @@
             this.sdbtnReclamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sdbtnReclamos.UseVisualStyleBackColor = true;
             this.sdbtnReclamos.Click += new System.EventHandler(this.sdbtnReclamos_Click);
+            // 
+            // sdbtnUsuarios
+            // 
+            this.sdbtnUsuarios.FlatAppearance.BorderSize = 0;
+            this.sdbtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sdbtnUsuarios.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.sdbtnUsuarios.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_small;
+            this.sdbtnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sdbtnUsuarios.Location = new System.Drawing.Point(1, 463);
+            this.sdbtnUsuarios.Name = "sdbtnUsuarios";
+            this.sdbtnUsuarios.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnUsuarios.Size = new System.Drawing.Size(256, 59);
+            this.sdbtnUsuarios.TabIndex = 52;
+            this.sdbtnUsuarios.Text = "  Clientes";
+            this.sdbtnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sdbtnUsuarios.UseVisualStyleBackColor = true;
+            this.sdbtnUsuarios.Click += new System.EventHandler(this.sdbtnUsuarios_Click);
             // 
             // frmPrincipalMesero
             // 
@@ -383,5 +402,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnMarcarSalida;
         private System.Windows.Forms.Button sdbtnReclamos;
+        private System.Windows.Forms.Button sdbtnUsuarios;
     }
 }

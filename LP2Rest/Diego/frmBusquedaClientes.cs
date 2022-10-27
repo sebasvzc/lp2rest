@@ -26,10 +26,6 @@ namespace LP2Rest
         {
 
         }
-
-        private void frmBusquedaClientes_Load(object sender, EventArgs e)
-        {
-
-        }
+         
     }
 }
