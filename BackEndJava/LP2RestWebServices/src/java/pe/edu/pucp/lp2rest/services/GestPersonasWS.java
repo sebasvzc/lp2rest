@@ -67,6 +67,17 @@ public class GestPersonasWS {
         return eventos;
     }
     
+    @WebMethod(operationName = "buscarEventoPorID")
+    public Evento buscarEventoPorID(@WebParam(name = "idEvento") int idEvento) {
+        Evento evento = null;
+        try{
+            evento = daoEvento.buscarEventoPorID(idEvento);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return evento;
+    }
+    
     @WebMethod(operationName = "InsertarEvento")
     public int InsertarEvento(@WebParam(name = "evento") Evento evento) {
         int resultado = 0;

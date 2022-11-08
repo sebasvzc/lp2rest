@@ -7,12 +7,15 @@ import javax.jws.WebParam;
 import pe.edu.pucp.lp2rest.almacen.dao.InsumoDAO;
 import pe.edu.pucp.lp2rest.almacen.dao.LineaOrdenCompraDAO;
 import pe.edu.pucp.lp2rest.almacen.dao.OrdenCompraDAO;
+import pe.edu.pucp.lp2rest.almacen.dao.TipoProductoDAO;
 import pe.edu.pucp.lp2rest.almacen.model.Insumo;
 import pe.edu.pucp.lp2rest.almacen.model.OrdenCompra;
 import pe.edu.pucp.lp2rest.almacen.model.LineaOrdenCompra;
+import pe.edu.pucp.lp2rest.almacen.model.TipoProducto;
 import pe.edu.pucp.lp2rest.almacen.mysql.InsumoMySQL;
 import pe.edu.pucp.lp2rest.almacen.mysql.LineaOrdenCompraMySQL;
 import pe.edu.pucp.lp2rest.almacen.mysql.OrdenCompraMySQL;
+import pe.edu.pucp.lp2rest.almacen.mysql.TipoProductoMySQL;
 
 
 @WebService(serviceName = "AlmacenWS")
@@ -21,6 +24,7 @@ public class AlmacenWS {
     private InsumoDAO daoInsumo = new InsumoMySQL();
     private OrdenCompraDAO  daoOrdenCompra = new OrdenCompraMySQL();
     private LineaOrdenCompraDAO daoLineaOrdenCompra = new LineaOrdenCompraMySQL();
+    private TipoProductoDAO daoTipoProducto= new TipoProductoMySQL();
     
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "listarTodosInsumos")
@@ -28,6 +32,17 @@ public class AlmacenWS {
         ArrayList<Insumo> insumos = null;
         try{
             insumos = daoInsumo.listarTodos();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return insumos;
+    }
+    
+    @WebMethod(operationName = "BuscarInsumosPorNombre")
+    public ArrayList<Insumo> BuscarInsumosPorNombre(@WebParam(name = "nombre") String nombre) {
+        ArrayList<Insumo> insumos = null;
+        try{
+            insumos = daoInsumo.buscarInsumosXNombre(nombre);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -65,6 +80,25 @@ public class AlmacenWS {
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+    
+    @WebMethod(operationName = "FiltrarInsumos")
+    public  ArrayList<Insumo> FiltrarInsumos(
+            @WebParam(name = "nombre_insumo") String nombre_insumo,
+            @WebParam(name = "sku") String sku,
+            @WebParam(name = "idPlato") int idPlato,
+            @WebParam(name = "precioMin") double precioMin,
+            @WebParam(name = "precioMax") double precioMax,
+            @WebParam(name = "stockMin") double stockMin,
+            @WebParam(name = "stockMax") double stockMax,
+            @WebParam(name = "idTipoProducto") int idTipoProducto) {
+            ArrayList<Insumo> insumos = null;
+            try{
+                    insumos = daoInsumo.filtrarInsumos(nombre_insumo,sku,idPlato,precioMin,precioMax,stockMin,stockMax,idTipoProducto);
+            }catch(Exception ex){
+                    System.out.println(ex.getMessage());
+            }
+            return insumos;
     }
     
     ///////////////////////////////////////////////////////////////////////////
@@ -155,5 +189,17 @@ public class AlmacenWS {
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+    @WebMethod(operationName = "ListarTipoProducto")
+    public  ArrayList<TipoProducto> ListarTipoProducto() {
+            ArrayList<TipoProducto> tipoProductos = null;
+            try{
+                    tipoProductos = daoTipoProducto.listarTodos();
+            }catch(Exception ex){
+                    System.out.println(ex.getMessage());
+            }
+            return tipoProductos;
     }
 }

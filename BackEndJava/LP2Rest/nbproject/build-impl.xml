@@ -1069,6 +1069,24 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.LP2RestAlmacenController}" name="call.subproject"/>
+            <param location="${project.LP2RestAlmacenController}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.LP2RestAlmacenModel}" name="call.subproject"/>
+            <param location="${project.LP2RestAlmacenModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.LP2RestGestPersonasController}" name="call.subproject"/>
             <param location="${project.LP2RestGestPersonasController}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
@@ -1080,6 +1098,24 @@ is divided into following sections:
             <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.LP2RestGestPersonasModel}" name="call.subproject"/>
             <param location="${project.LP2RestGestPersonasModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.LP2RestMenuController}" name="call.subproject"/>
+            <param location="${project.LP2RestMenuController}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.LP2RestMenuModel}" name="call.subproject"/>
+            <param location="${project.LP2RestMenuModel}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
             <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
             <param name="transfer.not.archive.disabled" value="true"/>
@@ -1776,6 +1812,24 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.LP2RestAlmacenController}" name="call.subproject"/>
+            <param location="${project.LP2RestAlmacenController}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.LP2RestAlmacenModel}" name="call.subproject"/>
+            <param location="${project.LP2RestAlmacenModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.LP2RestGestPersonasController}" name="call.subproject"/>
             <param location="${project.LP2RestGestPersonasController}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
@@ -1787,6 +1841,24 @@ is divided into following sections:
             <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.LP2RestGestPersonasModel}" name="call.subproject"/>
             <param location="${project.LP2RestGestPersonasModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.LP2RestMenuController}" name="call.subproject"/>
+            <param location="${project.LP2RestMenuController}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.LP2RestMenuModel}" name="call.subproject"/>
+            <param location="${project.LP2RestMenuModel}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
             <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
             <param name="transfer.not.archive.disabled" value="true"/>

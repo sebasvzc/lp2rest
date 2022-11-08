@@ -6,6 +6,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.lp2rest.almacen.dao.InsumoDAO;
+import pe.edu.pucp.lp2rest.almacen.model.Insumo;
+import pe.edu.pucp.lp2rest.almacen.mysql.InsumoMySQL;
 import pe.edu.pucp.lp2rest.eventos.dao.EventoDAO;
 import pe.edu.pucp.lp2rest.eventos.model.Evento;
 import pe.edu.pucp.lp2rest.eventos.mysql.EventoMySQL;
@@ -29,6 +32,13 @@ import pe.edu.pucp.lp2rest.gestpersonas.mysql.AsistenciaMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ChefMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ClienteMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.MeseroMySQL;
+import pe.edu.pucp.lp2rest.menu.dao.ItemVentaDAO;
+import pe.edu.pucp.lp2rest.menu.dao.TipoItemDAO;
+import pe.edu.pucp.lp2rest.menu.model.ItemVenta;
+import pe.edu.pucp.lp2rest.menu.model.Receta;
+import pe.edu.pucp.lp2rest.menu.model.TipoItem;
+import pe.edu.pucp.lp2rest.menu.mysql.ItemVentaMySQL;
+import pe.edu.pucp.lp2rest.menu.mysql.TipoItemMySQL;
 import pe.edu.pucp.lp2rest.ventas.dao.DocumentoPagoDAO;
 import pe.edu.pucp.lp2rest.ventas.dao.MesaDAO;
 import pe.edu.pucp.lp2rest.ventas.dao.OrdenVentaDAO;
@@ -50,11 +60,64 @@ public class Principal {
     meseros = daoMesero.listarTodas();
 
     for( Mesero mesero : meseros){
-       System.out.println("Nombre: " + mesero.getNombre());
+       //System.out.println("Nombre: " + mesero.getNombre());
     }
         
+    Evento eventoPrueba = new Evento();
+    eventoPrueba.setArtista(new Artista());
+    eventoPrueba.getArtista().setIdArtista(1);
+    eventoPrueba.getArtista().setNombre("Grupo 05");
+    eventoPrueba.setAdministrador(new Administrador());
+    eventoPrueba.getAdministrador().setIdPersona(9);
+    eventoPrueba.setIdEvento(2);
+    eventoPrueba.setFecha_inicio(new Date());
+    eventoPrueba.setMonto_pagar(21.21);
+    eventoPrueba.setNombre("Nombre modificado");
+    
+    EventoDAO daoEvento = new EventoMySQL();
+    //int resultadoModificar = daoEvento.modificar(eventoPrueba);
+    //System.out.println("Valor de result: " + resultadoModificar);
+    
+//    Evento eventoPrueba2 = daoEvento.buscarEventoPorID(3);
+//    System.out.println("Nombre: " + eventoPrueba2.getNombre());
         
-        
+    TipoItemDAO daoTipoItem = new TipoItemMySQL();
+    ArrayList<TipoItem> tipos = daoTipoItem.listarTodos();
+    for(TipoItem tip : tipos){
+       //System.out.println("Nombre: " + tip.getDescripcion());
+    }
+    
+    ItemVentaDAO daoItemVenta = new ItemVentaMySQL();
+    ArrayList<ItemVenta> itemsVenta = daoItemVenta.filtrarItemsVenta("CEVICHE",1, 0, 99999, 1);
+    for(ItemVenta iv : itemsVenta){
+        //System.out.println("Nombre: " + iv.getNombre());
+    }
+    
+    InsumoDAO daoInsumo = new InsumoMySQL();
+    ArrayList<Insumo> insumos = daoInsumo.buscarInsumosXNombre("a");
+    for(Insumo in : insumos){
+        //System.out.println("Nombre: " + in.getNombre());
+    }
+    
+    ItemVenta platoPrueba = new ItemVenta();
+    Receta recetaPrueba = new Receta();
+    recetaPrueba.setCantidad(10);
+    recetaPrueba.setInsumo(new Insumo());
+    recetaPrueba.getInsumo().setIdInsumo(29);
+            
+    platoPrueba.setNombre("Plato prueba");
+    platoPrueba.setPrecio(9.99);
+    platoPrueba.setStock(10);
+    platoPrueba.setTipoItem(new TipoItem());
+    platoPrueba.getTipoItem().setIdTipoItem(1);
+    platoPrueba.setDisponible(0);
+    platoPrueba.setRecetas(new ArrayList<>());
+    platoPrueba.getRecetas().add(recetaPrueba);
+    
+    //int idPlatoPrueba = daoItemVenta.insertar(platoPrueba);
+    
+    //System.out.println("IdplatoPRUEBA: " + idPlatoPrueba);
+    
 //        String sDate1="31/12/1998";
 //        String sHour1="01:00:00";
 //        try{
@@ -241,10 +304,10 @@ public class Principal {
 //        for (OrdenVenta a : ordenesVenta) {
 //            System.out.println(a.getIdOrdenVenta() + " - " + a.getTotal());
 //        }
-          AsistenciaDAO daoAsistencia = new AsistenciaMySQL();
-          Asistencia asistenciaNueva = new Asistencia();
+//          AsistenciaDAO daoAsistencia = new AsistenciaMySQL();
+//         Asistencia asistenciaNueva = new Asistencia();
 //          
-          asistenciaNueva.setIdCuentaUsuario(2);
+//          asistenciaNueva.setIdCuentaUsuario(2);
 //          
 //        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
 //        Date dateInicio = formato.parse("24-12-2012");
@@ -259,14 +322,14 @@ public class Principal {
 //        java.sql.Time time1 = new java.sql.Time(milli);
 //        java.sql.Time time2 = new java.sql.Time(milli);
 //        
-        asistenciaNueva.setFechaIngreso("2022-01-01");
-        asistenciaNueva.setHoraIngreso("00:00:01");
-        asistenciaNueva.setFechaSalida("2022-01-02");
-        asistenciaNueva.setHoraSalida("01:01:02");
-        int result =  daoAsistencia.insertarAsistencia(asistenciaNueva);
-        if(result != 0){
-           System.out.println("Se pudo insertar correctamente");
-         }
+//        asistenciaNueva.setFechaIngreso("2022-01-01");
+//        asistenciaNueva.setHoraIngreso("00:00:01");
+//        asistenciaNueva.setFechaSalida("2022-01-02");
+//        asistenciaNueva.setHoraSalida("01:01:02");
+//        int result =  daoAsistencia.insertarAsistencia(asistenciaNueva);
+//        if(result != 0){
+//           System.out.println("Se pudo insertar correctamente");
+//         }
           
           
     }

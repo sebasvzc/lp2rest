@@ -33,6 +33,20 @@ public class MenuWS {
         return itemVentas;
     }
     
+    @WebMethod(operationName = "filtrarItemsVenta")
+    public ArrayList<ItemVenta> filtrarItemsVenta(@WebParam(name = "nombrePlato") String nombrePlato, 
+            @WebParam(name = "idTipoItem") int idTipoItem, @WebParam(name = "precio_min") double precio_min,
+            @WebParam(name = "precio_max") double precio_max, @WebParam(name = "disponible") int disponible) {
+        
+        ArrayList<ItemVenta> itemVentas = null;
+        try{
+            itemVentas = daoItemVenta.filtrarItemsVenta(nombrePlato, idTipoItem, precio_min, precio_max, disponible);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return itemVentas;
+    }
+    
     @WebMethod(operationName = "InsertarItemVenta")
     public int InsertarItemVenta(@WebParam(name = "itemVenta") ItemVenta itemVenta) {
         int resultado = 0;
@@ -60,6 +74,17 @@ public class MenuWS {
         int resultado = 0;
         try{
             resultado = daoItemVenta.eliminar(idItemVenta);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "insertarCombo")
+    public int insertarCombo(@WebParam(name = "itemVenta") ItemVenta itemVenta) {
+        int resultado = 0;
+        try{
+            resultado = daoItemVenta.insertarCombo(itemVenta);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -134,16 +159,16 @@ public class MenuWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "ModificarTipoItem")
-    public int ModificarTipoItem(@WebParam(name = "receta") TipoItem tipoItem) {
-        int resultado = 0;
-        try{
-            resultado = daoTipoItem.modificar(tipoItem);
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        return resultado;
-    }
+//    @WebMethod(operationName = "ModificarTipoItem")
+//    public int ModificarTipoItem(@WebParam(name = "receta") TipoItem tipoItem) {
+//        int resultado = 0;
+//        try{
+//            resultado = daoTipoItem.modificar(tipoItem);
+//        }catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        return resultado;
+//    }
     
     @WebMethod(operationName = "EliminarTipoItem")
     public int EliminarTipoItem(@WebParam(name = "idTipoItem") int idTipoItem) {
