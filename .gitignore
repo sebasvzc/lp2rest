@@ -76,3 +76,8 @@ hs_err_pid*
 /BackEndJava/LP2RestWebServices/nbproject/private/
 /BackEndJava/LP2RestWebServices/build/
 /BackEndJava/LP2RestWebServices/dist/
+/BackEndJava/LP2Rest/nbproject/private/
+
+!/BackEndJava/LP2Rest/src/pe/edu/pucp/lp2rest/lib/mysql-connector-java-8.0.30.jar
+/BackEndJava/LP2Rest/build/
+/BackEndJava/LP2Rest/dist/
