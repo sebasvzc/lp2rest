@@ -1,0 +1,1081 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EA774E1-8380-4557-813D-51307299C1C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LP2Rest</RootNamespace>
+    <AssemblyName>LP2Rest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\AlmacenWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\GestPersonasWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MenuWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\VentasWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmNuevaContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmNuevaContrasenia.Designer.cs">
+      <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmBuscarSoloPlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmBuscarSoloPlatos.Designer.cs">
+      <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarCombos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarCombos.Designer.cs">
+      <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarAsistencia.Designer.cs">
+      <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarEliminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarEliminado.Designer.cs">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmAgregarInsumoReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmAgregarInsumoReceta.Designer.cs">
+      <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Omar\frmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmAsistencias.Designer.cs">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmBuscarInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmBuscarInsumos.Designer.cs">
+      <DependentUpon>frmBuscarInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmBusquedaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmBusquedaClientes.Designer.cs">
+      <DependentUpon>frmBusquedaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmBusquedaInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmBusquedaInsumos.Designer.cs">
+      <DependentUpon>frmBusquedaInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmBusquedaReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmBusquedaReceta.Designer.cs">
+      <DependentUpon>frmBusquedaReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmPrincipalCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmPrincipalCajero.Designer.cs">
+      <DependentUpon>frmPrincipalCajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmCrearActualizacionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmCrearActualizacionStock.Designer.cs">
+      <DependentUpon>frmCrearActualizacionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmCrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmCrearCliente.Designer.cs">
+      <DependentUpon>frmCrearCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmCrearReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmCrearReservas.Designer.cs">
+      <DependentUpon>frmCrearReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmErrorLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmErrorLogin.Designer.cs">
+      <DependentUpon>frmErrorLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmGestionActualizacionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmGestionActualizacionStock.Designer.cs">
+      <DependentUpon>frmGestionActualizacionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarOrdenCompra.Designer.cs">
+      <DependentUpon>frmGestionarOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarPlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmGestionarPlatos.Designer.cs">
+      <DependentUpon>frmGestionarPlatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmGestionClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmGestionClientes.Designer.cs">
+      <DependentUpon>frmGestionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmGestionEventosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionEventosA.Designer.cs">
+      <DependentUpon>frmGestionEventosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmGestionInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmGestionInsumo.Designer.cs">
+      <DependentUpon>frmGestionInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmGestionInsumosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionInsumosA.Designer.cs">
+      <DependentUpon>frmGestionInsumosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmGestionOrdenesVentaA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionOrdenesVentaA.Designer.cs">
+      <DependentUpon>frmGestionOrdenesVentaA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmGestionReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmGestionReceta.Designer.cs">
+      <DependentUpon>frmGestionReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmGestionReclamosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionReclamosA.Designer.cs">
+      <DependentUpon>frmGestionReclamosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmGestionReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmGestionReservas.Designer.cs">
+      <DependentUpon>frmGestionReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmGestionUsuariosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionUsuariosA.Designer.cs">
+      <DependentUpon>frmGestionUsuariosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmInicioChef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmInicioChef.Designer.cs">
+      <DependentUpon>frmInicioChef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmListaOrdenVentaMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmListaOrdenVentaMesero.Designer.cs">
+      <DependentUpon>frmListaOrdenVentaMesero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmListarEventosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmListarEventosA.Designer.cs">
+      <DependentUpon>frmListarEventosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmListarInsumosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmListarInsumosA.Designer.cs">
+      <DependentUpon>frmListarInsumosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmListarOrdenesCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmListarOrdenesCompra.Designer.cs">
+      <DependentUpon>frmListarOrdenesCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmListarOrdenesVentaA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmListarOrdenesVentaA.Designer.cs">
+      <DependentUpon>frmListarOrdenesVentaA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gonzalo\frmListarPlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmListarPlatos.Designer.cs">
+      <DependentUpon>frmListarPlatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmListarReclamosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmListarReclamosA.Designer.cs">
+      <DependentUpon>frmListarReclamosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Omar\frmListarReportesA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmListarReportesA.Designer.cs">
+      <DependentUpon>frmListarReportesA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmListarUsuariosA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmListarUsuariosA.Designer.cs">
+      <DependentUpon>frmListarUsuariosA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmMesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmMesas.Designer.cs">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmPrincipalMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmPrincipalMesero.Designer.cs">
+      <DependentUpon>frmPrincipalMesero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmNuevaReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmNuevaReceta.Designer.cs">
+      <DependentUpon>frmNuevaReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmNuevaSolicitudCompraInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmNuevaSolicitudCompraInsumo.Designer.cs">
+      <DependentUpon>frmNuevaSolicitudCompraInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmNuevoInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmNuevoInsumo.Designer.cs">
+      <DependentUpon>frmNuevoInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmOrdenVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmOrdenVenta.Designer.cs">
+      <DependentUpon>frmOrdenVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cbas\frmPrincipalA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmPrincipalA.Designer.cs">
+      <DependentUpon>frmPrincipalA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmPrincipalRecepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmPrincipalRecepcionista.Designer.cs">
+      <DependentUpon>frmPrincipalRecepcionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmRecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmRecuperarContrasenia.Designer.cs">
+      <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Omar\frmReporteOrdenesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmReporteOrdenesVenta.Designer.cs">
+      <DependentUpon>frmReporteOrdenesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Omar\frmReportePlatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmReportePlatos.Designer.cs">
+      <DependentUpon>frmReportePlatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcelo\frmSolicitudesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcelo\frmSolicitudesCompras.Designer.cs">
+      <DependentUpon>frmSolicitudesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Gerard\frmValidarIdentidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
+      <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Gerard\frmNuevaContrasenia.resx">
+      <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmBuscarSoloPlatos.resx">
+      <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmGestionarCombos.resx">
+      <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
+      <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
+      <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmAsistencias.resx">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmBuscarInsumos.resx">
+      <DependentUpon>frmBuscarInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmBusquedaClientes.resx">
+      <DependentUpon>frmBusquedaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmBusquedaInsumos.resx">
+      <DependentUpon>frmBusquedaInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmBusquedaReceta.resx">
+      <DependentUpon>frmBusquedaReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmPrincipalCajero.resx">
+      <DependentUpon>frmPrincipalCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmCrearActualizacionStock.resx">
+      <DependentUpon>frmCrearActualizacionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmCrearCliente.resx">
+      <DependentUpon>frmCrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmCrearReservas.resx">
+      <DependentUpon>frmCrearReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmErrorLogin.resx">
+      <DependentUpon>frmErrorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmGestionActualizacionStock.resx">
+      <DependentUpon>frmGestionActualizacionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmGestionarOrdenCompra.resx">
+      <DependentUpon>frmGestionarOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmGestionarPlatos.resx">
+      <DependentUpon>frmGestionarPlatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmGestionClientes.resx">
+      <DependentUpon>frmGestionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmGestionEventosA.resx">
+      <DependentUpon>frmGestionEventosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmGestionInsumo.resx">
+      <DependentUpon>frmGestionInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmGestionInsumosA.resx">
+      <DependentUpon>frmGestionInsumosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmGestionOrdenesVentaA.resx">
+      <DependentUpon>frmGestionOrdenesVentaA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmGestionReceta.resx">
+      <DependentUpon>frmGestionReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmGestionReclamosA.resx">
+      <DependentUpon>frmGestionReclamosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmGestionReservas.resx">
+      <DependentUpon>frmGestionReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmGestionUsuariosA.resx">
+      <DependentUpon>frmGestionUsuariosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmInicioChef.resx">
+      <DependentUpon>frmInicioChef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmListaOrdenVentaMesero.resx">
+      <DependentUpon>frmListaOrdenVentaMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmListarEventosA.resx">
+      <DependentUpon>frmListarEventosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmListarInsumosA.resx">
+      <DependentUpon>frmListarInsumosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmListarOrdenesCompra.resx">
+      <DependentUpon>frmListarOrdenesCompra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmListarOrdenesVentaA.resx">
+      <DependentUpon>frmListarOrdenesVentaA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmListarPlatos.resx">
+      <DependentUpon>frmListarPlatos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmListarReclamosA.resx">
+      <DependentUpon>frmListarReclamosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmListarReportesA.resx">
+      <DependentUpon>frmListarReportesA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmListarUsuariosA.resx">
+      <DependentUpon>frmListarUsuariosA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmMesas.resx">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmPrincipalMesero.resx">
+      <DependentUpon>frmPrincipalMesero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmNuevaReceta.resx">
+      <DependentUpon>frmNuevaReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmNuevaSolicitudCompraInsumo.resx">
+      <DependentUpon>frmNuevaSolicitudCompraInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmNuevoInsumo.resx">
+      <DependentUpon>frmNuevoInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmOrdenVenta.resx">
+      <DependentUpon>frmOrdenVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmPrincipalA.resx">
+      <DependentUpon>frmPrincipalA.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmPrincipalRecepcionista.resx">
+      <DependentUpon>frmPrincipalRecepcionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmRecuperarContrasenia.resx">
+      <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmReporteOrdenesVenta.resx">
+      <DependentUpon>frmReporteOrdenesVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmReportePlatos.resx">
+      <DependentUpon>frmReportePlatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcelo\frmSolicitudesCompras.resx">
+      <DependentUpon>frmSolicitudesCompras.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Gerard\frmValidarIdentidad.resx">
+      <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\AlmacenWS\AlmacenWS.wsdl" />
+    <None Include="Connected Services\AlmacenWS\AlmacenWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.BuscarInsumosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.EliminarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.EliminarLineaOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.EliminarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.InsertarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.InsertarLineaOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.InsertarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.insumo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.lineaOrdenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarTipoProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.listarTodosInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ModificarInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ModificarLineaOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ModificarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ordenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.tipoProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\GestPersonasWS.wsdl" />
+    <None Include="Connected Services\GestPersonasWS\GestPersonasWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.artista.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.buscarEventoPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.cajero.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.chef.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.cuentaUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarArtistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarCajeroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarChefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarMeseroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarRecepcionistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.filtrarClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.FiltrarEventosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.filtrarPorDniResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarArtistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.insertarAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarCajeroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarChefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarMeseroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarRecepcionistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasArtistasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasCajerosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasChefsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasCuentasUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasEventosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasMeserosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasRecepcionistasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarTodosReclamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.mesero.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarArtistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarCajeroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarChefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarMeseroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarRecepcionistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.recepcionista.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.reclamo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.EliminarItemVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.EliminarRecetaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.EliminarTipoItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.filtrarItemsVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.insertarComboResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.InsertarItemVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.InsertarRecetaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.InsertarTipoItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.itemVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarTodasItemVentasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarTodasRecetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarTodasTiposDeItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.ModificarItemVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.ModificarRecetaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.receta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.tipoItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\MenuWS.wsdl" />
+    <None Include="Connected Services\MenuWS\MenuWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.documentoPago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.EliminarDocumentoDePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.EliminarLineaOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.EliminarMesaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.EliminarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.InsertarDocumentoDePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.InsertarLineaOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.InsertarMesaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.InsertarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.lineaOrdenVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosDocumentosDePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosLineasOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosMesasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosOrdenesVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.mesa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarDocumentoDePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarLineaOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarMesaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ordenVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\VentasWS.wsdl" />
+    <None Include="Connected Services\VentasWS\VentasWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoCrema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retroceder_salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgAsistenciaIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgUsuarioIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgPlatosIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgComprasIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgReclamosIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\169130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\391127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\391259.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\391892.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\392024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgInsumosIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgVentasIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1263922.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgReportesIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgEventosIcon_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file_40456.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-validated_40458.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-info_40446.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-info_40446-12x12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Small-10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Small-16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Small-20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-file_40454.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgRestauranteLogo_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2022-09-28 112459.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_40429.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %281%29.png" />
+    <None Include="Resources\pngegg.png" />
+    <None Include="Resources\2636428.png" />
+    <None Include="Resources\26364281.png" />
+    <None Include="Resources\429524-200.png" />
+    <None Include="Resources\imgCerrarIcon_Medium.png" />
+    <None Include="Connected Services\GestPersonasWS\configuration91.svcinfo" />
+    <None Include="Connected Services\GestPersonasWS\configuration.svcinfo" />
+    <None Include="Connected Services\GestPersonasWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AlmacenWS\configuration91.svcinfo" />
+    <None Include="Connected Services\AlmacenWS\configuration.svcinfo" />
+    <None Include="Connected Services\AlmacenWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MenuWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MenuWS\configuration.svcinfo" />
+    <None Include="Connected Services\MenuWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\VentasWS\configuration91.svcinfo" />
+    <None Include="Connected Services\VentasWS\configuration.svcinfo" />
+    <None Include="Connected Services\VentasWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\cancelar.png" />
+    <Content Include="Resources\eliminar.png" />
+    <None Include="Resources\Image1.bmp" />
+    <Content Include="Resources\guardar.png" />
+    <None Include="Resources\imgComprasIcon_small.png" />
+    <None Include="Resources\imgEventosIcon_small.png" />
+    <None Include="Resources\imgInsumosIcon_small.png" />
+    <None Include="Resources\imgPlatosIcon_small.png" />
+    <None Include="Resources\imgReclamosIcon_small.png" />
+    <None Include="Resources\imgReportesIcon_small.png" />
+    <None Include="Resources\imgUsuarioIcon_small.png" />
+    <None Include="Resources\imgVentasIcon_small.png" />
+    <None Include="Resources\kisspng-computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon-5ab07851d21f64.1935471015215145778607.png" />
+    <None Include="Resources\imgAsistenciaIcon_small.png" />
+    <None Include="Resources\imgRestauranteLogo_big_strongerColor.png" />
+    <None Include="Resources\imgRestauranteLogo_big75%25_strongerColor.png" />
+    <None Include="Resources\imgMesas150x150.png" />
+    <None Include="Resources\imgMesas42x42.png" />
+    <None Include="Resources\imgReservaSmall42x42.png" />
+    <Content Include="Resources\lista agregar.png" />
+    <Content Include="Resources\lista remover.png" />
+    <Content Include="Resources\mirar archivo.png" />
+    <Content Include="Resources\modificar.png" />
+    <None Include="Resources\MostrarOcultarContraseniaOJOajustada.png" />
+    <None Include="Resources\MostrarOcultarContraseniaOJOajustada %281%29.png" />
+    <Content Include="Resources\nuevo archivo%281%29.png" />
+    <None Include="Resources\nuevo archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AlmacenWS\" />
+    <WCFMetadataStorage Include="Connected Services\GestPersonasWS\" />
+    <WCFMetadataStorage Include="Connected Services\MenuWS\" />
+    <WCFMetadataStorage Include="Connected Services\VentasWS\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

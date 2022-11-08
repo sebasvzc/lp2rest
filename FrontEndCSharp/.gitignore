@@ -1,0 +1,7 @@
+*.cache
+*LP2Rest.exe
+*FileListAbsolute.txt
+*LP2Rest.pdb
+.vs
+*.resources
+LP2Rest/obj/Debug/TempPE
