@@ -57,8 +57,6 @@ namespace LP2Rest
                 dgvEventos.DataSource = null;
                 MessageBox.Show("No se ha encontrado un evento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-                
         }
 
         private void dgvEventos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -76,12 +74,17 @@ namespace LP2Rest
             if(dgvEventos.CurrentRow != null)
             {
                 eventoSeleccionado = (GestPersonasWS.evento)dgvEventos.CurrentRow.DataBoundItem;
-
+                eventoSeleccionado = daoGestPersonas.buscarEventoPorID(eventoSeleccionado.idEvento);
                 frmGestionEventosA frm = new frmGestionEventosA(eventoSeleccionado);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
 
                 }
+            }
+            else
+            {
+                dgvEventos.DataSource = null;
+                MessageBox.Show("No se ha seleccionado un evento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

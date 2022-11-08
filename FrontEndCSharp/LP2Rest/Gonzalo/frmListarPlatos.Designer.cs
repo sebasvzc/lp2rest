@@ -30,6 +30,11 @@
         {
             this.btnBuscarPlatoCombo = new System.Windows.Forms.Button();
             this.dgvItemsVenta = new System.Windows.Forms.DataGridView();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboDisponible = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevoCombo = new System.Windows.Forms.ToolStripButton();
@@ -50,11 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemsVenta)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,7 +63,6 @@
             // 
             // btnBuscarPlatoCombo
             // 
-
             this.btnBuscarPlatoCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(794, 78);
             this.btnBuscarPlatoCombo.Margin = new System.Windows.Forms.Padding(5);
@@ -72,7 +71,7 @@
             this.btnBuscarPlatoCombo.TabIndex = 132;
             this.btnBuscarPlatoCombo.Text = "Buscar";
             this.btnBuscarPlatoCombo.UseVisualStyleBackColor = true;
-            
+            this.btnBuscarPlatoCombo.Click += new System.EventHandler(this.btnBuscarPlatoCombo_Click);
             // 
             // dgvItemsVenta
             // 
@@ -84,7 +83,6 @@
             this.Teléfono,
             this.Categoría,
             this.email,
-
             this.Stock});
             this.dgvItemsVenta.Location = new System.Drawing.Point(37, 261);
             this.dgvItemsVenta.Margin = new System.Windows.Forms.Padding(5);
@@ -94,6 +92,47 @@
             this.dgvItemsVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItemsVenta.Size = new System.Drawing.Size(1015, 299);
             this.dgvItemsVenta.TabIndex = 131;
+            this.dgvItemsVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvItemsVenta_CellFormatting);
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "ID ItemVenta";
+            this.NombreCompleto.MinimumWidth = 6;
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 233;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Nombre";
+            this.Teléfono.MinimumWidth = 6;
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 344;
+            // 
+            // Categoría
+            // 
+            this.Categoría.HeaderText = "Categoría";
+            this.Categoría.MinimumWidth = 6;
+            this.Categoría.Name = "Categoría";
+            this.Categoría.ReadOnly = true;
+            this.Categoría.Width = 120;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Precio";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 140;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 125;
             // 
             // cboDisponible
             // 
@@ -101,10 +140,8 @@
             this.cboDisponible.Location = new System.Drawing.Point(104, 112);
             this.cboDisponible.Margin = new System.Windows.Forms.Padding(5);
             this.cboDisponible.Name = "cboDisponible";
-            this.cboDisponible.Size = new System.Drawing.Size(270, 24);
+            this.cboDisponible.Size = new System.Drawing.Size(270, 21);
             this.cboDisponible.TabIndex = 130;
-            this.cboDisponible.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-
             // 
             // toolStrip1
             // 
@@ -115,22 +152,19 @@
             this.btnNuevoCombo,
             this.btnNuevoPlato,
             this.btnModificar,
-
             this.btnEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(294, 591);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(498, 27);
-
+            this.toolStrip1.Size = new System.Drawing.Size(448, 27);
             this.toolStrip1.TabIndex = 133;
             this.toolStrip1.Text = "tsMenu";
             // 
             // btnNuevoCombo
             // 
-
             this.btnNuevoCombo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.btnNuevoCombo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevoCombo.Name = "btnNuevoCombo";
-            this.btnNuevoCombo.Size = new System.Drawing.Size(129, 24);
+            this.btnNuevoCombo.Size = new System.Drawing.Size(109, 24);
             this.btnNuevoCombo.Text = "&Nuevo Combo";
             this.btnNuevoCombo.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -139,21 +173,19 @@
             this.btnNuevoPlato.Image = global::LP2Rest.Properties.Resources.new_file_40454;
             this.btnNuevoPlato.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevoPlato.Name = "btnNuevoPlato";
-            this.btnNuevoPlato.Size = new System.Drawing.Size(114, 24);
+            this.btnNuevoPlato.Size = new System.Drawing.Size(96, 24);
             this.btnNuevoPlato.Text = "&Nuevo Plato";
             this.btnNuevoPlato.Click += new System.EventHandler(this.btnNuevo_Click);
-
             // 
             // btnModificar
             // 
             this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
             this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificar.Name = "btnModificar";
-
-            this.btnModificar.Size = new System.Drawing.Size(155, 24);
+            this.btnModificar.Size = new System.Drawing.Size(126, 24);
             this.btnModificar.Text = "&Detalle/Modificar ";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -163,21 +195,17 @@
             this.btnEliminar.Size = new System.Drawing.Size(74, 24);
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-
             this.label1.Location = new System.Drawing.Point(19, 115);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 135;
             this.label1.Text = "Disponible:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -195,7 +223,7 @@
             this.label2.Location = new System.Drawing.Point(367, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(302, 20);
+            this.label2.Size = new System.Drawing.Size(241, 16);
             this.label2.TabIndex = 140;
             this.label2.Text = "LISTADO DE PLATOS Y COMBOS";
             // 
@@ -205,7 +233,7 @@
             this.label9.Location = new System.Drawing.Point(39, 43);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 16);
+            this.label9.Size = new System.Drawing.Size(47, 13);
             this.label9.TabIndex = 129;
             this.label9.Text = "Nombre:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -215,7 +243,7 @@
             this.txtNombre.Location = new System.Drawing.Point(104, 42);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(270, 22);
+            this.txtNombre.Size = new System.Drawing.Size(270, 20);
             this.txtNombre.TabIndex = 143;
             // 
             // label3
@@ -224,7 +252,7 @@
             this.label3.Location = new System.Drawing.Point(9, 98);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 16);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 8;
             // 
             // gbPedido
@@ -257,7 +285,7 @@
             this.txtPrecioMax.Location = new System.Drawing.Point(526, 109);
             this.txtPrecioMax.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioMax.Name = "txtPrecioMax";
-            this.txtPrecioMax.Size = new System.Drawing.Size(208, 22);
+            this.txtPrecioMax.Size = new System.Drawing.Size(208, 20);
             this.txtPrecioMax.TabIndex = 150;
             // 
             // label7
@@ -266,7 +294,7 @@
             this.label7.Location = new System.Drawing.Point(466, 112);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 16);
+            this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 149;
             this.label7.Text = "Hasta: ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,7 +305,7 @@
             this.label6.Location = new System.Drawing.Point(466, 75);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 148;
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -287,7 +315,7 @@
             this.txtPrecioMin.Location = new System.Drawing.Point(526, 75);
             this.txtPrecioMin.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioMin.Name = "txtPrecioMin";
-            this.txtPrecioMin.Size = new System.Drawing.Size(208, 22);
+            this.txtPrecioMin.Size = new System.Drawing.Size(208, 20);
             this.txtPrecioMin.TabIndex = 147;
             // 
             // label5
@@ -296,7 +324,7 @@
             this.label5.Location = new System.Drawing.Point(570, 43);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 16);
+            this.label5.Size = new System.Drawing.Size(95, 13);
             this.label5.TabIndex = 146;
             this.label5.Text = "Rango de Precios:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -307,7 +335,7 @@
             this.cboCategoria.Location = new System.Drawing.Point(104, 78);
             this.cboCategoria.Margin = new System.Windows.Forms.Padding(5);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(270, 24);
+            this.cboCategoria.Size = new System.Drawing.Size(270, 21);
             this.cboCategoria.TabIndex = 145;
             // 
             // label4
@@ -316,50 +344,10 @@
             this.label4.Location = new System.Drawing.Point(28, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 144;
             this.label4.Text = "Categoría:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "ID ItemVenta";
-            this.NombreCompleto.MinimumWidth = 6;
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 233;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Nombre";
-            this.Teléfono.MinimumWidth = 6;
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 90;
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Categoría";
-            this.Categoría.MinimumWidth = 6;
-            this.Categoría.Name = "Categoría";
-            this.Categoría.ReadOnly = true;
-            this.Categoría.Width = 120;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Precio";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 140;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 125;
             // 
             // frmListarPlatos
             // 
@@ -371,7 +359,6 @@
             this.Controls.Add(this.dgvItemsVenta);
             this.Controls.Add(this.gbPedido);
             this.Margin = new System.Windows.Forms.Padding(4);
-
             this.Name = "frmListarPlatos";
             this.Text = "frmListarPlatos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemsVenta)).EndInit();

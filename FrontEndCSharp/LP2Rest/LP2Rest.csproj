@@ -92,12 +92,6 @@
     <Compile Include="Gonzalo\frmValidarAsistencia.Designer.cs">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gonzalo\frmValidarEliminado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gonzalo\frmValidarEliminado.Designer.cs">
-      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Marcelo\frmAgregarInsumoReceta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,9 +387,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
-      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
       <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>

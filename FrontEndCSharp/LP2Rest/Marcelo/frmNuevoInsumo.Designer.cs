@@ -30,10 +30,10 @@
         {
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtbNombre = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblSKU = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSKU = new System.Windows.Forms.TextBox();
             this.lblTipoProducto = new System.Windows.Forms.Label();
             this.cbTipoProducto = new System.Windows.Forms.ComboBox();
             this.cbUnidadMedida = new System.Windows.Forms.ComboBox();
@@ -61,13 +61,13 @@
             this.txtbNombre.Size = new System.Drawing.Size(136, 20);
             this.txtbNombre.TabIndex = 1;
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDescripcion.Location = new System.Drawing.Point(147, 63);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(380, 20);
+            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblDescripcion
             // 
@@ -88,12 +88,12 @@
             this.lblSKU.TabIndex = 4;
             this.lblSKU.Text = "SKU";
             // 
-            // textBox2
+            // txtSKU
             // 
-            this.textBox2.Location = new System.Drawing.Point(147, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtSKU.Location = new System.Drawing.Point(147, 89);
+            this.txtSKU.Name = "txtSKU";
+            this.txtSKU.Size = new System.Drawing.Size(380, 20);
+            this.txtSKU.TabIndex = 5;
             // 
             // lblTipoProducto
             // 
@@ -149,6 +149,7 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbCancelar
             // 
@@ -180,9 +181,9 @@
             this.Controls.Add(this.lblUnidadMedida);
             this.Controls.Add(this.cbTipoProducto);
             this.Controls.Add(this.lblTipoProducto);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSKU);
             this.Controls.Add(this.lblSKU);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtbNombre);
             this.Controls.Add(this.lblNombre);
@@ -199,10 +200,10 @@
 
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtbNombre;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblSKU;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSKU;
         private System.Windows.Forms.Label lblTipoProducto;
         private System.Windows.Forms.ComboBox cbTipoProducto;
         private System.Windows.Forms.ComboBox cbUnidadMedida;

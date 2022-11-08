@@ -28,46 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSKU = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtStockMax = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtStockMin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvInsumos = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDNINombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDNINombre = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPrecioMax = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPrecioMin = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cboArea = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboPlato = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboTipoProducto = new System.Windows.Forms.ComboBox();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -80,13 +75,13 @@
             this.lblTitulo.TabIndex = 76;
             this.lblTitulo.Text = "Listado de Insumos";
             // 
-            // textBox4
+            // txtSKU
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox4.Location = new System.Drawing.Point(432, 106);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(309, 32);
-            this.textBox4.TabIndex = 75;
+            this.txtSKU.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSKU.Location = new System.Drawing.Point(432, 106);
+            this.txtSKU.Name = "txtSKU";
+            this.txtSKU.Size = new System.Drawing.Size(309, 32);
+            this.txtSKU.TabIndex = 75;
             // 
             // label8
             // 
@@ -98,18 +93,18 @@
             this.label8.Text = "SKU:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // txtStockMax
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(769, 295);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 32);
-            this.textBox2.TabIndex = 71;
+            this.txtStockMax.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtStockMax.Location = new System.Drawing.Point(432, 295);
+            this.txtStockMax.Name = "txtStockMax";
+            this.txtStockMax.Size = new System.Drawing.Size(185, 32);
+            this.txtStockMax.TabIndex = 71;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label5.Location = new System.Drawing.Point(769, 263);
+            this.label5.Location = new System.Drawing.Point(432, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(244, 29);
             this.label5.TabIndex = 70;
@@ -119,76 +114,30 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label6.Location = new System.Drawing.Point(769, 193);
+            this.label6.Location = new System.Drawing.Point(432, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(185, 29);
             this.label6.TabIndex = 69;
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtStockMin
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(769, 225);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 32);
-            this.textBox1.TabIndex = 68;
+            this.txtStockMin.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtStockMin.Location = new System.Drawing.Point(432, 225);
+            this.txtStockMin.Name = "txtStockMin";
+            this.txtStockMin.Size = new System.Drawing.Size(185, 32);
+            this.txtStockMin.TabIndex = 68;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label4.Location = new System.Drawing.Point(769, 159);
+            this.label4.Location = new System.Drawing.Point(428, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(244, 30);
             this.label4.TabIndex = 67;
             this.label4.Text = "Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label2.Location = new System.Drawing.Point(345, 263);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(396, 29);
-            this.label2.TabIndex = 64;
-            this.label2.Text = "Hasta:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(345, 295);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(396, 32);
-            this.dateTimePicker1.TabIndex = 63;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(345, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 29);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Desde:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblFechaNacimiento
-            // 
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(345, 159);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(396, 30);
-            this.lblFechaNacimiento.TabIndex = 61;
-            this.lblFechaNacimiento.Text = "Fecha de Vencimiento";
-            this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(345, 225);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(396, 32);
-            this.dtpFechaNacimiento.TabIndex = 60;
             // 
             // toolStrip1
             // 
@@ -201,7 +150,7 @@
             this.btnEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(394, 726);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(328, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(359, 30);
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -221,6 +170,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(118, 27);
             this.btnModificar.Text = "&Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -229,99 +179,69 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(106, 27);
             this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // dgvEmpleados
+            // dgvInsumos
             // 
-            this.dgvEmpleados.AllowUserToAddRows = false;
-            this.dgvEmpleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DNI,
-            this.NombreCompleto,
-            this.Area,
-            this.Teléfono,
-            this.email});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmpleados.Location = new System.Drawing.Point(49, 361);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(1001, 346);
-            this.dgvEmpleados.TabIndex = 58;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            this.DNI.Width = 150;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Nombre Completo";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 350;
-            // 
-            // Area
-            // 
-            this.Area.HeaderText = "Area";
-            this.Area.Name = "Area";
-            this.Area.ReadOnly = true;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Teléfono";
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 258;
+            this.dgvInsumos.AllowUserToAddRows = false;
+            this.dgvInsumos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SKU,
+            this.Nombre,
+            this.Precio,
+            this.Stock,
+            this.TipoProducto});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInsumos.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvInsumos.Location = new System.Drawing.Point(49, 361);
+            this.dgvInsumos.Name = "dgvInsumos";
+            this.dgvInsumos.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInsumos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInsumos.Size = new System.Drawing.Size(1001, 346);
+            this.dgvInsumos.TabIndex = 58;
+            this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(769, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(769, 286);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(244, 41);
             this.btnBuscar.TabIndex = 57;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtDNINombre
+            // txtNombre
             // 
-            this.txtDNINombre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNINombre.Location = new System.Drawing.Point(88, 106);
-            this.txtDNINombre.Name = "txtDNINombre";
-            this.txtDNINombre.Size = new System.Drawing.Size(313, 32);
-            this.txtDNINombre.TabIndex = 56;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNombre.Location = new System.Drawing.Point(88, 106);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(313, 32);
+            this.txtNombre.TabIndex = 56;
             // 
             // lblDNINombre
             // 
@@ -333,13 +253,13 @@
             this.lblDNINombre.Text = "Nombre:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // txtPrecioMax
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(92, 295);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(228, 32);
-            this.textBox3.TabIndex = 81;
+            this.txtPrecioMax.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtPrecioMax.Location = new System.Drawing.Point(92, 295);
+            this.txtPrecioMax.Name = "txtPrecioMax";
+            this.txtPrecioMax.Size = new System.Drawing.Size(228, 32);
+            this.txtPrecioMax.TabIndex = 81;
             // 
             // label3
             // 
@@ -361,13 +281,13 @@
             this.label7.Text = "Desde:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox5
+            // txtPrecioMin
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox5.Location = new System.Drawing.Point(92, 225);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(228, 32);
-            this.textBox5.TabIndex = 78;
+            this.txtPrecioMin.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtPrecioMin.Location = new System.Drawing.Point(92, 225);
+            this.txtPrecioMin.Name = "txtPrecioMin";
+            this.txtPrecioMin.Size = new System.Drawing.Size(228, 32);
+            this.txtPrecioMin.TabIndex = 78;
             // 
             // label9
             // 
@@ -379,32 +299,14 @@
             this.label9.Text = "Precio";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cboArea
+            // cboPlato
             // 
-            this.cboArea.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.cboArea.FormattingEnabled = true;
-            this.cboArea.Location = new System.Drawing.Point(960, 295);
-            this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(53, 33);
-            this.cboArea.TabIndex = 88;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(960, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(53, 33);
-            this.comboBox1.TabIndex = 89;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(769, 106);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(244, 33);
-            this.comboBox2.TabIndex = 90;
+            this.cboPlato.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cboPlato.FormattingEnabled = true;
+            this.cboPlato.Location = new System.Drawing.Point(769, 106);
+            this.cboPlato.Name = "cboPlato";
+            this.cboPlato.Size = new System.Drawing.Size(244, 33);
+            this.cboPlato.TabIndex = 90;
             // 
             // label10
             // 
@@ -416,43 +318,90 @@
             this.label10.Text = "Plato:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label1.Location = new System.Drawing.Point(769, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 29);
+            this.label1.TabIndex = 93;
+            this.label1.Text = "Tipo Producto:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cboTipoProducto
+            // 
+            this.cboTipoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cboTipoProducto.FormattingEnabled = true;
+            this.cboTipoProducto.Location = new System.Drawing.Point(769, 197);
+            this.cboTipoProducto.Name = "cboTipoProducto";
+            this.cboTipoProducto.Size = new System.Drawing.Size(244, 33);
+            this.cboTipoProducto.TabIndex = 92;
+            // 
+            // SKU
+            // 
+            this.SKU.HeaderText = "SKU";
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            this.SKU.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 350;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
+            // TipoProducto
+            // 
+            this.TipoProducto.HeaderText = "TipoProducto";
+            this.TipoProducto.Name = "TipoProducto";
+            this.TipoProducto.ReadOnly = true;
+            this.TipoProducto.Width = 258;
+            // 
             // frmListarInsumosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboTipoProducto);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cboArea);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cboPlato);
+            this.Controls.Add(this.txtPrecioMax);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtPrecioMin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSKU);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtStockMax);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStockMin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblFechaNacimiento);
-            this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dgvEmpleados);
+            this.Controls.Add(this.dgvInsumos);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtDNINombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDNINombre);
             this.Name = "frmListarInsumosA";
             this.Text = "Listado de Insumos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,39 +409,34 @@
 
         #endregion
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSKU;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtStockMax;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStockMin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
-        private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridView dgvInsumos;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtDNINombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDNINombre;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPrecioMax;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPrecioMin;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cboArea;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboPlato;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboTipoProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoProducto;
     }
 }
