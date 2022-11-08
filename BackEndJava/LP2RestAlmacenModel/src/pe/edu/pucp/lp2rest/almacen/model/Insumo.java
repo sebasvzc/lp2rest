@@ -12,6 +12,7 @@ public class Insumo {
     private double precioCompra;
     private boolean activo;
     private UnidadMedida unidadMedida;
+    private TipoProducto tipoProducto;
 
     //constructor
     public Insumo(String SKU,double stock, String descripcion,String nombre,double precioCompra,boolean activo,UnidadMedida unidadMedida) {
@@ -94,6 +95,20 @@ public class Insumo {
     }
 
     //metodos
+
+    /**
+     * @return the tipoProducto
+     */
+    public TipoProducto getTipoProducto() {
+        return tipoProducto;
+    }
+
+    /**
+     * @param tipoProducto the tipoProducto to set
+     */
+    public void setTipoProducto(TipoProducto tipoProducto) {
+        this.tipoProducto = tipoProducto;
+    }
 
 
 

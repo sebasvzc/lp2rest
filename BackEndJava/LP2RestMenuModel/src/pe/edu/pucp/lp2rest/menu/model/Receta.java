@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.lp2rest.menu.model;
 
 import pe.edu.pucp.lp2rest.almacen.model.Insumo;
 
 public class Receta {
+    private int idReceta;
     private ItemVenta itemVenta;
     private Insumo insumo;
     private double cantidad;
@@ -35,5 +32,18 @@ public class Receta {
         this.cantidad = cantidad;
     }
     
+    /**
+     * @return the idReceta
+     */
+    public int getIdReceta() {
+        return idReceta;
+    }
+
+    /**
+     * @param idReceta the idReceta to set
+     */
+    public void setIdReceta(int idReceta) {
+        this.idReceta = idReceta;
+    }
     
 }

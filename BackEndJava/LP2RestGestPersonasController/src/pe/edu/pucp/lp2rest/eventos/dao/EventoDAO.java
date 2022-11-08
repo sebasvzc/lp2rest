@@ -12,5 +12,6 @@ public interface EventoDAO {
     ArrayList<Evento> listarTodas();    
     ArrayList<Evento> FiltrarEventos(String nombre_evento, int fid_artista,
             Date fecha_inicio, Date fecha_fin, 
-            double monto_min, double monto_max);
+            double monto_min, double monto_max);    
+    Evento buscarEventoPorID(int id_evento);
 }

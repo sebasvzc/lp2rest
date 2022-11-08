@@ -67,7 +67,26 @@ public class TipoItemMySQL implements TipoItemDAO {
 
     @Override
     public ArrayList<TipoItem> listarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<TipoItem> tiposItem = new ArrayList<>();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_TIPO_ITEM()");
+            rs = cs.executeQuery();
+            while(rs.next()){
+                TipoItem tipoItem = new TipoItem();
+                tipoItem.setIdTipoItem(rs.getInt("id_tipoItem"));
+                tipoItem.setCodigo(rs.getString("codigo"));
+                tipoItem.setDescripcion(rs.getString("descripcion"));    
+                tiposItem.add(tipoItem);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return tiposItem;
     }
 
 }

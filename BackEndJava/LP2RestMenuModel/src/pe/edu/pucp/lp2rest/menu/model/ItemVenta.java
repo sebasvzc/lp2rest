@@ -1,5 +1,7 @@
 package pe.edu.pucp.lp2rest.menu.model;
 
+import java.util.ArrayList;
+
 public class ItemVenta {
 
     //atributos
@@ -10,10 +12,9 @@ public class ItemVenta {
     private TipoItem TipoItem;
     private boolean activo;
     private int disponible;
-
-
+    private ArrayList<Receta> recetas;
+    private ArrayList<LineaDetalleCombo> lineasCombo;
     //constructor
-
     public ItemVenta() {
 
     }
@@ -90,6 +91,32 @@ public class ItemVenta {
         this.activo = activo;
     }
 
-    
-    
+    /**
+     * @return the recetas
+     */
+    public ArrayList<Receta> getRecetas() {
+        return recetas;
+    }
+
+    /**
+     * @param recetas the recetas to set
+     */
+    public void setRecetas(ArrayList<Receta> recetas) {
+        this.recetas = recetas;
+    }
+
+    /**
+     * @return the lineasCombo
+     */
+    public ArrayList<LineaDetalleCombo> getLineasCombo() {
+        return lineasCombo;
+    }
+
+    /**
+     * @param lineasCombo the lineasCombo to set
+     */
+    public void setLineasCombo(ArrayList<LineaDetalleCombo> lineasCombo) {
+        this.lineasCombo = lineasCombo;
+    }
+
 }

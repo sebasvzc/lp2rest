@@ -12,8 +12,8 @@ import java.util.Set;
 import pe.edu.pucp.lp2rest.config.DBManager;
 import pe.edu.pucp.lp2rest.eventos.dao.EventoDAO;
 import pe.edu.pucp.lp2rest.eventos.model.Evento;
+import pe.edu.pucp.lp2rest.gestpersonas.model.Administrador;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Artista;
-
 
 public class EventoMySQL implements EventoDAO{
 
@@ -50,7 +50,7 @@ public class EventoMySQL implements EventoDAO{
         try{
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call MODIFICAR_EVENTO(?,?,?,?,?,?)}");
-            cs.setInt("evento", evento.getIdEvento());
+            cs.setInt("_id_evento", evento.getIdEvento());
             cs.setInt("_fid_administrador", evento.getAdministrador().getIdPersona());
             cs.setInt("_fid_artista", evento.getArtista().getIdArtista());
             cs.setDate("_fecha_inicio", new java.sql.Date(evento.getFecha_inicio().getTime()));
@@ -144,5 +144,36 @@ public class EventoMySQL implements EventoDAO{
             }
         }
         return eventos;
+    }
+
+    @Override
+    public Evento buscarEventoPorID(int id_evento) {
+        
+        Evento evento = new Evento();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call BUSCAR_EVENTO_POR_ID(?)");
+            cs.setInt("_id_evento", id_evento);
+            
+            rs = cs.executeQuery();
+            rs.next();       
+            evento.setIdEvento(rs.getInt("id_evento"));                
+            evento.setNombre(rs.getString("nombre_evento"));
+            evento.setAdministrador(new Administrador());
+            evento.getAdministrador().setIdPersona(rs.getInt("fid_administrador"));
+            evento.setFecha_inicio(rs.getDate("fecha_inicio"));
+            evento.setMonto_pagar(rs.getDouble("monto_pagar"));
+            evento.setArtista(new Artista());
+            evento.getArtista().setIdArtista(rs.getInt("fid_artista"));
+            evento.getArtista().setNombre(rs.getString("nombre_artistico"));        
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return evento;
     }
 }
