@@ -81,3 +81,13 @@ hs_err_pid*
 !/BackEndJava/LP2Rest/src/pe/edu/pucp/lp2rest/lib/mysql-connector-java-8.0.30.jar
 /BackEndJava/LP2Rest/build/
 /BackEndJava/LP2Rest/dist/
+
+/FrontEndCSharp/LP2Rest/Connected Services/MenuWS/*
+/FrontEndCSharp/LP2Rest/Connected Services/AlmacenWS/*
+/FrontEndCSharp/LP2Rest/Connected Services/GestPersonasWS/*
+/FrontEndCSharp/LP2Rest/Connected Services/VentasWS/*
+
+!/FrontEndCSharp/LP2Rest/Connected Services/MenuWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/AlmacenWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/GestPersonasWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/VentasWS/Reference.svcmap
