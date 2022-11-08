@@ -1,0 +1,78 @@
+# Compiled class file
+*.class
+
+# C# files
+*.suo
+[Dd]ebug/
+[Rr]elease/
+.vs/
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+/BackEndJava/LP2RestDBManager/build/
+/BackEndJava/LP2RestDBManager/dist/
+
+/BackEndJava/LP2RestRRHHController/build/
+/BackEndJava/LP2RestRRHHModel/build/
+/BackEndJava/LP2RestRRHHModel/dist/
+/BackEndJava/LP2RestRRHHController/dist/
+
+/BackEndJava/LP2RestWebServices/build/
+/BackEndJava/LP2RestWebServices/nbproject/private/
+/BackEndJava/LP2RestWebServices/dist/
+!/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/mysql-connector-java-8.0.30.jar
+
+/BackEndJava/LP2RestGestClientesController/build
+/BackEndJava/LP2RestGestClientesModel/build/
+/BackEndJava/LP2RestGestClientesModel/dist/
+/BackEndJava/LP2RestGestClientesController/dist/
+
+/BackEndJava/LP2RestDBManager/build/
+/BackEndJava/LP2RestDBManager/dist/
+/BackEndJava/LP2RestAlmacenController/nbproject/private/
+/BackEndJava/LP2RestDBManager/nbproject/private/
+/BackEndJava/LP2RestAlmacenModel/nbproject/private/
+/BackEndJava/LP2RestGestPersonasModel/nbproject/private/
+/BackEndJava/LP2RestGestPersonasModel/dist/
+/BackEndJava/LP2RestGestPersonasModel/build/
+/BackEndJava/LP2RestAlmacenModel/build
+/BackEndJava/LP2RestMenuModel/nbproject/private/
+/BackEndJava/LP2RestVentasModel/nbproject/private/
+/BackEndJava/LP2RestAlmacenModel/dist/
+/BackEndJava/LP2RestMenuModel/build/
+/BackEndJava/LP2RestMenuModel/dist/
+/BackEndJava/LP2RestVentasModel/build/
+/BackEndJava/LP2RestVentasModel/dist/
+/BackEndJava/LP2RestGestPersonasController/nbproject/private/
+/BackEndJava/LP2RestMenuController/nbproject/private/
+/BackEndJava/LP2RestVentasController/nbproject/private/
+/BackEndJava/LP2RestVentasController/dist/
+/BackEndJava/LP2RestVentasController/build/
+/BackEndJava/LP2RestMenuController/build/
+/BackEndJava/LP2RestMenuController/dist/
+/BackEndJava/LP2RestGestPersonasController/build/
+/BackEndJava/LP2RestGestPersonasController/dist/
+/BackEndJava/LP2RestAlmacenController/dist/
+/BackEndJava/LP2RestAlmacenController/build/
+/BackEndJava/LP2RestWebServices/nbproject/private/
+/BackEndJava/LP2RestWebServices/build/
+/BackEndJava/LP2RestWebServices/dist/

@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.lp2rest.pucp.edu.pe/" targetNamespace="http://services.lp2rest.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EliminarAdministrador" type="tns:EliminarAdministrador" />
+  <xs:element name="EliminarAdministradorResponse" type="tns:EliminarAdministradorResponse" />
+  <xs:element name="EliminarArtista" type="tns:EliminarArtista" />
+  <xs:element name="EliminarArtistaResponse" type="tns:EliminarArtistaResponse" />
+  <xs:element name="EliminarCajero" type="tns:EliminarCajero" />
+  <xs:element name="EliminarCajeroResponse" type="tns:EliminarCajeroResponse" />
+  <xs:element name="EliminarChef" type="tns:EliminarChef" />
+  <xs:element name="EliminarChefResponse" type="tns:EliminarChefResponse" />
+  <xs:element name="EliminarCliente" type="tns:EliminarCliente" />
+  <xs:element name="EliminarClienteResponse" type="tns:EliminarClienteResponse" />
+  <xs:element name="EliminarCuentaUsuario" type="tns:EliminarCuentaUsuario" />
+  <xs:element name="EliminarCuentaUsuarioResponse" type="tns:EliminarCuentaUsuarioResponse" />
+  <xs:element name="EliminarEvento" type="tns:EliminarEvento" />
+  <xs:element name="EliminarEventoResponse" type="tns:EliminarEventoResponse" />
+  <xs:element name="EliminarMesero" type="tns:EliminarMesero" />
+  <xs:element name="EliminarMeseroResponse" type="tns:EliminarMeseroResponse" />
+  <xs:element name="EliminarRecepcionista" type="tns:EliminarRecepcionista" />
+  <xs:element name="EliminarRecepcionistaResponse" type="tns:EliminarRecepcionistaResponse" />
+  <xs:element name="EliminarReclamo" type="tns:EliminarReclamo" />
+  <xs:element name="EliminarReclamoResponse" type="tns:EliminarReclamoResponse" />
+  <xs:element name="FiltrarEventos" type="tns:FiltrarEventos" />
+  <xs:element name="FiltrarEventosResponse" type="tns:FiltrarEventosResponse" />
+  <xs:element name="InsertarAdministrador" type="tns:InsertarAdministrador" />
+  <xs:element name="InsertarAdministradorResponse" type="tns:InsertarAdministradorResponse" />
+  <xs:element name="InsertarArtista" type="tns:InsertarArtista" />
+  <xs:element name="InsertarArtistaResponse" type="tns:InsertarArtistaResponse" />
+  <xs:element name="InsertarCajero" type="tns:InsertarCajero" />
+  <xs:element name="InsertarCajeroResponse" type="tns:InsertarCajeroResponse" />
+  <xs:element name="InsertarChef" type="tns:InsertarChef" />
+  <xs:element name="InsertarChefResponse" type="tns:InsertarChefResponse" />
+  <xs:element name="InsertarCliente" type="tns:InsertarCliente" />
+  <xs:element name="InsertarClienteResponse" type="tns:InsertarClienteResponse" />
+  <xs:element name="InsertarCuentaUsuario" type="tns:InsertarCuentaUsuario" />
+  <xs:element name="InsertarCuentaUsuarioResponse" type="tns:InsertarCuentaUsuarioResponse" />
+  <xs:element name="InsertarEvento" type="tns:InsertarEvento" />
+  <xs:element name="InsertarEventoResponse" type="tns:InsertarEventoResponse" />
+  <xs:element name="InsertarMesero" type="tns:InsertarMesero" />
+  <xs:element name="InsertarMeseroResponse" type="tns:InsertarMeseroResponse" />
+  <xs:element name="InsertarRecepcionista" type="tns:InsertarRecepcionista" />
+  <xs:element name="InsertarRecepcionistaResponse" type="tns:InsertarRecepcionistaResponse" />
+  <xs:element name="InsertarReclamo" type="tns:InsertarReclamo" />
+  <xs:element name="InsertarReclamoResponse" type="tns:InsertarReclamoResponse" />
+  <xs:element name="ListarBusquedaReclamos" type="tns:ListarBusquedaReclamos" />
+  <xs:element name="ListarBusquedaReclamosResponse" type="tns:ListarBusquedaReclamosResponse" />
+  <xs:element name="ListarTodosReclamos" type="tns:ListarTodosReclamos" />
+  <xs:element name="ListarTodosReclamosResponse" type="tns:ListarTodosReclamosResponse" />
+  <xs:element name="ModificarAdministrador" type="tns:ModificarAdministrador" />
+  <xs:element name="ModificarAdministradorResponse" type="tns:ModificarAdministradorResponse" />
+  <xs:element name="ModificarArtista" type="tns:ModificarArtista" />
+  <xs:element name="ModificarArtistaResponse" type="tns:ModificarArtistaResponse" />
+  <xs:element name="ModificarCajero" type="tns:ModificarCajero" />
+  <xs:element name="ModificarCajeroResponse" type="tns:ModificarCajeroResponse" />
+  <xs:element name="ModificarChef" type="tns:ModificarChef" />
+  <xs:element name="ModificarChefResponse" type="tns:ModificarChefResponse" />
+  <xs:element name="ModificarCliente" type="tns:ModificarCliente" />
+  <xs:element name="ModificarClienteResponse" type="tns:ModificarClienteResponse" />
+  <xs:element name="ModificarCuentaUsuario" type="tns:ModificarCuentaUsuario" />
+  <xs:element name="ModificarCuentaUsuarioResponse" type="tns:ModificarCuentaUsuarioResponse" />
+  <xs:element name="ModificarEvento" type="tns:ModificarEvento" />
+  <xs:element name="ModificarEventoResponse" type="tns:ModificarEventoResponse" />
+  <xs:element name="ModificarMesero" type="tns:ModificarMesero" />
+  <xs:element name="ModificarMeseroResponse" type="tns:ModificarMeseroResponse" />
+  <xs:element name="ModificarRecepcionista" type="tns:ModificarRecepcionista" />
+  <xs:element name="ModificarRecepcionistaResponse" type="tns:ModificarRecepcionistaResponse" />
+  <xs:element name="ModificarReclamo" type="tns:ModificarReclamo" />
+  <xs:element name="ModificarReclamoResponse" type="tns:ModificarReclamoResponse" />
+  <xs:element name="filtrarClientes" type="tns:filtrarClientes" />
+  <xs:element name="filtrarClientesResponse" type="tns:filtrarClientesResponse" />
+  <xs:element name="filtrarPorDni" type="tns:filtrarPorDni" />
+  <xs:element name="filtrarPorDniResponse" type="tns:filtrarPorDniResponse" />
+  <xs:element name="insertarAsistencia" type="tns:insertarAsistencia" />
+  <xs:element name="insertarAsistenciaResponse" type="tns:insertarAsistenciaResponse" />
+  <xs:element name="listarTodasAdministradores" type="tns:listarTodasAdministradores" />
+  <xs:element name="listarTodasAdministradoresResponse" type="tns:listarTodasAdministradoresResponse" />
+  <xs:element name="listarTodasArtistas" type="tns:listarTodasArtistas" />
+  <xs:element name="listarTodasArtistasResponse" type="tns:listarTodasArtistasResponse" />
+  <xs:element name="listarTodasCajeros" type="tns:listarTodasCajeros" />
+  <xs:element name="listarTodasCajerosResponse" type="tns:listarTodasCajerosResponse" />
+  <xs:element name="listarTodasChefs" type="tns:listarTodasChefs" />
+  <xs:element name="listarTodasChefsResponse" type="tns:listarTodasChefsResponse" />
+  <xs:element name="listarTodasClientes" type="tns:listarTodasClientes" />
+  <xs:element name="listarTodasClientesResponse" type="tns:listarTodasClientesResponse" />
+  <xs:element name="listarTodasCuentasUsuario" type="tns:listarTodasCuentasUsuario" />
+  <xs:element name="listarTodasCuentasUsuarioResponse" type="tns:listarTodasCuentasUsuarioResponse" />
+  <xs:element name="listarTodasEventos" type="tns:listarTodasEventos" />
+  <xs:element name="listarTodasEventosResponse" type="tns:listarTodasEventosResponse" />
+  <xs:element name="listarTodasMeseros" type="tns:listarTodasMeseros" />
+  <xs:element name="listarTodasMeserosResponse" type="tns:listarTodasMeserosResponse" />
+  <xs:element name="listarTodasRecepcionistas" type="tns:listarTodasRecepcionistas" />
+  <xs:element name="listarTodasRecepcionistasResponse" type="tns:listarTodasRecepcionistasResponse" />
+  <xs:complexType name="ListarBusquedaReclamos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="cliApellido" type="xs:string" />
+      <xs:element minOccurs="0" name="empNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="empApellido" type="xs:string" />
+      <xs:element minOccurs="0" name="adminNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="adminApellido" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+      <xs:element name="estadoBuscado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarBusquedaReclamosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reclamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reclamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaAtencion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eventos" nillable="true" type="tns:evento" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="empleado">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personaNatural">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="cuentaUsuario" type="tns:cuentaUsuario" />
+          <xs:element minOccurs="0" name="fechaContratacion" type="xs:dateTime" />
+          <xs:element name="numeroHorasMensuales" type="xs:int" />
+          <xs:element minOccurs="0" name="restaurante" type="tns:restaurante" />
+          <xs:element name="sueldo" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="personaNatural">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+          <xs:element minOccurs="0" name="DNI" type="xs:string" />
+          <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="nombre" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="artista" type="tns:artista" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element name="idEvento" type="xs:int" />
+      <xs:element name="monto_pagar" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="artista">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eventos" nillable="true" type="tns:evento" />
+      <xs:element name="idArtista" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentaUsuario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="asistencias" nillable="true" type="tns:asistencia" />
+      <xs:element minOccurs="0" name="contrasenia" type="xs:string" />
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asistencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaIngreso" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaSalida" type="xs:string" />
+      <xs:element minOccurs="0" name="horaIngreso" type="xs:string" />
+      <xs:element minOccurs="0" name="horaSalida" type="xs:string" />
+      <xs:element name="idCuentaUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="restaurante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ciudad" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="empleados" nillable="true" type="tns:empleado" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="urlWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:personaNatural">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="reclamos" nillable="true" type="tns:reclamo" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="reservas" nillable="true" type="tns:reserva" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="reserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:localTime" />
+      <xs:element name="idReserva" type="xs:int" />
+      <xs:element minOccurs="0" name="recepcionista" type="tns:recepcionista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="recepcionista">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="reservas" nillable="true" type="tns:reserva" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="EliminarChef">
+    <xs:sequence>
+      <xs:element name="idChef" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarChefResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarCajero">
+    <xs:sequence>
+      <xs:element name="idCajero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarCajeroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAsistencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asistencia" type="tns:asistencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAsistenciaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasClientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarArtista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="artista" type="tns:artista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarArtistaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarRecepcionista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="recepcionista" type="tns:recepcionista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarRecepcionistaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarCuentaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cuentaUsuario" type="tns:cuentaUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarCuentaUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasCuentasUsuario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasCuentasUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cuentaUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarCajero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cajero" type="tns:cajero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cajero">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element name="nroCaja" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="InsertarCajeroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarMesero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mesero" type="tns:mesero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mesero">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element name="tiempoExperiencia" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ModificarMeseroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarCuentaUsuario">
+    <xs:sequence>
+      <xs:element name="idCuentaUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarCuentaUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasRecepcionistas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasRecepcionistasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:recepcionista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarCajero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cajero" type="tns:cajero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarCajeroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarEvento">
+    <xs:sequence>
+      <xs:element name="idEvento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTodosReclamos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTodosReclamosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reclamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarArtista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="artista" type="tns:artista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarArtistaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasChefs">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasChefsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:chef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="chef">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="especialidad" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="solicitudes" nillable="true" type="tns:solicitud" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="solicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idSolicitud" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasAdministradores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasAdministradoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarReclamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reclamo" type="tns:reclamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarReclamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarCliente">
+    <xs:sequence>
+      <xs:element name="idCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasArtistas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasArtistasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:artista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarCuentaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cuentaUsuario" type="tns:cuentaUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarCuentaUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarRecepcionista">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="recepcionista" type="tns:recepcionista" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarRecepcionistaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarPorDni">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarPorDniResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarClientes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarChef">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chef" type="tns:chef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarChefResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarMesero">
+    <xs:sequence>
+      <xs:element name="idMesero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarMeseroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarReclamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reclamo" type="tns:reclamo" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarReclamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarMesero">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="mesero" type="tns:mesero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarMeseroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarAdministrador">
+    <xs:sequence>
+      <xs:element name="idAdministrador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasCajeros">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasCajerosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cajero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasMeseros">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasMeserosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mesero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarRecepcionista">
+    <xs:sequence>
+      <xs:element name="idRecepcionista" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarRecepcionistaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasEventos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasEventosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarReclamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reclamo" type="tns:reclamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarReclamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarChef">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chef" type="tns:chef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificarChefResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarArtista">
+    <xs:sequence>
+      <xs:element name="idArtista" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarArtistaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FiltrarEventos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre_evento" type="xs:string" />
+      <xs:element name="fid_artista" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha_inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:dateTime" />
+      <xs:element name="monto_min" type="xs:double" />
+      <xs:element name="monto_max" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FiltrarEventosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
