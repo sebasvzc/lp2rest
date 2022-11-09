@@ -564,6 +564,9 @@
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarInsumosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarOrdenCompraResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.InsertarInsumoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -577,6 +580,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.lineaOrdenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarTipoProductoResponse.datasource">
@@ -709,6 +715,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasAdministradoresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -772,10 +781,16 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarReclamoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.proveedor1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.recepcionista.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.reclamo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.verificarCuentaUsuarioResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.EliminarItemVentaResponse.datasource">
@@ -1069,4 +1084,4 @@
     <WCFMetadataStorage Include="Connected Services\VentasWS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>                                                                                                                                                                                             
+</Project>

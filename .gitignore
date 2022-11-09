@@ -88,9 +88,14 @@ hs_err_pid*
 /FrontEndCSharp/LP2Rest/Connected Services/VentasWS/*
 
 !/FrontEndCSharp/LP2Rest/Connected Services/MenuWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/MenuWS/Reference.cs
 !/FrontEndCSharp/LP2Rest/Connected Services/AlmacenWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/AlmacenWS/Reference.cs
 !/FrontEndCSharp/LP2Rest/Connected Services/GestPersonasWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/GestPersonasWS/Reference.cs
 !/FrontEndCSharp/LP2Rest/Connected Services/VentasWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/VentasWS/Reference.cs
+
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/itext-2.1.7.js7.jar
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/jasperreports-custom-visualization-6.10.0.jar
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/jasperreports-6.16.0.jar
