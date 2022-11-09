@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.GestPersonasWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,11 @@ namespace LP2Rest
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+        private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
         public frmLogin()
         {
             InitializeComponent();
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
         }
 
         private void lbOlvideContrasena_Click(object sender, EventArgs e)
@@ -32,44 +35,62 @@ namespace LP2Rest
 
         private void btIngresar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Mesero")
-            {
-                frmPrincipalMesero formMesero = new frmPrincipalMesero();
-                formMesero.ShowDialog();
-            }
-            else if (txtUsuario.Text == "Administrador")
+
+            GestPersonasWS.cuentaUsuario cuentaUsuario = new cuentaUsuario();
+            cuentaUsuario.usuario = txtUsuario.Text;
+            cuentaUsuario.contrasenia = txtContrasena.Text;
+            cuentaUsuario = daoGestPersonas.verificarCuentaUsuario(cuentaUsuario);
+            if (cuentaUsuario.tipoEmpleado == 'A')
             {
                 frmPrincipalA formPrincipalA = new frmPrincipalA();
-                formPrincipalA.ShowDialog();
+                this.Hide();
+                if(formPrincipalA.ShowDialog() == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
             }
-            else if (txtUsuario.Text == "Cajero")
+            else if (cuentaUsuario.tipoEmpleado == 'M')
+            {
+                frmPrincipalMesero formMesero = new frmPrincipalMesero();
+                this.Hide();
+                if (formMesero.ShowDialog() == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+            }
+            else if (cuentaUsuario.tipoEmpleado == 'C')
             {
                 frmPrincipalCajero formCajero = new frmPrincipalCajero();
-                formCajero.ShowDialog();
+                this.Hide();
+                if (formCajero.ShowDialog() == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
             }
-            else if (txtUsuario.Text == "Chef")
+            else if (cuentaUsuario.tipoEmpleado == 'F')
             {
                 frmInicioChef formChef = new frmInicioChef();
-                formChef.ShowDialog();
+                this.Hide();
+                if (formChef.ShowDialog() == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
             }
-            else if (txtUsuario.Text == "Recepcionista")
+            else if (cuentaUsuario.tipoEmpleado == 'R')
             {
                 frmPrincipalRecepcionista formRecepcionista = new frmPrincipalRecepcionista();
-                formRecepcionista.ShowDialog();
+                this.Hide();
+                if (formRecepcionista.ShowDialog() == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            /*
-            else
-            {
-                frmErrorLogin formErrorLogin = new frmErrorLogin();
-                formErrorLogin.ShowDialog();
-            }
-            */
         }
+
 
 
 
