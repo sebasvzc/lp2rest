@@ -68,6 +68,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Diego\frmBuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmBuscarProveedor.Designer.cs">
+      <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diego\frmOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diego\frmOrdenCompra.Designer.cs">
+      <DependentUpon>frmOrdenCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerard\frmNuevaContrasenia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +388,12 @@
     <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Diego\frmBuscarProveedor.resx">
+      <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diego\frmOrdenCompra.resx">
+      <DependentUpon>frmOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gerard\frmNuevaContrasenia.resx">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
     </EmbeddedResource>
@@ -564,6 +582,9 @@
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarInsumosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarOrdenCompraResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -580,6 +601,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.lineaOrdenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse1.datasource">
