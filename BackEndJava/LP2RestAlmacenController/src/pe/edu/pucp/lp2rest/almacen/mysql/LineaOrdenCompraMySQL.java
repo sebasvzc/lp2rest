@@ -95,4 +95,43 @@ public class LineaOrdenCompraMySQL implements LineaOrdenCompraDAO{
         return lcompras;
     }
     
+    @Override
+    public ArrayList<LineaOrdenCompra> listarLineasOrdenCompraPorId(int idOrden) {
+        ArrayList<LineaOrdenCompra> lcompras = new ArrayList<>();
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_SOLICITUD_ORDEN_COMPRA(?)");
+            cs.setInt("_fid_solicitud_orden_compra", idOrden);
+            rs = cs.executeQuery();
+            while (rs.next()) {
+                LineaOrdenCompra lcompra = new LineaOrdenCompra();
+                
+                lcompra.setIdLineaOrdenCompra(rs.getInt("id_lineaOrdenDeCompra"));
+                
+                Insumo ins= new Insumo();
+                lcompra.setInsumo(ins);
+                lcompra.getInsumo().setIdInsumo(rs.getInt("fid_insumo"));
+                lcompra.getInsumo().setSKU(rs.getString("sku"));
+                lcompra.getInsumo().setNombre(rs.getString("nombre"));
+                
+                lcompra.setOrdenCompra(new OrdenCompra());
+                lcompra.getOrdenCompra().setIdOrdenCompra(rs.getInt("fid_ordenDeCompra"));
+                
+                lcompra.setFechaVencimiento(rs.getDate("fecha_vencimiento"));
+                lcompra.setCantidad(rs.getDouble("cantidad"));
+                lcompra.setPrecioUnitario(rs.getDouble("precio_unitario"));
+                lcompras.add(lcompra);
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return lcompras;
+    }
+    
 }

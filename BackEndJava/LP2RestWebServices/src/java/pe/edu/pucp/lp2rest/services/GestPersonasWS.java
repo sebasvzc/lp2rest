@@ -17,6 +17,7 @@ import pe.edu.pucp.lp2rest.gestpersonas.dao.ChefDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.ClienteDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.CuentaUsuarioDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.MeseroDAO;
+import pe.edu.pucp.lp2rest.gestpersonas.dao.ProveedorDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.RecepcionistaDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.ReclamoDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Administrador;
@@ -27,6 +28,7 @@ import pe.edu.pucp.lp2rest.gestpersonas.model.Chef;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Cliente;
 import pe.edu.pucp.lp2rest.gestpersonas.model.CuentaUsuario;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Mesero;
+import pe.edu.pucp.lp2rest.gestpersonas.model.Proveedor;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Recepcionista;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Reclamo;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.AdministradorMySQL;
@@ -37,6 +39,7 @@ import pe.edu.pucp.lp2rest.gestpersonas.mysql.ChefMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ClienteMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.CuentaUsuarioMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.MeseroMySQL;
+import pe.edu.pucp.lp2rest.gestpersonas.mysql.ProveedorMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.RecepcionistaMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ReclamoMySQL;
 
@@ -54,7 +57,8 @@ public class GestPersonasWS {
     private CuentaUsuarioDAO daoCuentaUsuario = new CuentaUsuarioMySQL();
     private AsistenciaDAO daoAsistencia = new AsistenciaMySQL();
     private ReclamoDAO daoReclamo = new ReclamoMySQL();
-
+    private ProveedorDAO daoProveedor = new ProveedorMySQL();
+    
     @WebMethod(operationName = "listarTodasEventos")
     public ArrayList<Evento> listarTodasEventos() {
         ArrayList<Evento> eventos = null;
@@ -604,5 +608,16 @@ public class GestPersonasWS {
             System.out.println(ex.getMessage());
         }
         return cuentasUsuario;
-    }
+    } 
+    
+    @WebMethod(operationName = "listarProveedoresPorNombre")
+    public ArrayList<Proveedor> listarProveedoresPorNombre(@WebParam(name = "nombre_proveedor") String nombre_proveedor) {
+        ArrayList<Proveedor> proveedor = null;
+        try{
+            proveedor = daoProveedor.listarProveedorePorNombre(nombre_proveedor);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return proveedor;
+    } 
 }

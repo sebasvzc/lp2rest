@@ -60,7 +60,7 @@ public class Principal {
     meseros = daoMesero.listarTodas();
 
     for( Mesero mesero : meseros){
-       //System.out.println("Nombre: " + mesero.getNombre());
+       System.out.println("Nombre: " + mesero.getNombre());
     }
         
     Evento eventoPrueba = new Evento();

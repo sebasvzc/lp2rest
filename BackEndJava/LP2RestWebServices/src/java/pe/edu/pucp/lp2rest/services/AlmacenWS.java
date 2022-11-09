@@ -1,6 +1,7 @@
 package pe.edu.pucp.lp2rest.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -102,6 +103,23 @@ public class AlmacenWS {
     }
     
     ///////////////////////////////////////////////////////////////////////////
+    @WebMethod(operationName = "FiltrarOrdenCompra")
+    public  ArrayList<OrdenCompra> FiltrarOrdenCompra(
+        @WebParam(name = "id_solicitudOrdenDeCompra") int id_solicitudOrdenDeCompra,
+        @WebParam(name = "fecha_registro_max") Date fecha_registro_max,
+        @WebParam(name = "fecha_registro_min") Date fecha_registro_min,
+        @WebParam(name = "monto_total_max") double monto_total_max,
+        @WebParam(name = "monto_total_min") double monto_total_min,
+        @WebParam(name = "idInsumo") int idInsumo) {
+        ArrayList<OrdenCompra> ordenCompras = null;
+        try{
+            ordenCompras = daoOrdenCompra.filtrarOrdenCompras(id_solicitudOrdenDeCompra,fecha_registro_max,fecha_registro_min,monto_total_max,monto_total_min,idInsumo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ordenCompras;
+    }
+    
     @WebMethod(operationName = "listarTodosOrdenCompra")
     public ArrayList<OrdenCompra> listarTodosOrdenCompra() {
         ArrayList<OrdenCompra> OrdenesCompra = null;
@@ -201,5 +219,15 @@ public class AlmacenWS {
                     System.out.println(ex.getMessage());
             }
             return tipoProductos;
+    }
+    @WebMethod(operationName = "ListarLineasOrdenCompra")
+    public  ArrayList<LineaOrdenCompra> ListarLineasOrdenCompra(@WebParam(name = "idOrdenCompra") int idOrdenCompra) {
+        ArrayList<LineaOrdenCompra> lineaCompra = null;
+        try{
+            lineaCompra = daoLineaOrdenCompra.listarLineasOrdenCompraPorId(idOrdenCompra);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return lineaCompra;
     }
 }

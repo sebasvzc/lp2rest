@@ -91,10 +91,11 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(350, 30);
+            this.textBox10.Location = new System.Drawing.Point(380, 30);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(91, 20);
             this.textBox10.TabIndex = 116;
+            this.textBox10.ReadOnly = true;
             // 
             // textBox11
             // 
