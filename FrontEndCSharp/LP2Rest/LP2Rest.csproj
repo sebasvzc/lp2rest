@@ -1007,27 +1007,27 @@
     <None Include="Resources\26364281.png" />
     <None Include="Resources\429524-200.png" />
     <None Include="Resources\imgCerrarIcon_Medium.png" />
-    <None Include="Connected Services\GestPersonasWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GestPersonasWS\configuration.svcinfo" />
-    <None Include="Connected Services\GestPersonasWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\AlmacenWS\configuration91.svcinfo" />
     <None Include="Connected Services\AlmacenWS\configuration.svcinfo" />
     <None Include="Connected Services\AlmacenWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\MenuWS\configuration91.svcinfo" />
-    <None Include="Connected Services\MenuWS\configuration.svcinfo" />
-    <None Include="Connected Services\MenuWS\Reference.svcmap">
+    <None Include="Connected Services\GestPersonasWS\configuration91.svcinfo" />
+    <None Include="Connected Services\GestPersonasWS\configuration.svcinfo" />
+    <None Include="Connected Services\GestPersonasWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Connected Services\VentasWS\configuration91.svcinfo" />
     <None Include="Connected Services\VentasWS\configuration.svcinfo" />
     <None Include="Connected Services\VentasWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MenuWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MenuWS\configuration.svcinfo" />
+    <None Include="Connected Services\MenuWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

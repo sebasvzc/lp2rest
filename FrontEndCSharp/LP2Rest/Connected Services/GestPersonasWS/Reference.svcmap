@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="309d8f3d-716f-4414-9abc-e6764ec7e57a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="b163c3ff-356f-4c34-853c-d78e108e4e26" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/GestPersonasWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestPersonasWS.xsd" MetadataType="Schema" ID="ed9bc106-7c54-4937-a4c1-1d8e6988b812" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?xsd=1" />
-    <MetadataFile FileName="GestPersonasWS.wsdl" MetadataType="Wsdl" ID="d3e8032d-67e7-400e-a1df-e195d6a992c8" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?WSDL" />
+    <MetadataFile FileName="GestPersonasWS.xsd" MetadataType="Schema" ID="37425fe1-5c64-4c68-a778-6dc5eae27f15" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?xsd=1" />
+    <MetadataFile FileName="GestPersonasWS.wsdl" MetadataType="Wsdl" ID="1ab2e95b-bc81-49c4-818f-527396005346" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
