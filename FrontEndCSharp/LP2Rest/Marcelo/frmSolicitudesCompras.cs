@@ -66,5 +66,31 @@ namespace LP2Rest
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmListarInsumosA frm = new frmListarInsumosA();
+            frm.ShowDialog();
+        }
     }
 }

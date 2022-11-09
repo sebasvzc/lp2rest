@@ -79,6 +79,11 @@ namespace LP2Rest
             this.DialogResult = DialogResult.OK;
         }
 
+        private void txtbNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
             int resultado = 0;
