@@ -21,12 +21,12 @@ public class CuentaUsuarioMySQL implements CuentaUsuarioDAO {
         int resultado = 0;
         try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_CUENTA_USUARIO(?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_CUENTA_USUARIO(?,?,?,?)}");
             cs.setInt("_fid_empleado", cuentaUsuario.getIdUsuario());
             cs.setString("_user", cuentaUsuario.getUsuario());
             cs.setString("_password", cuentaUsuario.getContrasenia());
-
-            cs.executeUpdate(); 
+            cs.setString("_tipo_empleado", String.valueOf(cuentaUsuario.getTipoEmpleado()));
+            cs.executeUpdate();
             resultado = 1;
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -45,11 +45,12 @@ public class CuentaUsuarioMySQL implements CuentaUsuarioDAO {
         int resultado = 0;
         try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call MODIFICAR_CUENTA_USUARIO(?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_CUENTA_USUARIO(?,?,?,?,?)}");
             cs.setInt("_id_cuentaUsuario", cuentaUsuario.getIdUsuario());
             cs.setInt("_fid_empleado", cuentaUsuario.getEmpleado().getIdPersona());
             cs.setString("_user", cuentaUsuario.getUsuario());
             cs.setString("_password", cuentaUsuario.getContrasenia());
+            cs.setString("_tipo_empleado", String.valueOf(cuentaUsuario.getTipoEmpleado()));
             resultado = cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -86,30 +87,76 @@ public class CuentaUsuarioMySQL implements CuentaUsuarioDAO {
     @Override
     public ArrayList<CuentaUsuario> listarTodas() {
         ArrayList<CuentaUsuario> cuentaUsuarios = new ArrayList<>();
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("call LISTAR_CUENTAS_USUARIO()");
             rs = cs.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 CuentaUsuario cuentaUsuario = new CuentaUsuario();
-                
+
                 cuentaUsuario.setIdUsuario(rs.getInt("id_cuentaUsuario"));
                 cuentaUsuario.setUsuario(rs.getString("user"));
                 cuentaUsuario.setContrasenia(rs.getString("password"));
+                cuentaUsuario.setTipoEmpleado(rs.getString("tipo_empleado").charAt(0));
                 Empleado empleado = new Empleado();
                 empleado.setIdPersona(rs.getInt("fid_empleado"));
                 cuentaUsuario.setEmpleado(empleado);
-                
-                
+
                 cuentaUsuarios.add(cuentaUsuario);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{rs.close();}catch(Exception ex){System.out.println(ex.getMessage());}
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                rs.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return cuentaUsuarios;
+    }
+
+    @Override
+    public CuentaUsuario verificar(CuentaUsuario cuentaUsuario) {
+        int resultado = 0;
+        CuentaUsuario cuentaUsuarioRetorno = new CuentaUsuario();
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call VERIFICAR_CUENTA_USUARIO(?,?)");
+            cs.setString("_user", cuentaUsuario.getUsuario());
+            cs.setString("_password", cuentaUsuario.getContrasenia());
+            rs = cs.executeQuery();
+            if (rs.next()) {
+                cuentaUsuarioRetorno.setIdUsuario(rs.getInt("id_cuentaUsuario"));
+                cuentaUsuarioRetorno.setUsuario(rs.getString("user"));
+                cuentaUsuarioRetorno.setContrasenia(rs.getString("password"));
+                cuentaUsuarioRetorno.setActivo(true);
+                cuentaUsuarioRetorno.setTipoEmpleado(rs.getString("tipo_empleado").charAt(0));
+                Empleado empleado = new Empleado();
+                empleado.setIdPersona(rs.getInt("fid_empleado"));
+                cuentaUsuarioRetorno.setEmpleado(empleado);
+                resultado = 1;
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                rs.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return cuentaUsuarioRetorno;
     }
 
 }
