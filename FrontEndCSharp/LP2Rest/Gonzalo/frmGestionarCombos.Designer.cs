@@ -276,6 +276,7 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(123, 20);
             this.txtStock.TabIndex = 148;
+            this.txtStock.ReadOnly = true;
             // 
             // label10
             // 
@@ -358,10 +359,12 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
+            this.btnModificar,
+            this.btnEliminar,
             this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(371, 360);
+            this.toolStrip1.Location = new System.Drawing.Point(298, 360);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(162, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(352, 27);
             this.toolStrip1.TabIndex = 142;
             this.toolStrip1.Text = "tsMenu";
             // 

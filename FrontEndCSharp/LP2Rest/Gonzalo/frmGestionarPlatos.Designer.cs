@@ -55,13 +55,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblDNINombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtGanancia = new System.Windows.Forms.TextBox();
-            this.txtIDInsumo = new System.Windows.Forms.TextBox();
             this.txtIdPlato = new System.Windows.Forms.TextBox();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.txtNombrePlato = new System.Windows.Forms.TextBox();
@@ -347,15 +345,6 @@
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
-            // txtIDInsumo
-            // 
-            this.txtIDInsumo.Location = new System.Drawing.Point(136, 37);
-            this.txtIDInsumo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIDInsumo.Name = "txtIDInsumo";
-            this.txtIDInsumo.ReadOnly = true;
-            this.txtIDInsumo.Size = new System.Drawing.Size(148, 22);
-            this.txtIDInsumo.TabIndex = 142;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -376,17 +365,6 @@
             this.txtTotal.Size = new System.Drawing.Size(96, 20);
             this.txtTotal.TabIndex = 64;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblDNINombre
-            // 
-            this.lblDNINombre.AutoSize = true;
-            this.lblDNINombre.Location = new System.Drawing.Point(46, 40);
-            this.lblDNINombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDNINombre.Name = "lblDNINombre";
-            this.lblDNINombre.Size = new System.Drawing.Size(83, 16);
-            this.lblDNINombre.TabIndex = 141;
-            this.lblDNINombre.Text = "SKU Insumo:";
-            this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label9
             // 
@@ -551,7 +529,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
-        private System.Windows.Forms.Label lblDNINombre;
-        private System.Windows.Forms.TextBox txtIDInsumo;
     }
 }
