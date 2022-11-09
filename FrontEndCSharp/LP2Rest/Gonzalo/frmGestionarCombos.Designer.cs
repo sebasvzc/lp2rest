@@ -59,9 +59,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
@@ -247,50 +249,6 @@
             this.dgvPlatos.TabIndex = 61;
             this.dgvPlatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPlatos_CellFormatting);
             // 
-            // IDPlato
-            // 
-            this.IDPlato.FillWeight = 75F;
-            this.IDPlato.HeaderText = "ID Plato";
-            this.IDPlato.MinimumWidth = 6;
-            this.IDPlato.Name = "IDPlato";
-            this.IDPlato.ReadOnly = true;
-            this.IDPlato.Width = 75;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.FillWeight = 140F;
-            this.NombreInsumo.HeaderText = "Nombre";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 140;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 70F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 70;
-            // 
-            // Costo
-            // 
-            this.Costo.FillWeight = 105F;
-            this.Costo.HeaderText = "Costo Unitario";
-            this.Costo.MinimumWidth = 6;
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            this.Costo.Width = 105;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            this.Subtotal.Width = 125;
-            // 
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(226)))), ((int)(((byte)(238)))));
@@ -327,14 +285,6 @@
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 147;
             this.label10.Text = "Stock:";
-            // 
-            // txtPrecioVenta
-            // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(86, 166);
-            this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.ReadOnly = true;
-            this.txtPrecioVenta.Size = new System.Drawing.Size(123, 20);
-            this.txtPrecioVenta.TabIndex = 146;
             // 
             // txtIdCombo
             // 
@@ -415,6 +365,58 @@
             this.toolStrip1.TabIndex = 142;
             this.toolStrip1.Text = "tsMenu";
             // 
+            // txtPrecioVenta
+            // 
+            this.txtPrecioVenta.Location = new System.Drawing.Point(86, 166);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.ReadOnly = true;
+            this.txtPrecioVenta.Size = new System.Drawing.Size(123, 20);
+            this.txtPrecioVenta.TabIndex = 146;
+            // 
+            // IDPlato
+            // 
+            this.IDPlato.FillWeight = 75F;
+            this.IDPlato.HeaderText = "ID Plato";
+            this.IDPlato.MinimumWidth = 6;
+            this.IDPlato.Name = "IDPlato";
+            this.IDPlato.ReadOnly = true;
+            this.IDPlato.Width = 75;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.FillWeight = 140F;
+            this.NombreInsumo.HeaderText = "Nombre";
+            this.NombreInsumo.MinimumWidth = 6;
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            this.NombreInsumo.Width = 140;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 70F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Costo
+            // 
+            this.Costo.FillWeight = 105F;
+            this.Costo.HeaderText = "Costo Unitario";
+            this.Costo.MinimumWidth = 6;
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            this.Costo.Width = 105;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            this.Subtotal.Width = 125;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
@@ -424,6 +426,14 @@
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(87, 28);
+            this.btnEliminar.Text = "&Eliminar";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
@@ -432,6 +442,15 @@
             this.btnCancelar.Size = new System.Drawing.Size(77, 24);
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(101, 24);
+            this.btnModificar.Text = "&Modificar ";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmGestionarCombos
             // 
@@ -488,6 +507,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnGuardar;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPlato;
@@ -496,6 +516,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.Label label10;
     }
 }
