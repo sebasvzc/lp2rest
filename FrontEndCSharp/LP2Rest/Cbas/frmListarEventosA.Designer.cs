@@ -244,6 +244,7 @@
             this.cboArtista.Name = "cboArtista";
             this.cboArtista.Size = new System.Drawing.Size(195, 33);
             this.cboArtista.TabIndex = 62;
+            this.cboArtista.SelectedIndexChanged += new System.EventHandler(this.cboArtista_SelectedIndexChanged);
             // 
             // label3
             // 
