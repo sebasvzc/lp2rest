@@ -69,15 +69,22 @@ public class Principal {
 //           System.out.println(auxRec.getFechaRegistro().toString());
 //           System.out.println(" ");
 //        }
+    MeseroDAO daoMesero = new MeseroMySQL();
+    ArrayList<Mesero> meseros;
+    meseros = daoMesero.listarTodas();
+
+    for( Mesero mesero : meseros){
+       System.out.println("Nombre: " + mesero.getNombre());
+    }
         
-        EmpleadoDAO daoEmpleados = new EmpleadoMySQL();
-        ArrayList<Empleado> listEmpleados;
-        listEmpleados = daoEmpleados.listarBusqueda("","","","",null,null,0.0,999999.0);
-        for( Empleado auxEmp : listEmpleados){
-           System.out.println(auxEmp.getIdPersona());
-           System.out.println(auxEmp.getNombre()+" "+auxEmp.getApellidoPaterno());
-           System.out.println(" ");
-        }
+    EmpleadoDAO daoEmpleados = new EmpleadoMySQL();
+    ArrayList<Empleado> listEmpleados;
+    listEmpleados = daoEmpleados.listarBusqueda("","","","",null,null,0.0,999999.0);
+    for( Empleado auxEmp : listEmpleados){
+        System.out.println(auxEmp.getIdPersona());
+        System.out.println(auxEmp.getNombre()+" "+auxEmp.getApellidoPaterno());
+        System.out.println(" ");
+    }
       
       
 //    MeseroDAO daoMesero = new MeseroMySQL();

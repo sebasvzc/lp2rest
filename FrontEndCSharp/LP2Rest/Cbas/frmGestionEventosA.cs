@@ -102,6 +102,7 @@ namespace LP2Rest
                 resultado = daoGestPersonas.ModificarEvento(eventoNuevo);
                 if (resultado != 0)
                 {
+                    txtID.Text = resultado.ToString();
                     MessageBox.Show("Se ha modificado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                 }
@@ -167,6 +168,11 @@ namespace LP2Rest
                 MessageBox.Show("Ha ocurrido un error al momento de eliminar el artista", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

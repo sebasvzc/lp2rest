@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="3b034ca8-0738-4b56-99bb-1f6124601d15" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="0301e076-8ca6-48a3-b00c-a1a1bad5a0a5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlmacenWS.wsdl" MetadataType="Wsdl" ID="e3944cb6-1198-4c88-ba0d-7f9b71ee5808" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" />
-    <MetadataFile FileName="AlmacenWS.xsd" MetadataType="Schema" ID="6c9db828-808c-4965-8c74-61ec049d25f9" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?xsd=1" />
+    <MetadataFile FileName="AlmacenWS.wsdl" MetadataType="Wsdl" ID="655ab8be-bf41-42ce-a230-5d336cd25e14" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" />
+    <MetadataFile FileName="AlmacenWS.xsd" MetadataType="Schema" ID="ff3e6a6c-12e3-4e85-83e3-1c3f0f18c9f7" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

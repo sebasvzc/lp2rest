@@ -6,6 +6,7 @@
 package pe.edu.pucp.lp2rest.almacen.dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.lp2rest.almacen.model.OrdenCompra;
 
 /**
@@ -17,4 +18,5 @@ public interface OrdenCompraDAO {
     int modificar (OrdenCompra oc);
     int eliminar(int idOrdenCompra);
     ArrayList<OrdenCompra> listarTodos();
+    ArrayList<OrdenCompra> filtrarOrdenCompras(int id_solicitudOrdenDeCompra,Date fecha_registro_max,Date fecha_registro_min,double monto_total_max,double monto_total_min,int idInsumo);
 }

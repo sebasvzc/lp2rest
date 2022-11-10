@@ -16,6 +16,7 @@ namespace LP2Rest
         //private AlmacenWS.tipoProducto[] dataSourceTipoProd;
         private MenuWS.MenuWSClient daoGestMenu;
         private AlmacenWS.insumo insumoSeleccionado;
+        public AlmacenWS.insumo InsumoSeleccionado { get => insumoSeleccionado; set => insumoSeleccionado = value; }
         public frmListarInsumosA()
         {
             InitializeComponent();
@@ -45,7 +46,33 @@ namespace LP2Rest
             frmNuevoInsumo frm = new frmNuevoInsumo();
             frm.ShowDialog();
         }
+        public frmListarInsumosA(String estado)
+        {
 
+            InitializeComponent();
+            daoGestAlmacen = new AlmacenWS.AlmacenWSClient();
+            daoGestMenu = new MenuWS.MenuWSClient();
+            dgvInsumos.AutoGenerateColumns = false;
+
+            var dataSourceTipoProd = daoGestAlmacen.ListarTipoProducto().ToList();
+            dataSourceTipoProd.Insert(0, new AlmacenWS.tipoProducto { nombre = "", idTipoProducto = -1 });
+
+
+            cboTipoProducto.DataSource = dataSourceTipoProd;
+            cboTipoProducto.DisplayMember = "nombre";
+            cboTipoProducto.ValueMember = "idTipoProducto";
+
+            var dataSourcePlato = daoGestMenu.listarTodasItemVentas().ToList();
+            dataSourcePlato.Insert(0, new MenuWS.itemVenta { nombre = "", idItemVenta = -1 });
+
+            cboPlato.DataSource = dataSourcePlato;
+            cboPlato.DisplayMember = "nombre";
+            cboPlato.ValueMember = "idItemVenta";
+            tsSeleccionar.Visible = true;
+
+            //cboTipoProducto.Items.Insert(0, "Selecciona un Tipo de Producto");
+
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //double costMin, costMax;
@@ -122,6 +149,15 @@ namespace LP2Rest
                     else
                         MessageBox.Show("Ha ocurrido un error al momento de eliminar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void tsSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvInsumos.CurrentRow != null)
+            {
+                insumoSeleccionado = (AlmacenWS.insumo)dgvInsumos.CurrentRow.DataBoundItem;
+                this.DialogResult = DialogResult.OK;
             }
         }
     }

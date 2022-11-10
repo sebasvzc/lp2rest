@@ -98,6 +98,46 @@
             this.dgvItemsVenta.TabIndex = 145;
             this.dgvItemsVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvItemsVenta_CellFormatting);
             // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "ID Plato";
+            this.NombreCompleto.MinimumWidth = 6;
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 70;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Nombre";
+            this.Teléfono.MinimumWidth = 6;
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 90;
+            // 
+            // Categoría
+            // 
+            this.Categoría.HeaderText = "Categoría";
+            this.Categoría.MinimumWidth = 6;
+            this.Categoría.Name = "Categoría";
+            this.Categoría.ReadOnly = true;
+            this.Categoría.Width = 120;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Precio";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 140;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 125;
+            // 
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
@@ -121,18 +161,6 @@
             this.gbPedido.TabIndex = 147;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Seleccione criterio de búsqueda";
-            // 
-            // btnSeleccionarPlato
-            // 
-            this.btnSeleccionarPlato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnSeleccionarPlato.Location = new System.Drawing.Point(589, 83);
-            this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSeleccionarPlato.Name = "btnSeleccionarPlato";
-            this.btnSeleccionarPlato.Size = new System.Drawing.Size(141, 28);
-            this.btnSeleccionarPlato.TabIndex = 151;
-            this.btnSeleccionarPlato.Text = "Seleccionar";
-            this.btnSeleccionarPlato.UseVisualStyleBackColor = true;
-            this.btnSeleccionarPlato.Click += new System.EventHandler(this.btnSeleccionarPlato_Click);
             // 
             // txtPrecioMax
             // 
@@ -259,43 +287,17 @@
             this.cboDisponible.Size = new System.Drawing.Size(204, 21);
             this.cboDisponible.TabIndex = 130;
             // 
-            // NombreCompleto
+            // btnSeleccionarPlato
             // 
-            this.NombreCompleto.HeaderText = "ID Plato";
-            this.NombreCompleto.MinimumWidth = 6;
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 70;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Nombre";
-            this.Teléfono.MinimumWidth = 6;
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 290;
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Categoría";
-            this.Categoría.MinimumWidth = 6;
-            this.Categoría.Name = "Categoría";
-            this.Categoría.ReadOnly = true;
-            this.Categoría.Width = 120;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Precio";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
+            this.btnSeleccionarPlato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionarPlato.Location = new System.Drawing.Point(589, 83);
+            this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionarPlato.Name = "btnSeleccionarPlato";
+            this.btnSeleccionarPlato.Size = new System.Drawing.Size(141, 28);
+            this.btnSeleccionarPlato.TabIndex = 151;
+            this.btnSeleccionarPlato.Text = "Seleccionar";
+            this.btnSeleccionarPlato.UseVisualStyleBackColor = true;
+            this.btnSeleccionarPlato.Click += new System.EventHandler(this.btnSeleccionarPlato_Click);
             // 
             // frmBuscarSoloPlatos
             // 

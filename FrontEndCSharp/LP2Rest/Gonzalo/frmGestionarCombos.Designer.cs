@@ -61,8 +61,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -316,6 +318,7 @@
             // 
             this.txtStock.Location = new System.Drawing.Point(86, 103);
             this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
             this.txtStock.Size = new System.Drawing.Size(123, 20);
             this.txtStock.TabIndex = 148;
             // 
@@ -330,9 +333,8 @@
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(86, 166);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(86, 133);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.ReadOnly = true;
             this.txtPrecioVenta.Size = new System.Drawing.Size(123, 20);
             this.txtPrecioVenta.TabIndex = 146;
             // 
@@ -346,15 +348,16 @@
             // 
             // txtGanancia
             // 
-            this.txtGanancia.Location = new System.Drawing.Point(86, 135);
+            this.txtGanancia.Location = new System.Drawing.Point(86, 163);
             this.txtGanancia.Name = "txtGanancia";
+            this.txtGanancia.ReadOnly = true;
             this.txtGanancia.Size = new System.Drawing.Size(123, 20);
             this.txtGanancia.TabIndex = 142;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 135);
+            this.label7.Location = new System.Drawing.Point(21, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 141;
@@ -363,7 +366,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 166);
+            this.label6.Location = new System.Drawing.Point(7, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 14;
@@ -402,16 +405,26 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ID Combo";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
+            this.btnEliminar.Text = "&Eliminar";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
+            this.btnModificar,
+            this.btnEliminar,
             this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(371, 360);
+            this.toolStrip1.Location = new System.Drawing.Point(298, 360);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(162, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(321, 27);
             this.toolStrip1.TabIndex = 142;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -423,6 +436,15 @@
             this.btnGuardar.Size = new System.Drawing.Size(73, 24);
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(85, 24);
+            this.btnModificar.Text = "&Modificar ";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCancelar
             // 
@@ -488,6 +510,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnGuardar;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPlato;
@@ -496,6 +519,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.Label label10;
     }
 }

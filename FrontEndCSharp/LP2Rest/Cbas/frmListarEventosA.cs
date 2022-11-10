@@ -108,5 +108,10 @@ namespace LP2Rest
 
             }
         }
+
+        private void cboArtista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

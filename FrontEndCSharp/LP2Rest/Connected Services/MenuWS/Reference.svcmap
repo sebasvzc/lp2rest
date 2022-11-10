@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="93a72c31-8df4-40d5-9671-d38d04360550" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ff63d41b-de33-427e-b959-13c60d634cd3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/MenuWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MenuWS.xsd" MetadataType="Schema" ID="ce577c7d-5deb-463a-9602-fe0814b1620d" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/MenuWS?xsd=1" />
-    <MetadataFile FileName="MenuWS.wsdl" MetadataType="Wsdl" ID="ce4b7e27-382c-4a62-9891-19d66093fef9" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/MenuWS?WSDL" />
+    <MetadataFile FileName="MenuWS.xsd" MetadataType="Schema" ID="6efa5d6b-4155-4a05-84a0-d6ac35cac00e" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/MenuWS?xsd=1" />
+    <MetadataFile FileName="MenuWS.wsdl" MetadataType="Wsdl" ID="b3016ad1-8a5a-4a03-b845-45436e59d926" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/MenuWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -30,7 +30,6 @@
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.lblInsumo = new System.Windows.Forms.Label();
@@ -69,7 +68,6 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
             this.groupBox4.Controls.Add(this.textBox10);
             this.groupBox4.Controls.Add(this.textBox11);
             this.groupBox4.Controls.Add(this.lblInsumo);
@@ -91,19 +89,13 @@
             this.textBox2.Size = new System.Drawing.Size(91, 20);
             this.textBox2.TabIndex = 117;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(451, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 20);
-            this.textBox1.TabIndex = 112;
-            // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(350, 30);
+            this.textBox10.Location = new System.Drawing.Point(380, 30);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(91, 20);
             this.textBox10.TabIndex = 116;
+            this.textBox10.ReadOnly = true;
             // 
             // textBox11
             // 
@@ -137,7 +129,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 114;
-            this.label8.Text = "Stock:";
+            this.label8.Text = "Stock Actual:";
             // 
             // textBox12
             // 
@@ -320,6 +312,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbAgregarSolicitud,
             this.tsbCancelar});
@@ -375,7 +368,6 @@
 
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label lblInsumo;
