@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.Cbas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,9 +31,9 @@ namespace LP2Rest
             InitializeComponent();
             _estado = "Nuevo";
             eventoNuevo = new GestPersonasWS.evento();
-            cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
-            cboArtista.DisplayMember = "nombre";
-            cboArtista.ValueMember = "idArtista";
+            //cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
+            //cboArtista.DisplayMember = "nombre";
+            //cboArtista.ValueMember = "idArtista";
         }
 
         public frmGestionEventosA(GestPersonasWS.evento eventoModificar)
@@ -40,14 +41,14 @@ namespace LP2Rest
             InitializeComponent();
 
 
-            cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
-            cboArtista.DisplayMember = "nombre";
-            cboArtista.ValueMember = "idArtista";
+            //cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
+            //cboArtista.DisplayMember = "nombre";
+            //cboArtista.ValueMember = "idArtista";
 
             txtID.Text = eventoModificar.idEvento.ToString();
             txtNombre.Text = eventoModificar.nombre;
             dtpFecha.Value = eventoModificar.fecha_inicio;
-            cboArtista.SelectedValue = eventoModificar.artista.idArtista;
+            //cboArtista.SelectedValue = eventoModificar.artista.idArtista;
             txtCostoTotal.Text = eventoModificar.monto_pagar.ToString();
 
             eventoNuevo = eventoModificar;
@@ -97,7 +98,7 @@ namespace LP2Rest
                 eventoNuevo.fecha_inicio = dtpFecha.Value;
                 eventoNuevo.fecha_inicioSpecified = true;
                 eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
-                eventoNuevo.artista = (GestPersonasWS.artista)cboArtista.SelectedItem;
+                //eventoNuevo.artista = (GestPersonasWS.artista)cboArtista.SelectedItem;
 
                 resultado = daoGestPersonas.ModificarEvento(eventoNuevo);
                 if (resultado != 0)
@@ -120,7 +121,7 @@ namespace LP2Rest
                 eventoNuevo.fecha_inicio = dtpFecha.Value;
                 eventoNuevo.fecha_inicioSpecified = true;
                 eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
-                eventoNuevo.artista = (GestPersonasWS.artista)cboArtista.SelectedItem;
+                //eventoNuevo.artista = (GestPersonasWS.artista)cboArtista.SelectedItem;
 
                 resultado = daoGestPersonas.InsertarEvento(eventoNuevo);
                 if (resultado != 0)
@@ -139,40 +140,58 @@ namespace LP2Rest
 
         }
 
-        private void btnAgregarArtista_Click(object sender, EventArgs e)
-        {
-            artistaNuevo = new GestPersonasWS.artista();
-            artistaNuevo.nombre = cboArtista.Text;
-            int resultado = daoGestPersonas.InsertarArtista(artistaNuevo);
-            if (resultado != 0)
-            {
-                MessageBox.Show("Se ha registrado exitosamente el artista", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error al momento de registrar el artista", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
-        }
+        //private void btnAgregarArtista_Click(object sender, EventArgs e)
+        //{
+        //    artistaNuevo = new GestPersonasWS.artista();
+        //    artistaNuevo.nombre = cboArtista.Text;
+        //    int resultado = daoGestPersonas.InsertarArtista(artistaNuevo);
+        //    if (resultado != 0)
+        //    {
+        //        MessageBox.Show("Se ha registrado exitosamente el artista", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Ha ocurrido un error al momento de registrar el artista", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
+        //}
 
-        private void btnEliminarArtista_Click(object sender, EventArgs e)
-        {
-            artistaNuevo = (GestPersonasWS.artista)cboArtista.SelectedItem;
-            int resultado = daoGestPersonas.EliminarArtista(artistaNuevo.idArtista);
-            if (resultado != 0)
-            {
-                MessageBox.Show("Se ha eliminado exitosamente el artista", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error al momento de eliminar el artista", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
-        }
+        //private void btnEliminarArtista_Click(object sender, EventArgs e)
+        //{
+        //    artistaNuevo = (GestPersonasWS.artista)cboArtista.SelectedItem;
+        //    int resultado = daoGestPersonas.EliminarArtista(artistaNuevo.idArtista);
+        //    if (resultado != 0)
+        //    {
+        //        MessageBox.Show("Se ha eliminado exitosamente el artista", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Ha ocurrido un error al momento de eliminar el artista", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
+        //}
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btArtistas_Click(object sender, EventArgs e)
+        {
+            frmGestionArtistasA formGestionArtistaA = new frmGestionArtistasA();
+            this.Hide();
+            if (formGestionArtistaA.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.OK;
+                artistaNuevo = formGestionArtistaA.ArtistaSeleccionado;
+                txtArtista.Text = artistaNuevo.nombre;
+            }
+            this.Show();
         }
     }
 
