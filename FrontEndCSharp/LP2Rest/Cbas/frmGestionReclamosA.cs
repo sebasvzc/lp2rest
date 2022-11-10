@@ -1,13 +1,7 @@
 ﻿using LP2Rest.GestPersonasWS;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static LP2Rest.frmListarReclamosA;
 
@@ -23,6 +17,7 @@ namespace LP2Rest
         reclamo reclamoAux;
         bool borrado;
         bool nuevo;
+        bool editado;
 
         public bool Borrado { get => borrado; set => borrado = value; }
 
@@ -53,6 +48,17 @@ namespace LP2Rest
 
 
             InitializeComponent();
+
+            txtIdReclamo.Enabled = false;
+
+            txtDNICliente.Enabled = false;
+            txtDNIEmpleado.Enabled = false;
+
+            txtNombreCliente.Enabled = false;
+            txtNombreEmpleado.Enabled = false;
+
+            txtTelefonoCliente.Enabled = false;
+            txtTelefonoEmpleado.Enabled = false;
 
             cboEstado.DataSource = listaEstados;
             cboEstado.DisplayMember = "DescEst";
@@ -95,6 +101,19 @@ namespace LP2Rest
 
             InitializeComponent();
 
+            txtIdReclamo.Enabled = false;
+
+            txtIdReclamo.Enabled = false;
+
+            txtDNICliente.Enabled = false;
+            txtDNIEmpleado.Enabled = false;
+
+            txtNombreCliente.Enabled = false;
+            txtNombreEmpleado.Enabled = false;
+
+            txtTelefonoCliente.Enabled = false;
+            txtTelefonoEmpleado.Enabled = false;
+
             cboEstado.DataSource = listaEstados;
             cboEstado.DisplayMember = "DescEst";
             cboEstado.ValueMember = "Valor";
@@ -114,6 +133,11 @@ namespace LP2Rest
             txtNombreEmpleado.Text = auxRec.empleado.nombre + " " + auxRec.empleado.apellidoPaterno;
             txtTelefonoEmpleado.Text = auxRec.empleado.telefono;
 
+            tbIdAdmin.Enabled = false;
+            tbNombreAdmin.Enabled = false;
+            tbIdAdmin.Text = 9.ToString();
+            tbNombreAdmin.Text = "Carlos Paz";
+
             tbIdAdmin.Text = auxRec.administrador.idPersona.ToString();
             tbNombreAdmin.Text = auxRec.administrador.nombre + " " + auxRec.administrador.apellidoPaterno;
 
@@ -130,6 +154,7 @@ namespace LP2Rest
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -155,8 +180,8 @@ namespace LP2Rest
                 reclamoAux.fechaRegistro = dtpFecha.Value;
                 //reclamoAux.fechaRegistro = DateTime.Now;
 
-                if (cboEstado.SelectedValue.ToString() == "1") reclamoAux.estado = false;
-                else reclamoAux.estado = true;
+                if (cboEstado.SelectedValue.ToString() == "1") reclamoAux.estado = true;
+                else reclamoAux.estado = false;
 
                 reclamoAux.descripcion = rtbDesc.Text;
 
@@ -196,12 +221,46 @@ namespace LP2Rest
 
                 reclamoAux.observacion = rtbObs.Text;
                 reclamoAux.fechaAtencion = DateTime.Now;
+                if (cboEstado.SelectedText == "Atendido") reclamoAux.estado = true;
+                else reclamoAux.estado = false;
 
                 daoGestionPersonas.ModificarReclamo(reclamoAux);
 
                 MessageBox.Show("Modificacion Exitosa.", "Modificacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+            }
+        }
+
+        private void btEmpleado_Click(object sender, EventArgs e)
+        {
+            frmGestionEmpleadosBusquedaEmpleado formBusqEmp = new frmGestionEmpleadosBusquedaEmpleado();
+            if (formBusqEmp.ShowDialog() == DialogResult.OK)
+            {
+                reclamoAux.empleado = formBusqEmp.EmpleadoSeleccionado;
+
+                txtDNIEmpleado.Text = reclamoAux.empleado.DNI;
+                txtNombreEmpleado.Text = reclamoAux.empleado.nombre + " " + reclamoAux.empleado.apellidoPaterno;
+                txtTelefonoEmpleado.Text = reclamoAux.empleado.telefono;
+            }
+        }
+
+        private void txtDNIEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btCliente_Click(object sender, EventArgs e)
+        {
+            frmGestionReclamoBusquedaCliente formBusqCli = new frmGestionReclamoBusquedaCliente();
+            if (formBusqCli.ShowDialog() == DialogResult.OK)
+            {
+                reclamoAux.cliente = formBusqCli.clienteSeleccionado;
+
+                txtDNICliente.Text = reclamoAux.cliente.DNI;
+                txtNombreCliente.Text = reclamoAux.cliente.nombre + " " + reclamoAux.cliente.apellidoPaterno;
+                txtTelefonoCliente.Text = reclamoAux.cliente.telefono;
             }
         }
     }
