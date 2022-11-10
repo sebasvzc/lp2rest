@@ -45,6 +45,7 @@ namespace LP2Rest
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             int verificacionExitosa = daoGestPersonas.validarCodigoCuentaUsuario(_idCuentaUsuario, txtCodVerif.Text);
+            this.Hide();
             if (verificacionExitosa != 0 && new frmNuevaContrasenia(_idCuentaUsuario).ShowDialog() == DialogResult.OK)
             {
                 this.DialogResult = DialogResult.OK;
@@ -53,6 +54,7 @@ namespace LP2Rest
             {
                 MessageBox.Show("El código de verificación es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Show();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

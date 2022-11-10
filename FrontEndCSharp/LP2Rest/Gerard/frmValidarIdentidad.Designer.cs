@@ -161,6 +161,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmValidarIdentidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ValidarIdentidad";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

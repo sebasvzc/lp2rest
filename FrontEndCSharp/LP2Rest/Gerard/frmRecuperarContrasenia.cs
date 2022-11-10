@@ -54,7 +54,7 @@ namespace LP2Rest
 
         private void txtDNI_Validating_1(object sender, CancelEventArgs e)
         {
-            
+
         }
 
         private void panelIzquierdo_MouseDown(object sender, MouseEventArgs e)
@@ -73,7 +73,8 @@ namespace LP2Rest
         {
             int busquedaExitosa = daoGestPersonas.enviarCorreoRecuperacion(txtCorreo.Text);
             frmValidarIdentidad validarIdentidad = new frmValidarIdentidad(busquedaExitosa);
-            if ((busquedaExitosa!=0) && (validarIdentidad.ShowDialog() == DialogResult.OK))
+            this.Hide();
+            if ((busquedaExitosa != 0) && (validarIdentidad.ShowDialog() == DialogResult.OK))
             {
                 this.DialogResult = DialogResult.OK;
             }
@@ -81,6 +82,7 @@ namespace LP2Rest
             {
                 MessageBox.Show(" No se ha encontrado el correo ingresado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Show();
         }
     }
 }
