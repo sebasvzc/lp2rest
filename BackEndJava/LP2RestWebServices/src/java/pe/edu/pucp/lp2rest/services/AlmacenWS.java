@@ -164,6 +164,16 @@ public class AlmacenWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "ActualizarEstadoOrdenCompra")
+    public int ActualizarEstadoOrdenCompra(@WebParam(name = "idOrdenCompra") int idOrdenCompra) {
+        int resultado = 0;
+        try{
+            resultado = daoOrdenCompra.actualizarEstadoOrdenCompra(idOrdenCompra);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "listarTodosLineasOrdenCompra")
     public ArrayList<LineaOrdenCompra> listarTodosLineasOrdenCompra() {

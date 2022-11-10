@@ -16,54 +16,24 @@ namespace LP2Rest.AlmacenWS {
     public interface AlmacenWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ActualizarEstadoOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ActualizarEstadoOrdenCompraResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse listarTodosOrdenCompra(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request);
+        LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse ActualizarEstadoOrdenCompra(LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse> listarTodosOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ActualizarEstadoOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ActualizarEstadoOrdenCompraResponse" +
+            "")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse> ActualizarEstadoOrdenCompraAsync(LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.FiltrarInsumosResponse FiltrarInsumos(LP2Rest.AlmacenWS.FiltrarInsumosRequest request);
+        LP2Rest.AlmacenWS.EliminarOrdenCompraResponse EliminarOrdenCompra(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarInsumosResponse> FiltrarInsumosAsync(LP2Rest.AlmacenWS.FiltrarInsumosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.EliminarInsumoResponse EliminarInsumo(LP2Rest.AlmacenWS.EliminarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarInsumoResponse> EliminarInsumoAsync(LP2Rest.AlmacenWS.EliminarInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.ModificarInsumoResponse ModificarInsumo(LP2Rest.AlmacenWS.ModificarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarInsumoResponse> ModificarInsumoAsync(LP2Rest.AlmacenWS.ModificarInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.InsertarInsumoResponse InsertarInsumo(LP2Rest.AlmacenWS.InsertarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarInsumoResponse> InsertarInsumoAsync(LP2Rest.AlmacenWS.InsertarInsumoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarOrdenCompraResponse> EliminarOrdenCompraAsync(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarOrdenCompraResponse")]
@@ -76,14 +46,18 @@ namespace LP2Rest.AlmacenWS {
         System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarOrdenCompraResponse> ModificarOrdenCompraAsync(LP2Rest.AlmacenWS.ModificarOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRequest" +
+            "", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRespons" +
+            "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.EliminarOrdenCompraResponse EliminarOrdenCompra(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request);
+        LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse listarTodosLineasOrdenCompra(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarOrdenCompraResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarOrdenCompraResponse> EliminarOrdenCompraAsync(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRequest" +
+            "", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRespons" +
+            "e")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse> listarTodosLineasOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarLineaOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarLineaOrdenCompraResponse")]
@@ -106,14 +80,14 @@ namespace LP2Rest.AlmacenWS {
         System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarLineaOrdenCompraResponse> EliminarLineaOrdenCompraAsync(LP2Rest.AlmacenWS.EliminarLineaOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.InsertarOrdenCompraResponse InsertarOrdenCompra(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request);
+        LP2Rest.AlmacenWS.ListarTipoProductoResponse ListarTipoProducto(LP2Rest.AlmacenWS.ListarTipoProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarOrdenCompraResponse> InsertarOrdenCompraAsync(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarTipoProductoResponse> ListarTipoProductoAsync(LP2Rest.AlmacenWS.ListarTipoProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarLineasOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarLineasOrdenCompraResponse")]
@@ -126,6 +100,16 @@ namespace LP2Rest.AlmacenWS {
         System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse> ListarLineasOrdenCompraAsync(LP2Rest.AlmacenWS.ListarLineasOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse listarTodosOrdenCompra(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosOrdenCompraResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse> listarTodosOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarLineaOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarLineaOrdenCompraResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -136,28 +120,14 @@ namespace LP2Rest.AlmacenWS {
         System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarLineaOrdenCompraResponse> ModificarLineaOrdenCompraAsync(LP2Rest.AlmacenWS.ModificarLineaOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.ListarTipoProductoResponse ListarTipoProducto(LP2Rest.AlmacenWS.ListarTipoProductoRequest request);
+        LP2Rest.AlmacenWS.listarTodosInsumosResponse listarTodosInsumos(LP2Rest.AlmacenWS.listarTodosInsumosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ListarTipoProductoResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarTipoProductoResponse> ListarTipoProductoAsync(LP2Rest.AlmacenWS.ListarTipoProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRequest" +
-            "", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRespons" +
-            "e")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse listarTodosLineasOrdenCompra(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRequest" +
-            "", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosLineasOrdenCompraRespons" +
-            "e")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse> listarTodosLineasOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosInsumosResponse> listarTodosInsumosAsync(LP2Rest.AlmacenWS.listarTodosInsumosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/BuscarInsumosPorNombreRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/BuscarInsumosPorNombreResponse")]
@@ -180,18 +150,130 @@ namespace LP2Rest.AlmacenWS {
         System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarOrdenCompraResponse> FiltrarOrdenCompraAsync(LP2Rest.AlmacenWS.FiltrarOrdenCompraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.AlmacenWS.listarTodosInsumosResponse listarTodosInsumos(LP2Rest.AlmacenWS.listarTodosInsumosRequest request);
+        LP2Rest.AlmacenWS.InsertarOrdenCompraResponse InsertarOrdenCompra(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/listarTodosInsumosResponse")]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosInsumosResponse> listarTodosInsumosAsync(LP2Rest.AlmacenWS.listarTodosInsumosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarOrdenCompraResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarOrdenCompraResponse> InsertarOrdenCompraAsync(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.AlmacenWS.InsertarInsumoResponse InsertarInsumo(LP2Rest.AlmacenWS.InsertarInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/InsertarInsumoResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarInsumoResponse> InsertarInsumoAsync(LP2Rest.AlmacenWS.InsertarInsumoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.AlmacenWS.FiltrarInsumosResponse FiltrarInsumos(LP2Rest.AlmacenWS.FiltrarInsumosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/FiltrarInsumosResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarInsumosResponse> FiltrarInsumosAsync(LP2Rest.AlmacenWS.FiltrarInsumosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.AlmacenWS.ModificarInsumoResponse ModificarInsumo(LP2Rest.AlmacenWS.ModificarInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/ModificarInsumoResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarInsumoResponse> ModificarInsumoAsync(LP2Rest.AlmacenWS.ModificarInsumoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.AlmacenWS.EliminarInsumoResponse EliminarInsumo(LP2Rest.AlmacenWS.EliminarInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/AlmacenWS/EliminarInsumoResponse")]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarInsumoResponse> EliminarInsumoAsync(LP2Rest.AlmacenWS.EliminarInsumoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarEstadoOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class ActualizarEstadoOrdenCompraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOrdenCompra;
+        
+        public ActualizarEstadoOrdenCompraRequest() {
+        }
+        
+        public ActualizarEstadoOrdenCompraRequest(int idOrdenCompra) {
+            this.idOrdenCompra = idOrdenCompra;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarEstadoOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class ActualizarEstadoOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ActualizarEstadoOrdenCompraResponse() {
+        }
+        
+        public ActualizarEstadoOrdenCompraResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarOrdenCompraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOrdenCompra;
+        
+        public EliminarOrdenCompraRequest() {
+        }
+        
+        public EliminarOrdenCompraRequest(int idOrdenCompra) {
+            this.idOrdenCompra = idOrdenCompra;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliminarOrdenCompraResponse() {
+        }
+        
+        public EliminarOrdenCompraResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -363,7 +445,7 @@ namespace LP2Rest.AlmacenWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -493,7 +575,7 @@ namespace LP2Rest.AlmacenWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -651,7 +733,7 @@ namespace LP2Rest.AlmacenWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -713,7 +795,7 @@ namespace LP2Rest.AlmacenWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personaJuridica))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(proveedor))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -788,7 +870,7 @@ namespace LP2Rest.AlmacenWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(proveedor))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -839,7 +921,7 @@ namespace LP2Rest.AlmacenWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -848,7 +930,7 @@ namespace LP2Rest.AlmacenWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/")]
     public enum unidadMedida {
@@ -873,213 +955,6 @@ namespace LP2Rest.AlmacenWS {
         
         /// <remarks/>
         UNIDAD,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosOrdenCompraRequest {
-        
-        public listarTodosOrdenCompraRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosOrdenCompraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.ordenCompra[] @return;
-        
-        public listarTodosOrdenCompraResponse() {
-        }
-        
-        public listarTodosOrdenCompraResponse(LP2Rest.AlmacenWS.ordenCompra[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FiltrarInsumos", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class FiltrarInsumosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre_insumo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string sku;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPlato;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double precioMin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double precioMax;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double stockMin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double stockMax;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idTipoProducto;
-        
-        public FiltrarInsumosRequest() {
-        }
-        
-        public FiltrarInsumosRequest(string nombre_insumo, string sku, int idPlato, double precioMin, double precioMax, double stockMin, double stockMax, int idTipoProducto) {
-            this.nombre_insumo = nombre_insumo;
-            this.sku = sku;
-            this.idPlato = idPlato;
-            this.precioMin = precioMin;
-            this.precioMax = precioMax;
-            this.stockMin = stockMin;
-            this.stockMax = stockMax;
-            this.idTipoProducto = idTipoProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="FiltrarInsumosResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class FiltrarInsumosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.insumo[] @return;
-        
-        public FiltrarInsumosResponse() {
-        }
-        
-        public FiltrarInsumosResponse(LP2Rest.AlmacenWS.insumo[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarInsumo", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInsumo;
-        
-        public EliminarInsumoRequest() {
-        }
-        
-        public EliminarInsumoRequest(int idInsumo) {
-            this.idInsumo = idInsumo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarInsumoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarInsumoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliminarInsumoResponse() {
-        }
-        
-        public EliminarInsumoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModificarInsumo", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class ModificarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.insumo insumo;
-        
-        public ModificarInsumoRequest() {
-        }
-        
-        public ModificarInsumoRequest(LP2Rest.AlmacenWS.insumo insumo) {
-            this.insumo = insumo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ModificarInsumoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class ModificarInsumoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public ModificarInsumoResponse() {
-        }
-        
-        public ModificarInsumoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarInsumo", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class InsertarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.insumo insumo;
-        
-        public InsertarInsumoRequest() {
-        }
-        
-        public InsertarInsumoRequest(LP2Rest.AlmacenWS.insumo insumo) {
-            this.insumo = insumo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarInsumoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class InsertarInsumoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public InsertarInsumoResponse() {
-        }
-        
-        public InsertarInsumoResponse(int @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1121,35 +996,27 @@ namespace LP2Rest.AlmacenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarOrdenCompraRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLineasOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosLineasOrdenCompraRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrdenCompra;
-        
-        public EliminarOrdenCompraRequest() {
-        }
-        
-        public EliminarOrdenCompraRequest(int idOrdenCompra) {
-            this.idOrdenCompra = idOrdenCompra;
+        public listarTodosLineasOrdenCompraRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarOrdenCompraResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLineasOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosLineasOrdenCompraResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.AlmacenWS.lineaOrdenCompra[] @return;
         
-        public EliminarOrdenCompraResponse() {
+        public listarTodosLineasOrdenCompraResponse() {
         }
         
-        public EliminarOrdenCompraResponse(int @return) {
+        public listarTodosLineasOrdenCompraResponse(LP2Rest.AlmacenWS.lineaOrdenCompra[] @return) {
             this.@return = @return;
         }
     }
@@ -1229,35 +1096,27 @@ namespace LP2Rest.AlmacenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class InsertarOrdenCompraRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoProducto", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class ListarTipoProductoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.ordenCompra ordenCompra;
-        
-        public InsertarOrdenCompraRequest() {
-        }
-        
-        public InsertarOrdenCompraRequest(LP2Rest.AlmacenWS.ordenCompra ordenCompra) {
-            this.ordenCompra = ordenCompra;
+        public ListarTipoProductoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class InsertarOrdenCompraResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoProductoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class ListarTipoProductoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.AlmacenWS.tipoProducto[] @return;
         
-        public InsertarOrdenCompraResponse() {
+        public ListarTipoProductoResponse() {
         }
         
-        public InsertarOrdenCompraResponse(int @return) {
+        public ListarTipoProductoResponse(LP2Rest.AlmacenWS.tipoProducto[] @return) {
             this.@return = @return;
         }
     }
@@ -1301,6 +1160,34 @@ namespace LP2Rest.AlmacenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosOrdenCompraRequest {
+        
+        public listarTodosOrdenCompraRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.AlmacenWS.ordenCompra[] @return;
+        
+        public listarTodosOrdenCompraResponse() {
+        }
+        
+        public listarTodosOrdenCompraResponse(LP2Rest.AlmacenWS.ordenCompra[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ModificarLineaOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
     public partial class ModificarLineaOrdenCompraRequest {
         
@@ -1337,55 +1224,27 @@ namespace LP2Rest.AlmacenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoProducto", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class ListarTipoProductoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInsumos", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosInsumosRequest {
         
-        public ListarTipoProductoRequest() {
+        public listarTodosInsumosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarTipoProductoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class ListarTipoProductoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInsumosResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosInsumosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.tipoProducto[] @return;
+        public LP2Rest.AlmacenWS.insumo[] @return;
         
-        public ListarTipoProductoResponse() {
+        public listarTodosInsumosResponse() {
         }
         
-        public ListarTipoProductoResponse(LP2Rest.AlmacenWS.tipoProducto[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLineasOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosLineasOrdenCompraRequest {
-        
-        public listarTodosLineasOrdenCompraRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLineasOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosLineasOrdenCompraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.AlmacenWS.lineaOrdenCompra[] @return;
-        
-        public listarTodosLineasOrdenCompraResponse() {
-        }
-        
-        public listarTodosLineasOrdenCompraResponse(LP2Rest.AlmacenWS.lineaOrdenCompra[] @return) {
+        public listarTodosInsumosResponse(LP2Rest.AlmacenWS.insumo[] @return) {
             this.@return = @return;
         }
     }
@@ -1490,27 +1349,214 @@ namespace LP2Rest.AlmacenWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInsumos", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosInsumosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarOrdenCompra", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class InsertarOrdenCompraRequest {
         
-        public listarTodosInsumosRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.AlmacenWS.ordenCompra ordenCompra;
+        
+        public InsertarOrdenCompraRequest() {
+        }
+        
+        public InsertarOrdenCompraRequest(LP2Rest.AlmacenWS.ordenCompra ordenCompra) {
+            this.ordenCompra = ordenCompra;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInsumosResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosInsumosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarOrdenCompraResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class InsertarOrdenCompraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public InsertarOrdenCompraResponse() {
+        }
+        
+        public InsertarOrdenCompraResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarInsumo", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class InsertarInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.AlmacenWS.insumo insumo;
+        
+        public InsertarInsumoRequest() {
+        }
+        
+        public InsertarInsumoRequest(LP2Rest.AlmacenWS.insumo insumo) {
+            this.insumo = insumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarInsumoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class InsertarInsumoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public InsertarInsumoResponse() {
+        }
+        
+        public InsertarInsumoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FiltrarInsumos", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class FiltrarInsumosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre_insumo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string sku;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPlato;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double precioMin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double precioMax;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double stockMin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double stockMax;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTipoProducto;
+        
+        public FiltrarInsumosRequest() {
+        }
+        
+        public FiltrarInsumosRequest(string nombre_insumo, string sku, int idPlato, double precioMin, double precioMax, double stockMin, double stockMax, int idTipoProducto) {
+            this.nombre_insumo = nombre_insumo;
+            this.sku = sku;
+            this.idPlato = idPlato;
+            this.precioMin = precioMin;
+            this.precioMax = precioMax;
+            this.stockMin = stockMin;
+            this.stockMax = stockMax;
+            this.idTipoProducto = idTipoProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FiltrarInsumosResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class FiltrarInsumosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2Rest.AlmacenWS.insumo[] @return;
         
-        public listarTodosInsumosResponse() {
+        public FiltrarInsumosResponse() {
         }
         
-        public listarTodosInsumosResponse(LP2Rest.AlmacenWS.insumo[] @return) {
+        public FiltrarInsumosResponse(LP2Rest.AlmacenWS.insumo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModificarInsumo", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class ModificarInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.AlmacenWS.insumo insumo;
+        
+        public ModificarInsumoRequest() {
+        }
+        
+        public ModificarInsumoRequest(LP2Rest.AlmacenWS.insumo insumo) {
+            this.insumo = insumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ModificarInsumoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class ModificarInsumoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ModificarInsumoResponse() {
+        }
+        
+        public ModificarInsumoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarInsumo", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idInsumo;
+        
+        public EliminarInsumoRequest() {
+        }
+        
+        public EliminarInsumoRequest(int idInsumo) {
+            this.idInsumo = idInsumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarInsumoResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarInsumoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliminarInsumoResponse() {
+        }
+        
+        public EliminarInsumoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1543,130 +1589,49 @@ namespace LP2Rest.AlmacenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.listarTodosOrdenCompra(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request) {
-            return base.Channel.listarTodosOrdenCompra(request);
+        LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.ActualizarEstadoOrdenCompra(LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest request) {
+            return base.Channel.ActualizarEstadoOrdenCompra(request);
         }
         
-        public LP2Rest.AlmacenWS.ordenCompra[] listarTodosOrdenCompra() {
-            LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest();
-            LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosOrdenCompra(inValue);
+        public int ActualizarEstadoOrdenCompra(int idOrdenCompra) {
+            LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest();
+            inValue.idOrdenCompra = idOrdenCompra;
+            LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ActualizarEstadoOrdenCompra(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.listarTodosOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request) {
-            return base.Channel.listarTodosOrdenCompraAsync(request);
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.ActualizarEstadoOrdenCompraAsync(LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest request) {
+            return base.Channel.ActualizarEstadoOrdenCompraAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse> listarTodosOrdenCompraAsync() {
-            LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest();
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosOrdenCompraAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse> ActualizarEstadoOrdenCompraAsync(int idOrdenCompra) {
+            LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraRequest();
+            inValue.idOrdenCompra = idOrdenCompra;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ActualizarEstadoOrdenCompraAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.FiltrarInsumosResponse LP2Rest.AlmacenWS.AlmacenWS.FiltrarInsumos(LP2Rest.AlmacenWS.FiltrarInsumosRequest request) {
-            return base.Channel.FiltrarInsumos(request);
+        LP2Rest.AlmacenWS.EliminarOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.EliminarOrdenCompra(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request) {
+            return base.Channel.EliminarOrdenCompra(request);
         }
         
-        public LP2Rest.AlmacenWS.insumo[] FiltrarInsumos(string nombre_insumo, string sku, int idPlato, double precioMin, double precioMax, double stockMin, double stockMax, int idTipoProducto) {
-            LP2Rest.AlmacenWS.FiltrarInsumosRequest inValue = new LP2Rest.AlmacenWS.FiltrarInsumosRequest();
-            inValue.nombre_insumo = nombre_insumo;
-            inValue.sku = sku;
-            inValue.idPlato = idPlato;
-            inValue.precioMin = precioMin;
-            inValue.precioMax = precioMax;
-            inValue.stockMin = stockMin;
-            inValue.stockMax = stockMax;
-            inValue.idTipoProducto = idTipoProducto;
-            LP2Rest.AlmacenWS.FiltrarInsumosResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).FiltrarInsumos(inValue);
+        public int EliminarOrdenCompra(int idOrdenCompra) {
+            LP2Rest.AlmacenWS.EliminarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.EliminarOrdenCompraRequest();
+            inValue.idOrdenCompra = idOrdenCompra;
+            LP2Rest.AlmacenWS.EliminarOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarOrdenCompra(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarInsumosResponse> LP2Rest.AlmacenWS.AlmacenWS.FiltrarInsumosAsync(LP2Rest.AlmacenWS.FiltrarInsumosRequest request) {
-            return base.Channel.FiltrarInsumosAsync(request);
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.EliminarOrdenCompraAsync(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request) {
+            return base.Channel.EliminarOrdenCompraAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarInsumosResponse> FiltrarInsumosAsync(string nombre_insumo, string sku, int idPlato, double precioMin, double precioMax, double stockMin, double stockMax, int idTipoProducto) {
-            LP2Rest.AlmacenWS.FiltrarInsumosRequest inValue = new LP2Rest.AlmacenWS.FiltrarInsumosRequest();
-            inValue.nombre_insumo = nombre_insumo;
-            inValue.sku = sku;
-            inValue.idPlato = idPlato;
-            inValue.precioMin = precioMin;
-            inValue.precioMax = precioMax;
-            inValue.stockMin = stockMin;
-            inValue.stockMax = stockMax;
-            inValue.idTipoProducto = idTipoProducto;
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).FiltrarInsumosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.EliminarInsumoResponse LP2Rest.AlmacenWS.AlmacenWS.EliminarInsumo(LP2Rest.AlmacenWS.EliminarInsumoRequest request) {
-            return base.Channel.EliminarInsumo(request);
-        }
-        
-        public int EliminarInsumo(int idInsumo) {
-            LP2Rest.AlmacenWS.EliminarInsumoRequest inValue = new LP2Rest.AlmacenWS.EliminarInsumoRequest();
-            inValue.idInsumo = idInsumo;
-            LP2Rest.AlmacenWS.EliminarInsumoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarInsumo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarInsumoResponse> LP2Rest.AlmacenWS.AlmacenWS.EliminarInsumoAsync(LP2Rest.AlmacenWS.EliminarInsumoRequest request) {
-            return base.Channel.EliminarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarInsumoResponse> EliminarInsumoAsync(int idInsumo) {
-            LP2Rest.AlmacenWS.EliminarInsumoRequest inValue = new LP2Rest.AlmacenWS.EliminarInsumoRequest();
-            inValue.idInsumo = idInsumo;
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.ModificarInsumoResponse LP2Rest.AlmacenWS.AlmacenWS.ModificarInsumo(LP2Rest.AlmacenWS.ModificarInsumoRequest request) {
-            return base.Channel.ModificarInsumo(request);
-        }
-        
-        public int ModificarInsumo(LP2Rest.AlmacenWS.insumo insumo) {
-            LP2Rest.AlmacenWS.ModificarInsumoRequest inValue = new LP2Rest.AlmacenWS.ModificarInsumoRequest();
-            inValue.insumo = insumo;
-            LP2Rest.AlmacenWS.ModificarInsumoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ModificarInsumo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarInsumoResponse> LP2Rest.AlmacenWS.AlmacenWS.ModificarInsumoAsync(LP2Rest.AlmacenWS.ModificarInsumoRequest request) {
-            return base.Channel.ModificarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarInsumoResponse> ModificarInsumoAsync(LP2Rest.AlmacenWS.insumo insumo) {
-            LP2Rest.AlmacenWS.ModificarInsumoRequest inValue = new LP2Rest.AlmacenWS.ModificarInsumoRequest();
-            inValue.insumo = insumo;
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ModificarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.InsertarInsumoResponse LP2Rest.AlmacenWS.AlmacenWS.InsertarInsumo(LP2Rest.AlmacenWS.InsertarInsumoRequest request) {
-            return base.Channel.InsertarInsumo(request);
-        }
-        
-        public int InsertarInsumo(LP2Rest.AlmacenWS.insumo insumo) {
-            LP2Rest.AlmacenWS.InsertarInsumoRequest inValue = new LP2Rest.AlmacenWS.InsertarInsumoRequest();
-            inValue.insumo = insumo;
-            LP2Rest.AlmacenWS.InsertarInsumoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarInsumo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarInsumoResponse> LP2Rest.AlmacenWS.AlmacenWS.InsertarInsumoAsync(LP2Rest.AlmacenWS.InsertarInsumoRequest request) {
-            return base.Channel.InsertarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarInsumoResponse> InsertarInsumoAsync(LP2Rest.AlmacenWS.insumo insumo) {
-            LP2Rest.AlmacenWS.InsertarInsumoRequest inValue = new LP2Rest.AlmacenWS.InsertarInsumoRequest();
-            inValue.insumo = insumo;
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarInsumoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarOrdenCompraResponse> EliminarOrdenCompraAsync(int idOrdenCompra) {
+            LP2Rest.AlmacenWS.EliminarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.EliminarOrdenCompraRequest();
+            inValue.idOrdenCompra = idOrdenCompra;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarOrdenCompraAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1693,26 +1658,24 @@ namespace LP2Rest.AlmacenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.EliminarOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.EliminarOrdenCompra(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request) {
-            return base.Channel.EliminarOrdenCompra(request);
+        LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.listarTodosLineasOrdenCompra(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request) {
+            return base.Channel.listarTodosLineasOrdenCompra(request);
         }
         
-        public int EliminarOrdenCompra(int idOrdenCompra) {
-            LP2Rest.AlmacenWS.EliminarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.EliminarOrdenCompraRequest();
-            inValue.idOrdenCompra = idOrdenCompra;
-            LP2Rest.AlmacenWS.EliminarOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarOrdenCompra(inValue);
+        public LP2Rest.AlmacenWS.lineaOrdenCompra[] listarTodosLineasOrdenCompra() {
+            LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest();
+            LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosLineasOrdenCompra(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.EliminarOrdenCompraAsync(LP2Rest.AlmacenWS.EliminarOrdenCompraRequest request) {
-            return base.Channel.EliminarOrdenCompraAsync(request);
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.listarTodosLineasOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request) {
+            return base.Channel.listarTodosLineasOrdenCompraAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarOrdenCompraResponse> EliminarOrdenCompraAsync(int idOrdenCompra) {
-            LP2Rest.AlmacenWS.EliminarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.EliminarOrdenCompraRequest();
-            inValue.idOrdenCompra = idOrdenCompra;
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarOrdenCompraAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse> listarTodosLineasOrdenCompraAsync() {
+            LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest();
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosLineasOrdenCompraAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1762,26 +1725,24 @@ namespace LP2Rest.AlmacenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.InsertarOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.InsertarOrdenCompra(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request) {
-            return base.Channel.InsertarOrdenCompra(request);
+        LP2Rest.AlmacenWS.ListarTipoProductoResponse LP2Rest.AlmacenWS.AlmacenWS.ListarTipoProducto(LP2Rest.AlmacenWS.ListarTipoProductoRequest request) {
+            return base.Channel.ListarTipoProducto(request);
         }
         
-        public int InsertarOrdenCompra(LP2Rest.AlmacenWS.ordenCompra ordenCompra) {
-            LP2Rest.AlmacenWS.InsertarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.InsertarOrdenCompraRequest();
-            inValue.ordenCompra = ordenCompra;
-            LP2Rest.AlmacenWS.InsertarOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarOrdenCompra(inValue);
+        public LP2Rest.AlmacenWS.tipoProducto[] ListarTipoProducto() {
+            LP2Rest.AlmacenWS.ListarTipoProductoRequest inValue = new LP2Rest.AlmacenWS.ListarTipoProductoRequest();
+            LP2Rest.AlmacenWS.ListarTipoProductoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ListarTipoProducto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.InsertarOrdenCompraAsync(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request) {
-            return base.Channel.InsertarOrdenCompraAsync(request);
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarTipoProductoResponse> LP2Rest.AlmacenWS.AlmacenWS.ListarTipoProductoAsync(LP2Rest.AlmacenWS.ListarTipoProductoRequest request) {
+            return base.Channel.ListarTipoProductoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarOrdenCompraResponse> InsertarOrdenCompraAsync(LP2Rest.AlmacenWS.ordenCompra ordenCompra) {
-            LP2Rest.AlmacenWS.InsertarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.InsertarOrdenCompraRequest();
-            inValue.ordenCompra = ordenCompra;
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarOrdenCompraAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarTipoProductoResponse> ListarTipoProductoAsync() {
+            LP2Rest.AlmacenWS.ListarTipoProductoRequest inValue = new LP2Rest.AlmacenWS.ListarTipoProductoRequest();
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ListarTipoProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1808,6 +1769,27 @@ namespace LP2Rest.AlmacenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.listarTodosOrdenCompra(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request) {
+            return base.Channel.listarTodosOrdenCompra(request);
+        }
+        
+        public LP2Rest.AlmacenWS.ordenCompra[] listarTodosOrdenCompra() {
+            LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest();
+            LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosOrdenCompra(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.listarTodosOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest request) {
+            return base.Channel.listarTodosOrdenCompraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosOrdenCompraResponse> listarTodosOrdenCompraAsync() {
+            LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosOrdenCompraRequest();
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosOrdenCompraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2Rest.AlmacenWS.ModificarLineaOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.ModificarLineaOrdenCompra(LP2Rest.AlmacenWS.ModificarLineaOrdenCompraRequest request) {
             return base.Channel.ModificarLineaOrdenCompra(request);
         }
@@ -1831,45 +1813,24 @@ namespace LP2Rest.AlmacenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.ListarTipoProductoResponse LP2Rest.AlmacenWS.AlmacenWS.ListarTipoProducto(LP2Rest.AlmacenWS.ListarTipoProductoRequest request) {
-            return base.Channel.ListarTipoProducto(request);
+        LP2Rest.AlmacenWS.listarTodosInsumosResponse LP2Rest.AlmacenWS.AlmacenWS.listarTodosInsumos(LP2Rest.AlmacenWS.listarTodosInsumosRequest request) {
+            return base.Channel.listarTodosInsumos(request);
         }
         
-        public LP2Rest.AlmacenWS.tipoProducto[] ListarTipoProducto() {
-            LP2Rest.AlmacenWS.ListarTipoProductoRequest inValue = new LP2Rest.AlmacenWS.ListarTipoProductoRequest();
-            LP2Rest.AlmacenWS.ListarTipoProductoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ListarTipoProducto(inValue);
+        public LP2Rest.AlmacenWS.insumo[] listarTodosInsumos() {
+            LP2Rest.AlmacenWS.listarTodosInsumosRequest inValue = new LP2Rest.AlmacenWS.listarTodosInsumosRequest();
+            LP2Rest.AlmacenWS.listarTodosInsumosResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosInsumos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarTipoProductoResponse> LP2Rest.AlmacenWS.AlmacenWS.ListarTipoProductoAsync(LP2Rest.AlmacenWS.ListarTipoProductoRequest request) {
-            return base.Channel.ListarTipoProductoAsync(request);
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosInsumosResponse> LP2Rest.AlmacenWS.AlmacenWS.listarTodosInsumosAsync(LP2Rest.AlmacenWS.listarTodosInsumosRequest request) {
+            return base.Channel.listarTodosInsumosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ListarTipoProductoResponse> ListarTipoProductoAsync() {
-            LP2Rest.AlmacenWS.ListarTipoProductoRequest inValue = new LP2Rest.AlmacenWS.ListarTipoProductoRequest();
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ListarTipoProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.listarTodosLineasOrdenCompra(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request) {
-            return base.Channel.listarTodosLineasOrdenCompra(request);
-        }
-        
-        public LP2Rest.AlmacenWS.lineaOrdenCompra[] listarTodosLineasOrdenCompra() {
-            LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest();
-            LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosLineasOrdenCompra(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.listarTodosLineasOrdenCompraAsync(LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest request) {
-            return base.Channel.listarTodosLineasOrdenCompraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraResponse> listarTodosLineasOrdenCompraAsync() {
-            LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.listarTodosLineasOrdenCompraRequest();
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosLineasOrdenCompraAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosInsumosResponse> listarTodosInsumosAsync() {
+            LP2Rest.AlmacenWS.listarTodosInsumosRequest inValue = new LP2Rest.AlmacenWS.listarTodosInsumosRequest();
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosInsumosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1929,24 +1890,132 @@ namespace LP2Rest.AlmacenWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.AlmacenWS.listarTodosInsumosResponse LP2Rest.AlmacenWS.AlmacenWS.listarTodosInsumos(LP2Rest.AlmacenWS.listarTodosInsumosRequest request) {
-            return base.Channel.listarTodosInsumos(request);
+        LP2Rest.AlmacenWS.InsertarOrdenCompraResponse LP2Rest.AlmacenWS.AlmacenWS.InsertarOrdenCompra(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request) {
+            return base.Channel.InsertarOrdenCompra(request);
         }
         
-        public LP2Rest.AlmacenWS.insumo[] listarTodosInsumos() {
-            LP2Rest.AlmacenWS.listarTodosInsumosRequest inValue = new LP2Rest.AlmacenWS.listarTodosInsumosRequest();
-            LP2Rest.AlmacenWS.listarTodosInsumosResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosInsumos(inValue);
+        public int InsertarOrdenCompra(LP2Rest.AlmacenWS.ordenCompra ordenCompra) {
+            LP2Rest.AlmacenWS.InsertarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.InsertarOrdenCompraRequest();
+            inValue.ordenCompra = ordenCompra;
+            LP2Rest.AlmacenWS.InsertarOrdenCompraResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarOrdenCompra(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosInsumosResponse> LP2Rest.AlmacenWS.AlmacenWS.listarTodosInsumosAsync(LP2Rest.AlmacenWS.listarTodosInsumosRequest request) {
-            return base.Channel.listarTodosInsumosAsync(request);
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarOrdenCompraResponse> LP2Rest.AlmacenWS.AlmacenWS.InsertarOrdenCompraAsync(LP2Rest.AlmacenWS.InsertarOrdenCompraRequest request) {
+            return base.Channel.InsertarOrdenCompraAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.listarTodosInsumosResponse> listarTodosInsumosAsync() {
-            LP2Rest.AlmacenWS.listarTodosInsumosRequest inValue = new LP2Rest.AlmacenWS.listarTodosInsumosRequest();
-            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).listarTodosInsumosAsync(inValue);
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarOrdenCompraResponse> InsertarOrdenCompraAsync(LP2Rest.AlmacenWS.ordenCompra ordenCompra) {
+            LP2Rest.AlmacenWS.InsertarOrdenCompraRequest inValue = new LP2Rest.AlmacenWS.InsertarOrdenCompraRequest();
+            inValue.ordenCompra = ordenCompra;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarOrdenCompraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.AlmacenWS.InsertarInsumoResponse LP2Rest.AlmacenWS.AlmacenWS.InsertarInsumo(LP2Rest.AlmacenWS.InsertarInsumoRequest request) {
+            return base.Channel.InsertarInsumo(request);
+        }
+        
+        public int InsertarInsumo(LP2Rest.AlmacenWS.insumo insumo) {
+            LP2Rest.AlmacenWS.InsertarInsumoRequest inValue = new LP2Rest.AlmacenWS.InsertarInsumoRequest();
+            inValue.insumo = insumo;
+            LP2Rest.AlmacenWS.InsertarInsumoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarInsumoResponse> LP2Rest.AlmacenWS.AlmacenWS.InsertarInsumoAsync(LP2Rest.AlmacenWS.InsertarInsumoRequest request) {
+            return base.Channel.InsertarInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.InsertarInsumoResponse> InsertarInsumoAsync(LP2Rest.AlmacenWS.insumo insumo) {
+            LP2Rest.AlmacenWS.InsertarInsumoRequest inValue = new LP2Rest.AlmacenWS.InsertarInsumoRequest();
+            inValue.insumo = insumo;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).InsertarInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.AlmacenWS.FiltrarInsumosResponse LP2Rest.AlmacenWS.AlmacenWS.FiltrarInsumos(LP2Rest.AlmacenWS.FiltrarInsumosRequest request) {
+            return base.Channel.FiltrarInsumos(request);
+        }
+        
+        public LP2Rest.AlmacenWS.insumo[] FiltrarInsumos(string nombre_insumo, string sku, int idPlato, double precioMin, double precioMax, double stockMin, double stockMax, int idTipoProducto) {
+            LP2Rest.AlmacenWS.FiltrarInsumosRequest inValue = new LP2Rest.AlmacenWS.FiltrarInsumosRequest();
+            inValue.nombre_insumo = nombre_insumo;
+            inValue.sku = sku;
+            inValue.idPlato = idPlato;
+            inValue.precioMin = precioMin;
+            inValue.precioMax = precioMax;
+            inValue.stockMin = stockMin;
+            inValue.stockMax = stockMax;
+            inValue.idTipoProducto = idTipoProducto;
+            LP2Rest.AlmacenWS.FiltrarInsumosResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).FiltrarInsumos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarInsumosResponse> LP2Rest.AlmacenWS.AlmacenWS.FiltrarInsumosAsync(LP2Rest.AlmacenWS.FiltrarInsumosRequest request) {
+            return base.Channel.FiltrarInsumosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.FiltrarInsumosResponse> FiltrarInsumosAsync(string nombre_insumo, string sku, int idPlato, double precioMin, double precioMax, double stockMin, double stockMax, int idTipoProducto) {
+            LP2Rest.AlmacenWS.FiltrarInsumosRequest inValue = new LP2Rest.AlmacenWS.FiltrarInsumosRequest();
+            inValue.nombre_insumo = nombre_insumo;
+            inValue.sku = sku;
+            inValue.idPlato = idPlato;
+            inValue.precioMin = precioMin;
+            inValue.precioMax = precioMax;
+            inValue.stockMin = stockMin;
+            inValue.stockMax = stockMax;
+            inValue.idTipoProducto = idTipoProducto;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).FiltrarInsumosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.AlmacenWS.ModificarInsumoResponse LP2Rest.AlmacenWS.AlmacenWS.ModificarInsumo(LP2Rest.AlmacenWS.ModificarInsumoRequest request) {
+            return base.Channel.ModificarInsumo(request);
+        }
+        
+        public int ModificarInsumo(LP2Rest.AlmacenWS.insumo insumo) {
+            LP2Rest.AlmacenWS.ModificarInsumoRequest inValue = new LP2Rest.AlmacenWS.ModificarInsumoRequest();
+            inValue.insumo = insumo;
+            LP2Rest.AlmacenWS.ModificarInsumoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ModificarInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarInsumoResponse> LP2Rest.AlmacenWS.AlmacenWS.ModificarInsumoAsync(LP2Rest.AlmacenWS.ModificarInsumoRequest request) {
+            return base.Channel.ModificarInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.ModificarInsumoResponse> ModificarInsumoAsync(LP2Rest.AlmacenWS.insumo insumo) {
+            LP2Rest.AlmacenWS.ModificarInsumoRequest inValue = new LP2Rest.AlmacenWS.ModificarInsumoRequest();
+            inValue.insumo = insumo;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).ModificarInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.AlmacenWS.EliminarInsumoResponse LP2Rest.AlmacenWS.AlmacenWS.EliminarInsumo(LP2Rest.AlmacenWS.EliminarInsumoRequest request) {
+            return base.Channel.EliminarInsumo(request);
+        }
+        
+        public int EliminarInsumo(int idInsumo) {
+            LP2Rest.AlmacenWS.EliminarInsumoRequest inValue = new LP2Rest.AlmacenWS.EliminarInsumoRequest();
+            inValue.idInsumo = idInsumo;
+            LP2Rest.AlmacenWS.EliminarInsumoResponse retVal = ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarInsumoResponse> LP2Rest.AlmacenWS.AlmacenWS.EliminarInsumoAsync(LP2Rest.AlmacenWS.EliminarInsumoRequest request) {
+            return base.Channel.EliminarInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.AlmacenWS.EliminarInsumoResponse> EliminarInsumoAsync(int idInsumo) {
+            LP2Rest.AlmacenWS.EliminarInsumoRequest inValue = new LP2Rest.AlmacenWS.EliminarInsumoRequest();
+            inValue.idInsumo = idInsumo;
+            return ((LP2Rest.AlmacenWS.AlmacenWS)(this)).EliminarInsumoAsync(inValue);
         }
     }
 }

@@ -86,7 +86,7 @@ namespace LP2Rest
                 frmOrdenCompra frm = new frmOrdenCompra("Ver", ordenCompraSeleccionado);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-
+                    btnBuscar.PerformClick();
                 }
             }
         }
@@ -94,7 +94,10 @@ namespace LP2Rest
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmOrdenCompra frm = new frmOrdenCompra();
-            frm.ShowDialog();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                btnBuscar.PerformClick();
+            }
         }
 
         private void dgvOrdenCompras_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -107,6 +110,67 @@ namespace LP2Rest
             dgvOrdenCompras.Rows[e.RowIndex].Cells[3].Value = ordenCompra.fechaHoraCumplimiento.Date.ToString("dd/MM/yyyy");
             dgvOrdenCompras.Rows[e.RowIndex].Cells[4].Value = ordenCompra.total.ToString("N2");
             dgvOrdenCompras.Rows[e.RowIndex].Cells[5].Value = ordenCompra.estado;
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (dgvOrdenCompras.CurrentRow != null)
+            {
+                ordenCompraSeleccionado = (AlmacenWS.ordenCompra)dgvOrdenCompras.CurrentRow.DataBoundItem;
+                // MessageBox.Show("Se va modificar el " + insumoSeleccionado.i, "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if(ordenCompraSeleccionado.estado=="APROBADO")
+                {
+                    MessageBox.Show("No se puede modificar una orden de compra ya aprobada", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    frmOrdenCompra frm = new frmOrdenCompra("Modificar", ordenCompraSeleccionado);
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        btnBuscar.PerformClick();
+                    }
+                }
+                
+            }
+        }
+
+        private void btnBorrarFiltro_Click(object sender, EventArgs e)
+        {
+            txtSKU.Text = "";
+            txtNombre.Text = "";
+            txtMontoMax.Text = "";
+            txtMontoMin.Text = "";
+            txtNumOrden.Text = "";
+            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (dgvOrdenCompras.CurrentRow != null)
+            {
+                ordenCompraSeleccionado = (AlmacenWS.ordenCompra)dgvOrdenCompras.CurrentRow.DataBoundItem;
+                if (ordenCompraSeleccionado.estado == "APROBADO")
+                {
+                    MessageBox.Show("No se puede eliminar una orden de compra ya aprobada", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (MessageBox.Show("¿Esta seguro que desea eliminar esta orden de compra?",
+                    "Mensaje de confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
+                    ) == DialogResult.Yes)
+                    {
+                        int resultado = daoGestAlmacen.EliminarOrdenCompra(ordenCompraSeleccionado.idOrdenCompra);
+                        if (resultado == 1)
+                            MessageBox.Show("Se ha eliminado exitosamente la orden de compra", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("Ha ocurrido un error al momento de eliminar la orden de compra", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        btnBuscar.PerformClick();
+                    }
+                }
+
+                
+            }
         }
     }
 }
