@@ -48,11 +48,9 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBuscarCliente
@@ -248,47 +246,41 @@
             this.label1.TabIndex = 43;
             this.label1.Text = "Nombres:";
             // 
-            // toolStrip1
+            // btnCancelar
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnSeleccionar,
-            this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(414, 711);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(320, 31);
-            this.toolStrip1.TabIndex = 60;
-            this.toolStrip1.Text = "tsMenu";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(541, 710);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(149, 43);
+            this.btnCancelar.TabIndex = 94;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnSeleccionar.Image = global::LP2Rest.Properties.Resources.file_info_40446;
-            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(366, 710);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(153, 28);
+            this.btnSeleccionar.Size = new System.Drawing.Size(149, 43);
+            this.btnSeleccionar.TabIndex = 93;
             this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(124, 28);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
             // 
             // frmGestionReclamoBusquedaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
@@ -306,8 +298,6 @@
             this.Name = "frmGestionReclamoBusquedaCliente";
             this.Text = "Seleccion Cliente Reclamo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,12 +317,11 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnSeleccionar;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }
