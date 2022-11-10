@@ -95,7 +95,10 @@ namespace LP2Rest.Diego
 
 
                 _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>();
-                _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra).ToList());
+                if(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra) != null)
+                    _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra).ToList());
+                else
+                    _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>();
                 dgvLineaOrdenCompra.AutoGenerateColumns = false;
                 dgvLineaOrdenCompra.DataSource = _lineaOrdenComprainsumos;
                 _proveedor= new GestPersonasWS.proveedor();

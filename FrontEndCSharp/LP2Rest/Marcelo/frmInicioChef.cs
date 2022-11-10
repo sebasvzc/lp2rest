@@ -25,6 +25,7 @@ namespace LP2Rest
 
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
+        private GestPersonasWS.cuentaUsuario _cuenta;
         public frmInicioChef()
         {
             InitializeComponent();
@@ -32,16 +33,25 @@ namespace LP2Rest
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
         }
 
+        public frmInicioChef(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            _asistencia = new GestPersonasWS.asistencia();
+            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            _cuenta = cuenta;
+            lblID.Text = "Chef: " + cuenta.usuario;
+        }
+
         private void pbPlatos_Click(object sender, EventArgs e)
         {
             label2.Text = "Platos";
-            abrirFormulario(new frmBusquedaReceta());
+            abrirFormulario(new frmListarPlatos(_cuenta));
         }
 
         private void pbInsumos_Click(object sender, EventArgs e)
         {
             label2.Text = "Insumos";
-            abrirFormulario(new frmBusquedaInsumos());
+            abrirFormulario(new frmListarInsumosA());
         }
 
         private void pbSolicitudCompras_Click(object sender, EventArgs e)
@@ -153,6 +163,11 @@ namespace LP2Rest
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
