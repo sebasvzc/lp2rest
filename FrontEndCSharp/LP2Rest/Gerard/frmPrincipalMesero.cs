@@ -127,7 +127,7 @@ namespace LP2Rest
 
         private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmBusquedaClientes());
+            //abrirFormulario(new frmBusquedaClientes());
         }
     }
 }
