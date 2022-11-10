@@ -17,6 +17,7 @@ public interface OrdenCompraDAO {
     int insertar(OrdenCompra oc);
     int modificar (OrdenCompra oc);
     int eliminar(int idOrdenCompra);
+    int actualizarEstadoOrdenCompra (int idOrdenCompra);
     ArrayList<OrdenCompra> listarTodos();
     ArrayList<OrdenCompra> filtrarOrdenCompras(int id_solicitudOrdenDeCompra,Date fecha_registro_max,Date fecha_registro_min,double monto_total_max,double monto_total_min,int idInsumo);
 }

@@ -62,7 +62,7 @@ public class GestPersonasWS {
     private ReclamoDAO daoReclamo = new ReclamoMySQL();
     private EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
     private ProveedorDAO daoProveedor = new ProveedorMySQL();
-    
+
     @WebMethod(operationName = "listarTodasEventos")
     public ArrayList<Evento> listarTodasEventos() {
         ArrayList<Evento> eventos = null;
@@ -505,6 +505,43 @@ public class GestPersonasWS {
         return cuentaUsuarioRetorno;
     }
 
+    @WebMethod(operationName = "validarCodigoCuentaUsuario")
+    public int validarCodigoCuentaUsuario(@WebParam(name = "idCuentaUsuario") int idCuentaUsuario,
+            @WebParam(name = "codVerificacion") String codVerificacion) {
+        int resultado = 0;
+        try {
+            resultado
+                    = daoCuentaUsuario.verificarCodigoVerificacion(idCuentaUsuario, codVerificacion);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+
+    @WebMethod(operationName = "enviarCorreoRecuperacion")
+    public int enviarCorreoRecuperacion(@WebParam(name = "correo") String correo) {
+        int resultado = 0;
+        try {
+            resultado = daoCuentaUsuario.enviarCorreoRecuperacion(correo);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+
+    @WebMethod(operationName = "actualizarContraseniaCuentaUsuario")
+    public int actualizarContraseniaCuentaUsuario(
+            @WebParam(name = "idCuentaUsuario") int idCuentaUsuario,
+            @WebParam(name = "contrasenia") String contrasenia) {
+        int resultado = 0;
+        try {
+            resultado = daoCuentaUsuario.actualizarContrasenia(idCuentaUsuario, contrasenia);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+
     @WebMethod(operationName = "insertarAsistencia")
     public int insertarAsistencia(@WebParam(name = "asistencia") Asistencia asistencia) {
         int resultado = 0;
@@ -660,11 +697,12 @@ public class GestPersonasWS {
     @WebMethod(operationName = "listarProveedoresPorNombre")
     public ArrayList<Proveedor> listarProveedoresPorNombre(@WebParam(name = "nombre_proveedor") String nombre_proveedor) {
         ArrayList<Proveedor> proveedor = null;
-        try{
+        try {
             proveedor = daoProveedor.listarProveedorePorNombre(nombre_proveedor);
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
         return proveedor;
-    } 
+    }
+
 }

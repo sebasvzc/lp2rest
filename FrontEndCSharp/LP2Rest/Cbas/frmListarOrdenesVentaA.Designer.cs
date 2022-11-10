@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,40 +41,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.Anular = new System.Windows.Forms.ToolStripButton();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(51, 23);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(267, 31);
-            this.lblTitulo.TabIndex = 76;
-            this.lblTitulo.Text = "Listado de Ventas";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(791, 247);
+            this.textBox2.Location = new System.Drawing.Point(791, 192);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(248, 32);
             this.textBox2.TabIndex = 71;
@@ -83,7 +69,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label5.Location = new System.Drawing.Point(791, 210);
+            this.label5.Location = new System.Drawing.Point(791, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(248, 29);
             this.label5.TabIndex = 70;
@@ -93,7 +79,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label6.Location = new System.Drawing.Point(791, 128);
+            this.label6.Location = new System.Drawing.Point(791, 73);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(248, 29);
             this.label6.TabIndex = 69;
@@ -103,7 +89,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(791, 163);
+            this.textBox1.Location = new System.Drawing.Point(791, 108);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(248, 32);
             this.textBox1.TabIndex = 68;
@@ -111,7 +97,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label4.Location = new System.Drawing.Point(791, 81);
+            this.label4.Location = new System.Drawing.Point(791, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(248, 37);
             this.label4.TabIndex = 67;
@@ -121,7 +107,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label2.Location = new System.Drawing.Point(393, 210);
+            this.label2.Location = new System.Drawing.Point(393, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(354, 29);
             this.label2.TabIndex = 64;
@@ -131,7 +117,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(393, 247);
+            this.dateTimePicker1.Location = new System.Drawing.Point(393, 192);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(354, 32);
             this.dateTimePicker1.TabIndex = 63;
@@ -139,7 +125,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label1.Location = new System.Drawing.Point(393, 125);
+            this.label1.Location = new System.Drawing.Point(393, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(354, 29);
             this.label1.TabIndex = 62;
@@ -149,7 +135,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(393, 81);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(393, 34);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(354, 37);
             this.lblFechaNacimiento.TabIndex = 61;
@@ -159,62 +145,10 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(393, 162);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(393, 107);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(354, 32);
             this.dtpFechaNacimiento.TabIndex = 60;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
-            this.btnModificar,
-            this.btnEliminar,
-            this.Anular});
-            this.toolStrip1.Location = new System.Drawing.Point(336, 718);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(421, 30);
-            this.toolStrip1.TabIndex = 59;
-            this.toolStrip1.Text = "tsMenu";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(92, 27);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(118, 27);
-            this.btnModificar.Text = "&Modificar";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(106, 27);
-            this.btnEliminar.Text = "&Eliminar";
-            // 
-            // Anular
-            // 
-            this.Anular.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.Anular.Image = global::LP2Rest.Properties.Resources._391127;
-            this.Anular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Anular.Name = "Anular";
-            this.Anular.Size = new System.Drawing.Size(93, 27);
-            this.Anular.Text = "&Anular";
             // 
             // dgvEmpleados
             // 
@@ -242,7 +176,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmpleados.Location = new System.Drawing.Point(53, 320);
+            this.dgvEmpleados.Location = new System.Drawing.Point(53, 266);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -254,7 +188,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(986, 374);
+            this.dgvEmpleados.Size = new System.Drawing.Size(986, 423);
             this.dgvEmpleados.TabIndex = 58;
             // 
             // NombreCompleto
@@ -285,20 +219,10 @@
             this.Area.ReadOnly = true;
             this.Area.Width = 150;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(820, 23);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(219, 41);
-            this.btnBuscar.TabIndex = 57;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(53, 162);
+            this.textBox3.Location = new System.Drawing.Point(53, 107);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(304, 32);
             this.textBox3.TabIndex = 80;
@@ -306,7 +230,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label3.Location = new System.Drawing.Point(53, 125);
+            this.label3.Location = new System.Drawing.Point(53, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(304, 29);
             this.label3.TabIndex = 79;
@@ -316,7 +240,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox4.Location = new System.Drawing.Point(53, 247);
+            this.textBox4.Location = new System.Drawing.Point(53, 192);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(304, 32);
             this.textBox4.TabIndex = 82;
@@ -324,7 +248,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label7.Location = new System.Drawing.Point(53, 210);
+            this.label7.Location = new System.Drawing.Point(53, 155);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(304, 29);
             this.label7.TabIndex = 81;
@@ -334,24 +258,85 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.label8.Location = new System.Drawing.Point(53, 81);
+            this.label8.Location = new System.Drawing.Point(53, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(304, 37);
             this.label8.TabIndex = 83;
             this.label8.Text = "Cliente";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(924, 713);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(115, 41);
+            this.btnEliminar.TabIndex = 102;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(803, 713);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(115, 41);
+            this.btnModificar.TabIndex = 101;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(682, 713);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(115, 41);
+            this.btnNuevo.TabIndex = 100;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Sienna;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(53, 713);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(234, 41);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmListarOrdenesVentaA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
@@ -361,14 +346,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaNacimiento);
             this.Controls.Add(this.dtpFechaNacimiento);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvEmpleados);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label6);
             this.Name = "frmListarOrdenesVentaA";
             this.Text = "Listado de Ventas";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,7 +357,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -387,15 +367,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnNuevo;
-        private System.Windows.Forms.ToolStripButton btnModificar;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ToolStripButton Anular;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
@@ -403,5 +377,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button button1;
     }
 }

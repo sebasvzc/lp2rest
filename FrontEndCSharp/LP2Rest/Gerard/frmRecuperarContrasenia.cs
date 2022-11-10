@@ -18,9 +18,11 @@ namespace LP2Rest
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+        private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
         public frmRecuperacionContraseña()
         {
             InitializeComponent();
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
         }
 
         private void lblCorreo_Click(object sender, EventArgs e)
@@ -35,11 +37,7 @@ namespace LP2Rest
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmValidarIdentidad validarIdentidad = new frmValidarIdentidad();
-            if (validarIdentidad.ShowDialog() == DialogResult.OK)
-            {
-                this.DialogResult = DialogResult.OK;
-            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -49,27 +47,14 @@ namespace LP2Rest
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            this.DialogResult=DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;
         }
 
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            frmValidarIdentidad formValidarIdentidad = new frmValidarIdentidad();
-            if (formValidarIdentidad.ShowDialog() == DialogResult.OK)
-            {
-                this.DialogResult = DialogResult.OK;
-            }
-           
-        }
+
 
         private void txtDNI_Validating_1(object sender, CancelEventArgs e)
         {
-            if (txtDNI.Text.Trim() == "")
-                epDNI.SetError(txtDNI, "Debe ingresar un DNI");
-            else if (txtDNI.Text.Trim().Length != 8)
-                epDNI.SetError(txtDNI, "El DNI debe tener 8 dígitos");
-            else
-                epDNI.SetError(txtDNI, "");
+
         }
 
         private void panelIzquierdo_MouseDown(object sender, MouseEventArgs e)
@@ -82,6 +67,22 @@ namespace LP2Rest
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            int busquedaExitosa = daoGestPersonas.enviarCorreoRecuperacion(txtCorreo.Text);
+            frmValidarIdentidad validarIdentidad = new frmValidarIdentidad(busquedaExitosa);
+            this.Hide();
+            if ((busquedaExitosa != 0) && (validarIdentidad.ShowDialog() == DialogResult.OK))
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            else if (busquedaExitosa == 0)
+            {
+                MessageBox.Show(" No se ha encontrado el correo ingresado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.Show();
         }
     }
 }

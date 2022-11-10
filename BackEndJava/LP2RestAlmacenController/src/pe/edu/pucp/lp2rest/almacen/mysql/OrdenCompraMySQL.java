@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.lp2rest.almacen.dao.OrdenCompraDAO;
+import pe.edu.pucp.lp2rest.almacen.model.Insumo;
 import pe.edu.pucp.lp2rest.almacen.model.LineaOrdenCompra;
 import pe.edu.pucp.lp2rest.almacen.model.OrdenCompra;
 import pe.edu.pucp.lp2rest.config.DBManager;
@@ -64,12 +65,80 @@ public class OrdenCompraMySQL implements OrdenCompraDAO {
 
     @Override
     public int modificar(OrdenCompra oc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       int resultado = 0;
+       try {
+                System.out.println("Por ahora inicia la modifiacion de orden de compra "+oc.getIdOrdenCompra());
+		con = DBManager.getInstance().getConnection();
+		cs = con.prepareCall("{call MODIFICAR_SOLICITUD_ORDEN_COMPRA(?,?,?,?,?,?)}");
+		cs.setInt("_id_solicitudOrdenDeCompra", oc.getIdOrdenCompra());
+		cs.setInt("_fid_id_proveedor", oc.getProveedor().getIdPersona());
+		cs.setString("_descripcion", oc.getDescripcion());
+		cs.setDate("_fecha_registro", new java.sql.Date(oc.getFechaHoraCreacion().getTime()));
+		cs.setDate("_fecha_cumplimiento", new java.sql.Date(oc.getFechaHoraCumplimiento().getTime()));
+		cs.setDouble("_monto_total", oc.getTotal());
+		//System.out.println("La unidad de medida es : "+ins.getUnidadMedida().toString());
+                cs.executeUpdate();
+                
+                
+                System.out.println("Por ahora bien la modifiacion de orden de compra "+oc.getIdOrdenCompra());
+                
+                cs = con.prepareCall("call LISTAR_SOLICITUD_ORDEN_COMPRA(?)");
+                cs.setInt("_fid_solicitud_orden_compra", oc.getIdOrdenCompra());
+                rs = cs.executeQuery();
+                while (rs.next()) {
+                    LineaOrdenCompra lcompra = new LineaOrdenCompra();
+
+                    lcompra.setIdLineaOrdenCompra(rs.getInt("id_lineaOrdenDeCompra"));
+                    
+                    cs = con.prepareCall("call ELIMINAR_LINEA_ORDEN_COMPRA(?)");
+                    cs.setInt("_id_lineaOrdenDeCompra", lcompra.getIdLineaOrdenCompra());
+                    cs.executeUpdate();
+                }
+                System.out.println("Por ahora bien la elimacion de la lista de orden de compra"+oc.getIdOrdenCompra());
+                for(LineaOrdenCompra linea : oc.getLineasOrdenCompra()){
+                    cs = con.prepareCall("{call INSERTAR_LINEA_ORDEN_COMPRA(?,?,?,?,?,?)}");
+                    System.out.println("Se insertara lo siguiente: "+ oc.getIdOrdenCompra()+" "+linea.getInsumo().getIdInsumo());
+                    cs.registerOutParameter("_id_linea_orden_compra", java.sql.Types.INTEGER);
+                    cs.setInt("_fid_solicitud_orden_compra", oc.getIdOrdenCompra());
+                    cs.setInt("_fid_insumo", linea.getInsumo().getIdInsumo());
+                    cs.setDouble("_cantidad", linea.getCantidad());
+                    cs.setDouble("_precio_unitario", linea.getPrecioUnitario());
+                    cs.setDate("_fecha_vencimiento", new java.sql.Date(linea.getFechaVencimiento().getTime()));
+                    System.out.println("Insert de insumo "+linea.getInsumo().getIdInsumo());
+                    cs.executeUpdate();
+                }
+                
+		resultado = oc.getIdOrdenCompra();
+	} catch (Exception ex) {
+		System.out.println(ex.getMessage());
+	} finally {
+		try {
+			con.close();
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
+	return resultado;
     }
 
     @Override
     public int eliminar(int idOrdenCompra) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int resultado = 0;
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call `ELIMINAR_SOLICITUD_ORDENES_COMPRA`(?)}");
+            cs.setInt("_id_solicitudOrdenDeCompra", idOrdenCompra);
+            resultado=cs.executeUpdate();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
     }
 
     @Override
@@ -150,5 +219,25 @@ public class OrdenCompraMySQL implements OrdenCompraDAO {
             }
         }
         return compras;
+    }
+
+    @Override
+    public int actualizarEstadoOrdenCompra(int idOrdenCompra) {
+        int resultado = 0;
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call ACTUALIZAR_ESTADO_ORDEN_COMPRA(?)}");
+            cs.setInt("_id_ordenCompra", idOrdenCompra);
+            resultado=cs.executeUpdate();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
     }
 }

@@ -56,19 +56,22 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblTrabajo = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDNINombre
             // 
             this.lblDNINombre.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblDNINombre.Location = new System.Drawing.Point(361, 83);
+            this.lblDNINombre.Location = new System.Drawing.Point(359, 128);
             this.lblDNINombre.Name = "lblDNINombre";
             this.lblDNINombre.Size = new System.Drawing.Size(402, 23);
             this.lblDNINombre.TabIndex = 0;
@@ -78,20 +81,25 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtNombre.Location = new System.Drawing.Point(365, 110);
+            this.txtNombre.Location = new System.Drawing.Point(359, 155);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(402, 32);
             this.txtNombre.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.btnBuscar.Location = new System.Drawing.Point(819, 21);
+            this.btnBuscar.BackColor = System.Drawing.Color.Sienna;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(49, 778);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(219, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(227, 41);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvEmpleados
@@ -121,7 +129,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmpleados.Location = new System.Drawing.Point(42, 343);
+            this.dgvEmpleados.Location = new System.Drawing.Point(49, 398);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -133,7 +141,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(1023, 375);
+            this.dgvEmpleados.Size = new System.Drawing.Size(1023, 349);
             this.dgvEmpleados.TabIndex = 4;
             this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
             this.dgvEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmpleados_CellFormatting);
@@ -176,7 +184,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(365, 155);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(359, 200);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(402, 33);
             this.lblFechaNacimiento.TabIndex = 37;
@@ -186,7 +194,7 @@
             // dtpFechaNacimientoIni
             // 
             this.dtpFechaNacimientoIni.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimientoIni.Location = new System.Drawing.Point(365, 213);
+            this.dtpFechaNacimientoIni.Location = new System.Drawing.Point(359, 258);
             this.dtpFechaNacimientoIni.Name = "dtpFechaNacimientoIni";
             this.dtpFechaNacimientoIni.Size = new System.Drawing.Size(402, 32);
             this.dtpFechaNacimientoIni.TabIndex = 36;
@@ -194,7 +202,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(365, 187);
+            this.label1.Location = new System.Drawing.Point(359, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(402, 23);
             this.label1.TabIndex = 38;
@@ -204,7 +212,7 @@
             // dtpFechaNacimientoFin
             // 
             this.dtpFechaNacimientoFin.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimientoFin.Location = new System.Drawing.Point(365, 283);
+            this.dtpFechaNacimientoFin.Location = new System.Drawing.Point(359, 328);
             this.dtpFechaNacimientoFin.Name = "dtpFechaNacimientoFin";
             this.dtpFechaNacimientoFin.Size = new System.Drawing.Size(402, 32);
             this.dtpFechaNacimientoFin.TabIndex = 39;
@@ -212,7 +220,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label2.Location = new System.Drawing.Point(365, 256);
+            this.label2.Location = new System.Drawing.Point(359, 301);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(402, 23);
             this.label2.TabIndex = 40;
@@ -222,7 +230,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label3.Location = new System.Drawing.Point(62, 187);
+            this.label3.Location = new System.Drawing.Point(56, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 23);
             this.label3.TabIndex = 41;
@@ -239,7 +247,7 @@
             "Cajero",
             "Recepcionista",
             "Chef"});
-            this.cboArea.Location = new System.Drawing.Point(62, 213);
+            this.cboArea.Location = new System.Drawing.Point(56, 258);
             this.cboArea.Name = "cboArea";
             this.cboArea.Size = new System.Drawing.Size(246, 33);
             this.cboArea.TabIndex = 42;
@@ -247,7 +255,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.label4.Location = new System.Drawing.Point(819, 155);
+            this.label4.Location = new System.Drawing.Point(813, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(219, 33);
             this.label4.TabIndex = 43;
@@ -257,7 +265,7 @@
             // txtSueldoIni
             // 
             this.txtSueldoIni.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSueldoIni.Location = new System.Drawing.Point(819, 213);
+            this.txtSueldoIni.Location = new System.Drawing.Point(813, 258);
             this.txtSueldoIni.Name = "txtSueldoIni";
             this.txtSueldoIni.Size = new System.Drawing.Size(219, 32);
             this.txtSueldoIni.TabIndex = 44;
@@ -265,7 +273,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label5.Location = new System.Drawing.Point(819, 256);
+            this.label5.Location = new System.Drawing.Point(813, 301);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(219, 23);
             this.label5.TabIndex = 46;
@@ -275,7 +283,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label6.Location = new System.Drawing.Point(819, 187);
+            this.label6.Location = new System.Drawing.Point(813, 232);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(219, 23);
             this.label6.TabIndex = 45;
@@ -286,7 +294,7 @@
             // 
             this.txtSueldoFin.BackColor = System.Drawing.SystemColors.Window;
             this.txtSueldoFin.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSueldoFin.Location = new System.Drawing.Point(819, 283);
+            this.txtSueldoFin.Location = new System.Drawing.Point(813, 328);
             this.txtSueldoFin.Name = "txtSueldoFin";
             this.txtSueldoFin.Size = new System.Drawing.Size(219, 32);
             this.txtSueldoFin.TabIndex = 47;
@@ -294,7 +302,7 @@
             // txtDNI
             // 
             this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNI.Location = new System.Drawing.Point(819, 110);
+            this.txtDNI.Location = new System.Drawing.Point(813, 155);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(219, 32);
             this.txtDNI.TabIndex = 48;
@@ -302,7 +310,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label7.Location = new System.Drawing.Point(819, 83);
+            this.label7.Location = new System.Drawing.Point(813, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(219, 23);
             this.label7.TabIndex = 49;
@@ -312,7 +320,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtApellido.Location = new System.Drawing.Point(62, 109);
+            this.txtApellido.Location = new System.Drawing.Point(56, 154);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(246, 32);
             this.txtApellido.TabIndex = 51;
@@ -320,72 +328,116 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label8.Location = new System.Drawing.Point(62, 83);
+            this.label8.Location = new System.Drawing.Point(56, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(246, 23);
             this.label8.TabIndex = 50;
             this.label8.Text = "Apellido Paterno:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(60, 18);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(349, 41);
-            this.lblTitulo.TabIndex = 52;
-            this.lblTitulo.Text = "Busqueda Empleado";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblTrabajo
             // 
             this.lblTrabajo.Font = new System.Drawing.Font("MS UI Gothic", 18F);
-            this.lblTrabajo.Location = new System.Drawing.Point(62, 155);
+            this.lblTrabajo.Location = new System.Drawing.Point(56, 200);
             this.lblTrabajo.Name = "lblTrabajo";
             this.lblTrabajo.Size = new System.Drawing.Size(246, 33);
             this.lblTrabajo.TabIndex = 55;
             this.lblTrabajo.Text = "Trabajo";
             this.lblTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // toolStrip1
+            // btnCancelar
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnSeleccionar,
-            this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(413, 749);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(289, 31);
-            this.toolStrip1.TabIndex = 61;
-            this.toolStrip1.Text = "tsMenu";
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnCancelar.Location = new System.Drawing.Point(948, 778);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(124, 41);
+            this.btnCancelar.TabIndex = 92;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnSeleccionar.Image = global::LP2Rest.Properties.Resources.file_info_40446;
-            this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(780, 778);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(153, 28);
+            this.btnSeleccionar.Size = new System.Drawing.Size(162, 41);
+            this.btnSeleccionar.TabIndex = 91;
             this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // btnCancelar
+            // panelIzquierdo
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(124, 28);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.panelIzquierdo.BackColor = System.Drawing.Color.Black;
+            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdo.Name = "panelIzquierdo";
+            this.panelIzquierdo.Size = new System.Drawing.Size(8, 850);
+            this.panelIzquierdo.TabIndex = 93;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(8, 100);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1093, 5);
+            this.panel5.TabIndex = 95;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(8, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1093, 100);
+            this.panel4.TabIndex = 94;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1056, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 25);
+            this.button2.TabIndex = 28;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
+            this.label9.Location = new System.Drawing.Point(21, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(795, 60);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "BÚSQUEDA DE EMPLEADOS";
             // 
             // frmGestionEmpleadosBusquedaEmpleado
             // 
-            this.ClientSize = new System.Drawing.Size(1154, 817);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.lblTitulo);
+            this.ClientSize = new System.Drawing.Size(1101, 850);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelIzquierdo);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -407,11 +459,12 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDNINombre);
             this.Controls.Add(this.lblTrabajo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionEmpleadosBusquedaEmpleado";
             this.Text = "Seleccion Empleado Reclamo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,15 +492,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblTrabajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Area;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnSeleccionar;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Panel panelIzquierdo;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
     }
 }
