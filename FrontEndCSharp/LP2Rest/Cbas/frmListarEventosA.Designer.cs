@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEventos = new System.Windows.Forms.DataGridView();
             this.nombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,42 +61,43 @@
             // 
             this.dgvEventos.AllowUserToAddRows = false;
             this.dgvEventos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEventos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEventos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEventos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreEvento,
             this.fechaEvento,
             this.artistaEvento,
             this.costoEvento});
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEventos.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEventos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEventos.Location = new System.Drawing.Point(56, 320);
             this.dgvEventos.Name = "dgvEventos";
             this.dgvEventos.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEventos.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEventos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEventos.Size = new System.Drawing.Size(986, 365);
             this.dgvEventos.TabIndex = 10;
+            this.dgvEventos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventos_CellContentClick);
             this.dgvEventos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEventos_CellFormatting);
             // 
             // nombreEvento
@@ -134,6 +135,7 @@
             this.txtCostMax.Name = "txtCostMax";
             this.txtCostMax.Size = new System.Drawing.Size(332, 32);
             this.txtCostMax.TabIndex = 67;
+            this.txtCostMax.TextChanged += new System.EventHandler(this.txtCostMax_TextChanged);
             // 
             // label5
             // 
@@ -144,6 +146,7 @@
             this.label5.TabIndex = 66;
             this.label5.Text = "Hasta:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -154,6 +157,7 @@
             this.label6.TabIndex = 65;
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtCostoMin
             // 
@@ -162,6 +166,7 @@
             this.txtCostoMin.Name = "txtCostoMin";
             this.txtCostoMin.Size = new System.Drawing.Size(332, 32);
             this.txtCostoMin.TabIndex = 64;
+            this.txtCostoMin.TextChanged += new System.EventHandler(this.txtCostoMin_TextChanged);
             // 
             // label4
             // 
@@ -172,6 +177,7 @@
             this.label4.TabIndex = 63;
             this.label4.Text = "Costo";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // cboArtista
             // 
@@ -192,6 +198,7 @@
             this.label3.TabIndex = 61;
             this.label3.Text = "Artista:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblFechaNacimiento
             // 
@@ -202,6 +209,7 @@
             this.lblFechaNacimiento.TabIndex = 57;
             this.lblFechaNacimiento.Text = "Fecha de Contratación";
             this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFechaNacimiento.Click += new System.EventHandler(this.lblFechaNacimiento_Click);
             // 
             // dtpFechaInicio
             // 
@@ -211,6 +219,7 @@
             this.dtpFechaInicio.Size = new System.Drawing.Size(491, 32);
             this.dtpFechaInicio.TabIndex = 56;
             this.dtpFechaInicio.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // txtDNINombre
             // 
@@ -219,6 +228,7 @@
             this.txtDNINombre.Name = "txtDNINombre";
             this.txtDNINombre.Size = new System.Drawing.Size(432, 32);
             this.txtDNINombre.TabIndex = 54;
+            this.txtDNINombre.TextChanged += new System.EventHandler(this.txtDNINombre_TextChanged);
             // 
             // lblDNINombre
             // 
@@ -229,6 +239,7 @@
             this.lblDNINombre.TabIndex = 53;
             this.lblDNINombre.Text = "Nombre:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDNINombre.Click += new System.EventHandler(this.lblDNINombre_Click);
             // 
             // label1
             // 
@@ -239,6 +250,7 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "Desde:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -249,6 +261,7 @@
             this.label2.TabIndex = 74;
             this.label2.Text = "Hasta:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dtpFechaFin
             // 
@@ -257,6 +270,7 @@
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(491, 32);
             this.dtpFechaFin.TabIndex = 73;
+            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
             // 
             // btnNuevo
             // 

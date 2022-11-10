@@ -31,14 +31,12 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAgregarArtista = new System.Windows.Forms.Button();
-            this.cboArtista = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEliminarArtista = new System.Windows.Forms.Button();
+            this.txtArtista = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -48,6 +46,7 @@
             this.lblApellidoPaterno = new System.Windows.Forms.Label();
             this.txtCostoTotal = new System.Windows.Forms.TextBox();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.btArtistas = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -89,26 +88,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAgregarArtista
-            // 
-            this.btnAgregarArtista.BackgroundImage = global::LP2Rest.Properties.Resources._392024;
-            this.btnAgregarArtista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarArtista.Location = new System.Drawing.Point(391, 180);
-            this.btnAgregarArtista.Name = "btnAgregarArtista";
-            this.btnAgregarArtista.Size = new System.Drawing.Size(33, 33);
-            this.btnAgregarArtista.TabIndex = 82;
-            this.btnAgregarArtista.UseVisualStyleBackColor = true;
-            this.btnAgregarArtista.Click += new System.EventHandler(this.btnAgregarArtista_Click);
-            // 
-            // cboArtista
-            // 
-            this.cboArtista.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.cboArtista.FormattingEnabled = true;
-            this.cboArtista.Location = new System.Drawing.Point(220, 180);
-            this.cboArtista.Name = "cboArtista";
-            this.cboArtista.Size = new System.Drawing.Size(165, 33);
-            this.cboArtista.TabIndex = 83;
             // 
             // panel5
             // 
@@ -161,11 +140,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnEliminarArtista);
-            this.groupBox1.Controls.Add(this.cboArtista);
+            this.groupBox1.Controls.Add(this.btArtistas);
+            this.groupBox1.Controls.Add(this.txtArtista);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lblDNI);
-            this.groupBox1.Controls.Add(this.btnAgregarArtista);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
@@ -181,16 +159,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Del Evento";
             // 
-            // btnEliminarArtista
+            // txtArtista
             // 
-            this.btnEliminarArtista.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
-            this.btnEliminarArtista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminarArtista.Location = new System.Drawing.Point(430, 180);
-            this.btnEliminarArtista.Name = "btnEliminarArtista";
-            this.btnEliminarArtista.Size = new System.Drawing.Size(33, 33);
-            this.btnEliminarArtista.TabIndex = 84;
-            this.btnEliminarArtista.UseVisualStyleBackColor = true;
-            this.btnEliminarArtista.Click += new System.EventHandler(this.btnEliminarArtista_Click);
+            this.txtArtista.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtArtista.Location = new System.Drawing.Point(220, 184);
+            this.txtArtista.Name = "txtArtista";
+            this.txtArtista.ReadOnly = true;
+            this.txtArtista.Size = new System.Drawing.Size(165, 32);
+            this.txtArtista.TabIndex = 61;
             // 
             // txtID
             // 
@@ -277,6 +253,16 @@
             this.panelIzquierdo.Size = new System.Drawing.Size(8, 502);
             this.panelIzquierdo.TabIndex = 88;
             // 
+            // btArtistas
+            // 
+            this.btArtistas.Location = new System.Drawing.Point(391, 185);
+            this.btArtistas.Name = "btArtistas";
+            this.btArtistas.Size = new System.Drawing.Size(55, 31);
+            this.btArtistas.TabIndex = 62;
+            this.btArtistas.Text = "...";
+            this.btArtistas.UseVisualStyleBackColor = true;
+            this.btArtistas.Click += new System.EventHandler(this.btArtistas_Click);
+            // 
             // frmGestionEventosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,8 +291,6 @@
         private System.Windows.Forms.Panel panelIzquierdo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAgregarArtista;
-        private System.Windows.Forms.ComboBox cboArtista;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
@@ -320,6 +304,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCostoTotal;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnEliminarArtista;
+        private System.Windows.Forms.TextBox txtArtista;
+        private System.Windows.Forms.Button btArtistas;
     }
 }

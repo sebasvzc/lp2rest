@@ -85,5 +85,28 @@ public class ArtistaMySQL implements ArtistaDAO{
         }
         return artistas;
     }
+    @Override
+    public ArrayList<Artista> listarPorNombre(String nombre) {
+       ArrayList<Artista> artistas = new ArrayList<>();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_ARTISTAS_POR_NOMBRE(?)");
+            cs.setString("_nombre", nombre);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Artista artista = new Artista();
+                artista.setIdArtista(rs.getInt("id_artista"));
+                artista.setNombre(rs.getString("nombre_artistico"));
+                artistas.add(artista);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return artistas;
+    }
     
 }

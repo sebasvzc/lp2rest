@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cbas\frmGestionArtistasA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionArtistasA.Designer.cs">
+      <DependentUpon>frmGestionArtistasA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cbas\frmGestionEmpleadosBusquedaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +412,9 @@
     <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cbas\frmGestionArtistasA.resx">
+      <DependentUpon>frmGestionArtistasA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cbas\frmGestionReclamosBusquedaClientes.resx">
       <DependentUpon>frmGestionReclamosBusquedaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -772,6 +781,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarArtistasPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaEmpleadosResponse.datasource">
