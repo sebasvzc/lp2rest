@@ -50,4 +50,25 @@ public class ReporteWS {
         }
         return reporteBytes;
     }
+    
+    
+    @WebMethod(operationName = "generarBoletaVenta")
+    public byte[] generarBoletaVenta(@WebParam(name = "id_orden_venta") int id_orden_venta) {
+        byte[] reporteBytes = null;
+        try{
+            con = DBManager.getInstance().getConnection();
+            JasperReport reporte = (JasperReport) JRLoader.loadObject(
+               ReporteWS.class.getResource("/pe/edu/pucp/lp2rest/report/BoletaVenta.jasper")
+            );
+            HashMap parametros = new HashMap();
+            parametros.put("id_ordenVenta",id_orden_venta);
+
+            JasperPrint jp = JasperFillManager.fillReport(reporte, parametros, con);
+            con.close();
+            reporteBytes = JasperExportManager.exportReportToPdf(jp);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return reporteBytes;
+    }
 }

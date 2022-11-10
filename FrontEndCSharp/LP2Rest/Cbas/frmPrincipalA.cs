@@ -25,6 +25,7 @@ namespace LP2Rest
 
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
         private GestPersonasWS.asistencia _asistencia;
+        private int id_cuentaEscogida;
         public frmPrincipalA()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace LP2Rest
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
             _asistencia = new GestPersonasWS.asistencia();
             lblID.Text = "Administrador: " + cuenta.usuario;
+            id_cuentaEscogida = cuenta.idUsuario;
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -161,7 +163,7 @@ namespace LP2Rest
 
 
                 //Se asume (momentaneamente) que el admin tiene idCuentaUsuario = 2 
-                _asistencia.idCuentaUsuario = 2;
+                _asistencia.idCuentaUsuario = id_cuentaEscogida;
 
                 MessageBox.Show("Se registró la asistencia");
                 btnMarcarAsistencia.Hide();

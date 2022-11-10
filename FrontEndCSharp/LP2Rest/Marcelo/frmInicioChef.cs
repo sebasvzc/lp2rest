@@ -26,6 +26,7 @@ namespace LP2Rest
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
         private GestPersonasWS.cuentaUsuario _cuenta;
+        private int id_cuenta;
         public frmInicioChef()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace LP2Rest
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
             _cuenta = cuenta;
             lblID.Text = "Chef: " + cuenta.usuario;
+            id_cuenta = cuenta.idUsuario;
         }
 
         private void pbPlatos_Click(object sender, EventArgs e)
@@ -81,7 +83,7 @@ namespace LP2Rest
 
 
                 //Se asume (momentaneamente) que el admin tiene idCuentaUsuario = 4 
-                _asistencia.idCuentaUsuario = 2;
+                _asistencia.idCuentaUsuario = id_cuenta;
 
                 MessageBox.Show("Se registró la asistencia");
 

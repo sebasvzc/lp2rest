@@ -74,6 +74,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblError);
             this.Name = "frmValidarAsistencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmValidarAsistencia";
             this.ResumeLayout(false);
             this.PerformLayout();
