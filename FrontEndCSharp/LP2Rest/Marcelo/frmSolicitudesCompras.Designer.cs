@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnBorrarFiltro = new System.Windows.Forms.Button();
             this.txtMontoMax = new System.Windows.Forms.TextBox();
@@ -87,7 +86,7 @@
             this.groupBox3.Controls.Add(this.lblFechaNacimiento);
             this.groupBox3.Controls.Add(this.dtpFechaMinRegistro);
             this.groupBox3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.groupBox3.Location = new System.Drawing.Point(16, 21);
+            this.groupBox3.Location = new System.Drawing.Point(42, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(988, 278);
             this.groupBox3.TabIndex = 148;
@@ -274,7 +273,7 @@
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.groupBox1.Location = new System.Drawing.Point(16, 319);
+            this.groupBox1.Location = new System.Drawing.Point(42, 319);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(988, 369);
             this.groupBox1.TabIndex = 149;
@@ -295,14 +294,6 @@
             // 
             this.dgvOrdenCompras.AllowUserToAddRows = false;
             this.dgvOrdenCompras.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrdenCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrdenCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrdenDeCompra,
@@ -369,7 +360,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(19, 708);
+            this.btnBuscar.Location = new System.Drawing.Point(45, 708);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(234, 41);
             this.btnBuscar.TabIndex = 154;
@@ -384,7 +375,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(886, 708);
+            this.btnEliminar.Location = new System.Drawing.Point(912, 708);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(115, 41);
             this.btnEliminar.TabIndex = 153;
@@ -399,7 +390,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(765, 708);
+            this.btnModificar.Location = new System.Drawing.Point(791, 708);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(115, 41);
             this.btnModificar.TabIndex = 152;
@@ -414,7 +405,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(644, 708);
+            this.button2.Location = new System.Drawing.Point(670, 708);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 41);
             this.button2.TabIndex = 151;
@@ -429,7 +420,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(317, 708);
+            this.button3.Location = new System.Drawing.Point(343, 708);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(255, 41);
             this.button3.TabIndex = 155;
@@ -441,7 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 768);
+            this.ClientSize = new System.Drawing.Size(1075, 768);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
