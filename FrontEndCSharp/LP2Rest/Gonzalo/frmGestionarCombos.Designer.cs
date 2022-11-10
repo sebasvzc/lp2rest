@@ -330,7 +330,6 @@
             this.txtStock.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtStock.Location = new System.Drawing.Point(189, 160);
             this.txtStock.Name = "txtStock";
-            this.txtStock.ReadOnly = true;
             this.txtStock.Size = new System.Drawing.Size(238, 32);
             this.txtStock.TabIndex = 148;
             // 

@@ -33,7 +33,11 @@
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.txtIdPlato = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -48,6 +52,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
@@ -59,24 +65,15 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
-            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
-
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tlsBuscar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.tlsBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarProducto
@@ -129,6 +126,48 @@
             this.dgvInsumos.TabIndex = 61;
             this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
             // 
+            // SKU
+            // 
+            this.SKU.FillWeight = 75F;
+            this.SKU.HeaderText = "SKU";
+            this.SKU.MinimumWidth = 6;
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            this.SKU.Width = 75;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.HeaderText = "Nombre";
+            this.NombreInsumo.MinimumWidth = 6;
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            this.NombreInsumo.Width = 210;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 70F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Costo
+            // 
+            this.Costo.FillWeight = 105F;
+            this.Costo.HeaderText = "Costo Unitario";
+            this.Costo.MinimumWidth = 6;
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            this.Costo.Width = 105;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
@@ -166,7 +205,6 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(123, 20);
             this.txtStock.TabIndex = 144;
-            this.txtStock.ReadOnly = true;
             // 
             // label10
             // 
@@ -183,7 +221,6 @@
             this.txtGanancia.Name = "txtGanancia";
             this.txtGanancia.Size = new System.Drawing.Size(123, 20);
             this.txtGanancia.TabIndex = 142;
-            this.txtGanancia.ReadOnly = true;
             // 
             // txtPrecioVenta
             // 
@@ -274,6 +311,28 @@
             this.groupBox1.TabIndex = 137;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Insumos:";
+            // 
+            // tlsBuscar
+            // 
+            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
+            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuscar});
+            this.tlsBuscar.Location = new System.Drawing.Point(406, 23);
+            this.tlsBuscar.Name = "tlsBuscar";
+            this.tlsBuscar.Size = new System.Drawing.Size(26, 25);
+            this.tlsBuscar.TabIndex = 151;
+            this.tlsBuscar.Text = "toolStrip2";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnBuscar.Text = "btnBuscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label12
             // 
@@ -408,70 +467,6 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // SKU
-            // 
-            this.SKU.FillWeight = 75F;
-            this.SKU.HeaderText = "SKU";
-            this.SKU.MinimumWidth = 6;
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            this.SKU.Width = 75;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.HeaderText = "Nombre";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 210;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 70F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 70;
-            // 
-            // Costo
-            // 
-            this.Costo.FillWeight = 105F;
-            this.Costo.HeaderText = "Costo Unitario";
-            this.Costo.MinimumWidth = 6;
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            this.Costo.Width = 105;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            // 
-            // tlsBuscar
-            // 
-            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
-            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBuscar});
-            this.tlsBuscar.Location = new System.Drawing.Point(406, 23);
-            this.tlsBuscar.Name = "tlsBuscar";
-            this.tlsBuscar.Size = new System.Drawing.Size(57, 25);
-            this.tlsBuscar.TabIndex = 151;
-            this.tlsBuscar.Text = "toolStrip2";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
-            this.btnBuscar.Text = "btnBuscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,12 +485,12 @@
             this.gbPedido.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tlsBuscar.ResumeLayout(false);
+            this.tlsBuscar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tlsBuscar.ResumeLayout(false);
-            this.tlsBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
