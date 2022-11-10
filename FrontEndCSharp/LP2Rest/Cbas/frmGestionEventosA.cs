@@ -92,49 +92,28 @@ namespace LP2Rest
             }
 
             int resultado = 0;
-            if (_estado == "Modificar")
-            {
-                eventoNuevo.nombre = txtNombre.Text;
-                eventoNuevo.fecha_inicio = dtpFecha.Value;
-                eventoNuevo.fecha_inicioSpecified = true;
-                eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
-                //eventoNuevo.artista = (GestPersonasWS.artista)cboArtista.SelectedItem;
 
-                resultado = daoGestPersonas.ModificarEvento(eventoNuevo);
-                if (resultado != 0)
-                {
-                    txtID.Text = resultado.ToString();
-                    MessageBox.Show("Se ha modificado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error al momento de modificar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else if (_estado == "Nuevo")
-            {
-                eventoNuevo.nombre = txtNombre.Text;
-                //Borrar:
-                eventoNuevo.administrador = new GestPersonasWS.administrador();
-                eventoNuevo.administrador.idPersona = 9;
-                eventoNuevo.fecha_inicio = dtpFecha.Value;
-                eventoNuevo.fecha_inicioSpecified = true;
-                eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
-                //eventoNuevo.artista = (GestPersonasWS.artista)cboArtista.SelectedItem;
+            eventoNuevo.nombre = txtNombre.Text;
+            //Borrar:
+            eventoNuevo.administrador = new GestPersonasWS.administrador();
+            eventoNuevo.administrador.idPersona = 9;
+            eventoNuevo.fecha_inicio = dtpFecha.Value;
+            eventoNuevo.fecha_inicioSpecified = true;
+            eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
+            eventoNuevo.artista = artistaNuevo;
 
-                resultado = daoGestPersonas.InsertarEvento(eventoNuevo);
-                if (resultado != 0)
-                {
-                    txtID.Text = resultado.ToString();
-                    MessageBox.Show("Se ha registrado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error al momento de registrar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            resultado = daoGestPersonas.InsertarEvento(eventoNuevo);
+            if (resultado != 0)
+            {
+                txtID.Text = resultado.ToString();
+                MessageBox.Show("Se ha registrado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
             }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error al momento de registrar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
 
@@ -187,9 +166,9 @@ namespace LP2Rest
             this.Hide();
             if (formGestionArtistaA.ShowDialog() == DialogResult.OK)
             {
-                this.DialogResult = DialogResult.OK;
                 artistaNuevo = formGestionArtistaA.ArtistaSeleccionado;
                 txtArtista.Text = artistaNuevo.nombre;
+                txtID.Text = artistaNuevo.idArtista.ToString();
             }
             this.Show();
         }
