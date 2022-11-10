@@ -64,6 +64,7 @@
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnBorrarFiltro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -96,6 +97,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnBorrarFiltro);
             this.groupBox3.Controls.Add(this.txtMontoMax);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
@@ -236,7 +238,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(557, 165);
+            this.btnBuscar.Location = new System.Drawing.Point(549, 165);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 92;
@@ -375,7 +377,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(227, 579);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(351, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(382, 31);
             this.toolStrip1.TabIndex = 150;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -407,6 +409,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(68, 28);
             this.toolStripButton1.Text = "&Eliminar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -416,6 +419,18 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(74, 28);
             this.toolStripButton2.Text = "&Modificar";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // btnBorrarFiltro
+            // 
+            this.btnBorrarFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarFiltro.Location = new System.Drawing.Point(424, 165);
+            this.btnBorrarFiltro.Name = "btnBorrarFiltro";
+            this.btnBorrarFiltro.Size = new System.Drawing.Size(96, 23);
+            this.btnBorrarFiltro.TabIndex = 117;
+            this.btnBorrarFiltro.Text = "Borrar Filtro";
+            this.btnBorrarFiltro.UseVisualStyleBackColor = true;
+            this.btnBorrarFiltro.Click += new System.EventHandler(this.btnBorrarFiltro_Click);
             // 
             // frmSolicitudesCompras
             // 
@@ -480,5 +495,6 @@
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.Button btnBorrarFiltro;
     }
 }
