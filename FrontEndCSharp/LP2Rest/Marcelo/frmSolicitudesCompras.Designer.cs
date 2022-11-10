@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnBorrarFiltro = new System.Windows.Forms.Button();
             this.txtMontoMax = new System.Windows.Forms.TextBox();
@@ -57,7 +58,7 @@
             this.FechaCumplimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -86,7 +87,7 @@
             this.groupBox3.Controls.Add(this.lblFechaNacimiento);
             this.groupBox3.Controls.Add(this.dtpFechaMinRegistro);
             this.groupBox3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.groupBox3.Location = new System.Drawing.Point(26, 21);
+            this.groupBox3.Location = new System.Drawing.Point(16, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(988, 278);
             this.groupBox3.TabIndex = 148;
@@ -273,7 +274,7 @@
             // 
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.groupBox1.Location = new System.Drawing.Point(26, 319);
+            this.groupBox1.Location = new System.Drawing.Point(16, 319);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(988, 369);
             this.groupBox1.TabIndex = 149;
@@ -294,6 +295,14 @@
             // 
             this.dgvOrdenCompras.AllowUserToAddRows = false;
             this.dgvOrdenCompras.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrdenCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrdenDeCompra,
@@ -302,11 +311,11 @@
             this.FechaCumplimiento,
             this.subtotal,
             this.Estado});
-            this.dgvOrdenCompras.Location = new System.Drawing.Point(23, 19);
+            this.dgvOrdenCompras.Location = new System.Drawing.Point(16, 19);
             this.dgvOrdenCompras.Name = "dgvOrdenCompras";
             this.dgvOrdenCompras.ReadOnly = true;
             this.dgvOrdenCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenCompras.Size = new System.Drawing.Size(937, 301);
+            this.dgvOrdenCompras.Size = new System.Drawing.Size(951, 301);
             this.dgvOrdenCompras.TabIndex = 78;
             this.dgvOrdenCompras.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenCompras_CellFormatting);
             // 
@@ -322,51 +331,51 @@
             this.Proveedor.HeaderText = "Proveedor";
             this.Proveedor.Name = "Proveedor";
             this.Proveedor.ReadOnly = true;
-            this.Proveedor.Width = 208;
+            this.Proveedor.Width = 206;
             // 
             // fechaRegistro
             // 
             this.fechaRegistro.HeaderText = "Fecha de Registro";
             this.fechaRegistro.Name = "fechaRegistro";
             this.fechaRegistro.ReadOnly = true;
-            this.fechaRegistro.Width = 150;
+            this.fechaRegistro.Width = 160;
             // 
             // FechaCumplimiento
             // 
             this.FechaCumplimiento.HeaderText = "Fecha de Cumplimiento";
             this.FechaCumplimiento.Name = "FechaCumplimiento";
             this.FechaCumplimiento.ReadOnly = true;
-            this.FechaCumplimiento.Width = 150;
+            this.FechaCumplimiento.Width = 160;
             // 
             // subtotal
             // 
             this.subtotal.HeaderText = "Monto Total";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
-            this.subtotal.Width = 80;
+            this.subtotal.Width = 120;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Width = 80;
+            this.Estado.Width = 74;
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.BackColor = System.Drawing.Color.Sienna;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(29, 705);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 41);
-            this.button1.TabIndex = 154;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscar.BackColor = System.Drawing.Color.Sienna;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(19, 708);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(234, 41);
+            this.btnBuscar.TabIndex = 154;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
@@ -375,7 +384,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(896, 705);
+            this.btnEliminar.Location = new System.Drawing.Point(886, 708);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(115, 41);
             this.btnEliminar.TabIndex = 153;
@@ -390,7 +399,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(775, 705);
+            this.btnModificar.Location = new System.Drawing.Point(765, 708);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(115, 41);
             this.btnModificar.TabIndex = 152;
@@ -405,7 +414,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(654, 705);
+            this.button2.Location = new System.Drawing.Point(644, 708);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 41);
             this.button2.TabIndex = 151;
@@ -420,7 +429,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(327, 705);
+            this.button3.Location = new System.Drawing.Point(317, 708);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(255, 41);
             this.button3.TabIndex = 155;
@@ -432,9 +441,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 768);
+            this.ClientSize = new System.Drawing.Size(1020, 768);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button2);
@@ -483,7 +492,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Button btnBorrarFiltro;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button2;

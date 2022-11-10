@@ -139,7 +139,7 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(256, 686);
+            this.panelIzquierdo.Size = new System.Drawing.Size(256, 862);
             this.panelIzquierdo.TabIndex = 26;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -149,7 +149,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 617);
+            this.panel4.Size = new System.Drawing.Size(8, 793);
             this.panel4.TabIndex = 17;
             // 
             // sdbtnPlatos
@@ -159,7 +159,7 @@
             this.sdbtnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_small;
             this.sdbtnPlatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 227);
+            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 327);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnPlatos.Size = new System.Drawing.Size(294, 59);
@@ -187,7 +187,7 @@
             this.sdbtnCompras.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_small;
             this.sdbtnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnCompras.Location = new System.Drawing.Point(0, 310);
+            this.sdbtnCompras.Location = new System.Drawing.Point(0, 407);
             this.sdbtnCompras.Name = "sdbtnCompras";
             this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnCompras.Size = new System.Drawing.Size(294, 59);
@@ -204,7 +204,7 @@
             this.sdbtnInsumos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_small;
             this.sdbtnInsumos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnInsumos.Location = new System.Drawing.Point(0, 392);
+            this.sdbtnInsumos.Location = new System.Drawing.Point(0, 489);
             this.sdbtnInsumos.Name = "sdbtnInsumos";
             this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnInsumos.Size = new System.Drawing.Size(294, 59);
@@ -226,7 +226,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 617);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 793);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(256, 69);
@@ -243,7 +243,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1018, 586);
+            this.panelContenedor.Size = new System.Drawing.Size(1018, 762);
             this.panelContenedor.TabIndex = 29;
             // 
             // label3
@@ -251,7 +251,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(184, 137);
+            this.label3.Location = new System.Drawing.Point(175, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(665, 299);
             this.label3.TabIndex = 27;
@@ -271,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 686);
+            this.ClientSize = new System.Drawing.Size(1274, 862);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
