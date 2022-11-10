@@ -386,5 +386,10 @@ namespace LP2Rest
                 MessageBox.Show("No hay pedido actual", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
