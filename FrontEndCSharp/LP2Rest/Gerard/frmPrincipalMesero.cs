@@ -38,7 +38,13 @@ namespace LP2Rest
             lblID.Text = "Mesero #"+ meseroSeleccionado.idPersona.ToString();
             label1.Text = "Bienvenido " + meseroSeleccionado.nombre + " " + meseroSeleccionado.apellidoPaterno;
         }
-        
+
+        public frmPrincipalMesero(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            lblID.Text = "Mesero: " + cuenta.usuario;
+        }
+
         public void abrirFormulario(Form formularioMostrar)
         {
             if(formularioActivo != null)
@@ -102,7 +108,7 @@ namespace LP2Rest
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
@@ -141,6 +147,11 @@ namespace LP2Rest
         private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmBusquedaCliente());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

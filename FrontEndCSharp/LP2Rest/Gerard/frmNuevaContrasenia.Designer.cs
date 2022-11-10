@@ -67,6 +67,7 @@
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(434, 272);
             this.panelDerecho.TabIndex = 19;
+            this.panelDerecho.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDerecho_MouseDown);
             // 
             // btnMostrarOcultar2
             // 
@@ -204,6 +205,7 @@
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(144, 272);
             this.panelIzquierdo.TabIndex = 18;
+            this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
             // panel3
             // 
@@ -234,6 +236,7 @@
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNuevaContrasenia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevaContrasenia";
             this.panelDerecho.ResumeLayout(false);
             this.panelDerecho.PerformLayout();

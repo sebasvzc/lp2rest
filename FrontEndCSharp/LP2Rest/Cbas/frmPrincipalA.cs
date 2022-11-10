@@ -33,6 +33,15 @@ namespace LP2Rest
             _asistencia = new GestPersonasWS.asistencia();
         }
 
+        public frmPrincipalA(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            btnRegistrarSalida.Hide();
+            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            _asistencia = new GestPersonasWS.asistencia();
+            lblID.Text = "Administrador: " + cuenta.usuario;
+        }
+
         private void btnCompras_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarOrdenesCompra());
@@ -75,41 +84,49 @@ namespace LP2Rest
 
         private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Usuarios";
             abrirFormulario(new frmListarUsuariosA());
         }
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Ventas";
             abrirFormulario(new frmListarOrdenesVentaA());
         }
 
         private void sdbtnEventos_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Eventos";
             abrirFormulario(new frmListarEventosA());
         }
 
         private void sdbtnReportes_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Reportes";
             abrirFormulario(new frmListarReportesA());
         }
 
         private void sdbtnInsumos_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Insumos";
             abrirFormulario(new frmListarInsumosA());
         }
 
         private void sdbtnCompras_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Compras";
             abrirFormulario(new frmSolicitudesCompras());
         }
 
         private void sdbtnReclamos_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Reclamos";
             abrirFormulario(new frmListarReclamosA());
         }
 
         private void sdbtnPlatos_Click(object sender, EventArgs e)
         {
+            lbltitulo.Text = "Platos";
             abrirFormulario(new frmListarPlatos());
         }
 

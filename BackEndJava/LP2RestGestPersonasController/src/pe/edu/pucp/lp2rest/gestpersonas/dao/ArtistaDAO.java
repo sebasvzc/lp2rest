@@ -9,4 +9,5 @@ public interface ArtistaDAO {
     int modificar(Artista artista);
     int eliminar(int idArtista);
     ArrayList<Artista> listarTodas();
+    public ArrayList<Artista> listarPorNombre(String nombre);
 }

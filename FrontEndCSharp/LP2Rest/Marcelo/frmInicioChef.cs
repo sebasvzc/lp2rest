@@ -6,6 +6,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,90 +16,48 @@ namespace LP2Rest
 {
     public partial class frmInicioChef : Form
     {
+        private static Form formularioActivo = null;
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
+        private GestPersonasWS.cuentaUsuario _cuenta;
         public frmInicioChef()
         {
             InitializeComponent();
             _asistencia = new GestPersonasWS.asistencia();
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
-            
-            pbSalida.Hide();
-            lblSalida.Hide();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public frmInicioChef(GestPersonasWS.cuentaUsuario cuenta)
         {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-            pbPlatos_Click(sender, e);
+            InitializeComponent();
+            _asistencia = new GestPersonasWS.asistencia();
+            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            _cuenta = cuenta;
+            lblID.Text = "Chef: " + cuenta.usuario;
         }
 
         private void pbPlatos_Click(object sender, EventArgs e)
         {
-            frmBusquedaReceta formPlatos = new frmBusquedaReceta();
-            if (formPlatos.ShowDialog() == DialogResult.OK)
-            {
-            }
+            label2.Text = "Platos";
+            abrirFormulario(new frmListarPlatos(_cuenta));
         }
 
         private void pbInsumos_Click(object sender, EventArgs e)
         {
-            frmBusquedaInsumos formInsumos = new frmBusquedaInsumos();
-            if (formInsumos.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void lblInsumos_Click(object sender, EventArgs e)
-        {
-            pbInsumos_Click(sender, e);
+            label2.Text = "Insumos";
+            abrirFormulario(new frmListarInsumosA());
         }
 
         private void pbSolicitudCompras_Click(object sender, EventArgs e)
         {
-            frmSolicitudesCompras formSolCompras = new frmSolicitudesCompras();
-            if (formSolCompras.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void pbVolver_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
-        private void pbAsistencia_Click(object sender, EventArgs e)
-        {
-
+            label2.Text = "Compras";
+            abrirFormulario(new frmSolicitudesCompras());
         }
 
         private void lblAsistencia_Click(object sender, EventArgs e)
@@ -124,10 +84,6 @@ namespace LP2Rest
                 _asistencia.idCuentaUsuario = 2;
 
                 MessageBox.Show("Se registró la asistencia");
-                pbAsistencia.Hide();
-                lblAsistencia.Hide();
-                pbSalida.Show();
-                lblSalida.Show();
 
             }
         }
@@ -160,8 +116,6 @@ namespace LP2Rest
                 if (resultadoInsercion != 0)
                 {
                     MessageBox.Show("Se registró exitosamente la salida");
-                    lblSalida.Hide();
-                    pbSalida.Hide();
                 }
                 else
                 {
@@ -172,6 +126,48 @@ namespace LP2Rest
 
 
             }
+        }
+
+        public void abrirFormulario(Form formularioMostrar)
+        {
+            if (formularioActivo != null)
+                formularioActivo.Close();
+            label3.Hide();
+            formularioActivo = formularioMostrar;
+            formularioMostrar.TopLevel = false;
+            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
+            formularioMostrar.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioMostrar);
+            formularioMostrar.Show();
+        }
+
+        private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void label2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void panelIzquierdo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

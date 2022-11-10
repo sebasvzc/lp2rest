@@ -86,6 +86,7 @@ hs_err_pid*
 /FrontEndCSharp/LP2Rest/Connected Services/AlmacenWS/*
 /FrontEndCSharp/LP2Rest/Connected Services/GestPersonasWS/*
 /FrontEndCSharp/LP2Rest/Connected Services/VentasWS/*
+/FrontEndCSharp/LP2Rest/Connected Services/ReporteWS/*
 
 !/FrontEndCSharp/LP2Rest/Connected Services/MenuWS/Reference.svcmap
 !/FrontEndCSharp/LP2Rest/Connected Services/MenuWS/Reference.cs
@@ -95,6 +96,8 @@ hs_err_pid*
 !/FrontEndCSharp/LP2Rest/Connected Services/GestPersonasWS/Reference.cs
 !/FrontEndCSharp/LP2Rest/Connected Services/VentasWS/Reference.svcmap
 !/FrontEndCSharp/LP2Rest/Connected Services/VentasWS/Reference.cs
+!/FrontEndCSharp/LP2Rest/Connected Services/ReporteWS/Reference.svcmap
+!/FrontEndCSharp/LP2Rest/Connected Services/ReporteWS/Reference.cs
 
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/itext-2.1.7.js7.jar
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/jasperreports-custom-visualization-6.10.0.jar
@@ -116,3 +119,4 @@ hs_err_pid*
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/org.apache.commons.logging_1.2.0.v20180409-1502.jar
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/spring-core-5.1.4.RELEASE.jar
 !/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/spring-beans-5.1.4.RELEASE.jar
+!/BackEndJava/LP2RestWebServices/src/java/pe/edu/pucp/lp2rest/lib/mail.jar

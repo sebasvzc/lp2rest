@@ -33,7 +33,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linea = new System.Windows.Forms.PictureBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtCodVerif = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -87,7 +87,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.panel2.Controls.Add(this.linea);
-            this.panel2.Controls.Add(this.txtDNI);
+            this.panel2.Controls.Add(this.txtCodVerif);
             this.panel2.Controls.Add(this.btnVerificar);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.lblInstrucciones);
@@ -108,17 +108,17 @@
             this.linea.TabIndex = 23;
             this.linea.TabStop = false;
             // 
-            // txtDNI
+            // txtCodVerif
             // 
-            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
-            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
-            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDNI.Location = new System.Drawing.Point(34, 86);
-            this.txtDNI.MaxLength = 8;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(223, 22);
-            this.txtDNI.TabIndex = 22;
+            this.txtCodVerif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
+            this.txtCodVerif.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodVerif.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
+            this.txtCodVerif.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCodVerif.Location = new System.Drawing.Point(34, 86);
+            this.txtCodVerif.MaxLength = 10;
+            this.txtCodVerif.Name = "txtCodVerif";
+            this.txtCodVerif.Size = new System.Drawing.Size(223, 22);
+            this.txtCodVerif.TabIndex = 22;
             // 
             // panel1
             // 
@@ -161,6 +161,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmValidarIdentidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ValidarIdentidad";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -180,6 +181,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox linea;
-        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtCodVerif;
     }
 }

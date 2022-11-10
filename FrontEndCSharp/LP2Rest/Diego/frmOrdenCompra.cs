@@ -83,6 +83,7 @@ namespace LP2Rest.Diego
                 dtpFechaRegistro.Enabled = false;
                 dtpFechaCumplimiento.Enabled = false;
                 txtDescripcion.Enabled = false;
+                btnValidarOC.Visible = false;
 
             }
             if (tipo == "Modificar")
@@ -90,10 +91,15 @@ namespace LP2Rest.Diego
 
 
                 _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>();
-                //_lineaOrdenComprainsumos =(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra));
+                if(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra) != null)
+                    _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra).ToList());
+                else
+                    _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>();
                 dgvLineaOrdenCompra.AutoGenerateColumns = false;
                 dgvLineaOrdenCompra.DataSource = _lineaOrdenComprainsumos;
-
+                _proveedor= new GestPersonasWS.proveedor();
+                _proveedor.idPersona = oc.proveedor.idPersona;
+                _ordenCompraNuevo.idOrdenCompra = oc.idOrdenCompra;
                 txtOrdenCompra.Text = "OC" + string.Format("{0:D5}", oc.idOrdenCompra);
                 txtProveedor.Text = oc.proveedor.razonSocial;
                 txtEstado.Text = oc.estado;
@@ -205,17 +211,17 @@ namespace LP2Rest.Diego
             }
             if (estadoActual == "Modificar")
             {
-                //int resultado = daoGestAlmacen.ModificarOrdenCompra(_ordenCompraNuevo);
-                /*if (resultado != 0)
+                int resultado = daoGestAlmacen.ModificarOrdenCompra(_ordenCompraNuevo);
+                if (resultado != 0)
                 {
-                    MessageBox.Show("Se ha registrado exitosamente la orden de compra", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha modificado exitosamente la orden de compra", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtOrdenCompra.Text = resultado.ToString();
                     this.DialogResult = DialogResult.OK;
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error al registrar la oredn de compra", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+                    MessageBox.Show("Ha ocurrido un error al modificar la oredn de compra", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         
         }
@@ -228,6 +234,18 @@ namespace LP2Rest.Diego
                 _proveedor = formBuscarProveedor.ProveedorSeleccionada;
                 txtProveedor.Text = _proveedor.razonSocial;
             }
+        }
+
+        private void btnEliminarInsumo_Click(object sender, EventArgs e)
+        {
+            AlmacenWS.lineaOrdenCompra autorSelect = (AlmacenWS.lineaOrdenCompra)dgvLineaOrdenCompra.CurrentRow.DataBoundItem;
+            _lineaOrdenComprainsumos.Remove(autorSelect);
+        }
+
+        private void btnValidarOC_Click(object sender, EventArgs e)
+        {
+            int resultado = daoGestAlmacen.ActualizarEstadoOrdenCompra(_ordenCompraNuevo.idOrdenCompra);
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

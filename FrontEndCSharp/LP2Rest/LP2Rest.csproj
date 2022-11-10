@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cbas\frmGestionArtistasA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmGestionArtistasA.Designer.cs">
+      <DependentUpon>frmGestionArtistasA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cbas\frmGestionEmpleadosBusquedaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\MenuWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ReporteWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -308,6 +319,12 @@
     <Compile Include="Cbas\frmListarReclamosA.Designer.cs">
       <DependentUpon>frmListarReclamosA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Omar\frmBuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmBuscarEmpleado.Designer.cs">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Omar\frmListarReportesA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +397,12 @@
     <Compile Include="Gerard\frmRecuperarContrasenia.Designer.cs">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Omar\frmModificarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmModificarPlato.Designer.cs">
+      <DependentUpon>frmModificarPlato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Omar\frmReporteOrdenesVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +429,9 @@
     <Compile Include="Gerard\frmValidarIdentidad.Designer.cs">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cbas\frmGestionArtistasA.resx">
+      <DependentUpon>frmGestionArtistasA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cbas\frmGestionReclamosBusquedaClientes.resx">
       <DependentUpon>frmGestionReclamosBusquedaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +453,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmGestionarCombos.resx">
       <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
@@ -478,6 +505,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cbas\frmGestionEventosA.resx">
       <DependentUpon>frmGestionEventosA.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmGestionInsumo.resx">
       <DependentUpon>frmGestionInsumo.cs</DependentUpon>
@@ -527,6 +555,9 @@
     <EmbeddedResource Include="Cbas\frmListarReclamosA.resx">
       <DependentUpon>frmListarReclamosA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmBuscarEmpleado.resx">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Omar\frmListarReportesA.resx">
       <DependentUpon>frmListarReportesA.cs</DependentUpon>
     </EmbeddedResource>
@@ -565,6 +596,9 @@
     <EmbeddedResource Include="Gerard\frmRecuperarContrasenia.resx">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmModificarPlato.resx">
+      <DependentUpon>frmModificarPlato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Omar\frmReporteOrdenesVenta.resx">
       <DependentUpon>frmReporteOrdenesVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -591,6 +625,9 @@
     <None Include="Connected Services\AlmacenWS\AlmacenWS.wsdl" />
     <None Include="Connected Services\AlmacenWS\AlmacenWS.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.BuscarInsumosPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -626,6 +663,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.lineaOrdenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.listarInsumosPorIdItemVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse.datasource">
@@ -664,6 +704,9 @@
     <None Include="Connected Services\GestPersonasWS\GestPersonasWS.wsdl" />
     <None Include="Connected Services\GestPersonasWS\GestPersonasWS.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.actualizarContraseniaCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -716,6 +759,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarReclamoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.enviarCorreoRecuperacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.empleado.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -762,6 +808,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.InsertarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarArtistasPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaEmpleadosResponse.datasource">
@@ -854,6 +903,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.reclamo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.validarCodigoCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.verificarCuentaUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -887,6 +939,9 @@
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.itemVenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarLineasComboXIdComboResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarTodasItemVentasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -914,6 +969,13 @@
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.documentoPago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -1119,6 +1181,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\cancelar.png" />
     <Content Include="Resources\eliminar.png" />
     <None Include="Resources\Image1.bmp" />
@@ -1154,7 +1222,27 @@
     <WCFMetadataStorage Include="Connected Services\AlmacenWS\" />
     <WCFMetadataStorage Include="Connected Services\GestPersonasWS\" />
     <WCFMetadataStorage Include="Connected Services\MenuWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteWS\" />
     <WCFMetadataStorage Include="Connected Services\VentasWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

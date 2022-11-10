@@ -31,18 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaInicial = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.tbNomCli = new System.Windows.Forms.TextBox();
             this.lblDNINombre = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.dgvReclamos = new System.Windows.Forms.DataGridView();
             this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,26 +55,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbNomAdm = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReclamos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(40, 26);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(303, 31);
-            this.lblTitulo.TabIndex = 95;
-            this.lblTitulo.Text = "Listado de Reclamos";
             // 
             // cboEstado
             // 
             this.cboEstado.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(901, 274);
+            this.cboEstado.Location = new System.Drawing.Point(901, 214);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(150, 33);
             this.cboEstado.TabIndex = 87;
@@ -89,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(897, 248);
+            this.label3.Location = new System.Drawing.Point(897, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 23);
             this.label3.TabIndex = 86;
@@ -114,21 +101,10 @@
             this.dtpFechaInicial.Size = new System.Drawing.Size(309, 32);
             this.dtpFechaInicial.TabIndex = 83;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(832, 24);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(219, 41);
-            this.btnBuscar.TabIndex = 82;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // tbNomCli
             // 
             this.tbNomCli.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbNomCli.Location = new System.Drawing.Point(46, 191);
+            this.tbNomCli.Location = new System.Drawing.Point(46, 131);
             this.tbNomCli.Name = "tbNomCli";
             this.tbNomCli.Size = new System.Drawing.Size(317, 32);
             this.tbNomCli.TabIndex = 81;
@@ -137,54 +113,12 @@
             // 
             this.lblDNINombre.AutoSize = true;
             this.lblDNINombre.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDNINombre.Location = new System.Drawing.Point(42, 165);
+            this.lblDNINombre.Location = new System.Drawing.Point(42, 105);
             this.lblDNINombre.Name = "lblDNINombre";
             this.lblDNINombre.Size = new System.Drawing.Size(201, 23);
             this.lblDNINombre.TabIndex = 80;
             this.lblDNINombre.Text = "Nombre del Cliente:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
-            this.btnModificar,
-            this.btnEliminar});
-            this.toolStrip1.Location = new System.Drawing.Point(388, 726);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(318, 30);
-            this.toolStrip1.TabIndex = 79;
-            this.toolStrip1.Text = "tsMenu";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(92, 27);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(108, 27);
-            this.btnModificar.Text = "&Atender";
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(106, 27);
-            this.btnEliminar.Text = "&Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvReclamos
             // 
@@ -212,7 +146,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReclamos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvReclamos.Location = new System.Drawing.Point(46, 347);
+            this.dgvReclamos.Location = new System.Drawing.Point(46, 287);
             this.dgvReclamos.Name = "dgvReclamos";
             this.dgvReclamos.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -224,7 +158,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvReclamos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvReclamos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReclamos.Size = new System.Drawing.Size(1005, 362);
+            this.dgvReclamos.Size = new System.Drawing.Size(1005, 411);
             this.dgvReclamos.TabIndex = 78;
             this.dgvReclamos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReclamos_CellFormatting);
             // 
@@ -281,7 +215,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(46, 239);
+            this.groupBox1.Location = new System.Drawing.Point(46, 179);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(827, 85);
             this.groupBox1.TabIndex = 100;
@@ -291,7 +225,7 @@
             // tbApeCli
             // 
             this.tbApeCli.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbApeCli.Location = new System.Drawing.Point(46, 114);
+            this.tbApeCli.Location = new System.Drawing.Point(46, 54);
             this.tbApeCli.Name = "tbApeCli";
             this.tbApeCli.Size = new System.Drawing.Size(317, 32);
             this.tbApeCli.TabIndex = 104;
@@ -300,7 +234,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 88);
+            this.label6.Location = new System.Drawing.Point(42, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(202, 23);
             this.label6.TabIndex = 103;
@@ -310,7 +244,7 @@
             // tbApeEmp
             // 
             this.tbApeEmp.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbApeEmp.Location = new System.Drawing.Point(388, 114);
+            this.tbApeEmp.Location = new System.Drawing.Point(388, 54);
             this.tbApeEmp.Name = "tbApeEmp";
             this.tbApeEmp.Size = new System.Drawing.Size(317, 32);
             this.tbApeEmp.TabIndex = 108;
@@ -319,7 +253,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(384, 88);
+            this.label4.Location = new System.Drawing.Point(384, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(225, 23);
             this.label4.TabIndex = 107;
@@ -329,7 +263,7 @@
             // tbNomEmp
             // 
             this.tbNomEmp.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbNomEmp.Location = new System.Drawing.Point(388, 191);
+            this.tbNomEmp.Location = new System.Drawing.Point(388, 131);
             this.tbNomEmp.Name = "tbNomEmp";
             this.tbNomEmp.Size = new System.Drawing.Size(317, 32);
             this.tbNomEmp.TabIndex = 106;
@@ -338,7 +272,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(384, 165);
+            this.label5.Location = new System.Drawing.Point(384, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(224, 23);
             this.label5.TabIndex = 105;
@@ -348,7 +282,7 @@
             // tbApeAdm
             // 
             this.tbApeAdm.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbApeAdm.Location = new System.Drawing.Point(734, 114);
+            this.tbApeAdm.Location = new System.Drawing.Point(734, 54);
             this.tbApeAdm.Name = "tbApeAdm";
             this.tbApeAdm.Size = new System.Drawing.Size(317, 32);
             this.tbApeAdm.TabIndex = 112;
@@ -357,7 +291,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(730, 88);
+            this.label9.Location = new System.Drawing.Point(730, 28);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(267, 23);
             this.label9.TabIndex = 111;
@@ -367,7 +301,7 @@
             // tbNomAdm
             // 
             this.tbNomAdm.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbNomAdm.Location = new System.Drawing.Point(734, 191);
+            this.tbNomAdm.Location = new System.Drawing.Point(734, 131);
             this.tbNomAdm.Name = "tbNomAdm";
             this.tbNomAdm.Size = new System.Drawing.Size(317, 32);
             this.tbNomAdm.TabIndex = 110;
@@ -376,18 +310,83 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("MS UI Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(730, 165);
+            this.label10.Location = new System.Drawing.Point(730, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(266, 23);
             this.label10.TabIndex = 109;
             this.label10.Text = "Nombre del Administrador:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Sienna;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(46, 717);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(234, 41);
+            this.button1.TabIndex = 116;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(936, 717);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(115, 41);
+            this.btnEliminar.TabIndex = 115;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(815, 717);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(115, 41);
+            this.btnModificar.TabIndex = 114;
+            this.btnModificar.Text = "Atender";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(694, 717);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(115, 41);
+            this.btnNuevo.TabIndex = 113;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // frmListarReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.tbApeAdm);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbNomAdm);
@@ -399,18 +398,13 @@
             this.Controls.Add(this.tbApeCli);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbNomCli);
             this.Controls.Add(this.lblDNINombre);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvReclamos);
             this.Name = "frmListarReclamosA";
             this.Text = "Listado de Reclamos";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReclamos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -420,18 +414,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaInicial;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox tbNomCli;
         private System.Windows.Forms.Label lblDNINombre;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnNuevo;
-        private System.Windows.Forms.ToolStripButton btnModificar;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.DataGridView dgvReclamos;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpleado;
@@ -450,5 +438,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbNomAdm;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

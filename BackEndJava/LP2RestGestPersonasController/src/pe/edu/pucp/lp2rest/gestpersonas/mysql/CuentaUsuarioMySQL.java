@@ -1,9 +1,21 @@
 package pe.edu.pucp.lp2rest.gestpersonas.mysql;
 
+import java.awt.Panel;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Properties;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.JOptionPane;
 import pe.edu.pucp.lp2rest.config.DBManager;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.CuentaUsuarioDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.model.CuentaUsuario;
@@ -15,6 +27,24 @@ public class CuentaUsuarioMySQL implements CuentaUsuarioDAO {
     private Connection con;
     private CallableStatement cs;
     private ResultSet rs;
+
+    public static String cadenaAleatoria(int longitud) {
+        // El banco de caracteres
+        String banco = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        // La cadena en donde iremos agregando un carácter aleatorio
+        String cadena = "";
+        for (int x = 0; x < longitud; x++) {
+            int indiceAleatorio = numeroAleatorioEnRango(0, banco.length() - 1);
+            char caracterAleatorio = banco.charAt(indiceAleatorio);
+            cadena += caracterAleatorio;
+        }
+        return cadena;
+    }
+
+    public static int numeroAleatorioEnRango(int minimo, int maximo) {
+        // nextInt regresa en rango pero con límite superior exclusivo, por eso sumamos 1
+        return ThreadLocalRandom.current().nextInt(minimo, maximo + 1);
+    }
 
     @Override
     public int insertar(CuentaUsuario cuentaUsuario) {
@@ -159,4 +189,126 @@ public class CuentaUsuarioMySQL implements CuentaUsuarioDAO {
         return cuentaUsuarioRetorno;
     }
 
+    @Override
+    public int enviarCorreoRecuperacion(String correoReceptor) {
+        int resultado = 0, cuentaUsuario = 0;
+        String codigoVerificacion = cadenaAleatoria(10);
+
+        Properties propiedad = new Properties();
+        propiedad.setProperty("mail.smtp.host", "smtp.gmail.com");
+        propiedad.setProperty("mail.smtp.starttls.enable", "true");
+        propiedad.setProperty("mail.smtp.port", "587");
+        propiedad.setProperty("mail.smtp.auth", "true");
+
+        Session sesion = Session.getDefaultInstance(propiedad);
+        String correoEnvia = "lp2rest@gmail.com";
+        String contrasena = "ewgujuqszibdkzhp";
+        String receptor = correoReceptor;
+        String asunto = "Recuperación de contraseña LP2Rest";
+        String mensaje = "Por favor, introduzca el siguiente codigo de verificación"
+                + " en la interfaz: " + codigoVerificacion;
+
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call INSERTAR_CODIGO_VERIFICACION(?,?,?)}");
+            cs.registerOutParameter("_id_cuentaUsuario", java.sql.Types.INTEGER);
+            cs.setString("_correo_receptor", correoReceptor);
+            cs.setString("_codigo_verificacion", codigoVerificacion);
+
+            cs.executeUpdate();
+            cuentaUsuario = cs.getInt("_id_cuentaUsuario");
+            resultado = 1;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return 0;
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+
+        resultado = 0;
+        MimeMessage mail = new MimeMessage(sesion);
+        try {
+            mail.setFrom(new InternetAddress(correoEnvia));
+            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(receptor));
+            mail.setSubject(asunto);
+            mail.setText(mensaje);
+
+            Transport transportar = sesion.getTransport("smtp");
+            transportar.connect(correoEnvia, contrasena);
+            transportar.sendMessage(mail, mail.getRecipients(Message.RecipientType.TO));
+            transportar.close();
+            resultado = cuentaUsuario;
+            //JOptionPane.showMessageDialog(null, "Listo, revise su correoReceptor");
+
+        } catch (MessagingException ex) {
+            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return resultado;
+
+    }
+
+    @Override
+    public int verificarCodigoVerificacion(int idCuentaUsuario, String codigo) {
+        int resultado = 0;
+        String codigoObtenido = "";
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call OBTENER_CODIGO_VERIFICACION(?,?)");
+            cs.registerOutParameter("_codigo_verificacion", java.sql.Types.VARCHAR);
+            cs.setInt("_id_cuentaUsuario", idCuentaUsuario);
+            rs = cs.executeQuery();
+            codigoObtenido = cs.getString("_codigo_verificacion");
+
+            if (codigo.equals(codigoObtenido)) {
+                resultado = 1;
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                rs.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+
+        return resultado;
+    }
+
+    @Override
+    public int actualizarContrasenia(int idCuentaUsuario, String contrasenia) {
+        int resultado = 0;
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call ACTUALIZAR_CONTRASENIA_CUENTA_USUARIO(?,?)");
+            cs.setInt("_id_cuentaUsuario", idCuentaUsuario);
+            cs.setString("_password", contrasenia);
+            rs = cs.executeQuery();
+
+            resultado = 1;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                rs.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+    }
 }

@@ -67,6 +67,7 @@
             this.FechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnValidarOC = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -150,6 +151,7 @@
             this.btnEliminarInsumo.Size = new System.Drawing.Size(28, 28);
             this.btnEliminarInsumo.TabIndex = 195;
             this.btnEliminarInsumo.UseVisualStyleBackColor = true;
+            this.btnEliminarInsumo.Click += new System.EventHandler(this.btnEliminarInsumo_Click);
             // 
             // btnBuscarProducto
             // 
@@ -307,6 +309,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnValidarOC);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Controls.Add(this.dgvLineaOrdenCompra);
             this.groupBox1.Controls.Add(this.txtMonto);
@@ -429,6 +432,17 @@
             this.label1.TabIndex = 153;
             this.label1.Text = "Total:";
             // 
+            // btnValidarOC
+            // 
+            this.btnValidarOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidarOC.Location = new System.Drawing.Point(28, 178);
+            this.btnValidarOC.Name = "btnValidarOC";
+            this.btnValidarOC.Size = new System.Drawing.Size(194, 23);
+            this.btnValidarOC.TabIndex = 205;
+            this.btnValidarOC.Text = "Validar Orden de Compra";
+            this.btnValidarOC.UseVisualStyleBackColor = true;
+            this.btnValidarOC.Click += new System.EventHandler(this.btnValidarOC_Click);
+            // 
             // frmOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,5 +529,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaVencimiento;
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnValidarOC;
     }
 }

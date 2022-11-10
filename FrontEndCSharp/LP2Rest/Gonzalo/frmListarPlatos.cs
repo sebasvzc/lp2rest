@@ -1,4 +1,6 @@
 ﻿using LP2Rest.Gonzalo;
+using LP2Rest.MenuWS;
+using LP2Rest.Omar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +16,10 @@ namespace LP2Rest
     public partial class frmListarPlatos : Form
     {
         private MenuWS.MenuWSClient daoMenu;
+        private MenuWS.itemVenta _itemVentaSeleccionado;
+
+        public itemVenta ItemVentaSeleccionado { get => _itemVentaSeleccionado; set => _itemVentaSeleccionado = value; }
+
         public frmListarPlatos()
         {
             InitializeComponent();
@@ -24,6 +30,24 @@ namespace LP2Rest
             cboDisponible.Items.Add("Disponible");
             cboDisponible.Items.Add("Agotado");
             dgvItemsVenta.AutoGenerateColumns = false;
+        }
+
+        public frmListarPlatos(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            daoMenu = new MenuWS.MenuWSClient();
+            cboCategoria.DataSource = daoMenu.listarTodasTiposDeItem();
+            cboCategoria.DisplayMember = "descripcion";
+            cboCategoria.ValueMember = "idTipoItem";
+            cboDisponible.Items.Add("Disponible");
+            cboDisponible.Items.Add("Agotado");
+            dgvItemsVenta.AutoGenerateColumns = false;
+            if(cuenta.tipoEmpleado == 'F')
+            {
+                btnNuevoPlato.Visible = false;
+                btnNuevoCombo.Visible = false;
+                btnEliminar.Visible = false;
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e) //Crea plato
@@ -106,7 +130,16 @@ namespace LP2Rest
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            if(dgvItemsVenta.CurrentRow != null)
+            {
+                _itemVentaSeleccionado = (MenuWS.itemVenta)dgvItemsVenta.CurrentRow.DataBoundItem;
+                frmModificarPlato formModificarPlato = new frmModificarPlato(_itemVentaSeleccionado);
+                formModificarPlato.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un itemVenta", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -30,6 +30,11 @@
         {
             this.btnBuscarPlatoCombo = new System.Windows.Forms.Button();
             this.dgvItemsVenta = new System.Windows.Forms.DataGridView();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboDisponible = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevoCombo = new System.Windows.Forms.ToolStripButton();
@@ -50,11 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemsVenta)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,6 +93,46 @@
             this.dgvItemsVenta.Size = new System.Drawing.Size(1015, 299);
             this.dgvItemsVenta.TabIndex = 131;
             this.dgvItemsVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvItemsVenta_CellFormatting);
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "ID ItemVenta";
+            this.NombreCompleto.MinimumWidth = 6;
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 233;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Nombre";
+            this.Teléfono.MinimumWidth = 6;
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 344;
+            // 
+            // Categoría
+            // 
+            this.Categoría.HeaderText = "Categoría";
+            this.Categoría.MinimumWidth = 6;
+            this.Categoría.Name = "Categoría";
+            this.Categoría.ReadOnly = true;
+            this.Categoría.Width = 120;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Precio";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 140;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 125;
             // 
             // cboDisponible
             // 
@@ -308,46 +348,6 @@
             this.label4.TabIndex = 144;
             this.label4.Text = "Categoría:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "ID ItemVenta";
-            this.NombreCompleto.MinimumWidth = 6;
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 233;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Nombre";
-            this.Teléfono.MinimumWidth = 6;
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 344;
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Categoría";
-            this.Categoría.MinimumWidth = 6;
-            this.Categoría.Name = "Categoría";
-            this.Categoría.ReadOnly = true;
-            this.Categoría.Width = 120;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Precio";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 140;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 125;
             // 
             // frmListarPlatos
             // 
