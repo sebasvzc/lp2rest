@@ -19,11 +19,19 @@ namespace LP2Rest
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+        private int _idCuentaUsuario;
+        private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
+        public frmValidarIdentidad(int idCuentaUsuario)
+        {
+            InitializeComponent();
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
+            _idCuentaUsuario = idCuentaUsuario;
+        }
         public frmValidarIdentidad()
         {
             InitializeComponent();
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
         }
-
         private void lblInstrucciones_Click(object sender, EventArgs e)
         {
 
@@ -36,9 +44,14 @@ namespace LP2Rest
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            if (new frmNuevaContrasenia().ShowDialog() == DialogResult.OK)
+            int verificacionExitosa = daoGestPersonas.validarCodigoCuentaUsuario(_idCuentaUsuario, txtCodVerif.Text);
+            if (verificacionExitosa != 0 && new frmNuevaContrasenia(_idCuentaUsuario).ShowDialog() == DialogResult.OK)
             {
                 this.DialogResult = DialogResult.OK;
+            }
+            else if (verificacionExitosa == 0)
+            {
+                MessageBox.Show("El código de verificación es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

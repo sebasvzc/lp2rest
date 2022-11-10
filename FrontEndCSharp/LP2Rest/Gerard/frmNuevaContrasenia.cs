@@ -12,9 +12,19 @@ namespace LP2Rest.Gerard
 {
     public partial class frmNuevaContrasenia : Form
     {
+        private int _idCuentaUsuario;
+        private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
         public frmNuevaContrasenia()
         {
             InitializeComponent();
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
+        }
+
+        public frmNuevaContrasenia(int idCuentaUsuario)
+        {
+            InitializeComponent();
+            _idCuentaUsuario = idCuentaUsuario;
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
         }
 
         private void btnMostrarOcultar1_Click(object sender, EventArgs e)
@@ -46,6 +56,12 @@ namespace LP2Rest.Gerard
             //Si se logro cambiar la contraseña con exito
             if (txtNuevaContra.Text == txtConfirmarContra.Text)
             {
+                int resultado = daoGestPersonas.actualizarContraseniaCuentaUsuario(_idCuentaUsuario, txtNuevaContra.Text);
+                if(resultado == 0)
+                {
+                    MessageBox.Show("No se pudo cambiar la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 MessageBox.Show("Contraseña cambiada con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
