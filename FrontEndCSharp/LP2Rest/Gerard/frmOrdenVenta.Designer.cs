@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.gbLineasVenta = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnQuitarPlato = new System.Windows.Forms.Button();
+            this.btnAgregarPlato = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,18 +61,15 @@
             this.lblDNICliente = new System.Windows.Forms.Label();
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDocPago = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnPreparar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
@@ -90,14 +91,14 @@
             // 
             this.dgvDetalleOrdenVenta.AllowUserToAddRows = false;
             this.dgvDetalleOrdenVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetalleOrdenVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleOrdenVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreProducto,
@@ -111,6 +112,42 @@
             this.dgvDetalleOrdenVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalleOrdenVenta.Size = new System.Drawing.Size(1043, 163);
             this.dgvDetalleOrdenVenta.TabIndex = 62;
+            this.dgvDetalleOrdenVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleOrdenVenta_CellFormatting);
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre";
+            this.NombreProducto.MinimumWidth = 6;
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Width = 490;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cant";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // PrecioUnitario
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
+            this.PrecioUnitario.HeaderText = "Precio Unit";
+            this.PrecioUnitario.MinimumWidth = 6;
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Width = 200;
+            // 
+            // Subtotal
+            // 
+            dataGridViewCellStyle3.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            this.Subtotal.Width = 200;
             // 
             // label5
             // 
@@ -135,10 +172,10 @@
             // 
             // gbLineasVenta
             // 
-            this.gbLineasVenta.Controls.Add(this.textBox2);
+            this.gbLineasVenta.Controls.Add(this.txtDescuento);
             this.gbLineasVenta.Controls.Add(this.label7);
-            this.gbLineasVenta.Controls.Add(this.button1);
-            this.gbLineasVenta.Controls.Add(this.button3);
+            this.gbLineasVenta.Controls.Add(this.btnQuitarPlato);
+            this.gbLineasVenta.Controls.Add(this.btnAgregarPlato);
             this.gbLineasVenta.Controls.Add(this.txtCantidad);
             this.gbLineasVenta.Controls.Add(this.btnBuscarProducto);
             this.gbLineasVenta.Controls.Add(this.label4);
@@ -156,13 +193,13 @@
             this.gbLineasVenta.TabStop = false;
             this.gbLineasVenta.Text = "Líneas de Orden de Venta";
             // 
-            // textBox2
+            // txtDescuento
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(744, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49, 32);
-            this.textBox2.TabIndex = 88;
+            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDescuento.Location = new System.Drawing.Point(744, 118);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(49, 32);
+            this.txtDescuento.TabIndex = 88;
             // 
             // label7
             // 
@@ -174,25 +211,27 @@
             this.label7.TabIndex = 87;
             this.label7.Text = "Descuento:";
             // 
-            // button1
+            // btnQuitarPlato
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(881, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnQuitarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuitarPlato.Location = new System.Drawing.Point(881, 120);
+            this.btnQuitarPlato.Name = "btnQuitarPlato";
+            this.btnQuitarPlato.Size = new System.Drawing.Size(30, 30);
+            this.btnQuitarPlato.TabIndex = 86;
+            this.btnQuitarPlato.Text = "-";
+            this.btnQuitarPlato.UseVisualStyleBackColor = true;
+            this.btnQuitarPlato.Click += new System.EventHandler(this.btnQuitarPlato_Click);
             // 
-            // button3
+            // btnAgregarPlato
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(845, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 30);
-            this.button3.TabIndex = 85;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarPlato.Location = new System.Drawing.Point(845, 120);
+            this.btnAgregarPlato.Name = "btnAgregarPlato";
+            this.btnAgregarPlato.Size = new System.Drawing.Size(30, 30);
+            this.btnAgregarPlato.TabIndex = 85;
+            this.btnAgregarPlato.Text = "+";
+            this.btnAgregarPlato.UseVisualStyleBackColor = true;
+            this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
             // 
             // txtCantidad
             // 
@@ -210,6 +249,7 @@
             this.btnBuscarProducto.TabIndex = 3;
             this.btnBuscarProducto.Text = "...";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // label4
             // 
@@ -283,6 +323,7 @@
             // 
             // gbCliente
             // 
+            this.gbCliente.Controls.Add(this.btnPreparar);
             this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.lblNombreCliente);
             this.gbCliente.Controls.Add(this.txtNombreCliente);
@@ -350,7 +391,7 @@
             // gbPedido
             // 
             this.gbPedido.Controls.Add(this.textBox3);
-            this.gbPedido.Controls.Add(this.button2);
+            this.gbPedido.Controls.Add(this.btnDocPago);
             this.gbPedido.Controls.Add(this.label6);
             this.gbPedido.Controls.Add(this.label1);
             this.gbPedido.Controls.Add(this.txtIDOrdenVenta);
@@ -373,18 +414,18 @@
             this.textBox3.TabIndex = 65;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // button2
+            // btnDocPago
             // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(656, 30);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(381, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Generar documento de Pago";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDocPago.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.btnDocPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDocPago.Location = new System.Drawing.Point(656, 30);
+            this.btnDocPago.Name = "btnDocPago";
+            this.btnDocPago.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnDocPago.Size = new System.Drawing.Size(381, 36);
+            this.btnDocPago.TabIndex = 1;
+            this.btnDocPago.Text = "Generar documento de Pago";
+            this.btnDocPago.UseVisualStyleBackColor = true;
+            this.btnDocPago.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -416,41 +457,6 @@
             this.txtIDOrdenVenta.Size = new System.Drawing.Size(124, 32);
             this.txtIDOrdenVenta.TabIndex = 0;
             // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre";
-            this.NombreProducto.MinimumWidth = 6;
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 490;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cant";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // PrecioUnitario
-            // 
-            dataGridViewCellStyle8.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle8;
-            this.PrecioUnitario.HeaderText = "Precio Unit";
-            this.PrecioUnitario.MinimumWidth = 6;
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            this.PrecioUnitario.Width = 200;
-            // 
-            // Subtotal
-            // 
-            dataGridViewCellStyle9.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            this.Subtotal.Width = 200;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -473,6 +479,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(92, 27);
             this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnModificar
             // 
@@ -482,6 +489,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(118, 27);
             this.btnModificar.Text = "&Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -491,6 +499,17 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(106, 27);
             this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnPreparar
+            // 
+            this.btnPreparar.Location = new System.Drawing.Point(848, 47);
+            this.btnPreparar.Name = "btnPreparar";
+            this.btnPreparar.Size = new System.Drawing.Size(133, 70);
+            this.btnPreparar.TabIndex = 5;
+            this.btnPreparar.Text = "Preparar Pedido";
+            this.btnPreparar.UseVisualStyleBackColor = true;
+            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
             // 
             // frmOrdenVenta
             // 
@@ -508,6 +527,8 @@
             this.Name = "frmOrdenVenta";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmOrdenVenta_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.frmOrdenVenta_ClientSizeChanged);
+            this.Click += new System.EventHandler(this.frmOrdenVenta_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).EndInit();
             this.gbLineasVenta.ResumeLayout(false);
             this.gbLineasVenta.PerformLayout();
@@ -529,10 +550,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.GroupBox gbLineasVenta;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnQuitarPlato;
+        private System.Windows.Forms.Button btnAgregarPlato;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPrecioUnitario;
@@ -550,7 +571,7 @@
         private System.Windows.Forms.Label lblDNICliente;
         private System.Windows.Forms.GroupBox gbPedido;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDocPago;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDOrdenVenta;
@@ -562,5 +583,6 @@
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.Button btnPreparar;
     }
 }

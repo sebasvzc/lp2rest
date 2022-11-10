@@ -25,8 +25,8 @@ namespace LP2Rest
 
         private void imgUsuarios_Click(object sender, EventArgs e)
         {
-            frmMesas formMesas = new frmMesas();
-            formMesas.ShowDialog();
+            //frmMesas formMesas = new frmMesas();
+            //formMesas.ShowDialog();
         }
 
         private void imgCompras_Click(object sender, EventArgs e)

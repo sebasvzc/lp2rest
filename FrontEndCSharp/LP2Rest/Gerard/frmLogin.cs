@@ -51,7 +51,7 @@ namespace LP2Rest
             }
             else if (cuentaUsuario.tipoEmpleado == 'M')
             {
-                frmPrincipalMesero formMesero = new frmPrincipalMesero();
+                frmPrincipalMesero formMesero = new frmPrincipalMesero(cuentaUsuario);
                 this.Hide();
                 if (formMesero.ShowDialog() == DialogResult.Cancel)
                 {
