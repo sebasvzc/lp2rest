@@ -12,6 +12,7 @@ namespace LP2Rest
 {
     public partial class frmListarReportesA : Form
     {
+
         public frmListarReportesA()
         {
             InitializeComponent();
