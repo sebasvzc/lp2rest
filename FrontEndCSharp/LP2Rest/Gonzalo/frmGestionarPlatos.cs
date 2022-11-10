@@ -82,9 +82,9 @@ namespace LP2Rest
                 AlmacenWS.insumo insumo = (AlmacenWS.insumo)dgvInsumos.Rows[e.RowIndex].DataBoundItem;
                 dgvInsumos.Rows[e.RowIndex].Cells[0].Value = insumo.SKU;
                 dgvInsumos.Rows[e.RowIndex].Cells[1].Value = insumo.nombre;
-                dgvInsumos.Rows[e.RowIndex].Cells[2].Value = insumo.precioCompra.ToString("N2");
-                dgvInsumos.Rows[e.RowIndex].Cells[3].Value = insumo.stock.ToString();
-                dgvInsumos.Rows[e.RowIndex].Cells[4].Value = (insumo.precioCompra * insumo.stock).ToString();
+                dgvInsumos.Rows[e.RowIndex].Cells[2].Value = insumo.stock.ToString();
+                dgvInsumos.Rows[e.RowIndex].Cells[3].Value = insumo.precioCompra.ToString("N2");
+                dgvInsumos.Rows[e.RowIndex].Cells[4].Value = (insumo.precioCompra * insumo.stock).ToString("N2");
             }
             catch (Exception ex)
             {

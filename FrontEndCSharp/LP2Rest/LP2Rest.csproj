@@ -350,6 +350,12 @@
     <Compile Include="Gerard\frmRecuperarContrasenia.Designer.cs">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Omar\frmModificarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmModificarPlato.Designer.cs">
+      <DependentUpon>frmModificarPlato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Omar\frmReporteOrdenesVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -522,6 +528,9 @@
     <EmbeddedResource Include="Gerard\frmRecuperarContrasenia.resx">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmModificarPlato.resx">
+      <DependentUpon>frmModificarPlato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Omar\frmReporteOrdenesVenta.resx">
       <DependentUpon>frmReporteOrdenesVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -564,6 +573,9 @@
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarInsumosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.FiltrarOrdenCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.InsertarInsumoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -577,6 +589,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.lineaOrdenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.listarInsumosPorIdItemVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarTipoProductoResponse.datasource">
@@ -709,6 +727,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarTodasAdministradoresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -770,6 +791,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.proveedor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.recepcionista.datasource">

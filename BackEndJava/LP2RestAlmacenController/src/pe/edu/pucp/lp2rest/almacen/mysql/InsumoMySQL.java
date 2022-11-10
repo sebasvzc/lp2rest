@@ -197,5 +197,32 @@ public class InsumoMySQL implements InsumoDAO {
         return insumos;
 
     }
+
+    @Override
+    public ArrayList<Insumo> listarRecetasPorIdItemVenta(int idItemVenta) {
+        ArrayList<Insumo> insumos = new ArrayList<>();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_RECETAS_X_IDITEMVENTA(?)");
+            cs.setInt("_id_itemVenta", idItemVenta);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Insumo insumo = new Insumo();
+                insumo.setIdInsumo(rs.getInt("id_insumo"));
+                insumo.setSKU(rs.getString("sku"));
+                insumo.setNombre(rs.getString("nombre"));
+                insumo.setStock(rs.getInt("cantidad"));
+                insumo.setPrecioCompra(rs.getDouble("precio_compra"));
+                insumos.add(insumo);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return insumos;
+    }
     
 }
