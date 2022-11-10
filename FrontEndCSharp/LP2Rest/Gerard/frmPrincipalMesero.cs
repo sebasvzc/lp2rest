@@ -25,7 +25,13 @@ namespace LP2Rest
         {
             InitializeComponent();
         }
-        
+
+        public frmPrincipalMesero(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            lblID.Text = "Mesero: " + cuenta.usuario;
+        }
+
         public void abrirFormulario(Form formularioMostrar)
         {
             if(formularioActivo != null)
@@ -127,7 +133,7 @@ namespace LP2Rest
 
         private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
-            //abrirFormulario(new frmBusquedaClientes());
+            abrirFormulario(new frmBusquedaCliente());
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

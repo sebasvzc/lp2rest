@@ -23,10 +23,17 @@ namespace LP2Rest
             btnMarcarSalida.Hide();
             _asistencia = new GestPersonasWS.asistencia();
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
-
-
         }
-        
+
+        public frmPrincipalRecepcionista(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            btnMarcarSalida.Hide();
+            _asistencia = new GestPersonasWS.asistencia();
+            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            lblID.Text = "Recepcionista: " + cuenta.usuario;
+        }
+
         public void abrirFormulario(Form formularioMostrar)
         {
             if (formularioActivo != null)
@@ -169,6 +176,16 @@ namespace LP2Rest
         private void sdbtnReservas_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmGestionReservas());
+        }
+
+        private void sdbtnClientes_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmBusquedaCliente());
+        }
+
+        private void sdbtnMesas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmMesas());
         }
     }
 }

@@ -33,6 +33,15 @@ namespace LP2Rest
             _asistencia = new GestPersonasWS.asistencia();
         }
 
+        public frmPrincipalA(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            btnRegistrarSalida.Hide();
+            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            _asistencia = new GestPersonasWS.asistencia();
+            lblID.Text = "Administrador: " + cuenta.usuario;
+        }
+
         private void btnCompras_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarOrdenesCompra());

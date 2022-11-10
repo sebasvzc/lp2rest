@@ -43,6 +43,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,6 +53,7 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.btnRegistrarSalida);
             this.panelSuperior.Controls.Add(this.label2);
             this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
@@ -59,7 +61,7 @@
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(256, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1018, 100);
+            this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
             this.panelSuperior.TabIndex = 27;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
@@ -121,11 +123,12 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(981, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(1063, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 26;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panelIzquierdo
             // 
@@ -139,7 +142,7 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(256, 862);
+            this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
             this.panelIzquierdo.TabIndex = 26;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -149,7 +152,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 793);
+            this.panel4.Size = new System.Drawing.Size(8, 807);
             this.panel4.TabIndex = 17;
             // 
             // sdbtnPlatos
@@ -162,7 +165,7 @@
             this.sdbtnPlatos.Location = new System.Drawing.Point(0, 327);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnPlatos.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnPlatos.Size = new System.Drawing.Size(250, 59);
             this.sdbtnPlatos.TabIndex = 33;
             this.sdbtnPlatos.Text = "  Platos";
             this.sdbtnPlatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -190,7 +193,7 @@
             this.sdbtnCompras.Location = new System.Drawing.Point(0, 407);
             this.sdbtnCompras.Name = "sdbtnCompras";
             this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnCompras.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnCompras.Size = new System.Drawing.Size(250, 59);
             this.sdbtnCompras.TabIndex = 35;
             this.sdbtnCompras.Text = "  Compras";
             this.sdbtnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -207,7 +210,7 @@
             this.sdbtnInsumos.Location = new System.Drawing.Point(0, 489);
             this.sdbtnInsumos.Name = "sdbtnInsumos";
             this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnInsumos.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnInsumos.Size = new System.Drawing.Size(250, 59);
             this.sdbtnInsumos.TabIndex = 36;
             this.sdbtnInsumos.Text = "  Insumos";
             this.sdbtnInsumos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -226,7 +229,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 793);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 807);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(256, 69);
@@ -243,7 +246,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1018, 762);
+            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
             this.panelContenedor.TabIndex = 29;
             // 
             // label3
@@ -264,14 +267,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1018, 4);
+            this.panel1.Size = new System.Drawing.Size(1100, 4);
             this.panel1.TabIndex = 25;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.Coral;
+            this.lblID.Location = new System.Drawing.Point(886, 39);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(94, 24);
+            this.lblID.TabIndex = 46;
+            this.lblID.Text = "Chef #x";
             // 
             // frmInicioChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 862);
+            this.ClientSize = new System.Drawing.Size(1356, 876);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
@@ -303,5 +317,6 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblID;
     }
 }
