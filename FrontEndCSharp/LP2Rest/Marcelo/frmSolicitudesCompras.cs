@@ -21,8 +21,8 @@ namespace LP2Rest
         {
             daoGestAlmacen = new AlmacenWS.AlmacenWSClient();
             InitializeComponent();
-            txtSKU.Enabled = false;
-            txtNombre.Enabled = false;
+            txtSKU.ReadOnly = true;
+            txtNombre.ReadOnly = true;
             dgvOrdenCompras.AutoGenerateColumns = false;
         }
 
