@@ -42,7 +42,7 @@ namespace LP2Rest
             cuentaUsuario = daoGestPersonas.verificarCuentaUsuario(cuentaUsuario);
             if (cuentaUsuario.tipoEmpleado == 'A')
             {
-                frmPrincipalA formPrincipalA = new frmPrincipalA();
+                frmPrincipalA formPrincipalA = new frmPrincipalA(cuentaUsuario);
                 this.Hide();
                 if(formPrincipalA.ShowDialog() == DialogResult.Cancel)
                 {
@@ -51,7 +51,7 @@ namespace LP2Rest
             }
             else if (cuentaUsuario.tipoEmpleado == 'M')
             {
-                frmPrincipalMesero formMesero = new frmPrincipalMesero();
+                frmPrincipalMesero formMesero = new frmPrincipalMesero(cuentaUsuario);
                 this.Hide();
                 if (formMesero.ShowDialog() == DialogResult.Cancel)
                 {
@@ -60,7 +60,7 @@ namespace LP2Rest
             }
             else if (cuentaUsuario.tipoEmpleado == 'C')
             {
-                frmPrincipalCajero formCajero = new frmPrincipalCajero();
+                frmPrincipalCajero formCajero = new frmPrincipalCajero(cuentaUsuario);
                 this.Hide();
                 if (formCajero.ShowDialog() == DialogResult.Cancel)
                 {
@@ -69,7 +69,7 @@ namespace LP2Rest
             }
             else if (cuentaUsuario.tipoEmpleado == 'F')
             {
-                frmInicioChef formChef = new frmInicioChef();
+                frmInicioChef formChef = new frmInicioChef(cuentaUsuario);
                 this.Hide();
                 if (formChef.ShowDialog() == DialogResult.Cancel)
                 {
@@ -78,7 +78,7 @@ namespace LP2Rest
             }
             else if (cuentaUsuario.tipoEmpleado == 'R')
             {
-                frmPrincipalRecepcionista formRecepcionista = new frmPrincipalRecepcionista();
+                frmPrincipalRecepcionista formRecepcionista = new frmPrincipalRecepcionista(cuentaUsuario);
                 this.Hide();
                 if (formRecepcionista.ShowDialog() == DialogResult.Cancel)
                 {

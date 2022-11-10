@@ -13,6 +13,8 @@ namespace LP2Rest
 {
     public partial class frmPrincipalCajero : Form
     {
+        private static Form formularioActivo = null;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -21,6 +23,26 @@ namespace LP2Rest
         public frmPrincipalCajero()
         {
             InitializeComponent();
+        }
+
+        public frmPrincipalCajero(GestPersonasWS.cuentaUsuario cuenta)
+        {
+            InitializeComponent();
+            lblID.Text = "Cajero: " + cuenta.usuario;
+        }
+
+        public void abrirFormulario(Form formularioMostrar)
+        {
+            if (formularioActivo != null)
+                formularioActivo.Close();
+
+            formularioActivo = formularioMostrar;
+            formularioMostrar.TopLevel = false;
+            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
+            formularioMostrar.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioMostrar);
+            formularioMostrar.Show();
+
         }
 
         private void imgUsuarios_Click(object sender, EventArgs e)
@@ -81,6 +103,16 @@ namespace LP2Rest
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void sdbtnMesas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmMesas());
+        }
+
+        private void sdbtnReportes_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmListarReportesA());
         }
     }
 }
