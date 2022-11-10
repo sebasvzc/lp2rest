@@ -62,7 +62,6 @@
 
             this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 
@@ -89,16 +88,6 @@
             this.btnAgregarProducto.Text = "+";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
-            // btnBuscarInsumo
-            // 
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(409, 23);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(32, 23);
-            this.btnBuscarInsumo.TabIndex = 148;
-            this.btnBuscarInsumo.Text = "...";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = true;
-            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
             // btnEliminarProducto
             // 
