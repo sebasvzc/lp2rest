@@ -20,6 +20,8 @@ namespace LP2Rest
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+        private int idcuenta;
+
         public frmPrincipalCajero()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace LP2Rest
         {
             InitializeComponent();
             lblID.Text = "Cajero: " + cuenta.usuario;
+            idcuenta = cuenta.idUsuario;
         }
 
         public void abrirFormulario(Form formularioMostrar)
@@ -47,8 +50,8 @@ namespace LP2Rest
 
         private void imgUsuarios_Click(object sender, EventArgs e)
         {
-            frmMesas formMesas = new frmMesas();
-            formMesas.ShowDialog();
+            //frmMesas formMesas = new frmMesas();
+            //formMesas.ShowDialog();
         }
 
         private void imgCompras_Click(object sender, EventArgs e)
@@ -107,7 +110,7 @@ namespace LP2Rest
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmMesas());
+            abrirFormulario(new frmMesas(idcuenta));
         }
 
         private void sdbtnReportes_Click(object sender, EventArgs e)

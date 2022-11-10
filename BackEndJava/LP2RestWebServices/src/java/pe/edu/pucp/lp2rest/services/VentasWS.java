@@ -1,6 +1,8 @@
 package pe.edu.pucp.lp2rest.services;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -82,6 +84,25 @@ public class VentasWS {
         return ordenesVenta;
     }
     
+    @WebMethod(operationName = "listarBusquedaOrdenesVenta")
+    public ArrayList<OrdenVenta> listarBusquedaOrdenesVenta(@WebParam(name = "nombre") String nombre, 
+                                                            @WebParam(name = "apellido")String apellido, 
+                                                            @WebParam(name = "fechaIni")String fechaIni, 
+                                                            @WebParam(name = "fechaFin")String fechaFin, 
+                                                            @WebParam(name = "sueldoIni")double sueldoIni, 
+                                                            @WebParam(name = "sueldoFin")double sueldoFin) {
+        ArrayList<OrdenVenta> ordenesVenta = null;
+        try{
+            SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            Date fechaI = formateador.parse(fechaIni);
+            Date fechaF = formateador.parse(fechaFin);
+            ordenesVenta = daoOrdenVenta.listarBusqueda(nombre, apellido, fechaI, fechaF, sueldoIni, sueldoFin);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ordenesVenta;
+    }
+    
     @WebMethod(operationName = "InsertarOrdenVenta")
     public int InsertarOrdenDeVenta(@WebParam(name = "ordenDeVenta") OrdenVenta ordenVenta) {
         int resultado = 0;
@@ -109,6 +130,17 @@ public class VentasWS {
         int resultado = 0;
         try{
             resultado = daoOrdenVenta.eliminar(idOrdenVenta);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "ActualizarOrdenVenta")
+    public int ActualizarOrdenVenta(@WebParam(name = "idOrdenVenta") int idOrdenVenta) {
+        int resultado = 0;
+        try{
+            resultado = daoOrdenVenta.actualizar(idOrdenVenta);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -204,4 +236,6 @@ public class VentasWS {
         }
         return resultado;
     }
+    
+    
 }

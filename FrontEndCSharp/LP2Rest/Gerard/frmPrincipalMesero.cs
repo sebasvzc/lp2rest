@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.GestPersonasWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,15 +22,21 @@ namespace LP2Rest
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
 
-        public frmPrincipalMesero()
-        {
-            InitializeComponent();
-        }
 
-        public frmPrincipalMesero(GestPersonasWS.cuentaUsuario cuenta)
+        //Utiles
+        private mesero meseroSeleccionado;
+
+        public mesero MeseroSeleccionado { get => meseroSeleccionado; set => meseroSeleccionado = value; }
+
+        public frmPrincipalMesero(cuentaUsuario auxCuentaUsuario)
         {
+            meseroSeleccionado = new mesero();
+            meseroSeleccionado.idPersona = auxCuentaUsuario.empleado.idPersona;
+            meseroSeleccionado.nombre = auxCuentaUsuario.empleado.nombre;
+            meseroSeleccionado.apellidoPaterno = auxCuentaUsuario.empleado.apellidoPaterno;
             InitializeComponent();
-            lblID.Text = "Mesero: " + cuenta.usuario;
+            lblID.Text = "Mesero #"+ meseroSeleccionado.idPersona.ToString();
+            label1.Text = "Bienvenido " + meseroSeleccionado.nombre + " " + meseroSeleccionado.apellidoPaterno;
         }
 
         public void abrirFormulario(Form formularioMostrar)
@@ -47,7 +54,7 @@ namespace LP2Rest
         }
         private void imgUsuarios_Click(object sender, EventArgs e)
         {
-            frmMesas formMesas = new frmMesas();
+            frmMesas formMesas = new frmMesas(meseroSeleccionado.idPersona);
             formMesas.ShowDialog();
         }
 
@@ -90,7 +97,7 @@ namespace LP2Rest
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmMesas());
+            abrirFormulario(new frmMesas(meseroSeleccionado.idPersona));
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
