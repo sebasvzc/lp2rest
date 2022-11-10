@@ -17,21 +17,27 @@ import pe.edu.pucp.lp2rest.gestpersonas.dao.ArtistaDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.AsistenciaDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.ChefDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.ClienteDAO;
+import pe.edu.pucp.lp2rest.gestpersonas.dao.EmpleadoDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.MeseroDAO;
+import pe.edu.pucp.lp2rest.gestpersonas.dao.ReclamoDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Administrador;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Artista;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Asistencia;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Cajero;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Chef;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Cliente;
+import pe.edu.pucp.lp2rest.gestpersonas.model.Empleado;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Mesero;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Persona;
+import pe.edu.pucp.lp2rest.gestpersonas.model.Reclamo;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.AdministradorMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ArtistaMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.AsistenciaMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ChefMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.ClienteMySQL;
+import pe.edu.pucp.lp2rest.gestpersonas.mysql.EmpleadoMySQL;
 import pe.edu.pucp.lp2rest.gestpersonas.mysql.MeseroMySQL;
+import pe.edu.pucp.lp2rest.gestpersonas.mysql.ReclamoMySQL;
 import pe.edu.pucp.lp2rest.menu.dao.ItemVentaDAO;
 import pe.edu.pucp.lp2rest.menu.dao.TipoItemDAO;
 import pe.edu.pucp.lp2rest.menu.model.ItemVenta;
@@ -55,6 +61,14 @@ public class Principal {
 
     public static void main(String[] args) throws ParseException {
         
+//        ReclamoDAO daoReclamo = new ReclamoMySQL();
+//        ArrayList<Reclamo> listReclamos = new ArrayList<Reclamo>();
+//        listReclamos = daoReclamo.listarTodas();
+//        for( Reclamo auxRec : listReclamos){
+//           System.out.println(auxRec.getId());
+//           System.out.println(auxRec.getFechaRegistro().toString());
+//           System.out.println(" ");
+//        }
     MeseroDAO daoMesero = new MeseroMySQL();
     ArrayList<Mesero> meseros;
     meseros = daoMesero.listarTodas();
@@ -63,56 +77,74 @@ public class Principal {
        System.out.println("Nombre: " + mesero.getNombre());
     }
         
-    Evento eventoPrueba = new Evento();
-    eventoPrueba.setArtista(new Artista());
-    eventoPrueba.getArtista().setIdArtista(1);
-    eventoPrueba.getArtista().setNombre("Grupo 05");
-    eventoPrueba.setAdministrador(new Administrador());
-    eventoPrueba.getAdministrador().setIdPersona(9);
-    eventoPrueba.setIdEvento(2);
-    eventoPrueba.setFecha_inicio(new Date());
-    eventoPrueba.setMonto_pagar(21.21);
-    eventoPrueba.setNombre("Nombre modificado");
-    
-    EventoDAO daoEvento = new EventoMySQL();
-    //int resultadoModificar = daoEvento.modificar(eventoPrueba);
-    //System.out.println("Valor de result: " + resultadoModificar);
-    
-//    Evento eventoPrueba2 = daoEvento.buscarEventoPorID(3);
-//    System.out.println("Nombre: " + eventoPrueba2.getNombre());
-        
-    TipoItemDAO daoTipoItem = new TipoItemMySQL();
-    ArrayList<TipoItem> tipos = daoTipoItem.listarTodos();
-    for(TipoItem tip : tipos){
-       //System.out.println("Nombre: " + tip.getDescripcion());
+    EmpleadoDAO daoEmpleados = new EmpleadoMySQL();
+    ArrayList<Empleado> listEmpleados;
+    listEmpleados = daoEmpleados.listarBusqueda("","","","",null,null,0.0,999999.0);
+    for( Empleado auxEmp : listEmpleados){
+        System.out.println(auxEmp.getIdPersona());
+        System.out.println(auxEmp.getNombre()+" "+auxEmp.getApellidoPaterno());
+        System.out.println(" ");
     }
-    
-    ItemVentaDAO daoItemVenta = new ItemVentaMySQL();
-    ArrayList<ItemVenta> itemsVenta = daoItemVenta.filtrarItemsVenta("CEVICHE",1, 0, 99999, 1);
-    for(ItemVenta iv : itemsVenta){
-        //System.out.println("Nombre: " + iv.getNombre());
-    }
-    
-    InsumoDAO daoInsumo = new InsumoMySQL();
-    ArrayList<Insumo> insumos = daoInsumo.buscarInsumosXNombre("a");
-    for(Insumo in : insumos){
-        //System.out.println("Nombre: " + in.getNombre());
-    }
-    
-    ItemVenta platoPrueba = new ItemVenta();
-    Receta recetaPrueba = new Receta();
-    recetaPrueba.setCantidad(10);
-    recetaPrueba.setInsumo(new Insumo());
-    recetaPrueba.getInsumo().setIdInsumo(29);
-            
-    platoPrueba.setNombre("Plato prueba");
-    platoPrueba.setPrecio(9.99);
-    platoPrueba.setStock(10);
-    platoPrueba.setTipoItem(new TipoItem());
-    platoPrueba.getTipoItem().setIdTipoItem(1);
-    platoPrueba.setDisponible(0);
-    platoPrueba.setRecetas(new ArrayList<>());
-    platoPrueba.getRecetas().add(recetaPrueba);
+      
+      
+//    MeseroDAO daoMesero = new MeseroMySQL();
+//    ArrayList<Mesero> meseros;
+//    meseros = daoMesero.listarTodas();
+//
+//    for( Mesero mesero : meseros){
+//       //System.out.println("Nombre: " + mesero.getNombre());
+//    }
+//        
+//    Evento eventoPrueba = new Evento();
+//    eventoPrueba.setArtista(new Artista());
+//    eventoPrueba.getArtista().setIdArtista(1);
+//    eventoPrueba.getArtista().setNombre("Grupo 05");
+//    eventoPrueba.setAdministrador(new Administrador());
+//    eventoPrueba.getAdministrador().setIdPersona(9);
+//    eventoPrueba.setIdEvento(2);
+//    eventoPrueba.setFecha_inicio(new Date());
+//    eventoPrueba.setMonto_pagar(21.21);
+//    eventoPrueba.setNombre("Nombre modificado");
+//    
+//    EventoDAO daoEvento = new EventoMySQL();
+//    //int resultadoModificar = daoEvento.modificar(eventoPrueba);
+//    //System.out.println("Valor de result: " + resultadoModificar);
+//    
+////    Evento eventoPrueba2 = daoEvento.buscarEventoPorID(3);
+////    System.out.println("Nombre: " + eventoPrueba2.getNombre());
+//        
+//    TipoItemDAO daoTipoItem = new TipoItemMySQL();
+//    ArrayList<TipoItem> tipos = daoTipoItem.listarTodos();
+//    for(TipoItem tip : tipos){
+//       //System.out.println("Nombre: " + tip.getDescripcion());
+//    }
+//    
+//    ItemVentaDAO daoItemVenta = new ItemVentaMySQL();
+//    ArrayList<ItemVenta> itemsVenta = daoItemVenta.filtrarItemsVenta("CEVICHE",1, 0, 99999, 1);
+//    for(ItemVenta iv : itemsVenta){
+//        //System.out.println("Nombre: " + iv.getNombre());
+//    }
+//    
+//    InsumoDAO daoInsumo = new InsumoMySQL();
+//    ArrayList<Insumo> insumos = daoInsumo.buscarInsumosXNombre("a");
+//    for(Insumo in : insumos){
+//        //System.out.println("Nombre: " + in.getNombre());
+//    }
+//    
+//    ItemVenta platoPrueba = new ItemVenta();
+//    Receta recetaPrueba = new Receta();
+//    recetaPrueba.setCantidad(10);
+//    recetaPrueba.setInsumo(new Insumo());
+//    recetaPrueba.getInsumo().setIdInsumo(29);
+//            
+//    platoPrueba.setNombre("Plato prueba");
+//    platoPrueba.setPrecio(9.99);
+//    platoPrueba.setStock(10);
+//    platoPrueba.setTipoItem(new TipoItem());
+//    platoPrueba.getTipoItem().setIdTipoItem(1);
+//    platoPrueba.setDisponible(0);
+//    platoPrueba.setRecetas(new ArrayList<>());
+//    platoPrueba.getRecetas().add(recetaPrueba);
     
     //int idPlatoPrueba = daoItemVenta.insertar(platoPrueba);
     

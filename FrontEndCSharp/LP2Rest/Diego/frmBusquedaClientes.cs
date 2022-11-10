@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace LP2Rest
 {
-    public partial class frmBusquedaClientes : Form
+    public partial class frmBusquedaCliente : Form
     {
         private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
-        public frmBusquedaClientes()
+        public frmBusquedaCliente()
         {
             InitializeComponent();
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();

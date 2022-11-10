@@ -37,7 +37,9 @@ public class ReclamoMySQL implements ReclamoDAO{
         try{
             con = DBManager.getInstance().getConnection();
             
-            cs = con.prepareCall("{call INSERTAR_RECLAMO(?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_RECLAMO(?,?,?,?,?,?)}");
+            
+            cs.registerOutParameter("_id_reclamo", java.sql.Types.INTEGER);
             
             if(reclamo.getCliente() == null)
                 cs.setNull("_cliente", Types.NULL);
@@ -57,7 +59,11 @@ public class ReclamoMySQL implements ReclamoDAO{
             cs.setString("_descripcion", reclamo.getDescripcion());
             cs.setDate("_fechaRegistro", new java.sql.Date(reclamo.getFechaRegistro().getTime()));
             
-            resultado = cs.executeUpdate();
+            cs.executeUpdate();
+            
+            reclamo.setId(cs.getInt("_id_reclamo"));
+            resultado = reclamo.getId();
+            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -72,6 +78,7 @@ public class ReclamoMySQL implements ReclamoDAO{
         try{
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call MODIFICAR_RECLAMO(?,?,?,?,?,?,?,?,?,?)}");
+                        
             cs.setInt("_idReclamo", reclamo.getId());
             
             if(reclamo.getCliente() == null) cs.setNull("_cliente", Types.NULL);
@@ -85,7 +92,7 @@ public class ReclamoMySQL implements ReclamoDAO{
             
 
             cs.setString("_descripcion", reclamo.getDescripcion());
-            cs.setBoolean("_estado", true);
+            cs.setBoolean("_estado", reclamo.isEstado());
             cs.setDate("_fechaRegistro", new java.sql.Date(reclamo.getFechaRegistro().getTime()));
             cs.setDate("_fechaAtencion", new java.sql.Date(reclamo.getFechaAtencion().getTime()));
             cs.setString("_observacion", reclamo.getObservacion());
@@ -189,8 +196,8 @@ public class ReclamoMySQL implements ReclamoDAO{
             
             
             
-            if(estadoBuscado == 0) cs.setBoolean("_estado", true);
-            if(estadoBuscado == 1) cs.setBoolean("_estado", false);
+            if(estadoBuscado == 0) cs.setBoolean("_estado", false);
+            if(estadoBuscado == 1) cs.setBoolean("_estado", true);
             if(estadoBuscado == 3) cs.setNull("_estado", Types.NULL); 
                       
             

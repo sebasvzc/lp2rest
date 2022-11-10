@@ -59,12 +59,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -249,133 +249,6 @@
             this.dgvPlatos.TabIndex = 61;
             this.dgvPlatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPlatos_CellFormatting);
             // 
-            // gbPedido
-            // 
-            this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(226)))), ((int)(((byte)(238)))));
-            this.gbPedido.Controls.Add(this.txtStock);
-            this.gbPedido.Controls.Add(this.label10);
-            this.gbPedido.Controls.Add(this.txtPrecioVenta);
-            this.gbPedido.Controls.Add(this.txtIdCombo);
-            this.gbPedido.Controls.Add(this.txtGanancia);
-            this.gbPedido.Controls.Add(this.label7);
-            this.gbPedido.Controls.Add(this.label6);
-            this.gbPedido.Controls.Add(this.txtNombre);
-            this.gbPedido.Controls.Add(this.label3);
-            this.gbPedido.Controls.Add(this.label2);
-            this.gbPedido.Controls.Add(this.label1);
-            this.gbPedido.Location = new System.Drawing.Point(19, 58);
-            this.gbPedido.Name = "gbPedido";
-            this.gbPedido.Size = new System.Drawing.Size(236, 292);
-            this.gbPedido.TabIndex = 143;
-            this.gbPedido.TabStop = false;
-            this.gbPedido.Text = "Datos de los combos";
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(86, 103);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(123, 20);
-            this.txtStock.TabIndex = 148;
-            this.txtStock.ReadOnly = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(39, 105);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 147;
-            this.label10.Text = "Stock:";
-            // 
-            // txtIdCombo
-            // 
-            this.txtIdCombo.Location = new System.Drawing.Point(86, 42);
-            this.txtIdCombo.Name = "txtIdCombo";
-            this.txtIdCombo.ReadOnly = true;
-            this.txtIdCombo.Size = new System.Drawing.Size(123, 20);
-            this.txtIdCombo.TabIndex = 145;
-            // 
-            // txtGanancia
-            // 
-            this.txtGanancia.Location = new System.Drawing.Point(86, 135);
-            this.txtGanancia.Name = "txtGanancia";
-            this.txtGanancia.Size = new System.Drawing.Size(123, 20);
-            this.txtGanancia.TabIndex = 142;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 135);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 141;
-            this.label7.Text = "Ganancia: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 166);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Precio Venta:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(86, 72);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(123, 20);
-            this.txtNombre.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID Combo";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGuardar,
-            this.btnModificar,
-            this.btnEliminar,
-            this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(298, 360);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(352, 27);
-            this.toolStrip1.TabIndex = 142;
-            this.toolStrip1.Text = "tsMenu";
-            // 
-            // txtPrecioVenta
-            // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(86, 166);
-            this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.ReadOnly = true;
-            this.txtPrecioVenta.Size = new System.Drawing.Size(123, 20);
-            this.txtPrecioVenta.TabIndex = 146;
-            // 
             // IDPlato
             // 
             this.IDPlato.FillWeight = 75F;
@@ -420,6 +293,141 @@
             this.Subtotal.ReadOnly = true;
             this.Subtotal.Width = 125;
             // 
+            // gbPedido
+            // 
+            this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(226)))), ((int)(((byte)(238)))));
+            this.gbPedido.Controls.Add(this.txtStock);
+            this.gbPedido.Controls.Add(this.label10);
+            this.gbPedido.Controls.Add(this.txtPrecioVenta);
+            this.gbPedido.Controls.Add(this.txtIdCombo);
+            this.gbPedido.Controls.Add(this.txtGanancia);
+            this.gbPedido.Controls.Add(this.label7);
+            this.gbPedido.Controls.Add(this.label6);
+            this.gbPedido.Controls.Add(this.txtNombre);
+            this.gbPedido.Controls.Add(this.label3);
+            this.gbPedido.Controls.Add(this.label2);
+            this.gbPedido.Controls.Add(this.label1);
+            this.gbPedido.Location = new System.Drawing.Point(19, 58);
+            this.gbPedido.Name = "gbPedido";
+            this.gbPedido.Size = new System.Drawing.Size(236, 292);
+            this.gbPedido.TabIndex = 143;
+            this.gbPedido.TabStop = false;
+            this.gbPedido.Text = "Datos de los combos";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(86, 103);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
+            this.txtStock.Size = new System.Drawing.Size(123, 20);
+            this.txtStock.TabIndex = 148;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(39, 105);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 147;
+            this.label10.Text = "Stock:";
+            // 
+            // txtPrecioVenta
+            // 
+            this.txtPrecioVenta.Location = new System.Drawing.Point(86, 133);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(123, 20);
+            this.txtPrecioVenta.TabIndex = 146;
+            // 
+            // txtIdCombo
+            // 
+            this.txtIdCombo.Location = new System.Drawing.Point(86, 42);
+            this.txtIdCombo.Name = "txtIdCombo";
+            this.txtIdCombo.ReadOnly = true;
+            this.txtIdCombo.Size = new System.Drawing.Size(123, 20);
+            this.txtIdCombo.TabIndex = 145;
+            // 
+            // txtGanancia
+            // 
+            this.txtGanancia.Location = new System.Drawing.Point(86, 163);
+            this.txtGanancia.Name = "txtGanancia";
+            this.txtGanancia.ReadOnly = true;
+            this.txtGanancia.Size = new System.Drawing.Size(123, 20);
+            this.txtGanancia.TabIndex = 142;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 167);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 141;
+            this.label7.Text = "Ganancia: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 137);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Precio Venta:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(86, 72);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(123, 20);
+            this.txtNombre.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ID Combo";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
+            this.btnEliminar.Text = "&Eliminar";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnGuardar,
+            this.btnModificar,
+            this.btnEliminar,
+            this.btnCancelar});
+            this.toolStrip1.Location = new System.Drawing.Point(298, 360);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(321, 27);
+            this.toolStrip1.TabIndex = 142;
+            this.toolStrip1.Text = "tsMenu";
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
@@ -429,13 +437,14 @@
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnEliminar
+            // btnModificar
             // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(87, 28);
-            this.btnEliminar.Text = "&Eliminar";
+            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(85, 24);
+            this.btnModificar.Text = "&Modificar ";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCancelar
             // 
@@ -445,15 +454,6 @@
             this.btnCancelar.Size = new System.Drawing.Size(77, 24);
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = global::LP2Rest.Properties.Resources.edit_validated_40458;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(101, 24);
-            this.btnModificar.Text = "&Modificar ";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmGestionarCombos
             // 

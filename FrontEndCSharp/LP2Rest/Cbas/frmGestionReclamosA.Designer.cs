@@ -39,6 +39,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btEmpleado = new System.Windows.Forms.Button();
             this.txtDNIEmpleado = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             this.txtTelefonoEmpleado = new System.Windows.Forms.TextBox();
             this.lblApellidoPaterno = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btCliente = new System.Windows.Forms.Button();
             this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -65,6 +67,7 @@
             this.rtbObs = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -109,7 +112,7 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(525, 702);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(266, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(235, 30);
             this.toolStrip1.TabIndex = 52;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -135,9 +138,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 100);
+            this.panel5.Location = new System.Drawing.Point(8, 100);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1286, 5);
+            this.panel5.Size = new System.Drawing.Size(1278, 5);
             this.panel5.TabIndex = 88;
             // 
             // panel4
@@ -146,9 +149,9 @@
             this.panel4.Controls.Add(this.btnCerrar);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(8, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1286, 100);
+            this.panel4.Size = new System.Drawing.Size(1278, 100);
             this.panel4.TabIndex = 87;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -182,6 +185,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btEmpleado);
             this.groupBox2.Controls.Add(this.txtDNIEmpleado);
             this.groupBox2.Controls.Add(this.lblDNI);
             this.groupBox2.Controls.Add(this.txtNombreEmpleado);
@@ -196,6 +200,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Empleado";
             // 
+            // btEmpleado
+            // 
+            this.btEmpleado.Location = new System.Drawing.Point(494, 44);
+            this.btEmpleado.Name = "btEmpleado";
+            this.btEmpleado.Size = new System.Drawing.Size(75, 31);
+            this.btEmpleado.TabIndex = 31;
+            this.btEmpleado.Text = "...";
+            this.btEmpleado.UseVisualStyleBackColor = true;
+            this.btEmpleado.Click += new System.EventHandler(this.btEmpleado_Click);
+            // 
             // txtDNIEmpleado
             // 
             this.txtDNIEmpleado.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -203,6 +217,7 @@
             this.txtDNIEmpleado.Name = "txtDNIEmpleado";
             this.txtDNIEmpleado.Size = new System.Drawing.Size(208, 32);
             this.txtDNIEmpleado.TabIndex = 23;
+            this.txtDNIEmpleado.TextChanged += new System.EventHandler(this.txtDNIEmpleado_TextChanged);
             // 
             // lblDNI
             // 
@@ -252,6 +267,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btCliente);
             this.groupBox3.Controls.Add(this.txtDNICliente);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtNombreCliente);
@@ -265,6 +281,16 @@
             this.groupBox3.TabIndex = 90;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Cliente";
+            // 
+            // btCliente
+            // 
+            this.btCliente.Location = new System.Drawing.Point(494, 42);
+            this.btCliente.Name = "btCliente";
+            this.btCliente.Size = new System.Drawing.Size(75, 31);
+            this.btCliente.TabIndex = 32;
+            this.btCliente.Text = "...";
+            this.btCliente.UseVisualStyleBackColor = true;
+            this.btCliente.Click += new System.EventHandler(this.btCliente_Click);
             // 
             // txtDNICliente
             // 
@@ -457,6 +483,15 @@
             this.label9.Text = "Nombre del Administrador:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panelIzquierdo
+            // 
+            this.panelIzquierdo.BackColor = System.Drawing.Color.Black;
+            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdo.Name = "panelIzquierdo";
+            this.panelIzquierdo.Size = new System.Drawing.Size(8, 755);
+            this.panelIzquierdo.TabIndex = 93;
+            // 
             // frmGestionReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +504,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionReclamosA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -528,5 +564,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbNombreAdmin;
+        private System.Windows.Forms.Button btEmpleado;
+        private System.Windows.Forms.Button btCliente;
+        private System.Windows.Forms.Panel panelIzquierdo;
     }
 }

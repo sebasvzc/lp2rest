@@ -13,7 +13,7 @@ public class Reclamo {
     private Empleado empleado;
 
     private String descripcion;
-    private boolean estado;
+    private boolean estado; // false NO ATENDIDO, true ATENDIDO
     private Date fechaRegistro;
     private Date fechaAtencion;
     private String observacion;
