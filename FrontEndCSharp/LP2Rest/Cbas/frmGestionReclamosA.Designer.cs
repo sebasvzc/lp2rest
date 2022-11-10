@@ -31,14 +31,12 @@
             this.rtbDesc = new System.Windows.Forms.RichTextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btEmpleado = new System.Windows.Forms.Button();
             this.txtDNIEmpleado = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
@@ -46,6 +44,7 @@
             this.txtTelefonoEmpleado = new System.Windows.Forms.TextBox();
             this.lblApellidoPaterno = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btCliente = new System.Windows.Forms.Button();
             this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -65,7 +64,9 @@
             this.rtbObs = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
+            this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,44 +101,13 @@
             this.dtpFecha.Size = new System.Drawing.Size(311, 32);
             this.dtpFecha.TabIndex = 3;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGuardar,
-            this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(525, 702);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(266, 30);
-            this.toolStrip1.TabIndex = 52;
-            this.toolStrip1.Text = "tsMenu";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(107, 27);
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(116, 27);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 100);
+            this.panel5.Location = new System.Drawing.Point(8, 100);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1286, 5);
+            this.panel5.Size = new System.Drawing.Size(1278, 5);
             this.panel5.TabIndex = 88;
             // 
             // panel4
@@ -146,9 +116,9 @@
             this.panel4.Controls.Add(this.btnCerrar);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(8, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1286, 100);
+            this.panel4.Size = new System.Drawing.Size(1278, 100);
             this.panel4.TabIndex = 87;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -161,7 +131,7 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(1249, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(1241, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 27;
@@ -182,6 +152,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btEmpleado);
             this.groupBox2.Controls.Add(this.txtDNIEmpleado);
             this.groupBox2.Controls.Add(this.lblDNI);
             this.groupBox2.Controls.Add(this.txtNombreEmpleado);
@@ -196,6 +167,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Empleado";
             // 
+            // btEmpleado
+            // 
+            this.btEmpleado.Location = new System.Drawing.Point(494, 44);
+            this.btEmpleado.Name = "btEmpleado";
+            this.btEmpleado.Size = new System.Drawing.Size(75, 31);
+            this.btEmpleado.TabIndex = 31;
+            this.btEmpleado.Text = "...";
+            this.btEmpleado.UseVisualStyleBackColor = true;
+            this.btEmpleado.Click += new System.EventHandler(this.btEmpleado_Click);
+            // 
             // txtDNIEmpleado
             // 
             this.txtDNIEmpleado.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -203,6 +184,7 @@
             this.txtDNIEmpleado.Name = "txtDNIEmpleado";
             this.txtDNIEmpleado.Size = new System.Drawing.Size(208, 32);
             this.txtDNIEmpleado.TabIndex = 23;
+            this.txtDNIEmpleado.TextChanged += new System.EventHandler(this.txtDNIEmpleado_TextChanged);
             // 
             // lblDNI
             // 
@@ -252,6 +234,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btCliente);
             this.groupBox3.Controls.Add(this.txtDNICliente);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtNombreCliente);
@@ -265,6 +248,16 @@
             this.groupBox3.TabIndex = 90;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Cliente";
+            // 
+            // btCliente
+            // 
+            this.btCliente.Location = new System.Drawing.Point(494, 42);
+            this.btCliente.Name = "btCliente";
+            this.btCliente.Size = new System.Drawing.Size(75, 31);
+            this.btCliente.TabIndex = 32;
+            this.btCliente.Text = "...";
+            this.btCliente.UseVisualStyleBackColor = true;
+            this.btCliente.Click += new System.EventHandler(this.btCliente_Click);
             // 
             // txtDNICliente
             // 
@@ -457,24 +450,63 @@
             this.label9.Text = "Nombre del Administrador:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panelIzquierdo
+            // 
+            this.panelIzquierdo.BackColor = System.Drawing.Color.Black;
+            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdo.Name = "panelIzquierdo";
+            this.panelIzquierdo.Size = new System.Drawing.Size(8, 755);
+            this.panelIzquierdo.TabIndex = 93;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnCancelar.Location = new System.Drawing.Point(646, 698);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(162, 41);
+            this.btnCancelar.TabIndex = 95;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(478, 698);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(162, 41);
+            this.btnGuardar.TabIndex = 94;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmGestionReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 755);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionReclamosA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Reclamos";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -486,7 +518,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -494,9 +525,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.RichTextBox rtbDesc;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCerrar;
@@ -528,5 +556,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbNombreAdmin;
+        private System.Windows.Forms.Button btEmpleado;
+        private System.Windows.Forms.Button btCliente;
+        private System.Windows.Forms.Panel panelIzquierdo;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
