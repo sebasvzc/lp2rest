@@ -39,12 +39,6 @@ namespace LP2Rest
             label1.Text = "Bienvenido " + meseroSeleccionado.nombre + " " + meseroSeleccionado.apellidoPaterno;
         }
 
-        public frmPrincipalMesero(GestPersonasWS.cuentaUsuario cuenta)
-        {
-            InitializeComponent();
-            lblID.Text = "Mesero: " + cuenta.usuario;
-        }
-
         public void abrirFormulario(Form formularioMostrar)
         {
             if(formularioActivo != null)

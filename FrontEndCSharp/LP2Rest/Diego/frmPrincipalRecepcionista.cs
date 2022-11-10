@@ -17,6 +17,7 @@ namespace LP2Rest
 
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
+        private int idcuenta;
         public frmPrincipalRecepcionista()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace LP2Rest
             _asistencia = new GestPersonasWS.asistencia();
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
             lblID.Text = "Recepcionista: " + cuenta.usuario;
+            idcuenta = cuenta.idUsuario;
         }
 
         public void abrirFormulario(Form formularioMostrar)
@@ -185,7 +187,7 @@ namespace LP2Rest
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmMesas());
+            abrirFormulario(new frmMesas(idcuenta));
         }
     }
 }
