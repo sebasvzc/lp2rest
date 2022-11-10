@@ -61,6 +61,11 @@ namespace LP2Rest.Cbas
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un nombre", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             GestPersonasWS.artista artista = new GestPersonasWS.artista();
             artista.nombre = txtNombre.Text;
             int resultado = daoGestPersonas.InsertarArtista(artista);
@@ -78,6 +83,11 @@ namespace LP2Rest.Cbas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un nombre", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             GestPersonasWS.artista artista = new GestPersonasWS.artista();
             artista = (artista)dgvArtistas.CurrentRow.DataBoundItem;
             artista.nombre = txtNombre.Text;
