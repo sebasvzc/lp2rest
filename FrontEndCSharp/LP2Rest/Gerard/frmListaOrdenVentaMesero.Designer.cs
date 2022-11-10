@@ -49,7 +49,9 @@
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnVerOc = new System.Windows.Forms.Button();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -209,6 +211,7 @@
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero,
+            this.Estado,
             this.NombreCompleto,
             this.Teléfono,
             this.email});
@@ -257,12 +260,33 @@
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnVerOc
+            // 
+            this.btnVerOc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnVerOc.FlatAppearance.BorderSize = 0;
+            this.btnVerOc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerOc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnVerOc.ForeColor = System.Drawing.Color.White;
+            this.btnVerOc.Location = new System.Drawing.Point(58, 721);
+            this.btnVerOc.Name = "btnVerOc";
+            this.btnVerOc.Size = new System.Drawing.Size(255, 41);
+            this.btnVerOc.TabIndex = 156;
+            this.btnVerOc.Text = "Ver Orden de Venta";
+            this.btnVerOc.UseVisualStyleBackColor = false;
+            this.btnVerOc.Click += new System.EventHandler(this.btnVerOc_Click);
+            // 
             // Numero
             // 
             this.Numero.HeaderText = "Numero";
             this.Numero.Name = "Numero";
             this.Numero.ReadOnly = true;
             this.Numero.Width = 200;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // NombreCompleto
             // 
@@ -290,6 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.Controls.Add(this.btnVerOc);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label7);
@@ -336,7 +361,9 @@
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVerOc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;

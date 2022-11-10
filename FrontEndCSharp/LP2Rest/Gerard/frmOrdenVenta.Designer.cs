@@ -39,21 +39,8 @@
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.gbLineasVenta = new System.Windows.Forms.GroupBox();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnQuitarPlato = new System.Windows.Forms.Button();
-            this.btnAgregarPlato = new System.Windows.Forms.Button();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
-            this.lblPrecioUnitario = new System.Windows.Forms.Label();
-            this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblCodProducto = new System.Windows.Forms.Label();
-            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.btnPreparar = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -69,12 +56,25 @@
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnPreparar = new System.Windows.Forms.Button();
+            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
+            this.lblCodProducto = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.lblPrecioUnitario = new System.Windows.Forms.Label();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.btnAgregarPlato = new System.Windows.Forms.Button();
+            this.btnQuitarPlato = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.gbLineasVenta = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
-            this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.gbPedido.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.gbLineasVenta.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -170,157 +170,6 @@
             this.txtTotal.TabIndex = 60;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gbLineasVenta
-            // 
-            this.gbLineasVenta.Controls.Add(this.txtDescuento);
-            this.gbLineasVenta.Controls.Add(this.label7);
-            this.gbLineasVenta.Controls.Add(this.btnQuitarPlato);
-            this.gbLineasVenta.Controls.Add(this.btnAgregarPlato);
-            this.gbLineasVenta.Controls.Add(this.txtCantidad);
-            this.gbLineasVenta.Controls.Add(this.btnBuscarProducto);
-            this.gbLineasVenta.Controls.Add(this.label4);
-            this.gbLineasVenta.Controls.Add(this.txtPrecioUnitario);
-            this.gbLineasVenta.Controls.Add(this.lblPrecioUnitario);
-            this.gbLineasVenta.Controls.Add(this.txtNombreProducto);
-            this.gbLineasVenta.Controls.Add(this.label3);
-            this.gbLineasVenta.Controls.Add(this.lblCodProducto);
-            this.gbLineasVenta.Controls.Add(this.txtCodigoProducto);
-            this.gbLineasVenta.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbLineasVenta.Location = new System.Drawing.Point(46, 318);
-            this.gbLineasVenta.Name = "gbLineasVenta";
-            this.gbLineasVenta.Size = new System.Drawing.Size(1043, 173);
-            this.gbLineasVenta.TabIndex = 59;
-            this.gbLineasVenta.TabStop = false;
-            this.gbLineasVenta.Text = "Líneas de Orden de Venta";
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDescuento.Location = new System.Drawing.Point(744, 118);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(49, 32);
-            this.txtDescuento.TabIndex = 88;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label7.Location = new System.Drawing.Point(617, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 23);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "Descuento:";
-            // 
-            // btnQuitarPlato
-            // 
-            this.btnQuitarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnQuitarPlato.Location = new System.Drawing.Point(881, 120);
-            this.btnQuitarPlato.Name = "btnQuitarPlato";
-            this.btnQuitarPlato.Size = new System.Drawing.Size(30, 30);
-            this.btnQuitarPlato.TabIndex = 86;
-            this.btnQuitarPlato.Text = "-";
-            this.btnQuitarPlato.UseVisualStyleBackColor = true;
-            this.btnQuitarPlato.Click += new System.EventHandler(this.btnQuitarPlato_Click);
-            // 
-            // btnAgregarPlato
-            // 
-            this.btnAgregarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarPlato.Location = new System.Drawing.Point(845, 120);
-            this.btnAgregarPlato.Name = "btnAgregarPlato";
-            this.btnAgregarPlato.Size = new System.Drawing.Size(30, 30);
-            this.btnAgregarPlato.TabIndex = 85;
-            this.btnAgregarPlato.Text = "+";
-            this.btnAgregarPlato.UseVisualStyleBackColor = true;
-            this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtCantidad.Location = new System.Drawing.Point(486, 118);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(49, 32);
-            this.txtCantidad.TabIndex = 9;
-            // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(347, 36);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(49, 32);
-            this.btnBuscarProducto.TabIndex = 3;
-            this.btnBuscarProducto.Text = "...";
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label4.Location = new System.Drawing.Point(381, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cantidad:";
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.Enabled = false;
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(219, 113);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.ReadOnly = true;
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(97, 32);
-            this.txtPrecioUnitario.TabIndex = 7;
-            // 
-            // lblPrecioUnitario
-            // 
-            this.lblPrecioUnitario.AutoSize = true;
-            this.lblPrecioUnitario.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(21, 121);
-            this.lblPrecioUnitario.Name = "lblPrecioUnitario";
-            this.lblPrecioUnitario.Size = new System.Drawing.Size(161, 23);
-            this.lblPrecioUnitario.TabIndex = 6;
-            this.lblPrecioUnitario.Text = "Precio Unitario:";
-            // 
-            // txtNombreProducto
-            // 
-            this.txtNombreProducto.Enabled = false;
-            this.txtNombreProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtNombreProducto.Location = new System.Drawing.Point(219, 74);
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.ReadOnly = true;
-            this.txtNombreProducto.Size = new System.Drawing.Size(719, 32);
-            this.txtNombreProducto.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label3.Location = new System.Drawing.Point(21, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Nombre del Plato:";
-            // 
-            // lblCodProducto
-            // 
-            this.lblCodProducto.AutoSize = true;
-            this.lblCodProducto.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblCodProducto.Location = new System.Drawing.Point(21, 39);
-            this.lblCodProducto.Name = "lblCodProducto";
-            this.lblCodProducto.Size = new System.Drawing.Size(173, 23);
-            this.lblCodProducto.TabIndex = 1;
-            this.lblCodProducto.Text = "Código del Plato:";
-            // 
-            // txtCodigoProducto
-            // 
-            this.txtCodigoProducto.Enabled = false;
-            this.txtCodigoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtCodigoProducto.Location = new System.Drawing.Point(219, 36);
-            this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.ReadOnly = true;
-            this.txtCodigoProducto.Size = new System.Drawing.Size(106, 32);
-            this.txtCodigoProducto.TabIndex = 0;
-            // 
             // gbCliente
             // 
             this.gbCliente.Controls.Add(this.btnPreparar);
@@ -336,6 +185,16 @@
             this.gbCliente.TabIndex = 58;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Datos del Cliente";
+            // 
+            // btnPreparar
+            // 
+            this.btnPreparar.Location = new System.Drawing.Point(848, 47);
+            this.btnPreparar.Name = "btnPreparar";
+            this.btnPreparar.Size = new System.Drawing.Size(133, 70);
+            this.btnPreparar.TabIndex = 5;
+            this.btnPreparar.Text = "Preparar Pedido";
+            this.btnPreparar.UseVisualStyleBackColor = true;
+            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
             // 
             // btnBuscarCliente
             // 
@@ -501,15 +360,156 @@
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnPreparar
+            // txtCodigoProducto
             // 
-            this.btnPreparar.Location = new System.Drawing.Point(848, 47);
-            this.btnPreparar.Name = "btnPreparar";
-            this.btnPreparar.Size = new System.Drawing.Size(133, 70);
-            this.btnPreparar.TabIndex = 5;
-            this.btnPreparar.Text = "Preparar Pedido";
-            this.btnPreparar.UseVisualStyleBackColor = true;
-            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
+            this.txtCodigoProducto.Enabled = false;
+            this.txtCodigoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(219, 36);
+            this.txtCodigoProducto.Name = "txtCodigoProducto";
+            this.txtCodigoProducto.ReadOnly = true;
+            this.txtCodigoProducto.Size = new System.Drawing.Size(106, 32);
+            this.txtCodigoProducto.TabIndex = 0;
+            // 
+            // lblCodProducto
+            // 
+            this.lblCodProducto.AutoSize = true;
+            this.lblCodProducto.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblCodProducto.Location = new System.Drawing.Point(21, 39);
+            this.lblCodProducto.Name = "lblCodProducto";
+            this.lblCodProducto.Size = new System.Drawing.Size(173, 23);
+            this.lblCodProducto.TabIndex = 1;
+            this.lblCodProducto.Text = "Código del Plato:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label3.Location = new System.Drawing.Point(21, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(182, 23);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Nombre del Plato:";
+            // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.Enabled = false;
+            this.txtNombreProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNombreProducto.Location = new System.Drawing.Point(219, 74);
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.ReadOnly = true;
+            this.txtNombreProducto.Size = new System.Drawing.Size(719, 32);
+            this.txtNombreProducto.TabIndex = 5;
+            // 
+            // lblPrecioUnitario
+            // 
+            this.lblPrecioUnitario.AutoSize = true;
+            this.lblPrecioUnitario.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.lblPrecioUnitario.Location = new System.Drawing.Point(21, 121);
+            this.lblPrecioUnitario.Name = "lblPrecioUnitario";
+            this.lblPrecioUnitario.Size = new System.Drawing.Size(161, 23);
+            this.lblPrecioUnitario.TabIndex = 6;
+            this.lblPrecioUnitario.Text = "Precio Unitario:";
+            // 
+            // txtPrecioUnitario
+            // 
+            this.txtPrecioUnitario.Enabled = false;
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(219, 113);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.ReadOnly = true;
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(97, 32);
+            this.txtPrecioUnitario.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label4.Location = new System.Drawing.Point(381, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 23);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Cantidad:";
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Location = new System.Drawing.Point(347, 36);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(49, 32);
+            this.btnBuscarProducto.TabIndex = 3;
+            this.btnBuscarProducto.Text = "...";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtCantidad.Location = new System.Drawing.Point(486, 118);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(49, 32);
+            this.txtCantidad.TabIndex = 9;
+            // 
+            // btnAgregarPlato
+            // 
+            this.btnAgregarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarPlato.Location = new System.Drawing.Point(845, 120);
+            this.btnAgregarPlato.Name = "btnAgregarPlato";
+            this.btnAgregarPlato.Size = new System.Drawing.Size(30, 30);
+            this.btnAgregarPlato.TabIndex = 85;
+            this.btnAgregarPlato.Text = "+";
+            this.btnAgregarPlato.UseVisualStyleBackColor = true;
+            this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
+            // 
+            // btnQuitarPlato
+            // 
+            this.btnQuitarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuitarPlato.Location = new System.Drawing.Point(881, 120);
+            this.btnQuitarPlato.Name = "btnQuitarPlato";
+            this.btnQuitarPlato.Size = new System.Drawing.Size(30, 30);
+            this.btnQuitarPlato.TabIndex = 86;
+            this.btnQuitarPlato.Text = "-";
+            this.btnQuitarPlato.UseVisualStyleBackColor = true;
+            this.btnQuitarPlato.Click += new System.EventHandler(this.btnQuitarPlato_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label7.Location = new System.Drawing.Point(617, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 23);
+            this.label7.TabIndex = 87;
+            this.label7.Text = "Descuento:";
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDescuento.Location = new System.Drawing.Point(744, 118);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(49, 32);
+            this.txtDescuento.TabIndex = 88;
+            // 
+            // gbLineasVenta
+            // 
+            this.gbLineasVenta.Controls.Add(this.txtDescuento);
+            this.gbLineasVenta.Controls.Add(this.label7);
+            this.gbLineasVenta.Controls.Add(this.btnQuitarPlato);
+            this.gbLineasVenta.Controls.Add(this.btnAgregarPlato);
+            this.gbLineasVenta.Controls.Add(this.txtCantidad);
+            this.gbLineasVenta.Controls.Add(this.btnBuscarProducto);
+            this.gbLineasVenta.Controls.Add(this.label4);
+            this.gbLineasVenta.Controls.Add(this.txtPrecioUnitario);
+            this.gbLineasVenta.Controls.Add(this.lblPrecioUnitario);
+            this.gbLineasVenta.Controls.Add(this.txtNombreProducto);
+            this.gbLineasVenta.Controls.Add(this.label3);
+            this.gbLineasVenta.Controls.Add(this.lblCodProducto);
+            this.gbLineasVenta.Controls.Add(this.txtCodigoProducto);
+            this.gbLineasVenta.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.gbLineasVenta.Location = new System.Drawing.Point(46, 318);
+            this.gbLineasVenta.Name = "gbLineasVenta";
+            this.gbLineasVenta.Size = new System.Drawing.Size(1043, 173);
+            this.gbLineasVenta.TabIndex = 59;
+            this.gbLineasVenta.TabStop = false;
+            this.gbLineasVenta.Text = "Líneas de Orden de Venta";
             // 
             // frmOrdenVenta
             // 
@@ -530,14 +530,14 @@
             this.ClientSizeChanged += new System.EventHandler(this.frmOrdenVenta_ClientSizeChanged);
             this.Click += new System.EventHandler(this.frmOrdenVenta_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).EndInit();
-            this.gbLineasVenta.ResumeLayout(false);
-            this.gbLineasVenta.PerformLayout();
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             this.gbPedido.ResumeLayout(false);
             this.gbPedido.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.gbLineasVenta.ResumeLayout(false);
+            this.gbLineasVenta.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,20 +549,6 @@
         private System.Windows.Forms.DataGridView dgvDetalleOrdenVenta;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.GroupBox gbLineasVenta;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnQuitarPlato;
-        private System.Windows.Forms.Button btnAgregarPlato;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPrecioUnitario;
-        private System.Windows.Forms.Label lblPrecioUnitario;
-        private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnBuscarProducto;
-        private System.Windows.Forms.Label lblCodProducto;
-        private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.GroupBox gbCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Label lblNombreCliente;
@@ -584,5 +570,19 @@
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.Button btnPreparar;
+        private System.Windows.Forms.TextBox txtCodigoProducto;
+        private System.Windows.Forms.Label lblCodProducto;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombreProducto;
+        private System.Windows.Forms.Label lblPrecioUnitario;
+        private System.Windows.Forms.TextBox txtPrecioUnitario;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Button btnAgregarPlato;
+        private System.Windows.Forms.Button btnQuitarPlato;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtDescuento;
+        private System.Windows.Forms.GroupBox gbLineasVenta;
     }
 }

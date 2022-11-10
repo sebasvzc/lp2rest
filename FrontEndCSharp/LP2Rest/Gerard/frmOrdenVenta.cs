@@ -55,6 +55,27 @@ namespace LP2Rest
             btnBuscarProducto.Enabled = false;
 
         }
+        public frmOrdenVenta(String tipo, VentasWS.ordenVenta ordenVenta)
+        {
+         
+            daoVentas = new VentasWS.VentasWSClient();
+            Libre = true;
+            InitializeComponent();
+            dgvDetalleOrdenVenta.AutoGenerateColumns = false;
+            txtIDOrdenVenta.Text = ordenVenta.idOrdenVenta.ToString();
+            textBox3.Text = ordenVenta.mesa.idMesa.ToString();
+            txtDNICliente.Text = ordenVenta.cliente.DNI;
+            txtNombreCliente.Text = ordenVenta.cliente.nombre;
+            gbLineasVenta.Visible = false;
+            ordenVentaSeleccionada = ordenVenta;
+            dgvDetalleOrdenVenta.DataSource = daoVentas.listarTodosLineasOrdenVenta();
+
+            txtCantidad.Enabled = false;
+            txtDescuento.Enabled = false;
+            btnBuscarCliente.Enabled = true;
+            btnBuscarProducto.Enabled = false;
+
+        }
 
         private void frmOrdenVenta_Load(object sender, EventArgs e)
         {

@@ -183,6 +183,7 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
                 ordenVenta.getCliente().setIdPersona(rs.getInt("fid_cliente"));
                 ordenVenta.getCliente().setNombre(rs.getString("nombres"));
                 ordenVenta.getCliente().setApellidoPaterno(rs.getString("apellidos"));
+                ordenVenta.setEstado(rs.getString("estado"));
                 ordenesVenta.add(ordenVenta);
             }
         } catch (Exception ex) {
