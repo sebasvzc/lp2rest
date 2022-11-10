@@ -104,6 +104,12 @@
     <Compile Include="Gonzalo\frmValidarAsistencia.Designer.cs">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gonzalo\frmValidarEliminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmValidarEliminado.Designer.cs">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marcelo\frmAgregarInsumoReceta.cs">
       <SubType>Form</SubType>
     </Compile>

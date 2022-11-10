@@ -100,7 +100,7 @@ namespace LP2Rest
 
         private void sdbtnCompras_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmListarOrdenesCompra());
+            abrirFormulario(new frmSolicitudesCompras());
         }
 
         private void sdbtnReclamos_Click(object sender, EventArgs e)
