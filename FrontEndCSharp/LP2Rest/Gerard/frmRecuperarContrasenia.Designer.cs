@@ -28,22 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblIngresaDNI = new System.Windows.Forms.Label();
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.linea = new System.Windows.Forms.PictureBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.epDNI = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelDerecho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.linea)).BeginInit();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epDNI)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIngresaDNI
@@ -61,7 +58,7 @@
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.panelDerecho.Controls.Add(this.linea);
-            this.panelDerecho.Controls.Add(this.txtDNI);
+            this.panelDerecho.Controls.Add(this.txtCorreo);
             this.panelDerecho.Controls.Add(this.btnBuscar);
             this.panelDerecho.Controls.Add(this.btnCancelar);
             this.panelDerecho.Controls.Add(this.lblIngresaDNI);
@@ -82,18 +79,18 @@
             this.linea.TabIndex = 21;
             this.linea.TabStop = false;
             // 
-            // txtDNI
+            // txtCorreo
             // 
-            this.txtDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
-            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNI.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
-            this.txtDNI.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDNI.Location = new System.Drawing.Point(21, 57);
-            this.txtDNI.MaxLength = 8;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(383, 22);
-            this.txtDNI.TabIndex = 20;
-            this.txtDNI.Validating += new System.ComponentModel.CancelEventHandler(this.txtDNI_Validating_1);
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.Font = new System.Drawing.Font("MS Reference Sans Serif", 13.5F);
+            this.txtCorreo.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCorreo.Location = new System.Drawing.Point(21, 57);
+            this.txtCorreo.MaxLength = 60;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(383, 22);
+            this.txtCorreo.TabIndex = 20;
+            this.txtCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.txtDNI_Validating_1);
             // 
             // btnBuscar
             // 
@@ -164,10 +161,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // epDNI
-            // 
-            this.epDNI.ContainerControl = this;
-            // 
             // frmRecuperacionContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,7 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.linea)).EndInit();
             this.panelIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epDNI)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,8 +192,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox linea;
-        private System.Windows.Forms.TextBox txtDNI;
-        private System.Windows.Forms.ErrorProvider epDNI;
+        private System.Windows.Forms.TextBox txtCorreo;
     }
 }
 

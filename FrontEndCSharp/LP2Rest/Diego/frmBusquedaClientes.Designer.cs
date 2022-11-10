@@ -1,6 +1,6 @@
 ﻿namespace LP2Rest
 {
-    partial class frmBusquedaClientes
+    partial class frmBusquedaCliente
     {
         /// <summary>
         /// Required designer variable.

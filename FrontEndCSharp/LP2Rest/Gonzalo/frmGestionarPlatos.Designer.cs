@@ -33,6 +33,7 @@
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.txtIdPlato = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -58,15 +59,18 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+
             this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.tlsBuscar = new System.Windows.Forms.ToolStrip();
+
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
@@ -85,6 +89,16 @@
             this.btnAgregarProducto.Text = "+";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            // 
+            // btnBuscarInsumo
+            // 
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(409, 23);
+            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(32, 23);
+            this.btnBuscarInsumo.TabIndex = 148;
+            this.btnBuscarInsumo.Text = "...";
+            this.btnBuscarInsumo.UseVisualStyleBackColor = true;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
             // btnEliminarProducto
             // 
@@ -163,6 +177,7 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(123, 20);
             this.txtStock.TabIndex = 144;
+            this.txtStock.ReadOnly = true;
             // 
             // label10
             // 
@@ -179,6 +194,7 @@
             this.txtGanancia.Name = "txtGanancia";
             this.txtGanancia.Size = new System.Drawing.Size(123, 20);
             this.txtGanancia.TabIndex = 142;
+            this.txtGanancia.ReadOnly = true;
             // 
             // txtPrecioVenta
             // 

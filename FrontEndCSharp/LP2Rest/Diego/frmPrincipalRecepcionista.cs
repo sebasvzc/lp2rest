@@ -1,16 +1,6 @@
-﻿using LP2Rest;
-using LP2Rest.GestPersonasWS;
-using LP2Rest.Gonzalo;
+﻿using LP2Rest.Gonzalo;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LP2Rest
@@ -151,12 +141,12 @@ namespace LP2Rest
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void panelSuperior_MouseDown(object sender, MouseEventArgs e)

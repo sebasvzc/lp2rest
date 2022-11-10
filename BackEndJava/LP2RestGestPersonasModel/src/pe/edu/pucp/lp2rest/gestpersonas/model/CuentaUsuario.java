@@ -11,6 +11,7 @@ public class CuentaUsuario {
     private int idUsuario;
     private String usuario;
     private String contrasenia;
+    private char tipoEmpleado;
     private boolean activo;
 
     //constructor
@@ -18,6 +19,14 @@ public class CuentaUsuario {
     }
 
     //getters y setters
+    public char getTipoEmpleado() {
+        return tipoEmpleado;
+    }
+
+    public void setTipoEmpleado(char tipoEmpleado) {
+        this.tipoEmpleado = tipoEmpleado;
+    }
+
     public Empleado getEmpleado() {
         return empleado;
     }

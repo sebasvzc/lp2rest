@@ -89,7 +89,7 @@ namespace LP2Rest
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
@@ -127,7 +127,12 @@ namespace LP2Rest
 
         private void sdbtnUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmBusquedaClientes());
+            //abrirFormulario(new frmBusquedaClientes());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

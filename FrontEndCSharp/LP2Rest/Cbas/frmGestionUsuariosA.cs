@@ -62,7 +62,7 @@ namespace LP2Rest
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
             GestPersonasWS.empleado empleado;
             int resultado = 0;
-
+            char tipoEmpleado;
             if (cboArea.SelectedItem.ToString() == "Administrador")
             {
                 empleado = new GestPersonasWS.administrador();
@@ -80,6 +80,7 @@ namespace LP2Rest
                 empleado.numeroHorasMensuales = 0;
                 empleado.activo = true;
                 resultado = daoGestPersonas.InsertarAdministrador((administrador)empleado);
+                tipoEmpleado = 'A';
 
             }
             else if (cboArea.SelectedItem.ToString() == "Cajero")
@@ -99,6 +100,7 @@ namespace LP2Rest
                 empleado.numeroHorasMensuales = 0;
                 empleado.activo = true;
                 resultado = daoGestPersonas.InsertarCajero((cajero)empleado);
+                tipoEmpleado = 'C';
             }
             else if (cboArea.SelectedItem.ToString() == "Mesero")
             {
@@ -116,10 +118,8 @@ namespace LP2Rest
                 empleado.fechaNacimientoSpecified = true;
                 empleado.numeroHorasMensuales = 0;
                 empleado.activo = true;
-
-
-
                 resultado = daoGestPersonas.InsertarMesero((mesero)empleado);
+                tipoEmpleado = 'M';
             }
             else if (cboArea.SelectedItem.ToString() == "Chef")
             {
@@ -138,7 +138,7 @@ namespace LP2Rest
                 empleado.numeroHorasMensuales = 0;
                 empleado.activo = true;
                 resultado = daoGestPersonas.InsertarChef((chef)empleado);
-
+                tipoEmpleado = 'F';
             }
             else
             {
@@ -157,6 +157,7 @@ namespace LP2Rest
                 empleado.numeroHorasMensuales = 0;
                 empleado.activo = true;
                 resultado = daoGestPersonas.InsertarRecepcionista((recepcionista)empleado);
+                tipoEmpleado = 'R';
             }
 
             GestPersonasWS.cuentaUsuario cuentaUsuario = new GestPersonasWS.cuentaUsuario();
@@ -166,6 +167,7 @@ namespace LP2Rest
             cuentaUsuario.activo = true;
             cuentaUsuario.idUsuario = resultado;
             cuentaUsuario.empleado = empleado;
+            cuentaUsuario.tipoEmpleado = tipoEmpleado;
             daoGestPersonas.InsertarCuentaUsuario(cuentaUsuario);
             empleado.cuentaUsuario = cuentaUsuario;
 

@@ -65,7 +65,15 @@ namespace LP2Rest
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmGestionReclamosA formGestionReclamosA = new frmGestionReclamosA();
-            formGestionReclamosA.ShowDialog();
+            if(formGestionReclamosA.ShowDialog() == DialogResult.OK)
+            {
+                DateTime auxFechaIni = new DateTime();
+                DateTime auxFechaFin = new DateTime();
+
+                auxFechaIni = dtpFechaInicial.Value;
+                auxFechaFin = dtpFechaFin.Value;
+                dgvReclamos.DataSource = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, tbApeCli.Text, tbNomEmp.Text, tbApeEmp.Text, tbNomAdm.Text, tbApeAdm.Text, auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), (int)cboEstado.SelectedValue); 
+            }
         }
 
         private void dgvReclamos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -92,10 +100,16 @@ namespace LP2Rest
             auxFechaIni = dtpFechaInicial.Value;
             auxFechaFin = dtpFechaFin.Value;
 
-            dgvReclamos.DataSource = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, tbApeCli.Text, tbNomEmp.Text, tbApeEmp.Text, tbNomAdm.Text, tbApeAdm.Text, auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), (int)cboEstado.SelectedValue);
-
-            //dgvReclamos.DataSource = daoGestionPersonas.ListarTodosReclamos();
-            //System.Console.
+            GestPersonasWS.reclamo[ ] listaRecs = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, tbApeCli.Text, tbNomEmp.Text, tbApeEmp.Text, tbNomAdm.Text, tbApeAdm.Text, auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), (int)cboEstado.SelectedValue);
+            
+            if (listaRecs != null)
+            {
+                dgvReclamos.DataSource = listaRecs;
+            }
+            else
+            {
+                MessageBox.Show("No se ha encontrado reclamos", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -110,8 +124,14 @@ namespace LP2Rest
 
                 if (formReclamo.ShowDialog() == DialogResult.OK)
                 {
-                    dgvReclamos.DataSource = null;
+
+                    DateTime auxFechaIni = new DateTime();
+                    DateTime auxFechaFin = new DateTime();
+                    auxFechaIni = dtpFechaInicial.Value;
+                    auxFechaFin = dtpFechaFin.Value;
+                    dgvReclamos.DataSource = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, tbApeCli.Text, tbNomEmp.Text, tbApeEmp.Text, tbNomAdm.Text, tbApeAdm.Text, auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), (int)cboEstado.SelectedValue); ;
                 }
+                
             }
         }
 
