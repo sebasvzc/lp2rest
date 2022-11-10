@@ -13,6 +13,9 @@
     <service name="MenuWS">
       <implementation-class>pe.edu.pucp.lp2rest.services.MenuWS</implementation-class>
     </service>
+    <service name="ReporteWS">
+      <implementation-class>pe.edu.pucp.lp2rest.services.ReporteWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
