@@ -14,6 +14,8 @@ public class ItemVenta {
     private int disponible;
     private ArrayList<Receta> recetas;
     private ArrayList<LineaDetalleCombo> lineasCombo;
+    private String recetaDePreparacion;
+    private double descuento;
     //constructor
     public ItemVenta() {
 
@@ -117,6 +119,34 @@ public class ItemVenta {
      */
     public void setLineasCombo(ArrayList<LineaDetalleCombo> lineasCombo) {
         this.lineasCombo = lineasCombo;
+    }
+
+    /**
+     * @return the recetaDePreparacion
+     */
+    public String getRecetaDePreparacion() {
+        return recetaDePreparacion;
+    }
+
+    /**
+     * @param recetaDePreparacion the recetaDePreparacion to set
+     */
+    public void setRecetaDePreparacion(String recetaDePreparacion) {
+        this.recetaDePreparacion = recetaDePreparacion;
+    }
+
+    /**
+     * @return the descuento
+     */
+    public double getDescuento() {
+        return descuento;
+    }
+
+    /**
+     * @param descuento the descuento to set
+     */
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
     }
 
 }

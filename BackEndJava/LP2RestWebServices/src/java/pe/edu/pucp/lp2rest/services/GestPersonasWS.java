@@ -145,6 +145,17 @@ public class GestPersonasWS {
         return artistas;
     }
 
+    @WebMethod(operationName = "listarArtistasPorNombre")
+    public ArrayList<Artista> listarArtistasPorNombre(String nombre) {
+        ArrayList<Artista> artistas = null;
+        try {
+            artistas = daoArtista.listarPorNombre(nombre);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return artistas;
+    }
+
     @WebMethod(operationName = "InsertarArtista")
     public int InsertarArtista(@WebParam(name = "artista") Artista artista) {
         int resultado = 0;
@@ -649,34 +660,34 @@ public class GestPersonasWS {
             System.out.println(ex.getMessage());
         }
         return cuentasUsuario;
-    } 
-    
+    }
+
     @WebMethod(operationName = "ListarTodosEmpleados")
     public ArrayList<Empleado> ListarTodosEmpleados() {
         ArrayList<Empleado> lsEmpleados = null;
-        try{
+        try {
             lsEmpleados = daoEmpleado.listarTodos();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
         return lsEmpleados;
     }
-    
+
     @WebMethod(operationName = "ListarBusquedaEmpleados")
     public ArrayList<Empleado> ListarBusquedaEmpleados(
-                                                        @WebParam(name = "nombreEmp")String nombre, 
-                                                        @WebParam(name = "apellidoEmp")String apellido, 
-                                                        @WebParam(name = "empDNI")String dni, 
-                                                        @WebParam(name = "empCargo")String cargo, 
-                                                        @WebParam(name = "empFechaIni")String fechaIni, 
-                                                        @WebParam(name = "empFechaFin")String fechaFin,
-                                                        @WebParam(name = "empSueldoIni")double sueldoIni, 
-                                                        @WebParam(name = "empSueldoFin")double sueldoFin
+            @WebParam(name = "nombreEmp") String nombre,
+            @WebParam(name = "apellidoEmp") String apellido,
+            @WebParam(name = "empDNI") String dni,
+            @WebParam(name = "empCargo") String cargo,
+            @WebParam(name = "empFechaIni") String fechaIni,
+            @WebParam(name = "empFechaFin") String fechaFin,
+            @WebParam(name = "empSueldoIni") double sueldoIni,
+            @WebParam(name = "empSueldoFin") double sueldoFin
     ) {
         ArrayList<Empleado> lsEmpleados = null;
-        try{
+        try {
             SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-            Date fechaI =formateador.parse(fechaIni);
+            Date fechaI = formateador.parse(fechaIni);
             Date fechaF = formateador.parse(fechaFin);
             lsEmpleados = daoEmpleado.listarBusqueda(
                     nombre,
@@ -688,7 +699,7 @@ public class GestPersonasWS {
                     sueldoIni,
                     sueldoFin
             );
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
         return lsEmpleados;

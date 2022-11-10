@@ -102,6 +102,18 @@ public class AlmacenWS {
             return insumos;
     }
     
+    @WebMethod(operationName = "listarInsumosPorIdItemVenta")
+    public ArrayList<Insumo> listarInsumosPorIdItemVenta(@WebParam(name = "idPlato") int idPlato) {
+        ArrayList<Insumo> insumos = null;
+        try{
+            insumos = daoInsumo.listarRecetasPorIdItemVenta(idPlato);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return insumos;
+    }
+    
+    
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "FiltrarOrdenCompra")
     public  ArrayList<OrdenCompra> FiltrarOrdenCompra(

@@ -113,5 +113,75 @@ namespace LP2Rest
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaFin_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCostMax_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCostoMin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaNacimiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDNINombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDNINombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEventos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

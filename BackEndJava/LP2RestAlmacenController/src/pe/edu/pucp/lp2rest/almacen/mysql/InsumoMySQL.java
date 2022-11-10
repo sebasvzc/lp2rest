@@ -57,7 +57,7 @@ public class InsumoMySQL implements InsumoDAO {
 		cs.setDouble("_precio_compra", ins.getPrecioCompra());
 		cs.setString("_unidad_medida", ins.getUnidadMedida().toString());
 		cs.setInt("_fid_tipo_producto", ins.getTipoProducto().getIdTipoProducto());
-		System.out.println("La unidad de medida es : "+ins.getUnidadMedida().toString());
+		//System.out.println("La unidad de medida es : "+ins.getUnidadMedida().toString());
 		resultado = cs.executeUpdate();
 	} catch (Exception ex) {
 		System.out.println(ex.getMessage());
@@ -196,6 +196,33 @@ public class InsumoMySQL implements InsumoDAO {
         }
         return insumos;
 
+    }
+
+    @Override
+    public ArrayList<Insumo> listarRecetasPorIdItemVenta(int idItemVenta) {
+        ArrayList<Insumo> insumos = new ArrayList<>();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_RECETAS_X_IDITEMVENTA(?)");
+            cs.setInt("_id_itemVenta", idItemVenta);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Insumo insumo = new Insumo();
+                insumo.setIdInsumo(rs.getInt("id_insumo"));
+                insumo.setSKU(rs.getString("sku"));
+                insumo.setNombre(rs.getString("nombre"));
+                insumo.setStock(rs.getInt("cantidad"));
+                insumo.setPrecioCompra(rs.getDouble("precio_compra"));
+                insumos.add(insumo);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return insumos;
     }
     
 }

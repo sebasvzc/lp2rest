@@ -30,17 +30,6 @@ namespace LP2Rest.Gonzalo
             dgvPlatos.DataSource = platos;
         }
 
-        private void btnBuscarPlato_Click(object sender, EventArgs e)
-        {
-            frmBuscarSoloPlatos formBuscarSoloPlatos = new frmBuscarSoloPlatos();
-            if (formBuscarSoloPlatos.ShowDialog() == DialogResult.OK)
-            {
-                _itemVenta = formBuscarSoloPlatos.ItemVentaSeleccionado;
-                txtIDPlato.Text = _itemVenta.idItemVenta.ToString();
-                txtNombrePlato.Text = _itemVenta.nombre;
-            }
-        }
-
         private void btnAgregarPlato_Click(object sender, EventArgs e)
         {
             if (txtIDPlato.Text != "" && txtNombrePlato.Text != "" && txtCantidad.Text != "")
@@ -126,6 +115,17 @@ namespace LP2Rest.Gonzalo
             catch (Exception ex)
             {
 
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarSoloPlatos formBuscarSoloPlatos = new frmBuscarSoloPlatos();
+            if (formBuscarSoloPlatos.ShowDialog() == DialogResult.OK)
+            {
+                _itemVenta = formBuscarSoloPlatos.ItemVentaSeleccionado;
+                txtIDPlato.Text = _itemVenta.idItemVenta.ToString();
+                txtNombrePlato.Text = _itemVenta.nombre;
             }
         }
     }
