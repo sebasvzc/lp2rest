@@ -3,12 +3,9 @@ package pe.edu.pucp.lp2rest.ventas.model;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Cajero;
-import pe.edu.pucp.lp2rest.gestpersonas.model.Cliente;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Mesero;
 
 public class OrdenVenta {
-
-    
 
     // atributos
     private int idOrdenVenta;
@@ -20,7 +17,6 @@ public class OrdenVenta {
     private Cajero cajero;
     private Mesero mesero;
     private Mesa mesa;
-    private Cliente cliente;
 
     //constructor
     public OrdenVenta() {
@@ -28,15 +24,6 @@ public class OrdenVenta {
     }
 
     //getters y setters
-    
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-    
     public int getIdOrdenVenta() {
         return idOrdenVenta;
     }

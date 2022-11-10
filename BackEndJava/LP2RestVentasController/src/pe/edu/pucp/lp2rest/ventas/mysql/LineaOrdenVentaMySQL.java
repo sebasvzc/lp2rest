@@ -29,7 +29,7 @@ public class LineaOrdenVentaMySQL implements LineaOrdenVentaDAO {
             // _fid_itemVenta
             // _fid_ordenVenta
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_LINEA_ORDEN_VENTA(?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_LINEA_ORDEN_VENTA(?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_lineaOrdenVenta", java.sql.Types.INTEGER);
             cs.setDouble("_subtotal", lineaOrdenVenta.getSubtotal());
             cs.setDate("_fecha_registro", new java.sql.Date(lineaOrdenVenta.getFechaRegistro().getTime()));
@@ -38,9 +38,7 @@ public class LineaOrdenVentaMySQL implements LineaOrdenVentaDAO {
             cs.setInt("_cantidadVenta", lineaOrdenVenta.getCantidadVendida());
             cs.setInt("_fid_itemVenta", lineaOrdenVenta.getItemVenta().getIdItemVenta());
             cs.setInt("_fid_ordenVenta", lineaOrdenVenta.getOrdenVenta().getIdOrdenVenta());
-            cs.executeUpdate();
-            resultado = cs.getInt("_id_lineaOrdenVenta");
-            lineaOrdenVenta.setIdLineaOrdenVenta(resultado);
+            resultado = cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {

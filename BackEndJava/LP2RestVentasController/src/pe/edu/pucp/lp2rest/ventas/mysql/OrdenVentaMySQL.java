@@ -4,14 +4,8 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
 import pe.edu.pucp.lp2rest.config.DBManager;
-import pe.edu.pucp.lp2rest.gestpersonas.model.Cajero;
-import pe.edu.pucp.lp2rest.gestpersonas.model.Cliente;
-import pe.edu.pucp.lp2rest.gestpersonas.model.Mesero;
 import pe.edu.pucp.lp2rest.ventas.dao.OrdenVentaDAO;
-import pe.edu.pucp.lp2rest.ventas.model.DocumentoPago;
-import pe.edu.pucp.lp2rest.ventas.model.Mesa;
 import pe.edu.pucp.lp2rest.ventas.model.OrdenVenta;
 
 /**
@@ -29,10 +23,8 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
         int resultado = 0;
         try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_ORDEN_VENTA(?,?,?,?,?,?,?,?,?)}");
-            
+            cs = con.prepareCall("{call INSERTAR_ORDEN_VENTA(?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_ordenVenta", java.sql.Types.INTEGER);
-            
             cs.setDouble("_total", ordenVenta.getTotal());
             cs.setBoolean("_pagado", ordenVenta.isPagado());
             cs.setDate("_fecha", new java.sql.Date(ordenVenta.getFecha().getTime()));
@@ -40,14 +32,7 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
             cs.setInt("_fid_mesa", ordenVenta.getMesa().getIdMesa());
             cs.setInt("_fid_mesero", ordenVenta.getMesero().getIdPersona());
             cs.setInt("_fid_cajero", ordenVenta.getCajero().getIdPersona());
-            cs.setInt("_fid_cliente", ordenVenta.getCliente().getIdPersona());
-            
-            cs.executeUpdate();
-            
-            ordenVenta.setIdOrdenVenta(cs.getInt("_id_ordenVenta"));
-            
-            resultado = ordenVenta.getIdOrdenVenta();
-            
+            resultado = cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {
@@ -116,12 +101,6 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
             rs = cs.executeQuery();
             while (rs.next()) {
                 OrdenVenta ordenVenta = new OrdenVenta();
-                ordenVenta.setDocumentoPago(new DocumentoPago());
-                ordenVenta.setCajero(new Cajero());
-                ordenVenta.setMesero(new Mesero());
-                ordenVenta.setMesa(new Mesa());
-                ordenVenta.setCliente(new Cliente());                
-                
                 ordenVenta.setIdOrdenVenta(rs.getInt("id_ordenVenta"));
                 ordenVenta.setTotal(rs.getDouble("total"));
                 ordenVenta.setPagado(rs.getBoolean("pagado"));
@@ -130,9 +109,6 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
                 ordenVenta.getMesa().setIdMesa(rs.getInt("fid_mesa"));
                 ordenVenta.getMesero().setIdPersona(rs.getInt("fid_mesero"));
                 ordenVenta.getCajero().setIdPersona(rs.getInt("fid_cajero"));
-                ordenVenta.getCliente().setIdPersona(rs.getInt("fid_cliente"));
-                ordenVenta.getCliente().setNombre(rs.getString("nombres"));
-                ordenVenta.getCliente().setApellidoPaterno(rs.getString("apellidos"));
                 ordenesVenta.add(ordenVenta);
             }
         } catch (Exception ex) {
@@ -145,76 +121,5 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
             }
         }
         return ordenesVenta;
-    }
-
-    @Override
-    public ArrayList<OrdenVenta> listarBusqueda(String nombre, String apellido, Date fechaIni, Date fechaFin, double sueldoIni, double sueldoFin) {
-        ArrayList<OrdenVenta> ordenesVenta = new ArrayList<>();
-        try {
-            con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call LISTAR_BUSQUEDA_ORDEN_VENTA(?,?,?,?,?,?)}");
-            
-            cs.setString("_cliNom", nombre);
-            cs.setString("_cliApe", apellido);
-            
-            cs.setDate("_fechaIni", new java.sql.Date(fechaIni.getTime()));
-            cs.setDate("_fechaFin", new java.sql.Date(fechaFin.getTime()));
-            
-            cs.setDouble("_sueldoIni", sueldoIni);
-            cs.setDouble("_sueldoFin", sueldoFin);
-            
-            rs = cs.executeQuery();
-            while (rs.next()) {
-                OrdenVenta ordenVenta = new OrdenVenta();
-                ordenVenta.setDocumentoPago(new DocumentoPago());
-                ordenVenta.setCajero(new Cajero());
-                ordenVenta.setMesero(new Mesero());
-                ordenVenta.setMesa(new Mesa());
-                ordenVenta.setCliente(new Cliente());                
-                
-                ordenVenta.setIdOrdenVenta(rs.getInt("id_ordenVenta"));
-                ordenVenta.setTotal(rs.getDouble("total"));
-                ordenVenta.setPagado(rs.getBoolean("pagado"));
-                ordenVenta.setFecha(rs.getDate("fecha"));
-                ordenVenta.getDocumentoPago().setIdDocumentoPago(rs.getInt("fid_documentoDePago"));
-                ordenVenta.getMesa().setIdMesa(rs.getInt("fid_mesa"));
-                ordenVenta.getMesero().setIdPersona(rs.getInt("fid_mesero"));
-                ordenVenta.getCajero().setIdPersona(rs.getInt("fid_cajero"));
-                ordenVenta.getCliente().setIdPersona(rs.getInt("fid_cliente"));
-                ordenVenta.getCliente().setNombre(rs.getString("nombres"));
-                ordenVenta.getCliente().setApellidoPaterno(rs.getString("apellidos"));
-                ordenesVenta.add(ordenVenta);
-            }
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        } finally {
-            try {
-                con.close();
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
-        return ordenesVenta;
-    }
-
-    @Override
-    public int actualizar(int idOrdenVenta) {
-        int resultado = 0;
-        try {
-            con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call ACTUALIZAR_ESTADO_ORDEN_VENTA(?)}");
-            cs.setInt("_id_ordenVenta", idOrdenVenta);
-            resultado = cs.executeUpdate();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        } finally {
-            try {
-                con.close();
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
-            }
-        }
-        return resultado;
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

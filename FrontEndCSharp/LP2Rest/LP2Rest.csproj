@@ -967,9 +967,6 @@
     <None Include="Connected Services\MenuWS\MenuWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1005,9 +1002,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.lineaOrdenVenta.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosDocumentosDePagoResponse.datasource">

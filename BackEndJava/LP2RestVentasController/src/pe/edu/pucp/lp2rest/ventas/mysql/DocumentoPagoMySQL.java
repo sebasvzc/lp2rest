@@ -37,12 +37,7 @@ public class DocumentoPagoMySQL implements DocumentoPagoDAO {
             cs.setDouble("_monto_recibido", documentoPago.getMontoRecibido());
             cs.setString("_metodo_pago", documentoPago.getMetodoPago());
             cs.setString("_direccion_fiscal", documentoPago.getDireccionFiscal());
-            
-            cs.executeUpdate();
-            
-            documentoPago.setIdDocumentoPago(cs.getInt("_id_documentoDePago"));
-            resultado = documentoPago.getIdDocumentoPago();
-            
+            resultado = cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {

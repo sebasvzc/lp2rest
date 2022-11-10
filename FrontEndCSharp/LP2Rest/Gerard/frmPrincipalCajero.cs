@@ -13,45 +13,20 @@ namespace LP2Rest
 {
     public partial class frmPrincipalCajero : Form
     {
-        private static Form formularioActivo = null;
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
-        private int idcuenta;
-
         public frmPrincipalCajero()
         {
             InitializeComponent();
         }
 
-        public frmPrincipalCajero(GestPersonasWS.cuentaUsuario cuenta)
-        {
-            InitializeComponent();
-            lblID.Text = "Cajero: " + cuenta.usuario;
-            idcuenta = cuenta.idUsuario;
-        }
-
-        public void abrirFormulario(Form formularioMostrar)
-        {
-            if (formularioActivo != null)
-                formularioActivo.Close();
-
-            formularioActivo = formularioMostrar;
-            formularioMostrar.TopLevel = false;
-            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
-            formularioMostrar.Dock = DockStyle.Fill;
-            panelContenedor.Controls.Add(formularioMostrar);
-            formularioMostrar.Show();
-
-        }
-
         private void imgUsuarios_Click(object sender, EventArgs e)
         {
-            //frmMesas formMesas = new frmMesas();
-            //formMesas.ShowDialog();
+            frmMesas formMesas = new frmMesas();
+            formMesas.ShowDialog();
         }
 
         private void imgCompras_Click(object sender, EventArgs e)
@@ -106,16 +81,6 @@ namespace LP2Rest
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void sdbtnMesas_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new frmMesas(idcuenta));
-        }
-
-        private void sdbtnReportes_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new frmListarReportesA());
         }
     }
 }

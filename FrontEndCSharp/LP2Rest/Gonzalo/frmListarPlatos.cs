@@ -32,24 +32,6 @@ namespace LP2Rest
             dgvItemsVenta.AutoGenerateColumns = false;
         }
 
-        public frmListarPlatos(GestPersonasWS.cuentaUsuario cuenta)
-        {
-            InitializeComponent();
-            daoMenu = new MenuWS.MenuWSClient();
-            cboCategoria.DataSource = daoMenu.listarTodasTiposDeItem();
-            cboCategoria.DisplayMember = "descripcion";
-            cboCategoria.ValueMember = "idTipoItem";
-            cboDisponible.Items.Add("Disponible");
-            cboDisponible.Items.Add("Agotado");
-            dgvItemsVenta.AutoGenerateColumns = false;
-            if(cuenta.tipoEmpleado == 'F')
-            {
-                btnNuevoPlato.Visible = false;
-                btnNuevoCombo.Visible = false;
-                btnEliminar.Visible = false;
-            }
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e) //Crea plato
         {
             frmGestionarPlatos formGestionarPlatos = new frmGestionarPlatos();
@@ -135,6 +117,7 @@ namespace LP2Rest
                 _itemVentaSeleccionado = (MenuWS.itemVenta)dgvItemsVenta.CurrentRow.DataBoundItem;
                 frmModificarPlato formModificarPlato = new frmModificarPlato(_itemVentaSeleccionado);
                 formModificarPlato.ShowDialog();
+
             }
             else
             {
