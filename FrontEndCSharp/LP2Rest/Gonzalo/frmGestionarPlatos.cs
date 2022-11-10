@@ -35,16 +35,6 @@ namespace LP2Rest
             cbCategoria.ValueMember = "idTipoItem";
         }
 
-        private void btnBuscarInsumo_Click(object sender, EventArgs e)
-        {
-            frmBuscarInsumos formBuscarInsumos = new frmBuscarInsumos();
-            if (formBuscarInsumos.ShowDialog() == DialogResult.OK)
-            {
-                insumo = formBuscarInsumos.InsumoSeleccionado;
-                txtNombreInsumo.Text = insumo.nombre;
-            }
-        }
-
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             if (txtNombreInsumo.Text != "" && txtCantidad.Text != "")
@@ -127,6 +117,16 @@ namespace LP2Rest
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarInsumos formBuscarInsumos = new frmBuscarInsumos();
+            if (formBuscarInsumos.ShowDialog() == DialogResult.OK)
+            {
+                insumo = formBuscarInsumos.InsumoSeleccionado;
+                txtNombreInsumo.Text = insumo.nombre;
+            }
         }
     }
 }

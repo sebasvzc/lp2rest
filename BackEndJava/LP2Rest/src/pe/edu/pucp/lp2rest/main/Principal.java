@@ -60,7 +60,7 @@ public class Principal {
     meseros = daoMesero.listarTodas();
 
     for( Mesero mesero : meseros){
-       System.out.println("Nombre: " + mesero.getNombre());
+       //System.out.println("Nombre: " + mesero.getNombre());
     }
         
     Evento eventoPrueba = new Evento();
@@ -94,29 +94,25 @@ public class Principal {
     }
     
     InsumoDAO daoInsumo = new InsumoMySQL();
-    ArrayList<Insumo> insumos = daoInsumo.buscarInsumosXNombre("a");
+    ArrayList<Insumo> insumos = daoInsumo.listarRecetasPorIdItemVenta(1);
     for(Insumo in : insumos){
         //System.out.println("Nombre: " + in.getNombre());
     }
     
     ItemVenta platoPrueba = new ItemVenta();
-    Receta recetaPrueba = new Receta();
-    recetaPrueba.setCantidad(10);
-    recetaPrueba.setInsumo(new Insumo());
-    recetaPrueba.getInsumo().setIdInsumo(29);
-            
-    platoPrueba.setNombre("Plato prueba");
+    platoPrueba.setIdItemVenta(8);
+    platoPrueba.setNombre("Plato de anticuchos");
     platoPrueba.setPrecio(9.99);
     platoPrueba.setStock(10);
     platoPrueba.setTipoItem(new TipoItem());
     platoPrueba.getTipoItem().setIdTipoItem(1);
-    platoPrueba.setDisponible(0);
-    platoPrueba.setRecetas(new ArrayList<>());
-    platoPrueba.getRecetas().add(recetaPrueba);
+    platoPrueba.setDisponible(0);    
+    platoPrueba.setDescuento(5.99);
+    platoPrueba.setRecetaDePreparacion("Colocar en un bol los ajos, aceite, pimienta, sal, comino, orégano, vinagre y ají panca. Mezclar todo.");
     
-    //int idPlatoPrueba = daoItemVenta.insertar(platoPrueba);
+    int idPlatoPrueba = daoItemVenta.modificar(platoPrueba);
     
-    //System.out.println("IdplatoPRUEBA: " + idPlatoPrueba);
+    System.out.println("IdplatoPRUEBA: " + idPlatoPrueba);
     
 //        String sDate1="31/12/1998";
 //        String sHour1="01:00:00";

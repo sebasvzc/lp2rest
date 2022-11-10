@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarCombos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnBuscarPlato = new System.Windows.Forms.Button();
+            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtNombrePlato = new System.Windows.Forms.TextBox();
@@ -44,6 +46,11 @@
             this.lblDNINombre = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvPlatos = new System.Windows.Forms.DataGridView();
+            this.IDPlato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,13 +68,9 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.IDPlato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tlsBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlatos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -96,7 +99,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
-            this.groupBox1.Controls.Add(this.btnBuscarPlato);
+            this.groupBox1.Controls.Add(this.tlsBuscar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.txtNombrePlato);
@@ -116,15 +119,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Platos:";
             // 
-            // btnBuscarPlato
+            // tlsBuscar
             // 
-            this.btnBuscarPlato.Location = new System.Drawing.Point(177, 28);
-            this.btnBuscarPlato.Name = "btnBuscarPlato";
-            this.btnBuscarPlato.Size = new System.Drawing.Size(32, 23);
-            this.btnBuscarPlato.TabIndex = 148;
-            this.btnBuscarPlato.Text = "...";
-            this.btnBuscarPlato.UseVisualStyleBackColor = true;
-            this.btnBuscarPlato.Click += new System.EventHandler(this.btnBuscarPlato_Click);
+            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
+            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuscar});
+            this.tlsBuscar.Location = new System.Drawing.Point(174, 28);
+            this.tlsBuscar.Name = "tlsBuscar";
+            this.tlsBuscar.Size = new System.Drawing.Size(26, 25);
+            this.tlsBuscar.TabIndex = 150;
+            this.tlsBuscar.Text = "toolStrip2";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnBuscar.Text = "btnBuscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label12
             // 
@@ -248,6 +263,50 @@
             this.dgvPlatos.Size = new System.Drawing.Size(616, 176);
             this.dgvPlatos.TabIndex = 61;
             this.dgvPlatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPlatos_CellFormatting);
+            // 
+            // IDPlato
+            // 
+            this.IDPlato.FillWeight = 75F;
+            this.IDPlato.HeaderText = "ID Plato";
+            this.IDPlato.MinimumWidth = 6;
+            this.IDPlato.Name = "IDPlato";
+            this.IDPlato.ReadOnly = true;
+            this.IDPlato.Width = 75;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.FillWeight = 140F;
+            this.NombreInsumo.HeaderText = "Nombre";
+            this.NombreInsumo.MinimumWidth = 6;
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            this.NombreInsumo.Width = 180;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 70F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Costo
+            // 
+            this.Costo.FillWeight = 105F;
+            this.Costo.HeaderText = "Costo Unitario";
+            this.Costo.MinimumWidth = 6;
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            this.Costo.Width = 105;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            this.Subtotal.Width = 125;
             // 
             // gbPedido
             // 
@@ -411,50 +470,6 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // IDPlato
-            // 
-            this.IDPlato.FillWeight = 75F;
-            this.IDPlato.HeaderText = "ID Plato";
-            this.IDPlato.MinimumWidth = 6;
-            this.IDPlato.Name = "IDPlato";
-            this.IDPlato.ReadOnly = true;
-            this.IDPlato.Width = 75;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.FillWeight = 140F;
-            this.NombreInsumo.HeaderText = "Nombre";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 180;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 70F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 70;
-            // 
-            // Costo
-            // 
-            this.Costo.FillWeight = 105F;
-            this.Costo.HeaderText = "Costo Unitario";
-            this.Costo.MinimumWidth = 6;
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            this.Costo.Width = 105;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            this.Subtotal.Width = 125;
-            // 
             // frmGestionarCombos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,6 +486,8 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tlsBuscar.ResumeLayout(false);
+            this.tlsBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlatos)).EndInit();
             this.gbPedido.ResumeLayout(false);
             this.gbPedido.PerformLayout();
@@ -486,7 +503,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnBuscarPlato;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtNombrePlato;
@@ -521,5 +537,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.ToolStrip tlsBuscar;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
     }
 }

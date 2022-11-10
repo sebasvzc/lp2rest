@@ -829,6 +829,9 @@
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.itemVenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarLineasComboXIdComboResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarTodasItemVentasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

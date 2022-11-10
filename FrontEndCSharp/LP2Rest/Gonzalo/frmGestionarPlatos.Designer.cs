@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPlatos));
             this.btnAgregarProducto = new System.Windows.Forms.Button();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
@@ -66,11 +66,14 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tlsBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarProducto
@@ -82,16 +85,6 @@
             this.btnAgregarProducto.Text = "+";
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
-            // btnBuscarInsumo
-            // 
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(409, 23);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(32, 23);
-            this.btnBuscarInsumo.TabIndex = 148;
-            this.btnBuscarInsumo.Text = "...";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = true;
-            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
             // btnEliminarProducto
             // 
@@ -259,7 +252,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
-            this.groupBox1.Controls.Add(this.btnBuscarInsumo);
+            this.groupBox1.Controls.Add(this.tlsBuscar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.txtNombreInsumo);
@@ -452,6 +445,28 @@
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
             // 
+            // tlsBuscar
+            // 
+            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
+            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuscar});
+            this.tlsBuscar.Location = new System.Drawing.Point(406, 23);
+            this.tlsBuscar.Name = "tlsBuscar";
+            this.tlsBuscar.Size = new System.Drawing.Size(57, 25);
+            this.tlsBuscar.TabIndex = 151;
+            this.tlsBuscar.Text = "toolStrip2";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnBuscar.Text = "btnBuscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +489,8 @@
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tlsBuscar.ResumeLayout(false);
+            this.tlsBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,12 +529,13 @@
         private System.Windows.Forms.TextBox txtIdPlato;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.ToolStrip tlsBuscar;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
     }
 }
