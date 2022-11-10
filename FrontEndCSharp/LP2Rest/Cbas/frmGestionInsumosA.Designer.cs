@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -51,9 +49,9 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -203,25 +201,9 @@
             this.precioArtista,
             this.cantidad,
             this.subtotal});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmpleados.Location = new System.Drawing.Point(11, 45);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleados.Size = new System.Drawing.Size(1069, 264);
             this.dgvEmpleados.TabIndex = 78;
@@ -274,15 +256,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Órdenes del insumo";
             // 
-            // panel1
+            // button3
             // 
-            this.panel1.Controls.Add(this.dgvEmpleados);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.panel1.Location = new System.Drawing.Point(3, 26);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1092, 322);
-            this.panel1.TabIndex = 92;
+            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(997, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 40);
+            this.button3.TabIndex = 83;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -294,15 +276,15 @@
             this.button1.TabIndex = 84;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // panel1
             // 
-            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(997, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 40);
-            this.button3.TabIndex = 83;
-            this.button3.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.dgvEmpleados);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.panel1.Location = new System.Drawing.Point(3, 26);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1092, 322);
+            this.panel1.TabIndex = 92;
             // 
             // groupBox2
             // 
@@ -421,6 +403,7 @@
             this.btnGuardar.TabIndex = 92;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmGestionInsumosA
             // 
