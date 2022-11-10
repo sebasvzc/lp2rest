@@ -458,6 +458,9 @@
     <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
       <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
     </EmbeddedResource>

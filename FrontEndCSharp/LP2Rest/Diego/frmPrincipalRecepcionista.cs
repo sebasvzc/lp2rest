@@ -98,7 +98,7 @@ namespace LP2Rest
 
 
                 //Se asume (momentaneamente) que el admin tiene idCuentaUsuario = 2 
-                _asistencia.idCuentaUsuario = 2;
+                _asistencia.idCuentaUsuario = idcuenta;
 
                 MessageBox.Show("Se registró la asistencia");
                 btnMarcarAsistencia.Hide();
