@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDNINombre = new System.Windows.Forms.Label();
-            this.txtDNINombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,28 +40,29 @@
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboArea = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSueldoDesde = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSueldaHasta = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbActivo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTrabajo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,26 +76,26 @@
             this.lblDNINombre.Text = "Nombres:";
             this.lblDNINombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtDNINombre
+            // txtNombre
             // 
-            this.txtDNINombre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNINombre.Location = new System.Drawing.Point(365, 62);
-            this.txtDNINombre.Name = "txtDNINombre";
-            this.txtDNINombre.Size = new System.Drawing.Size(402, 32);
-            this.txtDNINombre.TabIndex = 1;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNombre.Location = new System.Drawing.Point(365, 62);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(402, 32);
+            this.txtNombre.TabIndex = 1;
             // 
             // dgvEmpleados
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
             this.dgvEmpleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DNI,
@@ -102,25 +103,25 @@
             this.Area,
             this.Teléfono,
             this.email});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEmpleados.Location = new System.Drawing.Point(42, 295);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleados.Size = new System.Drawing.Size(1023, 375);
             this.dgvEmpleados.TabIndex = 4;
@@ -172,13 +173,13 @@
             this.lblFechaNacimiento.Text = "Fecha de Contratación";
             this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dtpFechaNacimiento
+            // dtpFechaDesde
             // 
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(365, 165);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(402, 32);
-            this.dtpFechaNacimiento.TabIndex = 36;
+            this.dtpFechaDesde.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(365, 165);
+            this.dtpFechaDesde.Name = "dtpFechaDesde";
+            this.dtpFechaDesde.Size = new System.Drawing.Size(402, 32);
+            this.dtpFechaDesde.TabIndex = 36;
             // 
             // label1
             // 
@@ -190,13 +191,13 @@
             this.label1.Text = "Desde:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dateTimePicker1
+            // dtpFechaHasta
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(365, 235);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(402, 32);
-            this.dateTimePicker1.TabIndex = 39;
+            this.dtpFechaHasta.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(365, 235);
+            this.dtpFechaHasta.Name = "dtpFechaHasta";
+            this.dtpFechaHasta.Size = new System.Drawing.Size(402, 32);
+            this.dtpFechaHasta.TabIndex = 39;
             // 
             // label2
             // 
@@ -243,13 +244,13 @@
             this.label4.Text = "Sueldo";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtSueldoDesde
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(819, 165);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 32);
-            this.textBox1.TabIndex = 44;
+            this.txtSueldoDesde.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSueldoDesde.Location = new System.Drawing.Point(819, 165);
+            this.txtSueldoDesde.Name = "txtSueldoDesde";
+            this.txtSueldoDesde.Size = new System.Drawing.Size(219, 32);
+            this.txtSueldoDesde.TabIndex = 44;
             // 
             // label5
             // 
@@ -271,22 +272,22 @@
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // txtSueldaHasta
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(819, 235);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(219, 32);
-            this.textBox2.TabIndex = 47;
+            this.txtSueldaHasta.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSueldaHasta.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSueldaHasta.Location = new System.Drawing.Point(819, 235);
+            this.txtSueldaHasta.Name = "txtSueldaHasta";
+            this.txtSueldaHasta.Size = new System.Drawing.Size(219, 32);
+            this.txtSueldaHasta.TabIndex = 47;
             // 
-            // textBox3
+            // txtDNI
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(819, 62);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(219, 32);
-            this.textBox3.TabIndex = 48;
+            this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDNI.Location = new System.Drawing.Point(819, 62);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(219, 32);
+            this.txtDNI.TabIndex = 48;
             // 
             // label7
             // 
@@ -298,13 +299,13 @@
             this.label7.Text = "DNI del usuario:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox4
+            // txtApellidoPaterno
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox4.Location = new System.Drawing.Point(62, 61);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(246, 32);
-            this.textBox4.TabIndex = 51;
+            this.txtApellidoPaterno.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(62, 61);
+            this.txtApellidoPaterno.Name = "txtApellidoPaterno";
+            this.txtApellidoPaterno.Size = new System.Drawing.Size(246, 32);
+            this.txtApellidoPaterno.TabIndex = 51;
             // 
             // label8
             // 
@@ -316,15 +317,15 @@
             this.label8.Text = "Apellido Paterno:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // cbActivo
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(62, 234);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 33);
-            this.comboBox1.TabIndex = 54;
+            this.cbActivo.BackColor = System.Drawing.SystemColors.Window;
+            this.cbActivo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbActivo.FormattingEnabled = true;
+            this.cbActivo.Location = new System.Drawing.Point(62, 234);
+            this.cbActivo.Name = "cbActivo";
+            this.cbActivo.Size = new System.Drawing.Size(246, 33);
+            this.cbActivo.TabIndex = 54;
             // 
             // label9
             // 
@@ -369,7 +370,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(950, 701);
+            this.btnEliminar.Location = new System.Drawing.Point(671, 701);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(115, 41);
             this.btnEliminar.TabIndex = 106;
@@ -383,12 +384,13 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(829, 701);
+            this.btnModificar.Location = new System.Drawing.Point(550, 701);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(115, 41);
             this.btnModificar.TabIndex = 105;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -397,7 +399,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(708, 701);
+            this.btnNuevo.Location = new System.Drawing.Point(429, 701);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(115, 41);
             this.btnNuevo.TabIndex = 104;
@@ -405,33 +407,49 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(943, 701);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(122, 41);
+            this.btnSeleccionar.TabIndex = 116;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // frmListarUsuariosA
             // 
             this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbActivo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtApellidoPaterno);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.txtSueldaHasta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSueldoDesde);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cboArea);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaNacimiento);
-            this.Controls.Add(this.dtpFechaNacimiento);
+            this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.dgvEmpleados);
-            this.Controls.Add(this.txtDNINombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDNINombre);
             this.Controls.Add(this.lblTrabajo);
             this.Name = "frmListarUsuariosA";
@@ -445,25 +463,25 @@
         #endregion
 
         private System.Windows.Forms.Label lblDNINombre;
-        private System.Windows.Forms.TextBox txtDNINombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboArea;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSueldoDesde;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSueldaHasta;
+        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbActivo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTrabajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
@@ -475,5 +493,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }
