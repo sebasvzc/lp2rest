@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ReporteWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\VentasWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -308,6 +313,12 @@
     <Compile Include="Cbas\frmListarReclamosA.Designer.cs">
       <DependentUpon>frmListarReclamosA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Omar\frmBuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmBuscarEmpleado.Designer.cs">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Omar\frmListarReportesA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cbas\frmListarReclamosA.resx">
       <DependentUpon>frmListarReclamosA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmBuscarEmpleado.resx">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Omar\frmListarReportesA.resx">
       <DependentUpon>frmListarReportesA.cs</DependentUpon>
@@ -925,6 +939,13 @@
     <None Include="Connected Services\MenuWS\MenuWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.documentoPago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1126,6 +1147,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\cancelar.png" />
     <Content Include="Resources\eliminar.png" />
     <None Include="Resources\Image1.bmp" />
@@ -1161,7 +1188,27 @@
     <WCFMetadataStorage Include="Connected Services\AlmacenWS\" />
     <WCFMetadataStorage Include="Connected Services\GestPersonasWS\" />
     <WCFMetadataStorage Include="Connected Services\MenuWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteWS\" />
     <WCFMetadataStorage Include="Connected Services\VentasWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
