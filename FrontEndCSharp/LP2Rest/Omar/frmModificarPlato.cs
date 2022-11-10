@@ -48,6 +48,7 @@ namespace LP2Rest.Omar
 
             if (tipoItemVenta == 3)
             {
+                lblTitulo.Text = "DETALLE DE COMBO";
                 txtReceta.Visible = false;
                 lblReceta.Visible = false;
                 try{
