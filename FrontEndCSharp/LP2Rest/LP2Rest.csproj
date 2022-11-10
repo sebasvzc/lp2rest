@@ -666,6 +666,9 @@
     <None Include="Connected Services\GestPersonasWS\GestPersonasWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.actualizarContraseniaCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -715,6 +718,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.enviarCorreoRecuperacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.empleado.datasource">
@@ -853,6 +859,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.reclamo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.validarCodigoCuentaUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.verificarCuentaUsuarioResponse.datasource">

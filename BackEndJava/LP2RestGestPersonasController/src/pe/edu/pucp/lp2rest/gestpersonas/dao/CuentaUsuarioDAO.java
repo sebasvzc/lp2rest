@@ -12,4 +12,7 @@ public interface CuentaUsuarioDAO {
     int eliminar(int idCuentaUsuario);
     ArrayList<CuentaUsuario> listarTodas();
     CuentaUsuario verificar(CuentaUsuario cuentaUsuario);
+    int enviarCorreoRecuperacion(String correo);
+    int verificarCodigoVerificacion(int idCuentaUsuario, String codigo);
+    int actualizarContrasenia(int idCuentaUsuario, String contrasenia);
 }
