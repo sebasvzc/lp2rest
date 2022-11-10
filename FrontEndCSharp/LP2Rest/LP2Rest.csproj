@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="Cbas\frmGestionReclamosBusquedaClientes.Designer.cs">
       <DependentUpon>frmGestionReclamosBusquedaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diego\frmBuscarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,6 +412,7 @@
     <EmbeddedResource Include="Cbas\frmGestionEmpleadosBusquedaEmpleado.resx">
       <DependentUpon>frmGestionEmpleadosBusquedaEmpleado.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diego\frmBuscarProveedor.resx">
       <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -768,6 +770,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -837,6 +842,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarReclamoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.proveedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.proveedor1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -844,6 +852,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.reclamo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.verificarCuentaUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.verificarCuentaUsuarioResponse1.datasource">
