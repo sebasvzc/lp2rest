@@ -10,4 +10,6 @@ public interface InsumoDAO {
     ArrayList<Insumo> listarTodos(); 
     ArrayList<Insumo> buscarInsumosXNombre(String nombre);
     ArrayList<Insumo> filtrarInsumos(String nombre,String SKU, int idPlato,double precioMin,double precioMax,double stockMin, double stockMax,int idTipoProducto); 
+    
+    ArrayList<Insumo> listarRecetasPorIdItemVenta(int idItemVenta);
 }

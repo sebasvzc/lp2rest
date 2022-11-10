@@ -397,6 +397,12 @@
     <Compile Include="Gerard\frmRecuperarContrasenia.Designer.cs">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Omar\frmModificarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omar\frmModificarPlato.Designer.cs">
+      <DependentUpon>frmModificarPlato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Omar\frmReporteOrdenesVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +453,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmGestionarCombos.resx">
       <DependentUpon>frmGestionarCombos.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
@@ -589,6 +596,9 @@
     <EmbeddedResource Include="Gerard\frmRecuperarContrasenia.resx">
       <DependentUpon>frmRecuperarContrasenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Omar\frmModificarPlato.resx">
+      <DependentUpon>frmModificarPlato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Omar\frmReporteOrdenesVenta.resx">
       <DependentUpon>frmReporteOrdenesVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -653,6 +663,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.lineaOrdenCompra.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.listarInsumosPorIdItemVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ListarLineasOrdenCompraResponse.datasource">
@@ -924,6 +937,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.itemVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarLineasComboXIdComboResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.listarTodasItemVentasResponse.datasource">

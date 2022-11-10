@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.lp2rest.menu.mysql;
 
 import java.sql.CallableStatement;
@@ -61,7 +57,29 @@ public class ItemVentaMySQL implements ItemVentaDAO {
 
     @Override
     public int modificar(ItemVenta itemVenta) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int resultado = 0;
+	try {
+		con = DBManager.getInstance().getConnection();
+		cs = con.prepareCall("{call MODIFICAR_ITEM_VENTA(?,?,?,?,?,?,?)}");
+		cs.setInt("_id_itemVenta", itemVenta.getIdItemVenta());
+		cs.setString("_nombre", itemVenta.getNombre());
+		cs.setDouble("_precio", itemVenta.getPrecio());
+                cs.setInt("_stock", itemVenta.getStock());
+		cs.setInt("_disponible", itemVenta.getDisponible());
+		cs.setDouble("_descuento", itemVenta.getDescuento());
+		cs.setString("_receta", itemVenta.getRecetaDePreparacion());
+		
+		resultado = cs.executeUpdate();
+	} catch (Exception ex) {
+		System.out.println(ex.getMessage());
+	} finally {
+		try {
+			con.close();
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	}
+	return resultado;
     }
 
     @Override
@@ -136,6 +154,12 @@ public class ItemVentaMySQL implements ItemVentaDAO {
                 itemVenta.getTipoItem().setDescripcion(rs.getString("descripcion"));
                 itemVenta.setPrecio(rs.getDouble("precio"));
                 itemVenta.setStock(rs.getInt("stock"));
+                itemVenta.setDescuento(rs.getDouble("descuento"));
+                itemVenta.setRecetaDePreparacion(rs.getString("recetaDePreparacion"));
+                itemVenta.setDisponible(rs.getInt("disponible"));
+                itemVenta.setTipoItem(new TipoItem());
+                itemVenta.getTipoItem().setIdTipoItem(rs.getInt("fid_tipoItem"));
+                itemVenta.getTipoItem().setDescripcion(rs.getString("descripcion"));
                 itemsVenta.add(itemVenta);
             }
         }catch(Exception ex){
@@ -184,5 +208,31 @@ public class ItemVentaMySQL implements ItemVentaDAO {
             }
         }
         return resultado;
+    }
+
+    @Override
+    public ArrayList<ItemVenta> listarLineasComboXIdCombo(int idCombo) {
+        ArrayList<ItemVenta> itemsVenta = new ArrayList<>();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_ITEMVENTA_X_IDCOMBO(?)");
+            cs.setInt("_fid_combo", idCombo);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                ItemVenta itemVenta = new ItemVenta();
+                itemVenta.setIdItemVenta(rs.getInt("id_itemVenta"));                
+                itemVenta.setNombre(rs.getString("nombre"));      
+                itemVenta.setStock(rs.getInt("cantidad"));
+                itemVenta.setPrecio(rs.getDouble("precio"));
+                itemsVenta.add(itemVenta);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return itemsVenta;
     }
 }

@@ -7,5 +7,5 @@ public interface RecetaDAO {
     int insertar(Receta receta);
     int modificar (Receta receta);
     int eliminar(int idReceta);
-    ArrayList<Receta> listarTodos();
+    ArrayList<Receta> listarTodos();   
 }

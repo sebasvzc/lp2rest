@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPlatos));
             this.btnAgregarProducto = new System.Windows.Forms.Button();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,55 +59,25 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
+            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
+
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tlsBuscar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Costo
-            // 
-            this.Costo.FillWeight = 105F;
-            this.Costo.HeaderText = "Costo Unitario";
-            this.Costo.MinimumWidth = 6;
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            this.Costo.Width = 85;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.HeaderText = "Nombre";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 170;
-            // 
-            // SKU
-            // 
-            this.SKU.FillWeight = 75F;
-            this.SKU.HeaderText = "SKU";
-            this.SKU.MinimumWidth = 6;
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            this.SKU.Width = 75;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            this.Subtotal.Width = 93;
-            // 
-            // Unidad
-            // 
-            this.Unidad.FillWeight = 85F;
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.MinimumWidth = 6;
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
-            this.Unidad.Width = 70;
             // 
             // btnAgregarProducto
             // 
@@ -127,33 +89,6 @@
             this.btnAgregarProducto.UseVisualStyleBackColor = true;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
-            // btnBuscarInsumo
-            // 
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(409, 23);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(32, 23);
-            this.btnBuscarInsumo.TabIndex = 148;
-            this.btnBuscarInsumo.Text = "...";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = true;
-            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 24);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
-            this.btnEliminar.Text = "&Eliminar";
-            // 
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.Location = new System.Drawing.Point(594, 48);
@@ -163,15 +98,6 @@
             this.btnEliminarProducto.Text = "-";
             this.btnEliminarProducto.UseVisualStyleBackColor = true;
             this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(73, 24);
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cbCategoria
             // 
@@ -191,7 +117,6 @@
             this.SKU,
             this.NombreInsumo,
             this.Cantidad,
-            this.Unidad,
             this.Costo,
             this.Subtotal});
             this.dgvInsumos.Location = new System.Drawing.Point(12, 81);
@@ -203,15 +128,6 @@
             this.dgvInsumos.Size = new System.Drawing.Size(616, 176);
             this.dgvInsumos.TabIndex = 61;
             this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 70F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 70;
             // 
             // gbPedido
             // 
@@ -246,7 +162,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(93, 138);
+            this.txtStock.Location = new System.Drawing.Point(93, 133);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(123, 20);
             this.txtStock.TabIndex = 144;
@@ -255,7 +171,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 140);
+            this.label10.Location = new System.Drawing.Point(46, 135);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 143;
@@ -263,7 +179,7 @@
             // 
             // txtGanancia
             // 
-            this.txtGanancia.Location = new System.Drawing.Point(93, 204);
+            this.txtGanancia.Location = new System.Drawing.Point(93, 166);
             this.txtGanancia.Name = "txtGanancia";
             this.txtGanancia.Size = new System.Drawing.Size(123, 20);
             this.txtGanancia.TabIndex = 142;
@@ -271,15 +187,17 @@
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(93, 172);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(93, 197);
+            this.txtPrecioVenta.Multiline = true;
             this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.ReadOnly = true;
             this.txtPrecioVenta.Size = new System.Drawing.Size(123, 20);
             this.txtPrecioVenta.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 204);
+            this.label7.Location = new System.Drawing.Point(26, 166);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 141;
@@ -288,7 +206,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 172);
+            this.label6.Location = new System.Drawing.Point(13, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 14;
@@ -339,7 +257,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
-            this.groupBox1.Controls.Add(this.btnBuscarInsumo);
+            this.groupBox1.Controls.Add(this.tlsBuscar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.txtNombreInsumo);
@@ -464,6 +382,96 @@
             this.toolStrip1.TabIndex = 134;
             this.toolStrip1.Text = "tsMenu";
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(73, 24);
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
+            this.btnEliminar.Text = "&Eliminar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(77, 24);
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // SKU
+            // 
+            this.SKU.FillWeight = 75F;
+            this.SKU.HeaderText = "SKU";
+            this.SKU.MinimumWidth = 6;
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            this.SKU.Width = 75;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.HeaderText = "Nombre";
+            this.NombreInsumo.MinimumWidth = 6;
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            this.NombreInsumo.Width = 210;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 70F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Costo
+            // 
+            this.Costo.FillWeight = 105F;
+            this.Costo.HeaderText = "Costo Unitario";
+            this.Costo.MinimumWidth = 6;
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            this.Costo.Width = 105;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
+            // tlsBuscar
+            // 
+            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
+            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuscar});
+            this.tlsBuscar.Location = new System.Drawing.Point(406, 23);
+            this.tlsBuscar.Name = "tlsBuscar";
+            this.tlsBuscar.Size = new System.Drawing.Size(57, 25);
+            this.tlsBuscar.TabIndex = 151;
+            this.tlsBuscar.Text = "toolStrip2";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnBuscar.Text = "btnBuscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,6 +494,8 @@
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tlsBuscar.ResumeLayout(false);
+            this.tlsBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,13 +534,13 @@
         private System.Windows.Forms.TextBox txtIdPlato;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
+        private System.Windows.Forms.ToolStrip tlsBuscar;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
     }
 }

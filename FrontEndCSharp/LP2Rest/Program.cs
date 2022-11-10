@@ -18,7 +18,7 @@ namespace LP2Rest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGestionEventosA());
+            Application.Run(new frmPrincipalA());
         }
     }
 }

@@ -91,6 +91,19 @@ public class MenuWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "listarLineasComboXIdCombo")
+    public ArrayList<ItemVenta> listarLineasComboXIdCombo( 
+            @WebParam(name = "idCombo") int idCombo) {
+        
+        ArrayList<ItemVenta> itemVentas = null;
+        try{
+            itemVentas = daoItemVenta.listarLineasComboXIdCombo(idCombo);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return itemVentas;
+    }
+    
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "listarTodasRecetas")
     public ArrayList<Receta> listarTodasRecetas() {
