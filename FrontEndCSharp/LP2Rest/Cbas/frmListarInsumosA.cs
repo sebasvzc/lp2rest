@@ -68,7 +68,7 @@ namespace LP2Rest
             cboPlato.DataSource = dataSourcePlato;
             cboPlato.DisplayMember = "nombre";
             cboPlato.ValueMember = "idItemVenta";
-            tsSeleccionar.Visible = true;
+            btnSeleccionar.Visible = true;
 
             //cboTipoProducto.Items.Insert(0, "Selecciona un Tipo de Producto");
 
@@ -152,7 +152,7 @@ namespace LP2Rest
             }
         }
 
-        private void tsSeleccionar_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (dgvInsumos.CurrentRow != null)
             {
