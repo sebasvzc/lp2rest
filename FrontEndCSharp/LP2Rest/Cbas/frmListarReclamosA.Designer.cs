@@ -38,10 +38,6 @@
             this.tbNomCli = new System.Windows.Forms.TextBox();
             this.lblDNINombre = new System.Windows.Forms.Label();
             this.dgvReclamos = new System.Windows.Forms.DataGridView();
-            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoReclamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,6 +55,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoReclamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReclamos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +138,8 @@
             this.nombreCliente,
             this.nombreEmpleado,
             this.fechaEvento,
-            this.estadoReclamo});
+            this.estadoReclamo,
+            this.Descripcion});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -161,34 +163,6 @@
             this.dgvReclamos.Size = new System.Drawing.Size(1005, 411);
             this.dgvReclamos.TabIndex = 78;
             this.dgvReclamos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReclamos_CellFormatting);
-            // 
-            // nombreCliente
-            // 
-            this.nombreCliente.HeaderText = "Nombre del Cliente";
-            this.nombreCliente.Name = "nombreCliente";
-            this.nombreCliente.ReadOnly = true;
-            this.nombreCliente.Width = 300;
-            // 
-            // nombreEmpleado
-            // 
-            this.nombreEmpleado.HeaderText = "Nombre del Empleado";
-            this.nombreEmpleado.Name = "nombreEmpleado";
-            this.nombreEmpleado.ReadOnly = true;
-            this.nombreEmpleado.Width = 300;
-            // 
-            // fechaEvento
-            // 
-            this.fechaEvento.HeaderText = "Fecha";
-            this.fechaEvento.Name = "fechaEvento";
-            this.fechaEvento.ReadOnly = true;
-            this.fechaEvento.Width = 272;
-            // 
-            // estadoReclamo
-            // 
-            this.estadoReclamo.HeaderText = "Estado";
-            this.estadoReclamo.Name = "estadoReclamo";
-            this.estadoReclamo.ReadOnly = true;
-            this.estadoReclamo.Width = 90;
             // 
             // label2
             // 
@@ -378,6 +352,41 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // nombreCliente
+            // 
+            this.nombreCliente.HeaderText = "Nombre del Cliente";
+            this.nombreCliente.Name = "nombreCliente";
+            this.nombreCliente.ReadOnly = true;
+            this.nombreCliente.Width = 300;
+            // 
+            // nombreEmpleado
+            // 
+            this.nombreEmpleado.HeaderText = "Nombre del Empleado";
+            this.nombreEmpleado.Name = "nombreEmpleado";
+            this.nombreEmpleado.ReadOnly = true;
+            this.nombreEmpleado.Width = 300;
+            // 
+            // fechaEvento
+            // 
+            this.fechaEvento.HeaderText = "Fecha";
+            this.fechaEvento.Name = "fechaEvento";
+            this.fechaEvento.ReadOnly = true;
+            this.fechaEvento.Width = 272;
+            // 
+            // estadoReclamo
+            // 
+            this.estadoReclamo.HeaderText = "Estado";
+            this.estadoReclamo.Name = "estadoReclamo";
+            this.estadoReclamo.ReadOnly = true;
+            this.estadoReclamo.Width = 90;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 500;
+            // 
             // frmListarReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,10 +430,6 @@
         private System.Windows.Forms.TextBox tbNomCli;
         private System.Windows.Forms.Label lblDNINombre;
         private System.Windows.Forms.DataGridView dgvReclamos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEvento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoReclamo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -442,5 +447,10 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEvento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoReclamo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

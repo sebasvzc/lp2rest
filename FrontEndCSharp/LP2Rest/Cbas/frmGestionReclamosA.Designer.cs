@@ -67,6 +67,8 @@
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFechaAtencion = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,7 +100,7 @@
             this.dtpFecha.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.dtpFecha.Location = new System.Drawing.Point(260, 85);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(311, 32);
+            this.dtpFecha.Size = new System.Drawing.Size(331, 32);
             this.dtpFecha.TabIndex = 3;
             // 
             // panel5
@@ -107,7 +109,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(8, 100);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1278, 5);
+            this.panel5.Size = new System.Drawing.Size(1311, 5);
             this.panel5.TabIndex = 88;
             // 
             // panel4
@@ -118,7 +120,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(8, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1278, 100);
+            this.panel4.Size = new System.Drawing.Size(1311, 100);
             this.panel4.TabIndex = 87;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -381,6 +383,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtFechaAtencion);
+            this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.tbNombreAdmin);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.tbIdAdmin);
@@ -390,7 +394,7 @@
             this.groupBox4.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.groupBox4.Location = new System.Drawing.Point(651, 314);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(623, 369);
+            this.groupBox4.Size = new System.Drawing.Size(635, 369);
             this.groupBox4.TabIndex = 92;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Atención del Reclamo";
@@ -400,13 +404,13 @@
             this.tbNombreAdmin.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.tbNombreAdmin.Location = new System.Drawing.Point(289, 87);
             this.tbNombreAdmin.Name = "tbNombreAdmin";
-            this.tbNombreAdmin.Size = new System.Drawing.Size(318, 32);
+            this.tbNombreAdmin.Size = new System.Drawing.Size(334, 32);
             this.tbNombreAdmin.TabIndex = 59;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(16, 145);
+            this.label1.Location = new System.Drawing.Point(16, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(591, 32);
             this.label1.TabIndex = 58;
@@ -424,9 +428,9 @@
             // rtbObs
             // 
             this.rtbObs.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.rtbObs.Location = new System.Drawing.Point(16, 180);
+            this.rtbObs.Location = new System.Drawing.Point(16, 213);
             this.rtbObs.Name = "rtbObs";
-            this.rtbObs.Size = new System.Drawing.Size(591, 171);
+            this.rtbObs.Size = new System.Drawing.Size(591, 138);
             this.rtbObs.TabIndex = 57;
             this.rtbObs.Text = "";
             // 
@@ -489,11 +493,30 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label3.Location = new System.Drawing.Point(35, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(248, 32);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Fecha de Atencion:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtFechaAtencion
+            // 
+            this.txtFechaAtencion.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtFechaAtencion.Location = new System.Drawing.Point(289, 130);
+            this.txtFechaAtencion.Name = "txtFechaAtencion";
+            this.txtFechaAtencion.Size = new System.Drawing.Size(334, 32);
+            this.txtFechaAtencion.TabIndex = 62;
+            // 
             // frmGestionReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 755);
+            this.ClientSize = new System.Drawing.Size(1319, 755);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox4);
@@ -561,5 +584,7 @@
         private System.Windows.Forms.Panel panelIzquierdo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtFechaAtencion;
     }
 }

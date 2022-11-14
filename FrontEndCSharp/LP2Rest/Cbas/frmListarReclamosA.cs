@@ -72,7 +72,15 @@ namespace LP2Rest
 
                 auxFechaIni = dtpFechaInicial.Value;
                 auxFechaFin = dtpFechaFin.Value;
-                dgvReclamos.DataSource = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, tbApeCli.Text, tbNomEmp.Text, tbApeEmp.Text, tbNomAdm.Text, tbApeAdm.Text, auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), (int)cboEstado.SelectedValue); 
+                dgvReclamos.DataSource = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text,
+                                                                                   tbApeCli.Text, 
+                                                                                   tbNomEmp.Text, 
+                                                                                   tbApeEmp.Text, 
+                                                                                   tbNomAdm.Text, 
+                                                                                   tbApeAdm.Text, 
+                                                                                   auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"),
+                                                                                   auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), 
+                                                                                   (int)cboEstado.SelectedValue); 
             }
         }
 
@@ -82,6 +90,7 @@ namespace LP2Rest
             dgvReclamos.Rows[e.RowIndex].Cells[0].Value = auxRec.cliente.nombre + " " + auxRec.cliente.apellidoPaterno;
             dgvReclamos.Rows[e.RowIndex].Cells[1].Value = auxRec.empleado.nombre + " " + auxRec.empleado.apellidoPaterno;
             dgvReclamos.Rows[e.RowIndex].Cells[2].Value = auxRec.fechaRegistro.ToShortDateString();
+
             if (auxRec.estado == false)
             {
                 dgvReclamos.Rows[e.RowIndex].Cells[3].Value = "Por Atender";
@@ -90,6 +99,9 @@ namespace LP2Rest
             {
                 dgvReclamos.Rows[e.RowIndex].Cells[3].Value = "Atendido";
             }
+
+            dgvReclamos.Rows[e.RowIndex].Cells[4].Value = auxRec.descripcion;
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -109,6 +121,7 @@ namespace LP2Rest
             else
             {
                 MessageBox.Show("No se ha encontrado reclamos", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvReclamos.DataSource = listaRecs;
             }
         }
 
