@@ -563,6 +563,22 @@ public class GestPersonasWS {
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "modificarAsistenciaSalida")
+    public int modificarAsistenciaSalida(@WebParam(name = "id_asistencia")int id_asistencia,
+            @WebParam(name = "fecha_fin") String fecha_fin,
+            @WebParam(name = "hora_fin")String hora_fin){
+        
+        int resultado = 0;
+        try {
+            resultado = daoAsistencia.modificarAsistencia(id_asistencia,fecha_fin,hora_fin);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    
 
     @WebMethod(operationName = "filtrarPorDni")
     public Cliente filtrarPorDni(@WebParam(name = "dni") String dni) {

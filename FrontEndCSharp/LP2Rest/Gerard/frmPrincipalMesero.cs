@@ -32,7 +32,7 @@ namespace LP2Rest
         private GestPersonasWS.asistencia _asistencia;
         private int cuentaUsuario;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
-        private int cuentaUser;
+        private int cuentaUser = 0;
         public mesero MeseroSeleccionado { get => meseroSeleccionado; set => meseroSeleccionado = value; }
 
         public frmPrincipalMesero(cuentaUsuario auxCuentaUsuario)
@@ -53,7 +53,7 @@ namespace LP2Rest
         public void abrirFormulario(Form formularioMostrar)
         {
             if(formularioActivo != null)
-              formularioActivo.Close();
+                formularioActivo.Close();
             label1.Hide();
             formularioActivo = formularioMostrar;
             formularioMostrar.TopLevel = false;
@@ -174,7 +174,7 @@ namespace LP2Rest
 
 
                 //Se asume (momentaneamente) que el admin tiene idCuentaUsuario = 2 
-                _asistencia.idCuentaUsuario = cuentaUsuario;
+                _asistencia.idCuentaUsuario = cuentaUser;
 
                 MessageBox.Show("Se registró la asistencia");
                 btnMarcarAsistencia.Hide();

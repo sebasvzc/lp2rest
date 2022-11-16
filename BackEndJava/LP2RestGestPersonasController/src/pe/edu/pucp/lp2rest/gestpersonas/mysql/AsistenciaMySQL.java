@@ -41,7 +41,10 @@ public class AsistenciaMySQL implements AsistenciaDAO{
             cs.setString("_fecha_salida", asistencia.getFechaSalida());
             cs.setString("_hora_salida", asistencia.getHoraSalida());
                 
-            resultado = cs.executeUpdate(); 
+            cs.executeUpdate();
+            
+            resultado = cs.getInt("_id_asistencia");
+            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -50,9 +53,26 @@ public class AsistenciaMySQL implements AsistenciaDAO{
         return resultado;
     }
 
+    
     @Override
-    public int modificarAsistencia(Asistencia asistencia) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public int modificarAsistencia(int id_asistencia, String fecha_fin,
+            String hora_fin) {
+       int resultado = 0; 
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call MODIFICAR_ASISTENCIA_SALIDA(?,?,?)}");
+            cs.setInt("_id_asistencia", id_asistencia);
+            cs.setString("_fecha_salida", fecha_fin);
+            cs.setString("_hora_salida", hora_fin);
+            
+            resultado = cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+        
     }
 
     @Override

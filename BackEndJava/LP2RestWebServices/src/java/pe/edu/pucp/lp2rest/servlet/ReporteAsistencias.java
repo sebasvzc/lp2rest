@@ -35,12 +35,13 @@ public class ReporteAsistencias extends HttpServlet {
                 ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/report/AsistenciasDefinitivo.jasper"));
             String rutaSubReporte = ReporteAsistencias.class.getResource(
                     "/pe/edu/pucp/lp2rest/report/ReporteAsistenciasGrafico.jasper").getPath();
-            
+             
             String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
             Image imagen = (new ImageIcon(rutaImagen)).getImage();
             HashMap parametros = new HashMap();
             parametros.put("ImagenLogoEmpresa", imagen);
             parametros.put("SubReporteGrafico",rutaSubReporte);
+            
             JasperPrint jp = JasperFillManager.fillReport(reporte,parametros,con);
             con.close();
             JasperExportManager.exportReportToPdfStream(jp,response.getOutputStream());
