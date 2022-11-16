@@ -4,21 +4,24 @@
  */
 package pe.edu.pucp.lp2rest.services;
 
+import java.awt.Image;
 import java.sql.Connection;
 import java.util.HashMap;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.swing.ImageIcon;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import pe.edu.pucp.lp2rest.config.DBManager;
+import pe.edu.pucp.lp2rest.servlet.ReporteAsistencias;
 
 /**
  *
- * @author Gonzalo
+ 
  */
 @WebService(serviceName = "ReporteWS")
 public class ReporteWS {
@@ -34,14 +37,28 @@ public class ReporteWS {
         byte[] reporteBytes = null;
         try{
             con = DBManager.getInstance().getConnection();
+            
+            
             JasperReport reporte = (JasperReport) JRLoader.loadObject(
-               ReporteWS.class.getResource("/pe/edu/pucp/lp2rest/report/AsistenciasDefinitivo.jasper")
+               ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/report/AsistenciasDefinitivo.jasper")
             );
+            
+            String rutaSubReporte = ReporteAsistencias.class.getResource(
+                    "/pe/edu/pucp/lp2rest/report/ReporteAsistenciasGrafico.jasper").getPath();
+             
+            String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
+            Image imagen = (new ImageIcon(rutaImagen)).getImage();
+            
+            
             HashMap parametros = new HashMap();
+            parametros.put("ImagenLogoEmpresa", imagen);
             parametros.put("fid_cuenta",idCuentaUsuario);
             parametros.put("fecha_ini",fecha_ini);
             parametros.put("fecha_fin",fecha_fin);
-
+            parametros.put("SubReporteGrafico", rutaSubReporte);
+            
+            
+            
             JasperPrint jp = JasperFillManager.fillReport(reporte, parametros, con);
             con.close();
             reporteBytes = JasperExportManager.exportReportToPdf(jp);

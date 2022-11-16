@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/GestPersonasWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestPersonasWS.xsd" MetadataType="Schema" ID="37425fe1-5c64-4c68-a778-6dc5eae27f15" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?xsd=1" />
-    <MetadataFile FileName="GestPersonasWS.wsdl" MetadataType="Wsdl" ID="1ab2e95b-bc81-49c4-818f-527396005346" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?WSDL" />
+    <MetadataFile FileName="GestPersonasWS.xsd" MetadataType="Schema" ID="e3ac59fd-7db9-4fe9-a4b8-ca637ac1872f" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?xsd=1" />
+    <MetadataFile FileName="GestPersonasWS.wsdl" MetadataType="Wsdl" ID="6054bd38-95ee-4922-a26f-ab7a4d01d49f" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/GestPersonasWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

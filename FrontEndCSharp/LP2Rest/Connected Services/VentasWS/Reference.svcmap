@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/VentasWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="VentasWS.xsd" MetadataType="Schema" ID="06f3bf20-b4a3-4052-ab45-3ddd2c843d1c" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/VentasWS?xsd=1" />
-    <MetadataFile FileName="VentasWS.wsdl" MetadataType="Wsdl" ID="64f4fcf8-46c7-4494-a513-abe9b7288d32" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/VentasWS?WSDL" />
+    <MetadataFile FileName="VentasWS.xsd" MetadataType="Schema" ID="12d8d2b5-bc93-419f-a847-72fa1c353337" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/VentasWS?xsd=1" />
+    <MetadataFile FileName="VentasWS.wsdl" MetadataType="Wsdl" ID="953f7efa-b96c-4143-97f2-d9061bcc2c05" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/VentasWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

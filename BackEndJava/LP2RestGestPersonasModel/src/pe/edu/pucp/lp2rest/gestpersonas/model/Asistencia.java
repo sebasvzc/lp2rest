@@ -12,7 +12,7 @@ public class Asistencia {
     private String horaIngreso;
     private String fechaSalida;
     private String horaSalida;
-
+    
     //constructor
     public Asistencia() {
     }

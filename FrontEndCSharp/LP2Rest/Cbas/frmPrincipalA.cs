@@ -1,6 +1,7 @@
 ﻿using LP2Rest;
 using LP2Rest.GestPersonasWS;
 using LP2Rest.Gonzalo;
+using LP2Rest.VentasWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,8 @@ namespace LP2Rest
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
         private GestPersonasWS.asistencia _asistencia;
         private int id_cuentaEscogida;
+        int hh, mm, ss;
+        private int idAsistencia = 0;
         public frmPrincipalA()
         {
             InitializeComponent();
@@ -158,17 +161,42 @@ namespace LP2Rest
 
                 string date_str = ingreso.ToString("yyyy/MM/dd");
                 string hora_str = ingreso.ToString("HH:mm:ss");
+                
+                
                 _asistencia.fechaIngreso = date_str;
                 _asistencia.horaIngreso = hora_str;
+
+               
+                _asistencia.fechaSalida = date_str;
+                _asistencia.horaSalida = hora_str; // Por defecto se pone como hora de salida la misma hora
+                //Claramente la hora de salida se terminará modificando
+
 
 
                 //Se asume (momentaneamente) que el admin tiene idCuentaUsuario = 2 
                 _asistencia.idCuentaUsuario = id_cuentaEscogida;
 
-                MessageBox.Show("Se registró la asistencia");
-                btnMarcarAsistencia.Hide();
-                btnRegistrarSalida.Show();
+                int resultadoInsercion = 0;
+                
+                resultadoInsercion = _daoAsistencia.insertarAsistencia(_asistencia);
+                
+                if (resultadoInsercion != 0)
+                {
+                    MessageBox.Show("Se registró exitosamente la asistencia");
+                    btnMarcarAsistencia.Hide();
+                    btnRegistrarSalida.Show();
+                    timer1.Start();
+                    idAsistencia = resultadoInsercion;
 
+
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al momento de registrar la asistencia", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+                
             }
 
         }
@@ -233,8 +261,11 @@ namespace LP2Rest
                 _asistencia.fechaSalida = date_str;
                 _asistencia.horaSalida = hora_str;
 
+                timer1.Stop();
 
-                resultadoInsercion = _daoAsistencia.insertarAsistencia(_asistencia);
+
+                resultadoInsercion = _daoAsistencia.modificarAsistenciaSalida(idAsistencia,
+                    _asistencia.fechaSalida, _asistencia.horaSalida);
                 if (resultadoInsercion != 0)
                 {
                     MessageBox.Show("Se registró exitosamente la salida");
@@ -250,5 +281,38 @@ namespace LP2Rest
 
             }
         }
+
+        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ss++;
+            if (ss > 60)
+            {
+                mm++;
+                ss = 0;
+            }
+            if (mm > 60)
+            {
+                hh++;
+                mm = 0;
+            }
+            string hrs, min, sec;
+            if (ss < 10)
+                sec = $"0{ss}";
+            else
+                sec = ss.ToString();
+            if (mm < 10)
+                min = $"0{mm}";
+            else
+                min = mm.ToString();
+            if (hh < 10)
+                hrs = $"0{hh}";
+            else
+                hrs = hh.ToString();
+            lbltimer.Text = $"{hrs}:{min}:{sec}";
+        }
+
+        
     }
 }
