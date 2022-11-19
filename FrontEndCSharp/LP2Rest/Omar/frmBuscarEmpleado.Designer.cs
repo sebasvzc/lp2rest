@@ -100,6 +100,7 @@
             this.IDPersona.HeaderText = "IDPersona";
             this.IDPersona.MinimumWidth = 6;
             this.IDPersona.Name = "IDPersona";
+            this.IDPersona.ReadOnly = true;
             this.IDPersona.Width = 125;
             // 
             // NombreCompleto
@@ -108,6 +109,7 @@
             this.NombreCompleto.HeaderText = "Nombre Completo";
             this.NombreCompleto.MinimumWidth = 6;
             this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
             this.NombreCompleto.Width = 150;
             // 
             // frmBuscarEmpleado
