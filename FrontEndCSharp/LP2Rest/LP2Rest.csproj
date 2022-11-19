@@ -822,6 +822,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarEmpleadosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

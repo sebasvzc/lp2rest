@@ -15,6 +15,7 @@ import pe.edu.pucp.lp2rest.gestpersonas.model.Empleado;
 public interface EmpleadoDAO {
     
     ArrayList<Empleado> listarTodos();  
+    ArrayList<Empleado> listarPorNombre(String nombre);  
     ArrayList<Empleado> listarBusqueda( String nombre, 
                                         String apellido, 
                                         String dni, 
@@ -23,4 +24,5 @@ public interface EmpleadoDAO {
                                         Date fechaFin,
                                         double sueldoIni, 
                                         double sueldoFin );
+    
 }

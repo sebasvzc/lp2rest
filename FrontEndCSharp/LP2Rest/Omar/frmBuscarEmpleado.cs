@@ -26,7 +26,7 @@ namespace LP2Rest.Omar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            GestPersonasWS.empleado[] empleados = _daoPersona.ListarTodosEmpleados();
+            GestPersonasWS.empleado[] empleados = _daoPersona.ListarEmpleadosPorNombre(txtNombreCompleto.Text);
             if (empleados != null)
             {
                 dgvEmpleados.DataSource = empleados.ToList();

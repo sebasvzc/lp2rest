@@ -43,12 +43,12 @@
             this.sdbtnVentas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbltimer = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
-            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,9 +76,8 @@
             this.panelIzquierdo.Controls.Add(this.btnCerrarSesion);
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.panelIzquierdo.Margin = new System.Windows.Forms.Padding(4);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(341, 1078);
+            this.panelIzquierdo.Size = new System.Drawing.Size(256, 718);
             this.panelIzquierdo.TabIndex = 20;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -87,9 +86,8 @@
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(11, 993);
+            this.panel4.Size = new System.Drawing.Size(8, 649);
             this.panel4.TabIndex = 17;
             // 
             // sdbtnPlatos
@@ -99,11 +97,10 @@
             this.sdbtnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_small;
             this.sdbtnPlatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 175);
-            this.sdbtnPlatos.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 128);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
-            this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnPlatos.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnPlatos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnPlatos.TabIndex = 33;
             this.sdbtnPlatos.Text = "  Platos";
             this.sdbtnPlatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -117,11 +114,10 @@
             this.sdbtnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_small;
             this.sdbtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReportes.Location = new System.Drawing.Point(0, 282);
-            this.sdbtnReportes.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnReportes.Location = new System.Drawing.Point(0, 202);
             this.sdbtnReportes.Name = "sdbtnReportes";
-            this.sdbtnReportes.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnReportes.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnReportes.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnReportes.Size = new System.Drawing.Size(256, 59);
             this.sdbtnReportes.TabIndex = 39;
             this.sdbtnReportes.Text = "  Reportes";
             this.sdbtnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -131,10 +127,9 @@
             // pbLogo
             // 
             this.pbLogo.Image = global::LP2Rest.Properties.Resources.imgRestauranteLogo_medium;
-            this.pbLogo.Location = new System.Drawing.Point(109, 15);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Location = new System.Drawing.Point(82, 12);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(115, 106);
+            this.pbLogo.Size = new System.Drawing.Size(86, 86);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 8;
             this.pbLogo.TabStop = false;
@@ -146,11 +141,10 @@
             this.sdbtnUsuarios.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnUsuarios.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_small;
             this.sdbtnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnUsuarios.Location = new System.Drawing.Point(0, 384);
-            this.sdbtnUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnUsuarios.Location = new System.Drawing.Point(0, 280);
             this.sdbtnUsuarios.Name = "sdbtnUsuarios";
-            this.sdbtnUsuarios.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnUsuarios.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnUsuarios.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnUsuarios.Size = new System.Drawing.Size(268, 59);
             this.sdbtnUsuarios.TabIndex = 37;
             this.sdbtnUsuarios.Text = "  Usuarios";
             this.sdbtnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,11 +158,10 @@
             this.sdbtnEventos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnEventos.Image = global::LP2Rest.Properties.Resources.imgEventosIcon_small;
             this.sdbtnEventos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnEventos.Location = new System.Drawing.Point(0, 785);
-            this.sdbtnEventos.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnEventos.Location = new System.Drawing.Point(1, 579);
             this.sdbtnEventos.Name = "sdbtnEventos";
-            this.sdbtnEventos.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnEventos.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnEventos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnEventos.Size = new System.Drawing.Size(253, 59);
             this.sdbtnEventos.TabIndex = 38;
             this.sdbtnEventos.Text = "  Eventos";
             this.sdbtnEventos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,11 +175,10 @@
             this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
             this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 482);
-            this.sdbtnReclamos.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 359);
             this.sdbtnReclamos.Name = "sdbtnReclamos";
-            this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnReclamos.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnReclamos.Size = new System.Drawing.Size(265, 59);
             this.sdbtnReclamos.TabIndex = 34;
             this.sdbtnReclamos.Text = "  Reclamos";
             this.sdbtnReclamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -200,11 +192,10 @@
             this.sdbtnCompras.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_small;
             this.sdbtnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnCompras.Location = new System.Drawing.Point(0, 585);
-            this.sdbtnCompras.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnCompras.Location = new System.Drawing.Point(0, 439);
             this.sdbtnCompras.Name = "sdbtnCompras";
-            this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnCompras.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnCompras.Size = new System.Drawing.Size(259, 59);
             this.sdbtnCompras.TabIndex = 35;
             this.sdbtnCompras.Text = "  Compras";
             this.sdbtnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -218,11 +209,10 @@
             this.sdbtnInsumos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnInsumos.Image = global::LP2Rest.Properties.Resources.imgInsumosIcon_small;
             this.sdbtnInsumos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnInsumos.Location = new System.Drawing.Point(0, 686);
-            this.sdbtnInsumos.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnInsumos.Location = new System.Drawing.Point(1, 514);
             this.sdbtnInsumos.Name = "sdbtnInsumos";
-            this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnInsumos.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnInsumos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnInsumos.TabIndex = 36;
             this.sdbtnInsumos.Text = "  Insumos";
             this.sdbtnInsumos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -236,11 +226,10 @@
             this.sdbtnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
             this.sdbtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnVentas.Location = new System.Drawing.Point(0, 889);
-            this.sdbtnVentas.Margin = new System.Windows.Forms.Padding(4);
+            this.sdbtnVentas.Location = new System.Drawing.Point(0, 722);
             this.sdbtnVentas.Name = "sdbtnVentas";
-            this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(36, 0, 0, 0);
-            this.sdbtnVentas.Size = new System.Drawing.Size(392, 73);
+            this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnVentas.Size = new System.Drawing.Size(294, 59);
             this.sdbtnVentas.TabIndex = 26;
             this.sdbtnVentas.Text = "  Ventas";
             this.sdbtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -259,11 +248,10 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 993);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 649);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(341, 85);
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(256, 69);
             this.btnCerrarSesion.TabIndex = 32;
             this.btnCerrarSesion.Text = "  Cerrar\r\n  Sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,29 +270,48 @@
             this.panelSuperior.Controls.Add(this.lbltitulo);
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(341, 0);
-            this.panelSuperior.Margin = new System.Windows.Forms.Padding(4);
+            this.panelSuperior.Location = new System.Drawing.Point(256, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1467, 123);
+            this.panelSuperior.Size = new System.Drawing.Size(911, 100);
             this.panelSuperior.TabIndex = 21;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
+            // btnMarcarAsistencia
+            // 
+            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(208, 19);
+            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
+            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(179, 68);
+            this.btnMarcarAsistencia.TabIndex = 26;
+            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
+            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
+            this.btnMarcarAsistencia.Click += new System.EventHandler(this.btnMarcarAsistencia_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(896, 10);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(566, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 23);
+            this.label2.Size = new System.Drawing.Size(143, 19);
             this.label2.TabIndex = 48;
             this.label2.Text = "Tiempo de Asistencia";
             // 
             // lbltimer
             // 
-            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(888, 23);
+            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimer.Location = new System.Drawing.Point(572, 31);
+            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltimer.Name = "lbltimer";
-            this.lbltimer.Size = new System.Drawing.Size(238, 94);
+            this.lbltimer.Size = new System.Drawing.Size(140, 55);
             this.lbltimer.TabIndex = 47;
             this.lbltimer.Text = "00:00:00";
             this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -314,10 +321,9 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblID.ForeColor = System.Drawing.Color.Coral;
-            this.lblID.Location = new System.Drawing.Point(1158, 48);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Location = new System.Drawing.Point(750, 44);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(141, 30);
+            this.lblID.Size = new System.Drawing.Size(113, 24);
             this.lblID.TabIndex = 46;
             this.lblID.Text = "Cajero #x";
             // 
@@ -326,13 +332,12 @@
             this.btnRegistrarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnRegistrarSalida.FlatAppearance.BorderSize = 0;
             this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnRegistrarSalida.Location = new System.Drawing.Point(600, 23);
-            this.btnRegistrarSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrarSalida.Location = new System.Drawing.Point(393, 21);
             this.btnRegistrarSalida.Name = "btnRegistrarSalida";
-            this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnRegistrarSalida.Size = new System.Drawing.Size(249, 80);
+            this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnRegistrarSalida.Size = new System.Drawing.Size(164, 65);
             this.btnRegistrarSalida.TabIndex = 27;
             this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
             this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,34 +349,14 @@
             // 
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbltitulo.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.lbltitulo.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
-            this.lbltitulo.Location = new System.Drawing.Point(31, 28);
-            this.lbltitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltitulo.Location = new System.Drawing.Point(20, 27);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(243, 75);
+            this.lbltitulo.Size = new System.Drawing.Size(159, 48);
             this.lbltitulo.TabIndex = 26;
             this.lbltitulo.Text = "INICIO";
             this.lbltitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbltitulo_MouseDown);
-            // 
-            // btnMarcarAsistencia
-            // 
-            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(323, 21);
-            this.btnMarcarAsistencia.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
-            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnMarcarAsistencia.Size = new System.Drawing.Size(284, 82);
-            this.btnMarcarAsistencia.TabIndex = 26;
-            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
-            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
-            this.btnMarcarAsistencia.Click += new System.EventHandler(this.btnMarcarAsistencia_Click);
             // 
             // btnCerrar
             // 
@@ -382,10 +367,9 @@
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(1411, 15);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Location = new System.Drawing.Point(1058, 12);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 26;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -395,21 +379,19 @@
             this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.panel5);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(341, 123);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4);
+            this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1467, 955);
+            this.panelContenedor.Size = new System.Drawing.Size(911, 618);
             this.panelContenedor.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(232, 316);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(64, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1008, 304);
+            this.label1.Size = new System.Drawing.Size(807, 123);
             this.label1.TabIndex = 27;
             this.label1.Text = "insertar mensaje de bienvenida";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -419,9 +401,8 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1467, 5);
+            this.panel5.Size = new System.Drawing.Size(911, 4);
             this.panel5.TabIndex = 25;
             // 
             // timer1
@@ -431,14 +412,13 @@
             // 
             // frmPrincipalA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1808, 1078);
+            this.ClientSize = new System.Drawing.Size(1167, 718);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipalA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administración";

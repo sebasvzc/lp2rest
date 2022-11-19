@@ -154,5 +154,66 @@ public class EmpleadoMySQL implements EmpleadoDAO{
         return lsEmpleados;
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    @Override
+    public ArrayList<Empleado> listarPorNombre(String nombre) {
+        
+        ArrayList<Empleado> lsEmpleados = new ArrayList<>();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call LISTAR_EMPLEADOS_X_NOMBRE(?)");
+            cs.setString("_nombre", nombre);
+            rs = cs.executeQuery();
+            String cargoEmp;
+            while(rs.next()){
+                Empleado auxEmp;
+                cargoEmp = rs.getString("cargoEmpleado");
+                switch(cargoEmp){
+                    case "Administrador":
+                        auxEmp = new Administrador();
+                        Administrador auxAdmin = (Administrador)auxEmp;
+                        auxAdmin.setActivo(true);
+                        break;
+                    case "Recepcionista":
+                        auxEmp = new Recepcionista();
+                        break;
+                    case "Chef":
+                        auxEmp = new Chef();
+                        break;
+                    case "Cajero":
+                        auxEmp = new Cajero();
+                        break;
+                    case "Mesero":
+                        auxEmp = new Mesero();
+                        break;                     
+                    default:
+                        auxEmp = new Empleado();
+                        break;
+                }
+                
+                auxEmp.setIdPersona(rs.getInt("idEmpleado"));
+                auxEmp.setEmail(rs.getString("emailEmpleado"));
+                auxEmp.setDireccion(rs.getString("direccionEmpleado"));
+                auxEmp.setTelefono(rs.getString("telefonoEmpleado"));
+                auxEmp.setNombre(rs.getString("nombreEmpleado"));
+                auxEmp.setApellidoPaterno(rs.getString("apellidosEmpleado"));
+                auxEmp.setDNI(rs.getString("DNI"));
+                auxEmp.setFechaNacimiento(rs.getDate("fechanempleado"));
+                auxEmp.setSueldo(rs.getDouble("sueldoEmpleado"));
+                auxEmp.setFechaContratacion(rs.getDate("fechacempleado"));
+                auxEmp.setNumeroHorasMensuales(rs.getInt("horasmensualesEmpleado"));
+              
+                
+                lsEmpleados.add(auxEmp);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return lsEmpleados;
+    
+    
+    }
     
 }
