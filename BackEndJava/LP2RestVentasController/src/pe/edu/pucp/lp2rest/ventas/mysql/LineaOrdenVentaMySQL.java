@@ -8,6 +8,7 @@ import pe.edu.pucp.lp2rest.config.DBManager;
 import pe.edu.pucp.lp2rest.menu.model.ItemVenta;
 import pe.edu.pucp.lp2rest.ventas.dao.LineaOrdenVentaDAO;
 import pe.edu.pucp.lp2rest.ventas.model.LineaOrdenVenta;
+import pe.edu.pucp.lp2rest.ventas.model.OrdenVenta;
 
 /**
  *
@@ -116,6 +117,8 @@ public class LineaOrdenVentaMySQL implements LineaOrdenVentaDAO {
                 lineaOrdenVenta.setDescuento(rs.getDouble("descuento"));
                 lineaOrdenVenta.setMontoDescontado(rs.getDouble("monto_descontado"));
                 lineaOrdenVenta.setCantidadVendida(rs.getInt("cantidadVenta"));
+                lineaOrdenVenta.setItemVenta(new ItemVenta());
+                lineaOrdenVenta.setOrdenVenta(new OrdenVenta());
                 lineaOrdenVenta.getItemVenta().setIdItemVenta(rs.getInt("fid_itemVenta"));
                 lineaOrdenVenta.getOrdenVenta().setIdOrdenVenta(rs.getInt("fid_ordenVenta"));
                 lineasOrdenVenta.add(lineaOrdenVenta);
@@ -148,9 +151,11 @@ public class LineaOrdenVentaMySQL implements LineaOrdenVentaDAO {
                 lineaOrdenVenta.setDescuento(rs.getDouble("descuento"));
                 lineaOrdenVenta.setMontoDescontado(rs.getDouble("monto_descontado"));
                 lineaOrdenVenta.setCantidadVendida(rs.getInt("cantidadVenta"));
+                lineaOrdenVenta.setItemVenta(new ItemVenta());
+                lineaOrdenVenta.setOrdenVenta(new OrdenVenta());
                 lineaOrdenVenta.getItemVenta().setIdItemVenta(rs.getInt("fid_itemVenta"));
                 lineaOrdenVenta.getOrdenVenta().setIdOrdenVenta(rs.getInt("fid_ordenVenta"));
-                lineaOrdenVenta.setItemVenta(new ItemVenta());
+                
                 lineaOrdenVenta.getItemVenta().setNombre("nombre");
                 lineasOrdenVenta.add(lineaOrdenVenta);
             }

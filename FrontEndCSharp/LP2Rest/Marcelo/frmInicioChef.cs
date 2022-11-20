@@ -169,5 +169,11 @@ namespace LP2Rest
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label2.Text = "Platos";
+            abrirFormulario(new frmListaOrdenVentaMesero());
+        }
     }
 }

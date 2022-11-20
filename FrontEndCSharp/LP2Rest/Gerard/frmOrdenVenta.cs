@@ -46,7 +46,7 @@ namespace LP2Rest
             dgvDetalleOrdenVenta.AutoGenerateColumns = false;
             textBox3.Text = auxMesa.idMesa.ToString();
 
-            
+            btnPreparar.Enabled = false;
 
             txtCantidad.Enabled = false;
             txtDescuento.Enabled = false;
@@ -68,12 +68,13 @@ namespace LP2Rest
             txtNombreCliente.Text = ordenVenta.cliente.nombre;
             gbLineasVenta.Visible = false;
             ordenVentaSeleccionada = ordenVenta;
-            dgvDetalleOrdenVenta.DataSource = daoVentas.listarTodosLineasOrdenVenta();
+            dgvDetalleOrdenVenta.DataSource = daoVentas.listarLineasOrdenVentaPorId(ordenVenta.idOrdenVenta);
 
             txtCantidad.Enabled = false;
             txtDescuento.Enabled = false;
             btnBuscarCliente.Enabled = true;
             btnBuscarProducto.Enabled = false;
+            btnPreparar.Enabled = true;
 
         }
 
@@ -385,9 +386,9 @@ namespace LP2Rest
         private void btnPreparar_Click(object sender, EventArgs e)
         {
             int resultado = daoVentas.ActualizarOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-            if(resultado == 1)
+            if(resultado != -1)
             {
-                MessageBox.Show("El pedido esta en preparacion", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El pedido esta ahora en preparacion", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

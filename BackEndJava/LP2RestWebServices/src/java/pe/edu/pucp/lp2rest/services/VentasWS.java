@@ -204,7 +204,7 @@ public class VentasWS {
         return lineasOrdenVenta;
     }
     
-    @WebMethod(operationName = "listarTodosLineasOrdenVenta")
+    @WebMethod(operationName = "listarLineasOrdenVentaPorId")
     public ArrayList<LineaOrdenVenta> listarLineasOrdenVentaPorId(@WebParam(name = "idLineaOrdenVenta") int idOrdenVenta) {
         ArrayList<LineaOrdenVenta> lineasOrdenVenta = null;
         try{

@@ -88,18 +88,10 @@ namespace LP2Rest
             if (dgvVentas.CurrentRow != null)
             {
                 ordenVentaSeleccionado = (VentasWS.ordenVenta)dgvVentas.CurrentRow.DataBoundItem;
-                // MessageBox.Show("Se va modificar el " + insumoSeleccionado.i, "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                if (ordenVentaSeleccionado.estado == "En preparacion")
+                frmOrdenVenta frm = new frmOrdenVenta("Preparar", ordenVentaSeleccionado);
+                if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("No se puede preparar una orden de venta que se encuentra en preparacion", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    frmOrdenVenta frm = new frmOrdenVenta("Preparar", ordenVentaSeleccionado);
-                    if (frm.ShowDialog() == DialogResult.OK)
-                    {
-                        btnBuscar.PerformClick();
-                    }
+                    btnBuscar.PerformClick();
                 }
 
             }

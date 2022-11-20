@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.lblID = new System.Windows.Forms.Label();
             this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblID = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +65,17 @@
             this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
             this.panelSuperior.TabIndex = 27;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.Coral;
+            this.lblID.Location = new System.Drawing.Point(886, 39);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(94, 24);
+            this.lblID.TabIndex = 46;
+            this.lblID.Text = "Chef #x";
             // 
             // btnRegistrarSalida
             // 
@@ -133,6 +145,7 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panelIzquierdo.Controls.Add(this.button1);
             this.panelIzquierdo.Controls.Add(this.panel4);
             this.panelIzquierdo.Controls.Add(this.sdbtnPlatos);
             this.panelIzquierdo.Controls.Add(this.pictureBox1);
@@ -270,16 +283,22 @@
             this.panel1.Size = new System.Drawing.Size(1100, 4);
             this.panel1.TabIndex = 25;
             // 
-            // lblID
+            // button1
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.lblID.ForeColor = System.Drawing.Color.Coral;
-            this.lblID.Location = new System.Drawing.Point(886, 39);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(94, 24);
-            this.lblID.TabIndex = 46;
-            this.lblID.Text = "Chef #x";
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.button1.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(14, 249);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(215, 59);
+            this.button1.TabIndex = 37;
+            this.button1.Text = " Ventas";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmInicioChef
             // 
@@ -318,5 +337,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button button1;
     }
 }

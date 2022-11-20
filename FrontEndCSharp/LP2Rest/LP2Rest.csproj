@@ -1010,6 +1010,9 @@
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarLineasOrdenVentaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosDocumentosDePagoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
