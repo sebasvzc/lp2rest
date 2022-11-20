@@ -43,6 +43,10 @@ public class ItemVentaMySQL implements ItemVentaDAO {
             }
             
             resultado = itemVenta.getIdItemVenta();
+            cs = con.prepareCall("{call ACTUALIZAR_STOCK_PLATO_DESP_INSERTAR(?)}");
+            cs.setInt("_id_itemVenta", itemVenta.getIdItemVenta());
+            cs.executeUpdate();
+            
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {

@@ -40,8 +40,6 @@
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.txtIdPlato = new System.Windows.Forms.TextBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtGanancia = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,7 +64,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
@@ -172,8 +169,6 @@
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
             this.gbPedido.Controls.Add(this.txtIdPlato);
-            this.gbPedido.Controls.Add(this.txtStock);
-            this.gbPedido.Controls.Add(this.label10);
             this.gbPedido.Controls.Add(this.txtGanancia);
             this.gbPedido.Controls.Add(this.txtPrecioVenta);
             this.gbPedido.Controls.Add(this.label7);
@@ -199,32 +194,16 @@
             this.txtIdPlato.Size = new System.Drawing.Size(123, 20);
             this.txtIdPlato.TabIndex = 145;
             // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(93, 133);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(123, 20);
-            this.txtStock.TabIndex = 144;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 135);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 143;
-            this.label10.Text = "Stock:";
-            // 
             // txtGanancia
             // 
-            this.txtGanancia.Location = new System.Drawing.Point(93, 166);
+            this.txtGanancia.Location = new System.Drawing.Point(93, 129);
             this.txtGanancia.Name = "txtGanancia";
             this.txtGanancia.Size = new System.Drawing.Size(123, 20);
             this.txtGanancia.TabIndex = 142;
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(93, 197);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(93, 160);
             this.txtPrecioVenta.Multiline = true;
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.ReadOnly = true;
@@ -234,7 +213,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 166);
+            this.label7.Location = new System.Drawing.Point(26, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 141;
@@ -243,7 +222,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 197);
+            this.label6.Location = new System.Drawing.Point(13, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 14;
@@ -433,11 +412,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
-            this.btnEliminar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(262, 360);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(236, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(162, 27);
             this.toolStrip1.TabIndex = 134;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -449,14 +427,6 @@
             this.btnGuardar.Size = new System.Drawing.Size(73, 24);
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
-            this.btnEliminar.Text = "&Eliminar";
             // 
             // btnCancelar
             // 
@@ -515,12 +485,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtGanancia;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminarProducto;
         private System.Windows.Forms.Button btnAgregarProducto;
