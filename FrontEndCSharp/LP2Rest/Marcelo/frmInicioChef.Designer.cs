@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.lbltimer = new System.Windows.Forms.Label();
             this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbltimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
@@ -67,7 +67,7 @@
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(256, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1053, 100);
+            this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
             this.panelSuperior.TabIndex = 27;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
@@ -160,7 +160,7 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(256, 862);
+            this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
             this.panelIzquierdo.TabIndex = 26;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -170,7 +170,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 793);
+            this.panel4.Size = new System.Drawing.Size(8, 807);
             this.panel4.TabIndex = 17;
             // 
             // sdbtnPlatos
@@ -183,7 +183,7 @@
             this.sdbtnPlatos.Location = new System.Drawing.Point(0, 327);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnPlatos.Size = new System.Drawing.Size(250, 59);
+            this.sdbtnPlatos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnPlatos.TabIndex = 33;
             this.sdbtnPlatos.Text = "  Platos";
             this.sdbtnPlatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -211,7 +211,7 @@
             this.sdbtnCompras.Location = new System.Drawing.Point(0, 407);
             this.sdbtnCompras.Name = "sdbtnCompras";
             this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnCompras.Size = new System.Drawing.Size(250, 59);
+            this.sdbtnCompras.Size = new System.Drawing.Size(256, 59);
             this.sdbtnCompras.TabIndex = 35;
             this.sdbtnCompras.Text = "  Compras";
             this.sdbtnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -228,7 +228,7 @@
             this.sdbtnInsumos.Location = new System.Drawing.Point(0, 489);
             this.sdbtnInsumos.Name = "sdbtnInsumos";
             this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnInsumos.Size = new System.Drawing.Size(250, 59);
+            this.sdbtnInsumos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnInsumos.TabIndex = 36;
             this.sdbtnInsumos.Text = "  Insumos";
             this.sdbtnInsumos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -247,7 +247,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 793);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 807);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(256, 69);
@@ -264,7 +264,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1053, 762);
+            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
             this.panelContenedor.TabIndex = 29;
             // 
             // label3
@@ -285,7 +285,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1053, 4);
+            this.panel1.Size = new System.Drawing.Size(1100, 4);
             this.panel1.TabIndex = 25;
             // 
             // label1
@@ -319,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 862);
+            this.ClientSize = new System.Drawing.Size(1356, 876);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);

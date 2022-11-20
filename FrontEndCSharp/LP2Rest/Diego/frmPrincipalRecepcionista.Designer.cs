@@ -32,6 +32,8 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbltimer = new System.Windows.Forms.Label();
             this.btnMarcarSalida = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lbltitulo = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.sdbtnClientes = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbltimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor.SuspendLayout();
             this.panelSuperior.SuspendLayout();
@@ -168,8 +168,8 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.panel4);
+            this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnReclamos);
             this.panelIzquierdo.Controls.Add(this.sdbtnReservas);
             this.panelIzquierdo.Controls.Add(this.sdbtnClientes);
@@ -296,7 +296,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(602, 15);
+            this.label2.Location = new System.Drawing.Point(606, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 19);
@@ -306,7 +306,7 @@
             // lbltimer
             // 
             this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(607, 30);
+            this.lbltimer.Location = new System.Drawing.Point(607, 33);
             this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltimer.Name = "lbltimer";
             this.lbltimer.Size = new System.Drawing.Size(140, 55);
