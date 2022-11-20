@@ -392,7 +392,7 @@ namespace LP2Rest
             }
             else
             {
-                MessageBox.Show("No hay pedido actual", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hay problema", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

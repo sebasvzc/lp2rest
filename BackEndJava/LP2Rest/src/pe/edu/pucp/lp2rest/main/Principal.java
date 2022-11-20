@@ -114,8 +114,8 @@ public class Principal {
     platoPrueba.getTipoItem().setIdTipoItem(1);
     platoPrueba.setDisponible(0);    
     platoPrueba.setDescuento(5.99);
-    platoPrueba.setRecetaDePreparacion("Colocar en un bol los ajos, aceite, pimienta, sal, comino, orégano, vinagre y ají panca. Mezclar todo.");
-      
+    platoPrueba.setRecetaDePreparacion("Colocar en un bol los ajos, aceite, pimienta, sal, comino, orégano, vinagre y ají panca. Mezclar todo.") ;
+  
       
 //    MeseroDAO daoMesero = new MeseroMySQL();
 //    ArrayList<Mesero> meseros;
@@ -136,6 +136,7 @@ public class Principal {
 //    eventoPrueba.setMonto_pagar(21.21);
 //    eventoPrueba.setNombre("Nombre modificado");
 //    
+    
 //    EventoDAO daoEvento = new EventoMySQL();
 //    //int resultadoModificar = daoEvento.modificar(eventoPrueba);
 //    //System.out.println("Valor de result: " + resultadoModificar);
@@ -148,7 +149,7 @@ public class Principal {
 //    for(TipoItem tip : tipos){
 //       //System.out.println("Nombre: " + tip.getDescripcion());
 //    }
-//    
+    
 //    ItemVentaDAO daoItemVenta = new ItemVentaMySQL();
 //    ArrayList<ItemVenta> itemsVenta = daoItemVenta.filtrarItemsVenta("CEVICHE",1, 0, 99999, 1);
 //    for(ItemVenta iv : itemsVenta){
