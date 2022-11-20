@@ -109,6 +109,12 @@
     <Compile Include="Gerard\frmNuevaContrasenia.Designer.cs">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gerard\frmOrdenVentaMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmOrdenVentaMesero.Designer.cs">
+      <DependentUpon>frmOrdenVentaMesero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gonzalo\frmBuscarSoloPlatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerard\frmNuevaContrasenia.resx">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmOrdenVentaMesero.resx">
+      <DependentUpon>frmOrdenVentaMesero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmBuscarSoloPlatos.resx">
       <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
@@ -1022,6 +1031,12 @@
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.lineaOrdenVenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ListarBusquedaLineasOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaMeseroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1029,6 +1044,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosLineasOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosMesas2Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosMesasResponse.datasource">
@@ -1044,6 +1062,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarLineaOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarMesaOrdenVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarMesaResponse.datasource">

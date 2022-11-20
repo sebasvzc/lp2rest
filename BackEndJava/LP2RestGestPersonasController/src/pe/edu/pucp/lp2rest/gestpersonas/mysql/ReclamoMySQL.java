@@ -145,8 +145,8 @@ public class ReclamoMySQL implements ReclamoDAO{
                 nuReclamo.getAdministrador().setApellidoPaterno(rs.getString("apellidosAdmin"));
                 
                 nuReclamo.getCliente().setIdPersona(rs.getInt("fid_cliente"));
-                nuReclamo.getCliente().setNombre(rs.getString("nombresAdmin"));
-                nuReclamo.getCliente().setApellidoPaterno(rs.getString("apellidosAdmin"));
+                nuReclamo.getCliente().setNombre(rs.getString("nombresCliente"));
+                nuReclamo.getCliente().setApellidoPaterno(rs.getString("apellidosCliente"));
                 nuReclamo.getCliente().setDNI(rs.getString("dniCliente"));
                 nuReclamo.getCliente().setTelefono(rs.getString("telefonoCliente"));
                 
@@ -187,8 +187,8 @@ public class ReclamoMySQL implements ReclamoDAO{
             cs.setString("_empNom", empNombre);
             cs.setString("_empApe", empApellido);
             
-            cs.setString("_adminNom", cliNombre);
-            cs.setString("_adminApe", cliApellido);
+            cs.setString("_adminNom", adminNombre);
+            cs.setString("_adminApe", adminApellido);
             
             
             cs.setDate("_fechaIni", new java.sql.Date(fechaIni.getTime()));
@@ -218,8 +218,8 @@ public class ReclamoMySQL implements ReclamoDAO{
                 nuReclamo.getAdministrador().setApellidoPaterno(rs.getString("apellidosAdmin"));
                 
                 nuReclamo.getCliente().setIdPersona(rs.getInt("fid_cliente"));
-                nuReclamo.getCliente().setNombre(rs.getString("nombresAdmin"));
-                nuReclamo.getCliente().setApellidoPaterno(rs.getString("apellidosAdmin"));
+                nuReclamo.getCliente().setNombre(rs.getString("nombresCliente"));
+                nuReclamo.getCliente().setApellidoPaterno(rs.getString("apellidosCliente"));
                 nuReclamo.getCliente().setDNI(rs.getString("dniCliente"));
                 nuReclamo.getCliente().setTelefono(rs.getString("telefonoCliente"));
                 
@@ -232,7 +232,7 @@ public class ReclamoMySQL implements ReclamoDAO{
                 nuReclamo.setDescripcion(rs.getString("descripcion"));
                 nuReclamo.setEstado(rs.getBoolean("estado"));
                 nuReclamo.setFechaRegistro(rs.getDate("fecha_registro"));
-                nuReclamo.setFechaAtencion(rs.getDate("fecha_registro"));
+                nuReclamo.setFechaAtencion(rs.getDate("fecha_atencion"));
                 nuReclamo.setObservacion(rs.getString("observacion"));
                 
                 listaReclamos.add(nuReclamo);

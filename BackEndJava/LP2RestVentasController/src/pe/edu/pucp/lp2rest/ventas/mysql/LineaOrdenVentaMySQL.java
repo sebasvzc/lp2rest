@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.edu.pucp.lp2rest.config.DBManager;
+import pe.edu.pucp.lp2rest.menu.model.ItemVenta;
 import pe.edu.pucp.lp2rest.ventas.dao.LineaOrdenVentaDAO;
 import pe.edu.pucp.lp2rest.ventas.model.LineaOrdenVenta;
 
@@ -117,6 +118,45 @@ public class LineaOrdenVentaMySQL implements LineaOrdenVentaDAO {
                 lineaOrdenVenta.setCantidadVendida(rs.getInt("cantidadVenta"));
                 lineaOrdenVenta.getItemVenta().setIdItemVenta(rs.getInt("fid_itemVenta"));
                 lineaOrdenVenta.getOrdenVenta().setIdOrdenVenta(rs.getInt("fid_ordenVenta"));
+                lineasOrdenVenta.add(lineaOrdenVenta);
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return lineasOrdenVenta;
+    }
+
+    @Override
+    public ArrayList<LineaOrdenVenta> listarBusqueda(int idOrdenVentaBuscada) {
+        ArrayList<LineaOrdenVenta> lineasOrdenVenta = new ArrayList<>();
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call LISTAR_LINEA_ORDEN_VENTA_BUSQUEDA(?)}");
+            cs.setInt("_id_ordenVenta",idOrdenVentaBuscada);
+            
+            rs = cs.executeQuery();
+            
+            while (rs.next()) {
+                LineaOrdenVenta lineaOrdenVenta = new LineaOrdenVenta();
+                lineaOrdenVenta.setItemVenta(new ItemVenta() );
+                                
+                lineaOrdenVenta.setIdLineaOrdenVenta(rs.getInt("id_lineaOrdenVenta"));
+                lineaOrdenVenta.setSubtotal(rs.getDouble("subtotal"));
+                lineaOrdenVenta.setFechaRegistro(rs.getDate("fecha_registro"));
+                lineaOrdenVenta.setDescuento(rs.getDouble("descuento"));
+                lineaOrdenVenta.setMontoDescontado(rs.getDouble("monto_descontado"));
+                lineaOrdenVenta.setCantidadVendida(rs.getInt("cantidadVenta"));
+                
+                lineaOrdenVenta.getItemVenta().setIdItemVenta( rs.getInt("idItem") );
+                lineaOrdenVenta.getItemVenta().setNombre( rs.getString("nombreItem") );
+                lineaOrdenVenta.getItemVenta().setPrecio( rs.getDouble("precioItem") );
+                
                 lineasOrdenVenta.add(lineaOrdenVenta);
             }
         } catch (Exception ex) {

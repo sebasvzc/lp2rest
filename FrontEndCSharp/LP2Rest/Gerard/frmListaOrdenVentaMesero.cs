@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.VentasWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,17 @@ namespace LP2Rest
         //Conexiones
         private VentasWS.VentasWSClient daoVentas;
 
-        public frmListaOrdenVentaMesero()
+        private VentasWS.ordenVenta auxOrdenVenta;
+
+        //UTILES
+
+        private int idMeseroActual;
+
+        public frmListaOrdenVentaMesero(int idMesero)
         {
             daoVentas = new VentasWS.VentasWSClient();
+
+            idMeseroActual = idMesero;
 
             InitializeComponent();
 
@@ -45,7 +54,8 @@ namespace LP2Rest
             ;
 
 
-            VentasWS.ordenVenta[] listaVentas = daoVentas.listarBusquedaOrdenesVenta(
+            VentasWS.ordenVenta[] listaVentas = daoVentas.listarBusquedaOrdenesVentaMesero(
+                                                                                    idMeseroActual,
                                                                                     txtNombre.Text,
                                                                                     txtApellido.Text,
                                                                                     auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"),
@@ -59,7 +69,7 @@ namespace LP2Rest
             }
             else
             {
-                MessageBox.Show("No se ha encontrado empleados", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se ha encontrado Ordenes de Venta", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -70,6 +80,23 @@ namespace LP2Rest
             dgvVentas.Rows[e.RowIndex].Cells[1].Value = auxVenta.cliente.nombre + " " + auxVenta.cliente.apellidoPaterno;
             dgvVentas.Rows[e.RowIndex].Cells[2].Value = auxVenta.fecha.ToShortDateString();
             dgvVentas.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxVenta.total);
+        }
+
+        private void btnVerOrdenVenta_Click(object sender, EventArgs e)
+        {
+            if (dgvVentas.SelectedRows.Count == 1)
+            {
+                auxOrdenVenta = (ordenVenta)dgvVentas.CurrentRow.DataBoundItem;
+
+                frmOrdenVentaMesero formOrdenVenta = new frmOrdenVentaMesero(auxOrdenVenta, idMeseroActual);
+
+                formOrdenVenta.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una Orden de Venta", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

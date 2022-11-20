@@ -32,8 +32,8 @@ namespace LP2Rest
             nuevo = true;
 
             reclamoAux = new reclamo();
-            reclamoAux.cliente = new cliente();
-            reclamoAux.empleado = new empleado();
+            reclamoAux.cliente = new cliente();                 reclamoAux.cliente.idPersona = 0;
+            reclamoAux.empleado = new empleado();               reclamoAux.empleado.idPersona = 0;
             reclamoAux.administrador = new administrador();
 
             BindingList<Estado> listaEstados = new BindingList<Estado>();
@@ -74,6 +74,7 @@ namespace LP2Rest
             tbIdAdmin.Text = 9.ToString();
             tbNombreAdmin.Text = "Carlos Paz";
 
+            txtFechaAtencion.Text = "-";
 
             daoGestionPersonas = new GestPersonasWSClient();
         }
@@ -116,10 +117,19 @@ namespace LP2Rest
 
             cboEstado.DataSource = listaEstados;
             cboEstado.DisplayMember = "DescEst";
-            cboEstado.ValueMember = "Valor";
+            cboEstado.ValueMember = "DescEst";
 
-            if (auxRec.estado == true) cboEstado.SelectedValue = 1;
-            else cboEstado.SelectedValue = 0;
+            if (auxRec.estado == true)
+            {
+                cboEstado.SelectedValue = "Atendido";
+                txtFechaAtencion.Text = auxRec.fechaRegistro.ToString("dd-MM-yyyy");
+            }
+            else
+            {
+                cboEstado.SelectedValue = "Por Atender";
+                txtFechaAtencion.Text = "-";
+            }
+
             txtIdReclamo.Text = auxRec.id.ToString();
             dtpFecha.Value = auxRec.fechaRegistro;
             dtpFecha.Enabled = false;
@@ -142,6 +152,17 @@ namespace LP2Rest
             tbNombreAdmin.Text = auxRec.administrador.nombre + " " + auxRec.administrador.apellidoPaterno;
 
             rtbObs.Text = auxRec.observacion;
+
+            //if(auxRec.fechaRegistro != null)
+            //{
+            //    txtFechaAtencion.Text = auxRec.fechaRegistro.ToString("dd-MM-yyyy");
+            //}
+            //else
+            //{
+            //    txtFechaAtencion.Text = "-";
+            //}
+
+            
 
 
         }
@@ -177,41 +198,52 @@ namespace LP2Rest
             {
                 Borrado = false;
 
-                reclamoAux.fechaRegistro = dtpFecha.Value;
+                //reclamoAux.fechaRegistro = dtpFecha.Value;
                 //reclamoAux.fechaRegistro = DateTime.Now;
 
-                if (cboEstado.SelectedValue.ToString() == "1") reclamoAux.estado = true;
+                if (cboEstado.SelectedValue.ToString() == "Atendido") reclamoAux.estado = true;
                 else reclamoAux.estado = false;
 
                 reclamoAux.descripcion = rtbDesc.Text;
 
-                reclamoAux.cliente.idPersona = 3;
-                reclamoAux.empleado.idPersona = 2;
-                reclamoAux.administrador.idPersona = 9;
-
-                reclamoAux.observacion = rtbObs.Text;
-
-                int aux = daoGestionPersonas.InsertarReclamo(reclamoAux, dtpFecha.Value.ToString("dd-MM-yyyy HH:mm:ss"));
-
-                if (aux == 0)
+                if (reclamoAux.cliente.idPersona == 0 || reclamoAux.empleado.idPersona == 0)
                 {
-                    MessageBox.Show("Creacion Fallida.", "Creacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if(reclamoAux.cliente.idPersona == 0)
+                        MessageBox.Show("Creacion Fallida. Cliente vacio.", "Creacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (reclamoAux.empleado.idPersona == 0)
+                        MessageBox.Show("Creacion Fallida. Empleado vacio.", "Creacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    reclamoAux.id = aux;
+                    reclamoAux.observacion = rtbObs.Text;
+                    reclamoAux.administrador.idPersona = 9;
 
-                    MessageBox.Show("Creacion Exitosa.", "Creacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    int aux = daoGestionPersonas.InsertarReclamo(reclamoAux, dtpFecha.Value.ToString("dd-MM-yyyy HH:mm:ss"));
 
-                    txtIdReclamo.Text = aux.ToString();
+                    if (aux == 0)
+                    {
+                        MessageBox.Show("Creacion Fallida.", "Creacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        reclamoAux.id = aux;
 
-                    rtbDesc.Enabled = false;
-                    rtbDesc.ReadOnly = true;
+                        MessageBox.Show("Creacion Exitosa.", "Creacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    dtpFecha.Enabled = false;
+                        txtIdReclamo.Text = aux.ToString();
 
-                    nuevo = false;
+                        rtbDesc.Enabled = false;
+                        rtbDesc.ReadOnly = true;
+
+                        dtpFecha.Enabled = false;
+
+                        nuevo = false;
+                    }
                 }
+
+                //reclamoAux.cliente.idPersona = 3;
+                //reclamoAux.empleado.idPersona = 2;
+                reclamoAux.administrador.idPersona = 9;              
 
 
             }
@@ -220,13 +252,25 @@ namespace LP2Rest
                 Borrado = false;
 
                 reclamoAux.observacion = rtbObs.Text;
+                reclamoAux.fechaAtencionSpecified = true;
                 reclamoAux.fechaAtencion = DateTime.Now;
-                if (cboEstado.SelectedText == "Atendido") reclamoAux.estado = true;
+                if (cboEstado.SelectedValue.ToString() == "Atendido") reclamoAux.estado = true;
                 else reclamoAux.estado = false;
 
-                daoGestionPersonas.ModificarReclamo(reclamoAux);
 
-                MessageBox.Show("Modificacion Exitosa.", "Modificacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int resultado = daoGestionPersonas.ModificarReclamo(reclamoAux);
+
+                if(resultado == 1)
+                {
+                    MessageBox.Show("Modificacion Exitosa.", "Modificacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    
+                    MessageBox.Show("Modificacion Fallida.", "Modificacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                
 
 
             }
@@ -259,9 +303,20 @@ namespace LP2Rest
                 reclamoAux.cliente = formBusqCli.clienteSeleccionado;
 
                 txtDNICliente.Text = reclamoAux.cliente.DNI;
+                //txtDNICliente.Text = reclamoAux.cliente.idPersona.ToString();
                 txtNombreCliente.Text = reclamoAux.cliente.nombre + " " + reclamoAux.cliente.apellidoPaterno;
                 txtTelefonoCliente.Text = reclamoAux.cliente.telefono;
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
