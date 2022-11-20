@@ -53,6 +53,7 @@
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVerOrdenVenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,7 +260,7 @@
             // 
             // Numero
             // 
-            this.Numero.HeaderText = "Numero";
+            this.Numero.HeaderText = "Codigo";
             this.Numero.Name = "Numero";
             this.Numero.ReadOnly = true;
             this.Numero.Width = 200;
@@ -285,11 +286,23 @@
             this.email.ReadOnly = true;
             this.email.Width = 180;
             // 
+            // btnVerOrdenVenta
+            // 
+            this.btnVerOrdenVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerOrdenVenta.Location = new System.Drawing.Point(471, 717);
+            this.btnVerOrdenVenta.Name = "btnVerOrdenVenta";
+            this.btnVerOrdenVenta.Size = new System.Drawing.Size(126, 45);
+            this.btnVerOrdenVenta.TabIndex = 103;
+            this.btnVerOrdenVenta.Text = "Ver";
+            this.btnVerOrdenVenta.UseVisualStyleBackColor = true;
+            this.btnVerOrdenVenta.Click += new System.EventHandler(this.btnVerOrdenVenta_Click);
+            // 
             // frmListaOrdenVentaMesero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.Controls.Add(this.btnVerOrdenVenta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label7);
@@ -340,5 +353,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.Button btnVerOrdenVenta;
     }
 }

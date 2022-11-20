@@ -56,7 +56,7 @@ namespace LP2Rest
 
         private void imgCompras_Click(object sender, EventArgs e)
         {
-            frmListaOrdenVentaMesero formListaOrdenVenta = new frmListaOrdenVentaMesero();
+            frmListarOrdenesVentaA formListaOrdenVenta = new frmListarOrdenesVentaA();
             formListaOrdenVenta.ShowDialog();
         }
 

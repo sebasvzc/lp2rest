@@ -187,8 +187,8 @@ public class ReclamoMySQL implements ReclamoDAO{
             cs.setString("_empNom", empNombre);
             cs.setString("_empApe", empApellido);
             
-            cs.setString("_adminNom", cliNombre);
-            cs.setString("_adminApe", cliApellido);
+            cs.setString("_adminNom", adminNombre);
+            cs.setString("_adminApe", adminApellido);
             
             
             cs.setDate("_fechaIni", new java.sql.Date(fechaIni.getTime()));

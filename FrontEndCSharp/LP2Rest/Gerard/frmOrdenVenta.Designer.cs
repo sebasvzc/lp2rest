@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.gbLineasVenta = new System.Windows.Forms.GroupBox();
@@ -54,6 +50,7 @@
             this.lblCodProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.btnPreparar = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -66,10 +63,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescuentoPorcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnPreparar = new System.Windows.Forms.Button();
+            this.lblDescuentoSimbolo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
@@ -91,19 +94,21 @@
             // 
             this.dgvDetalleOrdenVenta.AllowUserToAddRows = false;
             this.dgvDetalleOrdenVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDetalleOrdenVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleOrdenVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreProducto,
             this.Cantidad,
             this.PrecioUnitario,
+            this.DescuentoPorcentaje,
+            this.Descuento,
             this.Subtotal});
             this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(46, 497);
             this.dgvDetalleOrdenVenta.Name = "dgvDetalleOrdenVenta";
@@ -112,42 +117,8 @@
             this.dgvDetalleOrdenVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalleOrdenVenta.Size = new System.Drawing.Size(1043, 163);
             this.dgvDetalleOrdenVenta.TabIndex = 62;
+            this.dgvDetalleOrdenVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleOrdenVenta_CellContentClick);
             this.dgvDetalleOrdenVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleOrdenVenta_CellFormatting);
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre";
-            this.NombreProducto.MinimumWidth = 6;
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 490;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cant";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // PrecioUnitario
-            // 
-            dataGridViewCellStyle2.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
-            this.PrecioUnitario.HeaderText = "Precio Unit";
-            this.PrecioUnitario.MinimumWidth = 6;
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            this.PrecioUnitario.Width = 200;
-            // 
-            // Subtotal
-            // 
-            dataGridViewCellStyle3.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            this.Subtotal.Width = 200;
             // 
             // label5
             // 
@@ -172,6 +143,7 @@
             // 
             // gbLineasVenta
             // 
+            this.gbLineasVenta.Controls.Add(this.lblDescuentoSimbolo);
             this.gbLineasVenta.Controls.Add(this.txtDescuento);
             this.gbLineasVenta.Controls.Add(this.label7);
             this.gbLineasVenta.Controls.Add(this.btnQuitarPlato);
@@ -214,7 +186,7 @@
             // btnQuitarPlato
             // 
             this.btnQuitarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnQuitarPlato.Location = new System.Drawing.Point(881, 120);
+            this.btnQuitarPlato.Location = new System.Drawing.Point(908, 121);
             this.btnQuitarPlato.Name = "btnQuitarPlato";
             this.btnQuitarPlato.Size = new System.Drawing.Size(30, 30);
             this.btnQuitarPlato.TabIndex = 86;
@@ -225,7 +197,7 @@
             // btnAgregarPlato
             // 
             this.btnAgregarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarPlato.Location = new System.Drawing.Point(845, 120);
+            this.btnAgregarPlato.Location = new System.Drawing.Point(872, 121);
             this.btnAgregarPlato.Name = "btnAgregarPlato";
             this.btnAgregarPlato.Size = new System.Drawing.Size(30, 30);
             this.btnAgregarPlato.TabIndex = 85;
@@ -336,6 +308,16 @@
             this.gbCliente.TabIndex = 58;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Datos del Cliente";
+            // 
+            // btnPreparar
+            // 
+            this.btnPreparar.Location = new System.Drawing.Point(848, 47);
+            this.btnPreparar.Name = "btnPreparar";
+            this.btnPreparar.Size = new System.Drawing.Size(133, 70);
+            this.btnPreparar.TabIndex = 5;
+            this.btnPreparar.Text = "Preparar Pedido";
+            this.btnPreparar.UseVisualStyleBackColor = true;
+            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
             // 
             // btnBuscarCliente
             // 
@@ -471,6 +453,54 @@
             this.toolStrip1.TabIndex = 65;
             this.toolStrip1.Text = "tsMenu";
             // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre";
+            this.NombreProducto.MinimumWidth = 6;
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Width = 490;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cant";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // PrecioUnitario
+            // 
+            dataGridViewCellStyle5.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle5;
+            this.PrecioUnitario.HeaderText = "Precio Unit";
+            this.PrecioUnitario.MinimumWidth = 6;
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Width = 200;
+            // 
+            // DescuentoPorcentaje
+            // 
+            this.DescuentoPorcentaje.HeaderText = "Porcentaje";
+            this.DescuentoPorcentaje.Name = "DescuentoPorcentaje";
+            this.DescuentoPorcentaje.ReadOnly = true;
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Monto Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
+            this.Descuento.Width = 150;
+            // 
+            // Subtotal
+            // 
+            dataGridViewCellStyle6.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            this.Subtotal.Width = 200;
+            // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
@@ -501,15 +531,15 @@
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnPreparar
+            // lblDescuentoSimbolo
             // 
-            this.btnPreparar.Location = new System.Drawing.Point(848, 47);
-            this.btnPreparar.Name = "btnPreparar";
-            this.btnPreparar.Size = new System.Drawing.Size(133, 70);
-            this.btnPreparar.TabIndex = 5;
-            this.btnPreparar.Text = "Preparar Pedido";
-            this.btnPreparar.UseVisualStyleBackColor = true;
-            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
+            this.lblDescuentoSimbolo.AutoSize = true;
+            this.lblDescuentoSimbolo.Location = new System.Drawing.Point(799, 124);
+            this.lblDescuentoSimbolo.Name = "lblDescuentoSimbolo";
+            this.lblDescuentoSimbolo.Size = new System.Drawing.Size(23, 23);
+            this.lblDescuentoSimbolo.TabIndex = 89;
+            this.lblDescuentoSimbolo.Text = "%";
+            this.lblDescuentoSimbolo.Click += new System.EventHandler(this.label2_Click);
             // 
             // frmOrdenVenta
             // 
@@ -575,14 +605,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDOrdenVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.Button btnPreparar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoPorcentaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.Label lblDescuentoSimbolo;
     }
 }

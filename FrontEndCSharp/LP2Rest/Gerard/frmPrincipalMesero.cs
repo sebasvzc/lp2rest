@@ -70,7 +70,7 @@ namespace LP2Rest
 
         private void imgCompras_Click(object sender, EventArgs e)
         {
-            frmListaOrdenVentaMesero formListaOrdenVenta = new frmListaOrdenVentaMesero();
+            frmListarOrdenesVentaA formListaOrdenVenta = new frmListarOrdenesVentaA();
             formListaOrdenVenta.ShowDialog();
         }
 
@@ -87,7 +87,7 @@ namespace LP2Rest
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmListaOrdenVentaMesero());
+            abrirFormulario(new frmListaOrdenVentaMesero(meseroSeleccionado.idPersona));
         }
 
         private void sdbtnPlatos_Click(object sender, EventArgs e)

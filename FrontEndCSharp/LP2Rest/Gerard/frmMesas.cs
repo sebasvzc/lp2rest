@@ -29,7 +29,7 @@ namespace LP2Rest
         
         private void actualizarMesas()
         {
-            listaMesas = daoVentas.listarTodosMesas();
+            listaMesas = daoVentas.listarTodosMesas2();
             Color colorVerde = Color.LightGreen;
             for (int i = 0; i < 12; i++)
             {

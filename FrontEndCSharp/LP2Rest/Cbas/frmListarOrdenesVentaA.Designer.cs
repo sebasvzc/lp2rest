@@ -28,43 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txtTotalFin = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotalIni = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dtpFechaIni = new System.Windows.Forms.DateTimePicker();
+            this.dgvOrdenesVentas = new System.Windows.Forms.DataGridView();
+            this.txtApeCLi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNombCli = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesVentas)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtTotalFin
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox2.Location = new System.Drawing.Point(791, 192);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 32);
-            this.textBox2.TabIndex = 71;
+            this.txtTotalFin.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtTotalFin.Location = new System.Drawing.Point(791, 192);
+            this.txtTotalFin.Name = "txtTotalFin";
+            this.txtTotalFin.Size = new System.Drawing.Size(248, 32);
+            this.txtTotalFin.TabIndex = 71;
             // 
             // label5
             // 
@@ -86,13 +87,13 @@
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtTotalIni
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(791, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 32);
-            this.textBox1.TabIndex = 68;
+            this.txtTotalIni.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtTotalIni.Location = new System.Drawing.Point(791, 108);
+            this.txtTotalIni.Name = "txtTotalIni";
+            this.txtTotalIni.Size = new System.Drawing.Size(248, 32);
+            this.txtTotalIni.TabIndex = 68;
             // 
             // label4
             // 
@@ -114,13 +115,13 @@
             this.label2.Text = "Hasta:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dateTimePicker1
+            // dtpFechaFin
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(393, 192);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(354, 32);
-            this.dateTimePicker1.TabIndex = 63;
+            this.dtpFechaFin.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dtpFechaFin.Location = new System.Drawing.Point(393, 192);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(354, 32);
+            this.dtpFechaFin.TabIndex = 63;
             // 
             // label1
             // 
@@ -142,90 +143,64 @@
             this.lblFechaNacimiento.Text = "Fecha de Venta";
             this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dtpFechaNacimiento
+            // dtpFechaIni
             // 
-            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(393, 107);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(354, 32);
-            this.dtpFechaNacimiento.TabIndex = 60;
+            this.dtpFechaIni.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dtpFechaIni.Location = new System.Drawing.Point(393, 107);
+            this.dtpFechaIni.Name = "dtpFechaIni";
+            this.dtpFechaIni.Size = new System.Drawing.Size(354, 32);
+            this.dtpFechaIni.TabIndex = 60;
             // 
-            // dgvEmpleados
+            // dgvOrdenesVentas
             // 
-            this.dgvEmpleados.AllowUserToAddRows = false;
-            this.dgvEmpleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrdenesVentas.AllowUserToAddRows = false;
+            this.dgvOrdenesVentas.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenesVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvOrdenesVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenesVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
             this.NombreCompleto,
             this.Teléfono,
             this.email,
             this.Area});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmpleados.Location = new System.Drawing.Point(53, 266);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(986, 423);
-            this.dgvEmpleados.TabIndex = 58;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrdenesVentas.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvOrdenesVentas.Location = new System.Drawing.Point(53, 266);
+            this.dgvOrdenesVentas.Name = "dgvOrdenesVentas";
+            this.dgvOrdenesVentas.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenesVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvOrdenesVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrdenesVentas.Size = new System.Drawing.Size(986, 423);
+            this.dgvOrdenesVentas.TabIndex = 58;
+            this.dgvOrdenesVentas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenesVentas_CellFormatting);
             // 
-            // NombreCompleto
+            // txtApeCLi
             // 
-            this.NombreCompleto.HeaderText = "Cliente";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 350;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Fecha";
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 263;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Total";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 180;
-            // 
-            // Area
-            // 
-            this.Area.HeaderText = "Estado";
-            this.Area.Name = "Area";
-            this.Area.ReadOnly = true;
-            this.Area.Width = 150;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(53, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(304, 32);
-            this.textBox3.TabIndex = 80;
+            this.txtApeCLi.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtApeCLi.Location = new System.Drawing.Point(53, 107);
+            this.txtApeCLi.Name = "txtApeCLi";
+            this.txtApeCLi.Size = new System.Drawing.Size(304, 32);
+            this.txtApeCLi.TabIndex = 80;
             // 
             // label3
             // 
@@ -237,13 +212,13 @@
             this.label3.Text = "Apellido:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox4
+            // txtNombCli
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox4.Location = new System.Drawing.Point(53, 192);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(304, 32);
-            this.textBox4.TabIndex = 82;
+            this.txtNombCli.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNombCli.Location = new System.Drawing.Point(53, 192);
+            this.txtNombCli.Name = "txtNombCli";
+            this.txtNombCli.Size = new System.Drawing.Size(304, 32);
+            this.txtNombCli.TabIndex = 82;
             // 
             // label7
             // 
@@ -292,6 +267,7 @@
             this.btnModificar.TabIndex = 101;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -308,78 +284,114 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.BackColor = System.Drawing.Color.Sienna;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(53, 713);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(234, 41);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.Sienna;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.NavajoWhite;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(53, 713);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(234, 41);
+            this.btnBuscar.TabIndex = 103;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "Cliente";
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 350;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Fecha";
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 263;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Total";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 180;
+            // 
+            // Area
+            // 
+            this.Area.HeaderText = "Estado";
+            this.Area.Name = "Area";
+            this.Area.ReadOnly = true;
+            this.Area.Width = 150;
             // 
             // frmListarOrdenesVentaA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 774);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtNombCli);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtApeCLi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTotalFin);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTotalIni);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaNacimiento);
-            this.Controls.Add(this.dtpFechaNacimiento);
-            this.Controls.Add(this.dgvEmpleados);
+            this.Controls.Add(this.dtpFechaIni);
+            this.Controls.Add(this.dgvOrdenesVentas);
             this.Controls.Add(this.label6);
             this.Name = "frmListarOrdenesVentaA";
             this.Text = "Listado de Ventas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalFin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotalIni;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dtpFechaIni;
+        private System.Windows.Forms.DataGridView dgvOrdenesVentas;
+        private System.Windows.Forms.TextBox txtApeCLi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNombCli;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
     }
 }

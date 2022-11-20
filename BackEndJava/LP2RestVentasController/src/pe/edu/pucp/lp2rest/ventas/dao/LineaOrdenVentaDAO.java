@@ -12,4 +12,5 @@ public interface LineaOrdenVentaDAO {
     int modificar (LineaOrdenVenta lineaOrdenVenta);
     int eliminar(int idLineaOrdenVenta);
     ArrayList<LineaOrdenVenta> listarTodos();
+    ArrayList<LineaOrdenVenta> listarBusqueda(int idOrdenVentaBuscada);
 }

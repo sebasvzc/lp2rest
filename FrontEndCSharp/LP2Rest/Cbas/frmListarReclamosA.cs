@@ -112,7 +112,15 @@ namespace LP2Rest
             auxFechaIni = dtpFechaInicial.Value;
             auxFechaFin = dtpFechaFin.Value;
 
-            GestPersonasWS.reclamo[ ] listaRecs = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, tbApeCli.Text, tbNomEmp.Text, tbApeEmp.Text, tbNomAdm.Text, tbApeAdm.Text, auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"), (int)cboEstado.SelectedValue);
+            GestPersonasWS.reclamo[ ] listaRecs = daoGestionPersonas.ListarBusquedaReclamos(tbNomCli.Text, 
+                                                                                            tbApeCli.Text, 
+                                                                                            tbNomEmp.Text,
+                                                                                            tbApeEmp.Text, 
+                                                                                            tbNomAdm.Text,
+                                                                                            tbApeAdm.Text,
+                                                                                            auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"), 
+                                                                                            auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"),
+                                                                                            (int)cboEstado.SelectedValue);
             
             if (listaRecs != null)
             {
