@@ -115,7 +115,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtNombre.Location = new System.Drawing.Point(221, 119);
+            this.txtNombre.Location = new System.Drawing.Point(311, 119);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(624, 32);
             this.txtNombre.TabIndex = 98;
@@ -123,7 +123,7 @@
             // lblDNINombre
             // 
             this.lblDNINombre.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblDNINombre.Location = new System.Drawing.Point(23, 116);
+            this.lblDNINombre.Location = new System.Drawing.Point(113, 116);
             this.lblDNINombre.Name = "lblDNINombre";
             this.lblDNINombre.Size = new System.Drawing.Size(581, 34);
             this.lblDNINombre.TabIndex = 97;
@@ -181,7 +181,7 @@
             this.nombreEvento.HeaderText = "Nombre";
             this.nombreEvento.Name = "nombreEvento";
             this.nombreEvento.ReadOnly = true;
-            this.nombreEvento.Width = 800;
+            this.nombreEvento.Width = 843;
             // 
             // btnCancelar
             // 
