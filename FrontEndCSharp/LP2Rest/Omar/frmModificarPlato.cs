@@ -46,11 +46,12 @@ namespace LP2Rest.Omar
             txtPrecioVenta.Text = platoModificar.precio.ToString("N2");
             txtDescuento.Text = platoModificar.descuento.ToString("N2");
 
-            if (tipoItemVenta == 3)
+            if (tipoItemVenta == 3) //Combo
             {
                 lblTitulo.Text = "DETALLE DE COMBO";
                 txtReceta.Visible = false;
                 lblReceta.Visible = false;
+                dgvInsumos.Columns[0].HeaderText = "ID";
                 try{
                     lineasCombo = daoMenu.listarLineasComboXIdCombo(platoModificar.idItemVenta).ToArray();
                     dgvInsumos.DataSource = lineasCombo.ToList();
@@ -65,9 +66,10 @@ namespace LP2Rest.Omar
                 }
                 txtTotal.Text = total.ToString("N2");
             }
-            else
+            else //Plato normal
             {
-                try //No funciona
+                dgvInsumos.Columns[0].HeaderText = "SKU";
+                try 
                 {
                     insumos = daoAlmacen.listarInsumosPorIdItemVenta(platoModificar.idItemVenta).ToArray();
                     dgvInsumos.DataSource = insumos.ToList();

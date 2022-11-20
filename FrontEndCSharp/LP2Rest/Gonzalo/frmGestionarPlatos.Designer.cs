@@ -286,7 +286,7 @@
             this.groupBox1.Controls.Add(this.dgvInsumos);
             this.groupBox1.Location = new System.Drawing.Point(262, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(644, 293);
+            this.groupBox1.Size = new System.Drawing.Size(644, 307);
             this.groupBox1.TabIndex = 137;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Insumos:";
@@ -441,7 +441,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 386);
+            this.ClientSize = new System.Drawing.Size(928, 396);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);

@@ -51,8 +51,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbPedido = new System.Windows.Forms.GroupBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.txtIdCombo = new System.Windows.Forms.TextBox();
             this.txtGanancia = new System.Windows.Forms.TextBox();
@@ -67,8 +65,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -213,7 +210,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label12.Location = new System.Drawing.Point(471, 18);
+            this.label12.Location = new System.Drawing.Point(462, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(99, 23);
             this.label12.TabIndex = 147;
@@ -306,8 +303,6 @@
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.SystemColors.Control;
-            this.gbPedido.Controls.Add(this.txtStock);
-            this.gbPedido.Controls.Add(this.label10);
             this.gbPedido.Controls.Add(this.txtPrecioVenta);
             this.gbPedido.Controls.Add(this.txtIdCombo);
             this.gbPedido.Controls.Add(this.txtGanancia);
@@ -325,27 +320,10 @@
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Datos de los combos";
             // 
-            // txtStock
-            // 
-            this.txtStock.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtStock.Location = new System.Drawing.Point(189, 160);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(238, 32);
-            this.txtStock.TabIndex = 148;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(105, 163);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 23);
-            this.label10.TabIndex = 147;
-            this.label10.Text = "Stock:";
-            // 
             // txtPrecioVenta
             // 
             this.txtPrecioVenta.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtPrecioVenta.Location = new System.Drawing.Point(189, 275);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(189, 214);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.ReadOnly = true;
             this.txtPrecioVenta.Size = new System.Drawing.Size(238, 32);
@@ -363,7 +341,7 @@
             // txtGanancia
             // 
             this.txtGanancia.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtGanancia.Location = new System.Drawing.Point(189, 218);
+            this.txtGanancia.Location = new System.Drawing.Point(189, 157);
             this.txtGanancia.Name = "txtGanancia";
             this.txtGanancia.Size = new System.Drawing.Size(238, 32);
             this.txtGanancia.TabIndex = 142;
@@ -371,7 +349,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(73, 219);
+            this.label7.Location = new System.Drawing.Point(73, 158);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 23);
             this.label7.TabIndex = 141;
@@ -380,7 +358,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 276);
+            this.label6.Location = new System.Drawing.Point(35, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 23);
             this.label6.TabIndex = 14;
@@ -478,33 +456,20 @@
             this.panelIzquierdo.Size = new System.Drawing.Size(8, 647);
             this.panelIzquierdo.TabIndex = 148;
             // 
-            // btnEliminar
+            // btnCancelar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(729, 588);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(115, 41);
-            this.btnEliminar.TabIndex = 151;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(608, 588);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(115, 41);
-            this.btnModificar.TabIndex = 150;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(608, 588);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(115, 41);
+            this.btnCancelar.TabIndex = 151;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnGuardar
             // 
@@ -526,8 +491,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 647);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -577,8 +541,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPrecioVenta;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPlato;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -592,8 +554,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelIzquierdo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
     }
 }

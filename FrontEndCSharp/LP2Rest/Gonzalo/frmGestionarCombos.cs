@@ -71,7 +71,7 @@ namespace LP2Rest.Gonzalo
             _itemVenta = new MenuWS.itemVenta();
             _itemVenta.nombre = txtNombre.Text;
             _itemVenta.precio = Double.Parse(txtGanancia.Text) + Double.Parse(txtTotal.Text);
-            _itemVenta.stock = Int32.Parse(txtStock.Text);
+            _itemVenta.stock = 0;
             _itemVenta.tipoItem = new MenuWS.tipoItem();
             _itemVenta.tipoItem.idTipoItem = 3;
             _itemVenta.disponible = 1; //Para que no se pueda pedir el combo cuando recien se ha creado
@@ -144,6 +144,11 @@ namespace LP2Rest.Gonzalo
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
