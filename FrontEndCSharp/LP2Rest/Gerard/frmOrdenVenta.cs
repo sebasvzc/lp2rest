@@ -115,6 +115,11 @@ namespace LP2Rest
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            if (txtDNICliente.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado un cliente", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             total = 0.0;
 
@@ -176,9 +181,6 @@ namespace LP2Rest
                 ordenVentaSeleccionada.cliente.apellidoPaterno = clienteSeleccionado.apellidoPaterno;
             }
             
-
-
-
             ordenVentaSeleccionada.idOrdenVenta = daoVentas.InsertarOrdenVenta(ordenVentaSeleccionada);
 
             if (ordenVentaSeleccionada.idOrdenVenta > 0)
@@ -193,7 +195,6 @@ namespace LP2Rest
             txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
 
             txtTotal.Text = String.Format("{0:0.00}", total);
-
         }
 
         private void frmOrdenVenta_ClientSizeChanged(object sender, EventArgs e)
@@ -347,7 +348,6 @@ namespace LP2Rest
                 txtPrecioUnitario.Text = "";
                 txtCantidad.Text = "";
                 txtDescuento.Text = "";
-
 
             }
             else

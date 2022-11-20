@@ -40,7 +40,6 @@ namespace LP2Rest
         {
             InitializeComponent();
 
-
             //cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
             //cboArtista.DisplayMember = "nombre";
             //cboArtista.ValueMember = "idArtista";
@@ -48,7 +47,7 @@ namespace LP2Rest
             txtID.Text = eventoModificar.idEvento.ToString();
             txtNombre.Text = eventoModificar.nombre;
             dtpFecha.Value = eventoModificar.fecha_inicio;
-            //cboArtista.SelectedValue = eventoModificar.artista.idArtista;
+            txtArtista.Text = eventoModificar.artista.nombre;
             txtCostoTotal.Text = eventoModificar.monto_pagar.ToString();
 
             eventoNuevo = eventoModificar;
@@ -100,9 +99,8 @@ namespace LP2Rest
             eventoNuevo.fecha_inicio = dtpFecha.Value;
             eventoNuevo.fecha_inicioSpecified = true;
             eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
-            eventoNuevo.artista = artistaNuevo;
 
-            resultado = daoGestPersonas.InsertarEvento(eventoNuevo);
+            resultado = daoGestPersonas.ModificarEvento(eventoNuevo);
             if (resultado != 0)
             {
                 txtID.Text = resultado.ToString();
@@ -113,10 +111,6 @@ namespace LP2Rest
             {
                 MessageBox.Show("Ha ocurrido un error al momento de registrar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
-
         }
 
         //private void btnAgregarArtista_Click(object sender, EventArgs e)
@@ -168,7 +162,7 @@ namespace LP2Rest
             {
                 artistaNuevo = formGestionArtistaA.ArtistaSeleccionado;
                 txtArtista.Text = artistaNuevo.nombre;
-                txtID.Text = artistaNuevo.idArtista.ToString();
+                eventoNuevo.artista = artistaNuevo;
             }
             this.Show();
         }

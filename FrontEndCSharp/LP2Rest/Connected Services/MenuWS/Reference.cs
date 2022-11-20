@@ -25,24 +25,6 @@ namespace LP2Rest.MenuWS {
         System.Threading.Tasks.Task<LP2Rest.MenuWS.insertarComboResponse> insertarComboAsync(LP2Rest.MenuWS.insertarComboRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.MenuWS.EliminarRecetaResponse EliminarReceta(LP2Rest.MenuWS.EliminarRecetaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaResponse")]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarRecetaResponse> EliminarRecetaAsync(LP2Rest.MenuWS.EliminarRecetaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.MenuWS.EliminarTipoItemResponse EliminarTipoItem(LP2Rest.MenuWS.EliminarTipoItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemResponse")]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarTipoItemResponse> EliminarTipoItemAsync(LP2Rest.MenuWS.EliminarTipoItemRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/ModificarRecetaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/ModificarRecetaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -68,6 +50,51 @@ namespace LP2Rest.MenuWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/InsertarTipoItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/InsertarTipoItemResponse")]
         System.Threading.Tasks.Task<LP2Rest.MenuWS.InsertarTipoItemResponse> InsertarTipoItemAsync(LP2Rest.MenuWS.InsertarTipoItemRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.MenuWS.EliminarTipoItemResponse EliminarTipoItem(LP2Rest.MenuWS.EliminarTipoItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarTipoItemResponse")]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarTipoItemResponse> EliminarTipoItemAsync(LP2Rest.MenuWS.EliminarTipoItemRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.MenuWS.EliminarRecetaResponse EliminarReceta(LP2Rest.MenuWS.EliminarRecetaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarRecetaResponse")]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarRecetaResponse> EliminarRecetaAsync(LP2Rest.MenuWS.EliminarRecetaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.MenuWS.listarTodasRecetasResponse listarTodasRecetas(LP2Rest.MenuWS.listarTodasRecetasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasResponse")]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasRecetasResponse> listarTodasRecetasAsync(LP2Rest.MenuWS.listarTodasRecetasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.MenuWS.listarTodasTiposDeItemResponse listarTodasTiposDeItem(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemResponse")]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasTiposDeItemResponse> listarTodasTiposDeItemAsync(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2Rest.MenuWS.EliminarItemVentaResponse EliminarItemVenta(LP2Rest.MenuWS.EliminarItemVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaResponse")]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarItemVentaResponse> EliminarItemVentaAsync(LP2Rest.MenuWS.EliminarItemVentaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarLineasComboXIdComboRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarLineasComboXIdComboResponse")]
@@ -106,24 +133,6 @@ namespace LP2Rest.MenuWS {
         System.Threading.Tasks.Task<LP2Rest.MenuWS.ModificarItemVentaResponse> ModificarItemVentaAsync(LP2Rest.MenuWS.ModificarItemVentaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.MenuWS.EliminarItemVentaResponse EliminarItemVenta(LP2Rest.MenuWS.EliminarItemVentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/EliminarItemVentaResponse")]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarItemVentaResponse> EliminarItemVentaAsync(LP2Rest.MenuWS.EliminarItemVentaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.MenuWS.listarTodasRecetasResponse listarTodasRecetas(LP2Rest.MenuWS.listarTodasRecetasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasRecetasResponse")]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasRecetasResponse> listarTodasRecetasAsync(LP2Rest.MenuWS.listarTodasRecetasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/filtrarItemsVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/filtrarItemsVentaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -131,19 +140,10 @@ namespace LP2Rest.MenuWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/filtrarItemsVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/filtrarItemsVentaResponse")]
         System.Threading.Tasks.Task<LP2Rest.MenuWS.filtrarItemsVentaResponse> filtrarItemsVentaAsync(LP2Rest.MenuWS.filtrarItemsVentaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2Rest.MenuWS.listarTodasTiposDeItemResponse listarTodasTiposDeItem(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/MenuWS/listarTodasTiposDeItemResponse")]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasTiposDeItemResponse> listarTodasTiposDeItemAsync(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -315,7 +315,7 @@ namespace LP2Rest.MenuWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -403,7 +403,7 @@ namespace LP2Rest.MenuWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -477,7 +477,7 @@ namespace LP2Rest.MenuWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -537,7 +537,7 @@ namespace LP2Rest.MenuWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -695,7 +695,7 @@ namespace LP2Rest.MenuWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/")]
     public enum unidadMedida {
@@ -723,7 +723,7 @@ namespace LP2Rest.MenuWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4161.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -835,78 +835,6 @@ namespace LP2Rest.MenuWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarReceta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarRecetaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idReceta;
-        
-        public EliminarRecetaRequest() {
-        }
-        
-        public EliminarRecetaRequest(int idReceta) {
-            this.idReceta = idReceta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarRecetaResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarRecetaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliminarRecetaResponse() {
-        }
-        
-        public EliminarRecetaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarTipoItem", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarTipoItemRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idTipoItem;
-        
-        public EliminarTipoItemRequest() {
-        }
-        
-        public EliminarTipoItemRequest(int idTipoItem) {
-            this.idTipoItem = idTipoItem;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarTipoItemResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarTipoItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliminarTipoItemResponse() {
-        }
-        
-        public EliminarTipoItemResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ModificarReceta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
     public partial class ModificarRecetaRequest {
         
@@ -1008,6 +936,170 @@ namespace LP2Rest.MenuWS {
         }
         
         public InsertarTipoItemResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarTipoItem", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarTipoItemRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTipoItem;
+        
+        public EliminarTipoItemRequest() {
+        }
+        
+        public EliminarTipoItemRequest(int idTipoItem) {
+            this.idTipoItem = idTipoItem;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarTipoItemResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarTipoItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliminarTipoItemResponse() {
+        }
+        
+        public EliminarTipoItemResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarReceta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarRecetaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idReceta;
+        
+        public EliminarRecetaRequest() {
+        }
+        
+        public EliminarRecetaRequest(int idReceta) {
+            this.idReceta = idReceta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarRecetaResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarRecetaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliminarRecetaResponse() {
+        }
+        
+        public EliminarRecetaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasRecetas", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasRecetasRequest {
+        
+        public listarTodasRecetasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasRecetasResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasRecetasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.MenuWS.receta[] @return;
+        
+        public listarTodasRecetasResponse() {
+        }
+        
+        public listarTodasRecetasResponse(LP2Rest.MenuWS.receta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasTiposDeItem", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasTiposDeItemRequest {
+        
+        public listarTodasTiposDeItemRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasTiposDeItemResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasTiposDeItemResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2Rest.MenuWS.tipoItem[] @return;
+        
+        public listarTodasTiposDeItemResponse() {
+        }
+        
+        public listarTodasTiposDeItemResponse(LP2Rest.MenuWS.tipoItem[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarItemVenta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarItemVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idItemVenta;
+        
+        public EliminarItemVentaRequest() {
+        }
+        
+        public EliminarItemVentaRequest(int idItemVenta) {
+            this.idItemVenta = idItemVenta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarItemVentaResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class EliminarItemVentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public EliminarItemVentaResponse() {
+        }
+        
+        public EliminarItemVentaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1151,70 +1243,6 @@ namespace LP2Rest.MenuWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarItemVenta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarItemVentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idItemVenta;
-        
-        public EliminarItemVentaRequest() {
-        }
-        
-        public EliminarItemVentaRequest(int idItemVenta) {
-            this.idItemVenta = idItemVenta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarItemVentaResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class EliminarItemVentaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public EliminarItemVentaResponse() {
-        }
-        
-        public EliminarItemVentaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasRecetas", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodasRecetasRequest {
-        
-        public listarTodasRecetasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasRecetasResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodasRecetasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.MenuWS.receta[] @return;
-        
-        public listarTodasRecetasResponse() {
-        }
-        
-        public listarTodasRecetasResponse(LP2Rest.MenuWS.receta[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="filtrarItemsVenta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
     public partial class filtrarItemsVentaRequest {
         
@@ -1268,34 +1296,6 @@ namespace LP2Rest.MenuWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasTiposDeItem", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodasTiposDeItemRequest {
-        
-        public listarTodasTiposDeItemRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasTiposDeItemResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodasTiposDeItemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2Rest.MenuWS.tipoItem[] @return;
-        
-        public listarTodasTiposDeItemResponse() {
-        }
-        
-        public listarTodasTiposDeItemResponse(LP2Rest.MenuWS.tipoItem[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface MenuWSChannel : LP2Rest.MenuWS.MenuWS, System.ServiceModel.IClientChannel {
     }
@@ -1344,52 +1344,6 @@ namespace LP2Rest.MenuWS {
             LP2Rest.MenuWS.insertarComboRequest inValue = new LP2Rest.MenuWS.insertarComboRequest();
             inValue.itemVenta = itemVenta;
             return ((LP2Rest.MenuWS.MenuWS)(this)).insertarComboAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.MenuWS.EliminarRecetaResponse LP2Rest.MenuWS.MenuWS.EliminarReceta(LP2Rest.MenuWS.EliminarRecetaRequest request) {
-            return base.Channel.EliminarReceta(request);
-        }
-        
-        public int EliminarReceta(int idReceta) {
-            LP2Rest.MenuWS.EliminarRecetaRequest inValue = new LP2Rest.MenuWS.EliminarRecetaRequest();
-            inValue.idReceta = idReceta;
-            LP2Rest.MenuWS.EliminarRecetaResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).EliminarReceta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarRecetaResponse> LP2Rest.MenuWS.MenuWS.EliminarRecetaAsync(LP2Rest.MenuWS.EliminarRecetaRequest request) {
-            return base.Channel.EliminarRecetaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarRecetaResponse> EliminarRecetaAsync(int idReceta) {
-            LP2Rest.MenuWS.EliminarRecetaRequest inValue = new LP2Rest.MenuWS.EliminarRecetaRequest();
-            inValue.idReceta = idReceta;
-            return ((LP2Rest.MenuWS.MenuWS)(this)).EliminarRecetaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.MenuWS.EliminarTipoItemResponse LP2Rest.MenuWS.MenuWS.EliminarTipoItem(LP2Rest.MenuWS.EliminarTipoItemRequest request) {
-            return base.Channel.EliminarTipoItem(request);
-        }
-        
-        public int EliminarTipoItem(int idTipoItem) {
-            LP2Rest.MenuWS.EliminarTipoItemRequest inValue = new LP2Rest.MenuWS.EliminarTipoItemRequest();
-            inValue.idTipoItem = idTipoItem;
-            LP2Rest.MenuWS.EliminarTipoItemResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).EliminarTipoItem(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarTipoItemResponse> LP2Rest.MenuWS.MenuWS.EliminarTipoItemAsync(LP2Rest.MenuWS.EliminarTipoItemRequest request) {
-            return base.Channel.EliminarTipoItemAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarTipoItemResponse> EliminarTipoItemAsync(int idTipoItem) {
-            LP2Rest.MenuWS.EliminarTipoItemRequest inValue = new LP2Rest.MenuWS.EliminarTipoItemRequest();
-            inValue.idTipoItem = idTipoItem;
-            return ((LP2Rest.MenuWS.MenuWS)(this)).EliminarTipoItemAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1459,6 +1413,117 @@ namespace LP2Rest.MenuWS {
             LP2Rest.MenuWS.InsertarTipoItemRequest inValue = new LP2Rest.MenuWS.InsertarTipoItemRequest();
             inValue.tipoItem = tipoItem;
             return ((LP2Rest.MenuWS.MenuWS)(this)).InsertarTipoItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.MenuWS.EliminarTipoItemResponse LP2Rest.MenuWS.MenuWS.EliminarTipoItem(LP2Rest.MenuWS.EliminarTipoItemRequest request) {
+            return base.Channel.EliminarTipoItem(request);
+        }
+        
+        public int EliminarTipoItem(int idTipoItem) {
+            LP2Rest.MenuWS.EliminarTipoItemRequest inValue = new LP2Rest.MenuWS.EliminarTipoItemRequest();
+            inValue.idTipoItem = idTipoItem;
+            LP2Rest.MenuWS.EliminarTipoItemResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).EliminarTipoItem(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarTipoItemResponse> LP2Rest.MenuWS.MenuWS.EliminarTipoItemAsync(LP2Rest.MenuWS.EliminarTipoItemRequest request) {
+            return base.Channel.EliminarTipoItemAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarTipoItemResponse> EliminarTipoItemAsync(int idTipoItem) {
+            LP2Rest.MenuWS.EliminarTipoItemRequest inValue = new LP2Rest.MenuWS.EliminarTipoItemRequest();
+            inValue.idTipoItem = idTipoItem;
+            return ((LP2Rest.MenuWS.MenuWS)(this)).EliminarTipoItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.MenuWS.EliminarRecetaResponse LP2Rest.MenuWS.MenuWS.EliminarReceta(LP2Rest.MenuWS.EliminarRecetaRequest request) {
+            return base.Channel.EliminarReceta(request);
+        }
+        
+        public int EliminarReceta(int idReceta) {
+            LP2Rest.MenuWS.EliminarRecetaRequest inValue = new LP2Rest.MenuWS.EliminarRecetaRequest();
+            inValue.idReceta = idReceta;
+            LP2Rest.MenuWS.EliminarRecetaResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).EliminarReceta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarRecetaResponse> LP2Rest.MenuWS.MenuWS.EliminarRecetaAsync(LP2Rest.MenuWS.EliminarRecetaRequest request) {
+            return base.Channel.EliminarRecetaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarRecetaResponse> EliminarRecetaAsync(int idReceta) {
+            LP2Rest.MenuWS.EliminarRecetaRequest inValue = new LP2Rest.MenuWS.EliminarRecetaRequest();
+            inValue.idReceta = idReceta;
+            return ((LP2Rest.MenuWS.MenuWS)(this)).EliminarRecetaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.MenuWS.listarTodasRecetasResponse LP2Rest.MenuWS.MenuWS.listarTodasRecetas(LP2Rest.MenuWS.listarTodasRecetasRequest request) {
+            return base.Channel.listarTodasRecetas(request);
+        }
+        
+        public LP2Rest.MenuWS.receta[] listarTodasRecetas() {
+            LP2Rest.MenuWS.listarTodasRecetasRequest inValue = new LP2Rest.MenuWS.listarTodasRecetasRequest();
+            LP2Rest.MenuWS.listarTodasRecetasResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasRecetas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasRecetasResponse> LP2Rest.MenuWS.MenuWS.listarTodasRecetasAsync(LP2Rest.MenuWS.listarTodasRecetasRequest request) {
+            return base.Channel.listarTodasRecetasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasRecetasResponse> listarTodasRecetasAsync() {
+            LP2Rest.MenuWS.listarTodasRecetasRequest inValue = new LP2Rest.MenuWS.listarTodasRecetasRequest();
+            return ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasRecetasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.MenuWS.listarTodasTiposDeItemResponse LP2Rest.MenuWS.MenuWS.listarTodasTiposDeItem(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request) {
+            return base.Channel.listarTodasTiposDeItem(request);
+        }
+        
+        public LP2Rest.MenuWS.tipoItem[] listarTodasTiposDeItem() {
+            LP2Rest.MenuWS.listarTodasTiposDeItemRequest inValue = new LP2Rest.MenuWS.listarTodasTiposDeItemRequest();
+            LP2Rest.MenuWS.listarTodasTiposDeItemResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasTiposDeItem(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasTiposDeItemResponse> LP2Rest.MenuWS.MenuWS.listarTodasTiposDeItemAsync(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request) {
+            return base.Channel.listarTodasTiposDeItemAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasTiposDeItemResponse> listarTodasTiposDeItemAsync() {
+            LP2Rest.MenuWS.listarTodasTiposDeItemRequest inValue = new LP2Rest.MenuWS.listarTodasTiposDeItemRequest();
+            return ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasTiposDeItemAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.MenuWS.EliminarItemVentaResponse LP2Rest.MenuWS.MenuWS.EliminarItemVenta(LP2Rest.MenuWS.EliminarItemVentaRequest request) {
+            return base.Channel.EliminarItemVenta(request);
+        }
+        
+        public int EliminarItemVenta(int idItemVenta) {
+            LP2Rest.MenuWS.EliminarItemVentaRequest inValue = new LP2Rest.MenuWS.EliminarItemVentaRequest();
+            inValue.idItemVenta = idItemVenta;
+            LP2Rest.MenuWS.EliminarItemVentaResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).EliminarItemVenta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarItemVentaResponse> LP2Rest.MenuWS.MenuWS.EliminarItemVentaAsync(LP2Rest.MenuWS.EliminarItemVentaRequest request) {
+            return base.Channel.EliminarItemVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarItemVentaResponse> EliminarItemVentaAsync(int idItemVenta) {
+            LP2Rest.MenuWS.EliminarItemVentaRequest inValue = new LP2Rest.MenuWS.EliminarItemVentaRequest();
+            inValue.idItemVenta = idItemVenta;
+            return ((LP2Rest.MenuWS.MenuWS)(this)).EliminarItemVentaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1552,50 +1617,6 @@ namespace LP2Rest.MenuWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.MenuWS.EliminarItemVentaResponse LP2Rest.MenuWS.MenuWS.EliminarItemVenta(LP2Rest.MenuWS.EliminarItemVentaRequest request) {
-            return base.Channel.EliminarItemVenta(request);
-        }
-        
-        public int EliminarItemVenta(int idItemVenta) {
-            LP2Rest.MenuWS.EliminarItemVentaRequest inValue = new LP2Rest.MenuWS.EliminarItemVentaRequest();
-            inValue.idItemVenta = idItemVenta;
-            LP2Rest.MenuWS.EliminarItemVentaResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).EliminarItemVenta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarItemVentaResponse> LP2Rest.MenuWS.MenuWS.EliminarItemVentaAsync(LP2Rest.MenuWS.EliminarItemVentaRequest request) {
-            return base.Channel.EliminarItemVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.MenuWS.EliminarItemVentaResponse> EliminarItemVentaAsync(int idItemVenta) {
-            LP2Rest.MenuWS.EliminarItemVentaRequest inValue = new LP2Rest.MenuWS.EliminarItemVentaRequest();
-            inValue.idItemVenta = idItemVenta;
-            return ((LP2Rest.MenuWS.MenuWS)(this)).EliminarItemVentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.MenuWS.listarTodasRecetasResponse LP2Rest.MenuWS.MenuWS.listarTodasRecetas(LP2Rest.MenuWS.listarTodasRecetasRequest request) {
-            return base.Channel.listarTodasRecetas(request);
-        }
-        
-        public LP2Rest.MenuWS.receta[] listarTodasRecetas() {
-            LP2Rest.MenuWS.listarTodasRecetasRequest inValue = new LP2Rest.MenuWS.listarTodasRecetasRequest();
-            LP2Rest.MenuWS.listarTodasRecetasResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasRecetas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasRecetasResponse> LP2Rest.MenuWS.MenuWS.listarTodasRecetasAsync(LP2Rest.MenuWS.listarTodasRecetasRequest request) {
-            return base.Channel.listarTodasRecetasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasRecetasResponse> listarTodasRecetasAsync() {
-            LP2Rest.MenuWS.listarTodasRecetasRequest inValue = new LP2Rest.MenuWS.listarTodasRecetasRequest();
-            return ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasRecetasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2Rest.MenuWS.filtrarItemsVentaResponse LP2Rest.MenuWS.MenuWS.filtrarItemsVenta(LP2Rest.MenuWS.filtrarItemsVentaRequest request) {
             return base.Channel.filtrarItemsVenta(request);
         }
@@ -1624,27 +1645,6 @@ namespace LP2Rest.MenuWS {
             inValue.precio_max = precio_max;
             inValue.disponible = disponible;
             return ((LP2Rest.MenuWS.MenuWS)(this)).filtrarItemsVentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.MenuWS.listarTodasTiposDeItemResponse LP2Rest.MenuWS.MenuWS.listarTodasTiposDeItem(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request) {
-            return base.Channel.listarTodasTiposDeItem(request);
-        }
-        
-        public LP2Rest.MenuWS.tipoItem[] listarTodasTiposDeItem() {
-            LP2Rest.MenuWS.listarTodasTiposDeItemRequest inValue = new LP2Rest.MenuWS.listarTodasTiposDeItemRequest();
-            LP2Rest.MenuWS.listarTodasTiposDeItemResponse retVal = ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasTiposDeItem(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasTiposDeItemResponse> LP2Rest.MenuWS.MenuWS.listarTodasTiposDeItemAsync(LP2Rest.MenuWS.listarTodasTiposDeItemRequest request) {
-            return base.Channel.listarTodasTiposDeItemAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.MenuWS.listarTodasTiposDeItemResponse> listarTodasTiposDeItemAsync() {
-            LP2Rest.MenuWS.listarTodasTiposDeItemRequest inValue = new LP2Rest.MenuWS.listarTodasTiposDeItemRequest();
-            return ((LP2Rest.MenuWS.MenuWS)(this)).listarTodasTiposDeItemAsync(inValue);
         }
     }
 }
