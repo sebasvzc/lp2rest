@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lbltimer = new System.Windows.Forms.Label();
             this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
@@ -43,7 +47,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblID = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +57,9 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.label1);
             this.panelSuperior.Controls.Add(this.lblID);
+            this.panelSuperior.Controls.Add(this.lbltimer);
             this.panelSuperior.Controls.Add(this.btnRegistrarSalida);
             this.panelSuperior.Controls.Add(this.label2);
             this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
@@ -65,17 +71,29 @@
             this.panelSuperior.TabIndex = 27;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.Coral;
+            this.lblID.Location = new System.Drawing.Point(886, 39);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(94, 24);
+            this.lblID.TabIndex = 46;
+            this.lblID.Text = "Chef #x";
+            // 
             // btnRegistrarSalida
             // 
             this.btnRegistrarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnRegistrarSalida.FlatAppearance.BorderSize = 0;
             this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarSalida.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnRegistrarSalida.Location = new System.Drawing.Point(532, 19);
+            this.btnRegistrarSalida.Location = new System.Drawing.Point(446, 19);
             this.btnRegistrarSalida.Name = "btnRegistrarSalida";
             this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRegistrarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnRegistrarSalida.Size = new System.Drawing.Size(168, 65);
             this.btnRegistrarSalida.TabIndex = 27;
             this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
             this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -87,11 +105,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(23, 23);
+            this.label2.Location = new System.Drawing.Point(37, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 60);
+            this.label2.Size = new System.Drawing.Size(159, 48);
             this.label2.TabIndex = 26;
             this.label2.Text = "INICIO";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
@@ -101,9 +119,9 @@
             this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(340, 19);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(239, 19);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
@@ -165,7 +183,7 @@
             this.sdbtnPlatos.Location = new System.Drawing.Point(0, 327);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnPlatos.Size = new System.Drawing.Size(250, 59);
+            this.sdbtnPlatos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnPlatos.TabIndex = 33;
             this.sdbtnPlatos.Text = "  Platos";
             this.sdbtnPlatos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,7 +211,7 @@
             this.sdbtnCompras.Location = new System.Drawing.Point(0, 407);
             this.sdbtnCompras.Name = "sdbtnCompras";
             this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnCompras.Size = new System.Drawing.Size(250, 59);
+            this.sdbtnCompras.Size = new System.Drawing.Size(256, 59);
             this.sdbtnCompras.TabIndex = 35;
             this.sdbtnCompras.Text = "  Compras";
             this.sdbtnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -210,7 +228,7 @@
             this.sdbtnInsumos.Location = new System.Drawing.Point(0, 489);
             this.sdbtnInsumos.Name = "sdbtnInsumos";
             this.sdbtnInsumos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnInsumos.Size = new System.Drawing.Size(250, 59);
+            this.sdbtnInsumos.Size = new System.Drawing.Size(256, 59);
             this.sdbtnInsumos.TabIndex = 36;
             this.sdbtnInsumos.Text = "  Insumos";
             this.sdbtnInsumos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -270,16 +288,32 @@
             this.panel1.Size = new System.Drawing.Size(1100, 4);
             this.panel1.TabIndex = 25;
             // 
-            // lblID
+            // label1
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.lblID.ForeColor = System.Drawing.Color.Coral;
-            this.lblID.Location = new System.Drawing.Point(886, 39);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(94, 24);
-            this.lblID.TabIndex = 46;
-            this.lblID.Text = "Chef #x";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(640, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 19);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Tiempo de Asistencia";
+            // 
+            // lbltimer
+            // 
+            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimer.Location = new System.Drawing.Point(645, 29);
+            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltimer.Name = "lbltimer";
+            this.lbltimer.Size = new System.Drawing.Size(140, 55);
+            this.lbltimer.TabIndex = 55;
+            this.lbltimer.Text = "00:00:00";
+            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmInicioChef
             // 
@@ -318,5 +352,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbltimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }

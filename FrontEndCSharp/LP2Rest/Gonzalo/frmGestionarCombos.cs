@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,11 @@ namespace LP2Rest.Gonzalo
 {
     public partial class frmGestionarCombos : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         private MenuWS.itemVenta _itemVenta;
         private BindingList<MenuWS.itemVenta> platos;
         private double costoTotal = 0;
@@ -65,7 +71,7 @@ namespace LP2Rest.Gonzalo
             _itemVenta = new MenuWS.itemVenta();
             _itemVenta.nombre = txtNombre.Text;
             _itemVenta.precio = Double.Parse(txtGanancia.Text) + Double.Parse(txtTotal.Text);
-            _itemVenta.stock = Int32.Parse(txtStock.Text);
+            _itemVenta.stock = 0;
             _itemVenta.tipoItem = new MenuWS.tipoItem();
             _itemVenta.tipoItem.idTipoItem = 3;
             _itemVenta.disponible = 1; //Para que no se pueda pedir el combo cuando recien se ha creado
@@ -127,6 +133,22 @@ namespace LP2Rest.Gonzalo
                 txtIDPlato.Text = _itemVenta.idItemVenta.ToString();
                 txtNombrePlato.Text = _itemVenta.nombre;
             }
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

@@ -467,6 +467,9 @@
     <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
       <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
     </EmbeddedResource>
@@ -828,6 +831,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarEmpleadosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -874,6 +880,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarArtistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.modificarAsistenciaSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarCajeroResponse.datasource">
@@ -976,15 +985,21 @@
     <None Include="Connected Services\MenuWS\MenuWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarBoletaVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarBoletaVentaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
     <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.documentoPago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

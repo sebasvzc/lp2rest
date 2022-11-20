@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,13 @@ namespace LP2Rest.Diego
 {
     public partial class frmBuscarProveedor : Form
     {
+        private static Form formularioActivo = null;
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
         private GestPersonasWS.GestPersonasWSClient _daoMetodos;
         private GestPersonasWS.proveedor _proveedorSeleccionada;
 
@@ -23,10 +31,6 @@ namespace LP2Rest.Diego
             _daoMetodos = new GestPersonasWS.GestPersonasWSClient();
         }
 
-        private void txtNombreProveeedor_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -53,6 +57,12 @@ namespace LP2Rest.Diego
             dgvProveedores.Rows[e.RowIndex].Cells[0].Value = proveedor.RUC;
             dgvProveedores.Rows[e.RowIndex].Cells[1].Value = proveedor.nombreComercial;
             dgvProveedores.Rows[e.RowIndex].Cells[2].Value = proveedor.razonSocial;
+        }
+
+        private void pnlSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
     }
 }

@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbltimer = new System.Windows.Forms.Label();
             this.btnMarcarSalida = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.sdbtnMesas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.sdbtnReclamos = new System.Windows.Forms.Button();
             this.sdbtnReservas = new System.Windows.Forms.Button();
             this.sdbtnClientes = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.sdbtnMesas = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
@@ -72,6 +76,8 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.label2);
+            this.panelSuperior.Controls.Add(this.lbltimer);
             this.panelSuperior.Controls.Add(this.btnMarcarSalida);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.lbltitulo);
@@ -86,16 +92,15 @@
             // 
             // btnMarcarSalida
             // 
-            this.btnMarcarSalida.Enabled = false;
             this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnMarcarSalida.FlatAppearance.BorderSize = 0;
             this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarSalida.Location = new System.Drawing.Point(476, 19);
+            this.btnMarcarSalida.Location = new System.Drawing.Point(423, 20);
             this.btnMarcarSalida.Name = "btnMarcarSalida";
             this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(163, 65);
             this.btnMarcarSalida.TabIndex = 28;
             this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
             this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,11 +123,11 @@
             // 
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbltitulo.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.lbltitulo.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
-            this.lbltitulo.Location = new System.Drawing.Point(23, 23);
+            this.lbltitulo.Location = new System.Drawing.Point(32, 29);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(196, 60);
+            this.lbltitulo.Size = new System.Drawing.Size(159, 48);
             this.lbltitulo.TabIndex = 26;
             this.lbltitulo.Text = "INICIO";
             // 
@@ -131,12 +136,12 @@
             this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(268, 19);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(234, 20);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(174, 65);
             this.btnMarcarAsistencia.TabIndex = 26;
             this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
             this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,8 +168,8 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.panel4);
+            this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnReclamos);
             this.panelIzquierdo.Controls.Add(this.sdbtnReservas);
             this.panelIzquierdo.Controls.Add(this.sdbtnClientes);
@@ -176,6 +181,23 @@
             this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
             this.panelIzquierdo.TabIndex = 54;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
+            // 
+            // sdbtnMesas
+            // 
+            this.sdbtnMesas.FlatAppearance.BorderSize = 0;
+            this.sdbtnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
+            this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sdbtnMesas.Location = new System.Drawing.Point(3, 378);
+            this.sdbtnMesas.Name = "sdbtnMesas";
+            this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
+            this.sdbtnMesas.TabIndex = 52;
+            this.sdbtnMesas.Text = "  Mesas";
+            this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sdbtnMesas.UseVisualStyleBackColor = true;
+            this.sdbtnMesas.Click += new System.EventHandler(this.sdbtnMesas_Click);
             // 
             // panel4
             // 
@@ -270,22 +292,32 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // sdbtnMesas
+            // label2
             // 
-            this.sdbtnMesas.FlatAppearance.BorderSize = 0;
-            this.sdbtnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
-            this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
-            this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnMesas.Location = new System.Drawing.Point(3, 378);
-            this.sdbtnMesas.Name = "sdbtnMesas";
-            this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
-            this.sdbtnMesas.TabIndex = 52;
-            this.sdbtnMesas.Text = "  Mesas";
-            this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sdbtnMesas.UseVisualStyleBackColor = true;
-            this.sdbtnMesas.Click += new System.EventHandler(this.sdbtnMesas_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(606, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 19);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Tiempo de Asistencia";
+            // 
+            // lbltimer
+            // 
+            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimer.Location = new System.Drawing.Point(607, 33);
+            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltimer.Name = "lbltimer";
+            this.lbltimer.Size = new System.Drawing.Size(140, 55);
+            this.lbltimer.TabIndex = 53;
+            this.lbltimer.Text = "00:00:00";
+            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmPrincipalRecepcionista
             // 
@@ -296,7 +328,7 @@
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelIzquierdo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPrincipalRecepcionista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecepcionista";
@@ -327,5 +359,8 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button sdbtnReclamos;
         private System.Windows.Forms.Button sdbtnMesas;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbltimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }

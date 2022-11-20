@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.sdbtnUsuarios = new System.Windows.Forms.Button();
@@ -46,6 +47,9 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbltimer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -66,7 +70,7 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
+            this.panelIzquierdo.Size = new System.Drawing.Size(256, 718);
             this.panelIzquierdo.TabIndex = 39;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
@@ -76,7 +80,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 819);
+            this.panel4.Size = new System.Drawing.Size(8, 661);
             this.panel4.TabIndex = 17;
             // 
             // sdbtnUsuarios
@@ -186,7 +190,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 819);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 661);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(256, 57);
@@ -200,6 +204,8 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.label2);
+            this.panelSuperior.Controls.Add(this.lbltimer);
             this.panelSuperior.Controls.Add(this.btnMarcarSalida);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.lbltitulo);
@@ -208,22 +214,21 @@
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(256, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
+            this.panelSuperior.Size = new System.Drawing.Size(911, 100);
             this.panelSuperior.TabIndex = 40;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
             // btnMarcarSalida
             // 
-            this.btnMarcarSalida.Enabled = false;
             this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnMarcarSalida.FlatAppearance.BorderSize = 0;
             this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarSalida.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarSalida.Location = new System.Drawing.Point(242, 18);
+            this.btnMarcarSalida.Location = new System.Drawing.Point(402, 16);
             this.btnMarcarSalida.Name = "btnMarcarSalida";
             this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(155, 65);
             this.btnMarcarSalida.TabIndex = 28;
             this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
             this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,21 +241,22 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblID.ForeColor = System.Drawing.Color.Coral;
-            this.lblID.Location = new System.Drawing.Point(798, 44);
+            this.lblID.Location = new System.Drawing.Point(756, 44);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(122, 24);
             this.lblID.TabIndex = 27;
             this.lblID.Text = "Mesero #x";
+            this.lblID.Click += new System.EventHandler(this.lblID_Click);
             // 
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbltitulo.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.lbltitulo.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
-            this.lbltitulo.Location = new System.Drawing.Point(23, 23);
+            this.lbltitulo.Location = new System.Drawing.Point(27, 24);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(196, 60);
+            this.lbltitulo.Size = new System.Drawing.Size(159, 48);
             this.lbltitulo.TabIndex = 26;
             this.lbltitulo.Text = "INICIO";
             // 
@@ -259,12 +265,12 @@
             this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
             this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(449, 18);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(221, 16);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(175, 65);
             this.btnMarcarAsistencia.TabIndex = 26;
             this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
             this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,7 +302,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
+            this.panelContenedor.Size = new System.Drawing.Size(911, 618);
             this.panelContenedor.TabIndex = 53;
             // 
             // label1
@@ -304,7 +310,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(172, 265);
+            this.label1.Location = new System.Drawing.Point(122, 205);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(756, 247);
             this.label1.TabIndex = 28;
@@ -317,8 +323,37 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1100, 4);
+            this.panel5.Size = new System.Drawing.Size(911, 4);
             this.panel5.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(573, 13);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 19);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Tiempo de Asistencia";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lbltimer
+            // 
+            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimer.Location = new System.Drawing.Point(578, 28);
+            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltimer.Name = "lbltimer";
+            this.lbltimer.Size = new System.Drawing.Size(140, 55);
+            this.lbltimer.TabIndex = 49;
+            this.lbltimer.Text = "00:00:00";
+            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbltimer.Click += new System.EventHandler(this.lbltimer_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmPrincipalMesero
             // 
@@ -360,5 +395,8 @@
         private System.Windows.Forms.Button sdbtnReclamos;
         private System.Windows.Forms.Button sdbtnUsuarios;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbltimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }

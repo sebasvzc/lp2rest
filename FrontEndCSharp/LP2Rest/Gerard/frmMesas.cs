@@ -25,7 +25,7 @@ namespace LP2Rest
         public int IdMesero { get => idMesero; set => idMesero = value; }
 
         //Utiles Mesas
-        mesa[] listaMesas;
+        private mesa[] listaMesas;
         
         private void actualizarMesas()
         {
@@ -162,15 +162,10 @@ namespace LP2Rest
 
         public frmMesas(int auxIdMesero)
         {
-            daoVentas = new VentasWSClient();      
             
-            idMesero = auxIdMesero;
-            
-
-
-
             InitializeComponent();
-
+            daoVentas = new VentasWS.VentasWSClient();
+            idMesero = auxIdMesero;
             actualizarMesas();
 
             

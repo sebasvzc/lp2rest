@@ -72,6 +72,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblError);
             this.Name = "frmValidarEliminado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmValidarEliminado";
             this.ResumeLayout(false);
             this.PerformLayout();
