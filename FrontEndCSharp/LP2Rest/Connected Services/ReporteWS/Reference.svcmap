@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/ReporteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteWS.wsdl" MetadataType="Wsdl" ID="99dacdb9-54b3-4f53-99c0-d224dda41e37" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/ReporteWS?WSDL" />
-    <MetadataFile FileName="ReporteWS.xsd" MetadataType="Schema" ID="2b99208b-1e97-4d30-bd36-385910b57f5f" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/ReporteWS?xsd=1" />
+    <MetadataFile FileName="ReporteWS.wsdl" MetadataType="Wsdl" ID="415971e1-6783-4765-b287-ad0c6a84c3a1" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/ReporteWS?WSDL" />
+    <MetadataFile FileName="ReporteWS.xsd" MetadataType="Schema" ID="278b4484-a0d6-4e21-99f1-21dacff531e5" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/ReporteWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

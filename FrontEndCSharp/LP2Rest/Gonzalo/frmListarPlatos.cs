@@ -46,7 +46,7 @@ namespace LP2Rest
             {
                 btnNuevoPlato.Visible = false;
                 btnNuevoCombo.Visible = false;
-                btnEliminar.Visible = false;
+                button1.Visible = false;
             }
         }
 

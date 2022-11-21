@@ -31,6 +31,7 @@ namespace LP2Rest
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
+                btnBuscar.PerformClick();
             }
         }
 
@@ -78,7 +79,7 @@ namespace LP2Rest
                 frmGestionEventosA frm = new frmGestionEventosA(eventoSeleccionado);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-
+                    btnBuscar.PerformClick();
                 }
             }
             else
@@ -100,8 +101,10 @@ namespace LP2Rest
                     ) == DialogResult.Yes)
                 {
                     int resultado = daoGestPersonas.EliminarEvento(eventoSeleccionado.idEvento);
-                    if (resultado == 1)
+                    if (resultado == 1) { 
                         MessageBox.Show("Se ha eliminado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnBuscar.PerformClick();
+                    }
                     else
                         MessageBox.Show("Ha ocurrido un error al momento de eliminar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

@@ -4,9 +4,17 @@
         <servlet-name>ReporteAsistencias</servlet-name>
         <servlet-class>pe.edu.pucp.lp2rest.servlet.ReporteAsistencias</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReporteBoletaVenta</servlet-name>
+        <servlet-class>pe.edu.pucp.lp2rest.servlet.ReporteBoletaVenta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReporteAsistencias</servlet-name>
         <url-pattern>/ReporteAsistencias</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteBoletaVenta</servlet-name>
+        <url-pattern>/ReporteBoletaVenta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -35,7 +35,6 @@
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.IDPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,13 +81,14 @@
             // dgvEmpleados
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
+            this.dgvEmpleados.AllowUserToDeleteRows = false;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDPersona,
-            this.NombreCompleto,
-            this.Cargo});
+            this.NombreCompleto});
             this.dgvEmpleados.Location = new System.Drawing.Point(62, 83);
             this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.RowTemplate.Height = 24;
             this.dgvEmpleados.Size = new System.Drawing.Size(691, 294);
@@ -100,6 +100,7 @@
             this.IDPersona.HeaderText = "IDPersona";
             this.IDPersona.MinimumWidth = 6;
             this.IDPersona.Name = "IDPersona";
+            this.IDPersona.ReadOnly = true;
             this.IDPersona.Width = 125;
             // 
             // NombreCompleto
@@ -108,14 +109,8 @@
             this.NombreCompleto.HeaderText = "Nombre Completo";
             this.NombreCompleto.MinimumWidth = 6;
             this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
             this.NombreCompleto.Width = 150;
-            // 
-            // Cargo
-            // 
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.MinimumWidth = 6;
-            this.Cargo.Name = "Cargo";
-            this.Cargo.Width = 125;
             // 
             // frmBuscarEmpleado
             // 
@@ -128,6 +123,7 @@
             this.Controls.Add(this.txtNombreCompleto);
             this.Controls.Add(this.lbNombre);
             this.Name = "frmBuscarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarEmpleado";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
@@ -144,6 +140,5 @@
         private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
     }
 }

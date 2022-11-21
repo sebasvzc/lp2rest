@@ -25,23 +25,25 @@ import pe.edu.pucp.lp2rest.config.DBManager;
  *
  * @author Gonzalo
  */
-public class ReporteAsistencias extends HttpServlet {
+public class ReporteBoletaVenta extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
             Connection con = DBManager.getInstance().getConnection();
             JasperReport reporte = (JasperReport) JRLoader.loadObject(
-                ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/report/AsistenciasDefinitivo.jasper"));
-            String rutaSubReporte = ReporteAsistencias.class.getResource(
-                    "/pe/edu/pucp/lp2rest/report/ReporteAsistenciasGrafico.jasper").getPath();
-             
-            String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
-            Image imagen = (new ImageIcon(rutaImagen)).getImage();
-            HashMap parametros = new HashMap();
-            parametros.put("ImagenLogoEmpresa", imagen);
-            parametros.put("SubReporteGrafico",rutaSubReporte);
+                ReporteBoletaVenta.class.getResource("/pe/edu/pucp/lp2rest/report/ReporteBoletaVenta.jasper"));
             
+            HashMap parametros = new HashMap();
             JasperPrint jp = JasperFillManager.fillReport(reporte,parametros,con);
             con.close();
             JasperExportManager.exportReportToPdfStream(jp,response.getOutputStream());

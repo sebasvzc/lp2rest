@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.VentasWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,16 @@ namespace LP2Rest
         //Conexiones
         private VentasWS.VentasWSClient daoVentas;
         private VentasWS.ordenVenta ordenVentaSeleccionado;
-        public frmListaOrdenVentaMesero()
+
+        //UTILES
+
+        private int idMeseroActual;
+
+        public frmListaOrdenVentaMesero(int idMesero)
         {
             daoVentas = new VentasWS.VentasWSClient();
+
+            idMeseroActual = idMesero;
 
             InitializeComponent();
 
@@ -55,7 +63,8 @@ namespace LP2Rest
             ;
 
 
-            VentasWS.ordenVenta[] listaVentas = daoVentas.listarBusquedaOrdenesVenta(
+            VentasWS.ordenVenta[] listaVentas = daoVentas.listarBusquedaOrdenesVentaMesero(
+                                                                                    idMeseroActual,
                                                                                     txtNombre.Text,
                                                                                     txtApellido.Text,
                                                                                     auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"),
@@ -69,7 +78,7 @@ namespace LP2Rest
             }
             else
             {
-                MessageBox.Show("No se ha encontrado empleados", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se ha encontrado Ordenes de Venta", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -96,5 +105,6 @@ namespace LP2Rest
 
             }
         }
+
     }
 }

@@ -13,7 +13,8 @@ import pe.edu.pucp.lp2rest.gestpersonas.model.Asistencia;
  */
 public interface AsistenciaDAO {
     int insertarAsistencia(Asistencia asistencia);
-    int modificarAsistencia(Asistencia asistencia);
+    int modificarAsistencia(int id_asistencia, String fecha_fin,
+            String hora_fin);
     int eliminarAsistencia(int idArtista);
     ArrayList<Asistencia> listarTodasAsistencias();
 }

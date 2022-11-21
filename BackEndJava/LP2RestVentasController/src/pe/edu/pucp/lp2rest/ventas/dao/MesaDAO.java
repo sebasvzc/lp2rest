@@ -10,6 +10,8 @@ import pe.edu.pucp.lp2rest.ventas.model.Mesa;
 public interface MesaDAO {
     int insertar(Mesa mesa);
     int modificar (Mesa mesa);
+    int modificarOrdenVenta(Mesa mesa);
     int eliminar(int idMesa);
     ArrayList<Mesa> listarTodos();
+    ArrayList<Mesa> listarTodos2();
 }

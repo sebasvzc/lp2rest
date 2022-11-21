@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,12 @@ namespace LP2Rest.Diego
 {
     public partial class frmOrdenCompra : Form
     {
+        private static Form formularioActivo = null;
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         private AlmacenWS.AlmacenWSClient daoGestAlmacen = new AlmacenWS.AlmacenWSClient();
         private AlmacenWS.lineaOrdenCompra[] _lineaordenCompra;
         private AlmacenWS.ordenCompra _ordenCompraNuevo;
@@ -37,7 +44,6 @@ namespace LP2Rest.Diego
             txtProveedor.Enabled = false;
             txtEstado.Enabled = false;
             txtEstado.Visible = false;
-            lblTitulo.Text = "Nueva Solicitud de Orden de Compra";
         }
         public frmOrdenCompra(String tipo, AlmacenWS.ordenCompra oc)
         {
@@ -76,10 +82,8 @@ namespace LP2Rest.Diego
                 lblPrecio.Visible = false;
                 lblProducto.Visible = false;
                 groupBox1.Location = new Point(75, 236);
-                lblTitulo.Text = "Detalle de Solicitud de Orden de Compra";
                 btnGuardar.Visible = false;
                 btnCancelar.Visible = false;
-                toolStrip1.Visible = false;
                 dtpFechaRegistro.Enabled = false;
                 dtpFechaCumplimiento.Enabled = false;
                 txtDescripcion.Enabled = false;
@@ -246,6 +250,19 @@ namespace LP2Rest.Diego
         {
             int resultado = daoGestAlmacen.ActualizarEstadoOrdenCompra(_ordenCompraNuevo.idOrdenCompra);
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pnlSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
     }
 }

@@ -109,6 +109,12 @@
     <Compile Include="Gerard\frmNuevaContrasenia.Designer.cs">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gerard\frmOrdenVentaMesero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmOrdenVentaMesero.Designer.cs">
+      <DependentUpon>frmOrdenVentaMesero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gonzalo\frmBuscarSoloPlatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     <EmbeddedResource Include="Gerard\frmNuevaContrasenia.resx">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmOrdenVentaMesero.resx">
+      <DependentUpon>frmOrdenVentaMesero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmBuscarSoloPlatos.resx">
       <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,6 +466,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmValidarAsistencia.resx">
       <DependentUpon>frmValidarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmValidarEliminado.resx">
+      <DependentUpon>frmValidarEliminado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcelo\frmAgregarInsumoReceta.resx">
       <DependentUpon>frmAgregarInsumoReceta.cs</DependentUpon>
@@ -819,6 +831,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarBusquedaReclamosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ListarEmpleadosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.listarProveedoresPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -865,6 +880,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarArtistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.modificarAsistenciaSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarCajeroResponse.datasource">
@@ -967,15 +985,21 @@
     <None Include="Connected Services\MenuWS\MenuWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarBoletaVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarBoletaVentaResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
     <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.documentoPago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -1007,6 +1031,12 @@
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.lineaOrdenVenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ListarBusquedaLineasOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaMeseroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1017,6 +1047,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosLineasOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosMesas2Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarTodosMesasResponse.datasource">
@@ -1032,6 +1065,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarLineaOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarMesaOrdenVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarMesaResponse.datasource">

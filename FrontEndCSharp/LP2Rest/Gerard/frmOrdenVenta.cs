@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,11 @@ namespace LP2Rest
 {
     public partial class frmOrdenVenta : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         //Utiles
         private mesa mesaSeleccionada;
         private ordenVenta ordenVentaSeleccionada;
@@ -22,6 +28,7 @@ namespace LP2Rest
         private int idMesero;
         private double total;
         private BindingList<VentasWS.lineaOrdenVenta> lineasItems;
+        private VentasWS.lineaOrdenVenta[] lineaItems;
 
         //Estados
         private bool libre;
@@ -32,29 +39,187 @@ namespace LP2Rest
         public ordenVenta OrdenVentaSeleccionada { get => ordenVentaSeleccionada; set => ordenVentaSeleccionada = value; }
         public int IdMesero { get => idMesero; set => idMesero = value; }
         public bool Cerrada { get => cerrada; set => cerrada = value; }
+        public BindingList<lineaOrdenVenta> LineasItems { get => lineasItems; set => lineasItems = value; }
 
         //Conexiones
         VentasWS.VentasWSClient daoVentas;
 
+        private int idMesaOrdenVenta;
+
         public frmOrdenVenta(mesa auxMesa, int auxIdMesero)
         {
-            idMesero = auxIdMesero;
-            daoVentas = new VentasWS.VentasWSClient();
+
             mesaSeleccionada = auxMesa;
-            Libre = true;
-            InitializeComponent();
-            dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-            textBox3.Text = auxMesa.idMesa.ToString();
+            if (auxMesa.disponible == true)
+            {
+                idMesero = auxIdMesero;
+                daoVentas = new VentasWS.VentasWSClient();
+                
+                Libre = true;
+                InitializeComponent();
+                dgvDetalleOrdenVenta.AutoGenerateColumns = false;
+                textBox3.Text = auxMesa.idMesa.ToString();
 
-            btnPreparar.Enabled = false;
+                clienteSeleccionado = new GestPersonasWS.cliente();
+                clienteSeleccionado.idPersona = 78; //Cliente Generico o orden de venta para atenderse sin indicar cliente.
 
-            txtCantidad.Enabled = false;
-            txtDescuento.Enabled = false;
+                txtNombreCliente.Text = "Generico";
+                txtDNICliente.Text = " -";
 
-            btnBuscarCliente.Enabled = true;
-            btnBuscarProducto.Enabled = false;
+                txtCantidad.Enabled = false;
+                txtDescuento.Enabled = false;
 
+                btnBuscarCliente.Enabled = true;
+                btnBuscarProducto.Enabled = false;
+
+                btnAgregarPlato.Enabled = false;
+                btnQuitarPlato.Enabled = false;
+
+                btnDocPago.Enabled = false;
+                btnPreparar.Enabled = false;
+
+                btnNuevo.Enabled = true;
+                btnModificar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                if (auxMesa.ordVen.mesero.idPersona != auxIdMesero)
+                {
+                    MessageBox.Show("Usted no podra modificar esta Orden de Venta. No esta asignado a este servicio.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    idMesero = auxIdMesero;
+
+                    //lblPrueba.Text = auxMesa.ordVen.mesero.idPersona.ToString();
+
+                    daoVentas = new VentasWS.VentasWSClient();
+
+                    mesaSeleccionada = auxMesa;
+                    ordenVentaSeleccionada = mesaSeleccionada.ordVen;
+
+                    ordenVentaSeleccionada.lineasOrdenVenta = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
+
+                    clienteSeleccionado = new GestPersonasWS.cliente();
+                    clienteSeleccionado.idPersona = mesaSeleccionada.ordVen.cliente.idPersona;
+                    clienteSeleccionado.nombre = mesaSeleccionada.ordVen.cliente.nombre;
+                    clienteSeleccionado.apellidoPaterno = mesaSeleccionada.ordVen.cliente.apellidoPaterno;
+                    clienteSeleccionado.DNI = mesaSeleccionada.ordVen.cliente.DNI;
+
+
+
+                    Libre = false;
+
+                    InitializeComponent();
+                    dgvDetalleOrdenVenta.AutoGenerateColumns = false;
+
+                    dgvDetalleOrdenVenta.DataSource = ordenVentaSeleccionada.lineasOrdenVenta;
+
+                    txtDNICliente.Text = clienteSeleccionado.DNI;
+                    txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
+
+                    txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
+
+                    textBox3.Text = auxMesa.idMesa.ToString();
+
+                    txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total);
+
+                    btnDocPago.Enabled = false;
+
+                    btnPreparar.Enabled = false;
+
+                    txtCantidad.Enabled = false;
+                    txtDescuento.Enabled = false;
+
+                    btnBuscarCliente.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
+
+                    btnNuevo.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnEliminar.Enabled = false;
+
+                    btnAgregarPlato.Enabled = false;
+                    btnQuitarPlato.Enabled = false;
+                }
+                else
+                {
+                    //Ver detalle orden de una orden ya abierta
+
+                    idMesero = auxIdMesero;
+                    daoVentas = new VentasWS.VentasWSClient();
+
+                    mesaSeleccionada = auxMesa;
+                    ordenVentaSeleccionada = mesaSeleccionada.ordVen;
+
+                    lineaItems = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
+
+                    //lineasItems = new BindingList<lineaOrdenVenta>();
+                    if(lineaItems == null)
+                    {
+                        lineasItems = new BindingList<lineaOrdenVenta>();
+                    }
+                    else
+                    {
+                        lineasItems = new BindingList<lineaOrdenVenta>(lineaItems.ToList());
+                    }
+                    
+                    
+                    
+                    
+                    clienteSeleccionado = new GestPersonasWS.cliente();
+                    clienteSeleccionado.idPersona = mesaSeleccionada.ordVen.cliente.idPersona;
+                    clienteSeleccionado.nombre = mesaSeleccionada.ordVen.cliente.nombre;
+                    clienteSeleccionado.apellidoPaterno = mesaSeleccionada.ordVen.cliente.apellidoPaterno;
+                    clienteSeleccionado.DNI = mesaSeleccionada.ordVen.cliente.DNI;
+
+
+
+                    Libre = false;
+
+                    InitializeComponent();
+
+                    dgvDetalleOrdenVenta.AutoGenerateColumns = false;
+
+                    if (LineasItems.Count == 0)
+                    {
+                        //lineaItems = new VentasWS.lineaOrdenVenta[50];
+
+                    }
+                    else
+                    {
+                        dgvDetalleOrdenVenta.DataSource = LineasItems;
+                    }
+
+                    
+
+                    
+
+                    txtDNICliente.Text = clienteSeleccionado.DNI;
+                    txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
+
+                    txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
+
+                    textBox3.Text = auxMesa.idMesa.ToString();
+
+                    txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total); 
+
+                    txtCantidad.Enabled = false;
+                    txtDescuento.Enabled = false;
+
+                    btnBuscarCliente.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
+
+                    btnNuevo.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = false;
+
+                    btnAgregarPlato.Enabled = false;
+                    btnQuitarPlato.Enabled = false;
+                }
+
+                
+            }
         }
+            
+
         public frmOrdenVenta(String tipo, VentasWS.ordenVenta ordenVenta)
         {
          
@@ -90,7 +255,8 @@ namespace LP2Rest
         private void button2_Click(object sender, EventArgs e)
         {
             mesaSeleccionada.disponible = true;
-            daoVentas.ModificarMesa(mesaSeleccionada);
+            mesaSeleccionada.ordVen = null;
+            daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
 
             txtCantidad.Enabled = false;
             txtDescuento.Enabled = false;
@@ -122,19 +288,30 @@ namespace LP2Rest
             }
         }
 
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            if (txtDNICliente.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado un cliente", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             total = 0.0;
 
             libre = false;
             mesaSeleccionada.disponible = false;
-            daoVentas.ModificarMesa(mesaSeleccionada);
+            
 
             txtCantidad.Enabled = true;
             txtDescuento.Enabled = true;
 
-            //btnBuscarCliente.Enabled = true;
+            
             btnBuscarProducto.Enabled = true;
                         
 
@@ -144,8 +321,7 @@ namespace LP2Rest
             ordenVentaSeleccionada.fechaSpecified = true;
             ordenVentaSeleccionada.fecha = DateTime.Now;
 
-            //ordenVentaSeleccionada.lineasOrdenVenta = new lineaOrdenVenta[50];
-            lineasItems = new BindingList<lineaOrdenVenta>();
+            LineasItems = new BindingList<lineaOrdenVenta>();
 
             ordenVentaSeleccionada.documentoPago = new documentoPago();
             ordenVentaSeleccionada.documentoPago.total = 0.0;
@@ -170,8 +346,8 @@ namespace LP2Rest
             ordenVentaSeleccionada.mesero = new mesero();
             ordenVentaSeleccionada.mesero.idPersona = IdMesero;
 
-            ordenVentaSeleccionada.cajero = new cajero();
-            ordenVentaSeleccionada.cajero.idPersona = 28;
+
+            ordenVentaSeleccionada.cajero = null;
 
             ordenVentaSeleccionada.cliente = new cliente();
             if(clienteSeleccionado == null)
@@ -185,14 +361,16 @@ namespace LP2Rest
                 ordenVentaSeleccionada.cliente.apellidoPaterno = clienteSeleccionado.apellidoPaterno;
             }
             
-
-
-
             ordenVentaSeleccionada.idOrdenVenta = daoVentas.InsertarOrdenVenta(ordenVentaSeleccionada);
+
+            mesaSeleccionada.ordVen.idOrdenVenta = ordenVentaSeleccionada.idOrdenVenta;
 
             if (ordenVentaSeleccionada.idOrdenVenta > 0)
             {
+
                 MessageBox.Show("Orden de Venta Creada", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
+
             }
             else
             {
@@ -202,6 +380,13 @@ namespace LP2Rest
             txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
 
             txtTotal.Text = String.Format("{0:0.00}", total);
+
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = true;
+
+            btnAgregarPlato.Enabled = true;
+            btnQuitarPlato.Enabled = true;
 
         }
 
@@ -217,8 +402,14 @@ namespace LP2Rest
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            mesaSeleccionada.disponible = true;
-            daoVentas.ModificarMesa(mesaSeleccionada);
+            mesaSeleccionada.disponible = true;   
+           
+
+            daoVentas.EliminarOrdenVenta(mesaSeleccionada.ordVen.idOrdenVenta);
+
+            mesaSeleccionada.ordVen = null;
+
+            daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
 
             txtCantidad.Enabled = false;
             txtDescuento.Enabled = false;
@@ -244,6 +435,12 @@ namespace LP2Rest
             txtDescuento.Text = "";
 
             txtTotal.Text = "";
+
+            dgvDetalleOrdenVenta.DataSource = null;
+
+            btnNuevo.Enabled = true;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
@@ -260,11 +457,27 @@ namespace LP2Rest
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            txtCantidad.Enabled = true;
-            txtDescuento.Enabled = true;
+            if(mesaSeleccionada.disponible == true)
+            {
+                MessageBox.Show("Modificacion Fallida. Orden de Venta Vacia.", "Modificacion Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                txtCantidad.Enabled = true;
+                txtDescuento.Enabled = true;
 
-            btnBuscarCliente.Enabled = true;
-            btnBuscarProducto.Enabled = true;
+                btnBuscarCliente.Enabled = true;
+                btnBuscarProducto.Enabled = true;
+
+                btnAgregarPlato.Enabled = true;
+                btnQuitarPlato.Enabled = true;
+
+                btnNuevo.Enabled = false;
+                btnModificar.Enabled = false;
+                btnEliminar.Enabled = true;
+
+            }
+            
         }
 
         private void btnQuitarPlato_Click(object sender, EventArgs e)
@@ -274,17 +487,29 @@ namespace LP2Rest
                 int auxId = ((lineaOrdenVenta)dgvDetalleOrdenVenta.CurrentRow.DataBoundItem).idLineaOrdenVenta;
 
                 total -= ((lineaOrdenVenta)dgvDetalleOrdenVenta.CurrentRow.DataBoundItem).subtotal;
+                ordenVentaSeleccionada.total = total;
 
                 daoVentas.EliminarLineaOrdenVenta(auxId);
-                lineasItems.Remove((lineaOrdenVenta)dgvDetalleOrdenVenta.CurrentRow.DataBoundItem);
+                LineasItems.Remove((lineaOrdenVenta)dgvDetalleOrdenVenta.CurrentRow.DataBoundItem);
 
 
-                dgvDetalleOrdenVenta.DataSource = lineasItems;
+                dgvDetalleOrdenVenta.DataSource = LineasItems;
 
                 txtTotal.Text = String.Format("{0:0.00}", total);
 
+                int resultado = daoVentas.ModificarOrdenVenta(ordenVentaSeleccionada);
 
-                MessageBox.Show("Borrado Exitoso.", "Borrado de Linea Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (resultado == 0)
+                {
+                    MessageBox.Show("Error al agregar item.", "Item vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Borrado Exitoso.", "Borrado de Linea Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+                
 
             }
             else
@@ -342,10 +567,16 @@ namespace LP2Rest
                 auxLnOrdenVenta.idLineaOrdenVenta = daoVentas.InsertarLineaOrdenVenta(auxLnOrdenVenta);
 
                 lineasItems.Add(auxLnOrdenVenta);
+                
 
                 ordenVentaSeleccionada.total += auxLnOrdenVenta.subtotal;
 
-                daoVentas.ModificarOrdenVenta(ordenVentaSeleccionada);
+                int resultado = daoVentas.ModificarOrdenVenta(ordenVentaSeleccionada);
+
+                if(resultado == 0)
+                {
+                    MessageBox.Show("Error al actualizar Orden de Venta.", "Error Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 dgvDetalleOrdenVenta.DataSource = lineasItems;
 
@@ -356,7 +587,6 @@ namespace LP2Rest
                 txtPrecioUnitario.Text = "";
                 txtCantidad.Text = "";
                 txtDescuento.Text = "";
-
 
             }
             else
@@ -374,13 +604,15 @@ namespace LP2Rest
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[0].Value = auxLinea.itemVenta.nombre;
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[1].Value = auxLinea.cantidadVendida.ToString();
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[2].Value = String.Format("{0:0.00}", auxLinea.itemVenta.precio);
-                dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxLinea.subtotal);
+                dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxLinea.descuento.ToString()) + "%";
+                dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[4].Value = String.Format("{0:0.00}", auxLinea.montoDescontado.ToString());
+                dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[5].Value = String.Format("{0:0.00}", auxLinea.subtotal);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
-            
+
         }
 
         private void btnPreparar_Click(object sender, EventArgs e)
@@ -394,6 +626,19 @@ namespace LP2Rest
             {
                 MessageBox.Show("Hay problema", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void dgvDetalleOrdenVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

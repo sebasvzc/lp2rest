@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlmacenWS.wsdl" MetadataType="Wsdl" ID="655ab8be-bf41-42ce-a230-5d336cd25e14" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" />
-    <MetadataFile FileName="AlmacenWS.xsd" MetadataType="Schema" ID="ff3e6a6c-12e3-4e85-83e3-1c3f0f18c9f7" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?xsd=1" />
+    <MetadataFile FileName="AlmacenWS.wsdl" MetadataType="Wsdl" ID="89c2028e-6f63-46e8-be28-e5b91b520250" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" />
+    <MetadataFile FileName="AlmacenWS.xsd" MetadataType="Schema" ID="f197288f-8c47-4d6d-b315-29555a90845d" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

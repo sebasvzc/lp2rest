@@ -50,7 +50,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnVerOc = new System.Windows.Forms.Button();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,7 +210,7 @@
             this.dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Numero,
+            this.Codigo,
             this.Estado,
             this.NombreCompleto,
             this.Teléfono,
@@ -275,12 +275,12 @@
             this.btnVerOc.UseVisualStyleBackColor = false;
             this.btnVerOc.Click += new System.EventHandler(this.btnVerOc_Click);
             // 
-            // Numero
+            // Codigo
             // 
-            this.Numero.HeaderText = "Numero";
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 200;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 170;
             // 
             // Estado
             // 
@@ -293,21 +293,21 @@
             this.NombreCompleto.HeaderText = "Cliente";
             this.NombreCompleto.Name = "NombreCompleto";
             this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 350;
+            this.NombreCompleto.Width = 328;
             // 
             // Teléfono
             // 
             this.Teléfono.HeaderText = "Fecha";
             this.Teléfono.Name = "Teléfono";
             this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 263;
+            this.Teléfono.Width = 195;
             // 
             // email
             // 
             this.email.HeaderText = "Total";
             this.email.Name = "email";
             this.email.ReadOnly = true;
-            this.email.Width = 180;
+            this.email.Width = 150;
             // 
             // frmListaOrdenVentaMesero
             // 
@@ -362,7 +362,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnVerOc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;

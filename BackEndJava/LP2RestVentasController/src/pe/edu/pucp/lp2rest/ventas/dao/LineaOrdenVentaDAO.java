@@ -13,4 +13,5 @@ public interface LineaOrdenVentaDAO {
     int eliminar(int idLineaOrdenVenta);
     ArrayList<LineaOrdenVenta> listarTodos();
     ArrayList<LineaOrdenVenta> listarLineasPorId(int idOrdenVenta);
+    ArrayList<LineaOrdenVenta> listarBusqueda(int idOrdenVenta);
 }

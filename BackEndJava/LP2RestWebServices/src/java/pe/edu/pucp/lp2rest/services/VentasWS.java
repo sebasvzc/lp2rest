@@ -103,6 +103,28 @@ public class VentasWS {
         return ordenesVenta;
     }
     
+    @WebMethod(operationName = "listarBusquedaOrdenesVentaMesero")
+    public ArrayList<OrdenVenta> listarBusquedaOrdenesVentaMesero(  @WebParam(name = "idMesero") int idMesero, 
+                                                                    @WebParam(name = "nombre") String nombre, 
+                                                                    @WebParam(name = "apellido")String apellido, 
+                                                                    @WebParam(name = "fechaIni")String fechaIni, 
+                                                                    @WebParam(name = "fechaFin")String fechaFin, 
+                                                                    @WebParam(name = "sueldoIni")double sueldoIni, 
+                                                                    @WebParam(name = "sueldoFin")double sueldoFin) {
+        ArrayList<OrdenVenta> ordenesVenta = null;
+        try{
+            SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            Date fechaI = formateador.parse(fechaIni);
+            Date fechaF = formateador.parse(fechaFin);
+            ordenesVenta = daoOrdenVenta.listarBusquedaMesero(idMesero,nombre, apellido, fechaI, fechaF, sueldoIni, sueldoFin);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ordenesVenta;
+    }
+    
+    
+    
     @WebMethod(operationName = "InsertarOrdenVenta")
     public int InsertarOrdenDeVenta(@WebParam(name = "ordenDeVenta") OrdenVenta ordenVenta) {
         int resultado = 0;
@@ -147,12 +169,24 @@ public class VentasWS {
         return resultado;
     }
     
+     
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "listarTodosMesas")
     public ArrayList<Mesa> listarTodosMesas() {
         ArrayList<Mesa> mesas = null;
         try{
             mesas = daoMesa.listarTodos();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return mesas;
+    }
+    
+    @WebMethod(operationName = "listarTodosMesas2")
+    public ArrayList<Mesa> listarTodosMesas2() {
+        ArrayList<Mesa> mesas = null;
+        try{
+            mesas = daoMesa.listarTodos2();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -175,6 +209,17 @@ public class VentasWS {
         int resultado = 0;
         try{
             resultado = daoMesa.modificar(mesa);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "ModificarMesaOrdenVenta")
+    public int ModificarMesaOrdenVenta(@WebParam(name = "mesa") Mesa mesa) {
+        int resultado = 0;
+        try{
+            resultado = daoMesa.modificarOrdenVenta(mesa);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -246,6 +291,17 @@ public class VentasWS {
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+    
+    @WebMethod(operationName = "ListarBusquedaLineasOrdenVenta")
+    public ArrayList<LineaOrdenVenta> ListarBusquedaLineasOrdenVenta(@WebParam(name = "idLineaOrdenVenta") int idLineaOrdenVenta) {
+        ArrayList<LineaOrdenVenta> lineasOrdenVenta = null;
+        try{
+            lineasOrdenVenta = daoLineaOrdenVenta.listarBusqueda(idLineaOrdenVenta);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return lineasOrdenVenta;
     }
     
     

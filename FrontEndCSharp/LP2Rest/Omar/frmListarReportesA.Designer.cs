@@ -31,7 +31,6 @@
             this.btnCrearReportePlatos = new System.Windows.Forms.Button();
             this.btnCrearReporteVentas = new System.Windows.Forms.Button();
             this.btnCrearReporteAsistencias = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -39,74 +38,76 @@
             // 
             // btnCrearReportePlatos
             // 
-            this.btnCrearReportePlatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnCrearReportePlatos.Location = new System.Drawing.Point(215, 183);
+            this.btnCrearReportePlatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnCrearReportePlatos.FlatAppearance.BorderSize = 0;
+            this.btnCrearReportePlatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearReportePlatos.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCrearReportePlatos.ForeColor = System.Drawing.Color.White;
+            this.btnCrearReportePlatos.Location = new System.Drawing.Point(401, 411);
             this.btnCrearReportePlatos.Name = "btnCrearReportePlatos";
-            this.btnCrearReportePlatos.Size = new System.Drawing.Size(106, 23);
+            this.btnCrearReportePlatos.Size = new System.Drawing.Size(187, 40);
             this.btnCrearReportePlatos.TabIndex = 87;
-            this.btnCrearReportePlatos.Text = "Crear";
-            this.btnCrearReportePlatos.UseVisualStyleBackColor = true;
+            this.btnCrearReportePlatos.Text = "Generar";
+            this.btnCrearReportePlatos.UseVisualStyleBackColor = false;
             this.btnCrearReportePlatos.Click += new System.EventHandler(this.btnCrearReportePlatos_Click);
             // 
             // btnCrearReporteVentas
             // 
-            this.btnCrearReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnCrearReporteVentas.Location = new System.Drawing.Point(215, 136);
+            this.btnCrearReporteVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnCrearReporteVentas.FlatAppearance.BorderSize = 0;
+            this.btnCrearReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearReporteVentas.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCrearReporteVentas.ForeColor = System.Drawing.Color.White;
+            this.btnCrearReporteVentas.Location = new System.Drawing.Point(401, 262);
             this.btnCrearReporteVentas.Name = "btnCrearReporteVentas";
-            this.btnCrearReporteVentas.Size = new System.Drawing.Size(106, 23);
+            this.btnCrearReporteVentas.Size = new System.Drawing.Size(187, 40);
             this.btnCrearReporteVentas.TabIndex = 86;
-            this.btnCrearReporteVentas.Text = "Crear";
-            this.btnCrearReporteVentas.UseVisualStyleBackColor = true;
+            this.btnCrearReporteVentas.Text = "Generar";
+            this.btnCrearReporteVentas.UseVisualStyleBackColor = false;
             this.btnCrearReporteVentas.Click += new System.EventHandler(this.btnCrearReporteVentas_Click);
             // 
             // btnCrearReporteAsistencias
             // 
-            this.btnCrearReporteAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnCrearReporteAsistencias.Location = new System.Drawing.Point(215, 82);
+            this.btnCrearReporteAsistencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnCrearReporteAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnCrearReporteAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearReporteAsistencias.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCrearReporteAsistencias.ForeColor = System.Drawing.Color.White;
+            this.btnCrearReporteAsistencias.Location = new System.Drawing.Point(401, 115);
             this.btnCrearReporteAsistencias.Name = "btnCrearReporteAsistencias";
-            this.btnCrearReporteAsistencias.Size = new System.Drawing.Size(106, 23);
+            this.btnCrearReporteAsistencias.Size = new System.Drawing.Size(187, 40);
             this.btnCrearReporteAsistencias.TabIndex = 85;
-            this.btnCrearReporteAsistencias.Text = "Crear";
-            this.btnCrearReporteAsistencias.UseVisualStyleBackColor = true;
+            this.btnCrearReporteAsistencias.Text = "Generar";
+            this.btnCrearReporteAsistencias.UseVisualStyleBackColor = false;
             this.btnCrearReporteAsistencias.Click += new System.EventHandler(this.btnCrearReporteAsistencias_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 16);
-            this.label3.TabIndex = 84;
-            this.label3.Text = "Listado de Reportes";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 183);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(392, 371);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 15);
+            this.label2.Size = new System.Drawing.Size(206, 24);
             this.label2.TabIndex = 83;
             this.label2.Text = "Reporte de Platos";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 136);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(385, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 15);
+            this.label1.Size = new System.Drawing.Size(213, 24);
             this.label1.TabIndex = 82;
             this.label1.Text = "Reporte de Ventas";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(27, 85);
+            this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Location = new System.Drawing.Point(365, 75);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(154, 15);
+            this.lblTitulo.Size = new System.Drawing.Size(262, 24);
             this.lblTitulo.TabIndex = 81;
             this.lblTitulo.Text = "Reporte de Asistencias";
             // 
@@ -118,7 +119,6 @@
             this.Controls.Add(this.btnCrearReportePlatos);
             this.Controls.Add(this.btnCrearReporteVentas);
             this.Controls.Add(this.btnCrearReporteAsistencias);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
@@ -134,7 +134,6 @@
         private System.Windows.Forms.Button btnCrearReportePlatos;
         private System.Windows.Forms.Button btnCrearReporteVentas;
         private System.Windows.Forms.Button btnCrearReporteAsistencias;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;

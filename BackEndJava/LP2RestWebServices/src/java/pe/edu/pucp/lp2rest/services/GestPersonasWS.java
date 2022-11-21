@@ -563,6 +563,22 @@ public class GestPersonasWS {
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "modificarAsistenciaSalida")
+    public int modificarAsistenciaSalida(@WebParam(name = "id_asistencia")int id_asistencia,
+            @WebParam(name = "fecha_fin") String fecha_fin,
+            @WebParam(name = "hora_fin")String hora_fin){
+        
+        int resultado = 0;
+        try {
+            resultado = daoAsistencia.modificarAsistencia(id_asistencia,fecha_fin,hora_fin);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    
 
     @WebMethod(operationName = "filtrarPorDni")
     public Cliente filtrarPorDni(@WebParam(name = "dni") String dni) {
@@ -673,6 +689,17 @@ public class GestPersonasWS {
         return lsEmpleados;
     }
 
+    @WebMethod(operationName = "ListarEmpleadosPorNombre")
+    public ArrayList<Empleado> ListarEmpleadosPorNombre(@WebParam(name = "nombre") String nombre) {
+        ArrayList<Empleado> lsEmpleados = null;
+        try {
+            lsEmpleados = daoEmpleado.listarPorNombre(nombre);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return lsEmpleados;
+    }
+    
     @WebMethod(operationName = "ListarBusquedaEmpleados")
     public ArrayList<Empleado> ListarBusquedaEmpleados(
             @WebParam(name = "nombreEmp") String nombre,

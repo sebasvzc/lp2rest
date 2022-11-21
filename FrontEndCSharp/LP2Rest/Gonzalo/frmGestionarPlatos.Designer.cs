@@ -33,11 +33,13 @@
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.txtIdPlato = new System.Windows.Forms.TextBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtGanancia = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,6 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.label12 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
@@ -59,24 +63,14 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
-            this.tlsBuscar = new System.Windows.Forms.ToolStrip();
-
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tlsBuscar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.tlsBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarProducto
@@ -129,12 +123,52 @@
             this.dgvInsumos.TabIndex = 61;
             this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
             // 
+            // SKU
+            // 
+            this.SKU.FillWeight = 75F;
+            this.SKU.HeaderText = "SKU";
+            this.SKU.MinimumWidth = 6;
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            this.SKU.Width = 75;
+            // 
+            // NombreInsumo
+            // 
+            this.NombreInsumo.HeaderText = "Nombre";
+            this.NombreInsumo.MinimumWidth = 6;
+            this.NombreInsumo.Name = "NombreInsumo";
+            this.NombreInsumo.ReadOnly = true;
+            this.NombreInsumo.Width = 210;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 70F;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 70;
+            // 
+            // Costo
+            // 
+            this.Costo.FillWeight = 105F;
+            this.Costo.HeaderText = "Costo Unitario";
+            this.Costo.MinimumWidth = 6;
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            this.Costo.Width = 105;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
             this.gbPedido.Controls.Add(this.txtIdPlato);
-            this.gbPedido.Controls.Add(this.txtStock);
-            this.gbPedido.Controls.Add(this.label10);
             this.gbPedido.Controls.Add(this.txtGanancia);
             this.gbPedido.Controls.Add(this.txtPrecioVenta);
             this.gbPedido.Controls.Add(this.label7);
@@ -160,34 +194,16 @@
             this.txtIdPlato.Size = new System.Drawing.Size(123, 20);
             this.txtIdPlato.TabIndex = 145;
             // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(93, 133);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(123, 20);
-            this.txtStock.TabIndex = 144;
-            this.txtStock.ReadOnly = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 135);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 13);
-            this.label10.TabIndex = 143;
-            this.label10.Text = "Stock:";
-            // 
             // txtGanancia
             // 
-            this.txtGanancia.Location = new System.Drawing.Point(93, 166);
+            this.txtGanancia.Location = new System.Drawing.Point(93, 129);
             this.txtGanancia.Name = "txtGanancia";
             this.txtGanancia.Size = new System.Drawing.Size(123, 20);
             this.txtGanancia.TabIndex = 142;
-            this.txtGanancia.ReadOnly = true;
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(93, 197);
+            this.txtPrecioVenta.Location = new System.Drawing.Point(93, 160);
             this.txtPrecioVenta.Multiline = true;
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.ReadOnly = true;
@@ -197,7 +213,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 166);
+            this.label7.Location = new System.Drawing.Point(26, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 13);
             this.label7.TabIndex = 141;
@@ -206,7 +222,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 197);
+            this.label6.Location = new System.Drawing.Point(13, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 14;
@@ -270,10 +286,32 @@
             this.groupBox1.Controls.Add(this.dgvInsumos);
             this.groupBox1.Location = new System.Drawing.Point(262, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(644, 293);
+            this.groupBox1.Size = new System.Drawing.Size(644, 307);
             this.groupBox1.TabIndex = 137;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Insumos:";
+            // 
+            // tlsBuscar
+            // 
+            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
+            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnBuscar});
+            this.tlsBuscar.Location = new System.Drawing.Point(406, 23);
+            this.tlsBuscar.Name = "tlsBuscar";
+            this.tlsBuscar.Size = new System.Drawing.Size(26, 25);
+            this.tlsBuscar.TabIndex = 151;
+            this.tlsBuscar.Text = "toolStrip2";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnBuscar.Text = "btnBuscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label12
             // 
@@ -374,11 +412,10 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
-            this.btnEliminar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(262, 360);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(236, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(162, 27);
             this.toolStrip1.TabIndex = 134;
             this.toolStrip1.Text = "tsMenu";
             // 
@@ -391,14 +428,6 @@
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = global::LP2Rest.Properties.Resources.trash_40429;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(74, 24);
-            this.btnEliminar.Text = "&Eliminar";
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
@@ -408,75 +437,11 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // SKU
-            // 
-            this.SKU.FillWeight = 75F;
-            this.SKU.HeaderText = "SKU";
-            this.SKU.MinimumWidth = 6;
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            this.SKU.Width = 75;
-            // 
-            // NombreInsumo
-            // 
-            this.NombreInsumo.HeaderText = "Nombre";
-            this.NombreInsumo.MinimumWidth = 6;
-            this.NombreInsumo.Name = "NombreInsumo";
-            this.NombreInsumo.ReadOnly = true;
-            this.NombreInsumo.Width = 210;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 70F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 70;
-            // 
-            // Costo
-            // 
-            this.Costo.FillWeight = 105F;
-            this.Costo.HeaderText = "Costo Unitario";
-            this.Costo.MinimumWidth = 6;
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            this.Costo.Width = 105;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            // 
-            // tlsBuscar
-            // 
-            this.tlsBuscar.Dock = System.Windows.Forms.DockStyle.None;
-            this.tlsBuscar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tlsBuscar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBuscar});
-            this.tlsBuscar.Location = new System.Drawing.Point(406, 23);
-            this.tlsBuscar.Name = "tlsBuscar";
-            this.tlsBuscar.Size = new System.Drawing.Size(57, 25);
-            this.tlsBuscar.TabIndex = 151;
-            this.tlsBuscar.Text = "toolStrip2";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
-            this.btnBuscar.Text = "btnBuscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 386);
+            this.ClientSize = new System.Drawing.Size(928, 396);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
@@ -490,12 +455,12 @@
             this.gbPedido.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tlsBuscar.ResumeLayout(false);
+            this.tlsBuscar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.tlsBuscar.ResumeLayout(false);
-            this.tlsBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,12 +485,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtGanancia;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminarProducto;
         private System.Windows.Forms.Button btnAgregarProducto;

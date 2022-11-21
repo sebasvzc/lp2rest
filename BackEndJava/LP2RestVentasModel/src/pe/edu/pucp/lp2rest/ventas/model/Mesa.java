@@ -5,12 +5,14 @@ import pe.edu.pucp.lp2rest.gestpersonas.model.Reserva;
 
 public class Mesa {
 
+
     //atributos
     private int idMesa;
     private int capacidadMaxima;
     private boolean disponible;
     private ArrayList<OrdenVenta> ordenesVenta;
     private Reserva reserva;
+    private OrdenVenta ordVen;
 
     // constructor
     public Mesa(int capacidadMaxima, boolean disponible) {
@@ -62,6 +64,15 @@ public class Mesa {
     public void setReserva(Reserva reserva) {
         this.reserva = reserva;
     }
+
+    public OrdenVenta getOrdVen() {
+        return ordVen;
+    }
+
+    public void setOrdVen(OrdenVenta ordVen) {
+        this.ordVen = ordVen;
+    }
+
 
     // metodos
     public void cambiarEstadoMesa() {
