@@ -15,8 +15,7 @@ namespace LP2Rest
     {
         //Conexiones
         private VentasWS.VentasWSClient daoVentas;
-
-        private VentasWS.ordenVenta auxOrdenVenta;
+        private VentasWS.ordenVenta ordenVentaSeleccionado;
 
         //UTILES
 
@@ -31,6 +30,16 @@ namespace LP2Rest
             InitializeComponent();
 
             dgvVentas.AutoGenerateColumns = false;
+
+        }
+        public frmListaOrdenVentaMesero(String m)
+        {
+            daoVentas = new VentasWS.VentasWSClient();
+
+            InitializeComponent();
+
+            dgvVentas.AutoGenerateColumns = false;
+
 
         }
 
@@ -77,26 +86,25 @@ namespace LP2Rest
         {
             VentasWS.ordenVenta auxVenta = (VentasWS.ordenVenta)dgvVentas.Rows[e.RowIndex].DataBoundItem;
             dgvVentas.Rows[e.RowIndex].Cells[0].Value = auxVenta.idOrdenVenta.ToString();
-            dgvVentas.Rows[e.RowIndex].Cells[1].Value = auxVenta.cliente.nombre + " " + auxVenta.cliente.apellidoPaterno;
-            dgvVentas.Rows[e.RowIndex].Cells[2].Value = auxVenta.fecha.ToShortDateString();
-            dgvVentas.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxVenta.total);
+            dgvVentas.Rows[e.RowIndex].Cells[1].Value = auxVenta.estado;
+            dgvVentas.Rows[e.RowIndex].Cells[2].Value = auxVenta.cliente.nombre + " " + auxVenta.cliente.apellidoPaterno;
+            dgvVentas.Rows[e.RowIndex].Cells[3].Value = auxVenta.fecha.ToShortDateString();
+            dgvVentas.Rows[e.RowIndex].Cells[4].Value = String.Format("{0:0.00}", auxVenta.total);
         }
 
-        private void btnVerOrdenVenta_Click(object sender, EventArgs e)
+        private void btnVerOc_Click(object sender, EventArgs e)
         {
-            if (dgvVentas.SelectedRows.Count == 1)
+            if (dgvVentas.CurrentRow != null)
             {
-                auxOrdenVenta = (ordenVenta)dgvVentas.CurrentRow.DataBoundItem;
+                ordenVentaSeleccionado = (VentasWS.ordenVenta)dgvVentas.CurrentRow.DataBoundItem;
+                frmOrdenVenta frm = new frmOrdenVenta("Preparar", ordenVentaSeleccionado);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    btnBuscar.PerformClick();
+                }
 
-                frmOrdenVentaMesero formOrdenVenta = new frmOrdenVentaMesero(auxOrdenVenta, idMeseroActual);
-
-                formOrdenVenta.ShowDialog();
-
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado una Orden de Venta", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

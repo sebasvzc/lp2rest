@@ -213,6 +213,7 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
                 ordenVenta.getCliente().setDNI(rs.getString("DNI") );
                 ordenVenta.getCliente().setNombre(rs.getString("nombres"));
                 ordenVenta.getCliente().setApellidoPaterno(rs.getString("apellidos"));
+                ordenVenta.setEstado(rs.getString("estado"));
                 ordenesVenta.add(ordenVenta);
             }
         } catch (Exception ex) {

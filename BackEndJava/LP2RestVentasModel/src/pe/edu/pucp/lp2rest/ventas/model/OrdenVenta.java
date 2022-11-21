@@ -21,7 +21,7 @@ public class OrdenVenta {
     private Mesero mesero;
     private Mesa mesa;
     private Cliente cliente;
-
+    private String estado;
     //constructor
     public OrdenVenta() {
 
@@ -114,6 +114,20 @@ public class OrdenVenta {
     }
 
     public void quitarLineaVenta() {
+    }
+
+    /**
+     * @return the estado
+     */
+    public String getEstado() {
+        return estado;
+    }
+
+    /**
+     * @param estado the estado to set
+     */
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }
