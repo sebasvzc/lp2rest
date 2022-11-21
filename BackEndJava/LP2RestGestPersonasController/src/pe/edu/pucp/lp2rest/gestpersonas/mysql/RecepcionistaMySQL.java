@@ -8,19 +8,18 @@ import pe.edu.pucp.lp2rest.config.DBManager;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.RecepcionistaDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Recepcionista;
 
-
-public class RecepcionistaMySQL implements RecepcionistaDAO{
+public class RecepcionistaMySQL implements RecepcionistaDAO {
 
     private Connection con;
     private CallableStatement cs;
     private ResultSet rs;
-    
+
     @Override
     public int insertar(Recepcionista recepcionista) {
         int resultado = 0;
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_RECEPCIONISTA(?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_RECEPCIONISTA(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_recepcionista", java.sql.Types.INTEGER);
             cs.setString("_email", recepcionista.getEmail());
             cs.setString("_direccion", recepcionista.getDireccion());
@@ -32,13 +31,29 @@ public class RecepcionistaMySQL implements RecepcionistaDAO{
             cs.setDouble("_sueldo", recepcionista.getSueldo());
             cs.setDate("_fecha_contratacion", new java.sql.Date(recepcionista.getFechaContratacion().getTime()));
             cs.setInt("_numero_horas_mensuales", recepcionista.getNumeroHorasMensuales());
-            cs.executeUpdate(); 
+            //
+            if (recepcionista.getFoto() != null) {
+                cs.setBytes("_foto", recepcionista.getFoto());
+            } else {
+                cs.setBytes("_foto", null);
+            }
+            if (recepcionista.getArchivoCv() != null) {
+                cs.setBytes("_archivo_cv", recepcionista.getArchivoCv());
+            } else {
+                cs.setBytes("_archivo_cv", null);
+            }
+            //
+            cs.executeUpdate();
             recepcionista.setIdPersona(cs.getInt("_id_recepcionista"));
             resultado = recepcionista.getIdPersona();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return resultado;
     }
@@ -46,7 +61,7 @@ public class RecepcionistaMySQL implements RecepcionistaDAO{
     @Override
     public int modificar(Recepcionista recepcionista) {
         int resultado = 0;
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call MODIFICAR_RECEPCIONISTA(?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_recepcionista", recepcionista.getIdPersona());
@@ -61,10 +76,14 @@ public class RecepcionistaMySQL implements RecepcionistaDAO{
             cs.setDate("_fecha_contratacion", new java.sql.Date(recepcionista.getFechaContratacion().getTime()));
             cs.setInt("_numero_horas_mensuales", recepcionista.getNumeroHorasMensuales());
             resultado = cs.executeUpdate();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return resultado;
     }
@@ -72,15 +91,19 @@ public class RecepcionistaMySQL implements RecepcionistaDAO{
     @Override
     public int eliminar(int idRecepcionista) {
         int resultado = 0;
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call ELIMINAR_RECEPCIONISTA(?)}");
-            cs.setInt("_id_recepcionista", idRecepcionista);            
+            cs.setInt("_id_recepcionista", idRecepcionista);
             resultado = cs.executeUpdate();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return resultado;
     }
@@ -88,11 +111,11 @@ public class RecepcionistaMySQL implements RecepcionistaDAO{
     @Override
     public ArrayList<Recepcionista> listarTodas() {
         ArrayList<Recepcionista> recepcionistas = new ArrayList<>();
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("call LISTAR_TODOS_RECEPCIONISTAS()");
             rs = cs.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Recepcionista recepcionista = new Recepcionista();
                 recepcionista.setIdPersona(rs.getInt("id_persona"));
                 recepcionista.setNombre(rs.getString("nombres"));
@@ -107,14 +130,16 @@ public class RecepcionistaMySQL implements RecepcionistaDAO{
                 recepcionista.setNumeroHorasMensuales(rs.getInt("numero_horas_mensuales"));
                 recepcionistas.add(recepcionista);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
         }
         return recepcionistas;
     }
-    
+
 }

@@ -8,19 +8,18 @@ import pe.edu.pucp.lp2rest.config.DBManager;
 import pe.edu.pucp.lp2rest.gestpersonas.dao.ChefDAO;
 import pe.edu.pucp.lp2rest.gestpersonas.model.Chef;
 
-
-public class ChefMySQL implements ChefDAO{
+public class ChefMySQL implements ChefDAO {
 
     private Connection con;
     private CallableStatement cs;
     private ResultSet rs;
-    
+
     @Override
     public int insertar(Chef chef) {
         int resultado = 0;
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_CHEF(?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_CHEF(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_chef", java.sql.Types.INTEGER);
             cs.setString("_email", chef.getEmail());
             cs.setString("_direccion", chef.getDireccion());
@@ -33,13 +32,29 @@ public class ChefMySQL implements ChefDAO{
             cs.setDate("_fecha_contratacion", new java.sql.Date(chef.getFechaContratacion().getTime()));
             cs.setInt("_numero_horas_mensuales", chef.getNumeroHorasMensuales());
             cs.setString("_especialidad", chef.getEspecialidad());
-             cs.executeUpdate(); 
+            //
+            if (chef.getFoto() != null) {
+                cs.setBytes("_foto", chef.getFoto());
+            } else {
+                cs.setBytes("_foto", null);
+            }
+            if (chef.getArchivoCv() != null) {
+                cs.setBytes("_archivo_cv", chef.getArchivoCv());
+            } else {
+                cs.setBytes("_archivo_cv", null);
+            }
+            //
+            cs.executeUpdate();
             chef.setIdPersona(cs.getInt("_id_chef"));
             resultado = chef.getIdPersona();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return resultado;
     }
@@ -47,7 +62,7 @@ public class ChefMySQL implements ChefDAO{
     @Override
     public int modificar(Chef chef) {
         int resultado = 0;
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call MODIFICAR_CHEF(?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_chef", chef.getIdPersona());
@@ -63,10 +78,14 @@ public class ChefMySQL implements ChefDAO{
             cs.setInt("_numero_horas_mensuales", chef.getNumeroHorasMensuales());
             cs.setString("_especialidad", chef.getEspecialidad());
             resultado = cs.executeUpdate();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return resultado;
     }
@@ -74,15 +93,19 @@ public class ChefMySQL implements ChefDAO{
     @Override
     public int eliminar(int idChef) {
         int resultado = 0;
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call ELIMINAR_CHEF(?)}");
-            cs.setInt("_id_chef", idChef);            
+            cs.setInt("_id_chef", idChef);
             resultado = cs.executeUpdate();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return resultado;
     }
@@ -90,11 +113,11 @@ public class ChefMySQL implements ChefDAO{
     @Override
     public ArrayList<Chef> listarTodas() {
         ArrayList<Chef> chefs = new ArrayList<>();
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("call LISTAR_TODOS_CHEFS()");
             rs = cs.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Chef chef = new Chef();
                 chef.setIdPersona(rs.getInt("id_persona"));
                 chef.setNombre(rs.getString("nombres"));
@@ -110,14 +133,16 @@ public class ChefMySQL implements ChefDAO{
                 chef.setEspecialidad(rs.getString("especialidad"));
                 chefs.add(chef);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
         }
         return chefs;
     }
-    
+
 }

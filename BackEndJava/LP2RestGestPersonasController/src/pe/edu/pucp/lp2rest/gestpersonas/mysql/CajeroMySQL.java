@@ -19,7 +19,7 @@ public class CajeroMySQL implements CajeroDAO{
         int resultado = 0;
         try{
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_CAJERO(?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_CAJERO(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_cajero", java.sql.Types.INTEGER);
             cs.setString("_email", cajero.getEmail());
             cs.setString("_direccion", cajero.getDireccion());
@@ -32,6 +32,18 @@ public class CajeroMySQL implements CajeroDAO{
             cs.setDate("_fecha_contratacion", new java.sql.Date(cajero.getFechaContratacion().getTime()));
             cs.setInt("_numero_horas_mensuales", cajero.getNumeroHorasMensuales());
             cs.setInt("_nroCaja", cajero.getNroCaja());
+            //
+            if (cajero.getFoto() != null) {
+                cs.setBytes("_foto", cajero.getFoto());
+            } else {
+                cs.setBytes("_foto", null);
+            }
+            if (cajero.getArchivoCv() != null) {
+                cs.setBytes("_archivo_cv", cajero.getArchivoCv());
+            } else {
+                cs.setBytes("_archivo_cv", null);
+            }
+            //
             cs.executeUpdate(); 
             cajero.setIdPersona(cs.getInt("_id_cajero"));
             resultado = cajero.getIdPersona();

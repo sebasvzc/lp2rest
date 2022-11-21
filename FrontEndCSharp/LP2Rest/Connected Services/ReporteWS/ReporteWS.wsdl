@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2RestWebServices/ReporteWS?xsd=1" namespace="http://services.lp2rest.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="generarBoletaVenta">
-    <part name="parameters" element="tns:generarBoletaVenta" />
-  </message>
-  <message name="generarBoletaVentaResponse">
-    <part name="parameters" element="tns:generarBoletaVentaResponse" />
-  </message>
   <message name="generarReporteAsistencia">
     <part name="parameters" element="tns:generarReporteAsistencia" />
   </message>
   <message name="generarReporteAsistenciaResponse">
     <part name="parameters" element="tns:generarReporteAsistenciaResponse" />
   </message>
+  <message name="generarBoletaVenta">
+    <part name="parameters" element="tns:generarBoletaVenta" />
+  </message>
+  <message name="generarBoletaVentaResponse">
+    <part name="parameters" element="tns:generarBoletaVentaResponse" />
+  </message>
   <portType name="ReporteWS">
-    <operation name="generarBoletaVenta">
-      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest" message="tns:generarBoletaVenta" />
-      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse" message="tns:generarBoletaVentaResponse" />
-    </operation>
     <operation name="generarReporteAsistencia">
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest" message="tns:generarReporteAsistencia" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse" message="tns:generarReporteAsistenciaResponse" />
     </operation>
+    <operation name="generarBoletaVenta">
+      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest" message="tns:generarBoletaVenta" />
+      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse" message="tns:generarBoletaVentaResponse" />
+    </operation>
   </portType>
   <binding name="ReporteWSPortBinding" type="tns:ReporteWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="generarBoletaVenta">
+    <operation name="generarReporteAsistencia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="generarReporteAsistencia">
+    <operation name="generarBoletaVenta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

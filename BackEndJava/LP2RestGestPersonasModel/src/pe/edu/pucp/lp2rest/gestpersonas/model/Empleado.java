@@ -14,13 +14,30 @@ public class Empleado extends PersonaNatural {
     private boolean activo;
     private Date fechaContratacion;
     private int numeroHorasMensuales;
+    private byte[] foto;
+    private byte[] archivoCv;
 
-    
     //constructor
     public Empleado() {
     }
 
     //getters y setters 
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    public byte[] getArchivoCv() {
+        return archivoCv;
+    }
+
+    public void setArchivoCv(byte[] archivoCv) {
+        this.archivoCv = archivoCv;
+    }
+
     public int getNumeroHorasMensuales() {
         return numeroHorasMensuales;
     }
