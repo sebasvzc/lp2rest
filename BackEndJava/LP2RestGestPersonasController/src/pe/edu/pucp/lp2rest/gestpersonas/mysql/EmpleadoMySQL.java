@@ -22,8 +22,8 @@ import pe.edu.pucp.lp2rest.gestpersonas.model.Recepcionista;
  *
  * @author Usuario
  */
-public class EmpleadoMySQL implements EmpleadoDAO{
-
+public class EmpleadoMySQL implements EmpleadoDAO {
+    
     private Connection con;
     private CallableStatement cs;
     private ResultSet rs;
@@ -31,18 +31,18 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     @Override
     public ArrayList<Empleado> listarTodos() {
         ArrayList<Empleado> lsEmpleados = new ArrayList<>();
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("call LISTAR_TODOS_EMPLEADOS()");
             rs = cs.executeQuery();
             String cargoEmp;
-            while(rs.next()){
+            while (rs.next()) {
                 Empleado auxEmp;
                 cargoEmp = rs.getString("cargoEmpleado");
-                switch(cargoEmp){
+                switch (cargoEmp) {
                     case "Administrador":
                         auxEmp = new Administrador();
-                        Administrador auxAdmin = (Administrador)auxEmp;
+                        Administrador auxAdmin = (Administrador) auxEmp;
                         auxAdmin.setActivo(true);
                         break;
                     case "Recepcionista":
@@ -56,7 +56,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                         break;
                     case "Mesero":
                         auxEmp = new Mesero();
-                        break;                     
+                        break;                    
                     default:
                         auxEmp = new Empleado();
                         break;
@@ -73,23 +73,26 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 auxEmp.setSueldo(rs.getDouble("sueldoEmpleado"));
                 auxEmp.setFechaContratacion(rs.getDate("fechacempleado"));
                 auxEmp.setNumeroHorasMensuales(rs.getInt("horasmensualesEmpleado"));
-              
                 
                 lsEmpleados.add(auxEmp);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return lsEmpleados;
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
+    
     @Override
     public ArrayList<Empleado> listarBusqueda(String nombre, String apellido, String dni, String cargo, Date fechaIni, Date fechaFin, double sueldoIni, double sueldoFin) {
         ArrayList<Empleado> lsEmpleados = new ArrayList<>();
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("call LISTAR_BUSQUEDA_EMPLEADOS(?,?,?,?,?,?,?,?)");
             
@@ -107,10 +110,10 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             
             rs = cs.executeQuery();
             String cargoEmp;
-            while(rs.next()){
+            while (rs.next()) {
                 Empleado auxEmp;
                 cargoEmp = rs.getString("cargoEmpleado");
-                switch(cargoEmp){
+                switch (cargoEmp) {
                     case "Administrador":
                         auxEmp = new Administrador();
                         break;
@@ -125,7 +128,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                         break;
                     case "Mesero":
                         auxEmp = new Mesero();
-                        break;                     
+                        break;                    
                     default:
                         auxEmp = new Empleado();
                         break;
@@ -142,36 +145,43 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 auxEmp.setSueldo(rs.getDouble("sueldoEmpleado"));
                 auxEmp.setFechaContratacion(rs.getDate("fechacempleado"));
                 auxEmp.setNumeroHorasMensuales(rs.getInt("horasmensualesEmpleado"));
-              
-                
+
+                //Modificacion para agregar retorno de foto y archivoCV 21/11/2022 16:13
+                auxEmp.setFoto(rs.getBytes("fotoEmpleado"));
+                auxEmp.setArchivoCv(rs.getBytes("archivoCvEmpleado"));
+                //
                 lsEmpleados.add(auxEmp);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return lsEmpleados;
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
+    
     @Override
     public ArrayList<Empleado> listarPorNombre(String nombre) {
         
         ArrayList<Empleado> lsEmpleados = new ArrayList<>();
-        try{
+        try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("call LISTAR_EMPLEADOS_X_NOMBRE(?)");
             cs.setString("_nombre", nombre);
             rs = cs.executeQuery();
             String cargoEmp;
-            while(rs.next()){
+            while (rs.next()) {
                 Empleado auxEmp;
                 cargoEmp = rs.getString("cargoEmpleado");
-                switch(cargoEmp){
+                switch (cargoEmp) {
                     case "Administrador":
                         auxEmp = new Administrador();
-                        Administrador auxAdmin = (Administrador)auxEmp;
+                        Administrador auxAdmin = (Administrador) auxEmp;
                         auxAdmin.setActivo(true);
                         break;
                     case "Recepcionista":
@@ -185,7 +195,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                         break;
                     case "Mesero":
                         auxEmp = new Mesero();
-                        break;                     
+                        break;                    
                     default:
                         auxEmp = new Empleado();
                         break;
@@ -202,18 +212,20 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 auxEmp.setSueldo(rs.getDouble("sueldoEmpleado"));
                 auxEmp.setFechaContratacion(rs.getDate("fechacempleado"));
                 auxEmp.setNumeroHorasMensuales(rs.getInt("horasmensualesEmpleado"));
-              
                 
                 lsEmpleados.add(auxEmp);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
         }
         return lsEmpleados;
-    
-    
+        
     }
     
 }

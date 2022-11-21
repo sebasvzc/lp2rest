@@ -17,17 +17,17 @@
   <message name="generarBoletaVentaResponse">
     <part name="parameters" element="tns:generarBoletaVentaResponse" />
   </message>
-  <message name="generarReportePlatos">
-    <part name="parameters" element="tns:generarReportePlatos" />
-  </message>
-  <message name="generarReportePlatosResponse">
-    <part name="parameters" element="tns:generarReportePlatosResponse" />
-  </message>
   <message name="generarReporteOrdenVentas">
     <part name="parameters" element="tns:generarReporteOrdenVentas" />
   </message>
   <message name="generarReporteOrdenVentasResponse">
     <part name="parameters" element="tns:generarReporteOrdenVentasResponse" />
+  </message>
+  <message name="generarReportePlatos">
+    <part name="parameters" element="tns:generarReportePlatos" />
+  </message>
+  <message name="generarReportePlatosResponse">
+    <part name="parameters" element="tns:generarReportePlatosResponse" />
   </message>
   <portType name="ReporteWS">
     <operation name="generarReporteAsistencia">
@@ -38,13 +38,13 @@
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest" message="tns:generarBoletaVenta" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse" message="tns:generarBoletaVentaResponse" />
     </operation>
-    <operation name="generarReportePlatos">
-      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest" message="tns:generarReportePlatos" />
-      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse" message="tns:generarReportePlatosResponse" />
-    </operation>
     <operation name="generarReporteOrdenVentas">
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasRequest" message="tns:generarReporteOrdenVentas" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasResponse" message="tns:generarReporteOrdenVentasResponse" />
+    </operation>
+    <operation name="generarReportePlatos">
+      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest" message="tns:generarReportePlatos" />
+      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse" message="tns:generarReportePlatosResponse" />
     </operation>
   </portType>
   <binding name="ReporteWSPortBinding" type="tns:ReporteWS">
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="generarReportePlatos">
+    <operation name="generarReporteOrdenVentas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="generarReporteOrdenVentas">
+    <operation name="generarReportePlatos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
