@@ -55,8 +55,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbActivo = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblTrabajo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -317,26 +315,6 @@
             this.label8.Text = "Apellido Paterno:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbActivo
-            // 
-            this.cbActivo.BackColor = System.Drawing.SystemColors.Window;
-            this.cbActivo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.cbActivo.FormattingEnabled = true;
-            this.cbActivo.Location = new System.Drawing.Point(62, 234);
-            this.cbActivo.Name = "cbActivo";
-            this.cbActivo.Size = new System.Drawing.Size(246, 33);
-            this.cbActivo.TabIndex = 54;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label9.Location = new System.Drawing.Point(62, 208);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(246, 23);
-            this.label9.TabIndex = 53;
-            this.label9.Text = "Activo:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblTrabajo
             // 
             this.lblTrabajo.Font = new System.Drawing.Font("MS UI Gothic", 18F);
@@ -430,8 +408,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificarVer);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.cbActivo);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtApellidoPaterno);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -481,8 +457,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbActivo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTrabajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
