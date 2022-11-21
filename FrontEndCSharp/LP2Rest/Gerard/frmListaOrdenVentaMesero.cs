@@ -31,6 +31,7 @@ namespace LP2Rest
 
             dgvVentas.AutoGenerateColumns = false;
 
+
         }
         public frmListaOrdenVentaMesero(String m)
         {

@@ -287,6 +287,76 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
                 ordenVenta.getCliente().setDNI(rs.getString("DNI") );
                 ordenVenta.getCliente().setNombre(rs.getString("nombres"));
                 ordenVenta.getCliente().setApellidoPaterno(rs.getString("apellidos"));
+                ordenVenta.setEstado(rs.getString("estado"));
+                ordenesVenta.add(ordenVenta);
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return ordenesVenta;
+    }
+
+    @Override
+    public ArrayList<OrdenVenta> listarBusquedaAdministrador(String nombre, String apellido, Date fechaIni, Date fechaFin, double sueldoIni, double sueldoFin) {
+        ArrayList<OrdenVenta> ordenesVenta = new ArrayList<>();
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call LISTAR_BUSQUEDA_ORDEN_VENTA_ADMIN(?,?,?,?,?,?)}");
+            
+            cs.setString("_cliNom", nombre);
+            cs.setString("_cliApe", apellido);
+            
+            cs.setDate("_fechaIni", new java.sql.Date(fechaIni.getTime()));
+            cs.setDate("_fechaFin", new java.sql.Date(fechaFin.getTime()));
+            
+            cs.setDouble("_sueldoIni", sueldoIni);
+            cs.setDouble("_sueldoFin", sueldoFin);
+            
+            rs = cs.executeQuery();
+            while (rs.next()) {
+                OrdenVenta ordenVenta = new OrdenVenta();
+                ordenVenta.setDocumentoPago(new DocumentoPago());
+                ordenVenta.setMesa(new Mesa());
+                
+                ordenVenta.setIdOrdenVenta(rs.getInt("id_ordenVenta"));
+                ordenVenta.setTotal(rs.getDouble("total"));
+                ordenVenta.setPagado(rs.getBoolean("pagado"));
+                ordenVenta.setFecha(rs.getDate("fecha"));
+                ordenVenta.getDocumentoPago().setIdDocumentoPago(rs.getInt("fid_documentoDePago"));                
+                ordenVenta.getMesa().setIdMesa(rs.getInt("fid_mesa"));
+                ordenVenta.setEstado(rs.getString("estado"));
+                
+                ordenVenta.setMesero(new Mesero());
+                ordenVenta.getMesero().setIdPersona(rs.getInt("fid_mesero"));
+                ordenVenta.getMesero().setDNI(rs.getString("DNIMesero") );
+                ordenVenta.getMesero().setNombre(rs.getString("nombresMesero") );
+                ordenVenta.getMesero().setApellidoPaterno(rs.getString("apellidosMesero") );
+                
+                
+                int auxIdCajero = rs.getInt("fid_cajero");
+                if(auxIdCajero != 0){
+                    ordenVenta.setCajero(new Cajero());
+                    ordenVenta.getCajero().setIdPersona(auxIdCajero);
+                    ordenVenta.getCajero().setDNI(rs.getString("DNIMesero") );
+                    ordenVenta.getCajero().setNombre(rs.getString("nombresMesero") );
+                    ordenVenta.getCajero().setApellidoPaterno(rs.getString("apellidosMesero") );
+                    
+                }else{
+                    ordenVenta.setCajero( null );
+                }
+                
+                ordenVenta.setCliente(new Cliente());           
+                ordenVenta.getCliente().setIdPersona( rs.getInt("fid_cliente") );
+                ordenVenta.getCliente().setDNI(rs.getString("DNICliente") );
+                ordenVenta.getCliente().setNombre(rs.getString("nombresCliente"));
+                ordenVenta.getCliente().setApellidoPaterno(rs.getString("apellidosCliente"));
+                
                 ordenesVenta.add(ordenVenta);
             }
         } catch (Exception ex) {

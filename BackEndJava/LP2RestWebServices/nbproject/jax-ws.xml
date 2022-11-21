@@ -4,17 +4,17 @@
     <service name="AlmacenWS">
       <implementation-class>pe.edu.pucp.lp2rest.services.AlmacenWS</implementation-class>
     </service>
-    <service name="GestPersonasWS">
-      <implementation-class>pe.edu.pucp.lp2rest.services.GestPersonasWS</implementation-class>
-    </service>
-    <service name="VentasWS">
-      <implementation-class>pe.edu.pucp.lp2rest.services.VentasWS</implementation-class>
-    </service>
     <service name="MenuWS">
       <implementation-class>pe.edu.pucp.lp2rest.services.MenuWS</implementation-class>
     </service>
     <service name="ReporteWS">
       <implementation-class>pe.edu.pucp.lp2rest.services.ReporteWS</implementation-class>
+    </service>
+    <service name="GestPersonasWS">
+      <implementation-class>pe.edu.pucp.lp2rest.services.GestPersonasWS</implementation-class>
+    </service>
+    <service name="VentasWS">
+      <implementation-class>pe.edu.pucp.lp2rest.services.VentasWS</implementation-class>
     </service>
   </services>
   <clients/>

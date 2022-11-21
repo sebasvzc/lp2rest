@@ -213,11 +213,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 129);
+            this.label7.Location = new System.Drawing.Point(11, 132);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 141;
-            this.label7.Text = "Ganancia: ";
+            this.label7.Text = "Ganancia (%): ";
             // 
             // label6
             // 
