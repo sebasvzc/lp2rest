@@ -8,6 +8,14 @@
         <servlet-name>ReporteBoletaVenta</servlet-name>
         <servlet-class>pe.edu.pucp.lp2rest.servlet.ReporteBoletaVenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReporteVentas</servlet-name>
+        <servlet-class>pe.edu.pucp.lp2rest.servlet.ReporteVentas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReportePlatos</servlet-name>
+        <servlet-class>pe.edu.pucp.lp2rest.servlet.ReportePlatos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReporteAsistencias</servlet-name>
         <url-pattern>/ReporteAsistencias</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>ReporteBoletaVenta</servlet-name>
         <url-pattern>/ReporteBoletaVenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteVentas</servlet-name>
+        <url-pattern>/ReporteVentas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReportePlatos</servlet-name>
+        <url-pattern>/ReportePlatos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

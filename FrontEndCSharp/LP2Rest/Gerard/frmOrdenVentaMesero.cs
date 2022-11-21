@@ -1,4 +1,6 @@
-﻿using LP2Rest.Gonzalo;
+﻿using LP2Rest.GestPersonasWS;
+using LP2Rest.Gonzalo;
+using LP2Rest.Omar;
 using LP2Rest.VentasWS;
 using System;
 using System.Collections.Generic;
@@ -79,7 +81,12 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            int id_ordenVentaInput = ordenVentaSeleccionada.idOrdenVenta;
+            frmGenerarBoletaVenta formGenerarBoletaVenta = new frmGenerarBoletaVenta(id_ordenVentaInput);
+            if (formGenerarBoletaVenta.ShowDialog() == DialogResult.OK)
+            {
+               
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

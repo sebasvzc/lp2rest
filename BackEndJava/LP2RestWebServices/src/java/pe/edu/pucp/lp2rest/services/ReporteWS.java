@@ -88,4 +88,67 @@ public class ReporteWS {
         }
         return reporteBytes;
     }
+    
+    
+    @WebMethod(operationName = "generarReporteOrdenVentas")
+    public byte[] generarReporteOrdenVentas(@WebParam(name = "fecha_ini") String fecha_ini,
+            @WebParam(name = "fecha_fin") String fecha_fin) {
+        byte[] reporteBytes = null;
+        try{
+            con = DBManager.getInstance().getConnection();
+            JasperReport reporte = (JasperReport) JRLoader.loadObject(
+               ReporteWS.class.getResource("/pe/edu/pucp/lp2rest/report/ReporteVentas.jasper")
+            );
+            
+            String rutaSubReporteCajero = ReporteAsistencias.class.getResource(
+                    "/pe/edu/pucp/lp2rest/report/ReporteGraficoVentasCajero.jasper").getPath();
+            String rutaSubReporteCliente = ReporteAsistencias.class.getResource(
+                    "/pe/edu/pucp/lp2rest/report/ReporteGraficoVentasClientes.jasper").getPath();
+            String rutaSubReporteMesero = ReporteAsistencias.class.getResource(
+                    "/pe/edu/pucp/lp2rest/report/ReporteGraficoVentasMesero.jasper").getPath();
+            
+            
+            String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
+            Image imagen = (new ImageIcon(rutaImagen)).getImage();
+            HashMap parametros = new HashMap();
+            parametros.put("ImagenLogoEmpresa", imagen);
+            parametros.put("SubReporteGraficoCajero",rutaSubReporteCajero);
+            parametros.put("SubReporteGraficoCliente",rutaSubReporteCliente);
+            parametros.put("SubReporteGraficoMesero",rutaSubReporteMesero);
+            parametros.put("fecha_ini",fecha_ini);
+            parametros.put("fecha_fin",fecha_fin);
+
+            JasperPrint jp = JasperFillManager.fillReport(reporte, parametros, con);
+            con.close();
+            reporteBytes = JasperExportManager.exportReportToPdf(jp);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return reporteBytes;
+    }
+    
+    @WebMethod(operationName = "generarReportePlatos")
+    public byte[] generarReportePlatos(@WebParam(name = "fecha_ini") String fecha_ini,
+            @WebParam(name = "fecha_fin") String fecha_fin) {
+        byte[] reporteBytes = null;
+        try{
+            con = DBManager.getInstance().getConnection();
+            JasperReport reporte = (JasperReport) JRLoader.loadObject(
+               ReporteWS.class.getResource("/pe/edu/pucp/lp2rest/report/ReportePlatos.jasper")
+            );
+            String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
+            Image imagen = (new ImageIcon(rutaImagen)).getImage();
+            HashMap parametros = new HashMap();
+            parametros.put("ImagenLogoEmpresa", imagen);
+            parametros.put("fecha_ini",fecha_ini);
+            parametros.put("fecha_fin",fecha_fin);
+
+            JasperPrint jp = JasperFillManager.fillReport(reporte, parametros, con);
+            con.close();
+            reporteBytes = JasperExportManager.exportReportToPdf(jp);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return reporteBytes;
+    }
 }

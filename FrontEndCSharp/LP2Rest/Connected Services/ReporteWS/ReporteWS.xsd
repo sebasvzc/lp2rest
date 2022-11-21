@@ -4,6 +4,10 @@
   <xs:element name="generarBoletaVentaResponse" type="tns:generarBoletaVentaResponse" />
   <xs:element name="generarReporteAsistencia" type="tns:generarReporteAsistencia" />
   <xs:element name="generarReporteAsistenciaResponse" type="tns:generarReporteAsistenciaResponse" />
+  <xs:element name="generarReporteOrdenVentas" type="tns:generarReporteOrdenVentas" />
+  <xs:element name="generarReporteOrdenVentasResponse" type="tns:generarReporteOrdenVentasResponse" />
+  <xs:element name="generarReportePlatos" type="tns:generarReportePlatos" />
+  <xs:element name="generarReportePlatosResponse" type="tns:generarReportePlatosResponse" />
   <xs:complexType name="generarReporteAsistencia">
     <xs:sequence>
       <xs:element name="id_cuentaUsuario" type="xs:int" />
@@ -16,12 +20,34 @@
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="generarReportePlatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha_ini" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePlatosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="generarBoletaVenta">
     <xs:sequence>
       <xs:element name="id_orden_venta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="generarBoletaVentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteOrdenVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha_ini" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_fin" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteOrdenVentasResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
