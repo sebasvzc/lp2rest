@@ -131,7 +131,6 @@ public class MesaMySQL implements MesaDAO {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call MODIFICAR_MESA_2(?,?,?,?)}");
             cs.setInt("_id_mesa", mesa.getIdMesa());
-            cs.setInt("_capacidad_maxima", mesa.getCapacidadMaxima());
             cs.setBoolean("_disponible", mesa.isDisponible());
             if(mesa.getOrdVen() == null){
                 cs.setNull("_fid_ordenVenta", java.sql.Types.INTEGER );

@@ -58,7 +58,7 @@
             this.lblTrabajo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnModificarVer = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
@@ -355,20 +355,20 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // btnModificar
+            // btnModificarVer
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(550, 701);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(115, 41);
-            this.btnModificar.TabIndex = 105;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificarVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnModificarVer.FlatAppearance.BorderSize = 0;
+            this.btnModificarVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarVer.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnModificarVer.ForeColor = System.Drawing.Color.White;
+            this.btnModificarVer.Location = new System.Drawing.Point(520, 701);
+            this.btnModificarVer.Name = "btnModificarVer";
+            this.btnModificarVer.Size = new System.Drawing.Size(145, 41);
+            this.btnModificarVer.TabIndex = 105;
+            this.btnModificarVer.Text = "Modificar/Ver";
+            this.btnModificarVer.UseVisualStyleBackColor = false;
+            this.btnModificarVer.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -377,7 +377,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(429, 701);
+            this.btnNuevo.Location = new System.Drawing.Point(399, 701);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(115, 41);
             this.btnNuevo.TabIndex = 104;
@@ -406,7 +406,7 @@
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnModificarVer);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.txtApellidoPaterno);
             this.Controls.Add(this.label8);
@@ -465,7 +465,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnModificarVer;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnSeleccionar;
     }

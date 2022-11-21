@@ -1,6 +1,6 @@
 ﻿namespace LP2Rest
 {
-    partial class frmListarOrdenesVentaA
+    partial class frmListarOrdenesVentaChef
     {
         /// <summary>
         /// Required designer variable.

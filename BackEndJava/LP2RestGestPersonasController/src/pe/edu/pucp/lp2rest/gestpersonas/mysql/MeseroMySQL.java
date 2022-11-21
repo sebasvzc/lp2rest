@@ -20,7 +20,7 @@ public class MeseroMySQL implements MeseroDAO{
         int resultado = 0;
         try{
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call INSERTAR_MESERO(?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_MESERO(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_mesero", java.sql.Types.INTEGER);
             cs.setString("_email", mesero.getEmail());
             cs.setString("_direccion", mesero.getDireccion());
@@ -32,6 +32,18 @@ public class MeseroMySQL implements MeseroDAO{
             cs.setDouble("_sueldo", mesero.getSueldo());
             cs.setDate("_fecha_contratacion", new java.sql.Date(mesero.getFechaContratacion().getTime()));
             cs.setInt("_numero_horas_mensuales", mesero.getNumeroHorasMensuales());
+            //
+            if (mesero.getFoto() != null) {
+                cs.setBytes("_foto", mesero.getFoto());
+            } else {
+                cs.setBytes("_foto", null);
+            }
+            if (mesero.getArchivoCv() != null) {
+                cs.setBytes("_archivo_cv", mesero.getArchivoCv());
+            } else {
+                cs.setBytes("_archivo_cv", null);
+            }
+            //
             cs.executeUpdate(); 
             mesero.setIdPersona(cs.getInt("_id_mesero"));
             resultado = mesero.getIdPersona();

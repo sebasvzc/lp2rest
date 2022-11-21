@@ -123,6 +123,25 @@ public class VentasWS {
         return ordenesVenta;
     }
     
+    @WebMethod(operationName = "listarBusquedaOrdenesVentaAdministrador")
+    public ArrayList<OrdenVenta> listarBusquedaOrdenesVentaAdministrador(   @WebParam(name = "nombre") String nombre, 
+                                                                            @WebParam(name = "apellido")String apellido, 
+                                                                            @WebParam(name = "fechaIni")String fechaIni, 
+                                                                            @WebParam(name = "fechaFin")String fechaFin, 
+                                                                            @WebParam(name = "sueldoIni")double sueldoIni, 
+                                                                            @WebParam(name = "sueldoFin")double sueldoFin) {
+        ArrayList<OrdenVenta> ordenesVenta = null;
+        try{
+            SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            Date fechaI = formateador.parse(fechaIni);
+            Date fechaF = formateador.parse(fechaFin);
+            ordenesVenta = daoOrdenVenta.listarBusquedaAdministrador(nombre, apellido, fechaI, fechaF, sueldoIni, sueldoFin);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return ordenesVenta;
+    }
+    
     
     
     @WebMethod(operationName = "InsertarOrdenVenta")
@@ -243,6 +262,17 @@ public class VentasWS {
         ArrayList<LineaOrdenVenta> lineasOrdenVenta = null;
         try{
             lineasOrdenVenta = daoLineaOrdenVenta.listarTodos();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return lineasOrdenVenta;
+    }
+    
+    @WebMethod(operationName = "listarLineasOrdenVentaPorId")
+    public ArrayList<LineaOrdenVenta> listarLineasOrdenVentaPorId(@WebParam(name = "idLineaOrdenVenta") int idOrdenVenta) {
+        ArrayList<LineaOrdenVenta> lineasOrdenVenta = null;
+        try{
+            lineasOrdenVenta = daoLineaOrdenVenta.listarLineasPorId(idOrdenVenta);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
