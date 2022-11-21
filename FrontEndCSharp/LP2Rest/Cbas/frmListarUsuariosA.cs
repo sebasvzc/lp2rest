@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.GestPersonasWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,17 @@ namespace LP2Rest
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
             _empleadoSeleccionado = new GestPersonasWS.empleado();
             dgvEmpleados.AutoGenerateColumns = false;
+
+            List<string> listaCargos = new List<string>()
+                    {
+                        "Administrador",
+                        "Recepcionista",
+                        "Chef",
+                        "Cajero",
+                        "Mesero"
+                    };
+
+            cboArea.DataSource = listaCargos;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -27,7 +39,38 @@ namespace LP2Rest
             //dgvEmpleados.DataSource = daoGestPersonas.ListarBusquedaEmpleados(txtNombre.Text, txtApellidoPaterno.Text, txtDNI.Text,
             //  cboArea.SelectedValue.ToString(), dtpFechaDesde.Value.ToString(), dtpFechaHasta.Value.ToString(), 
             // Double.Parse(txtSueldoDesde.Text), Double.Parse(txtSueldaHasta.Text));
-            dgvEmpleados.DataSource = daoGestPersonas.ListarTodosEmpleados();
+            //dgvEmpleados.DataSource = daoGestPersonas.ListarTodosEmpleados();
+            DateTime auxFechaIni = new DateTime();
+            DateTime auxFechaFin = new DateTime();
+
+            auxFechaIni = dtpFechaDesde.Value;
+            auxFechaFin = dtpFechaHasta.Value;
+
+            double auxSI, auxSF;
+
+            if (txtSueldoDesde.Text == "") { auxSI = 0.0; } else { auxSI = Double.Parse(txtSueldoDesde.Text); }
+            if (txtSueldaHasta.Text == "") { auxSF = 99999999.0; } else { auxSF = Double.Parse(txtSueldaHasta.Text); }
+            ;
+
+
+            GestPersonasWS.empleado[] listaEmps = daoGestPersonas.ListarBusquedaEmpleados(
+                                                                                            txtNombre.Text,
+                                                                                            txtApellidoPaterno.Text,
+                                                                                            txtDNI.Text,
+                                                                                            cboArea.SelectedValue.ToString(),
+                                                                                            auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"),
+                                                                                            auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"),
+                                                                                            auxSI,
+                                                                                            auxSF
+                                                                                            );
+            if (listaEmps != null)
+            {
+                dgvEmpleados.DataSource = listaEmps;
+            }
+            else
+            {
+                MessageBox.Show("No se ha encontrado empleados", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void dgvEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -59,6 +102,11 @@ namespace LP2Rest
             //else {
             //    dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "No definido";
             //}
+            if (empleado is administrador) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Administrador";
+            if (empleado is recepcionista) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Recepcionista";
+            if (empleado is chef) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Chef";
+            if (empleado is cajero) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Cajero";
+            if (empleado is mesero) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Mesero";
             dgvEmpleados.Rows[e.RowIndex].Cells[3].Value = empleado.telefono;
             dgvEmpleados.Rows[e.RowIndex].Cells[4].Value = empleado.email;
 
