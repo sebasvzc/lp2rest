@@ -85,7 +85,7 @@ namespace LP2Rest
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             itemVenta.nombre = txtNombrePlato.Text;
-            itemVenta.precio = Double.Parse(txtGanancia.Text) + Double.Parse(txtTotal.Text);
+            itemVenta.precio = Double.Parse(txtGanancia.Text) * Double.Parse(txtTotal.Text) / 100 + Double.Parse(txtTotal.Text);
             itemVenta.stock = 0;
             itemVenta.tipoItem = (MenuWS.tipoItem)cbCategoria.SelectedItem;
             itemVenta.disponible = 1; //Para que no se pueda pedir el plato cuando recien se ha creado

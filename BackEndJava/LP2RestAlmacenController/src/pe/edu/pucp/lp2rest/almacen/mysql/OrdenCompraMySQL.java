@@ -202,6 +202,7 @@ public class OrdenCompraMySQL implements OrdenCompraDAO {
                 compra.setProveedor(new Proveedor());
                 compra.getProveedor().setIdPersona(rs.getInt("fid_id_proveedor"));
                 compra.getProveedor().setRazonSocial(rs.getString("razon_social"));
+                compra.getProveedor().setNombreComercial(rs.getString("nombre_comercial"));
                 compra.setDescripcion(rs.getString("descripcion"));
                 compra.setFechaHoraCreacion(rs.getDate("fecha_registro"));
                 compra.setFechaHoraCumplimiento(rs.getDate("fecha_cumplimiento"));

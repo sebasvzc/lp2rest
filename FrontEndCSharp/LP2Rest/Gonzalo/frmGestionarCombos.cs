@@ -70,7 +70,7 @@ namespace LP2Rest.Gonzalo
         {
             _itemVenta = new MenuWS.itemVenta();
             _itemVenta.nombre = txtNombre.Text;
-            _itemVenta.precio = Double.Parse(txtGanancia.Text) + Double.Parse(txtTotal.Text);
+            _itemVenta.precio = Double.Parse(txtGanancia.Text) * Double.Parse(txtTotal.Text) / 100 + Double.Parse(txtTotal.Text);
             _itemVenta.stock = 0;
             _itemVenta.tipoItem = new MenuWS.tipoItem();
             _itemVenta.tipoItem.idTipoItem = 3;
@@ -150,5 +150,6 @@ namespace LP2Rest.Gonzalo
         {
             this.DialogResult = DialogResult.OK;
         }
+
     }
 }

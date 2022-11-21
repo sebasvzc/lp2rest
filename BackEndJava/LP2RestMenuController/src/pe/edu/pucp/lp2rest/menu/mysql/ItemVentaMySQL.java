@@ -202,6 +202,9 @@ public class ItemVentaMySQL implements ItemVentaDAO {
             }
             
             resultado = itemVenta.getIdItemVenta();
+            cs = con.prepareCall("{call ACTUALIZAR_STOCK_COMBOS(?)}");
+            cs.setInt("_fid_combo", itemVenta.getIdItemVenta());
+            cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         } finally {
