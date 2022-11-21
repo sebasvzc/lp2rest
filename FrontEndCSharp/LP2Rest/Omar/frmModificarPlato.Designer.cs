@@ -314,20 +314,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 114);
+            this.label7.Location = new System.Drawing.Point(13, 114);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 141;
-            this.label7.Text = "Ganancia: ";
+            this.label7.Text = "Ganancia (%): ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 140);
+            this.label6.Location = new System.Drawing.Point(7, 140);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Descuento:";
+            this.label6.Text = "Descuento (%):";
             // 
             // txtNombrePlato
             // 

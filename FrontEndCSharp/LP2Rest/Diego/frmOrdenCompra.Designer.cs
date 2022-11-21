@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscarProveedor = new System.Windows.Forms.Button();
             this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -81,9 +80,9 @@
             // btnBuscarProveedor
             // 
             this.btnBuscarProveedor.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(846, 163);
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(708, 163);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(175, 34);
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(313, 34);
             this.btnBuscarProveedor.TabIndex = 203;
             this.btnBuscarProveedor.Text = "Buscar Proveedor";
             this.btnBuscarProveedor.UseVisualStyleBackColor = true;
@@ -286,16 +285,16 @@
             // 
             this.txtProveedor.BackColor = System.Drawing.SystemColors.Control;
             this.txtProveedor.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtProveedor.Location = new System.Drawing.Point(846, 122);
+            this.txtProveedor.Location = new System.Drawing.Point(708, 122);
             this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Size = new System.Drawing.Size(175, 32);
+            this.txtProveedor.Size = new System.Drawing.Size(313, 32);
             this.txtProveedor.TabIndex = 181;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label7.Location = new System.Drawing.Point(720, 125);
+            this.label7.Location = new System.Drawing.Point(577, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 23);
             this.label7.TabIndex = 182;
@@ -350,14 +349,6 @@
             // 
             this.dgvLineaOrdenCompra.AllowUserToAddRows = false;
             this.dgvLineaOrdenCompra.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLineaOrdenCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLineaOrdenCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLineaOrdenCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SKU,
@@ -467,6 +458,7 @@
             this.button2.Size = new System.Drawing.Size(25, 25);
             this.button2.TabIndex = 28;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
