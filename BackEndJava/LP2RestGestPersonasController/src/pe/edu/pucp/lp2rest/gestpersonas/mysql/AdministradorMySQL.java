@@ -94,7 +94,7 @@ public class AdministradorMySQL implements AdministradorDAO {
         try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call ELIMINAR_ADMINISTRADOR(?)}");
-            cs.setInt("_id_mesero", idAdministrador);
+            cs.setInt("_id_administrador", idAdministrador);
             resultado = cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

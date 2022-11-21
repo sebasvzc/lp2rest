@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace LP2Rest
 {
@@ -21,7 +22,11 @@ namespace LP2Rest
         private string _rutaArchivoPDF;
         private byte[] _archivoPDF;
         private byte[] _foto;
-        private GestPersonasWS.empleado _empleado;
+        private GestPersonasWS.empleado _empleadoSeleccionado;
+        private int _accion = 0;
+
+        public empleado EmpleadoSeleccionado { get => _empleadoSeleccionado; set => _empleadoSeleccionado = value; }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -32,6 +37,54 @@ namespace LP2Rest
         {
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
             InitializeComponent();
+
+        }
+        public frmGestionUsuariosA(GestPersonasWS.empleado emp)
+        {
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
+            InitializeComponent();
+            _empleadoSeleccionado = emp;
+            _accion = 1;
+            if (_empleadoSeleccionado != null)
+            {
+
+                txtNombre.Text = _empleadoSeleccionado.nombre;
+                txtApellidoPaterno.Text = _empleadoSeleccionado.apellidoPaterno;
+                txtDNI.Text = _empleadoSeleccionado.DNI;
+                txtDireccion.Text = _empleadoSeleccionado.direccion;
+                txtTelefono.Text = _empleadoSeleccionado.telefono;
+                txtEmail.Text = _empleadoSeleccionado.email;
+                if (_empleadoSeleccionado is administrador)
+                {
+                    cboArea.SelectedIndex = 0;
+                }
+                else if (_empleadoSeleccionado is mesero)
+                {
+                    cboArea.SelectedIndex = 1;
+                }
+                else if (_empleadoSeleccionado is chef)
+                {
+                    cboArea.SelectedIndex = 4;
+
+                }
+                else if (_empleadoSeleccionado is recepcionista)
+                {
+                    cboArea.SelectedIndex = 3;
+                }
+                else
+                {
+                    cboArea.SelectedIndex = 2;
+
+                }
+
+                txtSueldo.Text = _empleadoSeleccionado.sueldo.ToString();
+                txtID.Text = _empleadoSeleccionado.idPersona.ToString();
+                if (_empleadoSeleccionado.foto != null)
+                {
+                    MemoryStream ms = new MemoryStream(_empleadoSeleccionado.foto);
+                    pbFoto.Image = new Bitmap(ms);
+                }
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -68,133 +121,185 @@ namespace LP2Rest
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
             int resultado = 0;
             char tipoEmpleado;
+
+
             if (cboArea.SelectedItem.ToString() == "Administrador")
             {
-                _empleado = new GestPersonasWS.administrador();
-                _empleado.DNI = txtDNI.Text;
-                _empleado.nombre = txtNombre.Text;
-                _empleado.apellidoPaterno = txtApellidoPaterno.Text;
-                _empleado.email = txtEmail.Text;
-                _empleado.direccion = txtDireccion.Text;
-                _empleado.telefono = txtTelefono.Text;
-                _empleado.sueldo = Double.Parse(txtSueldo.Text);
-                _empleado.fechaContratacion = dtpFechaContratacion.Value;
-                _empleado.fechaContratacionSpecified = true;
-                _empleado.fechaNacimiento = dtpFechaContratacion.Value;
-                _empleado.fechaNacimientoSpecified = true;
-                _empleado.numeroHorasMensuales = 0;
-                _empleado.activo = true;
-                _empleado.foto = _foto;
-                _empleado.archivoCv = _archivoPDF;
-                resultado = daoGestPersonas.InsertarAdministrador((administrador)_empleado);
+                EmpleadoSeleccionado = new GestPersonasWS.administrador();
+                EmpleadoSeleccionado.DNI = txtDNI.Text;
+                EmpleadoSeleccionado.nombre = txtNombre.Text;
+                EmpleadoSeleccionado.apellidoPaterno = txtApellidoPaterno.Text;
+                EmpleadoSeleccionado.email = txtEmail.Text;
+                EmpleadoSeleccionado.direccion = txtDireccion.Text;
+                EmpleadoSeleccionado.telefono = txtTelefono.Text;
+                EmpleadoSeleccionado.sueldo = Double.Parse(txtSueldo.Text);
+                EmpleadoSeleccionado.fechaContratacion = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaContratacionSpecified = true;
+                EmpleadoSeleccionado.fechaNacimiento = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaNacimientoSpecified = true;
+                EmpleadoSeleccionado.numeroHorasMensuales = 0;
+                EmpleadoSeleccionado.activo = true;
+                EmpleadoSeleccionado.foto = _foto;
+                EmpleadoSeleccionado.archivoCv = _archivoPDF;
+                if (_accion == 0)
+                    resultado = daoGestPersonas.InsertarAdministrador((administrador)EmpleadoSeleccionado);
+                else
+                {
+                    EmpleadoSeleccionado.idPersona = Int32.Parse(txtID.Text);
+                    resultado = daoGestPersonas.ModificarAdministrador((administrador)EmpleadoSeleccionado);
+                }
                 tipoEmpleado = 'A';
 
             }
             else if (cboArea.SelectedItem.ToString() == "Cajero")
             {
-                _empleado = new GestPersonasWS.cajero();
-                _empleado.DNI = txtDNI.Text;
-                _empleado.nombre = txtNombre.Text;
-                _empleado.apellidoPaterno = txtApellidoPaterno.Text;
-                _empleado.email = txtEmail.Text;
-                _empleado.direccion = txtDireccion.Text;
-                _empleado.telefono = txtTelefono.Text;
-                _empleado.sueldo = Double.Parse(txtSueldo.Text);
-                _empleado.fechaContratacion = dtpFechaContratacion.Value;
-                _empleado.fechaContratacionSpecified = true;
-                _empleado.fechaNacimiento = dtpFechaContratacion.Value;
-                _empleado.fechaNacimientoSpecified = true;
-                _empleado.numeroHorasMensuales = 0;
-                _empleado.activo = true;
-                _empleado.foto = _foto;
-                _empleado.archivoCv = _archivoPDF;
-                resultado = daoGestPersonas.InsertarCajero((cajero)_empleado);
+                EmpleadoSeleccionado = new GestPersonasWS.cajero();
+                EmpleadoSeleccionado.DNI = txtDNI.Text;
+                EmpleadoSeleccionado.nombre = txtNombre.Text;
+                EmpleadoSeleccionado.apellidoPaterno = txtApellidoPaterno.Text;
+                EmpleadoSeleccionado.email = txtEmail.Text;
+                EmpleadoSeleccionado.direccion = txtDireccion.Text;
+                EmpleadoSeleccionado.telefono = txtTelefono.Text;
+                EmpleadoSeleccionado.sueldo = Double.Parse(txtSueldo.Text);
+                EmpleadoSeleccionado.fechaContratacion = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaContratacionSpecified = true;
+                EmpleadoSeleccionado.fechaNacimiento = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaNacimientoSpecified = true;
+                EmpleadoSeleccionado.numeroHorasMensuales = 0;
+                EmpleadoSeleccionado.activo = true;
+                EmpleadoSeleccionado.foto = _foto;
+                EmpleadoSeleccionado.archivoCv = _archivoPDF;
+                if (_accion == 0)
+                    resultado = daoGestPersonas.InsertarCajero((cajero)EmpleadoSeleccionado);
+                else
+                {
+                    EmpleadoSeleccionado.idPersona = Int32.Parse(txtID.Text);
+                    resultado = daoGestPersonas.ModificarCajero((cajero)EmpleadoSeleccionado);
+                }
                 tipoEmpleado = 'C';
             }
             else if (cboArea.SelectedItem.ToString() == "Mesero")
             {
-                _empleado = new GestPersonasWS.mesero();
-                _empleado.DNI = txtDNI.Text;
-                _empleado.nombre = txtNombre.Text;
-                _empleado.apellidoPaterno = txtApellidoPaterno.Text;
-                _empleado.email = txtEmail.Text;
-                _empleado.direccion = txtDireccion.Text;
-                _empleado.telefono = txtTelefono.Text;
-                _empleado.sueldo = Double.Parse(txtSueldo.Text);
-                _empleado.fechaContratacion = dtpFechaContratacion.Value;
-                _empleado.fechaContratacionSpecified = true;
-                _empleado.fechaNacimiento = dtpFechaContratacion.Value;
-                _empleado.fechaNacimientoSpecified = true;
-                _empleado.numeroHorasMensuales = 0;
-                _empleado.activo = true;
-                _empleado.foto = _foto;
-                _empleado.archivoCv = _archivoPDF;
-                resultado = daoGestPersonas.InsertarMesero((mesero)_empleado);
+                EmpleadoSeleccionado = new GestPersonasWS.mesero();
+                EmpleadoSeleccionado.DNI = txtDNI.Text;
+                EmpleadoSeleccionado.nombre = txtNombre.Text;
+                EmpleadoSeleccionado.apellidoPaterno = txtApellidoPaterno.Text;
+                EmpleadoSeleccionado.email = txtEmail.Text;
+                EmpleadoSeleccionado.direccion = txtDireccion.Text;
+                EmpleadoSeleccionado.telefono = txtTelefono.Text;
+                EmpleadoSeleccionado.sueldo = Double.Parse(txtSueldo.Text);
+                EmpleadoSeleccionado.fechaContratacion = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaContratacionSpecified = true;
+                EmpleadoSeleccionado.fechaNacimiento = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaNacimientoSpecified = true;
+                EmpleadoSeleccionado.numeroHorasMensuales = 0;
+                EmpleadoSeleccionado.activo = true;
+                EmpleadoSeleccionado.foto = _foto;
+                EmpleadoSeleccionado.archivoCv = _archivoPDF;
+                if (_accion == 0)
+                    resultado = daoGestPersonas.InsertarMesero((mesero)EmpleadoSeleccionado);
+                else
+                {
+                    EmpleadoSeleccionado.idPersona = Int32.Parse(txtID.Text);
+                    resultado = daoGestPersonas.ModificarMesero((mesero)EmpleadoSeleccionado);
+                }
                 tipoEmpleado = 'M';
             }
             else if (cboArea.SelectedItem.ToString() == "Chef")
             {
-                _empleado = new GestPersonasWS.chef();
-                _empleado.DNI = txtDNI.Text;
-                _empleado.nombre = txtNombre.Text;
-                _empleado.apellidoPaterno = txtApellidoPaterno.Text;
-                _empleado.email = txtEmail.Text;
-                _empleado.direccion = txtDireccion.Text;
-                _empleado.telefono = txtTelefono.Text;
-                _empleado.sueldo = Double.Parse(txtSueldo.Text);
-                _empleado.fechaContratacion = dtpFechaContratacion.Value;
-                _empleado.fechaContratacionSpecified = true;
-                _empleado.fechaNacimiento = dtpFechaContratacion.Value;
-                _empleado.fechaNacimientoSpecified = true;
-                _empleado.numeroHorasMensuales = 0;
-                _empleado.activo = true;
-                _empleado.foto = _foto;
-                _empleado.archivoCv = _archivoPDF;
-                resultado = daoGestPersonas.InsertarChef((chef)_empleado);
+                EmpleadoSeleccionado = new GestPersonasWS.chef();
+                EmpleadoSeleccionado.DNI = txtDNI.Text;
+                EmpleadoSeleccionado.nombre = txtNombre.Text;
+                EmpleadoSeleccionado.apellidoPaterno = txtApellidoPaterno.Text;
+                EmpleadoSeleccionado.email = txtEmail.Text;
+                EmpleadoSeleccionado.direccion = txtDireccion.Text;
+                EmpleadoSeleccionado.telefono = txtTelefono.Text;
+                EmpleadoSeleccionado.sueldo = Double.Parse(txtSueldo.Text);
+                EmpleadoSeleccionado.fechaContratacion = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaContratacionSpecified = true;
+                EmpleadoSeleccionado.fechaNacimiento = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaNacimientoSpecified = true;
+                EmpleadoSeleccionado.numeroHorasMensuales = 0;
+                EmpleadoSeleccionado.activo = true;
+                EmpleadoSeleccionado.foto = _foto;
+                EmpleadoSeleccionado.archivoCv = _archivoPDF;
+
+                if (_accion == 0)
+                    resultado = daoGestPersonas.InsertarChef((chef)EmpleadoSeleccionado);
+                else
+                {
+                    resultado = daoGestPersonas.ModificarChef((chef)EmpleadoSeleccionado);
+                    EmpleadoSeleccionado.idPersona = Int32.Parse(txtID.Text);
+                }
                 tipoEmpleado = 'F';
             }
             else
             {
-                _empleado = new GestPersonasWS.recepcionista();
-                _empleado.DNI = txtDNI.Text;
-                _empleado.nombre = txtNombre.Text;
-                _empleado.apellidoPaterno = txtApellidoPaterno.Text;
-                _empleado.email = txtEmail.Text;
-                _empleado.direccion = txtDireccion.Text;
-                _empleado.telefono = txtTelefono.Text;
-                _empleado.sueldo = Double.Parse(txtSueldo.Text);
-                _empleado.fechaContratacion = dtpFechaContratacion.Value;
-                _empleado.fechaContratacionSpecified = true;
-                _empleado.fechaNacimiento = dtpFechaContratacion.Value;
-                _empleado.fechaNacimientoSpecified = true;
-                _empleado.numeroHorasMensuales = 0;
-                _empleado.activo = true;
-                _empleado.foto = _foto;
-                _empleado.archivoCv = _archivoPDF;
-                resultado = daoGestPersonas.InsertarRecepcionista((recepcionista)_empleado);
+                EmpleadoSeleccionado = new GestPersonasWS.recepcionista();
+                EmpleadoSeleccionado.DNI = txtDNI.Text;
+                EmpleadoSeleccionado.nombre = txtNombre.Text;
+                EmpleadoSeleccionado.apellidoPaterno = txtApellidoPaterno.Text;
+                EmpleadoSeleccionado.email = txtEmail.Text;
+                EmpleadoSeleccionado.direccion = txtDireccion.Text;
+                EmpleadoSeleccionado.telefono = txtTelefono.Text;
+                EmpleadoSeleccionado.sueldo = Double.Parse(txtSueldo.Text);
+                EmpleadoSeleccionado.fechaContratacion = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaContratacionSpecified = true;
+                EmpleadoSeleccionado.fechaNacimiento = dtpFechaContratacion.Value;
+                EmpleadoSeleccionado.fechaNacimientoSpecified = true;
+                EmpleadoSeleccionado.numeroHorasMensuales = 0;
+                EmpleadoSeleccionado.activo = true;
+                EmpleadoSeleccionado.foto = _foto;
+                EmpleadoSeleccionado.archivoCv = _archivoPDF;
+
+                if (_accion == 0)
+                    resultado = daoGestPersonas.InsertarRecepcionista((recepcionista)EmpleadoSeleccionado);
+                else
+                {
+                    resultado = daoGestPersonas.ModificarRecepcionista((recepcionista)EmpleadoSeleccionado);
+                    EmpleadoSeleccionado.idPersona = Int32.Parse(txtID.Text);
+                }
+
                 tipoEmpleado = 'R';
             }
-
-            GestPersonasWS.cuentaUsuario cuentaUsuario = new GestPersonasWS.cuentaUsuario();
-            cuentaUsuario.usuario = _empleado.nombre.Substring(0, 1).ToLower() +
-                    _empleado.apellidoPaterno.ToLower();
-            cuentaUsuario.contrasenia = "123456";
-            cuentaUsuario.activo = true;
-            cuentaUsuario.idUsuario = resultado;
-            cuentaUsuario.empleado = _empleado;
-            cuentaUsuario.tipoEmpleado = tipoEmpleado;
-            daoGestPersonas.InsertarCuentaUsuario(cuentaUsuario);
-            _empleado.cuentaUsuario = cuentaUsuario;
-
-            if (resultado != 0)
+            if (_accion == 0)
             {
-                MessageBox.Show("Se ha guardado el empleado con exito");
-                this.DialogResult = DialogResult.OK;
+
+                GestPersonasWS.cuentaUsuario cuentaUsuario = new GestPersonasWS.cuentaUsuario();
+                cuentaUsuario.usuario = EmpleadoSeleccionado.nombre.Substring(0, 1).ToLower() +
+                        EmpleadoSeleccionado.apellidoPaterno.ToLower();
+                cuentaUsuario.contrasenia = "123456";
+                cuentaUsuario.activo = true;
+                cuentaUsuario.idUsuario = resultado;
+                cuentaUsuario.empleado = EmpleadoSeleccionado;
+                cuentaUsuario.tipoEmpleado = tipoEmpleado;
+                daoGestPersonas.InsertarCuentaUsuario(cuentaUsuario);
+                EmpleadoSeleccionado.cuentaUsuario = cuentaUsuario;
+
+                if (resultado != 0)
+                {
+                    MessageBox.Show("Se ha guardado el empleado con exito");
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error");
+                }
+
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error");
+                if (resultado != 0)
+                {
+                    MessageBox.Show("Se ha modificado el empleado con exito");
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al modificar");
+                }
             }
+
 
         }
 
@@ -251,7 +356,7 @@ namespace LP2Rest
                 {
                     String archivoGenerar = sfdArchivo.FileName;
                     //Convertimos el arreglo de Bytes a archivo
-                    File.WriteAllBytes(archivoGenerar, _empleado.archivoCv);
+                    File.WriteAllBytes(archivoGenerar, EmpleadoSeleccionado.archivoCv);
                     MessageBox.Show("Se ha guardado el archivo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
