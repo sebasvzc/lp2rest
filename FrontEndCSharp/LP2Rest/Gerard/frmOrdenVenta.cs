@@ -243,7 +243,6 @@ namespace LP2Rest
             txtDescuento.Enabled = false;
             btnBuscarCliente.Enabled = true;
             btnBuscarProducto.Enabled = false;
-            btnPreparar.Enabled = true;
 
         }
 
