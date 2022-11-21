@@ -57,7 +57,7 @@ namespace LP2Rest
             }
             if (txtTotalFin.Text == "")
             {
-                totalFin = 99999;
+                totalFin = 99999.9;
             }
             else
             {
@@ -65,13 +65,13 @@ namespace LP2Rest
             }
 
 
-            ordenesVentasActuales = daoVentas.listarBusquedaOrdenesVenta(   txtNombCli.Text,
-                                                                            txtApeCLi.Text,
-                                                                            auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"),
-                                                                            auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"),
-                                                                            totalIni,
-                                                                            totalFin
-                                                                            );
+            ordenesVentasActuales = daoVentas.listarBusquedaOrdenesVentaAdministrador(  txtNombCli.Text,
+                                                                                        txtApeCLi.Text,
+                                                                                        auxFechaIni.ToString("dd-MM-yyyy HH:mm:ss"),
+                                                                                        auxFechaFin.ToString("dd-MM-yyyy HH:mm:ss"),
+                                                                                        totalIni,
+                                                                                        totalFin
+                                                                                        );
             if(ordenesVentasActuales == null)
             {
                 MessageBox.Show("No se ha encontrado Ordenes de Venta", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -93,7 +93,7 @@ namespace LP2Rest
                 dgvOrdenesVentas.Rows[e.RowIndex].Cells[1].Value = auxOrdVent.cliente.nombre + " " + auxOrdVent.cliente.apellidoPaterno;
                 dgvOrdenesVentas.Rows[e.RowIndex].Cells[2].Value = auxOrdVent.fecha.ToShortDateString();
                 dgvOrdenesVentas.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxOrdVent.total );
-                //dgvOrdenesVentas.Rows[e.RowIndex].Cells[3].Value = auxOrdVent.;
+                dgvOrdenesVentas.Rows[e.RowIndex].Cells[4].Value = auxOrdVent.estado;
 
             }
             catch(Exception ex)

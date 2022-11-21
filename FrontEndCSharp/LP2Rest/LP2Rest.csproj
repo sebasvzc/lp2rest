@@ -1034,6 +1034,9 @@
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ListarBusquedaLineasOrdenVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.listarBusquedaOrdenesVentaMeseroResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

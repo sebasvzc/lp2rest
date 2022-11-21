@@ -49,11 +49,12 @@
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnVerOrdenVenta = new System.Windows.Forms.Button();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnVerOrdenVenta = new System.Windows.Forms.Button();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,7 +213,8 @@
             this.Numero,
             this.NombreCompleto,
             this.Teléfono,
-            this.email});
+            this.email,
+            this.Estado});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -258,6 +260,17 @@
             this.label6.Text = "Desde:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnVerOrdenVenta
+            // 
+            this.btnVerOrdenVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerOrdenVenta.Location = new System.Drawing.Point(471, 717);
+            this.btnVerOrdenVenta.Name = "btnVerOrdenVenta";
+            this.btnVerOrdenVenta.Size = new System.Drawing.Size(126, 45);
+            this.btnVerOrdenVenta.TabIndex = 103;
+            this.btnVerOrdenVenta.Text = "Ver";
+            this.btnVerOrdenVenta.UseVisualStyleBackColor = true;
+            this.btnVerOrdenVenta.Click += new System.EventHandler(this.btnVerOrdenVenta_Click);
+            // 
             // Numero
             // 
             this.Numero.HeaderText = "Codigo";
@@ -286,16 +299,11 @@
             this.email.ReadOnly = true;
             this.email.Width = 180;
             // 
-            // btnVerOrdenVenta
+            // Estado
             // 
-            this.btnVerOrdenVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerOrdenVenta.Location = new System.Drawing.Point(471, 717);
-            this.btnVerOrdenVenta.Name = "btnVerOrdenVenta";
-            this.btnVerOrdenVenta.Size = new System.Drawing.Size(126, 45);
-            this.btnVerOrdenVenta.TabIndex = 103;
-            this.btnVerOrdenVenta.Text = "Ver";
-            this.btnVerOrdenVenta.UseVisualStyleBackColor = true;
-            this.btnVerOrdenVenta.Click += new System.EventHandler(this.btnVerOrdenVenta_Click);
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // frmListaOrdenVentaMesero
             // 
@@ -349,10 +357,11 @@
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVerOrdenVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.Button btnVerOrdenVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

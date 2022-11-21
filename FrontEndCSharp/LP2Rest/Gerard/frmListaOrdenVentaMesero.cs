@@ -80,6 +80,7 @@ namespace LP2Rest
             dgvVentas.Rows[e.RowIndex].Cells[1].Value = auxVenta.cliente.nombre + " " + auxVenta.cliente.apellidoPaterno;
             dgvVentas.Rows[e.RowIndex].Cells[2].Value = auxVenta.fecha.ToShortDateString();
             dgvVentas.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxVenta.total);
+            dgvVentas.Rows[e.RowIndex].Cells[4].Value = auxVenta.estado;
         }
 
         private void btnVerOrdenVenta_Click(object sender, EventArgs e)

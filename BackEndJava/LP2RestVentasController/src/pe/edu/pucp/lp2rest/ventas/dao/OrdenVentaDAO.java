@@ -20,5 +20,8 @@ public interface OrdenVentaDAO {
                                                 String nombre,String apellido,
                                                 Date fechaIni,Date fechaFin,
                                                 double sueldoIni,double sueldoFin);
+    ArrayList<OrdenVenta> listarBusquedaAdministrador(   String nombre,String apellido,
+                                                        Date fechaIni,Date fechaFin,
+                                                        double sueldoIni,double sueldoFin);
     int actualizar(int idOrdenVenta);
 }
