@@ -283,7 +283,7 @@
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(246, 19);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(192, 19);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnMarcarAsistencia.Size = new System.Drawing.Size(179, 68);
@@ -298,7 +298,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(643, 17);
+            this.label2.Location = new System.Drawing.Point(589, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 19);
@@ -309,7 +309,7 @@
             // lbltimer
             // 
             this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(646, 33);
+            this.lbltimer.Location = new System.Drawing.Point(592, 33);
             this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltimer.Name = "lbltimer";
             this.lbltimer.Size = new System.Drawing.Size(140, 55);
@@ -322,7 +322,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
             this.lblID.ForeColor = System.Drawing.Color.Coral;
-            this.lblID.Location = new System.Drawing.Point(830, 44);
+            this.lblID.Location = new System.Drawing.Point(776, 44);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(113, 24);
             this.lblID.TabIndex = 46;
@@ -335,7 +335,7 @@
             this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnRegistrarSalida.Location = new System.Drawing.Point(431, 21);
+            this.btnRegistrarSalida.Location = new System.Drawing.Point(377, 21);
             this.btnRegistrarSalida.Name = "btnRegistrarSalida";
             this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnRegistrarSalida.Size = new System.Drawing.Size(164, 65);

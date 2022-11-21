@@ -16,13 +16,6 @@ namespace LP2Rest.ReporteWS {
     public interface ReporteWS {
         
         // CODEGEN: Generating message contract since element name fecha_ini from namespace  is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse")]
-        LP2Rest.ReporteWS.generarReporteAsistenciaResponse generarReporteAsistencia(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse")]
-        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> generarReporteAsistenciaAsync(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request);
-        
-        // CODEGEN: Generating message contract since element name fecha_ini from namespace  is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasResponse")]
         LP2Rest.ReporteWS.generarReporteOrdenVentasResponse generarReporteOrdenVentas(LP2Rest.ReporteWS.generarReporteOrdenVentasRequest request);
         
@@ -43,82 +36,13 @@ namespace LP2Rest.ReporteWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse")]
         System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarBoletaVentaResponse> generarBoletaVentaAsync(LP2Rest.ReporteWS.generarBoletaVentaRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class generarReporteAsistenciaRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReporteAsistencia", Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        public LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody Body;
+        // CODEGEN: Generating message contract since element name fecha_ini from namespace  is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse")]
+        LP2Rest.ReporteWS.generarReporteAsistenciaResponse generarReporteAsistencia(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request);
         
-        public generarReporteAsistenciaRequest() {
-        }
-        
-        public generarReporteAsistenciaRequest(LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class generarReporteAsistenciaRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int id_cuentaUsuario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string fecha_ini;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string fecha_fin;
-        
-        public generarReporteAsistenciaRequestBody() {
-        }
-        
-        public generarReporteAsistenciaRequestBody(int id_cuentaUsuario, string fecha_ini, string fecha_fin) {
-            this.id_cuentaUsuario = id_cuentaUsuario;
-            this.fecha_ini = fecha_ini;
-            this.fecha_fin = fecha_fin;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class generarReporteAsistenciaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReporteAsistenciaResponse", Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
-        public LP2Rest.ReporteWS.generarReporteAsistenciaResponseBody Body;
-        
-        public generarReporteAsistenciaResponse() {
-        }
-        
-        public generarReporteAsistenciaResponse(LP2Rest.ReporteWS.generarReporteAsistenciaResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class generarReporteAsistenciaResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public byte[] @return;
-        
-        public generarReporteAsistenciaResponseBody() {
-        }
-        
-        public generarReporteAsistenciaResponseBody(byte[] @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse")]
+        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> generarReporteAsistenciaAsync(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -299,6 +223,82 @@ namespace LP2Rest.ReporteWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class generarReporteAsistenciaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReporteAsistencia", Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        public LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody Body;
+        
+        public generarReporteAsistenciaRequest() {
+        }
+        
+        public generarReporteAsistenciaRequest(LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class generarReporteAsistenciaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id_cuentaUsuario;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string fecha_ini;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string fecha_fin;
+        
+        public generarReporteAsistenciaRequestBody() {
+        }
+        
+        public generarReporteAsistenciaRequestBody(int id_cuentaUsuario, string fecha_ini, string fecha_fin) {
+            this.id_cuentaUsuario = id_cuentaUsuario;
+            this.fecha_ini = fecha_ini;
+            this.fecha_fin = fecha_fin;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class generarReporteAsistenciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReporteAsistenciaResponse", Namespace="http://services.lp2rest.pucp.edu.pe/", Order=0)]
+        public LP2Rest.ReporteWS.generarReporteAsistenciaResponseBody Body;
+        
+        public generarReporteAsistenciaResponse() {
+        }
+        
+        public generarReporteAsistenciaResponse(LP2Rest.ReporteWS.generarReporteAsistenciaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class generarReporteAsistenciaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public byte[] @return;
+        
+        public generarReporteAsistenciaResponseBody() {
+        }
+        
+        public generarReporteAsistenciaResponseBody(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ReporteWSChannel : LP2Rest.ReporteWS.ReporteWS, System.ServiceModel.IClientChannel {
     }
@@ -324,35 +324,6 @@ namespace LP2Rest.ReporteWS {
         
         public ReporteWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.ReporteWS.generarReporteAsistenciaResponse LP2Rest.ReporteWS.ReporteWS.generarReporteAsistencia(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request) {
-            return base.Channel.generarReporteAsistencia(request);
-        }
-        
-        public byte[] generarReporteAsistencia(int id_cuentaUsuario, string fecha_ini, string fecha_fin) {
-            LP2Rest.ReporteWS.generarReporteAsistenciaRequest inValue = new LP2Rest.ReporteWS.generarReporteAsistenciaRequest();
-            inValue.Body = new LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody();
-            inValue.Body.id_cuentaUsuario = id_cuentaUsuario;
-            inValue.Body.fecha_ini = fecha_ini;
-            inValue.Body.fecha_fin = fecha_fin;
-            LP2Rest.ReporteWS.generarReporteAsistenciaResponse retVal = ((LP2Rest.ReporteWS.ReporteWS)(this)).generarReporteAsistencia(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> LP2Rest.ReporteWS.ReporteWS.generarReporteAsistenciaAsync(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request) {
-            return base.Channel.generarReporteAsistenciaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> generarReporteAsistenciaAsync(int id_cuentaUsuario, string fecha_ini, string fecha_fin) {
-            LP2Rest.ReporteWS.generarReporteAsistenciaRequest inValue = new LP2Rest.ReporteWS.generarReporteAsistenciaRequest();
-            inValue.Body = new LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody();
-            inValue.Body.id_cuentaUsuario = id_cuentaUsuario;
-            inValue.Body.fecha_ini = fecha_ini;
-            inValue.Body.fecha_fin = fecha_fin;
-            return ((LP2Rest.ReporteWS.ReporteWS)(this)).generarReporteAsistenciaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -430,6 +401,35 @@ namespace LP2Rest.ReporteWS {
             LP2Rest.ReporteWS.generarBoletaVentaRequest inValue = new LP2Rest.ReporteWS.generarBoletaVentaRequest();
             inValue.id_orden_venta = id_orden_venta;
             return ((LP2Rest.ReporteWS.ReporteWS)(this)).generarBoletaVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.ReporteWS.generarReporteAsistenciaResponse LP2Rest.ReporteWS.ReporteWS.generarReporteAsistencia(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request) {
+            return base.Channel.generarReporteAsistencia(request);
+        }
+        
+        public byte[] generarReporteAsistencia(int id_cuentaUsuario, string fecha_ini, string fecha_fin) {
+            LP2Rest.ReporteWS.generarReporteAsistenciaRequest inValue = new LP2Rest.ReporteWS.generarReporteAsistenciaRequest();
+            inValue.Body = new LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody();
+            inValue.Body.id_cuentaUsuario = id_cuentaUsuario;
+            inValue.Body.fecha_ini = fecha_ini;
+            inValue.Body.fecha_fin = fecha_fin;
+            LP2Rest.ReporteWS.generarReporteAsistenciaResponse retVal = ((LP2Rest.ReporteWS.ReporteWS)(this)).generarReporteAsistencia(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> LP2Rest.ReporteWS.ReporteWS.generarReporteAsistenciaAsync(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request) {
+            return base.Channel.generarReporteAsistenciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> generarReporteAsistenciaAsync(int id_cuentaUsuario, string fecha_ini, string fecha_fin) {
+            LP2Rest.ReporteWS.generarReporteAsistenciaRequest inValue = new LP2Rest.ReporteWS.generarReporteAsistenciaRequest();
+            inValue.Body = new LP2Rest.ReporteWS.generarReporteAsistenciaRequestBody();
+            inValue.Body.id_cuentaUsuario = id_cuentaUsuario;
+            inValue.Body.fecha_ini = fecha_ini;
+            inValue.Body.fecha_fin = fecha_fin;
+            return ((LP2Rest.ReporteWS.ReporteWS)(this)).generarReporteAsistenciaAsync(inValue);
         }
     }
 }
