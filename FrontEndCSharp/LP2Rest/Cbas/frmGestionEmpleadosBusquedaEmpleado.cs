@@ -1,4 +1,5 @@
 ﻿using LP2Rest.GestPersonasWS;
+using LP2Rest.VentasWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +18,15 @@ namespace LP2Rest
         private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
 
         //Utiles
-        private empleado empleadoSeleccionado;
+        private GestPersonasWS.empleado empleadoSeleccionado;
+  
 
-        public empleado EmpleadoSeleccionado { get => empleadoSeleccionado; set => empleadoSeleccionado = value; }
+        public GestPersonasWS.empleado EmpleadoSeleccionado { get => empleadoSeleccionado; set => empleadoSeleccionado = value; }
+
 
         public frmGestionEmpleadosBusquedaEmpleado()
         {
-            EmpleadoSeleccionado = new empleado();
+            EmpleadoSeleccionado = new GestPersonasWS.empleado();
 
             List<string> listaCargos = new List<string>()
                     {
@@ -41,6 +44,35 @@ namespace LP2Rest
 
             cboArea.DataSource = listaCargos;
             
+
+        }
+
+        public frmGestionEmpleadosBusquedaEmpleado(string cargoBuscado)
+        {
+            EmpleadoSeleccionado = new GestPersonasWS.empleado();
+
+            List<string> listaCargos = new List<string>()
+                    {
+                        "Administrador",
+                        "Recepcionista",
+                        "Chef",
+                        "Cajero",
+                        "Mesero"
+                    };
+
+
+            InitializeComponent();
+            daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
+            dgvEmpleados.AutoGenerateColumns = false;
+
+            cboArea.DataSource = listaCargos;
+            if (cargoBuscado == "Administrador") cboArea.SelectedIndex = 0;
+            if (cargoBuscado == "Recepcionista") cboArea.SelectedIndex = 1;
+            if (cargoBuscado == "Chef")          cboArea.SelectedIndex = 2;
+            if (cargoBuscado == "Cajero"       ) cboArea.SelectedIndex = 3;
+            if (cargoBuscado == "Mesero"       ) cboArea.SelectedIndex = 4;
+
+            cboArea.Enabled = false;
 
         }
 
@@ -87,11 +119,11 @@ namespace LP2Rest
            
             dgvEmpleados.Rows[e.RowIndex].Cells[0].Value = auxEmpleado.DNI;
             dgvEmpleados.Rows[e.RowIndex].Cells[1].Value = auxEmpleado.nombre + " " + auxEmpleado.apellidoPaterno;
-            if (auxEmpleado is administrador) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Administrador";
-            if (auxEmpleado is recepcionista) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Recepcionista";
-            if (auxEmpleado is chef)          dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Chef";
-            if (auxEmpleado is cajero)        dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Cajero";
-            if (auxEmpleado is mesero)        dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Mesero";
+            if (auxEmpleado is GestPersonasWS.administrador) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Administrador";
+            if (auxEmpleado is GestPersonasWS.recepcionista) dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Recepcionista";
+            if (auxEmpleado is GestPersonasWS.chef)          dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Chef";
+            if (auxEmpleado is GestPersonasWS.cajero)        dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Cajero";
+            if (auxEmpleado is GestPersonasWS.mesero)        dgvEmpleados.Rows[e.RowIndex].Cells[2].Value = "Mesero";
             dgvEmpleados.Rows[e.RowIndex].Cells[3].Value = auxEmpleado.telefono;
             dgvEmpleados.Rows[e.RowIndex].Cells[4].Value = auxEmpleado.email;
 
@@ -108,7 +140,7 @@ namespace LP2Rest
         {
             if (dgvEmpleados.SelectedRows.Count == 1)
             {
-                empleado auxEmp = (empleado)dgvEmpleados.CurrentRow.DataBoundItem;
+                GestPersonasWS.empleado auxEmp = (GestPersonasWS.empleado)dgvEmpleados.CurrentRow.DataBoundItem;
                 empleadoSeleccionado = auxEmp;
                 this.DialogResult = DialogResult.OK;
             }

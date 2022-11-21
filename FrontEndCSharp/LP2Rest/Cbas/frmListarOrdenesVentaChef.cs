@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LP2Rest
 {
-    public partial class frmListarOrdenesVentaA : Form
+    public partial class frmListarOrdenesVentaChef : Form
     {
         //Conexiones
         private VentasWS.VentasWSClient daoVentas;
@@ -20,7 +20,7 @@ namespace LP2Rest
         private ordenVenta[] ordenesVentasActuales;
         private ordenVenta ordenVentaSeleccionada;
 
-        public frmListarOrdenesVentaA()
+        public frmListarOrdenesVentaChef()
         {
             daoVentas = new VentasWS.VentasWSClient();
 
@@ -111,7 +111,7 @@ namespace LP2Rest
 
                 ordenVentaSeleccionada = (ordenVenta)dgvOrdenesVentas.CurrentRow.DataBoundItem;
 
-                frmGestionOrdenesVentaA formOrdVenAdmin = new frmGestionOrdenesVentaA(ordenVentaSeleccionada);
+                frmOrdenVentaChef formOrdVenAdmin = new frmOrdenVentaChef(ordenVentaSeleccionada);
 
                 if(formOrdVenAdmin.ShowDialog() == DialogResult.OK)
                 {

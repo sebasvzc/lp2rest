@@ -8,8 +8,6 @@ import pe.edu.pucp.lp2rest.gestpersonas.model.Mesero;
 
 public class OrdenVenta {
 
-    
-
     // atributos
     private int idOrdenVenta;
     private double total;
@@ -115,19 +113,14 @@ public class OrdenVenta {
 
     public void quitarLineaVenta() {
     }
-
-    /**
-     * @return the estado
-     */
+    
     public String getEstado() {
         return estado;
     }
 
-    /**
-     * @param estado the estado to set
-     */
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
+    
+    
 }

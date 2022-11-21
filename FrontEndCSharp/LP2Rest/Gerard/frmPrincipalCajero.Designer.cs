@@ -46,6 +46,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.sdbtnVentas = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -55,6 +56,7 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panelIzquierdo.Controls.Add(this.sdbtnVentas);
             this.panelIzquierdo.Controls.Add(this.panel4);
             this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnReportes);
@@ -160,6 +162,28 @@
             this.panelSuperior.TabIndex = 51;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(609, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 19);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Tiempo de Asistencia";
+            // 
+            // lbltimer
+            // 
+            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimer.Location = new System.Drawing.Point(610, 33);
+            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltimer.Name = "lbltimer";
+            this.lbltimer.Size = new System.Drawing.Size(140, 55);
+            this.lbltimer.TabIndex = 51;
+            this.lbltimer.Text = "00:00:00";
+            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnMarcarSalida
             // 
             this.btnMarcarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
@@ -259,27 +283,22 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label2
+            // sdbtnVentas
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(609, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 19);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Tiempo de Asistencia";
-            // 
-            // lbltimer
-            // 
-            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(610, 33);
-            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbltimer.Name = "lbltimer";
-            this.lbltimer.Size = new System.Drawing.Size(140, 55);
-            this.lbltimer.TabIndex = 51;
-            this.lbltimer.Text = "00:00:00";
-            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sdbtnVentas.FlatAppearance.BorderSize = 0;
+            this.sdbtnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sdbtnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.sdbtnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
+            this.sdbtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sdbtnVentas.Location = new System.Drawing.Point(9, 309);
+            this.sdbtnVentas.Name = "sdbtnVentas";
+            this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnVentas.Size = new System.Drawing.Size(230, 59);
+            this.sdbtnVentas.TabIndex = 45;
+            this.sdbtnVentas.Text = "  Ventas";
+            this.sdbtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sdbtnVentas.UseVisualStyleBackColor = true;
+            this.sdbtnVentas.Click += new System.EventHandler(this.sdbtnVentas_Click);
             // 
             // frmPrincipalCajero
             // 
@@ -321,5 +340,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbltimer;
+        private System.Windows.Forms.Button sdbtnVentas;
     }
 }

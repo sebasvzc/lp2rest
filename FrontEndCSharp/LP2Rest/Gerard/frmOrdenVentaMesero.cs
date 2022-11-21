@@ -62,6 +62,7 @@ namespace LP2Rest
             txtDNICliente.Text = auxOrdenVenta.cliente.DNI;
             txtNombreCliente.Text = auxOrdenVenta.cliente.nombre + " " + auxOrdenVenta.cliente.apellidoPaterno;
 
+            txtEstado.Text = auxOrdenVenta.estado;
 
             txtTotal.Text = String.Format("{0:0.00}", auxOrdenVenta.total);
 
