@@ -57,7 +57,8 @@ namespace LP2Rest
             txtIDOrdenVenta.Text = ordenVentaActual.idOrdenVenta.ToString();
             txtIdMesa.Text = ordenVentaActual.mesa.idMesa.ToString();
             dtpFechaOrdenVenta.Value = ordenVentaActual.fecha;
-            txtTotal.Text = String.Format("{0:0.00}", ordenVentaActual.total ); 
+            txtTotal.Text = String.Format("{0:0.00}", ordenVentaActual.total );
+            txtEstado.Text = ordenVentaActual.estado;
 
             clienteSeleccionado = ordenVentaActual.cliente;
             txtDNICliente.Text = clienteSeleccionado.DNI.ToString();
@@ -332,6 +333,36 @@ namespace LP2Rest
             {
                 MessageBox.Show("No se ha seleccionado una Linea de Orden de Venta.", "Error de Borrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvDetalleOrdenVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void txtNombreCajero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescuento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

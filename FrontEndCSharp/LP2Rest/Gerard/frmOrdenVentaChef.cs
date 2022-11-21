@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace LP2Rest
 {
-    public partial class frmOrdenVenta : Form
+    public partial class frmOrdenVentaChef : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -45,184 +45,70 @@ namespace LP2Rest
         VentasWS.VentasWSClient daoVentas;
 
         private int idMesaOrdenVenta;
-        public frmOrdenVenta(mesa auxMesa, int auxIdMesero)
+        public frmOrdenVentaChef(ordenVenta auxOrdenVenta)
         {
 
-            mesaSeleccionada = auxMesa;
+            //Ver detalle orden de una orden ya abierta
 
+            daoVentas = new VentasWS.VentasWSClient();
 
-            if (auxMesa.disponible == true)
+            ordenVentaSeleccionada = auxOrdenVenta;
+
+            lineaItems = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
+
+            //lineasItems = new BindingList<lineaOrdenVenta>();
+            if (lineaItems == null)
             {
-                idMesero = auxIdMesero;
-                daoVentas = new VentasWS.VentasWSClient();
-                
-                Libre = true;
-                InitializeComponent();
-                dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-                textBox3.Text = auxMesa.idMesa.ToString();
-
-                clienteSeleccionado = new GestPersonasWS.cliente();
-                clienteSeleccionado.idPersona = 78; //Cliente Generico o orden de venta para atenderse sin indicar cliente.
-
-                txtNombreCliente.Text = "Generico";
-                txtDNICliente.Text = " -";
-
-                txtCantidad.Enabled = false;
-                txtDescuento.Enabled = false;
-
-                btnBuscarCliente.Enabled = true;
-                btnBuscarProducto.Enabled = false;
-
-                btnAgregarPlato.Enabled = false;
-                btnQuitarPlato.Enabled = false;
-
-                btnDocPago.Enabled = false;
-                //btnPreparar.Enabled = false;
-
-                btnNuevo.Enabled = true;
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
-
-                
+                lineasItems = new BindingList<lineaOrdenVenta>();
             }
             else
             {
-                if (auxMesa.ordVen.mesero.idPersona != auxIdMesero)
-                {
-                    MessageBox.Show("Usted no podra modificar esta Orden de Venta. No esta asignado a este servicio.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    idMesero = auxIdMesero;
-
-                    //lblPrueba.Text = auxMesa.ordVen.mesero.idPersona.ToString();
-
-                    daoVentas = new VentasWS.VentasWSClient();
-
-                    mesaSeleccionada = auxMesa;
-                    ordenVentaSeleccionada = mesaSeleccionada.ordVen;
-
-                    ordenVentaSeleccionada.lineasOrdenVenta = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-
-                    clienteSeleccionado = new GestPersonasWS.cliente();
-                    clienteSeleccionado.idPersona = mesaSeleccionada.ordVen.cliente.idPersona;
-                    clienteSeleccionado.nombre = mesaSeleccionada.ordVen.cliente.nombre;
-                    clienteSeleccionado.apellidoPaterno = mesaSeleccionada.ordVen.cliente.apellidoPaterno;
-                    clienteSeleccionado.DNI = mesaSeleccionada.ordVen.cliente.DNI;
-
-
-
-                    Libre = false;
-
-                    InitializeComponent();
-                    dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-
-                    dgvDetalleOrdenVenta.DataSource = ordenVentaSeleccionada.lineasOrdenVenta;
-
-                    txtDNICliente.Text = clienteSeleccionado.DNI;
-                    txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
-
-                    txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
-
-                    textBox3.Text = auxMesa.idMesa.ToString();
-
-                    txtEstado.Text = ordenVentaSeleccionada.estado;
-
-                    txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total);
-
-                    btnDocPago.Enabled = false;
-
-                    //btnPreparar.Enabled = false;
-
-                    txtCantidad.Enabled = false;
-                    txtDescuento.Enabled = false;
-
-                    btnBuscarCliente.Enabled = false;
-                    btnBuscarProducto.Enabled = false;
-
-                    btnNuevo.Enabled = false;
-                    btnModificar.Enabled = false;
-                    btnEliminar.Enabled = false;
-
-                    btnAgregarPlato.Enabled = false;
-                    btnQuitarPlato.Enabled = false;
-                }
-                else
-                {
-                    //Ver detalle orden de una orden ya abierta
-
-                    idMesero = auxIdMesero;
-                    daoVentas = new VentasWS.VentasWSClient();
-
-                    mesaSeleccionada = auxMesa;
-                    ordenVentaSeleccionada = mesaSeleccionada.ordVen;
-
-                    lineaItems = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-
-                    //lineasItems = new BindingList<lineaOrdenVenta>();
-                    if(lineaItems == null)
-                    {
-                        lineasItems = new BindingList<lineaOrdenVenta>();
-                    }
-                    else
-                    {
-                        lineasItems = new BindingList<lineaOrdenVenta>(lineaItems.ToList());
-                    }
-                    
-                    
-                    
-                    
-                    clienteSeleccionado = new GestPersonasWS.cliente();
-                    clienteSeleccionado.idPersona = mesaSeleccionada.ordVen.cliente.idPersona;
-                    clienteSeleccionado.nombre = mesaSeleccionada.ordVen.cliente.nombre;
-                    clienteSeleccionado.apellidoPaterno = mesaSeleccionada.ordVen.cliente.apellidoPaterno;
-                    clienteSeleccionado.DNI = mesaSeleccionada.ordVen.cliente.DNI;
-
-
-
-                    Libre = false;
-
-                    InitializeComponent();
-
-                    dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-
-                    if (LineasItems.Count == 0)
-                    {
-                        //lineaItems = new VentasWS.lineaOrdenVenta[50];
-
-                    }
-                    else
-                    {
-                        dgvDetalleOrdenVenta.DataSource = LineasItems;
-                    }
-
-                    
-
-                    
-
-                    txtDNICliente.Text = clienteSeleccionado.DNI;
-                    txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
-
-                    txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
-
-                    textBox3.Text = auxMesa.idMesa.ToString();
-
-                    txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total); 
-
-                    txtCantidad.Enabled = false;
-                    txtDescuento.Enabled = false;
-
-                    btnBuscarCliente.Enabled = false;
-                    btnBuscarProducto.Enabled = false;
-
-                    btnNuevo.Enabled = false;
-                    btnModificar.Enabled = true;
-                    btnEliminar.Enabled = false;
-
-                    btnAgregarPlato.Enabled = false;
-                    btnQuitarPlato.Enabled = false;
-                }
-
-                
+                lineasItems = new BindingList<lineaOrdenVenta>(lineaItems.ToList());
             }
+
+
+            clienteSeleccionado = new GestPersonasWS.cliente();
+            clienteSeleccionado.idPersona = ordenVentaSeleccionada.cliente.idPersona;
+            clienteSeleccionado.nombre = ordenVentaSeleccionada.cliente.nombre;
+            clienteSeleccionado.apellidoPaterno = ordenVentaSeleccionada.cliente.apellidoPaterno;
+            clienteSeleccionado.DNI = ordenVentaSeleccionada.cliente.DNI;
+
+
+
+            Libre = false;
+
+            InitializeComponent();
+
+            dgvDetalleOrdenVenta.AutoGenerateColumns = false;
             
+            dgvDetalleOrdenVenta.DataSource = lineasItems;
+
+
+            txtDNICliente.Text = clienteSeleccionado.DNI;
+            txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
+
+            txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
+
+            textBox3.Text = ordenVentaSeleccionada.mesa.idMesa.ToString();
+
+            txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total);
+
+            txtCantidad.Enabled = false;
+            txtDescuento.Enabled = false;
+
+            btnBuscarCliente.Enabled = false;
+            btnBuscarProducto.Enabled = false;
+
+            btnNuevo.Enabled = false;
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = false;
+
+            btnAgregarPlato.Enabled = false;
+            btnQuitarPlato.Enabled = false;
+
+
+
+
 
         }
 

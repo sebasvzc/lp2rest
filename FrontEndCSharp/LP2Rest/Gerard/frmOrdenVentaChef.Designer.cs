@@ -1,6 +1,6 @@
 ﻿namespace LP2Rest
 {
-    partial class frmOrdenVenta
+    partial class frmOrdenVentaChef
     {
         /// <summary>
         /// Required designer variable.
@@ -56,6 +56,7 @@
             this.lblCodProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.btnPreparar = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -204,7 +205,7 @@
             this.gbLineasVenta.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.gbLineasVenta.Location = new System.Drawing.Point(39, 426);
             this.gbLineasVenta.Name = "gbLineasVenta";
-            this.gbLineasVenta.Size = new System.Drawing.Size(1043, 173);
+            this.gbLineasVenta.Size = new System.Drawing.Size(981, 173);
             this.gbLineasVenta.TabIndex = 59;
             this.gbLineasVenta.TabStop = false;
             this.gbLineasVenta.Text = "Líneas de Orden de Venta";
@@ -350,6 +351,7 @@
             // 
             // gbCliente
             // 
+            this.gbCliente.Controls.Add(this.btnPreparar);
             this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.lblNombreCliente);
             this.gbCliente.Controls.Add(this.txtNombreCliente);
@@ -358,11 +360,21 @@
             this.gbCliente.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.gbCliente.Location = new System.Drawing.Point(39, 270);
             this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(1043, 150);
+            this.gbCliente.Size = new System.Drawing.Size(981, 150);
             this.gbCliente.TabIndex = 58;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Datos del Cliente";
             this.gbCliente.Enter += new System.EventHandler(this.gbCliente_Enter);
+            // 
+            // btnPreparar
+            // 
+            this.btnPreparar.Location = new System.Drawing.Point(822, 47);
+            this.btnPreparar.Name = "btnPreparar";
+            this.btnPreparar.Size = new System.Drawing.Size(133, 70);
+            this.btnPreparar.TabIndex = 5;
+            this.btnPreparar.Text = "Preparar Pedido";
+            this.btnPreparar.UseVisualStyleBackColor = true;
+            this.btnPreparar.Click += new System.EventHandler(this.btnPreparar_Click);
             // 
             // btnBuscarCliente
             // 
@@ -439,7 +451,7 @@
             this.txtEstado.Location = new System.Drawing.Point(201, 79);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.ReadOnly = true;
-            this.txtEstado.Size = new System.Drawing.Size(224, 32);
+            this.txtEstado.Size = new System.Drawing.Size(212, 32);
             this.txtEstado.TabIndex = 67;
             // 
             // label2
@@ -466,14 +478,14 @@
             // 
             // btnDocPago
             // 
-            this.btnDocPago.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.btnDocPago.Font = new System.Drawing.Font("MS UI Gothic", 17F);
             this.btnDocPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDocPago.Location = new System.Drawing.Point(656, 30);
             this.btnDocPago.Name = "btnDocPago";
             this.btnDocPago.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnDocPago.Size = new System.Drawing.Size(381, 36);
             this.btnDocPago.TabIndex = 1;
-            this.btnDocPago.Text = "Solicitar Documento Pago";
+            this.btnDocPago.Text = "Generar documento de Pago";
             this.btnDocPago.UseVisualStyleBackColor = true;
             this.btnDocPago.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -610,7 +622,7 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // frmOrdenVenta
+            // frmOrdenVentaChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -628,7 +640,7 @@
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.gbPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmOrdenVenta";
+            this.Name = "frmOrdenVentaChef";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmOrdenVenta_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmOrdenVenta_ClientSizeChanged);
@@ -684,6 +696,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.Label lblDescuentoSimbolo;
+        private System.Windows.Forms.Button btnPreparar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button2;

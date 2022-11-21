@@ -228,6 +228,11 @@ namespace LP2Rest
             abrirFormulario(new frmMesas(idcuenta));
         }
 
+        private void sdbtnVentas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new frmMesas(idcuenta));
+        }
+
         private void sdbtnReportes_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarReportesA());

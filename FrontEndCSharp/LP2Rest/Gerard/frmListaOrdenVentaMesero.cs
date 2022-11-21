@@ -32,6 +32,7 @@ namespace LP2Rest
 
             dgvVentas.AutoGenerateColumns = false;
 
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

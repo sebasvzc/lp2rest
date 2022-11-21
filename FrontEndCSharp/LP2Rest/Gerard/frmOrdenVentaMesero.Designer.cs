@@ -33,6 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescuentoPorcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
@@ -42,17 +48,13 @@
             this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.lblDNICliente = new System.Windows.Forms.Label();
             this.gbPedido = new System.Windows.Forms.GroupBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtIdMesa = new System.Windows.Forms.TextBox();
             this.btnDocPago = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescuentoPorcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbCliente.SuspendLayout();
             this.gbPedido.SuspendLayout();
@@ -62,7 +64,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("MS UI Gothic", 22.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Location = new System.Drawing.Point(43, 21);
+            this.lblTitulo.Location = new System.Drawing.Point(34, 23);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(235, 31);
             this.lblTitulo.TabIndex = 64;
@@ -88,7 +90,7 @@
             this.DescuentoPorcentaje,
             this.Descuento,
             this.Subtotal});
-            this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(40, 333);
+            this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(40, 394);
             this.dgvDetalleOrdenVenta.Name = "dgvDetalleOrdenVenta";
             this.dgvDetalleOrdenVenta.ReadOnly = true;
             this.dgvDetalleOrdenVenta.RowHeadersWidth = 51;
@@ -98,11 +100,60 @@
             this.dgvDetalleOrdenVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleOrdenVenta_CellContentClick);
             this.dgvDetalleOrdenVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDetalleOrdenVenta_CellFormatting);
             // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre";
+            this.NombreProducto.MinimumWidth = 6;
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            this.NombreProducto.Width = 490;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cant";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // PrecioUnitario
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
+            this.PrecioUnitario.HeaderText = "Precio Unit";
+            this.PrecioUnitario.MinimumWidth = 6;
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Width = 200;
+            // 
+            // DescuentoPorcentaje
+            // 
+            this.DescuentoPorcentaje.HeaderText = "Porcentaje Descuento";
+            this.DescuentoPorcentaje.Name = "DescuentoPorcentaje";
+            this.DescuentoPorcentaje.ReadOnly = true;
+            this.DescuentoPorcentaje.Width = 130;
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Monto Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
+            this.Descuento.Width = 150;
+            // 
+            // Subtotal
+            // 
+            dataGridViewCellStyle3.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            this.Subtotal.Width = 200;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(796, 676);
+            this.label5.Location = new System.Drawing.Point(799, 733);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 61;
@@ -112,7 +163,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtTotal.Location = new System.Drawing.Point(894, 667);
+            this.txtTotal.Location = new System.Drawing.Point(897, 730);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(132, 32);
@@ -127,7 +178,7 @@
             this.gbCliente.Controls.Add(this.txtDNICliente);
             this.gbCliente.Controls.Add(this.lblDNICliente);
             this.gbCliente.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbCliente.Location = new System.Drawing.Point(46, 162);
+            this.gbCliente.Location = new System.Drawing.Point(40, 225);
             this.gbCliente.Name = "gbCliente";
             this.gbCliente.Size = new System.Drawing.Size(1043, 150);
             this.gbCliente.TabIndex = 58;
@@ -187,18 +238,40 @@
             // 
             // gbPedido
             // 
+            this.gbPedido.Controls.Add(this.txtEstado);
+            this.gbPedido.Controls.Add(this.label2);
             this.gbPedido.Controls.Add(this.txtIdMesa);
             this.gbPedido.Controls.Add(this.btnDocPago);
             this.gbPedido.Controls.Add(this.label6);
             this.gbPedido.Controls.Add(this.label1);
             this.gbPedido.Controls.Add(this.txtIDOrdenVenta);
             this.gbPedido.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbPedido.Location = new System.Drawing.Point(46, 72);
+            this.gbPedido.Location = new System.Drawing.Point(40, 80);
             this.gbPedido.Name = "gbPedido";
-            this.gbPedido.Size = new System.Drawing.Size(1043, 84);
+            this.gbPedido.Size = new System.Drawing.Size(1043, 121);
             this.gbPedido.TabIndex = 57;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Datos de la Orden de Venta";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtEstado.Location = new System.Drawing.Point(202, 77);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
+            this.txtEstado.Size = new System.Drawing.Size(224, 32);
+            this.txtEstado.TabIndex = 69;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label2.Location = new System.Drawing.Point(102, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 23);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Estado:";
             // 
             // txtIdMesa
             // 
@@ -213,7 +286,7 @@
             // 
             // btnDocPago
             // 
-            this.btnDocPago.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.btnDocPago.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.btnDocPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDocPago.Location = new System.Drawing.Point(656, 30);
             this.btnDocPago.Name = "btnDocPago";
@@ -254,55 +327,6 @@
             this.txtIDOrdenVenta.Size = new System.Drawing.Size(124, 32);
             this.txtIDOrdenVenta.TabIndex = 0;
             // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre";
-            this.NombreProducto.MinimumWidth = 6;
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 490;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cant";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // PrecioUnitario
-            // 
-            dataGridViewCellStyle2.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
-            this.PrecioUnitario.HeaderText = "Precio Unit";
-            this.PrecioUnitario.MinimumWidth = 6;
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            this.PrecioUnitario.Width = 200;
-            // 
-            // DescuentoPorcentaje
-            // 
-            this.DescuentoPorcentaje.HeaderText = "Porcentaje Descuento";
-            this.DescuentoPorcentaje.Name = "DescuentoPorcentaje";
-            this.DescuentoPorcentaje.ReadOnly = true;
-            this.DescuentoPorcentaje.Width = 130;
-            // 
-            // Descuento
-            // 
-            this.Descuento.HeaderText = "Monto Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.ReadOnly = true;
-            this.Descuento.Width = 150;
-            // 
-            // Subtotal
-            // 
-            dataGridViewCellStyle3.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.MinimumWidth = 6;
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            this.Subtotal.Width = 200;
-            // 
             // frmOrdenVentaMesero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,7 +339,7 @@
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.gbPedido);
             this.Name = "frmOrdenVentaMesero";
-            this.Text = " ";
+            this.Text = " Orden de Venta de Mesero";
             this.Load += new System.EventHandler(this.frmOrdenVenta_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmOrdenVenta_ClientSizeChanged);
             this.Click += new System.EventHandler(this.frmOrdenVenta_Click);
@@ -353,5 +377,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoPorcentaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Label label2;
     }
 }

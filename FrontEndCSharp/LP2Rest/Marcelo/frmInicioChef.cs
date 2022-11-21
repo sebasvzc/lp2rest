@@ -201,6 +201,11 @@ namespace LP2Rest
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
 
+        private void sdbtnVentas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario( new frmListarOrdenesVentaChef() );
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
