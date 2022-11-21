@@ -19,10 +19,10 @@ namespace LP2Rest
 
         //Utiles
         private GestPersonasWS.empleado empleadoSeleccionado;
-        private VentasWS.empleado empleadoBuscado;
+  
 
         public GestPersonasWS.empleado EmpleadoSeleccionado { get => empleadoSeleccionado; set => empleadoSeleccionado = value; }
-        public VentasWS.empleado EmpleadoBuscado { get => empleadoBuscado; set => empleadoBuscado = value; }
+
 
         public frmGestionEmpleadosBusquedaEmpleado()
         {

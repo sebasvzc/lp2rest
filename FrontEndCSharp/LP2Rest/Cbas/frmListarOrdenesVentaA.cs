@@ -113,7 +113,10 @@ namespace LP2Rest
 
                 frmGestionOrdenesVentaA formOrdVenAdmin = new frmGestionOrdenesVentaA(ordenVentaSeleccionada);
 
-                formOrdVenAdmin.ShowDialog();
+                if(formOrdVenAdmin.ShowDialog() == DialogResult.OK)
+                {
+                    btnBuscar_click(sender,e);
+                }
             }
         }
     }
