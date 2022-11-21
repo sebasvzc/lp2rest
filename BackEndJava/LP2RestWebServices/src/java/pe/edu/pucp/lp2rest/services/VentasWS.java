@@ -268,6 +268,17 @@ public class VentasWS {
         return lineasOrdenVenta;
     }
     
+    @WebMethod(operationName = "listarLineasOrdenVentaPorId")
+    public ArrayList<LineaOrdenVenta> listarLineasOrdenVentaPorId(@WebParam(name = "idLineaOrdenVenta") int idOrdenVenta) {
+        ArrayList<LineaOrdenVenta> lineasOrdenVenta = null;
+        try{
+            lineasOrdenVenta = daoLineaOrdenVenta.listarLineasPorId(idOrdenVenta);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return lineasOrdenVenta;
+    }
+    
     @WebMethod(operationName = "InsertarLineaOrdenVenta")
     public int InsertarLineaOrdenVenta(@WebParam(name = "lineaOrdenVenta") LineaOrdenVenta lineaOrdenVenta) {
         int resultado = 0;

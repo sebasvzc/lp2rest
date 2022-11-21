@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbltimer = new System.Windows.Forms.Label();
             this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.sdbtnVentas = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
@@ -174,6 +175,7 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panelIzquierdo.Controls.Add(this.button1);
             this.panelIzquierdo.Controls.Add(this.panel4);
             this.panelIzquierdo.Controls.Add(this.sdbtnVentas);
             this.panelIzquierdo.Controls.Add(this.sdbtnPlatos);
@@ -312,6 +314,23 @@
             this.panel1.Size = new System.Drawing.Size(1100, 4);
             this.panel1.TabIndex = 25;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.button1.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(14, 249);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(215, 59);
+            this.button1.TabIndex = 37;
+            this.button1.Text = " Ventas";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -371,6 +390,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbltimer;
         private System.Windows.Forms.Timer timer1;

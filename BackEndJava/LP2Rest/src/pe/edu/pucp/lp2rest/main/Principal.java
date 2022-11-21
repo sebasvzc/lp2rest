@@ -46,12 +46,15 @@ import pe.edu.pucp.lp2rest.menu.model.TipoItem;
 import pe.edu.pucp.lp2rest.menu.mysql.ItemVentaMySQL;
 import pe.edu.pucp.lp2rest.menu.mysql.TipoItemMySQL;
 import pe.edu.pucp.lp2rest.ventas.dao.DocumentoPagoDAO;
+import pe.edu.pucp.lp2rest.ventas.dao.LineaOrdenVentaDAO;
 import pe.edu.pucp.lp2rest.ventas.dao.MesaDAO;
 import pe.edu.pucp.lp2rest.ventas.dao.OrdenVentaDAO;
 import pe.edu.pucp.lp2rest.ventas.model.DocumentoPago;
+import pe.edu.pucp.lp2rest.ventas.model.LineaOrdenVenta;
 import pe.edu.pucp.lp2rest.ventas.model.Mesa;
 import pe.edu.pucp.lp2rest.ventas.model.OrdenVenta;
 import pe.edu.pucp.lp2rest.ventas.mysql.DocumentoPagoMySQL;
+import pe.edu.pucp.lp2rest.ventas.mysql.LineaOrdenVentaMySQL;
 import pe.edu.pucp.lp2rest.ventas.mysql.MesaMySQL;
 import pe.edu.pucp.lp2rest.ventas.mysql.OrdenVentaMySQL;
 
@@ -69,6 +72,10 @@ public class Principal {
 //           System.out.println(auxRec.getFechaRegistro().toString());
 //           System.out.println(" ");
 //        }
+    
+    OrdenVentaDAO daoOrdenVenta = new OrdenVentaMySQL();
+    daoOrdenVenta.actualizar(69);
+    /*
     MeseroDAO daoMesero = new MeseroMySQL();
     ArrayList<Mesero> meseros;
     meseros = daoMesero.listarTodas();
@@ -107,8 +114,8 @@ public class Principal {
     platoPrueba.getTipoItem().setIdTipoItem(1);
     platoPrueba.setDisponible(0);    
     platoPrueba.setDescuento(5.99);
-    platoPrueba.setRecetaDePreparacion("Colocar en un bol los ajos, aceite, pimienta, sal, comino, orégano, vinagre y ají panca. Mezclar todo.");
-      
+    platoPrueba.setRecetaDePreparacion("Colocar en un bol los ajos, aceite, pimienta, sal, comino, orégano, vinagre y ají panca. Mezclar todo.") ;
+  
       
 //    MeseroDAO daoMesero = new MeseroMySQL();
 //    ArrayList<Mesero> meseros;
@@ -129,6 +136,7 @@ public class Principal {
 //    eventoPrueba.setMonto_pagar(21.21);
 //    eventoPrueba.setNombre("Nombre modificado");
 //    
+    
 //    EventoDAO daoEvento = new EventoMySQL();
 //    //int resultadoModificar = daoEvento.modificar(eventoPrueba);
 //    //System.out.println("Valor de result: " + resultadoModificar);
@@ -141,7 +149,7 @@ public class Principal {
 //    for(TipoItem tip : tipos){
 //       //System.out.println("Nombre: " + tip.getDescripcion());
 //    }
-//    
+    
 //    ItemVentaDAO daoItemVenta = new ItemVentaMySQL();
 //    ArrayList<ItemVenta> itemsVenta = daoItemVenta.filtrarItemsVenta("CEVICHE",1, 0, 99999, 1);
 //    for(ItemVenta iv : itemsVenta){
@@ -386,6 +394,6 @@ public class Principal {
 //           System.out.println("Se pudo insertar correctamente");
 //         }
           
-          
+          */
     }
 }

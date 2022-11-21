@@ -20,7 +20,6 @@ public class OrdenVenta {
     private Mesa mesa;
     private Cliente cliente;
     private String estado;
-
     //constructor
     public OrdenVenta() {
 
@@ -122,5 +121,6 @@ public class OrdenVenta {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
+    
+    
 }

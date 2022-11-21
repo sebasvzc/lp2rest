@@ -47,14 +47,14 @@ namespace LP2Rest
             this.lblDNI = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeleccionarImagen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAdjuntarCV = new System.Windows.Forms.Button();
+            this.btnDescargarCV = new System.Windows.Forms.Button();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -64,7 +64,7 @@ namespace LP2Rest
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -235,15 +235,16 @@ namespace LP2Rest
             this.lblTitulo.Text = "GESTIÓN DE USUARIOS";
             this.lblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTitulo_MouseDown);
             // 
-            // button1
+            // btnSeleccionarImagen
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.button1.Location = new System.Drawing.Point(73, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 35);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Seleccionar Imagen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSeleccionarImagen.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.btnSeleccionarImagen.Location = new System.Drawing.Point(73, 210);
+            this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+            this.btnSeleccionarImagen.Size = new System.Drawing.Size(222, 35);
+            this.btnSeleccionarImagen.TabIndex = 43;
+            this.btnSeleccionarImagen.Text = "Seleccionar Imagen";
+            this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+            this.btnSeleccionarImagen.Click += new System.EventHandler(this.btnSeleccionarImagen_Click);
             // 
             // label1
             // 
@@ -281,36 +282,38 @@ namespace LP2Rest
             this.txtTelefono.Size = new System.Drawing.Size(208, 32);
             this.txtTelefono.TabIndex = 46;
             // 
-            // button2
+            // btnAdjuntarCV
             // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.button2.Location = new System.Drawing.Point(73, 253);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 35);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "Adjuntar CV";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAdjuntarCV.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.btnAdjuntarCV.Location = new System.Drawing.Point(73, 253);
+            this.btnAdjuntarCV.Name = "btnAdjuntarCV";
+            this.btnAdjuntarCV.Size = new System.Drawing.Size(181, 35);
+            this.btnAdjuntarCV.TabIndex = 48;
+            this.btnAdjuntarCV.Text = "Adjuntar CV";
+            this.btnAdjuntarCV.UseVisualStyleBackColor = true;
+            this.btnAdjuntarCV.Click += new System.EventHandler(this.btnAdjuntarCV_Click);
             // 
-            // button3
+            // btnDescargarCV
             // 
-            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources.file_info_40446;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(260, 253);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 35);
-            this.button3.TabIndex = 49;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDescargarCV.BackgroundImage = global::LP2Rest.Properties.Resources.file_info_40446;
+            this.btnDescargarCV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDescargarCV.Location = new System.Drawing.Point(260, 253);
+            this.btnDescargarCV.Name = "btnDescargarCV";
+            this.btnDescargarCV.Size = new System.Drawing.Size(35, 35);
+            this.btnDescargarCV.TabIndex = 49;
+            this.btnDescargarCV.UseVisualStyleBackColor = true;
+            this.btnDescargarCV.Click += new System.EventHandler(this.btnDescargarCV_Click);
             // 
-            // pictureBox1
+            // pbFoto
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::LP2Rest.Properties.Resources.Screenshot_2022_09_28_112459;
-            this.pictureBox1.Location = new System.Drawing.Point(73, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 163);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbFoto.Image = global::LP2Rest.Properties.Resources.Screenshot_2022_09_28_112459;
+            this.pbFoto.Location = new System.Drawing.Point(73, 36);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(222, 163);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto.TabIndex = 42;
+            this.pbFoto.TabStop = false;
             // 
             // groupBox1
             // 
@@ -354,10 +357,10 @@ namespace LP2Rest
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.btnDescargarCV);
+            this.groupBox3.Controls.Add(this.btnAdjuntarCV);
+            this.groupBox3.Controls.Add(this.btnSeleccionarImagen);
+            this.groupBox3.Controls.Add(this.pbFoto);
             this.groupBox3.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.groupBox3.Location = new System.Drawing.Point(91, 148);
             this.groupBox3.Name = "groupBox3";
@@ -459,7 +462,7 @@ namespace LP2Rest
             this.Name = "frmGestionUsuariosA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Usuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -490,14 +493,14 @@ namespace LP2Rest
         private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.Button btnSeleccionarImagen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Button button2;
-        private Button button3;
+        private System.Windows.Forms.Button btnAdjuntarCV;
+        private Button btnDescargarCV;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;

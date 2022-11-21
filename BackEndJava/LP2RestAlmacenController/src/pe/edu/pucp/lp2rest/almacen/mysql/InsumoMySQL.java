@@ -211,7 +211,7 @@ public class InsumoMySQL implements InsumoDAO {
                 insumo.setIdInsumo(rs.getInt("id_insumo"));
                 insumo.setSKU(rs.getString("sku"));
                 insumo.setNombre(rs.getString("nombre"));
-                insumo.setStock(rs.getInt("cantidad"));
+                insumo.setStock(rs.getDouble("cantidad"));
                 insumo.setPrecioCompra(rs.getDouble("precio_compra"));
                 insumos.add(insumo);
             }
