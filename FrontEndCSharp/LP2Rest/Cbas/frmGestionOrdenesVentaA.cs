@@ -31,6 +31,7 @@ namespace LP2Rest
         private VentasWS.mesero meseroSeleccionado;
         private VentasWS.cajero cajeroSeleccionado;
         private MenuWS.itemVenta itemSeleccionado;
+        private GestPersonasWS.cliente cliente;
         private double total;
         
 
@@ -131,7 +132,16 @@ namespace LP2Rest
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             frmGestionClientes formGestionClientes = new frmGestionClientes();
-            formGestionClientes.ShowDialog();
+            if (formGestionClientes.ShowDialog() == DialogResult.OK)
+            {
+                cliente = formGestionClientes.clienteSeleccionado;
+                txtDNICliente.Text = cliente.DNI.ToString();
+                txtNombreCliente.Text = cliente.nombre + " " + cliente.apellidoPaterno;
+                ordenVentaActual.cliente.idPersona = cliente.idPersona;
+                ordenVentaActual.cliente.nombre = cliente.nombre;
+                ordenVentaActual.cliente.apellidoPaterno = cliente.apellidoPaterno;
+                ordenVentaActual.cliente.DNI = cliente.DNI;
+            }
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
