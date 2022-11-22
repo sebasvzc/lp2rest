@@ -17,6 +17,12 @@
   <message name="generarReporteAsistenciaResponse">
     <part name="parameters" element="tns:generarReporteAsistenciaResponse" />
   </message>
+  <message name="generarBoletaVenta">
+    <part name="parameters" element="tns:generarBoletaVenta" />
+  </message>
+  <message name="generarBoletaVentaResponse">
+    <part name="parameters" element="tns:generarBoletaVentaResponse" />
+  </message>
   <message name="generarReporteOrdenVentas">
     <part name="parameters" element="tns:generarReporteOrdenVentas" />
   </message>
@@ -37,6 +43,10 @@
     <operation name="generarReporteAsistencia">
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest" message="tns:generarReporteAsistencia" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse" message="tns:generarReporteAsistenciaResponse" />
+    </operation>
+    <operation name="generarBoletaVenta">
+      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest" message="tns:generarBoletaVenta" />
+      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse" message="tns:generarBoletaVentaResponse" />
     </operation>
     <operation name="generarReporteOrdenVentas">
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasRequest" message="tns:generarReporteOrdenVentas" />
@@ -59,6 +69,15 @@
       </output>
     </operation>
     <operation name="generarReporteAsistencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarBoletaVenta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -59,7 +59,6 @@
             this.nombreEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoReclamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReclamos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -138,8 +137,7 @@
             this.nombreCliente,
             this.nombreEmpleado,
             this.fechaEvento,
-            this.estadoReclamo,
-            this.Descripcion});
+            this.estadoReclamo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -380,13 +378,6 @@
             this.estadoReclamo.ReadOnly = true;
             this.estadoReclamo.Width = 90;
             // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 500;
-            // 
             // frmListarReclamosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,6 +442,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoReclamo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

@@ -105,28 +105,28 @@
             this.nombreEvento.HeaderText = "Nombre";
             this.nombreEvento.Name = "nombreEvento";
             this.nombreEvento.ReadOnly = true;
-            this.nombreEvento.Width = 400;
+            this.nombreEvento.Width = 360;
             // 
             // fechaEvento
             // 
             this.fechaEvento.HeaderText = "Fecha";
             this.fechaEvento.Name = "fechaEvento";
             this.fechaEvento.ReadOnly = true;
-            this.fechaEvento.Width = 175;
+            this.fechaEvento.Width = 213;
             // 
             // artistaEvento
             // 
             this.artistaEvento.HeaderText = "Artista";
             this.artistaEvento.Name = "artistaEvento";
             this.artistaEvento.ReadOnly = true;
-            this.artistaEvento.Width = 150;
+            this.artistaEvento.Width = 210;
             // 
             // costoEvento
             // 
             this.costoEvento.HeaderText = "Costo";
             this.costoEvento.Name = "costoEvento";
             this.costoEvento.ReadOnly = true;
-            this.costoEvento.Width = 140;
+            this.costoEvento.Width = 160;
             // 
             // txtCostMax
             // 

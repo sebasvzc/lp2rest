@@ -20,7 +20,7 @@ namespace LP2Rest
         private ordenVenta[] ordenesVentasActuales;
         private ordenVenta ordenVentaSeleccionada;
 
-        public frmListarOrdenesVentaA()
+        private void inicializacion()
         {
             daoVentas = new VentasWS.VentasWSClient();
 
@@ -29,7 +29,20 @@ namespace LP2Rest
             dgvOrdenesVentas.AutoGenerateColumns = false;
 
             btnNuevo.Enabled = false;
-            
+        }
+
+        public frmListarOrdenesVentaA()
+        {
+            inicializacion();
+        }
+
+        public frmListarOrdenesVentaA(bool mostrarNuevo)
+        {
+            inicializacion();
+            if (!mostrarNuevo)
+            {
+                btnNuevo.Hide();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
