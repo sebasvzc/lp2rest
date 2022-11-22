@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.sdbtnVentas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.sdbtnMesas = new System.Windows.Forms.Button();
             this.sdbtnReportes = new System.Windows.Forms.Button();
@@ -46,7 +47,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.sdbtnVentas = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelSuperior.SuspendLayout();
@@ -56,8 +57,8 @@
             // panelIzquierdo
             // 
             this.panelIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.panelIzquierdo.Controls.Add(this.sdbtnVentas);
             this.panelIzquierdo.Controls.Add(this.panel4);
+            this.panelIzquierdo.Controls.Add(this.sdbtnVentas);
             this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnReportes);
             this.panelIzquierdo.Controls.Add(this.pbLogo);
@@ -68,6 +69,23 @@
             this.panelIzquierdo.Size = new System.Drawing.Size(256, 876);
             this.panelIzquierdo.TabIndex = 50;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
+            // 
+            // sdbtnVentas
+            // 
+            this.sdbtnVentas.FlatAppearance.BorderSize = 0;
+            this.sdbtnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sdbtnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.sdbtnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
+            this.sdbtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sdbtnVentas.Location = new System.Drawing.Point(3, 488);
+            this.sdbtnVentas.Name = "sdbtnVentas";
+            this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnVentas.Size = new System.Drawing.Size(253, 59);
+            this.sdbtnVentas.TabIndex = 45;
+            this.sdbtnVentas.Text = "  Ventas";
+            this.sdbtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sdbtnVentas.UseVisualStyleBackColor = true;
+            this.sdbtnVentas.Click += new System.EventHandler(this.sdbtnVentas_Click);
             // 
             // panel4
             // 
@@ -85,10 +103,10 @@
             this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
             this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnMesas.Location = new System.Drawing.Point(9, 153);
+            this.sdbtnMesas.Location = new System.Drawing.Point(3, 332);
             this.sdbtnMesas.Name = "sdbtnMesas";
             this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnMesas.Size = new System.Drawing.Size(257, 59);
+            this.sdbtnMesas.Size = new System.Drawing.Size(253, 59);
             this.sdbtnMesas.TabIndex = 44;
             this.sdbtnMesas.Text = "  Mesas";
             this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -102,10 +120,10 @@
             this.sdbtnReportes.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReportes.Image = global::LP2Rest.Properties.Resources.imgReportesIcon_small;
             this.sdbtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReportes.Location = new System.Drawing.Point(3, 232);
+            this.sdbtnReportes.Location = new System.Drawing.Point(3, 411);
             this.sdbtnReportes.Name = "sdbtnReportes";
             this.sdbtnReportes.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnReportes.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnReportes.Size = new System.Drawing.Size(253, 59);
             this.sdbtnReportes.TabIndex = 39;
             this.sdbtnReportes.Text = "  Reportes";
             this.sdbtnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -143,7 +161,7 @@
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // panelSuperior
             // 
@@ -257,11 +275,12 @@
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 26;
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.Window;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.Control;
+            this.panelContenedor.Controls.Add(this.label3);
             this.panelContenedor.Controls.Add(this.panel5);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
@@ -283,22 +302,17 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // sdbtnVentas
+            // label3
             // 
-            this.sdbtnVentas.FlatAppearance.BorderSize = 0;
-            this.sdbtnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sdbtnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
-            this.sdbtnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
-            this.sdbtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnVentas.Location = new System.Drawing.Point(9, 309);
-            this.sdbtnVentas.Name = "sdbtnVentas";
-            this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnVentas.Size = new System.Drawing.Size(230, 59);
-            this.sdbtnVentas.TabIndex = 45;
-            this.sdbtnVentas.Text = "  Ventas";
-            this.sdbtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sdbtnVentas.UseVisualStyleBackColor = true;
-            this.sdbtnVentas.Click += new System.EventHandler(this.sdbtnVentas_Click);
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(85, 183);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(933, 352);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "insertar mensaje de bienvenida";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPrincipalCajero
             // 
@@ -341,5 +355,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbltimer;
         private System.Windows.Forms.Button sdbtnVentas;
+        private System.Windows.Forms.Label label3;
     }
 }

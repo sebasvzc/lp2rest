@@ -27,6 +27,8 @@ namespace LP2Rest
         private VentasWS.cajero cajeroActual;
         private GestPersonasWS.empleado empleadoActual;
 
+        private bool registroAsistencia = false;
+        private bool registroSalida = false;
 
         int hh, mm, ss;
         private int idAsistencia = 0;
@@ -53,6 +55,9 @@ namespace LP2Rest
             cajeroActual.nombre = empleadoActual.nombre;
             cajeroActual.apellidoPaterno = empleadoActual.apellidoPaterno;
 
+            label3.Text = "¡Buenos días, " + empleadoActual.nombre + " " + empleadoActual.apellidoPaterno + "!\n\n"
+                        + "Por favor no olvide registrar su asistencia\n"
+                        + "haciendo click botón superior.";
         }
 
         public void abrirFormulario(Form formularioMostrar)
@@ -135,6 +140,7 @@ namespace LP2Rest
 
         private void btnMarcarAsistencia_Click(object sender, EventArgs e)
         {
+            registroAsistencia = true;
             string resultado = "";
             frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
             if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
@@ -188,45 +194,48 @@ namespace LP2Rest
 
         private void btnMarcarSalida_Click(object sender, EventArgs e)
         {
-            string resultado = "";
-            frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
-            if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
+            if (registroAsistencia)
             {
-                resultado = formValidarAsistencia.Estado;
-            }
-            if (resultado == "Aceptado")
-            {
-                //Insertar la fecha de registro
-
-                //Se registra el empleado utilizando el DAO de conexión
-
-                int resultadoInsercion = 0;
-                // Para registrar la salida
-                DateTime salida = DateTime.Now;
-
-                string date_str = salida.ToString("yyyy/MM/dd");
-                string hora_str = salida.ToString("HH:mm:ss");
-                _asistencia.fechaSalida = date_str;
-                _asistencia.horaSalida = hora_str;
-
-                timer1.Stop();
-
-
-                resultadoInsercion = _daoAsistencia.modificarAsistenciaSalida(idAsistencia,
-                    _asistencia.fechaSalida, _asistencia.horaSalida);
-                if (resultadoInsercion != 0)
+                registroSalida = true;
+                string resultado = "";
+                frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
+                if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("Se registró exitosamente la salida");
-                    btnMarcarSalida.Hide();
+                    resultado = formValidarAsistencia.Estado;
                 }
-                else
+                if (resultado == "Aceptado")
                 {
-                    MessageBox.Show("Ha ocurrido un error al momento de registrar la salida", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Insertar la fecha de registro
+
+                    //Se registra el empleado utilizando el DAO de conexión
+
+                    int resultadoInsercion = 0;
+                    // Para registrar la salida
+                    DateTime salida = DateTime.Now;
+
+                    string date_str = salida.ToString("yyyy/MM/dd");
+                    string hora_str = salida.ToString("HH:mm:ss");
+                    _asistencia.fechaSalida = date_str;
+                    _asistencia.horaSalida = hora_str;
+
+                    timer1.Stop();
+
+
+                    resultadoInsercion = _daoAsistencia.modificarAsistenciaSalida(idAsistencia,
+                        _asistencia.fechaSalida, _asistencia.horaSalida);
+                    if (resultadoInsercion != 0)
+                    {
+                        MessageBox.Show("Se registró exitosamente la salida");
+                        btnMarcarSalida.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error al momento de registrar la salida", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+
                 }
-
-
-
-
             }
         }
 
@@ -243,6 +252,13 @@ namespace LP2Rest
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarOrdenesVentaCajero(cajeroActual) );
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            if(registroSalida == false)
+                btnMarcarSalida_Click(sender, e);
+            this.Close();
         }
 
         private void sdbtnReportes_Click(object sender, EventArgs e)

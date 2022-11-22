@@ -220,7 +220,7 @@
             this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
             this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnMesas.Location = new System.Drawing.Point(3, 272);
+            this.sdbtnMesas.Location = new System.Drawing.Point(3, 455);
             this.sdbtnMesas.Name = "sdbtnMesas";
             this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
@@ -237,10 +237,10 @@
             this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
             this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 207);
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 390);
             this.sdbtnReclamos.Name = "sdbtnReclamos";
             this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnReclamos.Size = new System.Drawing.Size(294, 59);
+            this.sdbtnReclamos.Size = new System.Drawing.Size(259, 59);
             this.sdbtnReclamos.TabIndex = 51;
             this.sdbtnReclamos.Text = "  Reclamos";
             this.sdbtnReclamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -254,7 +254,7 @@
             this.sdbtnReservas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReservas.Image = global::LP2Rest.Properties.Resources.imgReservaSmall42x42;
             this.sdbtnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReservas.Location = new System.Drawing.Point(0, 337);
+            this.sdbtnReservas.Location = new System.Drawing.Point(0, 520);
             this.sdbtnReservas.Name = "sdbtnReservas";
             this.sdbtnReservas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReservas.Size = new System.Drawing.Size(256, 59);
@@ -272,7 +272,7 @@
             this.sdbtnClientes.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnClientes.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_small;
             this.sdbtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnClientes.Location = new System.Drawing.Point(0, 142);
+            this.sdbtnClientes.Location = new System.Drawing.Point(0, 325);
             this.sdbtnClientes.Name = "sdbtnClientes";
             this.sdbtnClientes.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnClientes.Size = new System.Drawing.Size(256, 59);
