@@ -145,7 +145,7 @@ namespace LP2Rest
                 frmNuevoInsumo frm = new frmNuevoInsumo(insumoSeleccionado);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-
+                    btnBuscar.PerformClick();
                 }
             }
         }
@@ -162,9 +162,12 @@ namespace LP2Rest
                 {
                     int resultado = daoGestAlmacen.EliminarInsumo(insumoSeleccionado.idInsumo);
                     if (resultado == 1)
-                        MessageBox.Show("Se ha eliminado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    { 
+                        MessageBox.Show("Se ha eliminado exitosamente el insumo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnBuscar.PerformClick();
+                    }
                     else
-                        MessageBox.Show("Ha ocurrido un error al momento de eliminar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ha ocurrido un error al momento de eliminar el insumo", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

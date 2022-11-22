@@ -28,6 +28,7 @@ namespace LP2Rest
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.empleado _empleado;
         private bool registroAsistencia=false;
+        private bool registroSalida = false;
         private int id_cuentaEscogida;
         int hh, mm, ss;
         private int idAsistencia = 0;
@@ -144,7 +145,8 @@ namespace LP2Rest
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            btnRegistrarSalida_Click(sender, e);
+            if(registroSalida == false)
+                btnRegistrarSalida_Click(sender, e);
             this.Close();
         }
 
@@ -211,7 +213,8 @@ namespace LP2Rest
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            btnRegistrarSalida_Click(sender, e);
+            if (registroSalida == false)
+                btnRegistrarSalida_Click(sender, e);
             Close();
         }
 
@@ -251,6 +254,7 @@ namespace LP2Rest
         {
             if (registroAsistencia) { 
                 string resultado = "";
+                registroSalida = true;
                 frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
                 if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
                 {
