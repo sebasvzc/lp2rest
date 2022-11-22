@@ -60,6 +60,12 @@
     <Compile Include="Cbas\frmGestionEmpleadosBusquedaEmpleado.Designer.cs">
       <DependentUpon>frmGestionEmpleadosBusquedaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cbas\frmListarOrdenesVentaCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cbas\frmListarOrdenesVentaCajero.Designer.cs">
+      <DependentUpon>frmListarOrdenesVentaCajero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cbas\frmListarOrdenesVentaChef.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,18 @@
     </Compile>
     <Compile Include="Gerard\frmNuevaContrasenia.Designer.cs">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmDocumentoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmDocumentoPago.Designer.cs">
+      <DependentUpon>frmDocumentoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerard\frmOrdenVentaCajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerard\frmOrdenVentaCajero.Designer.cs">
+      <DependentUpon>frmOrdenVentaCajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Gerard\frmOrdenVentaChef.cs">
       <SubType>Form</SubType>
@@ -457,6 +475,10 @@
       <DependentUpon>frmGestionEmpleadosBusquedaEmpleado.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cbas\frmListarOrdenesVentaCajero.resx">
+      <DependentUpon>frmListarOrdenesVentaCajero.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cbas\frmListarOrdenesVentaChef.resx">
       <DependentUpon>frmListarOrdenesVentaChef.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -469,6 +491,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerard\frmNuevaContrasenia.resx">
       <DependentUpon>frmNuevaContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmDocumentoPago.resx">
+      <DependentUpon>frmDocumentoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerard\frmOrdenVentaCajero.resx">
+      <DependentUpon>frmOrdenVentaCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerard\frmOrdenVentaChef.resx">
       <DependentUpon>frmOrdenVentaChef.cs</DependentUpon>
@@ -1096,6 +1124,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ModificarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ObtenerDocumentoDePagoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ordenVenta.datasource">

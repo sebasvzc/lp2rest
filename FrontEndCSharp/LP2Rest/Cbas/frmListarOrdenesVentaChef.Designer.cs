@@ -52,10 +52,10 @@
             this.txtNombCli = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,7 +178,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvOrdenesVentas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvOrdenesVentas.Location = new System.Drawing.Point(53, 266);
+            this.dgvOrdenesVentas.Location = new System.Drawing.Point(12, 299);
             this.dgvOrdenesVentas.Name = "dgvOrdenesVentas";
             this.dgvOrdenesVentas.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -190,7 +190,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvOrdenesVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrdenesVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenesVentas.Size = new System.Drawing.Size(986, 423);
+            this.dgvOrdenesVentas.Size = new System.Drawing.Size(1086, 385);
             this.dgvOrdenesVentas.TabIndex = 58;
             this.dgvOrdenesVentas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenesVentas_CellFormatting);
             // 
@@ -274,20 +274,6 @@
             this.label8.Text = "Cliente";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(924, 713);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(115, 41);
-            this.btnEliminar.TabIndex = 102;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
@@ -302,21 +288,6 @@
             this.btnModificar.Text = "Ver";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(682, 713);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(115, 41);
-            this.btnNuevo.TabIndex = 100;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
@@ -334,15 +305,41 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_click);
             // 
-            // frmListarOrdenesVentaA
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 17.25F);
+            this.label9.Location = new System.Drawing.Point(53, 247);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 29);
+            this.label9.TabIndex = 104;
+            this.label9.Text = "Estado:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Items.AddRange(new object[] {
+            "Administrador",
+            "Mesero",
+            "Cajero",
+            "Recepcionista",
+            "Chef"});
+            this.cboEstado.Location = new System.Drawing.Point(147, 247);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(210, 33);
+            this.cboEstado.TabIndex = 105;
+            // 
+            // frmListarOrdenesVentaChef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 774);
+            this.ClientSize = new System.Drawing.Size(1139, 774);
+            this.Controls.Add(this.cboEstado);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNombCli);
             this.Controls.Add(this.label7);
@@ -359,7 +356,7 @@
             this.Controls.Add(this.dtpFechaIni);
             this.Controls.Add(this.dgvOrdenesVentas);
             this.Controls.Add(this.label6);
-            this.Name = "frmListarOrdenesVentaA";
+            this.Name = "frmListarOrdenesVentaChef";
             this.Text = "Listado de Ventas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenesVentas)).EndInit();
             this.ResumeLayout(false);
@@ -384,14 +381,14 @@
         private System.Windows.Forms.TextBox txtNombCli;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Area;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboEstado;
     }
 }

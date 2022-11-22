@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LP2Rest
 {
@@ -24,11 +25,21 @@ namespace LP2Rest
         {
             daoVentas = new VentasWS.VentasWSClient();
 
+            List<string> listaEstados = new List<string>()
+                    {
+                        "Sin antender",
+                        "En Preparacion",
+                        " -",
+                    };
+
             InitializeComponent();
+
+            cboEstado.DataSource = listaEstados;
+            cboEstado.SelectedIndex = 0;
 
             dgvOrdenesVentas.AutoGenerateColumns = false;
 
-            btnNuevo.Enabled = false;
+            //btnNuevo.Enabled = false;
             
         }
 
@@ -78,8 +89,23 @@ namespace LP2Rest
                 dgvOrdenesVentas.DataSource = null;
             }
             else
-            {
-                dgvOrdenesVentas.DataSource = ordenesVentasActuales;
+            {                
+                if (cboEstado.SelectedValue.ToString() == " -")
+                {
+                    dgvOrdenesVentas.DataSource = ordenesVentasActuales;
+                }
+                else
+                {
+                    //dgvOrdenesVentas.DataSource = ordenesVentasActuales;
+                    BindingList<ordenVenta> listaaux = new BindingList<ordenVenta>();
+
+                    for (int a = 0; a < ordenesVentasActuales.Length; a++) {
+                        if (ordenesVentasActuales[a].estado == cboEstado.SelectedValue.ToString()) listaaux.Add(ordenesVentasActuales[a]);
+                    }
+                    
+                    dgvOrdenesVentas.DataSource = listaaux;
+
+                 }
             }
         }
 
@@ -118,6 +144,16 @@ namespace LP2Rest
                     btnBuscar_click(sender,e);
                 }
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

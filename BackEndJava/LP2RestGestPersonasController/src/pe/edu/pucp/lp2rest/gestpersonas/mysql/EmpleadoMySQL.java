@@ -215,5 +215,55 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     
     
     }
+
+    @Override
+    public Empleado obtener(int idCuenta) {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Empleado resultado = null;
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call BUSCAR_EMPLEADO_X_IDCUENTAUSUARIO(?)");
+            cs.setInt("_id_cuentaUsuario", idCuenta);
+            rs = cs.executeQuery();
+            String cargoEmp;
+            while(rs.next()){
+                Empleado auxEmp;
+                cargoEmp = rs.getString("cargoEmpleado");
+                switch(cargoEmp){
+                    case "A":
+                        auxEmp = new Administrador();
+                         break;
+                    case "R":
+                        auxEmp = new Recepcionista();
+                        break;
+                    case "F":
+                        auxEmp = new Chef();
+                        break;
+                    case "C":
+                        auxEmp = new Cajero();
+                        break;
+                    case "M":
+                        auxEmp = new Mesero();
+                        break;  
+                    default:
+                        auxEmp = new Empleado();
+                }
+                
+                auxEmp.setIdPersona(rs.getInt("idEmpleado"));
+                auxEmp.setNombre(rs.getString("nombres"));
+                auxEmp.setApellidoPaterno(rs.getString("apellidos"));
+                auxEmp.setDNI(rs.getString("DNI"));
+              
+                
+                resultado = auxEmp;
+            }
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
     
 }
