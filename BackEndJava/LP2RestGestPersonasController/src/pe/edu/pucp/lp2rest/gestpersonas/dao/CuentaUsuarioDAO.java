@@ -15,4 +15,6 @@ public interface CuentaUsuarioDAO {
     int enviarCorreoRecuperacion(String correo);
     int verificarCodigoVerificacion(int idCuentaUsuario, String codigo);
     int actualizarContrasenia(int idCuentaUsuario, String contrasenia);
+    int enviarCorreoBienvenida(String correo, String nombre, String apellidoPaterno,
+            String usuario, String contrasenia);
 }

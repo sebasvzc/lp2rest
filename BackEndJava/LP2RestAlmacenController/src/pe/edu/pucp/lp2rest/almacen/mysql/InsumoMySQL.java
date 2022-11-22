@@ -132,6 +132,8 @@ public class InsumoMySQL implements InsumoDAO {
                 insumo.setSKU(rs.getString("sku"));                
                 insumo.setNombre(rs.getString("nombre"));
                 insumo.setPrecioCompra(rs.getDouble("precio_compra"));
+                UnidadMedida um= UnidadMedida.valueOf(rs.getString("unidad_medida"));
+                insumo.setUnidadMedida(um);
                 insumos.add(insumo);
             }
         }catch(Exception ex){

@@ -60,6 +60,7 @@ namespace LP2Rest
             dgvInsumos.Rows[e.RowIndex].Cells[0].Value = insumo.SKU;
             dgvInsumos.Rows[e.RowIndex].Cells[1].Value = insumo.nombre;
             dgvInsumos.Rows[e.RowIndex].Cells[2].Value = insumo.precioCompra.ToString("N2");
+            dgvInsumos.Rows[e.RowIndex].Cells[3].Value = insumo.unidadMedida;
         }
     }
 }
