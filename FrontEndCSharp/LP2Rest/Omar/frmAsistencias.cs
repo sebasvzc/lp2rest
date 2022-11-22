@@ -39,6 +39,11 @@ namespace LP2Rest
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            if(txtNombre.Text.Trim() == "")
+            {
+                MessageBox.Show("Debe ingresar un empleado obligatoriamente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DateTime fecha_ini = new DateTime();
             DateTime fecha_fin = new DateTime();
 
