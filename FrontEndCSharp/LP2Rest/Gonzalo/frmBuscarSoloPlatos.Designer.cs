@@ -32,8 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvItemsVenta = new System.Windows.Forms.DataGridView();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPedido = new System.Windows.Forms.GroupBox();
-            this.btnSeleccionarPlato = new System.Windows.Forms.Button();
             this.txtPrecioMax = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,20 +47,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscarPlatoCombo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cboDisponible = new System.Windows.Forms.ComboBox();
+            this.btnSeleccionarPlato = new System.Windows.Forms.Button();
+            this.btnBuscarPlatoCombo = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemsVenta)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -107,6 +107,46 @@
             this.dgvItemsVenta.TabIndex = 145;
             this.dgvItemsVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvItemsVenta_CellFormatting);
             // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "ID Plato";
+            this.NombreCompleto.MinimumWidth = 6;
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            this.NombreCompleto.Width = 150;
+            // 
+            // Teléfono
+            // 
+            this.Teléfono.HeaderText = "Nombre";
+            this.Teléfono.MinimumWidth = 6;
+            this.Teléfono.Name = "Teléfono";
+            this.Teléfono.ReadOnly = true;
+            this.Teléfono.Width = 300;
+            // 
+            // Categoría
+            // 
+            this.Categoría.HeaderText = "Categoría";
+            this.Categoría.MinimumWidth = 6;
+            this.Categoría.Name = "Categoría";
+            this.Categoría.ReadOnly = true;
+            this.Categoría.Width = 200;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Precio";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 140;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 150;
+            // 
             // gbPedido
             // 
             this.gbPedido.BackColor = System.Drawing.SystemColors.Control;
@@ -129,21 +169,6 @@
             this.gbPedido.TabIndex = 147;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Seleccione criterio de búsqueda";
-            // 
-            // btnSeleccionarPlato
-            // 
-            this.btnSeleccionarPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.btnSeleccionarPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionarPlato.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnSeleccionarPlato.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionarPlato.Location = new System.Drawing.Point(815, 704);
-            this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSeleccionarPlato.Name = "btnSeleccionarPlato";
-            this.btnSeleccionarPlato.Size = new System.Drawing.Size(217, 45);
-            this.btnSeleccionarPlato.TabIndex = 151;
-            this.btnSeleccionarPlato.Text = "Seleccionar";
-            this.btnSeleccionarPlato.UseVisualStyleBackColor = false;
-            this.btnSeleccionarPlato.Click += new System.EventHandler(this.btnSeleccionarPlato_Click);
             // 
             // txtPrecioMax
             // 
@@ -234,21 +259,6 @@
             this.label1.Text = "Disponible:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnBuscarPlatoCombo
-            // 
-            this.btnBuscarPlatoCombo.BackColor = System.Drawing.Color.Sienna;
-            this.btnBuscarPlatoCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarPlatoCombo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnBuscarPlatoCombo.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(39, 704);
-            this.btnBuscarPlatoCombo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarPlatoCombo.Name = "btnBuscarPlatoCombo";
-            this.btnBuscarPlatoCombo.Size = new System.Drawing.Size(217, 45);
-            this.btnBuscarPlatoCombo.TabIndex = 132;
-            this.btnBuscarPlatoCombo.Text = "Buscar";
-            this.btnBuscarPlatoCombo.UseVisualStyleBackColor = false;
-            this.btnBuscarPlatoCombo.Click += new System.EventHandler(this.btnBuscarPlatoCombo_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -277,6 +287,36 @@
             this.cboDisponible.Name = "cboDisponible";
             this.cboDisponible.Size = new System.Drawing.Size(374, 33);
             this.cboDisponible.TabIndex = 130;
+            // 
+            // btnSeleccionarPlato
+            // 
+            this.btnSeleccionarPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.btnSeleccionarPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionarPlato.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionarPlato.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionarPlato.Location = new System.Drawing.Point(815, 704);
+            this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionarPlato.Name = "btnSeleccionarPlato";
+            this.btnSeleccionarPlato.Size = new System.Drawing.Size(217, 45);
+            this.btnSeleccionarPlato.TabIndex = 151;
+            this.btnSeleccionarPlato.Text = "Seleccionar";
+            this.btnSeleccionarPlato.UseVisualStyleBackColor = false;
+            this.btnSeleccionarPlato.Click += new System.EventHandler(this.btnSeleccionarPlato_Click);
+            // 
+            // btnBuscarPlatoCombo
+            // 
+            this.btnBuscarPlatoCombo.BackColor = System.Drawing.Color.Sienna;
+            this.btnBuscarPlatoCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarPlatoCombo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBuscarPlatoCombo.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(39, 704);
+            this.btnBuscarPlatoCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarPlatoCombo.Name = "btnBuscarPlatoCombo";
+            this.btnBuscarPlatoCombo.Size = new System.Drawing.Size(217, 45);
+            this.btnBuscarPlatoCombo.TabIndex = 132;
+            this.btnBuscarPlatoCombo.Text = "Buscar";
+            this.btnBuscarPlatoCombo.UseVisualStyleBackColor = false;
+            this.btnBuscarPlatoCombo.Click += new System.EventHandler(this.btnBuscarPlatoCombo_Click);
             // 
             // panel5
             // 
@@ -313,6 +353,7 @@
             this.button2.Size = new System.Drawing.Size(25, 25);
             this.button2.TabIndex = 28;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label10
             // 
@@ -335,46 +376,6 @@
             this.panelIzquierdo.Size = new System.Drawing.Size(8, 778);
             this.panelIzquierdo.TabIndex = 164;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "ID Plato";
-            this.NombreCompleto.MinimumWidth = 6;
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 150;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Nombre";
-            this.Teléfono.MinimumWidth = 6;
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 300;
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Categoría";
-            this.Categoría.MinimumWidth = 6;
-            this.Categoría.Name = "Categoría";
-            this.Categoría.ReadOnly = true;
-            this.Categoría.Width = 200;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Precio";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 140;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 150;
             // 
             // frmBuscarSoloPlatos
             // 
