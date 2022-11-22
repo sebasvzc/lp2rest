@@ -37,7 +37,6 @@ namespace LP2Rest
         {
             if (formularioActivo != null)
                 formularioActivo.Close();
-            label1.Hide();
             formularioActivo = formularioMostrar;
             formularioMostrar.TopLevel = false;
             formularioMostrar.FormBorderStyle = FormBorderStyle.None;
