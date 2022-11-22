@@ -33,6 +33,7 @@ namespace LP2Rest
             cbCategoria.DataSource = daoMenu.listarTodasTiposDeItem();
             cbCategoria.DisplayMember = "descripcion";
             cbCategoria.ValueMember = "idTipoItem";
+            lblUniMed.Text = "";
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace LP2Rest
             {
                 insumo = formBuscarInsumos.InsumoSeleccionado;
                 txtNombreInsumo.Text = insumo.nombre;
+                lblUniMed.Text = insumo.unidadMedida.ToString().ToLower();
             }
         }
 
