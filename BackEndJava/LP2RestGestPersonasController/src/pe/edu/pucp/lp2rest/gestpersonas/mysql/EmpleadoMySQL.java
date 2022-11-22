@@ -228,6 +228,7 @@ public class EmpleadoMySQL implements EmpleadoDAO {
         
     }
     
+    @Override
     public Empleado buscarXidCuentaUsuario(int  idCuentaUsuario){
         Empleado empleado = new Empleado();
         try{
