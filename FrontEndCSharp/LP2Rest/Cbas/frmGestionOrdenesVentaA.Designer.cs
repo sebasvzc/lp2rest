@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,17 +41,19 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.gbLineasVenta = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.btnQuitarItem = new System.Windows.Forms.Button();
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
+            this.btnAgregarItem = new System.Windows.Forms.Button();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.lblCodProducto = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.lblNombreCliente = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.btnQuitarItem = new System.Windows.Forms.Button();
-            this.btnAgregarItem = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -139,8 +139,8 @@
             // 
             // PrecioUnitario
             // 
-            dataGridViewCellStyle5.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle1;
             this.PrecioUnitario.HeaderText = "Precio Unit";
             this.PrecioUnitario.MinimumWidth = 6;
             this.PrecioUnitario.Name = "PrecioUnitario";
@@ -165,8 +165,8 @@
             // 
             // Subtotal
             // 
-            dataGridViewCellStyle6.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle2;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 6;
             this.Subtotal.Name = "Subtotal";
@@ -228,50 +228,15 @@
             this.label12.TabIndex = 89;
             this.label12.Text = "%";
             // 
-            // txtDescuento
+            // btnQuitarItem
             // 
-            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDescuento.Location = new System.Drawing.Point(563, 101);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(49, 32);
-            this.txtDescuento.TabIndex = 88;
-            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(442, 110);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 23);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "Descuento:";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtCantidad.Location = new System.Drawing.Point(366, 101);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(70, 32);
-            this.txtCantidad.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(266, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cantidad:";
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.Enabled = false;
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(188, 101);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.ReadOnly = true;
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(77, 32);
-            this.txtPrecioUnitario.TabIndex = 7;
+            this.btnQuitarItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuitarItem.Location = new System.Drawing.Point(681, 103);
+            this.btnQuitarItem.Name = "btnQuitarItem";
+            this.btnQuitarItem.Size = new System.Drawing.Size(30, 30);
+            this.btnQuitarItem.TabIndex = 95;
+            this.btnQuitarItem.Text = "-";
+            this.btnQuitarItem.UseVisualStyleBackColor = true;
             // 
             // lblPrecioUnitario
             // 
@@ -281,6 +246,25 @@
             this.lblPrecioUnitario.Size = new System.Drawing.Size(161, 23);
             this.lblPrecioUnitario.TabIndex = 6;
             this.lblPrecioUnitario.Text = "Precio Unitario:";
+            // 
+            // btnAgregarItem
+            // 
+            this.btnAgregarItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarItem.Location = new System.Drawing.Point(651, 103);
+            this.btnAgregarItem.Name = "btnAgregarItem";
+            this.btnAgregarItem.Size = new System.Drawing.Size(30, 30);
+            this.btnAgregarItem.TabIndex = 94;
+            this.btnAgregarItem.Text = "+";
+            this.btnAgregarItem.UseVisualStyleBackColor = true;
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDescuento.Location = new System.Drawing.Point(563, 101);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(49, 32);
+            this.txtDescuento.TabIndex = 88;
+            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
             // 
             // txtNombreProducto
             // 
@@ -292,6 +276,15 @@
             this.txtNombreProducto.Size = new System.Drawing.Size(374, 32);
             this.txtNombreProducto.TabIndex = 5;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(442, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 23);
+            this.label7.TabIndex = 87;
+            this.label7.Text = "Descuento:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -300,16 +293,6 @@
             this.label3.Size = new System.Drawing.Size(182, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre del Plato:";
-            // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(334, 30);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(46, 32);
-            this.btnBuscarProducto.TabIndex = 3;
-            this.btnBuscarProducto.Text = "...";
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // lblCodProducto
             // 
@@ -329,6 +312,43 @@
             this.txtCodigoProducto.ReadOnly = true;
             this.txtCodigoProducto.Size = new System.Drawing.Size(125, 32);
             this.txtCodigoProducto.TabIndex = 0;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtCantidad.Location = new System.Drawing.Point(366, 101);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(70, 32);
+            this.txtCantidad.TabIndex = 9;
+            // 
+            // txtPrecioUnitario
+            // 
+            this.txtPrecioUnitario.Enabled = false;
+            this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(188, 101);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.ReadOnly = true;
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(77, 32);
+            this.txtPrecioUnitario.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(266, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 23);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Cantidad:";
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Location = new System.Drawing.Point(334, 30);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(46, 32);
+            this.btnBuscarProducto.TabIndex = 3;
+            this.btnBuscarProducto.Text = "...";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // gbCliente
             // 
@@ -660,6 +680,7 @@
             this.button2.Size = new System.Drawing.Size(25, 25);
             this.button2.TabIndex = 28;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblTitulo
             // 
@@ -680,26 +701,6 @@
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(8, 909);
             this.panelIzquierdo.TabIndex = 93;
-            // 
-            // btnQuitarItem
-            // 
-            this.btnQuitarItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnQuitarItem.Location = new System.Drawing.Point(681, 103);
-            this.btnQuitarItem.Name = "btnQuitarItem";
-            this.btnQuitarItem.Size = new System.Drawing.Size(30, 30);
-            this.btnQuitarItem.TabIndex = 95;
-            this.btnQuitarItem.Text = "-";
-            this.btnQuitarItem.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarItem
-            // 
-            this.btnAgregarItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarItem.Location = new System.Drawing.Point(651, 103);
-            this.btnAgregarItem.Name = "btnAgregarItem";
-            this.btnAgregarItem.Size = new System.Drawing.Size(30, 30);
-            this.btnAgregarItem.TabIndex = 94;
-            this.btnAgregarItem.Text = "+";
-            this.btnAgregarItem.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 

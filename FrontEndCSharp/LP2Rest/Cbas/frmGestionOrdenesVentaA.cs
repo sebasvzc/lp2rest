@@ -371,7 +371,10 @@ namespace LP2Rest
             formDocPago.ShowDialog();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
     
 }
