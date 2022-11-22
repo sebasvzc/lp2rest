@@ -27,6 +27,7 @@ namespace LP2Rest
             btnMarcarSalida.Hide();
             _asistencia = new GestPersonasWS.asistencia();
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            sdbtnReservas.Visible = false;
         }
 
         public frmPrincipalRecepcionista(GestPersonasWS.cuentaUsuario cuenta)

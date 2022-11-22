@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +46,12 @@
             this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.lblDNICliente = new System.Windows.Forms.Label();
             this.gbPedido = new System.Windows.Forms.GroupBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtDirFiscal = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRuc = new System.Windows.Forms.TextBox();
@@ -63,23 +69,17 @@
             this.txtIdCajero = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMontoTotal = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cboMetodoPago = new System.Windows.Forms.ComboBox();
+            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaEmision = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMontoPagado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnMontoTotal = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtDirFiscal = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtSerie = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dtpFechaEmision = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
-            this.cboMetodoPago = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnGuardarPago = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbCliente.SuspendLayout();
             this.gbPedido.SuspendLayout();
@@ -92,14 +92,14 @@
             // 
             this.dgvDetalleOrdenVenta.AllowUserToAddRows = false;
             this.dgvDetalleOrdenVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvDetalleOrdenVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleOrdenVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreProducto,
@@ -136,8 +136,8 @@
             // 
             // PrecioUnitario
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle11;
             this.PrecioUnitario.HeaderText = "P/U";
             this.PrecioUnitario.MinimumWidth = 6;
             this.PrecioUnitario.Name = "PrecioUnitario";
@@ -160,8 +160,8 @@
             // 
             // Subtotal
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle12;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 6;
             this.Subtotal.Name = "Subtotal";
@@ -267,6 +267,66 @@
             this.gbPedido.TabIndex = 57;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Datos del Documento de Pago";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNumero.Location = new System.Drawing.Point(520, 116);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.ReadOnly = true;
+            this.txtNumero.Size = new System.Drawing.Size(318, 32);
+            this.txtNumero.TabIndex = 73;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label12.Location = new System.Drawing.Point(30, 119);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 23);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Serie:";
+            // 
+            // txtSerie
+            // 
+            this.txtSerie.Enabled = false;
+            this.txtSerie.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSerie.Location = new System.Drawing.Point(102, 116);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.ReadOnly = true;
+            this.txtSerie.Size = new System.Drawing.Size(222, 32);
+            this.txtSerie.TabIndex = 71;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label13.Location = new System.Drawing.Point(429, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 23);
+            this.label13.TabIndex = 70;
+            this.label13.Text = "Numero:";
+            // 
+            // txtDirFiscal
+            // 
+            this.txtDirFiscal.Enabled = false;
+            this.txtDirFiscal.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDirFiscal.Location = new System.Drawing.Point(520, 78);
+            this.txtDirFiscal.Name = "txtDirFiscal";
+            this.txtDirFiscal.ReadOnly = true;
+            this.txtDirFiscal.Size = new System.Drawing.Size(318, 32);
+            this.txtDirFiscal.TabIndex = 69;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label11.Location = new System.Drawing.Point(342, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(172, 23);
+            this.label11.TabIndex = 68;
+            this.label11.Text = "Direccion Fiscal:";
             // 
             // txtEstado
             // 
@@ -463,6 +523,61 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle de Pago";
             // 
+            // btnMontoTotal
+            // 
+            this.btnMontoTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnMontoTotal.FlatAppearance.BorderSize = 0;
+            this.btnMontoTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMontoTotal.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnMontoTotal.ForeColor = System.Drawing.Color.White;
+            this.btnMontoTotal.Location = new System.Drawing.Point(835, 106);
+            this.btnMontoTotal.Name = "btnMontoTotal";
+            this.btnMontoTotal.Size = new System.Drawing.Size(154, 41);
+            this.btnMontoTotal.TabIndex = 114;
+            this.btnMontoTotal.Text = "Monto Total";
+            this.btnMontoTotal.UseVisualStyleBackColor = false;
+            this.btnMontoTotal.Click += new System.EventHandler(this.btnMontoTotal_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label14.Location = new System.Drawing.Point(21, 110);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(142, 23);
+            this.label14.TabIndex = 71;
+            this.label14.Text = "Metodo Pago:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // cboMetodoPago
+            // 
+            this.cboMetodoPago.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cboMetodoPago.FormattingEnabled = true;
+            this.cboMetodoPago.Items.AddRange(new object[] {
+            "Administrador",
+            "Mesero",
+            "Cajero",
+            "Recepcionista",
+            "Chef"});
+            this.cboMetodoPago.Location = new System.Drawing.Point(169, 107);
+            this.cboMetodoPago.Name = "cboMetodoPago";
+            this.cboMetodoPago.Size = new System.Drawing.Size(246, 33);
+            this.cboMetodoPago.TabIndex = 70;
+            // 
+            // dtpFechaPago
+            // 
+            this.dtpFechaPago.Location = new System.Drawing.Point(169, 71);
+            this.dtpFechaPago.Name = "dtpFechaPago";
+            this.dtpFechaPago.Size = new System.Drawing.Size(431, 30);
+            this.dtpFechaPago.TabIndex = 69;
+            // 
+            // dtpFechaEmision
+            // 
+            this.dtpFechaEmision.Location = new System.Drawing.Point(169, 32);
+            this.dtpFechaEmision.Name = "dtpFechaEmision";
+            this.dtpFechaEmision.Size = new System.Drawing.Size(431, 30);
+            this.dtpFechaEmision.TabIndex = 68;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -516,141 +631,29 @@
             this.btnModificar.TabIndex = 113;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
-            // btnMontoTotal
+            // btnGuardarPago
             // 
-            this.btnMontoTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnMontoTotal.FlatAppearance.BorderSize = 0;
-            this.btnMontoTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMontoTotal.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnMontoTotal.ForeColor = System.Drawing.Color.White;
-            this.btnMontoTotal.Location = new System.Drawing.Point(835, 106);
-            this.btnMontoTotal.Name = "btnMontoTotal";
-            this.btnMontoTotal.Size = new System.Drawing.Size(154, 41);
-            this.btnMontoTotal.TabIndex = 114;
-            this.btnMontoTotal.Text = "Monto Total";
-            this.btnMontoTotal.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label11.Location = new System.Drawing.Point(342, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 23);
-            this.label11.TabIndex = 68;
-            this.label11.Text = "Direccion Fiscal:";
-            // 
-            // txtDirFiscal
-            // 
-            this.txtDirFiscal.Enabled = false;
-            this.txtDirFiscal.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDirFiscal.Location = new System.Drawing.Point(520, 78);
-            this.txtDirFiscal.Name = "txtDirFiscal";
-            this.txtDirFiscal.ReadOnly = true;
-            this.txtDirFiscal.Size = new System.Drawing.Size(318, 32);
-            this.txtDirFiscal.TabIndex = 69;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Enabled = false;
-            this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtNumero.Location = new System.Drawing.Point(520, 116);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.ReadOnly = true;
-            this.txtNumero.Size = new System.Drawing.Size(318, 32);
-            this.txtNumero.TabIndex = 73;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label12.Location = new System.Drawing.Point(30, 119);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 23);
-            this.label12.TabIndex = 72;
-            this.label12.Text = "Serie:";
-            // 
-            // txtSerie
-            // 
-            this.txtSerie.Enabled = false;
-            this.txtSerie.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSerie.Location = new System.Drawing.Point(102, 116);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.ReadOnly = true;
-            this.txtSerie.Size = new System.Drawing.Size(222, 32);
-            this.txtSerie.TabIndex = 71;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label13.Location = new System.Drawing.Point(429, 119);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 23);
-            this.label13.TabIndex = 70;
-            this.label13.Text = "Numero:";
-            // 
-            // dtpFechaEmision
-            // 
-            this.dtpFechaEmision.Location = new System.Drawing.Point(169, 32);
-            this.dtpFechaEmision.Name = "dtpFechaEmision";
-            this.dtpFechaEmision.Size = new System.Drawing.Size(431, 30);
-            this.dtpFechaEmision.TabIndex = 68;
-            // 
-            // dtpFechaPago
-            // 
-            this.dtpFechaPago.Location = new System.Drawing.Point(169, 71);
-            this.dtpFechaPago.Name = "dtpFechaPago";
-            this.dtpFechaPago.Size = new System.Drawing.Size(431, 30);
-            this.dtpFechaPago.TabIndex = 69;
-            // 
-            // cboMetodoPago
-            // 
-            this.cboMetodoPago.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.cboMetodoPago.FormattingEnabled = true;
-            this.cboMetodoPago.Items.AddRange(new object[] {
-            "Administrador",
-            "Mesero",
-            "Cajero",
-            "Recepcionista",
-            "Chef"});
-            this.cboMetodoPago.Location = new System.Drawing.Point(169, 107);
-            this.cboMetodoPago.Name = "cboMetodoPago";
-            this.cboMetodoPago.Size = new System.Drawing.Size(246, 33);
-            this.cboMetodoPago.TabIndex = 70;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label14.Location = new System.Drawing.Point(21, 110);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(142, 23);
-            this.label14.TabIndex = 71;
-            this.label14.Text = "Metodo Pago:";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(444, 931);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(115, 41);
-            this.btnGuardar.TabIndex = 114;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardarPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnGuardarPago.FlatAppearance.BorderSize = 0;
+            this.btnGuardarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarPago.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnGuardarPago.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPago.Location = new System.Drawing.Point(385, 931);
+            this.btnGuardarPago.Name = "btnGuardarPago";
+            this.btnGuardarPago.Size = new System.Drawing.Size(174, 41);
+            this.btnGuardarPago.TabIndex = 114;
+            this.btnGuardarPago.Text = "Registrar Pago";
+            this.btnGuardarPago.UseVisualStyleBackColor = false;
+            this.btnGuardarPago.Click += new System.EventHandler(this.btnGuardarPago_Click);
             // 
             // frmDocumentoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 1031);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnGuardarPago);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -730,6 +733,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaPago;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboMetodoPago;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnGuardarPago;
     }
 }
