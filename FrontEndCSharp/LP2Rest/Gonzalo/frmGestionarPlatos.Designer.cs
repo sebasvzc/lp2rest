@@ -64,6 +64,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblUniMed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -271,6 +272,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
+            this.groupBox1.Controls.Add(this.lblUniMed);
             this.groupBox1.Controls.Add(this.tlsBuscar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtCantidad);
@@ -434,6 +436,16 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
+            // lblUniMed
+            // 
+            this.lblUniMed.AutoSize = true;
+            this.lblUniMed.Location = new System.Drawing.Point(139, 58);
+            this.lblUniMed.Name = "lblUniMed";
+            this.lblUniMed.Size = new System.Drawing.Size(52, 13);
+            this.lblUniMed.TabIndex = 153;
+            this.lblUniMed.Text = "Cantidad:";
+            this.lblUniMed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,5 +510,6 @@
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label lblUniMed;
     }
 }

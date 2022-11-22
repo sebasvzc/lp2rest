@@ -540,6 +540,22 @@ public class GestPersonasWS {
         return resultado;
     }
 
+    @WebMethod(operationName = "enviarCorreoDeBienvenida")
+    public int enviarCorreoDeBienvenida(@WebParam(name = "correo") String correo,
+            @WebParam(name = "nombre") String nombre,
+            @WebParam(name = "apellidoPaterno") String apellidoPaterno,
+            @WebParam(name = "usuario") String usuario,
+            @WebParam(name = "contrasenia") String contrasenia) {
+        int resultado = 0;
+        try {
+            resultado = daoCuentaUsuario.enviarCorreoBienvenida(correo, nombre,
+                    apellidoPaterno, usuario, contrasenia);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+
     @WebMethod(operationName = "actualizarContraseniaCuentaUsuario")
     public int actualizarContraseniaCuentaUsuario(
             @WebParam(name = "idCuentaUsuario") int idCuentaUsuario,
@@ -563,22 +579,20 @@ public class GestPersonasWS {
         }
         return resultado;
     }
-    
+
     @WebMethod(operationName = "modificarAsistenciaSalida")
-    public int modificarAsistenciaSalida(@WebParam(name = "id_asistencia")int id_asistencia,
+    public int modificarAsistenciaSalida(@WebParam(name = "id_asistencia") int id_asistencia,
             @WebParam(name = "fecha_fin") String fecha_fin,
-            @WebParam(name = "hora_fin")String hora_fin){
-        
+            @WebParam(name = "hora_fin") String hora_fin) {
+
         int resultado = 0;
         try {
-            resultado = daoAsistencia.modificarAsistencia(id_asistencia,fecha_fin,hora_fin);
+            resultado = daoAsistencia.modificarAsistencia(id_asistencia, fecha_fin, hora_fin);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
         return resultado;
     }
-    
-    
 
     @WebMethod(operationName = "filtrarPorDni")
     public Cliente filtrarPorDni(@WebParam(name = "dni") String dni) {
@@ -699,7 +713,7 @@ public class GestPersonasWS {
         }
         return lsEmpleados;
     }
-    
+
     @WebMethod(operationName = "buscarXidCuentaUsuario")
     public Empleado buscarXidCuentaUsuario(@WebParam(name = "idCuentaUsuario") int idCuentaUsuario) {
         Empleado empleado = null;
@@ -710,7 +724,7 @@ public class GestPersonasWS {
         }
         return empleado;
     }
-    
+
     @WebMethod(operationName = "ListarBusquedaEmpleados")
     public ArrayList<Empleado> ListarBusquedaEmpleados(
             @WebParam(name = "nombreEmp") String nombre,

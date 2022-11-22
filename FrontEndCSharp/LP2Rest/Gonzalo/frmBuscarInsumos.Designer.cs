@@ -30,13 +30,14 @@
         {
             this.btnSeleccionarInsumo = new System.Windows.Forms.Button();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
-            this.sku = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDNINombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.sku = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sku,
             this.Nombre,
-            this.PrecioCompra});
+            this.PrecioCompra,
+            this.UnidadMedida});
             this.dgvInsumos.Location = new System.Drawing.Point(24, 97);
             this.dgvInsumos.Name = "dgvInsumos";
             this.dgvInsumos.ReadOnly = true;
@@ -68,30 +70,6 @@
             this.dgvInsumos.Size = new System.Drawing.Size(662, 245);
             this.dgvInsumos.TabIndex = 101;
             this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEmpleados_CellFormatting);
-            // 
-            // sku
-            // 
-            this.sku.HeaderText = "SKU";
-            this.sku.MinimumWidth = 6;
-            this.sku.Name = "sku";
-            this.sku.ReadOnly = true;
-            this.sku.Width = 120;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 233;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio Compra";
-            this.PrecioCompra.MinimumWidth = 6;
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            this.PrecioCompra.Width = 240;
             // 
             // btnBuscarInsumo
             // 
@@ -131,6 +109,35 @@
             this.lblTitulo.TabIndex = 97;
             this.lblTitulo.Text = "Búsqueda de Insumos";
             // 
+            // sku
+            // 
+            this.sku.HeaderText = "SKU";
+            this.sku.MinimumWidth = 6;
+            this.sku.Name = "sku";
+            this.sku.ReadOnly = true;
+            this.sku.Width = 120;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 233;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.HeaderText = "Precio Compra";
+            this.PrecioCompra.MinimumWidth = 6;
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.HeaderText = "Unidad de Medida";
+            this.UnidadMedida.Name = "UnidadMedida";
+            this.UnidadMedida.ReadOnly = true;
+            // 
             // frmBuscarInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,7 +149,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDNINombre);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmBuscarInsumos";
             this.Text = "frmBuscarInsumos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).EndInit();
@@ -155,12 +162,13 @@
 
         private System.Windows.Forms.Button btnSeleccionarInsumo;
         private System.Windows.Forms.DataGridView dgvInsumos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sku;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
         private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDNINombre;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sku;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
     }
 }
