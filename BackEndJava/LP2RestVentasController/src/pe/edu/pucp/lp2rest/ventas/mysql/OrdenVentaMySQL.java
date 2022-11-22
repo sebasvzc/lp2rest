@@ -370,4 +370,24 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
         }
         return ordenesVenta;
     }
+
+    @Override
+    public int actualizarOrdenVentaPrep(int idOrdenVenta) {
+        int resultado = 0;
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call ACTUALIZAR_ESTADO_PREPARADO_ORDEN_VENTA(?)}");
+            cs.setInt("_id_ordenVenta", idOrdenVenta);
+            resultado = cs.executeUpdate();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+    }
 }
