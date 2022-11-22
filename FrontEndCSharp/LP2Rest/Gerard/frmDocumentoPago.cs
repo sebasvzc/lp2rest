@@ -204,11 +204,6 @@ namespace LP2Rest
 
         }
 
-        private void panel4_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             
@@ -419,6 +414,10 @@ namespace LP2Rest
 
         }
 
-        
+        private void panel4_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
     }
 }
