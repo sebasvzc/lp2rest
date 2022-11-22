@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2Rest.GestPersonasWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace LP2Rest
     {
         //Conexiones
         GestPersonasWS.GestPersonasWSClient daoGestPersonas;
+        public GestPersonasWS.cliente clienteSeleccionado;
 
         public frmGestionClientes()
         {
@@ -57,6 +59,19 @@ namespace LP2Rest
             dgvClientes.Rows[e.RowIndex].Cells[1].Value = cliente.nombre + " " + cliente.apellidoPaterno;
             dgvClientes.Rows[e.RowIndex].Cells[2].Value = cliente.telefono;
             dgvClientes.Rows[e.RowIndex].Cells[3].Value = cliente.email;
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.SelectedRows.Count == 1)
+            {
+                clienteSeleccionado = (GestPersonasWS.cliente)dgvClientes.CurrentRow.DataBoundItem;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un cliente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -246,11 +246,15 @@ namespace LP2Rest
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
         {
+            label1.Text = "Mesas";
+            label3.Hide();
             abrirFormulario(new frmMesas(idcuenta));
         }
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
+            label1.Text = "Ventas";
+            label3.Hide();
             abrirFormulario(new frmListarOrdenesVentaCajero(cajeroActual) );
         }
 
@@ -263,6 +267,8 @@ namespace LP2Rest
 
         private void sdbtnReportes_Click(object sender, EventArgs e)
         {
+            label1.Text = "Reportes";
+            label3.Hide();
             abrirFormulario(new frmListarReportesA());
         }
 

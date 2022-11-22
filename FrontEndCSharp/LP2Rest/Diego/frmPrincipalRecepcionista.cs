@@ -33,7 +33,7 @@ namespace LP2Rest
             btnMarcarSalida.Hide();
             _asistencia = new GestPersonasWS.asistencia();
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
-            sdbtnReservas.Visible = false;
+            //sdbtnReservas.Visible = false;
         }
 
         public frmPrincipalRecepcionista(GestPersonasWS.cuentaUsuario cuenta)
@@ -220,6 +220,7 @@ namespace LP2Rest
 
         private void sdbtnReclamos_Click(object sender, EventArgs e)
         {
+            label1.Hide();
             abrirFormulario(new frmListarReclamosA());
         }
 
@@ -230,6 +231,7 @@ namespace LP2Rest
 
         private void sdbtnClientes_Click(object sender, EventArgs e)
         {
+            label1.Hide();
             abrirFormulario(new frmBusquedaCliente());
         }
 
@@ -242,6 +244,7 @@ namespace LP2Rest
 
         private void sdbtnMesas_Click(object sender, EventArgs e)
         {
+            label1.Hide();
             abrirFormulario(new frmMesas(idcuenta));
         }
 

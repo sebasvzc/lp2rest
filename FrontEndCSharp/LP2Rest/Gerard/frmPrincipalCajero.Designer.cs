@@ -166,10 +166,10 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.label2);
             this.panelSuperior.Controls.Add(this.lbltimer);
             this.panelSuperior.Controls.Add(this.btnMarcarSalida);
-            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.label1);
             this.panelSuperior.Controls.Add(this.btnCerrar);
@@ -184,7 +184,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(609, 18);
+            this.label2.Location = new System.Drawing.Point(569, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 19);
@@ -194,7 +194,7 @@
             // lbltimer
             // 
             this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(610, 33);
+            this.lbltimer.Location = new System.Drawing.Point(570, 33);
             this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltimer.Name = "lbltimer";
             this.lbltimer.Size = new System.Drawing.Size(140, 55);
@@ -209,10 +209,10 @@
             this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarSalida.Location = new System.Drawing.Point(409, 18);
+            this.btnMarcarSalida.Location = new System.Drawing.Point(301, 18);
             this.btnMarcarSalida.Name = "btnMarcarSalida";
             this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarSalida.Size = new System.Drawing.Size(155, 65);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(175, 65);
             this.btnMarcarSalida.TabIndex = 47;
             this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
             this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +227,7 @@
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(215, 18);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(301, 18);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnMarcarAsistencia.Size = new System.Drawing.Size(175, 65);
