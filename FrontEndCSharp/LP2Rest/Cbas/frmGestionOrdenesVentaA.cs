@@ -370,6 +370,8 @@ namespace LP2Rest
             frmDocumentoPago formDocPago = new frmDocumentoPago("otro",null, ordenVentaActual);
             formDocPago.ShowDialog();
         }
+
+        
     }
     
 }
