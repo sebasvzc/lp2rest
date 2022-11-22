@@ -54,11 +54,6 @@ namespace LP2Rest
                         + "haciendo click botón superior.";
         }
 
-        private void btnCompras_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new frmListarOrdenesCompra());
-        }
-
         private void btnEventos_Click(object sender, EventArgs e)
         {
             abrirFormulario(new frmListarEventosA());

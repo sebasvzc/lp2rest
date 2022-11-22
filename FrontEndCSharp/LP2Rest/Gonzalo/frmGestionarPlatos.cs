@@ -13,6 +13,11 @@ namespace LP2Rest
 {
     public partial class frmGestionarPlatos : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         private AlmacenWS.insumo insumo;
         private MenuWS.receta receta;
         private BindingList<AlmacenWS.insumo> insumos;
@@ -149,6 +154,17 @@ namespace LP2Rest
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
     }
 }
