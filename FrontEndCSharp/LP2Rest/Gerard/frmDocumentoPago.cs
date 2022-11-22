@@ -22,14 +22,11 @@ namespace LP2Rest
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
         //Utiles
         private ordenVenta ordenVentaActual;
-        private GestPersonasWS.cliente clienteActual;
-        private GestPersonasWS.mesero MeseroActual;
-        private MenuWS.itemVenta itemSeleccionado;
+
         private int idMesero;
-        private double total;
         private BindingList<VentasWS.lineaOrdenVenta> lineasItems;
-        private VentasWS.lineaOrdenVenta[] lineaItems;
         private documentoPago docPagoActual;
+        private VentasWS.cajero cajeroActual;
 
         //Estados
 
@@ -37,6 +34,8 @@ namespace LP2Rest
         public int IdMesero { get => idMesero; set => idMesero = value; }
 
         public BindingList<lineaOrdenVenta> LineasItems { get => lineasItems; set => lineasItems = value; }
+        public cajero CajeroActual { get => cajeroActual; set => cajeroActual = value; }
+        public ordenVenta OrdenVentaActual { get => ordenVentaActual; set => ordenVentaActual = value; }
 
         //Conexiones
         VentasWS.VentasWSClient daoVentas;
@@ -44,21 +43,92 @@ namespace LP2Rest
 
                    
 
-        public frmDocumentoPago(String tipo, VentasWS.ordenVenta ordenVenta)
+        public frmDocumentoPago(String tipo, VentasWS.cajero auxCajero, VentasWS.ordenVenta auxOrdenVenta)
         {
             daoVentas = new VentasWS.VentasWSClient();
-            ordenVentaActual = ordenVenta;
+            OrdenVentaActual = auxOrdenVenta;
+            OrdenVentaActual.lineasOrdenVenta = daoVentas.listarLineasOrdenVentaPorId(OrdenVentaActual.idOrdenVenta);
+            docPagoActual = daoVentas.ObtenerDocumentoDePago(OrdenVentaActual.documentoPago.idDocumentoPago);
+            
+
+            List<string> listaMetodos = new List<string>()
+                    {
+                        "Tarjeta Credito",
+                        "Tarjeta Debito",
+                        "Efectivo",
+                        "Cheque"
+                    };
+            InitializeComponent();
+
+            dgvDetalleOrdenVenta.AutoGenerateColumns = false;
+            cboMetodoPago.DataSource = listaMetodos;
+
+            txtIdDocPago.Text = docPagoActual.idDocumentoPago.ToString();
+            txtEstado.Text = OrdenVentaActual.estado;
+            txtSerie.Text = docPagoActual.serie;
+            txtRuc.Text = docPagoActual.ruc;
+            txtDirFiscal.Text = docPagoActual.direccionFiscal;
+            txtNumero.Text = docPagoActual.numero.ToString();
+
+            txtDNICliente.Text = OrdenVentaActual.cliente.DNI;
+            txtNombreCliente.Text = OrdenVentaActual.cliente.nombre + " " + OrdenVentaActual.cliente.apellidoPaterno;
+
+            dgvDetalleOrdenVenta.DataSource = OrdenVentaActual.lineasOrdenVenta;
+
+            dtpFechaEmision.Value = docPagoActual.fechaEmision;
+            dtpFechaEmision.Enabled = false;
+            dtpFechaPago.Value = docPagoActual.fechaPago;
+            dtpFechaPago.Enabled = false;
+            txtTotal.Text = String.Format("{0:0.00}", OrdenVentaActual.total);
+            txtMontoPagado.Text = String.Format("{0:0.00}", docPagoActual.montoRecibido);
 
             if (tipo == "cajero")
             {
-                //docPagoActual = daoVentas.ObtenerDocumentoDePago();
+                if (OrdenVentaActual.cajero != null)
+                {
+                    CajeroActual = OrdenVentaActual.cajero;
+                }
+                else
+                {
+                    CajeroActual = auxCajero;
+                    OrdenVentaActual.cajero = CajeroActual;
+                    txtIdCajero.Text = OrdenVentaActual.cajero.idPersona.ToString();
+                    txtNombreCajero.Text = OrdenVentaActual.cajero.nombre + " " + OrdenVentaActual.cajero.apellidoPaterno;
+                }                
+
+                if (OrdenVentaActual.estado == "En Preparacion")
+                {
+                    btnGuardarPago.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnMontoTotal.Enabled = false;
+                    cboMetodoPago.Enabled = false;
+                    txtMontoPagado.Enabled = false;
+
+                }
+                else
+                {
+                    btnGuardarPago.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnMontoTotal.Enabled = false;
+                    cboMetodoPago.Enabled = false;
+                    txtMontoPagado.Enabled = false;
+                }
+
             }
             else
             {
+                CajeroActual = null;
+                txtIdCajero.Text = "Por asignar.";
+                txtNombreCajero.Text = " -";
 
-            }
+                btnGuardarPago.Enabled = false;
+                btnModificar.Enabled = false;
+                btnMontoTotal.Enabled = false;
+                cboMetodoPago.Enabled = false;
+                txtMontoPagado.Enabled = false;
 
-            
+            }       
+
             
 
         }
@@ -207,5 +277,107 @@ namespace LP2Rest
         {
 
         }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            btnGuardarPago.Enabled = true;
+            btnModificar.Enabled = false;
+            btnMontoTotal.Enabled = true;
+            cboMetodoPago.Enabled = true;
+            txtMontoPagado.Enabled = true;
+        }
+
+        private void btnMontoTotal_Click(object sender, EventArgs e)
+        {
+            docPagoActual.montoRecibido = OrdenVentaActual.total;
+            txtMontoPagado.Text = String.Format("{0:0.00}", docPagoActual.montoRecibido);
+        }
+
+        private void actualizarInfo1()
+        {
+            txtEstado.Text = OrdenVentaActual.estado;
+
+            txtIdCajero.Text = OrdenVentaActual.cajero.idPersona.ToString();
+            txtNombreCajero.Text = OrdenVentaActual.cajero.nombre + " " + OrdenVentaActual.cajero.apellidoPaterno;
+
+            dtpFechaPago.Value = docPagoActual.fechaPago;
+
+            //"Tarjeta Credito",
+            //"Tarjeta Debito",
+            //"Efectivo",
+            //"Cheque"
+
+            switch (OrdenVentaActual.estado)
+            {
+                case "Tarjeta Credito":
+                    cboMetodoPago.SelectedIndex = 0;
+                    break;
+                case "Tarjeta Debito":
+                    cboMetodoPago.SelectedIndex = 1;
+                    break;
+                case "Efectivo":
+                    cboMetodoPago.SelectedIndex = 2;
+                    break;
+                case "Cheque":
+                    cboMetodoPago.SelectedIndex = 3;
+                    break;
+            }
+            //cboMetodoPago.SelectedValue = docPagoActual.metodoPago;
+        }
+
+        private void btnGuardarPago_Click(object sender, EventArgs e)
+        {
+            OrdenVentaActual.estado = "Pagada";
+            OrdenVentaActual.pagado = true;
+
+            docPagoActual.metodoPago = cboMetodoPago.SelectedValue.ToString();
+            docPagoActual.tipoPago = cboMetodoPago.SelectedValue.ToString();
+            docPagoActual.fechaPagoSpecified = true;
+            docPagoActual.fechaPago = DateTime.Now;
+            docPagoActual.total = OrdenVentaActual.total;
+
+            if(OrdenVentaActual.cajero == null)
+            {
+                OrdenVentaActual.cajero = CajeroActual;
+            }
+
+            daoVentas.ModificarDocumentoDePago(docPagoActual);
+            daoVentas.ModificarOrdenVenta(OrdenVentaActual);
+
+
+
+            int resultadoDoc = daoVentas.ModificarDocumentoDePago(docPagoActual);
+            if (resultadoDoc <= 0)
+            {
+                MessageBox.Show("Error al modificar Documento de Pago.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int resultadoOrdVen = daoVentas.ModificarOrdenVenta(OrdenVentaActual);
+                if(resultadoOrdVen <= 0)
+                {
+                    MessageBox.Show("Error al modificar Orden de Venta.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    actualizarInfo1();
+
+                    dtpFechaEmision.Enabled = false;
+                    dtpFechaPago.Enabled = false;
+                    cboMetodoPago.Enabled = false;
+                    txtMontoPagado.Enabled = false;
+                    btnMontoTotal.Enabled = false;
+
+                    btnGuardarPago.Enabled = false;
+                    btnModificar.Enabled = false;
+                }
+            }
+
+            
+
+
+        }
+
+        
     }
 }

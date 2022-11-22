@@ -271,17 +271,25 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            mesaSeleccionada.disponible = true;
-            mesaSeleccionada.ordVen = null;
-            daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
+            frmDocumentoPago formDocPago = new frmDocumentoPago("otro", null, ordenVentaSeleccionada);
+            formDocPago.ShowDialog();
+            txtEstado.Text = ordenVentaSeleccionada.estado;
 
-            txtCantidad.Enabled = false;
-            txtDescuento.Enabled = false;
+            if(ordenVentaSeleccionada.estado == "Pagada"){
+                mesaSeleccionada.disponible = true;
+                mesaSeleccionada.ordVen = null;
+                daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
 
-            btnBuscarCliente.Enabled = false;
-            btnBuscarProducto.Enabled = false;
+                txtCantidad.Enabled = false;
+                txtDescuento.Enabled = false;
 
-            MessageBox.Show("Orden de Venta Eliminada", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnBuscarCliente.Enabled = false;
+                btnBuscarProducto.Enabled = false;
+
+                MessageBox.Show("Orden de Venta Pagada. Mesa Liberada.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

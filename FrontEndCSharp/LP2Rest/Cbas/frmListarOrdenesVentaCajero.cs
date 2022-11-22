@@ -20,21 +20,24 @@ namespace LP2Rest
         //Utiles
         private ordenVenta[] ordenesVentasActuales;
         private ordenVenta ordenVentaSeleccionada;
+        private VentasWS.cajero cajeroActual;
         private int idCajero;
 
-        public frmListarOrdenesVentaCajero(int auxIdCajero)
+        public frmListarOrdenesVentaCajero(VentasWS.cajero auxCajero)
         {
-            idCajero = auxIdCajero;
-
+            
             daoVentas = new VentasWS.VentasWSClient();
 
             List<string> listaEstados = new List<string>()
                     {
                         "Sin antender",
                         "En Preparacion",
+                        "Atendido",
                         "Pagada",
                         " -",
                     };
+
+            cajeroActual = auxCajero;
 
             InitializeComponent();
 
@@ -101,7 +104,6 @@ namespace LP2Rest
                 }
                 else
                 {
-                    //dgvOrdenesVentas.DataSource = ordenesVentasActuales;
                     BindingList<ordenVenta> listaaux = new BindingList<ordenVenta>();
 
                     for (int a = 0; a < ordenesVentasActuales.Length; a++) {
@@ -142,7 +144,7 @@ namespace LP2Rest
 
                 ordenVentaSeleccionada = (ordenVenta)dgvOrdenesVentas.CurrentRow.DataBoundItem;
 
-                frmOrdenVentaCajero formOrdVenAdmin = new frmOrdenVentaCajero( idCajero, ordenVentaSeleccionada);
+                frmOrdenVentaCajero formOrdVenAdmin = new frmOrdenVentaCajero( cajeroActual, ordenVentaSeleccionada);
 
                 if (formOrdVenAdmin.ShowDialog() == DialogResult.OK)
                 {

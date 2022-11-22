@@ -141,7 +141,10 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // ABRIR
+            frmDocumentoPago formDocPago = new frmDocumentoPago("otro",null,ordenVentaSeleccionada);
+            formDocPago.ShowDialog();
+            txtEstado.Text = ordenVentaSeleccionada.estado;
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

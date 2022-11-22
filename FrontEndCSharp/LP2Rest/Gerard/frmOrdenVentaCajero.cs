@@ -29,6 +29,7 @@ namespace LP2Rest
         private double total;
         private BindingList<VentasWS.lineaOrdenVenta> lineasItems;
         private VentasWS.lineaOrdenVenta[] lineaItems;
+        private VentasWS.cajero cajeroActual;
 
         //Estados
         private bool libre;
@@ -46,21 +47,23 @@ namespace LP2Rest
 
         private int idMesaOrdenVenta;
 
-        public frmOrdenVentaCajero(int idCajero, VentasWS.ordenVenta ordenVenta)
+        public frmOrdenVentaCajero(VentasWS.cajero auxCajero, VentasWS.ordenVenta auxOrdenVenta)
         {
-         
+            ordenVentaSeleccionada = auxOrdenVenta;
+            cajeroActual = auxCajero;
+
             daoVentas = new VentasWS.VentasWSClient();
             //Libre = true;
             InitializeComponent();
-            dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-            txtIDOrdenVenta.Text = ordenVenta.idOrdenVenta.ToString();
-            textBox3.Text = ordenVenta.mesa.idMesa.ToString();
-            txtEstado.Text = ordenVenta.estado;
-            txtDNICliente.Text = ordenVenta.cliente.DNI;
-            txtNombreCliente.Text = ordenVenta.cliente.nombre;
 
-            ordenVentaSeleccionada = ordenVenta;
-            dgvDetalleOrdenVenta.DataSource = daoVentas.listarLineasOrdenVentaPorId(ordenVenta.idOrdenVenta);
+            dgvDetalleOrdenVenta.AutoGenerateColumns = false;
+            txtIDOrdenVenta.Text = auxOrdenVenta.idOrdenVenta.ToString();
+            textBox3.Text = auxOrdenVenta.mesa.idMesa.ToString();
+            txtEstado.Text = auxOrdenVenta.estado;
+            txtDNICliente.Text = auxOrdenVenta.cliente.DNI;
+            txtNombreCliente.Text = auxOrdenVenta.cliente.nombre;
+
+            dgvDetalleOrdenVenta.DataSource = daoVentas.listarLineasOrdenVentaPorId(auxOrdenVenta.idOrdenVenta);
 
             btnAgregarPlato.Enabled = false;
             btnQuitarPlato.Enabled = false;
@@ -74,17 +77,22 @@ namespace LP2Rest
             btnModificar.Visible = false;
             btnEliminar.Visible = false;
 
-            txtTotal.Text = String.Format("{0:0.00}", ordenVenta.total);
+            txtTotal.Text = String.Format("{0:0.00}", auxOrdenVenta.total);
 
-            if(ordenVentaSeleccionada.estado == "En Preparacion")
-            {
-                btnDocPago.Text = "Ver Documento de Pago";
-                btnDocPago.Enabled = true;
-            }
             if (ordenVentaSeleccionada.estado == "Sin antender")
             {
                 btnDocPago.Text = "Ver Documento de Pago";
                 btnDocPago.Enabled = false;
+            }
+            if (ordenVentaSeleccionada.estado == "En Preparacion")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
+            }
+            if (ordenVentaSeleccionada.estado == "Atendido")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
             }
             if (ordenVentaSeleccionada.estado == "Pagada")
             {
@@ -92,7 +100,7 @@ namespace LP2Rest
                 btnDocPago.Enabled = true;
             }
 
-            
+
             //btnPreparar.Enabled = true;
 
         }
@@ -108,17 +116,11 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //mesaSeleccionada.disponible = true;
-            //mesaSeleccionada.ordVen = null;
-            //daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
+            frmDocumentoPago formDocPago = new frmDocumentoPago("cajero", cajeroActual, ordenVentaSeleccionada);
+            formDocPago.ShowDialog();
 
-            //txtCantidad.Enabled = false;
-            //txtDescuento.Enabled = false;
-
-            //btnBuscarCliente.Enabled = false;
-            //btnBuscarProducto.Enabled = false;
-
-            //MessageBox.Show("Orden de Venta Eliminada", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ordenVentaSeleccionada.cajero = formDocPago.OrdenVentaActual.cajero;
+            actualizarInfo();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -134,7 +136,7 @@ namespace LP2Rest
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             frmGestionReclamoBusquedaCliente formBusquedaCliente = new frmGestionReclamoBusquedaCliente();
-            if(formBusquedaCliente.ShowDialog() == DialogResult.OK)
+            if (formBusquedaCliente.ShowDialog() == DialogResult.OK)
             {
                 clienteSeleccionado = formBusquedaCliente.clienteSeleccionado;
                 txtDNICliente.Text = clienteSeleccionado.DNI;
@@ -150,7 +152,8 @@ namespace LP2Rest
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            if (txtDNICliente.Text == "")            {
+            if (txtDNICliente.Text == "")
+            {
                 MessageBox.Show("No se ha seleccionado un cliente", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -159,14 +162,14 @@ namespace LP2Rest
 
             libre = false;
             mesaSeleccionada.disponible = false;
-            
+
 
             txtCantidad.Enabled = true;
             txtDescuento.Enabled = true;
 
-            
+
             btnBuscarProducto.Enabled = true;
-                        
+
 
             ordenVentaSeleccionada = new ordenVenta();
             ordenVentaSeleccionada.total = 0.0;
@@ -193,7 +196,7 @@ namespace LP2Rest
             ordenVentaSeleccionada.documentoPago.metodoPago = "Pendiente";
             ordenVentaSeleccionada.documentoPago.direccionFiscal = "Casita Fachera 1234";
 
-            ordenVentaSeleccionada.documentoPago.idDocumentoPago =  daoVentas.InsertarDocumentoDePago(ordenVentaSeleccionada.documentoPago);
+            ordenVentaSeleccionada.documentoPago.idDocumentoPago = daoVentas.InsertarDocumentoDePago(ordenVentaSeleccionada.documentoPago);
             if (ordenVentaSeleccionada.documentoPago.idDocumentoPago == 0)
             {
                 MessageBox.Show("Error al generar Documento de Pago.", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -210,7 +213,7 @@ namespace LP2Rest
             ordenVentaSeleccionada.cajero = null;
 
             ordenVentaSeleccionada.cliente = new cliente();
-            if(clienteSeleccionado == null)
+            if (clienteSeleccionado == null)
             {
                 MessageBox.Show("No se ha seleccionado un cliente", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -220,7 +223,7 @@ namespace LP2Rest
                 ordenVentaSeleccionada.cliente.nombre = clienteSeleccionado.nombre;
                 ordenVentaSeleccionada.cliente.apellidoPaterno = clienteSeleccionado.apellidoPaterno;
             }
-            
+
             ordenVentaSeleccionada.idOrdenVenta = daoVentas.InsertarOrdenVenta(ordenVentaSeleccionada);
             mesaSeleccionada.ordVen.idOrdenVenta = ordenVentaSeleccionada.idOrdenVenta;
             mesaSeleccionada.ordVen.mesero = ordenVentaSeleccionada.mesero;
@@ -233,9 +236,9 @@ namespace LP2Rest
                 int resultadoModMesa = daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
                 if (resultadoModMesa == 0)
                 {
-                    MessageBox.Show("Error al asignar Orden de Venta a Mesa "+ mesaSeleccionada.idMesa.ToString()+".", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al asignar Orden de Venta a Mesa " + mesaSeleccionada.idMesa.ToString() + ".", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
 
             }
             else
@@ -269,8 +272,8 @@ namespace LP2Rest
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            mesaSeleccionada.disponible = true;   
-           
+            mesaSeleccionada.disponible = true;
+
 
             daoVentas.EliminarOrdenVenta(mesaSeleccionada.ordVen.idOrdenVenta);
 
@@ -327,7 +330,7 @@ namespace LP2Rest
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if(mesaSeleccionada.disponible == true)
+            if (mesaSeleccionada.disponible == true)
             {
                 MessageBox.Show("Modificacion Fallida. Orden de Venta Vacia.", "Modificacion Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -347,7 +350,7 @@ namespace LP2Rest
                 btnEliminar.Enabled = true;
 
             }
-            
+
         }
 
         private void btnQuitarPlato_Click(object sender, EventArgs e)
@@ -379,7 +382,7 @@ namespace LP2Rest
                 }
 
 
-                
+
 
             }
             else
@@ -390,18 +393,18 @@ namespace LP2Rest
 
         private void btnAgregarPlato_Click(object sender, EventArgs e)
         {
-            if(itemSeleccionado != null)
+            if (itemSeleccionado != null)
             {
 
 
                 VentasWS.lineaOrdenVenta auxLnOrdenVenta = new VentasWS.lineaOrdenVenta();
 
-                
+
                 auxLnOrdenVenta.fechaRegistroSpecified = true;
                 auxLnOrdenVenta.fechaRegistro = DateTime.Now;
                 auxLnOrdenVenta.activo = true;
                 auxLnOrdenVenta.promocion = false;
-                
+
                 auxLnOrdenVenta.ordenVenta = ordenVentaSeleccionada;
 
                 auxLnOrdenVenta.itemVenta = new itemVenta();
@@ -427,7 +430,7 @@ namespace LP2Rest
                     auxLnOrdenVenta.cantidadVendida = int.Parse(txtCantidad.Text);
                 }
 
-                auxLnOrdenVenta.montoDescontado = (auxLnOrdenVenta.descuento)/100.0*(itemSeleccionado.precio * auxLnOrdenVenta.cantidadVendida);
+                auxLnOrdenVenta.montoDescontado = (auxLnOrdenVenta.descuento) / 100.0 * (itemSeleccionado.precio * auxLnOrdenVenta.cantidadVendida);
 
                 auxLnOrdenVenta.subtotal = (100.0 - auxLnOrdenVenta.descuento) / 100.0 * (itemSeleccionado.precio * auxLnOrdenVenta.cantidadVendida);
 
@@ -437,13 +440,13 @@ namespace LP2Rest
                 auxLnOrdenVenta.idLineaOrdenVenta = daoVentas.InsertarLineaOrdenVenta(auxLnOrdenVenta);
 
                 lineasItems.Add(auxLnOrdenVenta);
-                
+
 
                 ordenVentaSeleccionada.total += auxLnOrdenVenta.subtotal;
 
                 int resultado = daoVentas.ModificarOrdenVenta(ordenVentaSeleccionada);
 
-                if(resultado == 0)
+                if (resultado == 0)
                 {
                     MessageBox.Show("Error al actualizar Orden de Venta.", "Error Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -463,7 +466,7 @@ namespace LP2Rest
             {
                 MessageBox.Show("No se ha seleccionado un item", "Item vacio", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void dgvDetalleOrdenVenta_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -475,7 +478,7 @@ namespace LP2Rest
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[1].Value = auxLinea.cantidadVendida.ToString();
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[2].Value = String.Format("{0:0.00}", auxLinea.itemVenta.precio);
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[3].Value = String.Format("{0:0.00}", auxLinea.descuento) + "%";
-                dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[4].Value = String.Format("{0:0.00}", auxLinea.montoDescontado );
+                dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[4].Value = String.Format("{0:0.00}", auxLinea.montoDescontado);
                 dgvDetalleOrdenVenta.Rows[e.RowIndex].Cells[5].Value = String.Format("{0:0.00}", auxLinea.subtotal);
             }
             catch (Exception ex)
@@ -488,7 +491,7 @@ namespace LP2Rest
         private void btnPreparar_Click(object sender, EventArgs e)
         {
             int resultado = daoVentas.ActualizarOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-            if(resultado != -1)
+            if (resultado != -1)
             {
                 MessageBox.Show("El pedido esta ahora en preparacion", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -533,6 +536,33 @@ namespace LP2Rest
 
         private void label2_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void actualizarInfo()
+        {
+            if (ordenVentaSeleccionada.estado == "Sin antender")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = false;
+            }
+            if (ordenVentaSeleccionada.estado == "En Preparacion")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
+            }
+            if (ordenVentaSeleccionada.estado == "Atendido")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
+            }
+            if (ordenVentaSeleccionada.estado == "Pagada")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
+            }
+
+            txtEstado.Text = ordenVentaSeleccionada.estado;
 
         }
     }

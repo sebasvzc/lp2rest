@@ -40,8 +40,8 @@
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.sdbtnMesas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.sdbtnMesas = new System.Windows.Forms.Button();
             this.sdbtnReclamos = new System.Windows.Forms.Button();
             this.sdbtnReservas = new System.Windows.Forms.Button();
             this.sdbtnClientes = new System.Windows.Forms.Button();
@@ -89,6 +89,28 @@
             this.panelSuperior.Size = new System.Drawing.Size(1100, 100);
             this.panelSuperior.TabIndex = 55;
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(606, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 19);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Tiempo de Asistencia";
+            // 
+            // lbltimer
+            // 
+            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltimer.Location = new System.Drawing.Point(607, 33);
+            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltimer.Name = "lbltimer";
+            this.lbltimer.Size = new System.Drawing.Size(140, 55);
+            this.lbltimer.TabIndex = 53;
+            this.lbltimer.Text = "00:00:00";
+            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMarcarSalida
             // 
@@ -182,23 +204,6 @@
             this.panelIzquierdo.TabIndex = 54;
             this.panelIzquierdo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelIzquierdo_MouseDown);
             // 
-            // sdbtnMesas
-            // 
-            this.sdbtnMesas.FlatAppearance.BorderSize = 0;
-            this.sdbtnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
-            this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
-            this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnMesas.Location = new System.Drawing.Point(3, 378);
-            this.sdbtnMesas.Name = "sdbtnMesas";
-            this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
-            this.sdbtnMesas.TabIndex = 52;
-            this.sdbtnMesas.Text = "  Mesas";
-            this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sdbtnMesas.UseVisualStyleBackColor = true;
-            this.sdbtnMesas.Click += new System.EventHandler(this.sdbtnMesas_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
@@ -208,6 +213,23 @@
             this.panel4.Size = new System.Drawing.Size(8, 819);
             this.panel4.TabIndex = 17;
             // 
+            // sdbtnMesas
+            // 
+            this.sdbtnMesas.FlatAppearance.BorderSize = 0;
+            this.sdbtnMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
+            this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
+            this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sdbtnMesas.Location = new System.Drawing.Point(3, 272);
+            this.sdbtnMesas.Name = "sdbtnMesas";
+            this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
+            this.sdbtnMesas.TabIndex = 52;
+            this.sdbtnMesas.Text = "  Mesas";
+            this.sdbtnMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sdbtnMesas.UseVisualStyleBackColor = true;
+            this.sdbtnMesas.Click += new System.EventHandler(this.sdbtnMesas_Click);
+            // 
             // sdbtnReclamos
             // 
             this.sdbtnReclamos.FlatAppearance.BorderSize = 0;
@@ -215,7 +237,7 @@
             this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
             this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 304);
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 207);
             this.sdbtnReclamos.Name = "sdbtnReclamos";
             this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReclamos.Size = new System.Drawing.Size(294, 59);
@@ -232,7 +254,7 @@
             this.sdbtnReservas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReservas.Image = global::LP2Rest.Properties.Resources.imgReservaSmall42x42;
             this.sdbtnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReservas.Location = new System.Drawing.Point(0, 226);
+            this.sdbtnReservas.Location = new System.Drawing.Point(0, 337);
             this.sdbtnReservas.Name = "sdbtnReservas";
             this.sdbtnReservas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReservas.Size = new System.Drawing.Size(256, 59);
@@ -291,28 +313,6 @@
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(606, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 19);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Tiempo de Asistencia";
-            // 
-            // lbltimer
-            // 
-            this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(607, 33);
-            this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbltimer.Name = "lbltimer";
-            this.lbltimer.Size = new System.Drawing.Size(140, 55);
-            this.lbltimer.TabIndex = 53;
-            this.lbltimer.Text = "00:00:00";
-            this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
