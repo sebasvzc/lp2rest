@@ -12,7 +12,7 @@ namespace LP2Rest
 {
     public partial class frmListarReportesA : Form
     {
-
+        private static Form formularioActivo = null;
         public frmListarReportesA()
         {
             InitializeComponent();
@@ -20,26 +20,29 @@ namespace LP2Rest
 
         private void btnCrearReporteAsistencias_Click(object sender, EventArgs e)
         {
-            frmAsistencias formAsistencias = new frmAsistencias();
-            if (formAsistencias.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmAsistencias());
         }
 
         private void btnCrearReporteVentas_Click(object sender, EventArgs e)
         {
-            frmReporteOrdenesVenta formReporteVentas = new frmReporteOrdenesVenta();
-            if (formReporteVentas.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmReporteOrdenesVenta());
         }
 
         private void btnCrearReportePlatos_Click(object sender, EventArgs e)
         {
-            frmReportePlatos formReportePlatos = new frmReportePlatos();
-            if (formReportePlatos.ShowDialog() == DialogResult.OK)
-            {
-            }
+            abrirFormulario(new frmReportePlatos());
+        }
+
+        public void abrirFormulario(Form formularioMostrar)
+        {
+            if (formularioActivo != null)
+                formularioActivo.Close();
+            formularioActivo = formularioMostrar;
+            formularioMostrar.TopLevel = false;
+            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
+            formularioMostrar.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(formularioMostrar);
+            formularioMostrar.Show();
         }
     }
 }

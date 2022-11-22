@@ -17,7 +17,8 @@ namespace LP2Rest
         private MenuWS.MenuWSClient daoGestMenu;
         private AlmacenWS.insumo insumoSeleccionado;
         public AlmacenWS.insumo InsumoSeleccionado { get => insumoSeleccionado; set => insumoSeleccionado = value; }
-        public frmListarInsumosA()
+
+        private void inicializacion()
         {
             InitializeComponent();
             daoGestAlmacen = new AlmacenWS.AlmacenWSClient();
@@ -39,6 +40,21 @@ namespace LP2Rest
             cboPlato.DisplayMember = "nombre";
             cboPlato.ValueMember = "idItemVenta";
             //cboTipoProducto.Items.Insert(0, "Selecciona un Tipo de Producto");
+        }
+
+        public frmListarInsumosA()
+        {
+            inicializacion();
+        }
+
+        public frmListarInsumosA(bool mostrarSeleccionar)
+        {
+            inicializacion();
+            if (!mostrarSeleccionar)
+            {
+                btnSeleccionar.Hide();
+                btnCancelar.Hide();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
