@@ -37,17 +37,19 @@
             // 
             this.VisorPDFBoleta.Enabled = true;
             this.VisorPDFBoleta.Location = new System.Drawing.Point(46, 20);
+            this.VisorPDFBoleta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VisorPDFBoleta.Name = "VisorPDFBoleta";
             this.VisorPDFBoleta.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("VisorPDFBoleta.OcxState")));
-            this.VisorPDFBoleta.Size = new System.Drawing.Size(678, 480);
+            this.VisorPDFBoleta.Size = new System.Drawing.Size(678, 752);
             this.VisorPDFBoleta.TabIndex = 0;
             // 
             // frmGenerarBoletaVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 512);
+            this.ClientSize = new System.Drawing.Size(784, 797);
             this.Controls.Add(this.VisorPDFBoleta);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmGenerarBoletaVenta";
             this.Text = "frmGenerarBoletaVenta";
             ((System.ComponentModel.ISupportInitialize)(this.VisorPDFBoleta)).EndInit();
