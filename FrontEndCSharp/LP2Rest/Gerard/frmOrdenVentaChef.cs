@@ -108,10 +108,22 @@ namespace LP2Rest
             {
                 btnPreparar.Visible = true;
                 btnPreparar.Enabled = true;
+                btnFinalizar.Visible = false;
             }
             else
             {
-                btnPreparar.Enabled = false;
+                if (ordenVentaSeleccionada.estado == "En Preparacion")
+                {
+                    btnFinalizar.Visible = true;
+                    btnPreparar.Visible = false;
+                    btnPreparar.Enabled = false;
+                }
+                else
+                {
+                    btnFinalizar.Visible = false;
+                    btnPreparar.Visible = false;
+                }
+                    
             }
 
 
@@ -508,7 +520,7 @@ namespace LP2Rest
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            this.DialogResult = DialogResult.OK;
         }
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
@@ -534,6 +546,21 @@ namespace LP2Rest
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            int resultado = daoVentas.ActualizarOrdenVentaPreparado(ordenVentaSeleccionada.idOrdenVenta);
+            //if(resultado != )
+            //{
+            MessageBox.Show("Los platos terminaron de preparse", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ordenVentaSeleccionada.estado = "Listo";
+            txtEstado.Text = ordenVentaSeleccionada.estado;
+            if (ordenVentaSeleccionada.estado == "Listo")
+            {
+                btnPreparar.Visible = false;
+                btnFinalizar.Visible = false;
+            }
         }
     }
 }

@@ -199,6 +199,17 @@ public class VentasWS {
         return resultado;
     }
     
+    
+    @WebMethod(operationName = "ActualizarOrdenVentaPreparado")
+    public int ActualizarOrdenVentaPreparado(@WebParam(name = "idOrdenVenta") int idOrdenVenta) {
+        int resultado = 0;
+        try{
+            resultado = daoOrdenVenta.actualizarOrdenVentaPrep(idOrdenVenta);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
      
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "listarTodosMesas")

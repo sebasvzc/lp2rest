@@ -24,4 +24,5 @@ public interface OrdenVentaDAO {
                                                         Date fechaIni,Date fechaFin,
                                                         double sueldoIni,double sueldoFin);
     int actualizar(int idOrdenVenta);
+    int actualizarOrdenVentaPrep(int idOrdenVenta);
 }
