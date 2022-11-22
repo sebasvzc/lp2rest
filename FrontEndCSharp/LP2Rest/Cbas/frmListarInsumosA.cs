@@ -52,8 +52,8 @@ namespace LP2Rest
             inicializacion();
             if (!mostrarSeleccionar)
             {
-                btnSeleccionar.Hide();
-                btnCancelar.Hide();
+                //btnSeleccionar.Hide();
+                //btnCancelar.Hide();
             }
         }
 
