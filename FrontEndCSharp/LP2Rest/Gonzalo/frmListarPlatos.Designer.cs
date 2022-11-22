@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvItemsVenta = new System.Windows.Forms.DataGridView();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,14 +63,14 @@
             // 
             this.dgvItemsVenta.AllowUserToAddRows = false;
             this.dgvItemsVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvItemsVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItemsVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvItemsVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItemsVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCompleto,
@@ -78,29 +78,29 @@
             this.Categoría,
             this.email,
             this.Stock});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvItemsVenta.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvItemsVenta.Location = new System.Drawing.Point(44, 228);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItemsVenta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvItemsVenta.Location = new System.Drawing.Point(37, 260);
             this.dgvItemsVenta.Margin = new System.Windows.Forms.Padding(5);
             this.dgvItemsVenta.Name = "dgvItemsVenta";
             this.dgvItemsVenta.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvItemsVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItemsVenta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvItemsVenta.RowHeadersWidth = 51;
             this.dgvItemsVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItemsVenta.Size = new System.Drawing.Size(1015, 319);
+            this.dgvItemsVenta.Size = new System.Drawing.Size(1015, 388);
             this.dgvItemsVenta.TabIndex = 131;
             this.dgvItemsVenta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvItemsVenta_CellFormatting);
             // 
@@ -147,7 +147,7 @@
             // cboDisponible
             // 
             this.cboDisponible.FormattingEnabled = true;
-            this.cboDisponible.Location = new System.Drawing.Point(167, 112);
+            this.cboDisponible.Location = new System.Drawing.Point(167, 138);
             this.cboDisponible.Margin = new System.Windows.Forms.Padding(5);
             this.cboDisponible.Name = "cboDisponible";
             this.cboDisponible.Size = new System.Drawing.Size(376, 31);
@@ -156,7 +156,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 115);
+            this.label1.Location = new System.Drawing.Point(50, 141);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 23);
@@ -208,18 +208,18 @@
             this.gbPedido.Controls.Add(this.label9);
             this.gbPedido.Controls.Add(this.cboDisponible);
             this.gbPedido.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.gbPedido.Location = new System.Drawing.Point(44, 31);
+            this.gbPedido.Location = new System.Drawing.Point(37, 29);
             this.gbPedido.Margin = new System.Windows.Forms.Padding(4);
             this.gbPedido.Name = "gbPedido";
             this.gbPedido.Padding = new System.Windows.Forms.Padding(4);
-            this.gbPedido.Size = new System.Drawing.Size(1015, 173);
+            this.gbPedido.Size = new System.Drawing.Size(1015, 197);
             this.gbPedido.TabIndex = 144;
             this.gbPedido.TabStop = false;
             this.gbPedido.Text = "Seleccione criterio de búsqueda";
             // 
             // txtPrecioMax
             // 
-            this.txtPrecioMax.Location = new System.Drawing.Point(698, 113);
+            this.txtPrecioMax.Location = new System.Drawing.Point(698, 139);
             this.txtPrecioMax.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioMax.Name = "txtPrecioMax";
             this.txtPrecioMax.Size = new System.Drawing.Size(208, 30);
@@ -228,7 +228,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(625, 117);
+            this.label7.Location = new System.Drawing.Point(625, 143);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 23);
@@ -239,7 +239,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(620, 82);
+            this.label6.Location = new System.Drawing.Point(620, 93);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 23);
@@ -249,7 +249,7 @@
             // 
             // txtPrecioMin
             // 
-            this.txtPrecioMin.Location = new System.Drawing.Point(699, 75);
+            this.txtPrecioMin.Location = new System.Drawing.Point(699, 86);
             this.txtPrecioMin.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioMin.Name = "txtPrecioMin";
             this.txtPrecioMin.Size = new System.Drawing.Size(208, 30);
@@ -269,7 +269,7 @@
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(167, 78);
+            this.cboCategoria.Location = new System.Drawing.Point(167, 89);
             this.cboCategoria.Margin = new System.Windows.Forms.Padding(5);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(376, 31);
@@ -278,7 +278,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 81);
+            this.label4.Location = new System.Drawing.Point(54, 92);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 23);
@@ -294,7 +294,7 @@
             this.btnBuscarPlatoCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPlatoCombo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnBuscarPlatoCombo.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(44, 582);
+            this.btnBuscarPlatoCombo.Location = new System.Drawing.Point(37, 690);
             this.btnBuscarPlatoCombo.Name = "btnBuscarPlatoCombo";
             this.btnBuscarPlatoCombo.Size = new System.Drawing.Size(234, 41);
             this.btnBuscarPlatoCombo.TabIndex = 145;
@@ -309,7 +309,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(944, 582);
+            this.button1.Location = new System.Drawing.Point(937, 690);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 41);
             this.button1.TabIndex = 148;
@@ -324,7 +324,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(823, 582);
+            this.button2.Location = new System.Drawing.Point(816, 690);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 41);
             this.button2.TabIndex = 147;
@@ -339,7 +339,7 @@
             this.btnNuevoCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoCombo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnNuevoCombo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoCombo.Location = new System.Drawing.Point(505, 582);
+            this.btnNuevoCombo.Location = new System.Drawing.Point(498, 690);
             this.btnNuevoCombo.Name = "btnNuevoCombo";
             this.btnNuevoCombo.Size = new System.Drawing.Size(154, 41);
             this.btnNuevoCombo.TabIndex = 146;
@@ -354,7 +354,7 @@
             this.btnNuevoPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoPlato.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnNuevoPlato.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoPlato.Location = new System.Drawing.Point(665, 582);
+            this.btnNuevoPlato.Location = new System.Drawing.Point(658, 690);
             this.btnNuevoPlato.Name = "btnNuevoPlato";
             this.btnNuevoPlato.Size = new System.Drawing.Size(152, 41);
             this.btnNuevoPlato.TabIndex = 149;
@@ -366,7 +366,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 660);
+            this.ClientSize = new System.Drawing.Size(1090, 768);
             this.Controls.Add(this.btnNuevoPlato);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);

@@ -48,9 +48,14 @@ namespace LP2Rest.Gonzalo
                     costoTotal += _itemVenta.stock * _itemVenta.precio;
                 }
                 txtTotal.Text = costoTotal.ToString("N2");
+
+                txtIDPlato.Text = "";
+                txtNombrePlato.Text = "";
             }
+            else if(txtIDPlato.Text == "")
+                MessageBox.Show("No se ha buscado un plato", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                MessageBox.Show("No se ha buscado un plato o no se ha ingresado una cantidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se ha ingresado una cantidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnEliminarPlato_Click(object sender, EventArgs e)
@@ -68,13 +73,29 @@ namespace LP2Rest.Gonzalo
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(txtNombre.Text == "") 
+            {
+                MessageBox.Show("No se ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtGanancia.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la ganancia", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (dgvPlatos.Rows.Count == 0)
+            { 
+                MessageBox.Show("No se ha agregado un plato en el combo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
             _itemVenta = new MenuWS.itemVenta();
             _itemVenta.nombre = txtNombre.Text;
             _itemVenta.precio = Double.Parse(txtGanancia.Text) * Double.Parse(txtTotal.Text) / 100 + Double.Parse(txtTotal.Text);
             _itemVenta.stock = 0;
             _itemVenta.tipoItem = new MenuWS.tipoItem();
             _itemVenta.tipoItem.idTipoItem = 3;
-            _itemVenta.disponible = 1; //Para que no se pueda pedir el combo cuando recien se ha creado
+            _itemVenta.disponible = 1; 
 
 
             foreach (MenuWS.itemVenta plato in platos)
@@ -91,7 +112,7 @@ namespace LP2Rest.Gonzalo
             {
                 MessageBox.Show("Se ha guardado exitosamente el combo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtIdCombo.Text = _itemVenta.idItemVenta.ToString();
-                txtPrecioVenta.Text = _itemVenta.precio.ToString();
+                txtPrecioVenta.Text = _itemVenta.precio.ToString("N2");
                 this.DialogResult = DialogResult.OK;
             }
             else
