@@ -43,7 +43,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.sdbtnMesas = new System.Windows.Forms.Button();
             this.sdbtnReclamos = new System.Windows.Forms.Button();
-            this.sdbtnReservas = new System.Windows.Forms.Button();
             this.sdbtnClientes = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
@@ -195,7 +194,6 @@
             this.panelIzquierdo.Controls.Add(this.panel4);
             this.panelIzquierdo.Controls.Add(this.sdbtnMesas);
             this.panelIzquierdo.Controls.Add(this.sdbtnReclamos);
-            this.panelIzquierdo.Controls.Add(this.sdbtnReservas);
             this.panelIzquierdo.Controls.Add(this.sdbtnClientes);
             this.panelIzquierdo.Controls.Add(this.pbLogo);
             this.panelIzquierdo.Controls.Add(this.btnCerrarSesion);
@@ -222,7 +220,7 @@
             this.sdbtnMesas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnMesas.Image = global::LP2Rest.Properties.Resources.imgMesas42x42;
             this.sdbtnMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnMesas.Location = new System.Drawing.Point(3, 455);
+            this.sdbtnMesas.Location = new System.Drawing.Point(3, 480);
             this.sdbtnMesas.Name = "sdbtnMesas";
             this.sdbtnMesas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnMesas.Size = new System.Drawing.Size(256, 59);
@@ -239,7 +237,7 @@
             this.sdbtnReclamos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnReclamos.Image = global::LP2Rest.Properties.Resources.imgReclamosIcon_small;
             this.sdbtnReclamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 390);
+            this.sdbtnReclamos.Location = new System.Drawing.Point(0, 415);
             this.sdbtnReclamos.Name = "sdbtnReclamos";
             this.sdbtnReclamos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnReclamos.Size = new System.Drawing.Size(259, 59);
@@ -249,24 +247,6 @@
             this.sdbtnReclamos.UseVisualStyleBackColor = true;
             this.sdbtnReclamos.Click += new System.EventHandler(this.sdbtnReclamos_Click);
             // 
-            // sdbtnReservas
-            // 
-            this.sdbtnReservas.FlatAppearance.BorderSize = 0;
-            this.sdbtnReservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sdbtnReservas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
-            this.sdbtnReservas.Image = global::LP2Rest.Properties.Resources.imgReservaSmall42x42;
-            this.sdbtnReservas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnReservas.Location = new System.Drawing.Point(0, 520);
-            this.sdbtnReservas.Name = "sdbtnReservas";
-            this.sdbtnReservas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnReservas.Size = new System.Drawing.Size(256, 59);
-            this.sdbtnReservas.TabIndex = 50;
-            this.sdbtnReservas.Text = "  Reservas";
-            this.sdbtnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.sdbtnReservas.UseVisualStyleBackColor = true;
-            this.sdbtnReservas.Visible = false;
-            this.sdbtnReservas.Click += new System.EventHandler(this.sdbtnReservas_Click);
-            // 
             // sdbtnClientes
             // 
             this.sdbtnClientes.FlatAppearance.BorderSize = 0;
@@ -274,7 +254,7 @@
             this.sdbtnClientes.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnClientes.Image = global::LP2Rest.Properties.Resources.imgUsuarioIcon_small;
             this.sdbtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnClientes.Location = new System.Drawing.Point(0, 325);
+            this.sdbtnClientes.Location = new System.Drawing.Point(0, 350);
             this.sdbtnClientes.Name = "sdbtnClientes";
             this.sdbtnClientes.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnClientes.Size = new System.Drawing.Size(256, 59);
@@ -368,7 +348,6 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panelIzquierdo;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button sdbtnReservas;
         private System.Windows.Forms.Button sdbtnClientes;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnCerrarSesion;

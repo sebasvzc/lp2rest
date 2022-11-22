@@ -58,18 +58,21 @@ namespace LP2Rest
         private void pbPlatos_Click(object sender, EventArgs e)
         {
             label2.Text = "Platos";
+            label3.Hide();
             abrirFormulario(new frmListarPlatos(_cuenta));
         }
 
         private void pbInsumos_Click(object sender, EventArgs e)
         {
             label2.Text = "Insumos";
+            label3.Hide();
             abrirFormulario(new frmListarInsumosA());
         }
 
         private void pbSolicitudCompras_Click(object sender, EventArgs e)
         {
             label2.Text = "Compras";
+            label3.Hide();
             abrirFormulario(new frmSolicitudesCompras());
         }
 
@@ -215,6 +218,8 @@ namespace LP2Rest
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
+            label3.Hide();
+            label2.Text = "Ventas";
             abrirFormulario( new frmListarOrdenesVentaChef() );
         }
 
