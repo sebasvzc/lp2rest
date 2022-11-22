@@ -15,13 +15,6 @@ namespace LP2Rest.ReporteWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.lp2rest.pucp.edu.pe/", ConfigurationName="ReporteWS.ReporteWS")]
     public interface ReporteWS {
         
-        // CODEGEN: Generating message contract since element name fecha_ini from namespace  is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse")]
-        LP2Rest.ReporteWS.generarReportePlatosResponse generarReportePlatos(LP2Rest.ReporteWS.generarReportePlatosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse")]
-        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReportePlatosResponse> generarReportePlatosAsync(LP2Rest.ReporteWS.generarReportePlatosRequest request);
-        
         // CODEGEN: Generating message contract since message part namespace () does not match the default value (http://services.lp2rest.pucp.edu.pe/)
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -29,6 +22,13 @@ namespace LP2Rest.ReporteWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse")]
         System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarBoletaVentaResponse> generarBoletaVentaAsync(LP2Rest.ReporteWS.generarBoletaVentaRequest request);
+        
+        // CODEGEN: Generating message contract since element name fecha_ini from namespace  is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse")]
+        LP2Rest.ReporteWS.generarReportePlatosResponse generarReportePlatos(LP2Rest.ReporteWS.generarReportePlatosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse")]
+        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReportePlatosResponse> generarReportePlatosAsync(LP2Rest.ReporteWS.generarReportePlatosRequest request);
         
         // CODEGEN: Generating message contract since element name fecha_ini from namespace  is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasResponse")]
@@ -43,6 +43,40 @@ namespace LP2Rest.ReporteWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest", ReplyAction="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse")]
         System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarReporteAsistenciaResponse> generarReporteAsistenciaAsync(LP2Rest.ReporteWS.generarReporteAsistenciaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarBoletaVenta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarBoletaVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int id_orden_venta;
+        
+        public generarBoletaVentaRequest() {
+        }
+        
+        public generarBoletaVentaRequest(int id_orden_venta) {
+            this.id_orden_venta = id_orden_venta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarBoletaVentaResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarBoletaVentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public byte[] @return;
+        
+        public generarBoletaVentaResponse() {
+        }
+        
+        public generarBoletaVentaResponse(byte[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -113,40 +147,6 @@ namespace LP2Rest.ReporteWS {
         }
         
         public generarReportePlatosResponseBody(byte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarBoletaVenta", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarBoletaVentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int id_orden_venta;
-        
-        public generarBoletaVentaRequest() {
-        }
-        
-        public generarBoletaVentaRequest(int id_orden_venta) {
-            this.id_orden_venta = id_orden_venta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarBoletaVentaResponse", WrapperNamespace="http://services.lp2rest.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarBoletaVentaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public byte[] @return;
-        
-        public generarBoletaVentaResponse() {
-        }
-        
-        public generarBoletaVentaResponse(byte[] @return) {
             this.@return = @return;
         }
     }
@@ -327,6 +327,29 @@ namespace LP2Rest.ReporteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2Rest.ReporteWS.generarBoletaVentaResponse LP2Rest.ReporteWS.ReporteWS.generarBoletaVenta(LP2Rest.ReporteWS.generarBoletaVentaRequest request) {
+            return base.Channel.generarBoletaVenta(request);
+        }
+        
+        public byte[] generarBoletaVenta(int id_orden_venta) {
+            LP2Rest.ReporteWS.generarBoletaVentaRequest inValue = new LP2Rest.ReporteWS.generarBoletaVentaRequest();
+            inValue.id_orden_venta = id_orden_venta;
+            LP2Rest.ReporteWS.generarBoletaVentaResponse retVal = ((LP2Rest.ReporteWS.ReporteWS)(this)).generarBoletaVenta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarBoletaVentaResponse> LP2Rest.ReporteWS.ReporteWS.generarBoletaVentaAsync(LP2Rest.ReporteWS.generarBoletaVentaRequest request) {
+            return base.Channel.generarBoletaVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarBoletaVentaResponse> generarBoletaVentaAsync(int id_orden_venta) {
+            LP2Rest.ReporteWS.generarBoletaVentaRequest inValue = new LP2Rest.ReporteWS.generarBoletaVentaRequest();
+            inValue.id_orden_venta = id_orden_venta;
+            return ((LP2Rest.ReporteWS.ReporteWS)(this)).generarBoletaVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2Rest.ReporteWS.generarReportePlatosResponse LP2Rest.ReporteWS.ReporteWS.generarReportePlatos(LP2Rest.ReporteWS.generarReportePlatosRequest request) {
             return base.Channel.generarReportePlatos(request);
         }
@@ -351,29 +374,6 @@ namespace LP2Rest.ReporteWS {
             inValue.Body.fecha_ini = fecha_ini;
             inValue.Body.fecha_fin = fecha_fin;
             return ((LP2Rest.ReporteWS.ReporteWS)(this)).generarReportePlatosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2Rest.ReporteWS.generarBoletaVentaResponse LP2Rest.ReporteWS.ReporteWS.generarBoletaVenta(LP2Rest.ReporteWS.generarBoletaVentaRequest request) {
-            return base.Channel.generarBoletaVenta(request);
-        }
-        
-        public byte[] generarBoletaVenta(int id_orden_venta) {
-            LP2Rest.ReporteWS.generarBoletaVentaRequest inValue = new LP2Rest.ReporteWS.generarBoletaVentaRequest();
-            inValue.id_orden_venta = id_orden_venta;
-            LP2Rest.ReporteWS.generarBoletaVentaResponse retVal = ((LP2Rest.ReporteWS.ReporteWS)(this)).generarBoletaVenta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarBoletaVentaResponse> LP2Rest.ReporteWS.ReporteWS.generarBoletaVentaAsync(LP2Rest.ReporteWS.generarBoletaVentaRequest request) {
-            return base.Channel.generarBoletaVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2Rest.ReporteWS.generarBoletaVentaResponse> generarBoletaVentaAsync(int id_orden_venta) {
-            LP2Rest.ReporteWS.generarBoletaVentaRequest inValue = new LP2Rest.ReporteWS.generarBoletaVentaRequest();
-            inValue.id_orden_venta = id_orden_venta;
-            return ((LP2Rest.ReporteWS.ReporteWS)(this)).generarBoletaVentaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
