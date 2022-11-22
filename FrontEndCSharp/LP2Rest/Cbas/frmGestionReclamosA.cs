@@ -153,16 +153,16 @@ namespace LP2Rest
 
             rtbObs.Text = auxRec.observacion;
 
-            //if(auxRec.fechaRegistro != null)
-            //{
-            //    txtFechaAtencion.Text = auxRec.fechaRegistro.ToString("dd-MM-yyyy");
-            //}
-            //else
-            //{
-            //    txtFechaAtencion.Text = "-";
-            //}
+            if (auxRec.fechaRegistro != null)
+            {
+                txtFechaAtencion.Text = auxRec.fechaRegistro.ToString("dd-MM-yyyy");
+            }
+            else
+            {
+                txtFechaAtencion.Text = "-";
+            }
 
-            
+
 
 
         }
@@ -263,10 +263,10 @@ namespace LP2Rest
                 if(resultado == 1)
                 {
                     MessageBox.Show("Modificacion Exitosa.", "Modificacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtFechaAtencion.Text = reclamoAux.fechaAtencion.ToShortDateString();
                 }
                 else
                 {
-                    
                     MessageBox.Show("Modificacion Fallida.", "Modificacion de Reclamo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
