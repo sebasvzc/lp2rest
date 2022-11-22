@@ -219,6 +219,11 @@ namespace LP2Rest
 
                     btnAgregarPlato.Enabled = false;
                     btnQuitarPlato.Enabled = false;
+
+                    if(ordenVentaSeleccionada.estado == "Pagada")
+                    {
+                        btnDocPago.Text = "CONFIRMAR PAGO DE ORDEN";
+                    }
                 }
 
                 
@@ -276,17 +281,22 @@ namespace LP2Rest
             txtEstado.Text = ordenVentaSeleccionada.estado;
 
             if(ordenVentaSeleccionada.estado == "Pagada"){
-                mesaSeleccionada.disponible = true;
-                mesaSeleccionada.ordVen = null;
-                daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
+                if (mesaSeleccionada != null)
+                {
+                    mesaSeleccionada.disponible = true;
+                    mesaSeleccionada.ordVen = null;
+                    daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
 
-                txtCantidad.Enabled = false;
-                txtDescuento.Enabled = false;
+                    txtCantidad.Enabled = false;
+                    txtDescuento.Enabled = false;
 
-                btnBuscarCliente.Enabled = false;
-                btnBuscarProducto.Enabled = false;
+                    btnBuscarCliente.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
 
-                MessageBox.Show("Orden de Venta Pagada. Mesa Liberada.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Orden de Venta Pagada. Mesa Liberada.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+                                
             }
 
             
@@ -344,7 +354,7 @@ namespace LP2Rest
             ordenVentaSeleccionada.pagado = false;
             ordenVentaSeleccionada.fechaSpecified = true;
             ordenVentaSeleccionada.fecha = DateTime.Now;
-            ordenVentaSeleccionada.estado = "Sin atender";
+            ordenVentaSeleccionada.estado = "Sin antender";
 
             lineasItems = new BindingList<lineaOrdenVenta>();
 

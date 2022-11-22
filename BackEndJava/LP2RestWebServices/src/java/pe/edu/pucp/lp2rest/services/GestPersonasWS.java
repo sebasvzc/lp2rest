@@ -724,7 +724,18 @@ public class GestPersonasWS {
         }
         return empleado;
     }
-
+    
+    @WebMethod(operationName = "ObtenerEmpleadoPorId")
+    public Empleado ObtenerEmpleadoPorId(@WebParam(name = "idEmpleado") int idEmpleado) {
+        Empleado empleado = null;
+        try {
+            empleado = daoEmpleado.obtener(idEmpleado);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return empleado;
+    }
+    
     @WebMethod(operationName = "ListarBusquedaEmpleados")
     public ArrayList<Empleado> ListarBusquedaEmpleados(
             @WebParam(name = "nombreEmp") String nombre,

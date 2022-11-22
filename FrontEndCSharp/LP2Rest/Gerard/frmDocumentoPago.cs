@@ -39,6 +39,7 @@ namespace LP2Rest
 
         //Conexiones
         VentasWS.VentasWSClient daoVentas;
+        GestPersonasWS.GestPersonasWSClient daoPersonas;
 
 
                    
@@ -46,6 +47,8 @@ namespace LP2Rest
         public frmDocumentoPago(String tipo, VentasWS.cajero auxCajero, VentasWS.ordenVenta auxOrdenVenta)
         {
             daoVentas = new VentasWS.VentasWSClient();
+            daoPersonas = new GestPersonasWS.GestPersonasWSClient();
+
             OrdenVentaActual = auxOrdenVenta;
             OrdenVentaActual.lineasOrdenVenta = daoVentas.listarLineasOrdenVentaPorId(OrdenVentaActual.idOrdenVenta);
             docPagoActual = daoVentas.ObtenerDocumentoDePago(OrdenVentaActual.documentoPago.idDocumentoPago);
@@ -73,6 +76,8 @@ namespace LP2Rest
             txtDNICliente.Text = OrdenVentaActual.cliente.DNI;
             txtNombreCliente.Text = OrdenVentaActual.cliente.nombre + " " + OrdenVentaActual.cliente.apellidoPaterno;
 
+
+
             dgvDetalleOrdenVenta.DataSource = OrdenVentaActual.lineasOrdenVenta;
 
             dtpFechaEmision.Value = docPagoActual.fechaEmision;
@@ -87,16 +92,23 @@ namespace LP2Rest
                 if (OrdenVentaActual.cajero != null)
                 {
                     CajeroActual = OrdenVentaActual.cajero;
+                    txtIdCajero.Text = CajeroActual.idPersona.ToString();
+                                       
+                    txtNombreCajero.Text = CajeroActual.nombre + " " + cajeroActual.apellidoPaterno;
                 }
                 else
                 {
+                    CajeroActual = null;
                     CajeroActual = auxCajero;
-                    OrdenVentaActual.cajero = CajeroActual;
-                    txtIdCajero.Text = OrdenVentaActual.cajero.idPersona.ToString();
-                    txtNombreCajero.Text = OrdenVentaActual.cajero.nombre + " " + OrdenVentaActual.cajero.apellidoPaterno;
+                    txtIdCajero.Text = "Por asignar.";
+                    txtNombreCajero.Text = " -";
+                    //CajeroActual = auxCajero;
+                    //OrdenVentaActual.cajero = CajeroActual;
+                    //txtIdCajero.Text = OrdenVentaActual.cajero.idPersona.ToString();
+                    //txtNombreCajero.Text = OrdenVentaActual.cajero.nombre + " " + OrdenVentaActual.cajero.apellidoPaterno;
                 }                
 
-                if (OrdenVentaActual.estado == "En Preparacion")
+                if (OrdenVentaActual.estado == "Listo")
                 {
                     btnGuardarPago.Enabled = false;
                     btnModificar.Enabled = true;
@@ -117,9 +129,39 @@ namespace LP2Rest
             }
             else
             {
-                CajeroActual = null;
-                txtIdCajero.Text = "Por asignar.";
-                txtNombreCajero.Text = " -";
+                if(ordenVentaActual.cajero != null)
+                {
+                    txtIdCajero.Text = OrdenVentaActual.cajero.idPersona.ToString();
+                    if (OrdenVentaActual.cajero.nombre == null)
+                    {
+                        GestPersonasWS.empleado aux = daoPersonas.ObtenerEmpleadoPorId(OrdenVentaActual.cajero.idPersona);
+                        OrdenVentaActual.cajero.nombre = aux.nombre;
+                        OrdenVentaActual.cajero.apellidoPaterno = aux.apellidoPaterno;
+                    }
+                    txtNombreCajero.Text = OrdenVentaActual.cajero.nombre + " " + OrdenVentaActual.cajero.apellidoPaterno;
+                }
+                else
+                {
+                    CajeroActual = null;
+                    txtIdCajero.Text = "Por asignar.";
+                    txtNombreCajero.Text = " -";
+                }
+
+                switch (docPagoActual.metodoPago)
+                {
+                    case "Tarjeta Credito":
+                        cboMetodoPago.SelectedIndex = 0;
+                        break;
+                    case "Tarjeta Debito":
+                        cboMetodoPago.SelectedIndex = 1;
+                        break;
+                    case "Efectivo":
+                        cboMetodoPago.SelectedIndex = 2;
+                        break;
+                    case "Cheque":
+                        cboMetodoPago.SelectedIndex = 3;
+                        break;
+                }
 
                 btnGuardarPago.Enabled = false;
                 btnModificar.Enabled = false;
@@ -307,7 +349,7 @@ namespace LP2Rest
             //"Efectivo",
             //"Cheque"
 
-            switch (OrdenVentaActual.estado)
+            switch (docPagoActual.metodoPago)
             {
                 case "Tarjeta Credito":
                     cboMetodoPago.SelectedIndex = 0;
@@ -341,9 +383,6 @@ namespace LP2Rest
                 OrdenVentaActual.cajero = CajeroActual;
             }
 
-            daoVentas.ModificarDocumentoDePago(docPagoActual);
-            daoVentas.ModificarOrdenVenta(OrdenVentaActual);
-
 
 
             int resultadoDoc = daoVentas.ModificarDocumentoDePago(docPagoActual);
@@ -360,6 +399,8 @@ namespace LP2Rest
                 }
                 else
                 {
+                    MessageBox.Show("Pago registrado exitoso.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     actualizarInfo1();
 
                     dtpFechaEmision.Enabled = false;

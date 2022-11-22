@@ -74,6 +74,7 @@ namespace LP2Rest
             dataSourceTipoProd.Insert(0, new AlmacenWS.tipoProducto { nombre = "", idTipoProducto = -1 });
 
 
+            
             cboTipoProducto.DataSource = dataSourceTipoProd;
             cboTipoProducto.DisplayMember = "nombre";
             cboTipoProducto.ValueMember = "idTipoProducto";

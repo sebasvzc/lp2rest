@@ -243,6 +243,7 @@
             this.lblReservado.Size = new System.Drawing.Size(121, 23);
             this.lblReservado.TabIndex = 23;
             this.lblReservado.Text = "Reservado";
+            this.lblReservado.Visible = false;
             // 
             // lblTitulo
             // 
@@ -263,6 +264,7 @@
             this.button1.Size = new System.Drawing.Size(19, 19);
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // lblDisponible
             // 

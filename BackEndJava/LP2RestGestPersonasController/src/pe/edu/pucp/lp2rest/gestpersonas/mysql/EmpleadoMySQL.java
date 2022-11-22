@@ -258,18 +258,18 @@ public class EmpleadoMySQL implements EmpleadoDAO {
     }
 
     @Override
-    public Empleado obtener(int idCuenta) {
+    public Empleado obtener(int idEmpleado) {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         Empleado resultado = null;
         try{
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("call BUSCAR_EMPLEADO_X_IDCUENTAUSUARIO(?)");
-            cs.setInt("_id_cuentaUsuario", idCuenta);
+            cs = con.prepareCall("call BUSCAR_EMPLEADO_X_IDPERSONA(?)");
+            cs.setInt("_id_persona", idEmpleado);
             rs = cs.executeQuery();
             String cargoEmp;
             while(rs.next()){
                 Empleado auxEmp;
-                cargoEmp = rs.getString("cargoEmpleado");
+                cargoEmp = rs.getString("tipoEmpleado");
                 switch(cargoEmp){
                     case "A":
                         auxEmp = new Administrador();
@@ -288,6 +288,7 @@ public class EmpleadoMySQL implements EmpleadoDAO {
                         break;  
                     default:
                         auxEmp = new Empleado();
+                        break;
                 }
                 
                 auxEmp.setIdPersona(rs.getInt("idEmpleado"));

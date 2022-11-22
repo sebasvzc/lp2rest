@@ -971,6 +971,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ModificarReclamoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.ObtenerEmpleadoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.proveedor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
