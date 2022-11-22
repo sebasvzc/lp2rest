@@ -24,5 +24,5 @@ public interface EmpleadoDAO {
                                         Date fechaFin,
                                         double sueldoIni, 
                                         double sueldoFin );
-    
+    Empleado buscarXidCuentaUsuario(int  idCuentaUsuario);
 }
