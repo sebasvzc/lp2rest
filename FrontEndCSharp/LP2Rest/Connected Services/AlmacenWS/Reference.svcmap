@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.235.81.182:8080/LP2RestWebServices/AlmacenWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlmacenWS.wsdl" MetadataType="Wsdl" ID="89c2028e-6f63-46e8-be28-e5b91b520250" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?WSDL" />
-    <MetadataFile FileName="AlmacenWS.xsd" MetadataType="Schema" ID="f197288f-8c47-4d6d-b315-29555a90845d" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/AlmacenWS?xsd=1" />
+    <MetadataFile FileName="AlmacenWS1.xsd" MetadataType="Schema" ID="08520697-0577-4779-93f1-32096147aa14" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/AlmacenWS?xsd=1" />
+    <MetadataFile FileName="AlmacenWS1.wsdl" MetadataType="Wsdl" ID="e4eda4de-1258-466d-a70a-8b044f9f57e6" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/AlmacenWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

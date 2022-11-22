@@ -690,8 +690,8 @@
     <EmbeddedResource Include="Gerard\frmValidarIdentidad.resx">
       <DependentUpon>frmValidarIdentidad.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlmacenWS\AlmacenWS.wsdl" />
-    <None Include="Connected Services\AlmacenWS\AlmacenWS.xsd">
+    <None Include="Connected Services\AlmacenWS\AlmacenWS1.wsdl" />
+    <None Include="Connected Services\AlmacenWS\AlmacenWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.ActualizarEstadoOrdenCompraResponse.datasource">
@@ -769,8 +769,8 @@
     <None Include="Connected Services\AlmacenWS\LP2Rest.AlmacenWS.tipoProducto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestPersonasWS\GestPersonasWS.wsdl" />
-    <None Include="Connected Services\GestPersonasWS\GestPersonasWS.xsd">
+    <None Include="Connected Services\GestPersonasWS\GestPersonasWS1.wsdl" />
+    <None Include="Connected Services\GestPersonasWS\GestPersonasWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.actualizarContraseniaCuentaUsuarioResponse.datasource">
@@ -1046,8 +1046,8 @@
     <None Include="Connected Services\MenuWS\LP2Rest.MenuWS.tipoItem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\MenuWS\MenuWS.wsdl" />
-    <None Include="Connected Services\MenuWS\MenuWS.xsd">
+    <None Include="Connected Services\MenuWS\MenuWS1.wsdl" />
+    <None Include="Connected Services\MenuWS\MenuWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarBoletaVentaResponse.datasource">
@@ -1062,8 +1062,8 @@
     <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReportePlatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
-    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+    <None Include="Connected Services\ReporteWS\ReporteWS1.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaPreparadoResponse.datasource">
@@ -1159,8 +1159,8 @@
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ordenVenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\VentasWS\VentasWS.wsdl" />
-    <None Include="Connected Services\VentasWS\VentasWS.xsd">
+    <None Include="Connected Services\VentasWS\VentasWS1.wsdl" />
+    <None Include="Connected Services\VentasWS\VentasWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

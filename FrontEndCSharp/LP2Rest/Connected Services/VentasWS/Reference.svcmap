@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2RestWebServices/VentasWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.235.81.182:8080/LP2RestWebServices/VentasWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="VentasWS.xsd" MetadataType="Schema" ID="12d8d2b5-bc93-419f-a847-72fa1c353337" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/VentasWS?xsd=1" />
-    <MetadataFile FileName="VentasWS.wsdl" MetadataType="Wsdl" ID="953f7efa-b96c-4143-97f2-d9061bcc2c05" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/VentasWS?WSDL" />
+    <MetadataFile FileName="VentasWS1.wsdl" MetadataType="Wsdl" ID="e6433f12-e07a-4187-91f3-9b5a96a9f268" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/VentasWS?WSDL" />
+    <MetadataFile FileName="VentasWS1.xsd" MetadataType="Schema" ID="63a1ff47-7525-4ea0-85a9-02bc70a1bceb" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/VentasWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

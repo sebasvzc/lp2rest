@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2RestWebServices/MenuWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.235.81.182:8080/LP2RestWebServices/MenuWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MenuWS.xsd" MetadataType="Schema" ID="3ba50078-7c82-4525-99ea-97c456266571" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/MenuWS?xsd=1" />
-    <MetadataFile FileName="MenuWS.wsdl" MetadataType="Wsdl" ID="b89df219-c143-43b2-8829-e0c07979b5d4" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/MenuWS?WSDL" />
+    <MetadataFile FileName="MenuWS1.wsdl" MetadataType="Wsdl" ID="db6d26b9-1399-4214-a2f1-df465daacc6b" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/MenuWS?WSDL" />
+    <MetadataFile FileName="MenuWS1.xsd" MetadataType="Schema" ID="9a31a772-b294-497e-9aed-63eeab9d6cbe" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/MenuWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

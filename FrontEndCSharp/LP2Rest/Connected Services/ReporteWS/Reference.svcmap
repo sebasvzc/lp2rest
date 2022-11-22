@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2RestWebServices/ReporteWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.235.81.182:8080/LP2RestWebServices/ReporteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteWS.wsdl" MetadataType="Wsdl" ID="415971e1-6783-4765-b287-ad0c6a84c3a1" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/ReporteWS?WSDL" />
-    <MetadataFile FileName="ReporteWS.xsd" MetadataType="Schema" ID="278b4484-a0d6-4e21-99f1-21dacff531e5" SourceId="1" SourceUrl="http://localhost:8080/LP2RestWebServices/ReporteWS?xsd=1" />
+    <MetadataFile FileName="ReporteWS1.xsd" MetadataType="Schema" ID="326b95d8-fb18-42ba-8138-9e3f4ffd00b2" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/ReporteWS?xsd=1" />
+    <MetadataFile FileName="ReporteWS1.wsdl" MetadataType="Wsdl" ID="5955a32e-48fd-427b-8fd1-d2de2168a511" SourceId="1" SourceUrl="http://54.235.81.182:8080/LP2RestWebServices/ReporteWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
