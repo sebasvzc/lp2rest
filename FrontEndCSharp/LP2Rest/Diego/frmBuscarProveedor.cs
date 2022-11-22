@@ -64,5 +64,21 @@ namespace LP2Rest.Diego
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(txtNombreProveeedor.Text != "")
+                this.DialogResult = DialogResult.OK;
+            else
+                MessageBox.Show("No ha seleccionado un proveedor", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (txtNombreProveeedor.Text != "")
+                this.DialogResult = DialogResult.OK;
+            else
+                MessageBox.Show("No ha seleccionado un proveedor", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

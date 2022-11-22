@@ -56,7 +56,7 @@ namespace LP2Rest.Diego
                 _lineaordenCompra = daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra);
                 dgvLineaOrdenCompra.DataSource = _lineaordenCompra;
                 txtOrdenCompra.Text = "OC" + string.Format("{0:D5}", oc.idOrdenCompra);
-                txtProveedor.Text = oc.proveedor.razonSocial;
+                txtProveedor.Text = oc.proveedor.nombreComercial;
                 txtEstado.Text = oc.estado;
                 txtMonto.Text = oc.total.ToString("N2");
                 txtDescripcion.Text = oc.descripcion;
@@ -190,6 +190,8 @@ namespace LP2Rest.Diego
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtProveedor.Text != "")
+                MessageBox.Show("No se ha seleccionado un proveedor", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             _ordenCompraNuevo.descripcion = txtDescripcion.Text;
             _ordenCompraNuevo.fechaHoraCreacionSpecified = true;
             _ordenCompraNuevo.fechaHoraCumplimientoSpecified = true;
@@ -236,7 +238,7 @@ namespace LP2Rest.Diego
             if (formBuscarProveedor.ShowDialog() == DialogResult.OK)
             {
                 _proveedor = formBuscarProveedor.ProveedorSeleccionada;
-                txtProveedor.Text = _proveedor.razonSocial;
+                txtProveedor.Text = _proveedor.nombreComercial;
             }
         }
 
@@ -250,6 +252,16 @@ namespace LP2Rest.Diego
         {
             int resultado = daoGestAlmacen.ActualizarEstadoOrdenCompra(_ordenCompraNuevo.idOrdenCompra);
             this.DialogResult = DialogResult.OK;
+            if (resultado != 0)
+            {
+                MessageBox.Show("Se ha validado exitosamente la orden de compra", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtOrdenCompra.Text = resultado.ToString();
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error al validar la orden de compra", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -263,6 +275,11 @@ namespace LP2Rest.Diego
 
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

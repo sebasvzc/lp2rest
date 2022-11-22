@@ -103,7 +103,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label6.Location = new System.Drawing.Point(427, 164);
+            this.label6.Location = new System.Drawing.Point(427, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(185, 29);
             this.label6.TabIndex = 69;
@@ -290,7 +290,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(764, 164);
+            this.label1.Location = new System.Drawing.Point(763, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 29);
             this.label1.TabIndex = 93;

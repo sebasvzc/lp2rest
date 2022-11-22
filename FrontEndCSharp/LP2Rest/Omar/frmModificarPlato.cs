@@ -125,7 +125,7 @@ namespace LP2Rest.Omar
             itemVenta.nombre = txtNombrePlato.Text;
             itemVenta.stock = Int32.Parse(txtStock.Text);
             itemVenta.descuento = Double.Parse(txtDescuento.Text);
-            itemVenta.precio = Double.Parse(txtTotal.Text) + Double.Parse(txtGanancia.Text) - itemVenta.descuento;
+            itemVenta.precio = Double.Parse(txtTotal.Text) + (Double.Parse(txtGanancia.Text) - itemVenta.descuento) * Double.Parse(txtTotal.Text) / 100;
             if(tipoItemVenta != 3)
                 itemVenta.recetaDePreparacion = txtReceta.Text;
             if (cbDisponible.SelectedItem.ToString() == "Disponible")

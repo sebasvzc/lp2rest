@@ -151,6 +151,12 @@
     <Compile Include="Gonzalo\frmBuscarSoloPlatos.Designer.cs">
       <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gonzalo\frmGenerarBoletaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gonzalo\frmGenerarBoletaVenta.Designer.cs">
+      <DependentUpon>frmGenerarBoletaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gonzalo\frmGestionarCombos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -507,6 +513,9 @@
     <EmbeddedResource Include="Gonzalo\frmBuscarSoloPlatos.resx">
       <DependentUpon>frmBuscarSoloPlatos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gonzalo\frmGenerarBoletaVenta.resx">
+      <DependentUpon>frmGenerarBoletaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gonzalo\frmGestionarCombos.resx">
       <DependentUpon>frmGestionarCombos.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -776,6 +785,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.buscarEventoPorIDResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.buscarXidCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.cajero.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1036,6 +1048,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarBoletaVentaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReporteOrdenVentasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\LP2Rest.ReporteWS.generarReportePlatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />

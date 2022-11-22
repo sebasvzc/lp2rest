@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,13 +16,14 @@ namespace LP2Rest
     {
         private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
         private GestPersonasWS.empleado _empleadoSeleccionado;
+        public long MaxReceivedMessageSize { get; set; }
         public frmListarUsuariosA()
         {
             InitializeComponent();
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
             _empleadoSeleccionado = new GestPersonasWS.empleado();
             dgvEmpleados.AutoGenerateColumns = false;
-
+            _empleadoSeleccionado = null;
             List<string> listaCargos = new List<string>()
                     {
                         "Administrador",
@@ -51,8 +53,7 @@ namespace LP2Rest
             if (txtSueldoDesde.Text == "") { auxSI = 0.0; } else { auxSI = Double.Parse(txtSueldoDesde.Text); }
             if (txtSueldaHasta.Text == "") { auxSF = 99999999.0; } else { auxSF = Double.Parse(txtSueldaHasta.Text); }
             ;
-
-
+            
             GestPersonasWS.empleado[] listaEmps = daoGestPersonas.ListarBusquedaEmpleados(
                                                                                             txtNombre.Text,
                                                                                             txtApellidoPaterno.Text,
@@ -130,16 +131,132 @@ namespace LP2Rest
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            _empleadoSeleccionado = (GestPersonasWS.empleado)dgvEmpleados.CurrentRow.DataBoundItem;
-            txtNombre.Text = _empleadoSeleccionado.nombre;
-            txtApellidoPaterno.Text = _empleadoSeleccionado.apellidoPaterno;
-            txtDNI.Text = _empleadoSeleccionado.DNI;
+            if(dgvEmpleados.Rows.Count > 0)
+            {
+                _empleadoSeleccionado = (GestPersonasWS.empleado)dgvEmpleados.CurrentRow.DataBoundItem;
+                txtNombre.Text = _empleadoSeleccionado.nombre;
+                txtApellidoPaterno.Text = _empleadoSeleccionado.apellidoPaterno;
+                txtDNI.Text = _empleadoSeleccionado.DNI;
+            }
+            else
+            {
+                _empleadoSeleccionado = null;
+            }
+           
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            _empleadoSeleccionado = (GestPersonasWS.empleado)dgvEmpleados.CurrentRow.DataBoundItem;
-            //daoGestPersonas(_empleadoSeleccionado);
+            if (_empleadoSeleccionado != null)
+            {
+                frmGestionUsuariosA formGestionUsuariosA = new frmGestionUsuariosA(_empleadoSeleccionado);
+                if (formGestionUsuariosA.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un empleado", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (_empleadoSeleccionado != null)
+            {
+                _empleadoSeleccionado = (GestPersonasWS.empleado)dgvEmpleados.CurrentRow.DataBoundItem;
+                if (MessageBox.Show("¿Está seguro que desea eliminar el empleado?", "Mensaje de Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (_empleadoSeleccionado is administrador)
+                    {
+
+                        if (daoGestPersonas.EliminarAdministrador(_empleadoSeleccionado.idPersona) != 0)
+                        {
+                            MessageBox.Show("Se ha eliminado el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvEmpleados.DataSource = null;
+                            txtApellidoPaterno.Text = "";
+                            txtNombre.Text = "";
+                            txtDNI.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido eliminar el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (_empleadoSeleccionado is recepcionista)
+                    {
+                        if (daoGestPersonas.EliminarRecepcionista(_empleadoSeleccionado.idPersona) != 0)
+                        {
+                            MessageBox.Show("Se ha eliminado el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvEmpleados.DataSource = null;
+                            txtApellidoPaterno.Text = "";
+                            txtNombre.Text = "";
+                            txtDNI.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido eliminar el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (_empleadoSeleccionado is chef)
+                    {
+                        if (daoGestPersonas.EliminarChef(_empleadoSeleccionado.idPersona) != 0)
+                        {
+                            MessageBox.Show("Se ha eliminado el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvEmpleados.DataSource = null;
+                            txtApellidoPaterno.Text = "";
+                            txtNombre.Text = "";
+                            txtDNI.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido eliminar el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (_empleadoSeleccionado is cajero)
+                    {
+                        if (daoGestPersonas.EliminarCajero(_empleadoSeleccionado.idPersona) != 0)
+                        {
+                            MessageBox.Show("Se ha eliminado el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvEmpleados.DataSource = null;
+                            txtApellidoPaterno.Text = "";
+                            txtNombre.Text = "";
+                            txtDNI.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido eliminar el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (_empleadoSeleccionado is mesero)
+                    {
+                        if (daoGestPersonas.EliminarMesero(_empleadoSeleccionado.idPersona) != 0)
+                        {
+                            MessageBox.Show("Se ha eliminado el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvEmpleados.DataSource = null;
+                            txtApellidoPaterno.Text = "";
+                            txtNombre.Text = "";
+                            txtDNI.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido eliminar el empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe seleccionar un empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un empleado", "Mensaje de Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

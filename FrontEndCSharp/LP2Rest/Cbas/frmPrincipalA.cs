@@ -24,8 +24,9 @@ namespace LP2Rest
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
 
-        private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
+        private GestPersonasWS.GestPersonasWSClient _daoGestPersonasWS;
         private GestPersonasWS.asistencia _asistencia;
+        private GestPersonasWS.empleado _empleado;
         private int id_cuentaEscogida;
         int hh, mm, ss;
         private int idAsistencia = 0;
@@ -33,7 +34,7 @@ namespace LP2Rest
         {
             InitializeComponent();
             btnRegistrarSalida.Hide();
-            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            _daoGestPersonasWS = new GestPersonasWS.GestPersonasWSClient();
             _asistencia = new GestPersonasWS.asistencia();
         }
 
@@ -41,10 +42,13 @@ namespace LP2Rest
         {
             InitializeComponent();
             btnRegistrarSalida.Hide();
-            _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
+            _daoGestPersonasWS = new GestPersonasWS.GestPersonasWSClient();
             _asistencia = new GestPersonasWS.asistencia();
+            _empleado = _daoGestPersonasWS.buscarXidCuentaUsuario(cuenta.idUsuario);
+
             lblID.Text = "Administrador: " + cuenta.usuario;
             id_cuentaEscogida = cuenta.idUsuario;
+            label1.Text = "Bienvenido " + _empleado.nombre + " " + _empleado.apellidoPaterno + ".";
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -178,7 +182,7 @@ namespace LP2Rest
 
                 int resultadoInsercion = 0;
                 
-                resultadoInsercion = _daoAsistencia.insertarAsistencia(_asistencia);
+                resultadoInsercion = _daoGestPersonasWS.insertarAsistencia(_asistencia);
                 
                 if (resultadoInsercion != 0)
                 {
@@ -264,7 +268,7 @@ namespace LP2Rest
                 timer1.Stop();
 
 
-                resultadoInsercion = _daoAsistencia.modificarAsistenciaSalida(idAsistencia,
+                resultadoInsercion = _daoGestPersonasWS.modificarAsistenciaSalida(idAsistencia,
                     _asistencia.fechaSalida, _asistencia.horaSalida);
                 if (resultadoInsercion != 0)
                 {

@@ -25,5 +25,5 @@ public interface EmpleadoDAO {
                                         double sueldoIni, 
                                         double sueldoFin );
     Empleado obtener(int idCuenta);
-    
+    Empleado buscarXidCuentaUsuario(int  idCuentaUsuario);
 }

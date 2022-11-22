@@ -30,6 +30,7 @@ namespace LP2Rest
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblSueldo = new System.Windows.Forms.Label();
             this.txtSueldo = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
@@ -64,11 +65,15 @@ namespace LP2Rest
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.epCampoObligatorio = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epDNI = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCampoObligatorio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDNI)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSueldo
@@ -88,6 +93,7 @@ namespace LP2Rest
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(207, 32);
             this.txtSueldo.TabIndex = 40;
+            this.txtSueldo.Validating += new System.ComponentModel.CancelEventHandler(this.txtSueldo_Validating);
             // 
             // lblCargo
             // 
@@ -106,6 +112,7 @@ namespace LP2Rest
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(331, 32);
             this.txtEmail.TabIndex = 38;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // lblArea
             // 
@@ -131,6 +138,7 @@ namespace LP2Rest
             this.cboArea.Name = "cboArea";
             this.cboArea.Size = new System.Drawing.Size(198, 33);
             this.cboArea.TabIndex = 36;
+            this.cboArea.Validating += new System.ComponentModel.CancelEventHandler(this.cboArea_Validating);
             // 
             // lblFechaNacimiento
             // 
@@ -167,6 +175,7 @@ namespace LP2Rest
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(331, 32);
             this.txtApellidoPaterno.TabIndex = 29;
+            this.txtApellidoPaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txtApellidoPaterno_Validating);
             // 
             // lblNombre
             // 
@@ -185,6 +194,7 @@ namespace LP2Rest
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(331, 32);
             this.txtNombre.TabIndex = 27;
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // lblID
             // 
@@ -219,9 +229,11 @@ namespace LP2Rest
             // 
             this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtDNI.Location = new System.Drawing.Point(220, 43);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(208, 32);
             this.txtDNI.TabIndex = 23;
+            this.txtDNI.Validating += new System.ComponentModel.CancelEventHandler(this.txtDNI_Validating);
             // 
             // lblTitulo
             // 
@@ -263,6 +275,7 @@ namespace LP2Rest
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(331, 32);
             this.txtDireccion.TabIndex = 44;
+            this.txtDireccion.Validating += new System.ComponentModel.CancelEventHandler(this.txtDireccion_Validating);
             // 
             // label2
             // 
@@ -281,6 +294,7 @@ namespace LP2Rest
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(208, 32);
             this.txtTelefono.TabIndex = 46;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // btnAdjuntarCV
             // 
@@ -445,6 +459,14 @@ namespace LP2Rest
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // epCampoObligatorio
+            // 
+            this.epCampoObligatorio.ContainerControl = this;
+            // 
+            // epDNI
+            // 
+            this.epDNI.ContainerControl = this;
+            // 
             // frmGestionUsuariosA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +492,8 @@ namespace LP2Rest
             this.groupBox3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epCampoObligatorio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDNI)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -510,5 +534,7 @@ namespace LP2Rest
         private Button btnCerrar;
         private Button btnCancelar;
         private Button btnGuardar;
+        private ErrorProvider epCampoObligatorio;
+        private ErrorProvider epDNI;
     }
 }
