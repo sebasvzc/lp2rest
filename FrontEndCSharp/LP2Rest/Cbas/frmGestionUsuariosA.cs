@@ -43,6 +43,7 @@ namespace LP2Rest
         {
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
             InitializeComponent();
+            cboArea.Enabled = false;
             _empleadoSeleccionado = emp;
             _accion = 1;
             if (_empleadoSeleccionado != null)
@@ -122,7 +123,15 @@ namespace LP2Rest
             int resultado = 0;
             char tipoEmpleado;
 
+            if (txtNombre.Text == "" || txtApellidoPaterno.Text == "" || txtDNI.Text == "" || txtDireccion.Text == "" ||
+                txtTelefono.Text == "" || txtEmail.Text == "" || txtSueldo.Text == "" || cboArea.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe llenar todos los campos obligatorios", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            {
 
+            }
             if (cboArea.SelectedItem.ToString() == "Administrador")
             {
                 EmpleadoSeleccionado = new GestPersonasWS.administrador();
@@ -364,6 +373,72 @@ namespace LP2Rest
                     MessageBox.Show("Se ha generado un error al momento de guardar el archivo", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void txtDNI_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDNI.Text.Trim() == "")
+                epDNI.SetError(txtDNI, "Debe ingresar un DNI");
+            else if (txtDNI.Text.Trim().Length != 8)
+                epDNI.SetError(txtDNI, "El DNI debe tener 8 dígitos");
+            else
+                epDNI.SetError(txtDNI, "");
+        }
+
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNombre.Text.Trim() == "")
+                epCampoObligatorio.SetError(txtNombre, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(txtNombre, "");
+        }
+
+        private void txtApellidoPaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoPaterno.Text.Trim() == "")
+                epCampoObligatorio.SetError(txtApellidoPaterno, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(txtApellidoPaterno, "");
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtEmail.Text.Trim() == "")
+                epCampoObligatorio.SetError(txtEmail, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(txtEmail, "");
+        }
+
+        private void txtDireccion_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDireccion.Text.Trim() == "")
+                epCampoObligatorio.SetError(txtDireccion, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(txtDireccion, "");
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTelefono.Text.Trim() == "")
+                epCampoObligatorio.SetError(txtTelefono, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(txtTelefono, "");
+        }
+
+        private void cboArea_Validating(object sender, CancelEventArgs e)
+        {
+            if (cboArea.Text.Trim() == "")
+                epCampoObligatorio.SetError(cboArea, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(cboArea, "");
+        }
+
+        private void txtSueldo_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtSueldo.Text.Trim() == "")
+                epCampoObligatorio.SetError(txtSueldo, "Este es un campo obligatorio");
+            else
+                epCampoObligatorio.SetError(txtSueldo, "");
         }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace LP2Rest
     {
         private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
         private GestPersonasWS.empleado _empleadoSeleccionado;
+        public long MaxReceivedMessageSize { get; set; }
         public frmListarUsuariosA()
         {
             InitializeComponent();
@@ -51,8 +53,7 @@ namespace LP2Rest
             if (txtSueldoDesde.Text == "") { auxSI = 0.0; } else { auxSI = Double.Parse(txtSueldoDesde.Text); }
             if (txtSueldaHasta.Text == "") { auxSF = 99999999.0; } else { auxSF = Double.Parse(txtSueldaHasta.Text); }
             ;
-
-
+            
             GestPersonasWS.empleado[] listaEmps = daoGestPersonas.ListarBusquedaEmpleados(
                                                                                             txtNombre.Text,
                                                                                             txtApellidoPaterno.Text,
