@@ -44,12 +44,14 @@ public class ReportePlatos extends HttpServlet {
             JasperReport reporte = (JasperReport) JRLoader.loadObject(
                 ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/report/ReportePlatos.jasper"));
             
-           
+            String rutaSubReporteCategoria = ReporteAsistencias.class.getResource(
+                    "/pe/edu/pucp/lp2rest/report/ReportePlatoCategoria.jasper").getPath();
              
             String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
             Image imagen = (new ImageIcon(rutaImagen)).getImage();
             HashMap parametros = new HashMap();
             parametros.put("ImagenLogoEmpresa", imagen);
+            parametros.put("SubreportePlatoCategoria", rutaSubReporteCategoria);
            
             
             JasperPrint jp = JasperFillManager.fillReport(reporte,parametros,con);
