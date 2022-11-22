@@ -210,7 +210,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label12.Location = new System.Drawing.Point(462, 21);
+            this.label12.Location = new System.Drawing.Point(426, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(99, 23);
             this.label12.TabIndex = 147;
@@ -237,9 +237,9 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(569, 16);
+            this.txtCantidad.Location = new System.Drawing.Point(531, 60);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(217, 32);
+            this.txtCantidad.Size = new System.Drawing.Size(70, 32);
             this.txtCantidad.TabIndex = 146;
             // 
             // txtTotal
