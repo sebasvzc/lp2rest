@@ -189,7 +189,7 @@ namespace LP2Rest
                 meseroSeleccionado.idPersona = formBuscarMesero.EmpleadoSeleccionado.idPersona;
                 meseroSeleccionado.nombre = formBuscarMesero.EmpleadoSeleccionado.nombre;
                 meseroSeleccionado.apellidoPaterno = formBuscarMesero.EmpleadoSeleccionado.apellidoPaterno;
-
+                ordenVentaActual.mesero = meseroSeleccionado;
                 txtIdMesero.Text = meseroSeleccionado.idPersona.ToString();
                 txtNombreMesero.Text = meseroSeleccionado.nombre + " " + meseroSeleccionado.apellidoPaterno;
             }
@@ -204,7 +204,7 @@ namespace LP2Rest
                 cajeroSeleccionado.idPersona = formBuscarCajero.EmpleadoSeleccionado.idPersona;
                 cajeroSeleccionado.nombre = formBuscarCajero.EmpleadoSeleccionado.nombre;
                 cajeroSeleccionado.apellidoPaterno = formBuscarCajero.EmpleadoSeleccionado.apellidoPaterno;
-
+                ordenVentaActual.cajero = cajeroSeleccionado;
                 txtIdCajero.Text = cajeroSeleccionado.idPersona.ToString();
                 txtNombreCajero.Text = cajeroSeleccionado.nombre + " " + cajeroSeleccionado.apellidoPaterno; ;
             }
