@@ -757,6 +757,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.buscarEventoPorIDResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.buscarXidCuentaUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.cajero.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
