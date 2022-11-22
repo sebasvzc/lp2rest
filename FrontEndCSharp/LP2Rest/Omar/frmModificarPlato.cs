@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,12 @@ namespace LP2Rest.Omar
 {
     public partial class frmModificarPlato : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
+
         private AlmacenWS.insumo[] insumos;
         private MenuWS.MenuWSClient daoMenu;
         private AlmacenWS.AlmacenWSClient daoAlmacen;
@@ -48,7 +55,6 @@ namespace LP2Rest.Omar
 
             if (tipoItemVenta == 3) //Combo
             {
-                lblTitulo.Text = "DETALLE DE COMBO";
                 txtReceta.Visible = false;
                 lblReceta.Visible = false;
                 dgvInsumos.Columns[0].HeaderText = "ID";
@@ -162,6 +168,12 @@ namespace LP2Rest.Omar
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
     }
 }

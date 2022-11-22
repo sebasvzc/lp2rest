@@ -58,12 +58,12 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
+            this.panelSuperior.Controls.Add(this.btnRegistrarSalida);
             this.panelSuperior.Controls.Add(this.label1);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.lbltimer);
-            this.panelSuperior.Controls.Add(this.btnRegistrarSalida);
             this.panelSuperior.Controls.Add(this.label2);
-            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(256, 0);
@@ -76,7 +76,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(640, 14);
+            this.label1.Location = new System.Drawing.Point(616, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 19);
@@ -97,7 +97,7 @@
             // lbltimer
             // 
             this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(645, 29);
+            this.lbltimer.Location = new System.Drawing.Point(618, 32);
             this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltimer.Name = "lbltimer";
             this.lbltimer.Size = new System.Drawing.Size(140, 55);
@@ -113,10 +113,10 @@
             this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnRegistrarSalida.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnRegistrarSalida.Location = new System.Drawing.Point(446, 19);
+            this.btnRegistrarSalida.Location = new System.Drawing.Point(314, 17);
             this.btnRegistrarSalida.Name = "btnRegistrarSalida";
             this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRegistrarSalida.Size = new System.Drawing.Size(168, 65);
+            this.btnRegistrarSalida.Size = new System.Drawing.Size(201, 65);
             this.btnRegistrarSalida.TabIndex = 27;
             this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
             this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,7 +144,7 @@
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(239, 19);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(314, 17);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
@@ -204,10 +204,10 @@
             this.sdbtnVentas.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnVentas.Image = global::LP2Rest.Properties.Resources.imgVentasIcon_small;
             this.sdbtnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnVentas.Location = new System.Drawing.Point(0, 518);
+            this.sdbtnVentas.Location = new System.Drawing.Point(0, 528);
             this.sdbtnVentas.Name = "sdbtnVentas";
             this.sdbtnVentas.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.sdbtnVentas.Size = new System.Drawing.Size(214, 59);
+            this.sdbtnVentas.Size = new System.Drawing.Size(256, 59);
             this.sdbtnVentas.TabIndex = 46;
             this.sdbtnVentas.Text = "  Ventas";
             this.sdbtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -221,7 +221,7 @@
             this.sdbtnPlatos.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnPlatos.Image = global::LP2Rest.Properties.Resources.imgPlatosIcon_small;
             this.sdbtnPlatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 327);
+            this.sdbtnPlatos.Location = new System.Drawing.Point(0, 304);
             this.sdbtnPlatos.Name = "sdbtnPlatos";
             this.sdbtnPlatos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnPlatos.Size = new System.Drawing.Size(256, 59);
@@ -249,7 +249,7 @@
             this.sdbtnCompras.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.sdbtnCompras.Image = global::LP2Rest.Properties.Resources.imgComprasIcon_small;
             this.sdbtnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sdbtnCompras.Location = new System.Drawing.Point(-6, 392);
+            this.sdbtnCompras.Location = new System.Drawing.Point(-2, 381);
             this.sdbtnCompras.Name = "sdbtnCompras";
             this.sdbtnCompras.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.sdbtnCompras.Size = new System.Drawing.Size(256, 59);
@@ -297,6 +297,7 @@
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // panelContenedor
             // 
@@ -311,11 +312,11 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 45F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(175, 223);
+            this.label3.Location = new System.Drawing.Point(92, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(665, 299);
+            this.label3.Size = new System.Drawing.Size(933, 352);
             this.label3.TabIndex = 27;
             this.label3.Text = "insertar mensaje de bienvenida";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

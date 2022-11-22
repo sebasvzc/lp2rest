@@ -45,9 +45,9 @@
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.btnMarcarAsistencia = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.lbltimer = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -306,6 +306,24 @@
             this.label2.Text = "Tiempo de Asistencia";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnRegistrarSalida
+            // 
+            this.btnRegistrarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnRegistrarSalida.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnRegistrarSalida.Location = new System.Drawing.Point(286, 17);
+            this.btnRegistrarSalida.Name = "btnRegistrarSalida";
+            this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnRegistrarSalida.Size = new System.Drawing.Size(179, 68);
+            this.btnRegistrarSalida.TabIndex = 27;
+            this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
+            this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistrarSalida.UseVisualStyleBackColor = true;
+            this.btnRegistrarSalida.Click += new System.EventHandler(this.btnRegistrarSalida_Click);
+            // 
             // lbltimer
             // 
             this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -327,24 +345,6 @@
             this.lblID.TabIndex = 46;
             this.lblID.Text = "Administrador:  XXXXXXXX";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnRegistrarSalida
-            // 
-            this.btnRegistrarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnRegistrarSalida.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnRegistrarSalida.Location = new System.Drawing.Point(286, 17);
-            this.btnRegistrarSalida.Name = "btnRegistrarSalida";
-            this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRegistrarSalida.Size = new System.Drawing.Size(179, 68);
-            this.btnRegistrarSalida.TabIndex = 27;
-            this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
-            this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistrarSalida.UseVisualStyleBackColor = true;
-            this.btnRegistrarSalida.Click += new System.EventHandler(this.btnRegistrarSalida_Click);
             // 
             // lbltitulo
             // 

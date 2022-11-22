@@ -1,5 +1,6 @@
 ﻿using LP2Rest.GestPersonasWS;
 using LP2Rest.Gonzalo;
+using LP2Rest.VentasWS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,9 @@ namespace LP2Rest
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
         private GestPersonasWS.cuentaUsuario _cuenta;
+        private GestPersonasWS.empleado _empleado;
         private int id_cuenta;
+        private bool registroAsistencia = false;
 
         int hh, mm, ss;
         private int idAsistencia = 0;
@@ -44,7 +47,12 @@ namespace LP2Rest
             _daoAsistencia = new GestPersonasWS.GestPersonasWSClient();
             _cuenta = cuenta;
             lblID.Text = "Chef: " + cuenta.usuario;
+
+            _empleado = _daoAsistencia.buscarXidCuentaUsuario(cuenta.idUsuario);
             id_cuenta = cuenta.idUsuario;
+            label3.Text = "¡Buenos días, " + _empleado.nombre + " " + _empleado.apellidoPaterno + "!\n\n"
+                        + "Por favor no olvide registrar su asistencia\n"
+                        + "haciendo click botón superior.";
         }
 
         private void pbPlatos_Click(object sender, EventArgs e)
@@ -67,6 +75,7 @@ namespace LP2Rest
 
         private void lblAsistencia_Click(object sender, EventArgs e)
         {
+            registroAsistencia = true;
             string resultado = "";
             frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
             if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
@@ -118,49 +127,52 @@ namespace LP2Rest
 
 
             }
+            btnMarcarAsistencia.Hide();
         }
 
         private void lblSalida_Click(object sender, EventArgs e)
         {
-            string resultado = "";
-            frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
-            if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
-            {
-                resultado = formValidarAsistencia.Estado;
-            }
-            if (resultado == "Aceptado")
-            {
-                //Insertar la fecha de registro
-
-                //Se registra el empleado utilizando el DAO de conexión
-
-                int resultadoInsercion = 0;
-                // Para registrar la salida
-                DateTime salida = DateTime.Now;
-
-                string date_str = salida.ToString("yyyy/MM/dd");
-                string hora_str = salida.ToString("HH:mm:ss");
-                _asistencia.fechaSalida = date_str;
-                _asistencia.horaSalida = hora_str;
-
-                timer1.Stop();
-
-
-                resultadoInsercion = _daoAsistencia.modificarAsistenciaSalida(idAsistencia,
-                    _asistencia.fechaSalida, _asistencia.horaSalida);
-                if (resultadoInsercion != 0)
+            if (registroAsistencia) { 
+                string resultado = "";
+                frmValidarAsistencia formValidarAsistencia = new frmValidarAsistencia();
+                if (formValidarAsistencia.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("Se registró exitosamente la salida");
-                    btnRegistrarSalida.Hide();
+                    resultado = formValidarAsistencia.Estado;
                 }
-                else
+                if (resultado == "Aceptado")
                 {
-                    MessageBox.Show("Ha ocurrido un error al momento de registrar la salida", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Insertar la fecha de registro
+
+                    //Se registra el empleado utilizando el DAO de conexión
+
+                    int resultadoInsercion = 0;
+                    // Para registrar la salida
+                    DateTime salida = DateTime.Now;
+
+                    string date_str = salida.ToString("yyyy/MM/dd");
+                    string hora_str = salida.ToString("HH:mm:ss");
+                    _asistencia.fechaSalida = date_str;
+                    _asistencia.horaSalida = hora_str;
+
+                    timer1.Stop();
+
+
+                    resultadoInsercion = _daoAsistencia.modificarAsistenciaSalida(idAsistencia,
+                        _asistencia.fechaSalida, _asistencia.horaSalida);
+                    if (resultadoInsercion != 0)
+                    {
+                        MessageBox.Show("Se registró exitosamente la salida");
+                        btnRegistrarSalida.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un error al momento de registrar la salida", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+
+
                 }
-
-
-
-
             }
         }
 
@@ -208,7 +220,14 @@ namespace LP2Rest
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            lblSalida_Click(sender, e);
             Close();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            lblSalida_Click(sender, e);
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
