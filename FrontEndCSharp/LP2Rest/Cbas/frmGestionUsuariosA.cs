@@ -282,11 +282,14 @@ namespace LP2Rest
                 cuentaUsuario.idUsuario = resultado;
                 cuentaUsuario.empleado = EmpleadoSeleccionado;
                 cuentaUsuario.tipoEmpleado = tipoEmpleado;
-                daoGestPersonas.InsertarCuentaUsuario(cuentaUsuario);
+                resultado = daoGestPersonas.InsertarCuentaUsuario(cuentaUsuario);
                 EmpleadoSeleccionado.cuentaUsuario = cuentaUsuario;
-
                 if (resultado != 0)
                 {
+                    daoGestPersonas.enviarCorreoDeBienvenida(EmpleadoSeleccionado.email,
+                            EmpleadoSeleccionado.nombre, EmpleadoSeleccionado.apellidoPaterno,
+                            cuentaUsuario.usuario, cuentaUsuario.contrasenia.ToString());
+
                     MessageBox.Show("Se ha guardado el empleado con exito");
                     this.DialogResult = DialogResult.OK;
                 }

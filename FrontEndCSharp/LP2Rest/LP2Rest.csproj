@@ -830,6 +830,9 @@
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.EliminarReclamoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.enviarCorreoDeBienvenidaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestPersonasWS\LP2Rest.GestPersonasWS.enviarCorreoRecuperacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
