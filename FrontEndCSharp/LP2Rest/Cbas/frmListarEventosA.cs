@@ -32,6 +32,7 @@ namespace LP2Rest
             {
                 cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
                 btnBuscar.PerformClick();
+                cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
             }
         }
 
@@ -80,6 +81,7 @@ namespace LP2Rest
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     btnBuscar.PerformClick();
+                    cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
                 }
             }
             else
@@ -104,6 +106,7 @@ namespace LP2Rest
                     if (resultado == 1) { 
                         MessageBox.Show("Se ha eliminado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnBuscar.PerformClick();
+                        cboArtista.DataSource = daoGestPersonas.listarTodasArtistas();
                     }
                     else
                         MessageBox.Show("Ha ocurrido un error al momento de eliminar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

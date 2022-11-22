@@ -45,6 +45,8 @@ namespace LP2Rest
         {
             InitializeComponent();
             insumoNuevo = new AlmacenWS.insumo();
+            insumoNuevo.stock = insumoModificar.stock;
+            insumoNuevo.precioCompra = insumoModificar.precioCompra;
             _estado = "Modificar";
             lblTitulo.Text = "Modificar Insumo";
             cbTipoProducto.DataSource = daoGestAlmacen.ListarTipoProducto();
@@ -90,8 +92,6 @@ namespace LP2Rest
             insumoNuevo.SKU = txtSKU.Text;
             insumoNuevo.descripcion = txtDescripcion.Text;
             insumoNuevo.nombre = txtbNombre.Text;
-            insumoNuevo.stock = 0;
-            insumoNuevo.precioCompra = 0;
             insumoNuevo.tipoProducto = (AlmacenWS.tipoProducto)cbTipoProducto.SelectedItem;
 
             AlmacenWS.unidadMedida enumedida = (AlmacenWS.unidadMedida)cbUnidadMedida.SelectedItem;
@@ -114,7 +114,8 @@ namespace LP2Rest
             else if (_estado == "Nuevo")
             {
                 //Borrar:
-
+                insumoNuevo.stock = 0;
+                insumoNuevo.precioCompra = 0;
                 resultado = daoGestAlmacen.InsertarInsumo(insumoNuevo);
                 if (resultado != 0)
                 {

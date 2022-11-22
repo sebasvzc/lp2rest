@@ -86,21 +86,28 @@ namespace LP2Rest
 
         private void dgvReclamos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            reclamo auxRec = (reclamo)dgvReclamos.Rows[e.RowIndex].DataBoundItem;
-            dgvReclamos.Rows[e.RowIndex].Cells[0].Value = auxRec.cliente.nombre + " " + auxRec.cliente.apellidoPaterno;
-            dgvReclamos.Rows[e.RowIndex].Cells[1].Value = auxRec.empleado.nombre + " " + auxRec.empleado.apellidoPaterno;
-            dgvReclamos.Rows[e.RowIndex].Cells[2].Value = auxRec.fechaRegistro.ToShortDateString();
-
-            if (auxRec.estado == false)
+            try
             {
-                dgvReclamos.Rows[e.RowIndex].Cells[3].Value = "Por Atender";
-            }
-            else
-            {
-                dgvReclamos.Rows[e.RowIndex].Cells[3].Value = "Atendido";
-            }
+                reclamo auxRec = (reclamo)dgvReclamos.Rows[e.RowIndex].DataBoundItem;
+                dgvReclamos.Rows[e.RowIndex].Cells[0].Value = auxRec.cliente.nombre + " " + auxRec.cliente.apellidoPaterno;
+                dgvReclamos.Rows[e.RowIndex].Cells[1].Value = auxRec.empleado.nombre + " " + auxRec.empleado.apellidoPaterno;
+                dgvReclamos.Rows[e.RowIndex].Cells[2].Value = auxRec.fechaRegistro.ToShortDateString();
 
-            dgvReclamos.Rows[e.RowIndex].Cells[4].Value = auxRec.descripcion;
+                if (auxRec.estado == false)
+                {
+                    dgvReclamos.Rows[e.RowIndex].Cells[3].Value = "Por Atender";
+                }
+                else
+                {
+                    dgvReclamos.Rows[e.RowIndex].Cells[3].Value = "Atendido";
+                }
+
+                dgvReclamos.Rows[e.RowIndex].Cells[4].Value = auxRec.descripcion;
+            }catch(Exception ex)
+            {
+
+            }
+            
 
         }
 

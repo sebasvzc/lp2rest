@@ -47,7 +47,7 @@ namespace LP2Rest
             inicializacion();
             if (!mostrarSeleccionar)
             {
-                btnSeleccionar.Hide();
+                //btnSeleccionar.Hide();
             }
         }
 
@@ -167,7 +167,7 @@ namespace LP2Rest
                 frmGestionUsuariosA formGestionUsuariosA = new frmGestionUsuariosA(_empleadoSeleccionado);
                 if (formGestionUsuariosA.ShowDialog() == DialogResult.OK)
                 {
-
+                    button1.PerformClick();
                 }
             }
             else
