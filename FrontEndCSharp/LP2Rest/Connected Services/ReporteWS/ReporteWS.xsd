@@ -31,6 +31,16 @@
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="generarBoletaVenta">
+    <xs:sequence>
+      <xs:element name="id_orden_venta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarBoletaVentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="generarReporteOrdenVentas">
     <xs:sequence>
       <xs:element minOccurs="0" name="fecha_ini" type="xs:string" />
@@ -38,16 +48,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="generarReporteOrdenVentasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarBoletaVenta">
-    <xs:sequence>
-      <xs:element name="id_orden_venta" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarBoletaVentaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
