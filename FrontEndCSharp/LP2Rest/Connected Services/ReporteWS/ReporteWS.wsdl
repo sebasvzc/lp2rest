@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2RestWebServices/ReporteWS?xsd=1" namespace="http://services.lp2rest.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="generarReportePlatos">
-    <part name="parameters" element="tns:generarReportePlatos" />
-  </message>
-  <message name="generarReportePlatosResponse">
-    <part name="parameters" element="tns:generarReportePlatosResponse" />
-  </message>
   <message name="generarReporteAsistencia">
     <part name="parameters" element="tns:generarReporteAsistencia" />
   </message>
@@ -23,6 +17,12 @@
   <message name="generarReporteOrdenVentasResponse">
     <part name="parameters" element="tns:generarReporteOrdenVentasResponse" />
   </message>
+  <message name="generarReportePlatos">
+    <part name="parameters" element="tns:generarReportePlatos" />
+  </message>
+  <message name="generarReportePlatosResponse">
+    <part name="parameters" element="tns:generarReportePlatosResponse" />
+  </message>
   <message name="generarBoletaVenta">
     <part name="parameters" element="tns:generarBoletaVenta" />
   </message>
@@ -30,10 +30,6 @@
     <part name="parameters" element="tns:generarBoletaVentaResponse" />
   </message>
   <portType name="ReporteWS">
-    <operation name="generarReportePlatos">
-      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest" message="tns:generarReportePlatos" />
-      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse" message="tns:generarReportePlatosResponse" />
-    </operation>
     <operation name="generarReporteAsistencia">
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaRequest" message="tns:generarReporteAsistencia" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteAsistenciaResponse" message="tns:generarReporteAsistenciaResponse" />
@@ -42,6 +38,10 @@
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasRequest" message="tns:generarReporteOrdenVentas" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReporteOrdenVentasResponse" message="tns:generarReporteOrdenVentasResponse" />
     </operation>
+    <operation name="generarReportePlatos">
+      <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosRequest" message="tns:generarReportePlatos" />
+      <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarReportePlatosResponse" message="tns:generarReportePlatosResponse" />
+    </operation>
     <operation name="generarBoletaVenta">
       <input wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaRequest" message="tns:generarBoletaVenta" />
       <output wsam:Action="http://services.lp2rest.pucp.edu.pe/ReporteWS/generarBoletaVentaResponse" message="tns:generarBoletaVentaResponse" />
@@ -49,15 +49,6 @@
   </portType>
   <binding name="ReporteWSPortBinding" type="tns:ReporteWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="generarReportePlatos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="generarReporteAsistencia">
       <soap:operation soapAction="" />
       <input>
@@ -68,6 +59,15 @@
       </output>
     </operation>
     <operation name="generarReporteOrdenVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReportePlatos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -311,4 +311,45 @@ public class CuentaUsuarioMySQL implements CuentaUsuarioDAO {
         }
         return resultado;
     }
+
+    @Override
+    public int enviarCorreoBienvenida(String correoReceptor, String nombre, String apellidoPaterno,
+            String usuario, String contraseniaUser) {
+        int resultado = 0;
+
+        Properties propiedad = new Properties();
+        propiedad.setProperty("mail.smtp.host", "smtp.gmail.com");
+        propiedad.setProperty("mail.smtp.starttls.enable", "true");
+        propiedad.setProperty("mail.smtp.port", "587");
+        propiedad.setProperty("mail.smtp.auth", "true");
+
+        Session sesion = Session.getDefaultInstance(propiedad);
+        String correoEnvia = "lp2rest@gmail.com";
+        String contrasena = "ewgujuqszibdkzhp";
+        String receptor = correoReceptor;
+        String asunto = "Bienvenid@ a LP2Rest!";
+        String mensaje = "Hola " + nombre + " " + apellidoPaterno + "!\n"
+                + "Usa los siguientes datos para iniciar sesión\n"
+                + "Usuario    : " + usuario + "\n"
+                + "Contraseña : " + contraseniaUser + "\n\n"
+                + "Se le recomienda cambiar la contraseña por defecto.";
+
+        MimeMessage mail = new MimeMessage(sesion);
+        try {
+            mail.setFrom(new InternetAddress(correoEnvia));
+            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(receptor));
+            mail.setSubject(asunto);
+            mail.setText(mensaje);
+
+            Transport transportar = sesion.getTransport("smtp");
+            transportar.connect(correoEnvia, contrasena);
+            transportar.sendMessage(mail, mail.getRecipients(Message.RecipientType.TO));
+            transportar.close();
+            resultado = 1;
+
+        } catch (MessagingException ex) {
+            Logger.getLogger(Panel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return resultado;
+    }
 }
