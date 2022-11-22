@@ -228,4 +228,32 @@ public class EmpleadoMySQL implements EmpleadoDAO {
         
     }
     
+    public Empleado buscarXidCuentaUsuario(int  idCuentaUsuario){
+        Empleado empleado = new Empleado();
+        try{
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("call BUSCAR_EMPLEADO_X_IDCUENTAUSUARIO(?)");
+            cs.setInt("_id_cuentaUsuario", idCuentaUsuario);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                empleado.setIdPersona(rs.getInt("idEmpleado"));
+                empleado.setEmail(rs.getString("emailEmpleado"));
+                empleado.setDireccion(rs.getString("direccionEmpleado"));
+                empleado.setTelefono(rs.getString("telefonoEmpleado"));
+                empleado.setNombre(rs.getString("nombres"));
+                empleado.setApellidoPaterno(rs.getString("apellidos"));
+                empleado.setDNI(rs.getString("DNI"));
+                empleado.setFechaNacimiento(rs.getDate("fechanempleado"));
+                empleado.setSueldo(rs.getDouble("sueldoEmpleado"));
+                empleado.setFechaContratacion(rs.getDate("fechacempleado"));
+                empleado.setNumeroHorasMensuales(rs.getInt("horasmensualesEmpleado"));
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return empleado;
+    }
+    
 }

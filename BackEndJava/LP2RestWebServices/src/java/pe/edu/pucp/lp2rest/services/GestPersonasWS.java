@@ -700,6 +700,17 @@ public class GestPersonasWS {
         return lsEmpleados;
     }
     
+    @WebMethod(operationName = "buscarXidCuentaUsuario")
+    public Empleado buscarXidCuentaUsuario(@WebParam(name = "idCuentaUsuario") int idCuentaUsuario) {
+        Empleado empleado = null;
+        try {
+            empleado = daoEmpleado.buscarXidCuentaUsuario(idCuentaUsuario);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return empleado;
+    }
+    
     @WebMethod(operationName = "ListarBusquedaEmpleados")
     public ArrayList<Empleado> ListarBusquedaEmpleados(
             @WebParam(name = "nombreEmp") String nombre,
