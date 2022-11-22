@@ -53,13 +53,19 @@ namespace LP2Rest
         private void btnNuevo_Click(object sender, EventArgs e) //Crea plato
         {
             frmGestionarPlatos formGestionarPlatos = new frmGestionarPlatos();
-            formGestionarPlatos.ShowDialog();
+            if(formGestionarPlatos.ShowDialog() == DialogResult.OK)
+            {
+                btnBuscarPlatoCombo.PerformClick(); 
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e) //Crear combo
         {
             frmGestionarCombos formGestionarCombos = new frmGestionarCombos();
-            formGestionarCombos.ShowDialog();
+            if(formGestionarCombos.ShowDialog() == DialogResult.OK)
+            {
+                btnBuscarPlatoCombo.PerformClick();
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -134,7 +140,10 @@ namespace LP2Rest
             {
                 _itemVentaSeleccionado = (MenuWS.itemVenta)dgvItemsVenta.CurrentRow.DataBoundItem;
                 frmModificarPlato formModificarPlato = new frmModificarPlato(_itemVentaSeleccionado);
-                formModificarPlato.ShowDialog();
+                if(formModificarPlato.ShowDialog() == DialogResult.OK)
+                {
+                    btnBuscarPlatoCombo.PerformClick();
+                }
             }
             else
             {

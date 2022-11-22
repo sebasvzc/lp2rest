@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetalleOrdenVenta = new System.Windows.Forms.DataGridView();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +78,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
@@ -89,14 +90,14 @@
             // 
             this.dgvDetalleOrdenVenta.AllowUserToAddRows = false;
             this.dgvDetalleOrdenVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(60)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrdenVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDetalleOrdenVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalleOrdenVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreProducto,
@@ -132,8 +133,8 @@
             // 
             // PrecioUnitario
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "N2";
+            this.PrecioUnitario.DefaultCellStyle = dataGridViewCellStyle8;
             this.PrecioUnitario.HeaderText = "Precio Unit";
             this.PrecioUnitario.MinimumWidth = 6;
             this.PrecioUnitario.Name = "PrecioUnitario";
@@ -155,8 +156,8 @@
             // 
             // Subtotal
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle9;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 6;
             this.Subtotal.Name = "Subtotal";
@@ -351,6 +352,7 @@
             // 
             // gbCliente
             // 
+            this.gbCliente.Controls.Add(this.btnFinalizar);
             this.gbCliente.Controls.Add(this.btnPreparar);
             this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.lblNombreCliente);
@@ -368,7 +370,7 @@
             // 
             // btnPreparar
             // 
-            this.btnPreparar.Location = new System.Drawing.Point(822, 47);
+            this.btnPreparar.Location = new System.Drawing.Point(668, 47);
             this.btnPreparar.Name = "btnPreparar";
             this.btnPreparar.Size = new System.Drawing.Size(133, 70);
             this.btnPreparar.TabIndex = 5;
@@ -549,7 +551,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1056, 12);
+            this.button2.Location = new System.Drawing.Point(1236, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(25, 25);
             this.button2.TabIndex = 28;
@@ -621,6 +623,16 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Location = new System.Drawing.Point(816, 47);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(159, 70);
+            this.btnFinalizar.TabIndex = 6;
+            this.btnFinalizar.Text = "Finalizar Preparacion";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // frmOrdenVentaChef
             // 
@@ -707,5 +719,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

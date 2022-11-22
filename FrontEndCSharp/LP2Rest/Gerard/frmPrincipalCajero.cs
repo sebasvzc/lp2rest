@@ -24,7 +24,9 @@ namespace LP2Rest
         private int idcuenta;
         private GestPersonasWS.asistencia _asistencia;
         private GestPersonasWS.GestPersonasWSClient _daoAsistencia;
-        private VentasWS.mesero meseroActual;
+        private VentasWS.cajero cajeroActual;
+        private GestPersonasWS.empleado empleadoActual;
+
 
         int hh, mm, ss;
         private int idAsistencia = 0;
@@ -43,10 +45,14 @@ namespace LP2Rest
             lblID.Text = "Cajero: " + cuenta.usuario;
             idcuenta = cuenta.idUsuario;
 
-            //meseroActual = new VentasWS.mesero();
-            //meseroActual.idPersona = idcuenta;
-            //meseroActual.nombre = cuenta.
-            
+            empleadoActual = _daoAsistencia.buscarXidCuentaUsuario(cuenta.idUsuario);
+
+            cajeroActual = new VentasWS.cajero();
+            cajeroActual.idPersona = empleadoActual.idPersona;
+            cajeroActual.DNI = empleadoActual.DNI;
+            cajeroActual.nombre = empleadoActual.nombre;
+            cajeroActual.apellidoPaterno = empleadoActual.apellidoPaterno;
+
         }
 
         public void abrirFormulario(Form formularioMostrar)
@@ -236,7 +242,7 @@ namespace LP2Rest
 
         private void sdbtnVentas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmListarOrdenesVentaCajero(idcuenta) );
+            abrirFormulario(new frmListarOrdenesVentaCajero(cajeroActual) );
         }
 
         private void sdbtnReportes_Click(object sender, EventArgs e)

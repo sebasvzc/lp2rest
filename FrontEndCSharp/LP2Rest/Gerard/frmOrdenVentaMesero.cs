@@ -81,12 +81,13 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int id_ordenVentaInput = ordenVentaSeleccionada.idOrdenVenta;
-            frmGenerarBoletaVenta formGenerarBoletaVenta = new frmGenerarBoletaVenta(id_ordenVentaInput);
-            if (formGenerarBoletaVenta.ShowDialog() == DialogResult.OK)
+            //int id_ordenVentaInput = ordenVentaSeleccionada.idOrdenVenta;
+            frmDocumentoPago formDocPago = new frmDocumentoPago("otro",null,ordenVentaSeleccionada);
+            if (formDocPago.ShowDialog() == DialogResult.OK)
             {
                
             }
+            txtEstado.Text = ordenVentaSeleccionada.estado;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

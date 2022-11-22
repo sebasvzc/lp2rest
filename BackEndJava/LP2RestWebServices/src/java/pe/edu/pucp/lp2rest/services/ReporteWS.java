@@ -136,13 +136,17 @@ public class ReporteWS {
             JasperReport reporte = (JasperReport) JRLoader.loadObject(
                ReporteWS.class.getResource("/pe/edu/pucp/lp2rest/report/ReportePlatos.jasper")
             );
+            
+            String rutaSubReporteCategoria = ReporteAsistencias.class.getResource(
+                    "/pe/edu/pucp/lp2rest/report/ReportePlatoCategoria.jasper").getPath();
+            
             String rutaImagen = ReporteAsistencias.class.getResource("/pe/edu/pucp/lp2rest/img/LogoCrema.jpg").getPath();
             Image imagen = (new ImageIcon(rutaImagen)).getImage();
             HashMap parametros = new HashMap();
             parametros.put("ImagenLogoEmpresa", imagen);
             parametros.put("fecha_ini",fecha_ini);
             parametros.put("fecha_fin",fecha_fin);
-
+            parametros.put("SubreportePlatoCategoria", rutaSubReporteCategoria);
             JasperPrint jp = JasperFillManager.fillReport(reporte, parametros, con);
             con.close();
             reporteBytes = JasperExportManager.exportReportToPdf(jp);

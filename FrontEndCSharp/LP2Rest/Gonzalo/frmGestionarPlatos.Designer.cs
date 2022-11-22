@@ -62,15 +62,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblUniMed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbPedido.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tlsBuscar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarProducto
@@ -273,6 +272,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
+            this.groupBox1.Controls.Add(this.lblUniMed);
             this.groupBox1.Controls.Add(this.tlsBuscar);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtCantidad);
@@ -406,47 +406,57 @@
             this.panel1.Size = new System.Drawing.Size(897, 33);
             this.panel1.TabIndex = 141;
             // 
-            // toolStrip1
+            // btnCancelar
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGuardar,
-            this.btnCancelar});
-            this.toolStrip1.Location = new System.Drawing.Point(262, 360);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(162, 27);
-            this.toolStrip1.TabIndex = 134;
-            this.toolStrip1.Text = "tsMenu";
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(369, 360);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(99, 34);
+            this.btnCancelar.TabIndex = 153;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(262, 360);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(73, 24);
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Size = new System.Drawing.Size(99, 34);
+            this.btnGuardar.TabIndex = 152;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
-            // btnCancelar
+            // lblUniMed
             // 
-            this.btnCancelar.Image = global::LP2Rest.Properties.Resources.delete_file_40456;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 24);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.lblUniMed.AutoSize = true;
+            this.lblUniMed.Location = new System.Drawing.Point(139, 58);
+            this.lblUniMed.Name = "lblUniMed";
+            this.lblUniMed.Size = new System.Drawing.Size(52, 13);
+            this.lblUniMed.TabIndex = 153;
+            this.lblUniMed.Text = "Cantidad:";
+            this.lblUniMed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmGestionarPlatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 396);
+            this.ClientSize = new System.Drawing.Size(928, 400);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.gbPedido);
-            this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestionarPlatos";
             this.Text = "frmGestionarPlatos";
@@ -459,18 +469,12 @@
             this.tlsBuscar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox gbPedido;
@@ -504,5 +508,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.ToolStrip tlsBuscar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label lblUniMed;
     }
 }

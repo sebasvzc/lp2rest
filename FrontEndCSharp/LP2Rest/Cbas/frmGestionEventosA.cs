@@ -89,6 +89,11 @@ namespace LP2Rest
                 MessageBox.Show("No ha ingresado el costo total", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (txtArtista.Text == "")
+            {
+                MessageBox.Show("No ha ingresado un artista", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             int resultado = 0;
 
@@ -100,17 +105,35 @@ namespace LP2Rest
             eventoNuevo.fecha_inicioSpecified = true;
             eventoNuevo.monto_pagar = Double.Parse(txtCostoTotal.Text);
 
-            resultado = daoGestPersonas.ModificarEvento(eventoNuevo);
-            if (resultado != 0)
+            if(_estado == "Modificar")
             {
-                txtID.Text = resultado.ToString();
-                MessageBox.Show("Se ha registrado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
+                resultado = daoGestPersonas.ModificarEvento(eventoNuevo);
+                if (resultado != 0)
+                {
+                    MessageBox.Show("Se ha modificado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al momento de modificar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            else if(_estado == "Nuevo")
             {
-                MessageBox.Show("Ha ocurrido un error al momento de registrar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                resultado = daoGestPersonas.InsertarEvento(eventoNuevo);
+                if (resultado != 0)
+                {
+                    txtID.Text = resultado.ToString();
+                    MessageBox.Show("Se ha registrado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al momento de registrar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
+            
         }
 
         //private void btnAgregarArtista_Click(object sender, EventArgs e)

@@ -1063,6 +1063,9 @@
     <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaPreparadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\VentasWS\LP2Rest.VentasWS.ActualizarOrdenVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
