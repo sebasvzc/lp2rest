@@ -103,7 +103,7 @@ namespace LP2Rest
                     int resultado = daoGestPersonas.EliminarEvento(eventoSeleccionado.idEvento);
                     if (resultado == 1) { 
                         MessageBox.Show("Se ha eliminado exitosamente el evento", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnBuscar.PerformClick();
+                        btnBuscar.PerformClick();
                     }
                     else
                         MessageBox.Show("Ha ocurrido un error al momento de eliminar el evento", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

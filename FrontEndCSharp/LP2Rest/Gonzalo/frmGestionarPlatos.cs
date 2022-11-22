@@ -47,9 +47,13 @@ namespace LP2Rest
                     total += insumo.stock * insumo.precioCompra;
                 }
                 txtTotal.Text = total.ToString("N2");
+                txtNombreInsumo.Text = "";
+                txtCantidad.Text = "";
             }
+            else if(txtNombreInsumo.Text == "")
+                MessageBox.Show("No se ha buscado un insumo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                MessageBox.Show("No se ha buscado un insumo o no se ha ingresado una cantidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se ha ingresado una cantidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
@@ -82,8 +86,34 @@ namespace LP2Rest
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
+            frmBuscarInsumos formBuscarInsumos = new frmBuscarInsumos();
+            if (formBuscarInsumos.ShowDialog() == DialogResult.OK)
+            {
+                insumo = formBuscarInsumos.InsumoSeleccionado;
+                txtNombreInsumo.Text = insumo.nombre;
+            }
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            if(txtNombrePlato.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el nombre del plato", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txtGanancia.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la ganancia del plato", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(dgvInsumos.Rows.Count == 0)
+            {
+                MessageBox.Show("No se han registrado insumos", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             itemVenta.nombre = txtNombrePlato.Text;
             itemVenta.precio = Double.Parse(txtGanancia.Text) * Double.Parse(txtTotal.Text) / 100 + Double.Parse(txtTotal.Text);
             itemVenta.stock = 0;
@@ -114,19 +144,9 @@ namespace LP2Rest
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            frmBuscarInsumos formBuscarInsumos = new frmBuscarInsumos();
-            if (formBuscarInsumos.ShowDialog() == DialogResult.OK)
-            {
-                insumo = formBuscarInsumos.InsumoSeleccionado;
-                txtNombreInsumo.Text = insumo.nombre;
-            }
         }
     }
 }

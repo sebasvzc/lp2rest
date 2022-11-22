@@ -117,22 +117,32 @@ namespace LP2Rest.Omar
             }
         }
 
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            if(txtGanancia.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la nueva ganancia", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtDescuento.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el nuevo descuento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             itemVenta = new MenuWS.itemVenta();
             itemVenta.idItemVenta = Int32.Parse(txtIdPlato.Text);
             itemVenta.nombre = txtNombrePlato.Text;
             itemVenta.stock = Int32.Parse(txtStock.Text);
             itemVenta.descuento = Double.Parse(txtDescuento.Text);
             itemVenta.precio = Double.Parse(txtTotal.Text) + (Double.Parse(txtGanancia.Text) - itemVenta.descuento) * Double.Parse(txtTotal.Text) / 100;
-            if(tipoItemVenta != 3)
+            if (tipoItemVenta != 3)
                 itemVenta.recetaDePreparacion = txtReceta.Text;
             if (cbDisponible.SelectedItem.ToString() == "Disponible")
                 itemVenta.disponible = 1;
             else
                 itemVenta.disponible = 0;
-            if(itemVenta.precio <= 0)
+            if (itemVenta.precio <= 0)
                 MessageBox.Show("ERROR: El precio del producto se está modificando como negativo", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
@@ -147,10 +157,9 @@ namespace LP2Rest.Omar
                     MessageBox.Show("Ha ocurrido un error al momento de modificar el producto", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click_1(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
         }
