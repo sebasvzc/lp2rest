@@ -29,6 +29,7 @@ namespace LP2Rest
                     {
                         "Sin antender",
                         "En Preparacion",
+                        "Listo",
                         " -",
                     };
 

@@ -17,7 +17,8 @@ namespace LP2Rest
         private GestPersonasWS.GestPersonasWSClient daoGestPersonas;
         private GestPersonasWS.empleado _empleadoSeleccionado;
         public long MaxReceivedMessageSize { get; set; }
-        public frmListarUsuariosA()
+
+        private void inicializacion()
         {
             InitializeComponent();
             daoGestPersonas = new GestPersonasWS.GestPersonasWSClient();
@@ -34,6 +35,20 @@ namespace LP2Rest
                     };
 
             cboArea.DataSource = listaCargos;
+        }
+
+        public frmListarUsuariosA()
+        {
+            inicializacion();
+        }
+
+        public frmListarUsuariosA(bool mostrarSeleccionar)
+        {
+            inicializacion();
+            if (!mostrarSeleccionar)
+            {
+                btnSeleccionar.Hide();
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

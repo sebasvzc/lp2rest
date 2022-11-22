@@ -62,5 +62,6 @@ namespace LP2Rest
                 txtNombre.Text = _empleado.nombre + " " + _empleado.apellidoPaterno;
             }
         }
+
     }
 }

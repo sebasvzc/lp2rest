@@ -178,7 +178,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvOrdenesVentas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvOrdenesVentas.Location = new System.Drawing.Point(53, 266);
+            this.dgvOrdenesVentas.Location = new System.Drawing.Point(52, 266);
             this.dgvOrdenesVentas.Name = "dgvOrdenesVentas";
             this.dgvOrdenesVentas.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -190,7 +190,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvOrdenesVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrdenesVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrdenesVentas.Size = new System.Drawing.Size(986, 423);
+            this.dgvOrdenesVentas.Size = new System.Drawing.Size(988, 423);
             this.dgvOrdenesVentas.TabIndex = 58;
             this.dgvOrdenesVentas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrdenesVentas_CellFormatting);
             // 
@@ -212,21 +212,21 @@
             this.Teléfono.HeaderText = "Fecha";
             this.Teléfono.Name = "Teléfono";
             this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 263;
+            this.Teléfono.Width = 190;
             // 
             // email
             // 
             this.email.HeaderText = "Total";
             this.email.Name = "email";
             this.email.ReadOnly = true;
-            this.email.Width = 180;
+            this.email.Width = 150;
             // 
             // Area
             // 
             this.Area.HeaderText = "Estado";
             this.Area.Name = "Area";
             this.Area.ReadOnly = true;
-            this.Area.Width = 150;
+            this.Area.Width = 155;
             // 
             // txtApeCLi
             // 
