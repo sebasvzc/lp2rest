@@ -190,7 +190,7 @@ namespace LP2Rest.Diego
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtProveedor.Text != "")
+            if (txtProveedor.Text == "")
                 MessageBox.Show("No se ha seleccionado un proveedor", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             _ordenCompraNuevo.descripcion = txtDescripcion.Text;
             _ordenCompraNuevo.fechaHoraCreacionSpecified = true;
@@ -212,7 +212,7 @@ namespace LP2Rest.Diego
                 }
                 else
                 {
-                    MessageBox.Show("Ha ocurrido un error al registrar la oredn de compra", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha ocurrido un error al registrar la orden de compra", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             if (estadoActual == "Modificar")
@@ -252,7 +252,7 @@ namespace LP2Rest.Diego
         {
             int resultado = daoGestAlmacen.ActualizarEstadoOrdenCompra(_ordenCompraNuevo.idOrdenCompra);
             this.DialogResult = DialogResult.OK;
-            if (resultado != 0)
+            if (resultado != -1)
             {
                 MessageBox.Show("Se ha validado exitosamente la orden de compra", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtOrdenCompra.Text = resultado.ToString();

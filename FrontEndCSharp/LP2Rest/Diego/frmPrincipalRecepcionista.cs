@@ -209,7 +209,7 @@ namespace LP2Rest
 
         private void sdbtnReservas_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new frmGestionReservas());
+            //abrirFormulario(new frmGestionReservas());
         }
 
         private void sdbtnClientes_Click(object sender, EventArgs e)

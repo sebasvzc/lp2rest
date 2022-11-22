@@ -262,6 +262,7 @@
             this.sdbtnReservas.Text = "  Reservas";
             this.sdbtnReservas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sdbtnReservas.UseVisualStyleBackColor = true;
+            this.sdbtnReservas.Visible = false;
             this.sdbtnReservas.Click += new System.EventHandler(this.sdbtnReservas_Click);
             // 
             // sdbtnClientes

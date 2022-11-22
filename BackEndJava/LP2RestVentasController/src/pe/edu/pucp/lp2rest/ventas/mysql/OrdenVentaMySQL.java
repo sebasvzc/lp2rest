@@ -80,7 +80,7 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
         int resultado = 0;
         try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call MODIFICAR_ORDEN_VENTA(?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_ORDEN_VENTA(?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_ordenVenta", ordenVenta.getIdOrdenVenta());
             cs.setDouble("_total", ordenVenta.getTotal());
             cs.setBoolean("_pagado", ordenVenta.isPagado());
@@ -104,6 +104,7 @@ public class OrdenVentaMySQL implements OrdenVentaDAO {
             }else{
                 cs.setInt("_fid_cliente", ordenVenta.getCliente().getIdPersona());
             }
+            cs.setString("_estado", ordenVenta.getEstado() );
             resultado = cs.executeUpdate();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

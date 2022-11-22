@@ -32,7 +32,7 @@ namespace LP2Rest
                     {
                         "Sin antender",
                         "En Preparacion",
-                        "Atendido",
+                        "Listo",
                         "Pagada",
                         " -",
                     };
@@ -42,7 +42,7 @@ namespace LP2Rest
             InitializeComponent();
 
             cboEstado.DataSource = listaEstados;
-            cboEstado.SelectedIndex = 1;
+            cboEstado.SelectedIndex = 2;
 
             dgvOrdenesVentas.AutoGenerateColumns = false;
 
@@ -150,6 +150,7 @@ namespace LP2Rest
                 {
                     btnBuscar_click(sender, e);
                 }
+                btnBuscar_click(sender, e);
             }
         }
 

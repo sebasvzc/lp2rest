@@ -492,25 +492,22 @@ namespace LP2Rest
         private void btnPreparar_Click(object sender, EventArgs e)
         {
             int resultado = daoVentas.ActualizarOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-            //if(resultado != )
-            //{
+            if (resultado != -1)
+            {
                 MessageBox.Show("Los pedidos esta en preparacion", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ordenVentaSeleccionada.estado = "En Preparacion";
                 txtEstado.Text = ordenVentaSeleccionada.estado;
-                if (ordenVentaSeleccionada.estado == "Sin antender")
-                {
-                    btnPreparar.Visible = true;
-                    btnPreparar.Enabled = true;
-                }
-                else
-                {
-                    btnPreparar.Enabled = false;
-                }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No hay pedido actual", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+
+                btnFinalizar.Visible = true;
+                btnFinalizar.Enabled = true;
+
+                btnPreparar.Visible = false;
+
+            }
+            else
+            {
+                MessageBox.Show("No hay pedido actual", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void dgvDetalleOrdenVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -556,14 +553,13 @@ namespace LP2Rest
             int resultado = daoVentas.ActualizarOrdenVentaPreparado(ordenVentaSeleccionada.idOrdenVenta);
             //if(resultado != )
             //{
-            MessageBox.Show("Los platos terminaron de preparse", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Los platos terminaron de prepararse.", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ordenVentaSeleccionada.estado = "Listo";
             txtEstado.Text = ordenVentaSeleccionada.estado;
-            if (ordenVentaSeleccionada.estado == "Listo")
-            {
-                btnPreparar.Visible = false;
-                btnFinalizar.Visible = false;
-            }
+            
+            btnPreparar.Visible = false;
+            btnFinalizar.Visible = false;
+            
         }
     }
 }

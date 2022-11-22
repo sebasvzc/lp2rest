@@ -367,7 +367,8 @@ namespace LP2Rest
 
         private void btnDocumentoPago_Click(object sender, EventArgs e)
         {
-
+            frmDocumentoPago formDocPago = new frmDocumentoPago("otro",null, ordenVentaActual);
+            formDocPago.ShowDialog();
         }
     }
     

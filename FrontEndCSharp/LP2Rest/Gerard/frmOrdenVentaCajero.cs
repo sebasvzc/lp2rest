@@ -28,7 +28,6 @@ namespace LP2Rest
         private int idMesero;
         private double total;
         private BindingList<VentasWS.lineaOrdenVenta> lineasItems;
-        private VentasWS.lineaOrdenVenta[] lineaItems;
         private VentasWS.cajero cajeroActual;
 
         //Estados
@@ -79,6 +78,8 @@ namespace LP2Rest
 
             txtTotal.Text = String.Format("{0:0.00}", auxOrdenVenta.total);
 
+            btnGenerarBoleta.Visible = false;
+
             if (ordenVentaSeleccionada.estado == "Sin antender")
             {
                 btnDocPago.Text = "Ver Documento de Pago";
@@ -89,7 +90,7 @@ namespace LP2Rest
                 btnDocPago.Text = "Ver Documento de Pago";
                 btnDocPago.Enabled = true;
             }
-            if (ordenVentaSeleccionada.estado == "Atendido")
+            if (ordenVentaSeleccionada.estado == "Listo")
             {
                 btnDocPago.Text = "Ver Documento de Pago";
                 btnDocPago.Enabled = true;
@@ -98,7 +99,11 @@ namespace LP2Rest
             {
                 btnDocPago.Text = "Ver Documento de Pago";
                 btnDocPago.Enabled = true;
+                btnGenerarBoleta.Visible = true;
+                btnGenerarBoleta.Enabled = true;
             }
+
+            
 
 
             //btnPreparar.Enabled = true;
@@ -564,6 +569,12 @@ namespace LP2Rest
 
             txtEstado.Text = ordenVentaSeleccionada.estado;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmGenerarBoletaVenta formGenBolVen = new frmGenerarBoletaVenta(ordenVentaSeleccionada.idOrdenVenta);
+            formGenBolVen.ShowDialog();
         }
     }
 }

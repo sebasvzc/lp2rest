@@ -77,6 +77,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGenerarBoleta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
             this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
@@ -352,6 +353,7 @@
             // 
             // gbCliente
             // 
+            this.gbCliente.Controls.Add(this.btnGenerarBoleta);
             this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.lblNombreCliente);
             this.gbCliente.Controls.Add(this.txtNombreCliente);
@@ -612,7 +614,20 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // frmOrdenVenta
+            // btnGenerarBoleta
+            // 
+            this.btnGenerarBoleta.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.btnGenerarBoleta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarBoleta.Location = new System.Drawing.Point(764, 42);
+            this.btnGenerarBoleta.Name = "btnGenerarBoleta";
+            this.btnGenerarBoleta.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnGenerarBoleta.Size = new System.Drawing.Size(236, 67);
+            this.btnGenerarBoleta.TabIndex = 68;
+            this.btnGenerarBoleta.Text = "Documento de Pago a PDF";
+            this.btnGenerarBoleta.UseVisualStyleBackColor = true;
+            this.btnGenerarBoleta.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // frmOrdenVentaCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -630,7 +645,7 @@
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.gbPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmOrdenVenta";
+            this.Name = "frmOrdenVentaCajero";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmOrdenVenta_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmOrdenVenta_ClientSizeChanged);
@@ -696,5 +711,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.Button btnGenerarBoleta;
     }
 }
