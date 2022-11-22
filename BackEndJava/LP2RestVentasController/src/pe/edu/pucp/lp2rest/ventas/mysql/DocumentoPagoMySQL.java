@@ -142,4 +142,43 @@ public class DocumentoPagoMySQL implements DocumentoPagoDAO {
         }
         return documentosPago;
     }
+
+    @Override
+    public DocumentoPago obtener(int idDoc) {
+        DocumentoPago documentoPago = null;
+        try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call OBTENER_DOCUMENTO_DE_PAGO(?)}");
+            cs.setInt("_id_doc_pago", idDoc);
+            rs = cs.executeQuery();
+            
+            while (rs.next()) {
+                documentoPago = new DocumentoPago();
+                documentoPago.setIdDocumentoPago(idDoc);
+                documentoPago.setTotal(rs.getDouble("total"));
+                documentoPago.setIgv(rs.getDouble("igv"));
+                documentoPago.setTipoPago(rs.getString("tipo_pago"));
+                documentoPago.setFechaEmision(rs.getDate("fecha_emision"));
+                documentoPago.setFechaPago(rs.getDate("fecha_pago"));
+                documentoPago.setRuc(rs.getString("ruc"));
+                documentoPago.setRazonSocial(rs.getString("razon_social"));
+                documentoPago.setSerie(rs.getString("serie"));
+                documentoPago.setNumero(rs.getInt("numero"));
+                documentoPago.setMontoRecibido(rs.getDouble("monto_recibido"));
+                documentoPago.setMetodoPago(rs.getString("metodo_pago"));
+                documentoPago.setDireccionFiscal(rs.getString("direccion_fiscal"));                
+            }
+            
+            
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        return documentoPago;
+    }
 }

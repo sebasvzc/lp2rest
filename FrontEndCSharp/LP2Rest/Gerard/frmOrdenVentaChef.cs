@@ -56,7 +56,6 @@ namespace LP2Rest
 
             lineaItems = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
 
-            //lineasItems = new BindingList<lineaOrdenVenta>();
             if (lineaItems == null)
             {
                 lineasItems = new BindingList<lineaOrdenVenta>();
@@ -73,10 +72,6 @@ namespace LP2Rest
             clienteSeleccionado.apellidoPaterno = ordenVentaSeleccionada.cliente.apellidoPaterno;
             clienteSeleccionado.DNI = ordenVentaSeleccionada.cliente.DNI;
 
-
-
-            Libre = false;
-
             InitializeComponent();
 
             dgvDetalleOrdenVenta.AutoGenerateColumns = false;
@@ -88,6 +83,7 @@ namespace LP2Rest
             txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
 
             txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
+            txtEstado.Text = ordenVentaSeleccionada.estado;
 
             textBox3.Text = ordenVentaSeleccionada.mesa.idMesa.ToString();
 
@@ -106,7 +102,17 @@ namespace LP2Rest
             btnAgregarPlato.Enabled = false;
             btnQuitarPlato.Enabled = false;
 
+            btnDocPago.Enabled = true;
 
+            if(ordenVentaSeleccionada.estado == "Sin antender")
+            {
+                btnPreparar.Visible = true;
+                btnPreparar.Enabled = true;
+            }
+            else
+            {
+                btnPreparar.Enabled = false;
+            }
 
 
 
@@ -123,17 +129,7 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            mesaSeleccionada.disponible = true;
-            mesaSeleccionada.ordVen = null;
-            daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
-
-            txtCantidad.Enabled = false;
-            txtDescuento.Enabled = false;
-
-            btnBuscarCliente.Enabled = false;
-            btnBuscarProducto.Enabled = false;
-
-            MessageBox.Show("Orden de Venta Eliminada", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // ABRIR
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -326,26 +322,20 @@ namespace LP2Rest
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if(mesaSeleccionada.disponible == true)
-            {
-                MessageBox.Show("Modificacion Fallida. Orden de Venta Vacia.", "Modificacion Orden de Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                txtCantidad.Enabled = true;
-                txtDescuento.Enabled = true;
+            txtCantidad.Enabled = false;
+            txtDescuento.Enabled = false;
 
-                btnBuscarCliente.Enabled = true;
-                btnBuscarProducto.Enabled = true;
+            btnBuscarCliente.Enabled = false;
+            btnBuscarProducto.Enabled = true;
 
-                btnAgregarPlato.Enabled = true;
-                btnQuitarPlato.Enabled = true;
+            btnAgregarPlato.Enabled = false;
+            btnQuitarPlato.Enabled = false;
 
-                btnNuevo.Enabled = false;
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = true;
+            btnNuevo.Enabled = false;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
 
-            }
+            
             
         }
 
@@ -487,14 +477,25 @@ namespace LP2Rest
         private void btnPreparar_Click(object sender, EventArgs e)
         {
             int resultado = daoVentas.ActualizarOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-            if(resultado == 1)
-            {
-                MessageBox.Show("El pedido esta en preparacion", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No hay pedido actual", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //if(resultado != )
+            //{
+                MessageBox.Show("Los pedidos esta en preparacion", "Cambio de Estado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ordenVentaSeleccionada.estado = "En Preparacion";
+                txtEstado.Text = ordenVentaSeleccionada.estado;
+                if (ordenVentaSeleccionada.estado == "Sin antender")
+                {
+                    btnPreparar.Visible = true;
+                    btnPreparar.Enabled = true;
+                }
+                else
+                {
+                    btnPreparar.Enabled = false;
+                }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No hay pedido actual", "Pedido Vacio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
 
         private void dgvDetalleOrdenVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)

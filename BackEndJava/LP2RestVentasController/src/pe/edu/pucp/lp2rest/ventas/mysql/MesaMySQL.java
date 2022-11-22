@@ -129,7 +129,7 @@ public class MesaMySQL implements MesaDAO {
         int resultado = 0;
         try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call MODIFICAR_MESA_2(?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_MESA_2(?,?,?)}");
             cs.setInt("_id_mesa", mesa.getIdMesa());
             cs.setBoolean("_disponible", mesa.isDisponible());
             if(mesa.getOrdVen() == null){
@@ -179,7 +179,8 @@ public class MesaMySQL implements MesaDAO {
                     mesa.getOrdVen().setTotal( rs.getDouble("total") );
                     mesa.getOrdVen().setPagado(rs.getBoolean("pagado") );
                     mesa.getOrdVen().setFecha( rs.getDate("fecha") );
-                    
+                    mesa.getOrdVen().setEstado( rs.getString("estado") );
+                            
                     mesa.getOrdVen().setDocumentoPago(new DocumentoPago() );
                     mesa.getOrdVen().getDocumentoPago().setIdDocumentoPago( rs.getInt("fid_documentoDePago") );
                     

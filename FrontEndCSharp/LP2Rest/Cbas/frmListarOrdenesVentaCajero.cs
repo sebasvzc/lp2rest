@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LP2Rest
 {
-    public partial class frmListarOrdenesVentaA : Form
+    public partial class frmListarOrdenesVentaCajero : Form
     {
         //Conexiones
         private VentasWS.VentasWSClient daoVentas;
@@ -19,16 +20,31 @@ namespace LP2Rest
         //Utiles
         private ordenVenta[] ordenesVentasActuales;
         private ordenVenta ordenVentaSeleccionada;
+        private int idCajero;
 
-        public frmListarOrdenesVentaA()
+        public frmListarOrdenesVentaCajero(int auxIdCajero)
         {
+            idCajero = auxIdCajero;
+
             daoVentas = new VentasWS.VentasWSClient();
+
+            List<string> listaEstados = new List<string>()
+                    {
+                        "Sin antender",
+                        "En Preparacion",
+                        "Pagada",
+                        " -",
+                    };
 
             InitializeComponent();
 
+            cboEstado.DataSource = listaEstados;
+            cboEstado.SelectedIndex = 1;
+
             dgvOrdenesVentas.AutoGenerateColumns = false;
 
-            btnNuevo.Enabled = false;
+
+            //btnNuevo.Enabled = false;
             
         }
 
@@ -78,8 +94,23 @@ namespace LP2Rest
                 dgvOrdenesVentas.DataSource = null;
             }
             else
-            {
-                dgvOrdenesVentas.DataSource = ordenesVentasActuales;
+            {                
+                if (cboEstado.SelectedValue.ToString() == " -")
+                {
+                    dgvOrdenesVentas.DataSource = ordenesVentasActuales;
+                }
+                else
+                {
+                    //dgvOrdenesVentas.DataSource = ordenesVentasActuales;
+                    BindingList<ordenVenta> listaaux = new BindingList<ordenVenta>();
+
+                    for (int a = 0; a < ordenesVentasActuales.Length; a++) {
+                        if (ordenesVentasActuales[a].estado == cboEstado.SelectedValue.ToString()) listaaux.Add(ordenesVentasActuales[a]);
+                    }
+                    
+                    dgvOrdenesVentas.DataSource = listaaux;
+
+                 }
             }
         }
 
@@ -111,35 +142,23 @@ namespace LP2Rest
 
                 ordenVentaSeleccionada = (ordenVenta)dgvOrdenesVentas.CurrentRow.DataBoundItem;
 
-                frmGestionOrdenesVentaA formOrdVenAdmin = new frmGestionOrdenesVentaA(ordenVentaSeleccionada);
+                frmOrdenVentaCajero formOrdVenAdmin = new frmOrdenVentaCajero( idCajero, ordenVentaSeleccionada);
 
-                if(formOrdVenAdmin.ShowDialog() == DialogResult.OK)
+                if (formOrdVenAdmin.ShowDialog() == DialogResult.OK)
                 {
-                    btnBuscar_click(sender,e);
+                    btnBuscar_click(sender, e);
                 }
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
-            if (dgvOrdenesVentas.SelectedRows.Count == 1)
-            {
-                ordenVenta aux = (ordenVenta)dgvOrdenesVentas.CurrentRow.DataBoundItem;
-                int resultado = daoVentas.EliminarOrdenVenta(aux.idOrdenVenta);
-                if(resultado != 0)
-                {
-                    MessageBox.Show("Borrado de Orden de Venta exitoso.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnBuscar_click(sender,e);
-                }
-                else
-                {
-                    MessageBox.Show("Error al borrar Orden de Venta", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado una Orden de Venta", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

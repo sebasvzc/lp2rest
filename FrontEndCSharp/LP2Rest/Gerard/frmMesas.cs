@@ -191,6 +191,7 @@ namespace LP2Rest
             IdMesa = 1;
             frmOrdenVenta formOrdenVenta = new frmOrdenVenta(listaMesas[0],IdMesero);
             formOrdenVenta.ShowDialog();
+            
             if (formOrdenVenta.MesaSeleccionada.disponible == true)
             {
                 btnMesa1.BackColor = Color.LightGreen;
@@ -199,11 +200,7 @@ namespace LP2Rest
             {
                 btnMesa1.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
- 
-                
-            }
+            actualizarMesas();
         }
 
         private void btnMesa8_Click(object sender, EventArgs e)
@@ -219,11 +216,7 @@ namespace LP2Rest
             {
                 btnMesa8.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa2_Click(object sender, EventArgs e)
@@ -239,11 +232,7 @@ namespace LP2Rest
             {
                 btnMesa2.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa3_Click(object sender, EventArgs e)
@@ -259,11 +248,7 @@ namespace LP2Rest
             {
                 btnMesa3.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa4_Click(object sender, EventArgs e)
@@ -279,11 +264,7 @@ namespace LP2Rest
             {
                 btnMesa4.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa5_Click(object sender, EventArgs e)
@@ -299,11 +280,7 @@ namespace LP2Rest
             {
                 btnMesa5.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa6_Click(object sender, EventArgs e)
@@ -319,11 +296,7 @@ namespace LP2Rest
             {
                 btnMesa6.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa7_Click(object sender, EventArgs e)
@@ -339,11 +312,7 @@ namespace LP2Rest
             {
                 btnMesa7.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa9_Click(object sender, EventArgs e)
@@ -359,11 +328,7 @@ namespace LP2Rest
             {
                 btnMesa9.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa10_Click(object sender, EventArgs e)
@@ -379,11 +344,7 @@ namespace LP2Rest
             {
                 btnMesa10.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa11_Click(object sender, EventArgs e)
@@ -399,11 +360,7 @@ namespace LP2Rest
             {
                 btnMesa11.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
         private void btnMesa12_Click(object sender, EventArgs e)
@@ -419,11 +376,7 @@ namespace LP2Rest
             {
                 btnMesa12.BackColor = Color.Red;
             }
-            if (formOrdenVenta.DialogResult == DialogResult.OK)
-            {
-
-
-            }
+            actualizarMesas();
         }
 
        

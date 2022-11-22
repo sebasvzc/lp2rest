@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace LP2Rest
 {
-    public partial class frmOrdenVenta : Form
+    public partial class frmOrdenVentaCajero : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -46,187 +46,7 @@ namespace LP2Rest
 
         private int idMesaOrdenVenta;
 
-        public frmOrdenVenta(mesa auxMesa, int auxIdMesero)
-        {
-
-            mesaSeleccionada = auxMesa;
-            IdMesero = auxIdMesero;
-            if (auxMesa.disponible == true)
-            {
-                //idMesero = auxIdMesero;
-                daoVentas = new VentasWS.VentasWSClient();
-                
-                Libre = true;
-                InitializeComponent();
-                dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-                textBox3.Text = auxMesa.idMesa.ToString();
-
-                clienteSeleccionado = new GestPersonasWS.cliente();
-                clienteSeleccionado.idPersona = 78; //Cliente Generico o orden de venta para atenderse sin indicar cliente.
-
-                txtNombreCliente.Text = "Generico";
-                txtDNICliente.Text = " -";
-
-                txtCantidad.Enabled = false;
-                txtDescuento.Enabled = false;
-
-                btnBuscarCliente.Enabled = true;
-                btnBuscarProducto.Enabled = false;
-
-                btnAgregarPlato.Enabled = false;
-                btnQuitarPlato.Enabled = false;
-
-                btnDocPago.Enabled = false;
-                //btnPreparar.Enabled = false;
-
-                btnNuevo.Enabled = true;
-                btnModificar.Enabled = false;
-                btnEliminar.Enabled = false;
-
-                
-            }
-            else
-            {
-                if (auxMesa.ordVen.mesero.idPersona != auxIdMesero)
-                {
-                    MessageBox.Show("Usted no podra modificar esta Orden de Venta. No esta asignado a este servicio.", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    idMesero = auxIdMesero;
-
-                    //lblPrueba.Text = auxMesa.ordVen.mesero.idPersona.ToString();
-
-                    daoVentas = new VentasWS.VentasWSClient();
-
-                    mesaSeleccionada = auxMesa;
-                    ordenVentaSeleccionada = mesaSeleccionada.ordVen;
-
-                    ordenVentaSeleccionada.lineasOrdenVenta = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-
-                    clienteSeleccionado = new GestPersonasWS.cliente();
-                    clienteSeleccionado.idPersona = mesaSeleccionada.ordVen.cliente.idPersona;
-                    clienteSeleccionado.nombre = mesaSeleccionada.ordVen.cliente.nombre;
-                    clienteSeleccionado.apellidoPaterno = mesaSeleccionada.ordVen.cliente.apellidoPaterno;
-                    clienteSeleccionado.DNI = mesaSeleccionada.ordVen.cliente.DNI;
-
-
-
-                    Libre = false;
-
-                    InitializeComponent();
-                    dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-
-                    dgvDetalleOrdenVenta.DataSource = ordenVentaSeleccionada.lineasOrdenVenta;
-
-                    txtDNICliente.Text = clienteSeleccionado.DNI;
-                    txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
-
-                    txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
-                    txtEstado.Text = ordenVentaSeleccionada.estado;
-
-                    textBox3.Text = auxMesa.idMesa.ToString();
-
-                    txtEstado.Text = ordenVentaSeleccionada.estado;
-
-                    txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total);
-
-                    btnDocPago.Enabled = false;
-
-                    //btnPreparar.Enabled = false;
-
-                    txtCantidad.Enabled = false;
-                    txtDescuento.Enabled = false;
-
-                    btnBuscarCliente.Enabled = false;
-                    btnBuscarProducto.Enabled = false;
-
-                    btnNuevo.Enabled = false;
-                    btnModificar.Enabled = false;
-                    btnEliminar.Enabled = false;
-
-                    btnAgregarPlato.Enabled = false;
-                    btnQuitarPlato.Enabled = false;
-                }
-                else
-                {
-                    //Ver detalle orden de una orden ya abierta
-
-                    idMesero = auxIdMesero;
-                    daoVentas = new VentasWS.VentasWSClient();
-
-                    mesaSeleccionada = auxMesa;
-                    ordenVentaSeleccionada = mesaSeleccionada.ordVen;
-
-                    lineaItems = daoVentas.ListarBusquedaLineasOrdenVenta(ordenVentaSeleccionada.idOrdenVenta);
-
-                    //lineasItems = new BindingList<lineaOrdenVenta>();
-                    if(lineaItems == null)
-                    {
-                        lineasItems = new BindingList<lineaOrdenVenta>();
-                    }
-                    else
-                    {
-                        lineasItems = new BindingList<lineaOrdenVenta>(lineaItems.ToList());
-                    }    
-                    
-                    
-                    
-                    clienteSeleccionado = new GestPersonasWS.cliente();
-                    clienteSeleccionado.idPersona = mesaSeleccionada.ordVen.cliente.idPersona;
-                    clienteSeleccionado.nombre = mesaSeleccionada.ordVen.cliente.nombre;
-                    clienteSeleccionado.apellidoPaterno = mesaSeleccionada.ordVen.cliente.apellidoPaterno;
-                    clienteSeleccionado.DNI = mesaSeleccionada.ordVen.cliente.DNI;
-
-
-
-                    Libre = false;
-
-                    InitializeComponent();
-
-                    dgvDetalleOrdenVenta.AutoGenerateColumns = false;
-
-                    if (LineasItems.Count == 0)
-                    {
-                        //lineaItems = new VentasWS.lineaOrdenVenta[50];
-
-                    }
-                    else
-                    {
-                        dgvDetalleOrdenVenta.DataSource = LineasItems;
-                    }
-
-                    
-
-                    
-
-                    txtDNICliente.Text = clienteSeleccionado.DNI;
-                    txtNombreCliente.Text = clienteSeleccionado.nombre + " " + clienteSeleccionado.apellidoPaterno;
-
-                    txtIDOrdenVenta.Text = ordenVentaSeleccionada.idOrdenVenta.ToString();
-                    txtEstado.Text = ordenVentaSeleccionada.estado;
-
-                    textBox3.Text = auxMesa.idMesa.ToString();
-
-                    txtTotal.Text = String.Format("{0:0.00}", ordenVentaSeleccionada.total); 
-
-                    txtCantidad.Enabled = false;
-                    txtDescuento.Enabled = false;
-
-                    btnBuscarCliente.Enabled = false;
-                    btnBuscarProducto.Enabled = false;
-
-                    btnNuevo.Enabled = false;
-                    btnModificar.Enabled = true;
-                    btnEliminar.Enabled = false;
-
-                    btnAgregarPlato.Enabled = false;
-                    btnQuitarPlato.Enabled = false;
-                }
-
-                
-            }
-        }
-            
-
-        public frmOrdenVenta(String tipo, VentasWS.ordenVenta ordenVenta)
+        public frmOrdenVentaCajero(int idCajero, VentasWS.ordenVenta ordenVenta)
         {
          
             daoVentas = new VentasWS.VentasWSClient();
@@ -238,6 +58,7 @@ namespace LP2Rest
             txtEstado.Text = ordenVenta.estado;
             txtDNICliente.Text = ordenVenta.cliente.DNI;
             txtNombreCliente.Text = ordenVenta.cliente.nombre;
+
             ordenVentaSeleccionada = ordenVenta;
             dgvDetalleOrdenVenta.DataSource = daoVentas.listarLineasOrdenVentaPorId(ordenVenta.idOrdenVenta);
 
@@ -255,7 +76,23 @@ namespace LP2Rest
 
             txtTotal.Text = String.Format("{0:0.00}", ordenVenta.total);
 
-            btnDocPago.Text = "Ver Documento de Pago";
+            if(ordenVentaSeleccionada.estado == "En Preparacion")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
+            }
+            if (ordenVentaSeleccionada.estado == "Sin antender")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = false;
+            }
+            if (ordenVentaSeleccionada.estado == "Pagada")
+            {
+                btnDocPago.Text = "Ver Documento de Pago";
+                btnDocPago.Enabled = true;
+            }
+
+            
             //btnPreparar.Enabled = true;
 
         }
@@ -271,17 +108,17 @@ namespace LP2Rest
 
         private void button2_Click(object sender, EventArgs e)
         {
-            mesaSeleccionada.disponible = true;
-            mesaSeleccionada.ordVen = null;
-            daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
+            //mesaSeleccionada.disponible = true;
+            //mesaSeleccionada.ordVen = null;
+            //daoVentas.ModificarMesaOrdenVenta(mesaSeleccionada);
 
-            txtCantidad.Enabled = false;
-            txtDescuento.Enabled = false;
+            //txtCantidad.Enabled = false;
+            //txtDescuento.Enabled = false;
 
-            btnBuscarCliente.Enabled = false;
-            btnBuscarProducto.Enabled = false;
+            //btnBuscarCliente.Enabled = false;
+            //btnBuscarProducto.Enabled = false;
 
-            MessageBox.Show("Orden de Venta Eliminada", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Orden de Venta Eliminada", "Mensaje de Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

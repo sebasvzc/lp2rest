@@ -72,6 +72,17 @@ public class VentasWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "ObtenerDocumentoDePago")
+    public DocumentoPago ObtenerDocumentoDePago(@WebParam(name = "idDocumentoDePago") int idDocumentoDePago) {
+        DocumentoPago resultado = null;
+        try{
+            resultado = daoDocumentoPago.obtener(idDocumentoDePago);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
     ///////////////////////////////////////////////////////////////////////////
     @WebMethod(operationName = "listarTodosOrdenesVenta")
     public ArrayList<OrdenVenta> listarTodosOrdenesVenta() {

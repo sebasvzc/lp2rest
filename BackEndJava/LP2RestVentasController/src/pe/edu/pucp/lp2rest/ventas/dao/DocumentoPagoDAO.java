@@ -12,4 +12,5 @@ public interface DocumentoPagoDAO {
     int modificar (DocumentoPago documentoPago);
     int eliminar(int idDocumentoPago);
     ArrayList<DocumentoPago> listarTodos();
+    DocumentoPago obtener(int idDoc);
 }

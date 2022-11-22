@@ -1,6 +1,6 @@
 ﻿namespace LP2Rest
 {
-    partial class frmOrdenVenta
+    partial class frmDocumentoPago
     {
         /// <summary>
         /// Required designer variable.
@@ -40,23 +40,7 @@
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.gbLineasVenta = new System.Windows.Forms.GroupBox();
-            this.lblDescuentoSimbolo = new System.Windows.Forms.Label();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnQuitarPlato = new System.Windows.Forms.Button();
-            this.btnAgregarPlato = new System.Windows.Forms.Button();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
-            this.lblPrecioUnitario = new System.Windows.Forms.Label();
-            this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblCodProducto = new System.Windows.Forms.Label();
-            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtDNICliente = new System.Windows.Forms.TextBox();
@@ -64,24 +48,44 @@
             this.gbPedido = new System.Windows.Forms.GroupBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnDocPago = new System.Windows.Forms.Button();
+            this.txtRuc = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
+            this.txtIdDocPago = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombreCajero = new System.Windows.Forms.TextBox();
+            this.txtIdCajero = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMontoPagado = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnMontoTotal = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtDirFiscal = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dtpFechaEmision = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
+            this.cboMetodoPago = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).BeginInit();
-            this.gbLineasVenta.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.gbPedido.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDetalleOrdenVenta
@@ -104,7 +108,7 @@
             this.DescuentoPorcentaje,
             this.Descuento,
             this.Subtotal});
-            this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(39, 615);
+            this.dgvDetalleOrdenVenta.Location = new System.Drawing.Point(39, 470);
             this.dgvDetalleOrdenVenta.Name = "dgvDetalleOrdenVenta";
             this.dgvDetalleOrdenVenta.ReadOnly = true;
             this.dgvDetalleOrdenVenta.RowHeadersWidth = 51;
@@ -168,7 +172,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(852, 862);
+            this.label5.Location = new System.Drawing.Point(737, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 23);
             this.label5.TabIndex = 61;
@@ -179,266 +183,96 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtTotal.Location = new System.Drawing.Point(950, 859);
+            this.txtTotal.Location = new System.Drawing.Point(835, 26);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(132, 32);
+            this.txtTotal.Size = new System.Drawing.Size(156, 32);
             this.txtTotal.TabIndex = 60;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
-            // gbLineasVenta
-            // 
-            this.gbLineasVenta.Controls.Add(this.lblDescuentoSimbolo);
-            this.gbLineasVenta.Controls.Add(this.txtDescuento);
-            this.gbLineasVenta.Controls.Add(this.label7);
-            this.gbLineasVenta.Controls.Add(this.btnQuitarPlato);
-            this.gbLineasVenta.Controls.Add(this.btnAgregarPlato);
-            this.gbLineasVenta.Controls.Add(this.txtCantidad);
-            this.gbLineasVenta.Controls.Add(this.btnBuscarProducto);
-            this.gbLineasVenta.Controls.Add(this.label4);
-            this.gbLineasVenta.Controls.Add(this.txtPrecioUnitario);
-            this.gbLineasVenta.Controls.Add(this.lblPrecioUnitario);
-            this.gbLineasVenta.Controls.Add(this.txtNombreProducto);
-            this.gbLineasVenta.Controls.Add(this.label3);
-            this.gbLineasVenta.Controls.Add(this.lblCodProducto);
-            this.gbLineasVenta.Controls.Add(this.txtCodigoProducto);
-            this.gbLineasVenta.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbLineasVenta.Location = new System.Drawing.Point(39, 430);
-            this.gbLineasVenta.Name = "gbLineasVenta";
-            this.gbLineasVenta.Size = new System.Drawing.Size(1043, 173);
-            this.gbLineasVenta.TabIndex = 59;
-            this.gbLineasVenta.TabStop = false;
-            this.gbLineasVenta.Text = "Líneas de Orden de Venta";
-            this.gbLineasVenta.Enter += new System.EventHandler(this.gbLineasVenta_Enter);
-            // 
-            // lblDescuentoSimbolo
-            // 
-            this.lblDescuentoSimbolo.AutoSize = true;
-            this.lblDescuentoSimbolo.Location = new System.Drawing.Point(810, 124);
-            this.lblDescuentoSimbolo.Name = "lblDescuentoSimbolo";
-            this.lblDescuentoSimbolo.Size = new System.Drawing.Size(23, 23);
-            this.lblDescuentoSimbolo.TabIndex = 89;
-            this.lblDescuentoSimbolo.Text = "%";
-            this.lblDescuentoSimbolo.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDescuento.Location = new System.Drawing.Point(723, 118);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(81, 32);
-            this.txtDescuento.TabIndex = 88;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label7.Location = new System.Drawing.Point(599, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 23);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "Descuento:";
-            // 
-            // btnQuitarPlato
-            // 
-            this.btnQuitarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnQuitarPlato.Location = new System.Drawing.Point(939, 121);
-            this.btnQuitarPlato.Name = "btnQuitarPlato";
-            this.btnQuitarPlato.Size = new System.Drawing.Size(30, 30);
-            this.btnQuitarPlato.TabIndex = 86;
-            this.btnQuitarPlato.Text = "-";
-            this.btnQuitarPlato.UseVisualStyleBackColor = true;
-            this.btnQuitarPlato.Click += new System.EventHandler(this.btnQuitarPlato_Click);
-            // 
-            // btnAgregarPlato
-            // 
-            this.btnAgregarPlato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAgregarPlato.Location = new System.Drawing.Point(903, 121);
-            this.btnAgregarPlato.Name = "btnAgregarPlato";
-            this.btnAgregarPlato.Size = new System.Drawing.Size(30, 30);
-            this.btnAgregarPlato.TabIndex = 85;
-            this.btnAgregarPlato.Text = "+";
-            this.btnAgregarPlato.UseVisualStyleBackColor = true;
-            this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtCantidad.Location = new System.Drawing.Point(476, 118);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(89, 32);
-            this.txtCantidad.TabIndex = 9;
-            // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Location = new System.Drawing.Point(347, 36);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(49, 32);
-            this.btnBuscarProducto.TabIndex = 3;
-            this.btnBuscarProducto.Text = "...";
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label4.Location = new System.Drawing.Point(373, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 23);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cantidad:";
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.Enabled = false;
-            this.txtPrecioUnitario.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(219, 113);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.ReadOnly = true;
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(122, 32);
-            this.txtPrecioUnitario.TabIndex = 7;
-            // 
-            // lblPrecioUnitario
-            // 
-            this.lblPrecioUnitario.AutoSize = true;
-            this.lblPrecioUnitario.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblPrecioUnitario.Location = new System.Drawing.Point(42, 119);
-            this.lblPrecioUnitario.Name = "lblPrecioUnitario";
-            this.lblPrecioUnitario.Size = new System.Drawing.Size(161, 23);
-            this.lblPrecioUnitario.TabIndex = 6;
-            this.lblPrecioUnitario.Text = "Precio Unitario:";
-            // 
-            // txtNombreProducto
-            // 
-            this.txtNombreProducto.Enabled = false;
-            this.txtNombreProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtNombreProducto.Location = new System.Drawing.Point(219, 74);
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.ReadOnly = true;
-            this.txtNombreProducto.Size = new System.Drawing.Size(750, 32);
-            this.txtNombreProducto.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label3.Location = new System.Drawing.Point(21, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Nombre del Plato:";
-            // 
-            // lblCodProducto
-            // 
-            this.lblCodProducto.AutoSize = true;
-            this.lblCodProducto.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblCodProducto.Location = new System.Drawing.Point(31, 39);
-            this.lblCodProducto.Name = "lblCodProducto";
-            this.lblCodProducto.Size = new System.Drawing.Size(173, 23);
-            this.lblCodProducto.TabIndex = 1;
-            this.lblCodProducto.Text = "Código del Plato:";
-            // 
-            // txtCodigoProducto
-            // 
-            this.txtCodigoProducto.Enabled = false;
-            this.txtCodigoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtCodigoProducto.Location = new System.Drawing.Point(219, 36);
-            this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.ReadOnly = true;
-            this.txtCodigoProducto.Size = new System.Drawing.Size(122, 32);
-            this.txtCodigoProducto.TabIndex = 0;
-            // 
             // gbCliente
             // 
-            this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.lblNombreCliente);
             this.gbCliente.Controls.Add(this.txtNombreCliente);
             this.gbCliente.Controls.Add(this.txtDNICliente);
             this.gbCliente.Controls.Add(this.lblDNICliente);
             this.gbCliente.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.gbCliente.Location = new System.Drawing.Point(39, 270);
+            this.gbCliente.Location = new System.Drawing.Point(39, 304);
             this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(1043, 150);
+            this.gbCliente.Size = new System.Drawing.Size(491, 150);
             this.gbCliente.TabIndex = 58;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Datos del Cliente";
             this.gbCliente.Enter += new System.EventHandler(this.gbCliente_Enter);
             // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.btnBuscarCliente.Location = new System.Drawing.Point(393, 33);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(49, 32);
-            this.btnBuscarCliente.TabIndex = 4;
-            this.btnBuscarCliente.Text = "...";
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
-            // 
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
             this.lblNombreCliente.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblNombreCliente.Location = new System.Drawing.Point(21, 88);
+            this.lblNombreCliente.Location = new System.Drawing.Point(6, 88);
             this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(201, 23);
+            this.lblNombreCliente.Size = new System.Drawing.Size(90, 23);
             this.lblNombreCliente.TabIndex = 3;
-            this.lblNombreCliente.Text = "Nombre del Cliente:";
+            this.lblNombreCliente.Text = "Nombre:";
             // 
             // txtNombreCliente
             // 
             this.txtNombreCliente.Enabled = false;
             this.txtNombreCliente.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtNombreCliente.Location = new System.Drawing.Point(238, 85);
+            this.txtNombreCliente.Location = new System.Drawing.Point(102, 85);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
-            this.txtNombreCliente.Size = new System.Drawing.Size(374, 32);
+            this.txtNombreCliente.Size = new System.Drawing.Size(375, 32);
             this.txtNombreCliente.TabIndex = 2;
             // 
             // txtDNICliente
             // 
             this.txtDNICliente.Enabled = false;
             this.txtDNICliente.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtDNICliente.Location = new System.Drawing.Point(238, 33);
+            this.txtDNICliente.Location = new System.Drawing.Point(102, 39);
             this.txtDNICliente.Name = "txtDNICliente";
             this.txtDNICliente.ReadOnly = true;
-            this.txtDNICliente.Size = new System.Drawing.Size(149, 32);
+            this.txtDNICliente.Size = new System.Drawing.Size(171, 32);
             this.txtDNICliente.TabIndex = 1;
             // 
             // lblDNICliente
             // 
             this.lblDNICliente.AutoSize = true;
             this.lblDNICliente.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.lblDNICliente.Location = new System.Drawing.Point(60, 42);
+            this.lblDNICliente.Location = new System.Drawing.Point(45, 42);
             this.lblDNICliente.Name = "lblDNICliente";
-            this.lblDNICliente.Size = new System.Drawing.Size(162, 23);
+            this.lblDNICliente.Size = new System.Drawing.Size(51, 23);
             this.lblDNICliente.TabIndex = 0;
-            this.lblDNICliente.Text = "DNI del Cliente:";
+            this.lblDNICliente.Text = "DNI:";
             // 
             // gbPedido
             // 
+            this.gbPedido.Controls.Add(this.txtNumero);
+            this.gbPedido.Controls.Add(this.label12);
+            this.gbPedido.Controls.Add(this.txtSerie);
+            this.gbPedido.Controls.Add(this.label13);
+            this.gbPedido.Controls.Add(this.txtDirFiscal);
+            this.gbPedido.Controls.Add(this.label11);
             this.gbPedido.Controls.Add(this.txtEstado);
             this.gbPedido.Controls.Add(this.label2);
-            this.gbPedido.Controls.Add(this.textBox3);
-            this.gbPedido.Controls.Add(this.btnDocPago);
+            this.gbPedido.Controls.Add(this.txtRuc);
             this.gbPedido.Controls.Add(this.label6);
             this.gbPedido.Controls.Add(this.label1);
-            this.gbPedido.Controls.Add(this.txtIDOrdenVenta);
+            this.gbPedido.Controls.Add(this.txtIdDocPago);
             this.gbPedido.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.gbPedido.Location = new System.Drawing.Point(39, 124);
             this.gbPedido.Name = "gbPedido";
-            this.gbPedido.Size = new System.Drawing.Size(1043, 140);
+            this.gbPedido.Size = new System.Drawing.Size(1043, 174);
             this.gbPedido.TabIndex = 57;
             this.gbPedido.TabStop = false;
-            this.gbPedido.Text = "Datos de la Orden de Venta";
+            this.gbPedido.Text = "Datos del Documento de Pago";
             // 
             // txtEstado
             // 
             this.txtEstado.Enabled = false;
             this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtEstado.Location = new System.Drawing.Point(201, 79);
+            this.txtEstado.Location = new System.Drawing.Point(102, 78);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(224, 32);
@@ -448,66 +282,53 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label2.Location = new System.Drawing.Point(107, 82);
+            this.label2.Location = new System.Drawing.Point(15, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 23);
             this.label2.TabIndex = 66;
             this.label2.Text = "Estado:";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // textBox3
+            // txtRuc
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox3.Location = new System.Drawing.Point(524, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(139, 32);
-            this.textBox3.TabIndex = 65;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // btnDocPago
-            // 
-            this.btnDocPago.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.btnDocPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocPago.Location = new System.Drawing.Point(764, 40);
-            this.btnDocPago.Name = "btnDocPago";
-            this.btnDocPago.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnDocPago.Size = new System.Drawing.Size(236, 67);
-            this.btnDocPago.TabIndex = 1;
-            this.btnDocPago.Text = "Solicitar Documento Pago";
-            this.btnDocPago.UseVisualStyleBackColor = true;
-            this.btnDocPago.Click += new System.EventHandler(this.button2_Click);
+            this.txtRuc.Enabled = false;
+            this.txtRuc.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtRuc.Location = new System.Drawing.Point(520, 40);
+            this.txtRuc.Name = "txtRuc";
+            this.txtRuc.ReadOnly = true;
+            this.txtRuc.Size = new System.Drawing.Size(318, 32);
+            this.txtRuc.TabIndex = 65;
+            this.txtRuc.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label6.Location = new System.Drawing.Point(449, 37);
+            this.label6.Location = new System.Drawing.Point(455, 43);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 23);
+            this.label6.Size = new System.Drawing.Size(59, 23);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Mesa:";
+            this.label6.Text = "RUC:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(21, 37);
+            this.label1.Location = new System.Drawing.Point(60, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 23);
+            this.label1.Size = new System.Drawing.Size(36, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ID Orden Venta:";
+            this.label1.Text = "ID:";
             // 
-            // txtIDOrdenVenta
+            // txtIdDocPago
             // 
-            this.txtIDOrdenVenta.Enabled = false;
-            this.txtIDOrdenVenta.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtIDOrdenVenta.Location = new System.Drawing.Point(201, 34);
-            this.txtIDOrdenVenta.Name = "txtIDOrdenVenta";
-            this.txtIDOrdenVenta.ReadOnly = true;
-            this.txtIDOrdenVenta.Size = new System.Drawing.Size(224, 32);
-            this.txtIDOrdenVenta.TabIndex = 0;
+            this.txtIdDocPago.Enabled = false;
+            this.txtIdDocPago.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtIdDocPago.Location = new System.Drawing.Point(102, 40);
+            this.txtIdDocPago.Name = "txtIdDocPago";
+            this.txtIdDocPago.ReadOnly = true;
+            this.txtIdDocPago.Size = new System.Drawing.Size(224, 32);
+            this.txtIdDocPago.TabIndex = 0;
             // 
             // panel5
             // 
@@ -553,9 +374,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(103)))), ((int)(((byte)(66)))));
             this.label9.Location = new System.Drawing.Point(21, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(522, 60);
+            this.label9.Size = new System.Drawing.Size(662, 60);
             this.label9.TabIndex = 21;
-            this.label9.Text = "ORDEN DE VENTA";
+            this.label9.Text = "DOCUMENTO DE PAGO";
             this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
             // panelIzquierdo
@@ -564,23 +385,123 @@
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(8, 939);
+            this.panelIzquierdo.Size = new System.Drawing.Size(8, 1031);
             this.panelIzquierdo.TabIndex = 96;
             // 
-            // btnEliminar
+            // groupBox1
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(623, 871);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(115, 41);
-            this.btnEliminar.TabIndex = 101;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtNombreCajero);
+            this.groupBox1.Controls.Add(this.txtIdCajero);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(536, 304);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(546, 150);
+            this.groupBox1.TabIndex = 102;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos del Cajero";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label3.Location = new System.Drawing.Point(6, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombre:";
+            // 
+            // txtNombreCajero
+            // 
+            this.txtNombreCajero.Enabled = false;
+            this.txtNombreCajero.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNombreCajero.Location = new System.Drawing.Point(102, 85);
+            this.txtNombreCajero.Name = "txtNombreCajero";
+            this.txtNombreCajero.ReadOnly = true;
+            this.txtNombreCajero.Size = new System.Drawing.Size(247, 32);
+            this.txtNombreCajero.TabIndex = 2;
+            // 
+            // txtIdCajero
+            // 
+            this.txtIdCajero.Enabled = false;
+            this.txtIdCajero.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtIdCajero.Location = new System.Drawing.Point(102, 39);
+            this.txtIdCajero.Name = "txtIdCajero";
+            this.txtIdCajero.ReadOnly = true;
+            this.txtIdCajero.Size = new System.Drawing.Size(161, 32);
+            this.txtIdCajero.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label4.Location = new System.Drawing.Point(60, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "ID:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnMontoTotal);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.cboMetodoPago);
+            this.groupBox2.Controls.Add(this.dtpFechaPago);
+            this.groupBox2.Controls.Add(this.dtpFechaEmision);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtMontoPagado);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtTotal);
+            this.groupBox2.Font = new System.Drawing.Font("MS UI Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(39, 713);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1043, 190);
+            this.groupBox2.TabIndex = 103;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Detalle de Pago";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label7.Location = new System.Drawing.Point(30, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 23);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Fecha Pago:";
+            // 
+            // txtMontoPagado
+            // 
+            this.txtMontoPagado.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMontoPagado.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtMontoPagado.Location = new System.Drawing.Point(835, 68);
+            this.txtMontoPagado.Name = "txtMontoPagado";
+            this.txtMontoPagado.ReadOnly = true;
+            this.txtMontoPagado.Size = new System.Drawing.Size(156, 32);
+            this.txtMontoPagado.TabIndex = 65;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label8.Location = new System.Drawing.Point(676, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 23);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Monto Pagado:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label10.Location = new System.Drawing.Point(6, 35);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(157, 23);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Fecha Emision:";
             // 
             // btnModificar
             // 
@@ -589,63 +510,174 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(502, 871);
+            this.btnModificar.Location = new System.Drawing.Point(585, 931);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(115, 41);
-            this.btnModificar.TabIndex = 100;
+            this.btnModificar.TabIndex = 113;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnNuevo
+            // btnMontoTotal
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(381, 871);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(115, 41);
-            this.btnNuevo.TabIndex = 99;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnMontoTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnMontoTotal.FlatAppearance.BorderSize = 0;
+            this.btnMontoTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMontoTotal.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnMontoTotal.ForeColor = System.Drawing.Color.White;
+            this.btnMontoTotal.Location = new System.Drawing.Point(835, 106);
+            this.btnMontoTotal.Name = "btnMontoTotal";
+            this.btnMontoTotal.Size = new System.Drawing.Size(154, 41);
+            this.btnMontoTotal.TabIndex = 114;
+            this.btnMontoTotal.Text = "Monto Total";
+            this.btnMontoTotal.UseVisualStyleBackColor = false;
             // 
-            // frmOrdenVenta
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label11.Location = new System.Drawing.Point(342, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(172, 23);
+            this.label11.TabIndex = 68;
+            this.label11.Text = "Direccion Fiscal:";
+            // 
+            // txtDirFiscal
+            // 
+            this.txtDirFiscal.Enabled = false;
+            this.txtDirFiscal.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtDirFiscal.Location = new System.Drawing.Point(520, 78);
+            this.txtDirFiscal.Name = "txtDirFiscal";
+            this.txtDirFiscal.ReadOnly = true;
+            this.txtDirFiscal.Size = new System.Drawing.Size(318, 32);
+            this.txtDirFiscal.TabIndex = 69;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtNumero.Location = new System.Drawing.Point(520, 116);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.ReadOnly = true;
+            this.txtNumero.Size = new System.Drawing.Size(318, 32);
+            this.txtNumero.TabIndex = 73;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label12.Location = new System.Drawing.Point(30, 119);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 23);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Serie:";
+            // 
+            // txtSerie
+            // 
+            this.txtSerie.Enabled = false;
+            this.txtSerie.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSerie.Location = new System.Drawing.Point(102, 116);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.ReadOnly = true;
+            this.txtSerie.Size = new System.Drawing.Size(222, 32);
+            this.txtSerie.TabIndex = 71;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label13.Location = new System.Drawing.Point(429, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 23);
+            this.label13.TabIndex = 70;
+            this.label13.Text = "Numero:";
+            // 
+            // dtpFechaEmision
+            // 
+            this.dtpFechaEmision.Location = new System.Drawing.Point(169, 32);
+            this.dtpFechaEmision.Name = "dtpFechaEmision";
+            this.dtpFechaEmision.Size = new System.Drawing.Size(431, 30);
+            this.dtpFechaEmision.TabIndex = 68;
+            // 
+            // dtpFechaPago
+            // 
+            this.dtpFechaPago.Location = new System.Drawing.Point(169, 71);
+            this.dtpFechaPago.Name = "dtpFechaPago";
+            this.dtpFechaPago.Size = new System.Drawing.Size(431, 30);
+            this.dtpFechaPago.TabIndex = 69;
+            // 
+            // cboMetodoPago
+            // 
+            this.cboMetodoPago.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cboMetodoPago.FormattingEnabled = true;
+            this.cboMetodoPago.Items.AddRange(new object[] {
+            "Administrador",
+            "Mesero",
+            "Cajero",
+            "Recepcionista",
+            "Chef"});
+            this.cboMetodoPago.Location = new System.Drawing.Point(169, 107);
+            this.cboMetodoPago.Name = "cboMetodoPago";
+            this.cboMetodoPago.Size = new System.Drawing.Size(246, 33);
+            this.cboMetodoPago.TabIndex = 70;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 17F);
+            this.label14.Location = new System.Drawing.Point(21, 110);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(142, 23);
+            this.label14.TabIndex = 71;
+            this.label14.Text = "Metodo Pago:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(444, 931);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(115, 41);
+            this.btnGuardar.TabIndex = 114;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // frmDocumentoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 939);
-            this.Controls.Add(this.btnEliminar);
+            this.ClientSize = new System.Drawing.Size(1110, 1031);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelIzquierdo);
             this.Controls.Add(this.dgvDetalleOrdenVenta);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.gbLineasVenta);
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.gbPedido);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmOrdenVenta";
+            this.Name = "frmDocumentoPago";
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmOrdenVenta_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmOrdenVenta_ClientSizeChanged);
             this.Click += new System.EventHandler(this.frmOrdenVenta_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrdenVenta)).EndInit();
-            this.gbLineasVenta.ResumeLayout(false);
-            this.gbLineasVenta.PerformLayout();
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             this.gbPedido.ResumeLayout(false);
             this.gbPedido.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -654,47 +686,50 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.GroupBox gbCliente;
-        private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Label lblNombreCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtDNICliente;
         private System.Windows.Forms.Label lblDNICliente;
         private System.Windows.Forms.GroupBox gbPedido;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button btnDocPago;
+        private System.Windows.Forms.TextBox txtRuc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIDOrdenVenta;
+        private System.Windows.Forms.TextBox txtIdDocPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescuentoPorcentaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.Label lblDescuentoSimbolo;
-        private System.Windows.Forms.TextBox txtCodigoProducto;
-        private System.Windows.Forms.Label lblCodProducto;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.Label lblPrecioUnitario;
-        private System.Windows.Forms.TextBox txtPrecioUnitario;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnBuscarProducto;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Button btnAgregarPlato;
-        private System.Windows.Forms.Button btnQuitarPlato;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.GroupBox gbLineasVenta;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelIzquierdo;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombreCajero;
+        private System.Windows.Forms.TextBox txtIdCajero;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtMontoPagado;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtDirFiscal;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtpFechaEmision;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnMontoTotal;
+        private System.Windows.Forms.DateTimePicker dtpFechaPago;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cboMetodoPago;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
