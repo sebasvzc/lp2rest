@@ -70,7 +70,8 @@ namespace LP2Rest
         private void pbSolicitudCompras_Click(object sender, EventArgs e)
         {
             label2.Text = "Compras";
-            abrirFormulario(new frmSolicitudesCompras());
+            String chef="";
+            abrirFormulario(new frmSolicitudesCompras(chef));
         }
 
         private void lblAsistencia_Click(object sender, EventArgs e)
