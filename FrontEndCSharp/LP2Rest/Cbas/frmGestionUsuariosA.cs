@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -286,12 +287,11 @@ namespace LP2Rest
                 EmpleadoSeleccionado.cuentaUsuario = cuentaUsuario;
                 if (resultado != 0)
                 {
-                    daoGestPersonas.enviarCorreoDeBienvenida(EmpleadoSeleccionado.email,
-                            EmpleadoSeleccionado.nombre, EmpleadoSeleccionado.apellidoPaterno,
-                            cuentaUsuario.usuario, cuentaUsuario.contrasenia.ToString());
 
                     MessageBox.Show("Se ha guardado el empleado con exito");
                     this.DialogResult = DialogResult.OK;
+
+                    enviarCorreo(EmpleadoSeleccionado, cuentaUsuario);
                 }
                 else
                 {
@@ -313,6 +313,17 @@ namespace LP2Rest
             }
 
 
+        }
+
+        private void enviarCorreo(GestPersonasWS.empleado emp, GestPersonasWS.cuentaUsuario cuentaU)
+        {
+            Task.Run(() => {
+                GestPersonasWS.empleado empAux = emp;
+                GestPersonasWS.cuentaUsuario cuentaUAux = cuentaU;
+                daoGestPersonas.enviarCorreoDeBienvenida(empAux.email,
+                        empAux.nombre, empAux.apellidoPaterno,
+                        cuentaU.usuario, cuentaU.contrasenia.ToString());
+            });
         }
 
         private void btnSeleccionarImagen_Click(object sender, EventArgs e)
