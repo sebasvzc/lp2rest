@@ -15,7 +15,7 @@ namespace LP2Rest
     {
         private AlmacenWS.insumo _insumo;
         private AlmacenWS.AlmacenWSClient daoGestAlmacen;
-
+        private String _solicitudesComprasString;
         private AlmacenWS.ordenCompra ordenCompraSeleccionado;
         public frmSolicitudesCompras()
         {
@@ -24,6 +24,16 @@ namespace LP2Rest
             txtSKU.ReadOnly = true;
             txtNombre.ReadOnly = true;
             dgvOrdenCompras.AutoGenerateColumns = false;
+            _solicitudesComprasString = "admin";
+        } 
+        public frmSolicitudesCompras(String solichef)
+        {
+            daoGestAlmacen = new AlmacenWS.AlmacenWSClient();
+            InitializeComponent();
+            txtSKU.ReadOnly = true;
+            txtNombre.ReadOnly = true;
+            dgvOrdenCompras.AutoGenerateColumns = false;
+            _solicitudesComprasString = "chef";
         }
 
 
@@ -83,7 +93,7 @@ namespace LP2Rest
             {
                 ordenCompraSeleccionado = (AlmacenWS.ordenCompra)dgvOrdenCompras.CurrentRow.DataBoundItem;
                 // MessageBox.Show("Se va modificar el " + insumoSeleccionado.i, "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                frmOrdenCompra frm = new frmOrdenCompra("Ver", ordenCompraSeleccionado);
+                frmOrdenCompra frm = new frmOrdenCompra("Ver", ordenCompraSeleccionado, _solicitudesComprasString);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     btnBuscar.PerformClick();
@@ -124,7 +134,7 @@ namespace LP2Rest
                 }
                 else
                 {
-                    frmOrdenCompra frm = new frmOrdenCompra("Modificar", ordenCompraSeleccionado);
+                    frmOrdenCompra frm = new frmOrdenCompra("Modificar", ordenCompraSeleccionado, _solicitudesComprasString);
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         btnBuscar.PerformClick();

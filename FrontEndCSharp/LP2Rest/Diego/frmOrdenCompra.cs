@@ -44,8 +44,9 @@ namespace LP2Rest.Diego
             txtProveedor.Enabled = false;
             txtEstado.Enabled = false;
             txtEstado.Visible = false;
+            btnValidarOC.Enabled = false;
         }
-        public frmOrdenCompra(String tipo, AlmacenWS.ordenCompra oc)
+        public frmOrdenCompra(String tipo, AlmacenWS.ordenCompra oc, String cuenta)
         {
             daoGestAlmacen = new AlmacenWS.AlmacenWSClient();
             InitializeComponent();
@@ -92,7 +93,10 @@ namespace LP2Rest.Diego
             }
             if (tipo == "Modificar")
             {
-
+                if (cuenta == "chef")
+                {
+                    btnValidarOC.Visible = false;
+                }
 
                 _lineaOrdenComprainsumos = new BindingList<AlmacenWS.lineaOrdenCompra>();
                 if(daoGestAlmacen.ListarLineasOrdenCompra(oc.idOrdenCompra) != null)
@@ -190,8 +194,10 @@ namespace LP2Rest.Diego
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtProveedor.Text == "")
+            if (txtProveedor.Text == "") { 
                 MessageBox.Show("No se ha seleccionado un proveedor", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             _ordenCompraNuevo.descripcion = txtDescripcion.Text;
             _ordenCompraNuevo.fechaHoraCreacionSpecified = true;
             _ordenCompraNuevo.fechaHoraCumplimientoSpecified = true;
