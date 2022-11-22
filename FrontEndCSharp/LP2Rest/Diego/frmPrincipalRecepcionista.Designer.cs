@@ -48,6 +48,7 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
@@ -56,7 +57,8 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.Window;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.Control;
+            this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.panel5);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(256, 100);
@@ -76,12 +78,12 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(153)))));
+            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.label2);
             this.panelSuperior.Controls.Add(this.lbltimer);
             this.panelSuperior.Controls.Add(this.btnMarcarSalida);
             this.panelSuperior.Controls.Add(this.lblID);
             this.panelSuperior.Controls.Add(this.lbltitulo);
-            this.panelSuperior.Controls.Add(this.btnMarcarAsistencia);
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(256, 0);
@@ -94,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(606, 18);
+            this.label2.Location = new System.Drawing.Point(557, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 19);
@@ -104,7 +106,7 @@
             // lbltimer
             // 
             this.lbltimer.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltimer.Location = new System.Drawing.Point(607, 33);
+            this.lbltimer.Location = new System.Drawing.Point(559, 35);
             this.lbltimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltimer.Name = "lbltimer";
             this.lbltimer.Size = new System.Drawing.Size(140, 55);
@@ -119,10 +121,10 @@
             this.btnMarcarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarSalida.Location = new System.Drawing.Point(423, 20);
+            this.btnMarcarSalida.Location = new System.Drawing.Point(309, 18);
             this.btnMarcarSalida.Name = "btnMarcarSalida";
             this.btnMarcarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarSalida.Size = new System.Drawing.Size(163, 65);
+            this.btnMarcarSalida.Size = new System.Drawing.Size(174, 65);
             this.btnMarcarSalida.TabIndex = 28;
             this.btnMarcarSalida.Text = "  Marcar\r\n  Salida";
             this.btnMarcarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +162,7 @@
             this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(234, 20);
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(309, 18);
             this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
             this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnMarcarAsistencia.Size = new System.Drawing.Size(174, 65);
@@ -185,7 +187,7 @@
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 26;
             this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrarSesion_Click_1);
             // 
             // panelIzquierdo
             // 
@@ -313,12 +315,24 @@
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click_1);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(83, 212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(933, 352);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "insertar mensaje de bienvenida";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPrincipalRecepcionista
             // 
@@ -363,5 +377,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbltimer;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
