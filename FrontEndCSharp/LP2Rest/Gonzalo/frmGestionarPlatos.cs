@@ -45,7 +45,7 @@ namespace LP2Rest
         {
             if (txtNombreInsumo.Text != "" && txtCantidad.Text != "")
             {
-                insumo.stock = Int32.Parse(txtCantidad.Text); //Uso stock como cantidad
+                insumo.stock = Double.Parse(txtCantidad.Text); //Uso stock como cantidad
                 insumos.Add(insumo);
 
                 foreach (AlmacenWS.insumo insumo in insumos)
