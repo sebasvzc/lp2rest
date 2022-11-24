@@ -565,9 +565,13 @@ namespace LP2Rest
             {
                 btnDocPago.Text = "Ver Documento de Pago";
                 btnDocPago.Enabled = true;
+                btnGenerarBoleta.Visible = true;
+                btnGenerarBoleta.Enabled = true;
             }
 
             txtEstado.Text = ordenVentaSeleccionada.estado;
+
+
 
         }
 

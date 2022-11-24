@@ -206,7 +206,7 @@ namespace LP2Rest
                 cajeroSeleccionado.apellidoPaterno = formBuscarCajero.EmpleadoSeleccionado.apellidoPaterno;
                 ordenVentaActual.cajero = cajeroSeleccionado;
                 txtIdCajero.Text = cajeroSeleccionado.idPersona.ToString();
-                txtNombreCajero.Text = cajeroSeleccionado.nombre + " " + cajeroSeleccionado.apellidoPaterno; ;
+                txtNombreCajero.Text = cajeroSeleccionado.nombre + " " + cajeroSeleccionado.apellidoPaterno;
             }
         }
 
