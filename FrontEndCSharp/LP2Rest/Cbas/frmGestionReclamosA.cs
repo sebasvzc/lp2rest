@@ -145,8 +145,8 @@ namespace LP2Rest
 
             tbIdAdmin.Enabled = false;
             tbNombreAdmin.Enabled = false;
-            tbIdAdmin.Text = 9.ToString();
-            tbNombreAdmin.Text = "Carlos Paz";
+            tbIdAdmin.Text = 69.ToString();
+            tbNombreAdmin.Text = "Josep Guardiola";
 
             tbIdAdmin.Text = auxRec.administrador.idPersona.ToString();
             tbNombreAdmin.Text = auxRec.administrador.nombre + " " + auxRec.administrador.apellidoPaterno;
