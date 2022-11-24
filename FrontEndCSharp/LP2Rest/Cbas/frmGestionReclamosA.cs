@@ -71,8 +71,8 @@ namespace LP2Rest
 
             tbIdAdmin.Enabled = false;
             tbNombreAdmin.Enabled = false;
-            tbIdAdmin.Text = 9.ToString();
-            tbNombreAdmin.Text = "Carlos Paz";
+            tbIdAdmin.Text = 69.ToString();
+            tbNombreAdmin.Text = "Josep Guardiola";
 
             txtFechaAtencion.Text = "-";
 
