@@ -243,7 +243,7 @@ namespace LP2Rest
 
                 //reclamoAux.cliente.idPersona = 3;
                 //reclamoAux.empleado.idPersona = 2;
-                reclamoAux.administrador.idPersona = 9;              
+                reclamoAux.administrador.idPersona = 69;              
 
 
             }
