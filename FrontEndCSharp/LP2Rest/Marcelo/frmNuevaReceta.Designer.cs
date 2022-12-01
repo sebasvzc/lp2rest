@@ -114,7 +114,7 @@
             // 
             // tsbAgregarInsumo
             // 
-            this.tsbAgregarInsumo.Image = global::LP2Rest.Properties.Resources._392024;
+            this.tsbAgregarInsumo.Image = global::LP2Rest.Properties.Resources.add_item_black_small;
             this.tsbAgregarInsumo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAgregarInsumo.Name = "tsbAgregarInsumo";
             this.tsbAgregarInsumo.Size = new System.Drawing.Size(116, 24);
@@ -123,7 +123,7 @@
             // 
             // tsbEliminarInsumo
             // 
-            this.tsbEliminarInsumo.Image = global::LP2Rest.Properties.Resources._391892;
+            this.tsbEliminarInsumo.Image = global::LP2Rest.Properties.Resources.remove_item_black_small;
             this.tsbEliminarInsumo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminarInsumo.Name = "tsbEliminarInsumo";
             this.tsbEliminarInsumo.Size = new System.Drawing.Size(117, 24);
@@ -131,7 +131,7 @@
             // 
             // tsbGuardar
             // 
-            this.tsbGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
+            this.tsbGuardar.Image = global::LP2Rest.Properties.Resources.guardar;
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(73, 24);

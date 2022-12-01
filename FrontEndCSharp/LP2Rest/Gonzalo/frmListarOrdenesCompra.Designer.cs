@@ -233,7 +233,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.btnNuevo.Image = global::LP2Rest.Properties.Resources.add_file_color;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(76, 28);
@@ -258,7 +258,7 @@
             // 
             // Anular
             // 
-            this.Anular.Image = global::LP2Rest.Properties.Resources._391127;
+            this.Anular.Image = global::LP2Rest.Properties.Resources.remove_item;
             this.Anular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Anular.Name = "Anular";
             this.Anular.Size = new System.Drawing.Size(76, 28);

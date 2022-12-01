@@ -154,7 +154,7 @@
             // 
             // btnEliminarInsumo
             // 
-            this.btnEliminarInsumo.BackgroundImage = global::LP2Rest.Properties.Resources._391127;
+            this.btnEliminarInsumo.BackgroundImage = global::LP2Rest.Properties.Resources.remove_item;
             this.btnEliminarInsumo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminarInsumo.Font = new System.Drawing.Font("MS UI Gothic", 17F);
             this.btnEliminarInsumo.Location = new System.Drawing.Point(987, 286);
@@ -186,7 +186,7 @@
             // 
             // btnAgregarInsumo
             // 
-            this.btnAgregarInsumo.BackgroundImage = global::LP2Rest.Properties.Resources._391259;
+            this.btnAgregarInsumo.BackgroundImage = global::LP2Rest.Properties.Resources.add_item;
             this.btnAgregarInsumo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregarInsumo.Font = new System.Drawing.Font("MS UI Gothic", 17F);
             this.btnAgregarInsumo.Location = new System.Drawing.Point(945, 286);

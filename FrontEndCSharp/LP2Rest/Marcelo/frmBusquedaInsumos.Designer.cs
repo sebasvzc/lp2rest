@@ -277,7 +277,7 @@
             // 
             // tsbNuevo
             // 
-            this.tsbNuevo.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.tsbNuevo.Image = global::LP2Rest.Properties.Resources.add_file_color;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);

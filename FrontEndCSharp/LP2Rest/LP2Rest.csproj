@@ -1198,22 +1198,22 @@
     <None Include="Resources\imgReclamosIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\126794.png" />
+    <None Include="Resources\blue_edit_pencil.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\169130.png" />
+    <None Include="Resources\blue_add_file.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\391127.png" />
+    <None Include="Resources\remove_item.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\391259.png" />
+    <None Include="Resources\add_item.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\391892.png" />
+    <None Include="Resources\remove_item_black_small.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\392024.png" />
+    <None Include="Resources\add_item_black_small.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgInsumosIcon_medium.png" />
@@ -1222,7 +1222,7 @@
     <None Include="Resources\imgVentasIcon_medium.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1263922.png" />
+    <None Include="Resources\blue_file_cross.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgReportesIcon_medium.png" />
@@ -1255,9 +1255,6 @@
     <None Include="Resources\Icon-Small-20x20.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\new-file_40454.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\imgRestauranteLogo_medium.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1267,14 +1264,8 @@
     <None Include="Resources\trash_40429.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngegg %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Untitled design %281%29.png" />
-    <None Include="Resources\pngegg.png" />
-    <None Include="Resources\2636428.png" />
-    <None Include="Resources\26364281.png" />
-    <None Include="Resources\429524-200.png" />
+    <None Include="Resources\cerrar_sesion.png" />
     <None Include="Resources\imgCerrarIcon_Medium.png" />
     <None Include="Connected Services\AlmacenWS\configuration91.svcinfo" />
     <None Include="Connected Services\AlmacenWS\configuration.svcinfo" />
@@ -1306,9 +1297,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Resources\add_file_color.png" />
     <Content Include="Resources\cancelar.png" />
     <Content Include="Resources\eliminar.png" />
-    <None Include="Resources\Image1.bmp" />
     <Content Include="Resources\guardar.png" />
     <None Include="Resources\imgComprasIcon_small.png" />
     <None Include="Resources\imgEventosIcon_small.png" />
@@ -1318,7 +1309,6 @@
     <None Include="Resources\imgReportesIcon_small.png" />
     <None Include="Resources\imgUsuarioIcon_small.png" />
     <None Include="Resources\imgVentasIcon_small.png" />
-    <None Include="Resources\kisspng-computer-icons-iconfinder-desktop-wallpaper-floppy-save-icon-5ab07851d21f64.1935471015215145778607.png" />
     <None Include="Resources\imgAsistenciaIcon_small.png" />
     <None Include="Resources\imgRestauranteLogo_big_strongerColor.png" />
     <None Include="Resources\imgRestauranteLogo_big75%25_strongerColor.png" />
@@ -1331,8 +1321,6 @@
     <Content Include="Resources\modificar.png" />
     <None Include="Resources\MostrarOcultarContraseniaOJOajustada.png" />
     <None Include="Resources\MostrarOcultarContraseniaOJOajustada %281%29.png" />
-    <Content Include="Resources\nuevo archivo%281%29.png" />
-    <None Include="Resources\nuevo archivo.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

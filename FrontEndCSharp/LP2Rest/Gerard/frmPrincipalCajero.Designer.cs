@@ -150,7 +150,7 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
+            this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 819);
             this.btnCerrarSesion.Name = "btnCerrarSesion";

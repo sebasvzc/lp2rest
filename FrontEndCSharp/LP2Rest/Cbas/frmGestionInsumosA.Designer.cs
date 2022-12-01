@@ -258,7 +258,7 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources._391892;
+            this.button3.BackgroundImage = global::LP2Rest.Properties.Resources.remove_item_black_small;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Location = new System.Drawing.Point(997, 21);
             this.button3.Name = "button3";
@@ -268,7 +268,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::LP2Rest.Properties.Resources._392024;
+            this.button1.BackgroundImage = global::LP2Rest.Properties.Resources.add_item_black_small;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Location = new System.Drawing.Point(1043, 21);
             this.button1.Name = "button1";

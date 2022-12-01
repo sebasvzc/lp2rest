@@ -60,7 +60,7 @@
             // 
             // tsbGuardar
             // 
-            this.tsbGuardar.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
+            this.tsbGuardar.Image = global::LP2Rest.Properties.Resources.guardar;
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);

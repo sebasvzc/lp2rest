@@ -126,7 +126,7 @@
             // GuardarBtn
             // 
             this.GuardarBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.GuardarBtn.Image = global::LP2Rest.Properties.Resources.kisspng_computer_icons_iconfinder_desktop_wallpaper_floppy_save_icon_5ab07851d21f64_1935471015215145778607;
+            this.GuardarBtn.Image = global::LP2Rest.Properties.Resources.guardar;
             this.GuardarBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(34, 28);

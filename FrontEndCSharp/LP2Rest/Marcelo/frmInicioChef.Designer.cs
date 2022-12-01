@@ -33,26 +33,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lbltimer = new System.Windows.Forms.Label();
-            this.btnRegistrarSalida = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnMarcarAsistencia = new System.Windows.Forms.Button();
+            this.btnRegistrarSalida = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.sdbtnVentas = new System.Windows.Forms.Button();
             this.sdbtnPlatos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sdbtnCompras = new System.Windows.Forms.Button();
             this.sdbtnInsumos = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelSuperior.SuspendLayout();
             this.panelIzquierdo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -105,25 +105,6 @@
             this.lbltimer.Text = "00:00:00";
             this.lbltimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnRegistrarSalida
-            // 
-            this.btnRegistrarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnRegistrarSalida.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnRegistrarSalida.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnRegistrarSalida.Location = new System.Drawing.Point(314, 17);
-            this.btnRegistrarSalida.Name = "btnRegistrarSalida";
-            this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRegistrarSalida.Size = new System.Drawing.Size(201, 65);
-            this.btnRegistrarSalida.TabIndex = 27;
-            this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
-            this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegistrarSalida.UseVisualStyleBackColor = true;
-            this.btnRegistrarSalida.Click += new System.EventHandler(this.lblSalida_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -136,40 +117,6 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "INICIO";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
-            // 
-            // btnMarcarAsistencia
-            // 
-            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
-            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
-            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
-            this.btnMarcarAsistencia.Location = new System.Drawing.Point(314, 17);
-            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
-            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
-            this.btnMarcarAsistencia.TabIndex = 26;
-            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
-            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
-            this.btnMarcarAsistencia.Click += new System.EventHandler(this.lblAsistencia_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Location = new System.Drawing.Point(1063, 12);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrar.TabIndex = 26;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panelIzquierdo
             // 
@@ -196,6 +143,95 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(8, 807);
             this.panel4.TabIndex = 17;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.Controls.Add(this.label3);
+            this.panelContenedor.Controls.Add(this.panel1);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(256, 100);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
+            this.panelContenedor.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(92, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(933, 352);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "insertar mensaje de bienvenida";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1100, 4);
+            this.panel1.TabIndex = 25;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnMarcarAsistencia
+            // 
+            this.btnMarcarAsistencia.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnMarcarAsistencia.FlatAppearance.BorderSize = 0;
+            this.btnMarcarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcarAsistencia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnMarcarAsistencia.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnMarcarAsistencia.Location = new System.Drawing.Point(314, 17);
+            this.btnMarcarAsistencia.Name = "btnMarcarAsistencia";
+            this.btnMarcarAsistencia.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMarcarAsistencia.Size = new System.Drawing.Size(201, 65);
+            this.btnMarcarAsistencia.TabIndex = 26;
+            this.btnMarcarAsistencia.Text = "  Marcar\r\n  Asistencia";
+            this.btnMarcarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcarAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMarcarAsistencia.UseVisualStyleBackColor = true;
+            this.btnMarcarAsistencia.Click += new System.EventHandler(this.lblAsistencia_Click);
+            // 
+            // btnRegistrarSalida
+            // 
+            this.btnRegistrarSalida.FlatAppearance.BorderColor = System.Drawing.Color.FloralWhite;
+            this.btnRegistrarSalida.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarSalida.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnRegistrarSalida.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarSalida.Image = global::LP2Rest.Properties.Resources.imgAsistenciaIcon_small;
+            this.btnRegistrarSalida.Location = new System.Drawing.Point(314, 17);
+            this.btnRegistrarSalida.Name = "btnRegistrarSalida";
+            this.btnRegistrarSalida.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnRegistrarSalida.Size = new System.Drawing.Size(201, 65);
+            this.btnRegistrarSalida.TabIndex = 27;
+            this.btnRegistrarSalida.Text = "  Registrar\r\n  Salida";
+            this.btnRegistrarSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarSalida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistrarSalida.UseVisualStyleBackColor = true;
+            this.btnRegistrarSalida.Click += new System.EventHandler(this.lblSalida_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BackgroundImage = global::LP2Rest.Properties.Resources.imgCerrarIcon_Medium;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(1063, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.TabIndex = 26;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // sdbtnVentas
             // 
@@ -286,7 +322,7 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources._429524_200;
+            this.btnCerrarSesion.Image = global::LP2Rest.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 807);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -298,42 +334,6 @@
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.Controls.Add(this.label3);
-            this.panelContenedor.Controls.Add(this.panel1);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(256, 100);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1100, 776);
-            this.panelContenedor.TabIndex = 29;
-            // 
-            // label3
-            // 
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(92, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(933, 352);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "insertar mensaje de bienvenida";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(153)))), ((int)(((byte)(96)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 4);
-            this.panel1.TabIndex = 25;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmInicioChef
             // 
@@ -349,8 +349,8 @@
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             this.panelIzquierdo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

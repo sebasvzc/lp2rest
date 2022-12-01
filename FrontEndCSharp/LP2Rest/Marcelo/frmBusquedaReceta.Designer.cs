@@ -212,7 +212,7 @@
             // 
             // tsbAgregar
             // 
-            this.tsbAgregar.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.tsbAgregar.Image = global::LP2Rest.Properties.Resources.add_file_color;
             this.tsbAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAgregar.Name = "tsbAgregar";
             this.tsbAgregar.Size = new System.Drawing.Size(69, 22);

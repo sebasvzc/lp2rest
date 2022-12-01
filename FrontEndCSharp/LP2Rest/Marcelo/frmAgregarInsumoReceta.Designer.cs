@@ -296,7 +296,7 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Image = global::LP2Rest.Properties.Resources.new_file_40454;
+            this.btnSeleccionar.Image = global::LP2Rest.Properties.Resources.add_file_color;
             this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(87, 22);

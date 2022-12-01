@@ -324,7 +324,7 @@
             // 
             // tsbAgregarSolicitud
             // 
-            this.tsbAgregarSolicitud.Image = global::LP2Rest.Properties.Resources._392024;
+            this.tsbAgregarSolicitud.Image = global::LP2Rest.Properties.Resources.add_item_black_small;
             this.tsbAgregarSolicitud.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAgregarSolicitud.Name = "tsbAgregarSolicitud";
             this.tsbAgregarSolicitud.Size = new System.Drawing.Size(118, 22);
